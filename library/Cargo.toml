@@ -1,0 +1,29 @@
+[package]
+name = "fe11"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+readme = "README.md"
+include = ["src/**", "docs/**", "examples/abi.rs", "examples/how_to.rs", "examples/how_to/**", "Cargo.toml", "README.md", "LICENSE", "COPYRIGHT", "NOTICE.txt"]
+description = "Fe11 generic PKCS#11 interface with owned resources and bounded operations"
+
+[[example]]
+name = "how_to"
+path = "examples/how_to.rs"
+crate-type = ["lib"]
+
+[dependencies]
+fe11-verify-engine-api = { version = "=0.1.0", path = "../verify-engine-api" }
+fe11-sys = "=0.1.0"
+libloading = "=0.8.9"
+libc = "=0.2.190"
+sha2 = "=0.10.9"
+zeroize = "=1.8.2"
+x509-cert = { version = "=0.2.5", default-features = false, features = ["std"] }
+sha3 = { version = "=0.10.9", default-features = false, features = ["zeroize"] }
+keccak = { version = "=0.1.6", default-features = false }
+crypto-bigint = { version = "=0.5.5", default-features = false }
+der = { version = "=0.7.10", default-features = false, features = ["std", "derive"] }

@@ -1,0 +1,4 @@
+Fe11
+Project organization and maintenance: Boreal Cryptosystems
+Licensed under the Apache License, Version 2.0.
+Dependencies retain their respective licenses and attribution.

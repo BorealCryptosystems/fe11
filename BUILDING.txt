@@ -1,0 +1,73 @@
+Fe11 0.1.0 — building from source
+================================
+
+Minimum Rust version: 1.81. Supported targets: Linux x86_64 GNU and Windows
+x86_64 MSVC with the Windows SDK. The workspace contains library,
+verify-engine-api and verify-engine. The fe11-sys package has its own repository.
+Direct dependencies are pinned; registry access or a complete cache is required.
+
+From the workspace root:
+
+  cargo +1.81.0 build --release -p fe11
+  cargo +1.81.0 doc -p fe11 --no-deps
+
+To develop against an adjacent fe11-sys checkout, add this local override to
+the root Cargo.toml of fe11:
+
+  [patch.crates-io]
+  fe11-sys = { path = "../fe11-sys" }
+
+Keep this development override in the local workspace. The engine API uses a
+workspace path together with its declared registry version.
+
+The workspace release profile enables overflow-checks and panic="unwind".
+An application using Fe11 as a dependency selects its own workspace profile.
+The build produces Rust libraries. The application installs and selects its
+PKCS#11 module, whose actual ABI must match the selected fe11-sys profile.
+
+Optional verification component
+-------------------------------
+
+verify-engine is a separate cdylib providing public-key signature verification
+and hashing. The application explicitly loads and selects it. The commands
+above build the core; a --workspace build also selects the engine.
+
+The engine uses a dedicated static OpenSSL build. Obtain openssl-3.5.9.tar.gz
+from the OpenSSL project (source URL in SBOM.json) and verify its SHA-256:
+603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a.
+Corresponding notices are in LICENSES/third-party/openssl-native-3.5.9/.
+This version identifies the supplied build recipe. The component requires
+the OpenSSL 3.5+ API within major version 3.
+
+Extract the archive into a working directory of your choice. Follow its
+INSTALL.md and NOTES-WINDOWS.md/NOTES-UNIX.md for native tool prerequisites.
+Configure with no-shared, no-engine, no-autoload-config and an absolute
+installation prefix dedicated to this build. On Linux, build the archives
+with -fPIC for inclusion in the cdylib. On Windows, use an x64 MSVC target
+consistent with Rust. Install headers and libcrypto/libssl under that prefix.
+
+Set these environment variables before building the component:
+
+  OPENSSL_STATIC=1
+  OPENSSL_NO_VENDOR=1
+  OPENSSL_DIR=<chosen absolute installation prefix>
+  OPENSSL_LIB_DIR=<actual archive directory under that prefix>
+
+Then, from the Fe11 workspace root:
+
+  cargo +1.81.0 build --release -p fe11-verify-engine
+
+build.rs checks the headers, configuration options and selected archives.
+On Linux, its linker options are scoped to this cdylib. Final binary inspection
+must establish local symbol binding and static linkage of OpenSSL.
+
+Documentation and validation
+----------------------------
+
+Use Cargo doc to generate the public API reference. VALIDATION.md describes
+how to report interoperability results and diagnose native module differences.
+
+Cargo packaging reference:
+https://doc.rust-lang.org/cargo/commands/cargo-package.html
+Packaging with --no-verify assembles the source archive. Compilation of the
+extracted package is a separate verification step before publication.

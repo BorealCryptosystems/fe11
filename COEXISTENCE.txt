@@ -1,0 +1,135 @@
+Fe11 — coexistence, ownership and explicit recovery
+==================================================
+
+This guide describes resource lifetimes and coexistence contracts. Public
+signatures and their Safety sections specify the detailed obligations.
+
+1. Fe11 as the only client in a process
+
+ModuleBuilder::open creates an initialization with an initialization owner.
+Use Session::close and Module::close to receive cleanup results. Drop attempts
+cleanup according to the opening policy. Native uncertainty may require
+retaining data until process termination.
+Other processes may use the same token. Attributes, objects and login state
+can change outside Fe11. An observation describes the state when it was made;
+the next operation must account for subsequent changes.
+
+2. Multiple Fe11 clients in one process
+
+ModuleBuilder::open_shared returns (RuntimeOwner, Module). The first owns
+lifecycle authority; the second is a client view. RuntimeOwner::client creates
+another view over the same Inner, retaining its initialization and budgets.
+Each client opens its own sessions. RuntimeOwner::module supplies the
+administrative view for global actions. Finalization and collective
+administration belong to that owner.
+Module::detach consumes a client view locally, without a native call, while its children retain participation.
+Attempting to detach an owner this way returns that owner intact in Err.
+Dropping RuntimeOwner retires admission locally, without Finalize or session-close calls,
+and leaves client cleanup to explicit lifecycle operations. For controlled shutdown, close resources and then the
+module through its administrative view before dropping the owner.
+Per-session serialization and each operation's memory loans continue to apply
+when several clients share a runtime.
+
+3. Fe11 and a third-party native library in one process
+
+The third party supplies an adapter that participates in coordination.
+The unsafe ExternalInitialization constructor declares the image/table,
+version, interface flags, concurrency regime actually established and owner of
+the initialization referents. ModuleBuilder::attach_initialized attaches this
+existing initialization. The application retains cleanup responsibility if
+attachment fails.
+The generation must be quiescent at attachment. Register existing foreign
+sessions and work before distributing clients.
+RuntimeOwner::register_foreign provides a participant. The prepare/adopt
+functions own their graphs; begin/dispatched/returned or opened bracket each
+actual call. The receipt distinguishes the native code from local publication.
+Unsafe result declarations must faithfully describe the particular loan and
+establish when native code has finished using its storage.
+Callbacks use their entry handle and remain counted until they return. Pending
+loans retain their owners after the stack permit is returned.
+GetID/Join operations and progression methods under drain keep distinct owners.
+A successful GetID may return its old buffers while the job continues. Join
+establishes another loan with a single source.
+Participants must coordinate finalization, respect each participant's session
+ownership and use admission for native work. Notification must precede actions
+that could otherwise cause undefined native races. This coordination applies
+within the process; other processes retain their own token access.
+
+4. External changes and recovery
+
+Lost session: native SESSION_CLOSED/HANDLE_INVALID remains observable. Fe11
+retires the known handle and its local quota. Old graphs/callbacks remain
+retained until their own release conditions are established. Explicitly open a
+new session; the retired reference keeps its old identity.
+
+Token removal or replacement: references to the old context remain invalid.
+TokenContext::refresh explicitly observes the same token. Selecting a different
+identity requires rediscovery and explicit selection. Old graphs keep their
+own release conditions across a new generation's collective close.
+Deliberate rediscovery refuses still-live foreign sessions/sequences before
+retiring their epoch; close or finish them explicitly. An already lost context
+remains lost after that refusal. Owners without execution may await explicit
+global finalization; its success is required for releases that depend on it.
+Concurrency mode, callbacks and genuinely pending loans govern whether recovery
+is possible. The application explicitly chooses subsequent login and operations.
+
+Lost initialization: after observing NOT_INITIALIZED, an actually successful
+Finalize, or an unsafe notify_runtime_reset corresponding to the real loss of
+that initialization, the owner can request successor with a builder. All calls,
+callbacks, waiters and owners must be quiescent. Unproven execution (PENDING or
+an unreturned asynchronous loan) retains its completion obligations.
+The successor initializes the same image once under a unique reservation.
+attach_successor is an unsafe route for a new initialization already established
+by the application, with the same obligations as initial attachment.
+RuntimeOwner exposes both routes and returns owner/client. Lifecycle authority,
+handles, tickets and captures remain bound to their own generation.
+
+GENERAL_ERROR from a direct call preserves the code and uncertain effects for
+the caller. The return alone establishes neither outstanding memory use nor
+loss of initialization. An asynchronous parent control has its own execution
+completion evidence; interpret each kind of return under its own contract.
+
+Coordinated participants must report runtime resets. Detecting an otherwise
+invisible reset requires information from the application or native module.
+The module executes as trusted native code within the application process.
+
+5. Resources and caller choices
+
+The byte-credit domain persists across successive generations with the limit
+initially chosen. Sessions still counted in sealed predecessors remain included
+in admission and status. A lost handle's quota and retained buffer credits are
+separate. Inspect the relevant resource counters when planning further work.
+The Fe11 budget covers its credited storage; native-module and application
+allocations have their own lifetimes and resource requirements.
+Resources lacking release evidence may remain retained and exhaust the budget,
+including after opening a successor. Permanently sealed registries with no
+records or remaining quota are removed from the accounting chain. Retained
+graphs keep their registry represented even when native quota is zero.
+WaitUntil preserves the caller's deadline and cancellation while waiting for
+local resources. Native calls follow the module's execution contract.
+
+Opening, session and cryptographic APIs use these owners. Role observations
+distinguish unknown from public. Native operations decide current authority;
+past object visibility remains an observation. Retirement applies at its exact
+scope. OPERATION_ACTIVE preserves the existing operation. Acquired results are
+distinct from local publication. Cleanup on a retired old handle is refused;
+recovery uses explicit successor operations. Capture and persistence retain
+their provenance and single-continuation requirements.
+
+Collective actions: CloseAllSessions and Finalize have their PKCS#11 scope within
+the process, including registered foreign participants' resources. The application
+chooses to request them from the owner.
+InitToken requires, in particular, absence of sessions that would make its use
+undefined, including sessions in other processes. Establish that condition at
+application level; Fe11's local counters cover only the resources it coordinates.
+
+Interface discovery before runtime ownership
+
+Opening and observation call the selected discovery exports directly. The
+application determines whether exports in a shared scope belong to the same
+runtime, respects the module's concurrency contract and coordinates its calls,
+especially Finalize, until returned tables and names have been copied.
+Retaining images protects their loaded lifetime; runtime finalization requires
+separate coordination. After selection, the initializer's image is reserved
+before Initialize or Attach. Authority, generation and succession each retain
+their own rules.
