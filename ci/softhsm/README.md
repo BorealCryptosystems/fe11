@@ -10,7 +10,10 @@ a bounded TSV record.
 
 The SHA-256 `abc` vector is published in the NIST secure hash examples:
 https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values
-Native operation/error contracts follow PKCS#11 Base 2.40, sections 5.4–5.11 and 5.13, and Current Mechanisms 2.40, AES-GCM:
+Native operation/error contracts follow PKCS#11 Base 2.40: initialization,
+discovery, session and object management, digest, encryption/decryption, signing
+and verification, key generation, and `C_GenerateRandom`. AES-GCM is specified
+in Current Mechanisms 2.40:
 https://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html
 https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html
 For the pinned SoftHSM recipe, an altered GCM tag returns

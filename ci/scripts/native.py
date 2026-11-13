@@ -63,10 +63,14 @@ def build(job):
             probe = subprocess.run([path, "-v" if name == "perl" else "/?"],
                 env=job.env, stdin=subprocess.DEVNULL, capture_output=True, text=True,
                 timeout=3600 if job.github else job.remaining())
-            lines = [line.strip() for line in (probe.stdout + probe.stderr).splitlines() if line.strip()]
-            if not lines:
+            # MSVC writes its version banner to stderr and help to stdout.
+            # Perl identifies its version in parentheses on stdout. A nonempty
+            # help message is not evidence of a tool version.
+            pattern = r"\(v(\d+(?:\.\d+)+)\)" if name == "perl" else r"\bVersion\s+(\d+(?:\.\d+)+)"
+            match = re.search(pattern, probe.stderr + "\n" + probe.stdout, re.I)
+            if not match:
                 raise ValueError("native tool version unavailable: " + name)
-            tools[name]["version"] = lines[0]
+            tools[name]["version"] = match.group(1)
     job.run("openssl-configure", [perl, "Configure", target, *switches,
         "--prefix=" + str(prefix), "--openssldir=" + str(prefix / "ssl"), "--libdir=lib"], cwd=source)
     job.run("openssl-build", [make, *( ["/nologo"] if os.name == "nt" else ["-j2"] ), "build_libs"], cwd=source)

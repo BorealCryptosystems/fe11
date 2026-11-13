@@ -23,6 +23,13 @@ def save(path, data):
     Path(path).write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
+def diagnostic(text):
+    """Bound and prefix hosted diagnostics, neutralizing console controls."""
+    for line in text[-32768:].splitlines():
+        printable = "".join(c if c.isprintable() or c == "\t" else "?" for c in line)
+        print("diagnostic: " + printable, flush=True)
+
+
 def extract(archive, destination):
     """Only regular files/directories, with an explicit containment check."""
     destination = Path(destination).resolve()
@@ -117,12 +124,10 @@ class Job:
                 # Hosted jobs contain only public build inputs. Retain captured
                 # output for JSON consumers, but expose a bounded failure tail.
                 # Token initialization is deliberately outside this runner.
-                with output.open("rb") as diagnostic:
-                    diagnostic.seek(max(0, output.stat().st_size - 32768))
-                    tail = diagnostic.read(32768).decode("utf-8", errors="replace")
-                for line in tail.splitlines():
-                    printable = "".join(c if c.isprintable() or c == "\t" else "?" for c in line)
-                    print("diagnostic: " + printable, flush=True)
+                with output.open("rb") as stream:
+                    stream.seek(max(0, output.stat().st_size - 32768))
+                    tail = stream.read(32768).decode("utf-8", errors="replace")
+                diagnostic(tail)
             raise RuntimeError(f"{label} failed; inspect the local private build log")
         return output
 

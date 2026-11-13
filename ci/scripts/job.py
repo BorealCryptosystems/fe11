@@ -14,7 +14,7 @@ sys.dont_write_bytecode = True
 if sys.version_info < (3, 11):
     raise SystemExit("Python 3.11 or later is required")
 
-from common import Job, digest, extract, save
+from common import Job, diagnostic, digest, extract, save
 import documentation
 import native
 import rust_toolchain
@@ -126,12 +126,16 @@ def main():
         status = "PASS"
         return 0
     except (Exception, KeyboardInterrupt) as error:
-        # Exceptions can carry local paths or external command output. Keep them
-        # private, and publish only the fixed failure classification.
+        # Local paths and raw traces stay private. Hosted jobs use public inputs
+        # and disposable runner paths; report the exception type/message there,
+        # bounded and prefixed like command diagnostics. No token PIN is passed
+        # to this Python driver or included in its exceptions.
         import traceback
         (job.logs / "failure.txt").write_text(traceback.format_exc(), encoding="utf-8")
         cause = "cancelled" if isinstance(error, KeyboardInterrupt) else (
             "timeout" if isinstance(error, (TimeoutError, subprocess.TimeoutExpired)) else "execution")
+        if job.github:
+            diagnostic(type(error).__name__ + ": " + str(error))
         print("CI job failed; inspect the failing step's console diagnostic." if job.github else
               "CI job failed; inspect private-logs locally.", file=sys.stderr)
         return 1
