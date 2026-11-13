@@ -1,6 +1,6 @@
 [package]
 name = "fe11"
-version.workspace = true
+version = "0.1.1"
 edition.workspace = true
 rust-version.workspace = true
 license.workspace = true
@@ -27,3 +27,7 @@ sha3 = { version = "=0.10.9", default-features = false, features = ["zeroize"] }
 keccak = { version = "=0.1.6", default-features = false }
 crypto-bigint = { version = "=0.5.5", default-features = false }
 der = { version = "=0.7.10", default-features = false, features = ["std", "derive"] }
+
+# Keep these shared transitive dependencies compatible with Rust 1.81.
+base64ct = { version = "=1.6.0", default-features = false }
+zeroize_derive = "=1.4.3"

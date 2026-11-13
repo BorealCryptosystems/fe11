@@ -1,6 +1,6 @@
 # How To
 
-These recipes use the Fe11 0.1.0 public API. Each explains the application inputs,
+These recipes use the Fe11 0.1.1 public API. Each explains the application inputs,
 the native operation, the result and the ownership needed to handle failure.
 The complete Rust sources are in [examples/how_to.rs](../../examples/how_to.rs)
 and its modules: [setup](../../examples/how_to/setup.rs),
@@ -28,7 +28,7 @@ An application using all examples can declare:
 
 ```toml
 [dependencies]
-fe11 = "=0.1.0"
+fe11 = "=0.1.1"
 fe11-sys = "=0.1.0"
 ```
 

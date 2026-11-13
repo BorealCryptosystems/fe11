@@ -11,7 +11,7 @@ and signing still return the module's decision for the exact key and parameters.
 The examples below choose ML-DSA-65 and SLH-DSA-SHA2-128s as concrete alternatives.
 Choose the parameter set for your protocol; it is not inferred from key size.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn signature_algorithms() -> [PqcAlgorithm; 2] {
@@ -33,7 +33,7 @@ pub fn generate_signature_pair(
 }
 ```
 
-Supply a [PqcKeySpec](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.PqcKeySpec.html) containing the ID, label,
+Supply a [PqcKeySpec](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.PqcKeySpec.html) containing the ID, label,
 persistence, private visibility, usages and both `ObjectAdmission` plans. The
 helper preserves those choices while selecting the algorithm and enabling sign
 and verify. Supply public/private `MechanismAttributes`, private
@@ -50,7 +50,7 @@ requires an authenticated application channel.
 
 ## Sign and verify in pure mode
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_pure(
@@ -88,7 +88,7 @@ For `CKA_ALWAYS_AUTHENTICATE`, use `sign_pqc_with_context` with the key's
 context above. See [prehash modes](pqc-prehash.md) for hashing alternatives and
 [software verification](verification-engine.md) for the optional engine.
 
-Reference: [PqcAlgorithm](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.PqcAlgorithm.html),
-[PqcSignatureParameters](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.PqcSignatureParameters.html).
+Reference: [PqcAlgorithm](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.PqcAlgorithm.html),
+[PqcSignatureParameters](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.PqcSignatureParameters.html).
 
 [All How To guides](index.md)

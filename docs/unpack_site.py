@@ -18,6 +18,9 @@ def main():
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text(encoding="utf8"))
     expected = manifest["sha256"]
+    version = manifest["version"]
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
+        raise ValueError("Expected a release version")
     if not re.fullmatch(r"[0-9a-f]{64}", expected):
         raise ValueError("Expected a SHA-256 identity")
     with args.archive.open("rb") as stream:
@@ -55,7 +58,7 @@ def main():
                 with archive.open(entry) as source, path.open("xb") as target:
                     while data := source.read(1024 * 1024):
                         target.write(data)
-    if not (root / "0.1.0/api/fe11/index.html").is_file():
+    if not (root / version / "api/fe11/index.html").is_file():
         raise ValueError("Fe11 API entry is missing")
     print("Verified and extracted the documentation site")
 

@@ -1,7 +1,7 @@
 {
-  "version": "0.1.0",
-  "asset": "fe11-0.1.0-docs-site.zip",
-  "sha256": "3403f4c17e72487372f75bb3d2615e3b0ae2238836304738a80dec461019d22a",
-  "files": 6625,
-  "uncompressed_bytes": 76050218
+  "version": "0.1.1",
+  "asset": "fe11-0.1.1-docs-site.zip",
+  "sha256": "7f6bb4dfc98a6d081844cee6a10199228780db22d6fff366a1314a4522bd5c02",
+  "files": 13251,
+  "uncompressed_bytes": 151721709
 }

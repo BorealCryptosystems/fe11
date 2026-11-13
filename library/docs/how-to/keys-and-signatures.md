@@ -8,7 +8,7 @@ attributes, their scalar storage and ID bytes; choose a nonzero batch size and
 the application's result bound. `maximum_objects: None` chooses an unbounded
 result count, subject to configured object resources.
 
-```rust
+```rust,no_run
 use fe11::*;
 use std::num::NonZeroUsize;
 
@@ -46,7 +46,7 @@ template. Authenticate the public key's association through your application.
 
 ## Generate a pair with explicit attributes
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn generate_rsa(
@@ -58,7 +58,7 @@ pub fn generate_rsa(
 }
 ```
 
-Construct [KeySpec](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.KeySpec.html) with the desired `bits`, `exponent`,
+Construct [KeySpec](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.KeySpec.html) with the desired `bits`, `exponent`,
 `id`, `label`, persistence, visibility, private protection and separate public and
 private observation plans. For example, an application's selected RSA-3072 key
 uses `bits: 3072` and `exponent: 65537`. These are application choices, not library
@@ -69,7 +69,7 @@ requested flags; this helper adds public verification and private signing.
 class. Set `CurrentKeyProtection` to the desired sensitive/extractable attributes.
 `ObjectAdmission` selects searches and observations after creation; provision its
 read capacities for the public representation and requested attributes. See
-[ObjectAdmission](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.ObjectAdmission.html) for all observation fields.
+[ObjectAdmission](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.ObjectAdmission.html) for all observation fields.
 
 Treat `CreatedObjects<KeyPair>` as a creation outcome: native objects can exist
 even when a requested observation fails. Preserve `objects`, `observation` and
@@ -79,7 +79,7 @@ generated pair's `ObjectRef::native_object()` gives the native-operation referen
 
 ## Sign and verify the original message
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_message(

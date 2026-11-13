@@ -1,0 +1,125 @@
+name: Public validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: build-linux-msrv, os: ubuntu-24.04, rust: '1.81.0', python: python3 }
+          - { name: build-linux-current, os: ubuntu-24.04, rust: '1.100.0', python: python3 }
+          - { name: build-windows-msrv, os: windows-2022, rust: '1.81.0', python: python }
+          - { name: build-windows-current, os: windows-2022, rust: '1.100.0', python: python }
+    env:
+      FE11_EXPECTED_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+      FE11_BASE_COMMIT: ${{ github.event.pull_request.base.sha }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.FE11_EXPECTED_COMMIT }}
+          persist-credentials: false
+      - name: Select Python
+        if: runner.os == 'Windows'
+        uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
+        with:
+          python-version: '3.13.17'
+          check-latest: false
+      - name: Install native prerequisites
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential autoconf automake libtool pkg-config libssl-dev perl python3 git ca-certificates
+      - name: Compile and validate public documentation
+        env:
+          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-build
+        shell: pwsh
+        run: |
+          & '${{ matrix.python }}' ci/scripts/job.py build --rust '${{ matrix.rust }}' --root $env:FE11_JOB_ROOT
+          exit $LASTEXITCODE
+      - name: Upload public reports
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: ${{ matrix.name }}-reports
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/fe11-public-build/reports/identity.json
+            ${{ runner.temp }}/fe11-public-build/reports/toolchain.json
+            ${{ runner.temp }}/fe11-public-build/reports/commands.json
+            ${{ runner.temp }}/fe11-public-build/reports/native.json
+            ${{ runner.temp }}/fe11-public-build/reports/native-inspection.json
+            ${{ runner.temp }}/fe11-public-build/reports/sys.json
+            ${{ runner.temp }}/fe11-public-build/reports/documentation.json
+            ${{ runner.temp }}/fe11-public-build/reports/summary.json
+      - name: Clean reproducible job files
+        if: always()
+        shell: pwsh
+        env:
+          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-build
+        run: |
+          & '${{ matrix.python }}' ci/scripts/cleanup.py --root $env:FE11_JOB_ROOT --parent $env:RUNNER_TEMP
+          exit $LASTEXITCODE
+
+  softhsm:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: softhsm-msrv, rust: '1.81.0' }
+          - { name: softhsm-current, rust: '1.100.0' }
+    env:
+      FE11_EXPECTED_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+      FE11_BASE_COMMIT: ${{ github.event.pull_request.base.sha }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ env.FE11_EXPECTED_COMMIT }}
+          persist-credentials: false
+      - name: Install module prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential autoconf automake libtool pkg-config libssl-dev perl python3 git ca-certificates
+      - name: Run the public SoftHSM scenarios
+        env:
+          FE11_RUST: ${{ matrix.rust }}
+          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-softhsm
+        run: python3 ci/scripts/job.py softhsm --rust "$FE11_RUST" --root "$FE11_JOB_ROOT"
+      - name: Upload public reports
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: ${{ matrix.name }}-reports
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/fe11-public-softhsm/reports/identity.json
+            ${{ runner.temp }}/fe11-public-softhsm/reports/toolchain.json
+            ${{ runner.temp }}/fe11-public-softhsm/reports/commands.json
+            ${{ runner.temp }}/fe11-public-softhsm/reports/softhsm.json
+            ${{ runner.temp }}/fe11-public-softhsm/reports/results.tsv
+            ${{ runner.temp }}/fe11-public-softhsm/reports/summary.json
+      - name: Clean reproducible job files
+        if: always()
+        env:
+          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-softhsm
+        run: python3 ci/scripts/cleanup.py --root "$FE11_JOB_ROOT" --parent "$RUNNER_TEMP"

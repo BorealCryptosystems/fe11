@@ -1,6 +1,6 @@
 # Fe11 API guide
 
-Fe11 0.1.0 is a Rust PKCS#11 library licensed under Apache-2.0. It loads an application-selected native module and exposes its operations through Rust owners for sessions, objects, parameters and operation memory. The Rust package and crate are named `fe11`.
+Fe11 0.1.1 is a Rust PKCS#11 library licensed under Apache-2.0. It loads an application-selected native module and exposes its operations through Rust owners for sessions, objects, parameters and operation memory. The Rust package and crate are named `fe11`.
 
 The application chooses keys, mechanisms, parameters and templates. The native module evaluates their cryptographic compatibility and applies its policies. Fe11 manages ABI representation, lengths, conversions, buffer capacity, pointer stability, resource identity, access coordination and memory lifetime.
 

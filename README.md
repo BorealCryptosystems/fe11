@@ -1,4 +1,6 @@
-# Fe11 0.1.0
+# Fe11 0.1.1
+
+[![Public validation](https://github.com/BorealCryptosystems/fe11/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/BorealCryptosystems/fe11/actions/workflows/ci.yml)
 
 Fe11 is a Rust interface to PKCS#11 modules, maintained by **Boreal Cryptosystems**
 and licensed under Apache-2.0. It loads the native module selected by the application
@@ -21,14 +23,14 @@ The raw bindings, `fe11-sys`, have their own repository and package. Supported
 targets are Linux x86_64 GNU and Windows x86_64 MSVC; minimum Rust is **1.81**.
 The module's ABI must match the selected profile. See [BUILDING.txt](BUILDING.txt).
 
-Add `fe11 = "0.1.0"` to your application's dependencies. The default workspace build selects only the library. The optional
+Add `fe11 = "0.1.1"` to your application's dependencies. The default workspace build selects only the library. The optional
 engine uses its own static OpenSSL build for explicitly selected software verification.
 
 ## Documentation
 
 The [documentation website](https://borealcryptosystems.github.io/fe11/) and
-[searchable API reference](https://borealcryptosystems.github.io/fe11/0.1.0/api/index.html)
-cover the 0.1.0 release.
+[searchable API reference](https://borealcryptosystems.github.io/fe11/0.1.1/api/index.html)
+cover the 0.1.1 release.
 
 
 - [How To: detailed usage recipes](library/docs/how-to/index.md), including
@@ -46,4 +48,14 @@ cover the 0.1.0 release.
 - [License](LICENSE), [copyright](COPYRIGHT), [contributors](CONTRIBUTORS.md),
   [third-party notices](THIRD-PARTY-NOTICES.md) and [dependency inventory](SBOM.json).
 
-This is an initial community release.
+## Compiler and integration checks
+
+Fe11 supports Rust 1.81 and is also checked with Rust 1.100 on Linux x86_64 GNU
+and Windows x86_64 MSVC. The public CI runs ten API scenarios against an
+unmodified upstream SoftHSM build on both compiler versions. See the
+[validation scope](VALIDATION.md) and [local test instructions](ci/softhsm/README.md).
+
+The verification packages and `fe11-sys` remain at version 0.1.0. Fe11 0.1.1
+preserves the 0.1.0 API and adds compiler/dependency compatibility checks and
+public CI tooling. [Documentation for 0.1.0](https://borealcryptosystems.github.io/fe11/0.1.0/index.html)
+remains available.

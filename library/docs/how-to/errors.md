@@ -25,7 +25,7 @@ pub fn diagnostic_summary(error: &Error) -> String {
 
 This helper is a summary, not an exhaustive recovery dispatcher. Creation and
 compound failures can wrap additional native/local causes; inspect those variants
-in the [Error reference](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.Error.html). Record non-secret operation
+in the [Error reference](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.Error.html). Record non-secret operation
 identifiers and preserve all nested diagnostics for controlled reconciliation.
 
 | Outcome | Application action |

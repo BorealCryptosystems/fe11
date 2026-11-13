@@ -6,7 +6,7 @@
     "component": {
       "type": "library",
       "name": "fe11",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "licenses": [
         {
           "expression": "Apache-2.0"

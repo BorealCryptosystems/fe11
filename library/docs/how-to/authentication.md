@@ -11,7 +11,7 @@ session. Login and Logout change token-wide authentication. Use the helper below
 only when your application coordinates that authentication lifecycle. An
 already-logged-in native result does not validate a newly supplied PIN.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub struct SessionRun<T> {
@@ -46,7 +46,7 @@ is distinct from a PQC signature's binary domain-separation context.
 
 ## Share initialization within an application
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn shared_runtime(
@@ -59,8 +59,8 @@ pub fn shared_runtime(
 Retain `RuntimeOwner` for the initialization lifetime. Create additional ordinary
 clients with `owner.client()`. Close each client's sessions and release its
 objects before finalizing through `owner.module().close()`. Coordinate foreign
-PKCS#11 participants using the explicit [coexistence contract](https://borealcryptosystems.github.io/fe11/0.1.0/COEXISTENCE.txt).
-Reference: [RuntimeOwner](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.RuntimeOwner.html),
-[Session](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.Session.html), [ModuleDrain](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.ModuleDrain.html).
+PKCS#11 participants using the explicit [coexistence contract](https://borealcryptosystems.github.io/fe11/0.1.1/COEXISTENCE.txt).
+Reference: [RuntimeOwner](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.RuntimeOwner.html),
+[Session](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.Session.html), [ModuleDrain](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.ModuleDrain.html).
 
 [All How To guides](index.md)

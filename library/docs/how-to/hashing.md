@@ -4,7 +4,7 @@ These operations use the selected native module. SHA-256 requests need the
 corresponding digest mechanism. `InputLimits` must cover the number of parts and
 their aggregate bytes, within the module's configured `CryptoLimits`.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sha256(session: &Session, message: &[u8], limits: InputLimits) -> Result<PreparedDigest> {

@@ -3,8 +3,8 @@
 The documentation site uses GitHub Pages at
 [borealcryptosystems.github.io/fe11](https://borealcryptosystems.github.io/fe11/).
 Versioned directories contain the guides and the four-crate API reference. For
-0.1.0, the API entry is `0.1.0/api/index.html` and the How To entry is
-`0.1.0/library/docs/how-to/index.html`.
+0.1.1, the API entry is `0.1.1/api/index.html` and the How To entry is
+`0.1.1/library/docs/how-to/index.html`.
 
 ## Build the site
 
@@ -12,13 +12,26 @@ Use Python 3.11 or later and Rustdoc. Generate the four-crate API tree as descri
 in [API-REFERENCE.md](../API-REFERENCE.md), then assemble it with the guides:
 
 ```text
-python docs/build_site.py --api-dir API_DIRECTORY --output NEW_SITE_DIRECTORY
+python docs/build_site.py --api-dir API_DIRECTORY --output NEW_SITE_DIRECTORY --previous-site PREVIOUS_SITE_DIRECTORY
+```
+
+Obtain the previous site from the published release and the manifest belonging
+to the same tag. From a checkout containing tag `v0.1.0`, these shell commands
+download and verify it into a new directory:
+
+```sh
+mkdir previous-download
+gh release download v0.1.0 --repo BorealCryptosystems/fe11 --pattern 'fe11-0.1.0-docs-site.zip' --dir previous-download
+git show v0.1.0:docs/site-manifest.json > previous-download/site-manifest.json
+python docs/unpack_site.py --manifest previous-download/site-manifest.json --archive previous-download/fe11-0.1.0-docs-site.zip --output PREVIOUS_SITE_DIRECTORY
 ```
 
 The API directory contains `index.html`, `fe11/`, `fe11_sys/`,
 `fe11_verify_engine_api/` and `fe11_verify_engine/`. The builder copies that tree
 and renders repository Markdown using Rustdoc. Its inputs are trusted repository
-content. Keep the output outside the source and API input trees.
+content. Keep the output outside the source, API and previous-site input trees. The
+previous site supplies the unchanged 0.1.0 directory; the new root selector
+links both versions. Companion packages retain their 0.1.0 API version.
 
 Open `NEW_SITE_DIRECTORY/index.html` to browse the site locally. Check navigation,
 source links, examples and the displayed API contracts. The Rust recipe library
@@ -26,7 +39,7 @@ can be type-checked with `cargo check -p fe11 --example how_to`.
 
 ## Package the HTML
 
-Archive the site's regular files at ZIP root as `fe11-0.1.0-docs-site.zip`.
+Archive the site's regular files at ZIP root as `fe11-0.1.1-docs-site.zip`.
 Include no directory entries, symbolic links or hidden paths. Record the ZIP's
 SHA-256, number of files and total uncompressed bytes in `docs/site-manifest.json`.
 That manifest remains outside the archive so its digest is not self-referential.
@@ -35,7 +48,7 @@ Update the identity whenever the site's content changes.
 Validate and extract the archive with the same tool used by the deployment workflow:
 
 ```text
-python docs/unpack_site.py --manifest docs/site-manifest.json --archive fe11-0.1.0-docs-site.zip --output NEW_EXTRACTED_SITE
+python docs/unpack_site.py --manifest docs/site-manifest.json --archive fe11-0.1.1-docs-site.zip --output NEW_EXTRACTED_SITE
 ```
 
 Compare the extracted member hashes with the generated directory. The extraction
@@ -47,7 +60,7 @@ files and directories only. The site archive itself contains files only.
 1. Protect the repository's `main` branch and changes to its workflow and manifest.
 2. Configure Pages to use GitHub Actions. Configure the `github-pages` environment
    with a required maintainer reviewer and deployments restricted to `main`.
-3. Attach the matching documentation ZIP to the `v0.1.0` GitHub release.
+3. Attach the matching documentation ZIP to the `v0.1.1` GitHub release.
 4. Dispatch **Publish documentation** from `main` and approve its environment job.
 5. Check the versioned API and How To links on the hosted site.
 
