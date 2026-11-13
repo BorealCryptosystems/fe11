@@ -58,7 +58,7 @@ context are protocol data and must agree between peers.
 3.2 API, external SHAKE prehash identifiers have a specific representation limit:
 the parameters API reports `Unsupported` where a standardized native identifier
 is unavailable. Combined SHAKE mechanisms have their own explicit selectors.
-See [PqcSignatureMode](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.PqcSignatureMode.html) and
-[PqcHash](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.PqcHash.html) for the exact supported representations.
+See [PqcSignatureMode](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.PqcSignatureMode.html) and
+[PqcHash](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.PqcHash.html) for the exact supported representations.
 
 [All How To guides](index.md)

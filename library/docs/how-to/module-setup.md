@@ -121,8 +121,8 @@ such as `slot_ids` and `token_info` return observations; they do not rewrite tha
 snapshot. Follow the [recovery contract](../error-recovery.md) if the token or
 runtime changes. Finish operations and close sessions before `module.close()`.
 
-Reference: [ModuleBuilder](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.ModuleBuilder.html),
-[ModuleOptions](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.ModuleOptions.html),
-[SessionPolicy](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.SessionPolicy.html).
+Reference: [ModuleBuilder](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.ModuleBuilder.html),
+[ModuleOptions](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.ModuleOptions.html),
+[SessionPolicy](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.SessionPolicy.html).
 
 [All How To guides](index.md)

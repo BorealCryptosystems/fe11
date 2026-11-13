@@ -92,8 +92,8 @@ session closure; destroy persistent objects explicitly. Custom native destinatio
 templates are available through `encapsulate_native` and `decapsulate_native` with
 `NativeKemParameters::MlKem` and `GenerationTemplate`.
 
-Reference: [KemSharedKeySpec](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.KemSharedKeySpec.html),
-[KemKeySpec](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.KemKeySpec.html),
-[NativeKemParameters](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.NativeKemParameters.html).
+Reference: [KemSharedKeySpec](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.KemSharedKeySpec.html),
+[KemKeySpec](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.KemKeySpec.html),
+[NativeKemParameters](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.NativeKemParameters.html).
 
 [All How To guides](index.md)

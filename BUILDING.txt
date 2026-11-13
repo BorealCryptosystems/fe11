@@ -1,4 +1,4 @@
-Fe11 0.1.0 — building from source
+Fe11 0.1.1 — building from source
 ================================
 
 Minimum Rust version: 1.81. Supported targets: Linux x86_64 GNU and Windows

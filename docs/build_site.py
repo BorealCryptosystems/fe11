@@ -14,7 +14,7 @@ import shutil
 import subprocess
 from urllib.parse import unquote, urlsplit
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 SITE = "https://borealcryptosystems.github.io/fe11/"
 STYLE = """<style>
 :root{color-scheme:light dark;--accent:#176e69;--border:#c5d5d3}
@@ -45,24 +45,32 @@ def main():
     parser.add_argument("--api-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--rustdoc", default="rustdoc")
+    parser.add_argument("--previous-site", type=Path, required=True)
     args = parser.parse_args()
     repo = Path(__file__).resolve().parents[1]
     output = args.output.resolve()
     api = args.api_dir.resolve()
+    previous = args.previous_site.resolve()
     if (output.exists() or output.is_relative_to(repo) or repo.is_relative_to(output) or
-            output.is_relative_to(api) or api.is_relative_to(output)):
+            output.is_relative_to(api) or api.is_relative_to(output) or
+            output.is_relative_to(previous) or previous.is_relative_to(output)):
         parser.error("Output must be new and disjoint from the source and API trees")
     for crate in ("fe11", "fe11_sys", "fe11_verify_engine_api", "fe11_verify_engine"):
         if not (api / crate / "index.html").is_file():
             parser.error("API tree must contain all four crate indexes")
     if any(p.is_symlink() for p in api.rglob("*")):
         parser.error("API tree must contain regular files and directories")
+    if (not (previous / "0.1.0/api/fe11/index.html").is_file() or
+            any(p.is_symlink() for p in previous.rglob("*"))):
+        parser.error("Previous site must contain the original 0.1.0 documentation")
     version = output / VERSION
     version.mkdir(parents=True)
+    shutil.copytree(previous / "0.1.0", output / "0.1.0")
     shutil.copytree(api, version / "api")
     shutil.copytree(repo / "library/examples/how_to", version / "library/examples/how_to")
     shutil.copyfile(repo / "library/examples/how_to.rs", version / "library/examples/how_to.rs")
     docs = sorted(set(repo.glob("*.md")) | set((repo / "library/docs").rglob("*.md")) |
+                  set((repo / "ci").rglob("*.md")) | set((repo / "docs").rglob("*.md")) |
                   {repo / "verify-engine/README.md", repo / "verify-engine-api/README.md"})
     if any(p.is_symlink() or not p.resolve().is_relative_to(repo) for p in docs):
         parser.error("Documentation inputs must be regular files inside the repository")
@@ -73,7 +81,7 @@ def main():
     header.write_text(STYLE, encoding="utf8")
     before = work / "before.html"
     after = work / "after.html"
-    after.write_text("<footer>Fe11 0.1.0 · Boreal Cryptosystems · Apache-2.0</footer>", encoding="utf8")
+    after.write_text(f"<footer>Fe11 {VERSION} · Boreal Cryptosystems · Apache-2.0</footer>", encoding="utf8")
 
     def resolve_link(value, source, destination):
         if value.startswith(SITE):
@@ -103,7 +111,7 @@ def main():
                  ("How To", version / "library/docs/how-to/index.html"),
                  ("API reference", version / "api/index.html"),
                  ("Verification engine", version / "verify-engine/README.html")]
-        before.write_text('<nav aria-label="Documentation"><strong>Fe11 / 0.1.0</strong>' +
+        before.write_text(f'<nav aria-label="Documentation"><strong>Fe11 / {VERSION}</strong>' +
                           ''.join(f'<a href="{relative(p, destination.parent)}">{name}</a>'
                                   for name, p in links) + '</nav>', encoding="utf8")
         # Included API fragments may have no standalone document title.
@@ -132,9 +140,10 @@ def main():
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Fe11 documentation</title>' + STYLE + '<body><h1>Fe11 documentation</h1>'
         '<p>Rust PKCS#11 interfaces, usage recipes and API reference.</p>'
-        '<p><a href="0.1.0/index.html">Fe11 0.1.0 documentation</a></p>'
-        '<p><a href="0.1.0/library/docs/how-to/index.html">How To</a> · '
-        '<a href="0.1.0/api/index.html">API reference</a></p></body></html>', encoding="utf8")
+        '<p><a href="0.1.1/index.html">Fe11 0.1.1 documentation</a> · '
+        '<a href="0.1.0/index.html">Fe11 0.1.0 documentation</a></p>'
+        '<p><a href="0.1.1/library/docs/how-to/index.html">How To</a> · '
+        '<a href="0.1.1/api/index.html">API reference</a></p></body></html>', encoding="utf8")
     # Only the known, newly-created renderer scratch directory is removed.
     if work.resolve().parent != output:
         raise ValueError("Unexpected scratch location")

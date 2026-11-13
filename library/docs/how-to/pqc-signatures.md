@@ -33,7 +33,7 @@ pub fn generate_signature_pair(
 }
 ```
 
-Supply a [PqcKeySpec](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.PqcKeySpec.html) containing the ID, label,
+Supply a [PqcKeySpec](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.PqcKeySpec.html) containing the ID, label,
 persistence, private visibility, usages and both `ObjectAdmission` plans. The
 helper preserves those choices while selecting the algorithm and enabling sign
 and verify. Supply public/private `MechanismAttributes`, private
@@ -88,7 +88,7 @@ For `CKA_ALWAYS_AUTHENTICATE`, use `sign_pqc_with_context` with the key's
 context above. See [prehash modes](pqc-prehash.md) for hashing alternatives and
 [software verification](verification-engine.md) for the optional engine.
 
-Reference: [PqcAlgorithm](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/enum.PqcAlgorithm.html),
-[PqcSignatureParameters](https://borealcryptosystems.github.io/fe11/0.1.0/api/fe11/struct.PqcSignatureParameters.html).
+Reference: [PqcAlgorithm](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/enum.PqcAlgorithm.html),
+[PqcSignatureParameters](https://borealcryptosystems.github.io/fe11/0.1.1/api/fe11/struct.PqcSignatureParameters.html).
 
 [All How To guides](index.md)

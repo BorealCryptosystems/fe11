@@ -25,10 +25,10 @@ jobs:
           REPOSITORY: ${{ github.repository }}
         run: |
           mkdir -p _download
-          gh release download v0.1.0 --repo "$REPOSITORY" \
-            --pattern 'fe11-0.1.0-docs-site.zip' --dir _download
+          gh release download v0.1.1 --repo "$REPOSITORY" \
+            --pattern 'fe11-0.1.1-docs-site.zip' --dir _download
           python3 docs/unpack_site.py --manifest docs/site-manifest.json \
-            --archive _download/fe11-0.1.0-docs-site.zip --output _site
+            --archive _download/fe11-0.1.1-docs-site.zip --output _site
       - name: Stage the verified HTML
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
