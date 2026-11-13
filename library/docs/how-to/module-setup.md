@@ -19,7 +19,7 @@ The Edwards OID/raw-point/field-bit and ChaCha bit-length choices below are
 explicit representation settings. If your deployment requires another supported
 representation, select it before opening the module.
 
-```rust
+```rust,no_run
 // SPDX-License-Identifier: Apache-2.0
 use fe11::*;
 use std::path::PathBuf;

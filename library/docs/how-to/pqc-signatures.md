@@ -11,7 +11,7 @@ and signing still return the module's decision for the exact key and parameters.
 The examples below choose ML-DSA-65 and SLH-DSA-SHA2-128s as concrete alternatives.
 Choose the parameter set for your protocol; it is not inferred from key size.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn signature_algorithms() -> [PqcAlgorithm; 2] {
@@ -50,7 +50,7 @@ requires an authenticated application channel.
 
 ## Sign and verify in pure mode
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_pure(

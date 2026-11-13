@@ -8,7 +8,7 @@ attributes, their scalar storage and ID bytes; choose a nonzero batch size and
 the application's result bound. `maximum_objects: None` chooses an unbounded
 result count, subject to configured object resources.
 
-```rust
+```rust,no_run
 use fe11::*;
 use std::num::NonZeroUsize;
 
@@ -46,7 +46,7 @@ template. Authenticate the public key's association through your application.
 
 ## Generate a pair with explicit attributes
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn generate_rsa(
@@ -79,7 +79,7 @@ generated pair's `ObjectRef::native_object()` gives the native-operation referen
 
 ## Sign and verify the original message
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_message(

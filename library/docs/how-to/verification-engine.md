@@ -6,7 +6,7 @@ DLL or shared object and establish its expected SHA-256 through your authenticat
 deployment manifest. The engine performs explicit software hashing and public-key
 signature verification; native signing remains at the PKCS#11 module.
 
-```rust
+```rust,no_run
 use fe11::*;
 use std::path::PathBuf;
 
@@ -31,7 +31,7 @@ component and OpenSSL version information and available service entry points.
 
 ## Verify a PQC signature using its public representation
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn verify_in_software(

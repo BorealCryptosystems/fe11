@@ -11,7 +11,7 @@ identifier in an unambiguous encoding. Keep the exact nonce, AAD and ciphertext
 with the record. The helpers select the provided 12-byte nonce form and its
 128-bit authentication tag.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn encrypt_record(

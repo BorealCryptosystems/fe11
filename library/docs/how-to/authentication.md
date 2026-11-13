@@ -11,7 +11,7 @@ session. Login and Logout change token-wide authentication. Use the helper below
 only when your application coordinates that authentication lifecycle. An
 already-logged-in native result does not validate a newly supplied PIN.
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub struct SessionRun<T> {
@@ -46,7 +46,7 @@ is distinct from a PQC signature's binary domain-separation context.
 
 ## Share initialization within an application
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn shared_runtime(

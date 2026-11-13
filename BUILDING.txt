@@ -64,6 +64,29 @@ must establish local symbol binding and static linkage of OpenSSL.
 Documentation and validation
 ----------------------------
 
+The public CI has four build jobs (Windows/Linux, Rust 1.81.0/1.100.0) and two
+Linux SoftHSM jobs. Its new public scenarios live in ci/softhsm/tests, separate
+from the library sources. This workspace member has publish=false; the default
+workspace member remains library. See ci/softhsm/README.md for the scenarios,
+module provenance, ephemeral-token handling and local invocation.
+
+The build jobs compile examples, the standalone fe11-sys crate and the optional
+verification engine. They also compile Rust documentation snippets and generate
+the API reference. Native-use snippets are marked no_run: they are type-checked
+without loading a module. Autonomous Rust snippets execute as doctests.
+
+Run a complete build job locally using Python 3.11 or later, a clean checkout,
+the platform's native build tools and a fresh absolute working directory:
+
+  python ci/scripts/job.py build --rust 1.81.0 --root <new absolute directory>
+
+Select 1.100.0 for the current compiler job. Linux jobs target Ubuntu 24.04;
+Windows jobs require x64 MSVC and Perl. The script downloads official Rust
+components and verified upstream sources into that directory. Raw command logs
+remain private; only the explicitly named reports are uploaded by the workflow.
+After the job ends, cleanup.py can remove reproducible files under its checked
+parent directory while retaining reports and private build diagnostics.
+
 Use Cargo doc to generate the public API reference. VALIDATION.md describes
 how to report interoperability results and diagnose native module differences.
 

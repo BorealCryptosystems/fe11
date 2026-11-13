@@ -6,7 +6,7 @@ the shared secret as a native key object. Select a PKCS#11 3.2 module exposing
 
 ## Generate the recipient's key pair
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn generate_kem_pair(
@@ -39,7 +39,7 @@ attributes and observation choices. Authenticate the recipient key before use.
 
 ## Encapsulate at the sender
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn encapsulate(
@@ -62,7 +62,7 @@ is 32 bytes for all three sets. Do not log or export secret-key material.
 
 ## Decapsulate at the recipient
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn decapsulate(

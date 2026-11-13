@@ -14,7 +14,7 @@ use the same mode, hash and context at signing and verification.
 Hash the original message once using the application's selected SHA-512
 implementation, or the native digest API. Supply the resulting 64 bytes:
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_sha512_prehash(
@@ -35,7 +35,7 @@ to `Session::verify_pqc` or `PqcPublicKey::verify`.
 
 ## Module-side hashing
 
-```rust
+```rust,no_run
 use fe11::*;
 
 pub fn sign_hashed_message(
