@@ -25,6 +25,9 @@ def save(path, data):
 
 def diagnostic(text):
     """Bound and prefix hosted diagnostics, neutralizing console controls."""
+    # Piped Windows consoles may use a strict legacy encoding. Escape Unicode
+    # before bounding the text so reporting an error cannot raise a new one.
+    text = text[-32768:].encode("ascii", errors="backslashreplace").decode("ascii")
     for line in text[-32768:].splitlines():
         printable = "".join(c if c.isprintable() or c == "\t" else "?" for c in line)
         print("diagnostic: " + printable, flush=True)
@@ -128,7 +131,8 @@ class Job:
                     stream.seek(max(0, output.stat().st_size - 32768))
                     tail = stream.read(32768).decode("utf-8", errors="replace")
                 diagnostic(tail)
-            raise RuntimeError(f"{label} failed; inspect the local private build log")
+            location = "the command's console output" if self.github or inherit else "the local private build log"
+            raise RuntimeError(f"{label} failed; inspect {location}")
         return output
 
     @staticmethod
