@@ -15,6 +15,17 @@ in [API-REFERENCE.md](../API-REFERENCE.md), then assemble it with the guides:
 python docs/build_site.py --api-dir API_DIRECTORY --output NEW_SITE_DIRECTORY --previous-site PREVIOUS_SITE_DIRECTORY
 ```
 
+Obtain the previous site from the published release and the manifest belonging
+to the same tag. From a checkout containing tag `v0.1.0`, these shell commands
+download and verify it into a new directory:
+
+```sh
+mkdir previous-download
+gh release download v0.1.0 --repo BorealCryptosystems/fe11 --pattern 'fe11-0.1.0-docs-site.zip' --dir previous-download
+git show v0.1.0:docs/site-manifest.json > previous-download/site-manifest.json
+python docs/unpack_site.py --manifest previous-download/site-manifest.json --archive previous-download/fe11-0.1.0-docs-site.zip --output PREVIOUS_SITE_DIRECTORY
+```
+
 The API directory contains `index.html`, `fe11/`, `fe11_sys/`,
 `fe11_verify_engine_api/` and `fe11_verify_engine/`. The builder copies that tree
 and renders repository Markdown using Rustdoc. Its inputs are trusted repository

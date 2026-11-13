@@ -17,3 +17,10 @@ Security contact: security@borealcryptosystems.com.
 Fe11 0.1.1 is checked with Rust 1.81 and 1.100. Its manifest constrains the
 shared Base64 and zeroization-derive dependencies to versions compatible with
 Rust 1.81, including when an application resolves its own dependencies.
+
+The exact `base64ct = 1.6.0` and `zeroize_derive = 1.4.3` constraints preserve
+the minimum compiler for fresh resolutions. They can conflict with application
+dependencies requiring newer compatible versions of those packages; review the
+combined graph when updating dependencies. Fresh-resolution checks apply to the
+registry state at validation time and do not guarantee every future resolution.
+

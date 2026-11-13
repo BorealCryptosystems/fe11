@@ -44,7 +44,11 @@ The engine recipe uses static OpenSSL 3.5.9 with native symbol inspection.
 The Linux integration suite exercises discovery, login/logout, invalid PIN,
 single and multipart SHA-256, RSA sign/verify, invalid signature, AES-GCM,
 invalid GCM tag and object search/destruction. Ten scenarios passed with each
-compiler in local acceptance, including cleanup. The module source is the
+compiler in local acceptance, including cleanup. Those runs used the same
+productive source code, scenario code and locked third-party versions/features
+as this package. The package adds direct MSRV constraints without changing that
+locked graph. Hosted runs record their own checkout and results through the
+workflow linked below. The module source is the
 unmodified official SoftHSM commit
 `31293555b3822fcd687057e0b64462a114359c17`; its utility reports 2.7.0. The source
 commit identifies this build precisely. See [the public suite](ci/softhsm/README.md)

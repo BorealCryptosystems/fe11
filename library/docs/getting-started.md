@@ -4,7 +4,7 @@ Fe11 requires Rust 1.81 or later and a compatible native PKCS#11 module installe
 by the application. Linux x86_64 GNU uses natural LP64 layout; Windows x86_64 MSVC
 uses one-byte-packed LLP64 layout. Establish ABI compatibility before loading.
 
-Add `fe11 = "0.1.0"` to Cargo.toml after registry publication. Build the core with
+Add `fe11 = "0.1.1"` to Cargo.toml. Build the core with
 `cargo build --release -p fe11`; OpenSSL is not required for this package.
 Generate method-level documentation with `cargo doc -p fe11 --no-deps`.
 

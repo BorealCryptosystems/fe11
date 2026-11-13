@@ -12,6 +12,13 @@
 The PKCS#11 API, verification ABI and native-operation behavior are unchanged.
 `fe11-sys`, `fe11-verify-engine-api` and `fe11-verify-engine` remain at 0.1.0.
 
+
+The exact `base64ct = 1.6.0` and `zeroize_derive = 1.4.3` constraints preserve
+the minimum compiler for fresh resolutions. They can conflict with application
+dependencies requiring newer compatible versions of those packages; review the
+combined graph when updating dependencies. Fresh-resolution checks apply to the
+registry state at validation time and do not guarantee every future resolution.
+
 ## 0.1.0
 
 Initial release of the Rust PKCS#11 library, with owned sessions and objects,
