@@ -104,6 +104,7 @@ dependencies = [
 name = "fe11"
 version = "0.1.1"
 dependencies = [
+ "base64ct",
  "crypto-bigint",
  "der",
  "fe11-sys",
@@ -115,6 +116,7 @@ dependencies = [
  "sha3",
  "x509-cert",
  "zeroize",
+ "zeroize_derive",
 ]
 
 [[package]]
