@@ -10,14 +10,20 @@ import urllib.request
 from common import digest, save
 
 
+# Release manifest identities; component hashes are read only after this check.
+MANIFEST_SHA256 = {
+    "1.81.0": "5596679723faf7e63772bacb1d0c898abaa51eb4ed193b328929d907c8c4bd5a",
+    "1.100.0": "3051e859570f64a8c5acb9d09e87425db52c7d97287c67e8f6d57d7d34ef9258",
+}
+
+
 def install(job):
     target = "x86_64-pc-windows-msvc" if os.name == "nt" else "x86_64-unknown-linux-gnu"
     url = f"https://static.rust-lang.org/dist/channel-rust-{job.rust}.toml"
     timeout = 3600 if job.github else job.remaining()
     with urllib.request.urlopen(url, timeout=timeout) as stream:
         raw = stream.read()
-    with urllib.request.urlopen(url + ".sha256", timeout=timeout) as stream:
-        expected = stream.read().decode("ascii").split()[0]
+    expected = MANIFEST_SHA256[job.rust]
     if hashlib.sha256(raw).hexdigest() != expected:
         raise ValueError("Rust manifest checksum mismatch")
     manifest = tomllib.loads(raw.decode("utf-8"))

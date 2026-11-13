@@ -2,15 +2,31 @@
 """Build an unmodified upstream module; this prefix is independent of the engine."""
 import os
 import subprocess
+import shutil
+from pathlib import Path
 from common import digest, save
 
 COMMIT = "31293555b3822fcd687057e0b64462a114359c17"
 URL = "https://github.com/softhsm/SoftHSMv2.git"
 
 
+def tool_versions(job):
+    tools = {}
+    for name in ("g++", "make", "autoconf", "automake", "libtoolize", "pkg-config"):
+        path = shutil.which(name, path=job.env["PATH"])
+        if not path:
+            raise ValueError("SoftHSM build tool missing: " + name)
+        text = subprocess.check_output([path, "--version"], env=job.env, text=True,
+                                       timeout=3600 if job.github else job.remaining())
+        tools[name] = {"file": Path(path).name, "sha256": digest(path),
+                       "version": text.strip().splitlines()[0]}
+    return tools
+
+
 def build(job):
     if os.name == "nt":
         raise RuntimeError("SoftHSM suite requires Linux")
+    tools = tool_versions(job)
     source = job.root / "softhsm-source"
     prefix = job.root / "softhsm"
     job.run("softhsm-fetch", ["git", "clone", "--no-checkout", URL, source])
@@ -36,6 +52,6 @@ def build(job):
     job.env.update(FE11_CI_MODULE=str(module), FE11_CI_MODULE_SHA256=digest(module),
                    FE11_CI_SOFTHSM_UTIL=str(utility))
     save(job.reports / "softhsm.json", {"repository": URL, "commit": actual, "utility_version": version,
-         "release_tag": None,
+         "release_tag": None, "tools": tools,
          "module_sha256": digest(module), "utility_sha256": digest(utility),
          "backend": "openssl", "object_store": "file", "source_patched": False})

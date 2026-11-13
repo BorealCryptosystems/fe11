@@ -11,6 +11,8 @@ import sys
 # A clean checkout is an input invariant. Importing this driver's local modules
 # must not create untracked __pycache__ files in that checkout.
 sys.dont_write_bytecode = True
+if sys.version_info < (3, 11):
+    raise SystemExit("Python 3.11 or later is required")
 
 from common import Job, digest, extract, save
 import documentation
@@ -35,7 +37,7 @@ def identity(job):
     value = {"checkout": checkout, "event_sha": os.environ.get("GITHUB_SHA"),
              "base_sha": os.environ.get("FE11_BASE_COMMIT"), "event": os.environ.get("GITHUB_EVENT_NAME", "local"),
              "cargo_lock_sha256": digest(job.repository / "Cargo.lock"),
-             "system": platform.system(), "release": platform.release(), "machine": platform.machine(),
+             "python": sys.version, "system": platform.system(), "release": platform.release(), "machine": platform.machine(),
              "runner_image": os.environ.get("ImageOS"), "runner_image_version": os.environ.get("ImageVersion")}
     if sys.platform.startswith("linux"):
         value["system_packages"] = subprocess.check_output(["dpkg-query", "-W", "-f=${Package}=${Version}\n",
@@ -50,7 +52,8 @@ def standalone_sys(job):
     source = job.root / "sys/fe11-sys-0.1.0"
     manifest = str(source / "Cargo.toml")
     for action in ("build", "doc"):
-        job.cargo("standalone-sys-" + action, action, "--manifest-path", manifest, "--locked", "--release")
+        job.cargo("standalone-sys-" + action, action, "--manifest-path", manifest, "--locked", "--release",
+                  *(["--no-deps"] if action == "doc" else []))
     job.cargo("standalone-sys-doctest", "test", "--manifest-path", manifest, "--locked", "--release", "--doc")
     save(job.reports / "sys.json", {"version": "0.1.0", "crate_sha256": SYS_SHA,
         "cargo_lock_sha256": digest(source / "Cargo.lock"), "standalone": True})
@@ -84,14 +87,15 @@ def run_suite(job):
         # Never copy child paths, logs or arbitrary fields into a public artifact.
         result = tokens / "results.tsv"
         if result.is_file():
-            raw = result.read_bytes()
+            with result.open("rb") as stream:
+                raw = stream.read(4097)
             if len(raw) > 4096:
                 raise ValueError("result size limit")
             lines = raw.decode("ascii").splitlines()
-            if not lines or lines[0] != "scenario\tstatus\tcause\tnative_code\tcleanup\tcleanup_native_code":
+            if not lines or lines[0] != "scenario\tstatus\tcause\tnative_code\tcleanup\tcleanup_native_code\tchild_exit":
                 raise ValueError("result header")
             seen = []
-            pattern = r"[a-z_]+\t(PASS|FAIL)\t(none|native_error|local_error|assertion|setup|prerequisite|panic)\t(-|0x[0-9a-f]{1,16})\t(PASS|FAIL)\t(-|0x[0-9a-f]{1,16})"
+            pattern = r"[a-z_]+\t(PASS|FAIL)\t(none|native_error|local_error|assertion|setup|prerequisite|panic)\t(-|0x[0-9a-f]{1,16})\t(PASS|FAIL)\t(-|0x[0-9a-f]{1,16})\t(PASS|FAIL)"
             for line in lines[1:]:
                 if not re.fullmatch(pattern, line) or line.split("\t")[0] not in SCENARIOS:
                     raise ValueError("invalid result row")
@@ -99,7 +103,7 @@ def run_suite(job):
             if len(seen) != len(set(seen)):
                 raise ValueError("duplicate result")
             (job.reports / "results.tsv").write_bytes(raw)
-    if seen != list(SCENARIOS) or any(line.split("\t")[1:] != ["PASS", "none", "-", "PASS", "-"] for line in lines[1:]):
+    if seen != list(SCENARIOS) or any(line.split("\t")[1:] != ["PASS", "none", "-", "PASS", "-", "PASS"] for line in lines[1:]):
         raise ValueError("suite incomplete or failed")
 
 
@@ -128,7 +132,8 @@ def main():
         (job.logs / "failure.txt").write_text(traceback.format_exc(), encoding="utf-8")
         cause = "cancelled" if isinstance(error, KeyboardInterrupt) else (
             "timeout" if isinstance(error, (TimeoutError, subprocess.TimeoutExpired)) else "execution")
-        print("CI job failed; inspect private-logs locally.", file=sys.stderr)
+        print("CI job failed; inspect the failing step's console diagnostic." if job.github else
+              "CI job failed; inspect private-logs locally.", file=sys.stderr)
         return 1
     finally:
         save(job.reports / "summary.json", {"mode": args.mode, "rust": args.rust, "status": status, "cause": cause})

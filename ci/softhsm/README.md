@@ -5,12 +5,12 @@ module: discovery, authentication, invalid PIN, single and multipart SHA-256,
 RSA signing and verification, invalid signature, AES-GCM, invalid GCM tag, and
 object search before and after destruction. Each scenario creates a fresh token
 in a separate process. Keys are session objects and are explicitly destroyed.
-Operation and cleanup outcomes are independent fields of a bounded TSV record.
+Operation, cleanup and child-process exit outcomes are independent fields of
+a bounded TSV record.
 
 The SHA-256 `abc` vector is published in the NIST secure hash examples:
 https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/example-values
-Native operation/error contracts follow PKCS#11 Base 2.40, sections 5.6, 5.7,
-5.10, 5.11, 5.12 and 5.13, and Current Mechanisms 2.40, AES-GCM:
+Native operation/error contracts follow PKCS#11 Base 2.40, sections 5.4–5.11 and 5.13, and Current Mechanisms 2.40, AES-GCM:
 https://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html
 https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html
 For the pinned SoftHSM recipe, an altered GCM tag returns
@@ -37,7 +37,9 @@ python3 ci/scripts/job.py softhsm --rust 1.81.0 --root /absolute/new/job-directo
 python3 ci/scripts/job.py softhsm --rust 1.100.0 --root /absolute/another/job-directory
 ```
 
-The root must be new. Each complete run requires all ten named results and
+The root must be new. Its token configuration path must contain no `#`, `=`,
+carriage return or newline; the serialized `directories.tokendir` line must
+fit SoftHSM's 1023-byte configuration line limit. Each complete run requires all ten named results and
 fails on missing capabilities, crashes, malformed results or cleanup failures.
 The driver writes only allowlisted evidence under `reports/`. Token directories,
 PINs and key material are never report artifacts. PINs are random and ephemeral;

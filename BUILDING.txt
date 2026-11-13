@@ -82,8 +82,11 @@ the platform's native build tools and a fresh absolute working directory:
 
 Select 1.100.0 for the current compiler job. Linux jobs target Ubuntu 24.04;
 Windows jobs require x64 MSVC and Perl. The script downloads official Rust
-components and verified upstream sources into that directory. Raw command logs
-remain private; only the explicitly named reports are uploaded by the workflow.
+components and verified upstream sources into that directory. Windows CI selects
+Python 3.13.17 explicitly; every job records its interpreter version. Local raw
+command logs remain private. On GitHub, a failed build step prints a bounded
+diagnostic tail; public scenario output is streamed directly. Only explicitly
+named reports are uploaded as artifacts, never token files or raw build logs.
 After the job ends, cleanup.py can remove reproducible files under its checked
 parent directory while retaining reports and private build diagnostics.
 

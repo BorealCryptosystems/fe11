@@ -35,7 +35,7 @@ fn parent() -> Result<(), ()> {
         .open(root.join("results.tsv"))
         .map_err(|_| ())?;
     summary
-        .write_all(report::HEADER.as_bytes())
+        .write_all(format!("{}\tchild_exit\n", report::HEADER.trim_end()).as_bytes())
         .map_err(|_| ())?;
     let deadline = Instant::now();
     let github = env::var("GITHUB_ACTIONS").as_deref() == Ok("true");
@@ -64,6 +64,11 @@ fn parent() -> Result<(), ()> {
         match row {
             Ok(row) => {
                 failed |= !exit.success() || row.split('\t').nth(1) != Some("PASS");
+                let row = format!(
+                    "{}\t{}\n",
+                    row.trim_end(),
+                    if exit.success() { "PASS" } else { "FAIL" }
+                );
                 summary.write_all(row.as_bytes()).map_err(|_| ())?;
                 summary.flush().map_err(|_| ())?;
                 print!("{row}");

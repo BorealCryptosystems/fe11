@@ -113,6 +113,16 @@ class Job:
         save(self.reports / "commands.json", self.commands)
         print(f"{label}: {'PASS' if code == 0 else 'FAIL'}", flush=True)
         if code:
+            if self.github and not inherit:
+                # Hosted jobs contain only public build inputs. Retain captured
+                # output for JSON consumers, but expose a bounded failure tail.
+                # Token initialization is deliberately outside this runner.
+                with output.open("rb") as diagnostic:
+                    diagnostic.seek(max(0, output.stat().st_size - 32768))
+                    tail = diagnostic.read(32768).decode("utf-8", errors="replace")
+                for line in tail.splitlines():
+                    printable = "".join(c if c.isprintable() or c == "\t" else "?" for c in line)
+                    print("diagnostic: " + printable, flush=True)
             raise RuntimeError(f"{label} failed; inspect the local private build log")
         return output
 

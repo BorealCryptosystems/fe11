@@ -42,7 +42,14 @@ impl Environment {
             .create(&tokens)
             .map_err(|_| setup())?;
         let token_path = tokens.to_str().ok_or_else(setup)?;
-        if token_path.contains(['\r', '\n']) {
+        // SoftHSM's configuration reader uses a 1024-byte line buffer and
+        // treats '#' and '=' as delimiters. Reject ambiguous serialization
+        // before the utility can create any token outside this directory.
+        let line_length = "directories.tokendir = "
+            .len()
+            .checked_add(token_path.len())
+            .and_then(|n| n.checked_add(1));
+        if token_path.contains(['\r', '\n', '#', '=']) || line_length.map_or(true, |n| n > 1023) {
             return Err(setup());
         }
         let config = directory.join("softhsm.conf");
