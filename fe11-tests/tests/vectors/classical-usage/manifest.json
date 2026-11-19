@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "negative.CKM_DSA.sign.usage",
+    "file": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9.txt",
+    "sha256": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": "operation.CKM_DSA.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA.verify.usage",
+    "file": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9.txt",
+    "sha256": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": "operation.CKM_DSA.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "25d7ac23d880cc9ae4eb38993177016b24c2cdef95e430ca4a62713f7180aac9"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA224.sign.usage",
+    "file": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe.txt",
+    "sha256": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA224.verify.usage",
+    "file": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe.txt",
+    "sha256": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "8c2cd4044526bf08b77c8e503fa9606d889c815dd9841d3a949117a0f89c64fe"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA256.sign.usage",
+    "file": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa.txt",
+    "sha256": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 2,
+      "case": "operation.CKM_DSA_SHA256.sign@Session::sign_native@DSA-SigGen-1.0.2.11",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA256.verify.usage",
+    "file": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa.txt",
+    "sha256": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 2,
+      "case": "operation.CKM_DSA_SHA256.sign@Session::sign_native@DSA-SigGen-1.0.2.11",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "24d46aab010b7d488c1d5bff2bb18105558e989fc1b1ed7b7ad8c23fe70520fa"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA384.sign.usage",
+    "file": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf.txt",
+    "sha256": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 3,
+      "case": "operation.CKM_DSA_SHA384.sign@Session::sign_native@DSA-SigGen-1.0.3.21",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA384.verify.usage",
+    "file": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf.txt",
+    "sha256": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 3,
+      "case": "operation.CKM_DSA_SHA384.sign@Session::sign_native@DSA-SigGen-1.0.3.21",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "652bb337a800e3ad187c2e6e6d542c637bd5d5de6cbbed72a7c73948947882cf"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA512.sign.usage",
+    "file": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718.txt",
+    "sha256": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 4,
+      "case": "operation.CKM_DSA_SHA512.sign@Session::sign_native@DSA-SigGen-1.0.4.31",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA512.verify.usage",
+    "file": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718.txt",
+    "sha256": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 4,
+      "case": "operation.CKM_DSA_SHA512.sign@Session::sign_native@DSA-SigGen-1.0.4.31",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "d03df74241cd97fb4a87ae346d32065bd987950abbab7456269245b3bf337718"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA224.sign.usage",
+    "file": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0.txt",
+    "sha256": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 1,
+      "case": "operation.CKM_ECDSA_SHA224.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA224.verify.usage",
+    "file": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0.txt",
+    "sha256": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 1,
+      "case": "operation.CKM_ECDSA_SHA224.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.1.1",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "3d6acc7ffc449d9bfe2585f7a772edcee631b1f907bc675de704172e456381f0"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA256.sign.usage",
+    "file": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd.txt",
+    "sha256": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 2,
+      "case": "operation.CKM_ECDSA_SHA256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.2.11",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA256.verify.usage",
+    "file": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd.txt",
+    "sha256": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 2,
+      "case": "operation.CKM_ECDSA_SHA256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.2.11",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "0f3f0ed662f6f4aa4272206128ee36636b7d25f87f7b7d6c6fd21ad69dc3befd"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA384.sign.usage",
+    "file": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf.txt",
+    "sha256": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 3,
+      "case": "operation.CKM_ECDSA_SHA384.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.3.21",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA384.verify.usage",
+    "file": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf.txt",
+    "sha256": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 3,
+      "case": "operation.CKM_ECDSA_SHA384.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.3.21",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "95a98fbe5e01ef6e750f534073d6c6accf3692a278b9c31ccb318eda6de4dfcf"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA512.sign.usage",
+    "file": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395.txt",
+    "sha256": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 4,
+      "case": "operation.CKM_ECDSA_SHA512.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.4.31",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA512.verify.usage",
+    "file": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395.txt",
+    "sha256": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 4,
+      "case": "operation.CKM_ECDSA_SHA512.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.4.31",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "73a5c12687119cf43588ab3adcf52833ed00cfc4e92843567a7f7742dec9f395"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_224.sign.usage",
+    "file": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7.txt",
+    "sha256": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 7,
+      "case": "operation.CKM_ECDSA_SHA3_224.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.7.61",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_224.verify.usage",
+    "file": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7.txt",
+    "sha256": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 7,
+      "case": "operation.CKM_ECDSA_SHA3_224.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.7.61",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "64ea26c0745be1d09929912bc3193166a618f05b4853dcd8504d10aa235f1fd7"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_256.sign.usage",
+    "file": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277.txt",
+    "sha256": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 8,
+      "case": "operation.CKM_ECDSA_SHA3_256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.8.71",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_256.verify.usage",
+    "file": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277.txt",
+    "sha256": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 8,
+      "case": "operation.CKM_ECDSA_SHA3_256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.8.71",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "480256fe9330443d4219c171de47d37e02c25e8835bff91f922bae4222965277"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_384.sign.usage",
+    "file": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9.txt",
+    "sha256": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 9,
+      "case": "operation.CKM_ECDSA_SHA3_384.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.9.81",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_384.verify.usage",
+    "file": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9.txt",
+    "sha256": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 9,
+      "case": "operation.CKM_ECDSA_SHA3_384.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.9.81",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "c2e8867404627e57bc287d75879b768945c5bcfab9269eaa7c6580d7fb09b8b9"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_512.sign.usage",
+    "file": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299.txt",
+    "sha256": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 10,
+      "case": "operation.CKM_ECDSA_SHA3_512.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.10.91",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA3_512.verify.usage",
+    "file": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299.txt",
+    "sha256": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 10,
+      "case": "operation.CKM_ECDSA_SHA3_512.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.10.91",
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "fixture_sha256": "4f8f601d6669386c08ba837e62554a2383a1f1c8d1ee0c34065dfb2a168eb299"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "mutation": "Only CKA_SIGN or CKA_VERIFY is false on the exact published key; message, mechanism, curve/domain and signature remain valid."
+  }
+]

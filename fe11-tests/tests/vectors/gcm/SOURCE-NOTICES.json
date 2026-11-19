@@ -1,0 +1,5 @@
+{
+  "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+  "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+  "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "parameter-boundary.NativeMessagesRejection::GenericMessageTicketRequired",
+    "file": "dd4c5d01aadd57e66949fc169ab655b4c1021f0e262eb31ad00bdf3ed1a3f4ff.txt",
+    "sha256": "dd4c5d01aadd57e66949fc169ab655b4c1021f0e262eb31ad00bdf3ed1a3f4ff",
+    "worker_mode": "ticket-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeMessages(GenericMessageTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ]
+  },
+  {
+    "id": "parameter-boundary.OperationOwnershipRejection::ForeignOrConsumedAeadMessageTicket",
+    "file": "9729f88ddde02a7168330dd1e069861013beb34ac4a2253147f601e919763827.txt",
+    "sha256": "9729f88ddde02a7168330dd1e069861013beb34ac4a2253147f601e919763827",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedAeadMessageTicket))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::ForeignOrConsumedRecoveryTicket@AdvancedSession::capture_dual_gcm_recovery",
+    "file": "81d084dbc69284ae7533d64be511561ba4300bd109321fe67c68cfd6b6d62728.txt",
+    "sha256": "81d084dbc69284ae7533d64be511561ba4300bd109321fe67c68cfd6b6d62728",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "identity-foreign.AdvancedSession::capture_dual_gcm_recovery",
+    "file": "d4d6b6f34fa5395d6dcd14e4c91c76acd77916eeacb167719966be665c1c3218.txt",
+    "sha256": "d4d6b6f34fa5395d6dcd14e4c91c76acd77916eeacb167719966be665c1c3218",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_ccm_recovery.kind",
+    "file": "c1d8cc2f65500d1d5246088e3c0394068a269bcf1fa52f283b62ff5cd47f9f1e.txt",
+    "sha256": "c1d8cc2f65500d1d5246088e3c0394068a269bcf1fa52f283b62ff5cd47f9f1e",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationRecovery(RecoveryMechanismDoesNotMatchRequestedApi))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.kind.ChaCha20",
+    "file": "718c457ffb723edc8a2696bad137277f98ccaca4e6e34f5be91edfd62bf7c436.txt",
+    "sha256": "718c457ffb723edc8a2696bad137277f98ccaca4e6e34f5be91edfd62bf7c436",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationRecovery(RecoveryMechanismDoesNotMatchRequestedApi))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.kind.Salsa20",
+    "file": "2b19a399dae73e885ebe0acbbf1a3f58a2a9eabf022b1ee041b655e13a6a9e4b.txt",
+    "sha256": "2b19a399dae73e885ebe0acbbf1a3f58a2a9eabf022b1ee041b655e13a6a9e4b",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationRecovery(RecoveryMechanismDoesNotMatchRequestedApi))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

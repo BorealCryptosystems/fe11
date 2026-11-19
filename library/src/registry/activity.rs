@@ -16,7 +16,10 @@ impl ActivityState {
 
     /// Readers may coexist with a transient Init writer only when all of them
     /// belong to the possessed, quiescent session. Never borrow a writer.
-    pub(super) fn operation_writer_available(&self, borrowed_uid: Option<u64>) -> Result<bool> {
+    pub(super) fn operation_writer_available(
+        &self,
+        borrowed_uid: Option<(u64, usize)>,
+    ) -> Result<bool> {
         if self.poisoned {
             return Err(Error::Poisoned);
         }
@@ -25,7 +28,9 @@ impl ActivityState {
         }
         let mut allowed = 0usize;
         for owner in &self.owned {
-            if Some(owner.uid) == borrowed_uid {
+            if borrowed_uid
+                .is_some_and(|(uid, maximum)| uid == owner.uid && owner.readers <= maximum)
+            {
                 allowed = allowed.checked_add(owner.readers).ok_or(Error::Rejected(
                     crate::RejectionReason::ReferenceRegistry(
                         crate::ReferenceRegistryRejection::ObjectActivityCount,
@@ -295,6 +300,26 @@ impl Activity {
         self.acquire_write(Some(uid), abandoned)
     }
 
+    /// Waiting for this session's other ticket would require the caller to
+    /// release a resource that it is currently asking us to wait for.
+    pub(crate) fn init_conflicts_with_session(
+        &self,
+        uid: u64,
+        writing: bool,
+        allowed_readers: usize,
+    ) -> Result<bool> {
+        let state = self.0.lock().map_err(|_| Error::Poisoned)?;
+        if state.poisoned {
+            return Err(Error::Poisoned);
+        }
+        Ok(state.owned_writer.is_some_and(|(owner, _)| owner == uid)
+            || writing
+                && state
+                    .owned
+                    .iter()
+                    .any(|owner| owner.uid == uid && owner.readers > allowed_readers))
+    }
+
     pub(crate) fn write_for_operation_admitted(
         self: &Arc<Self>,
         uid: u64,
@@ -316,14 +341,14 @@ impl Activity {
         proof: &crate::advanced::InitReaderBorrow<'_>,
         admission: &crate::ResourceAdmission,
     ) -> Result<WritePermit> {
-        self.acquire_operation_writer(proof.uid(), admission, Some(proof.uid()))
+        self.acquire_operation_writer(proof.uid(), admission, Some(proof.allowance(self)?))
     }
 
     pub(super) fn acquire_operation_writer(
         self: &Arc<Self>,
         uid: u64,
         admission: &crate::ResourceAdmission,
-        borrowed_uid: Option<u64>,
+        borrowed_uid: Option<(u64, usize)>,
     ) -> Result<WritePermit> {
         self.1.acquire(admission, || {
             let mut state = self.0.lock().map_err(|_| Error::Poisoned)?;
@@ -370,7 +395,7 @@ impl Activity {
         &self,
         wake: Option<&Arc<Wake>>,
         admission: &crate::ResourceAdmission,
-        borrowed_uid: Option<u64>,
+        borrowed_uid: Option<(u64, usize)>,
         before: impl FnMut() -> Result<()>,
     ) -> Result<()> {
         if let Some(wake) = wake {
@@ -383,7 +408,7 @@ impl Activity {
         &self,
         wake: &Arc<Wake>,
         admission: &crate::ResourceAdmission,
-        borrowed_uid: Option<u64>,
+        borrowed_uid: Option<(u64, usize)>,
         mut before: impl FnMut() -> Result<()>,
     ) -> Result<()> {
         wake.acquire(admission, || {

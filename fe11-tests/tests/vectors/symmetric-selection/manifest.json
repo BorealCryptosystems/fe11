@@ -1,0 +1,828 @@
+[
+  {
+    "id": "typed.AdvancedSession::find_aes_key",
+    "file": "1410eac0ad06d73fc7087c7bceb743f5cb05a496a0f402023b85ebc5e1e8c67d.txt",
+    "sha256": "1410eac0ad06d73fc7087c7bceb743f5cb05a496a0f402023b85ebc5e1e8c67d",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type SymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.AdvancedSession::find_aes_key_encryption_key",
+    "file": "de5cfa9d9901d12d3230bd5163d2dfa306f78d83a0a43fcba5e38139d235a860.txt",
+    "sha256": "de5cfa9d9901d12d3230bd5163d2dfa306f78d83a0a43fcba5e38139d235a860",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type AesKeyEncryptionKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "wrap",
+        "unwrap"
+      ],
+      "hmac_key_type": null,
+      "usage": "WrapAndUnwrap"
+    },
+    "producer": "Session::import_aes_key_encryption_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.AdvancedSession::find_introduced_symmetric_key",
+    "file": "8bc9db815e285ab5f2b6ebbf89c5fb79db9e8f9960cdc5ed1e4d420fedfd4958.txt",
+    "sha256": "8bc9db815e285ab5f2b6ebbf89c5fb79db9e8f9960cdc5ed1e4d420fedfd4958",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type IntroducedSymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.AdvancedSession::find_symmetric_key",
+    "file": "5d0e0df975b5b8b2372c1a10c62116440d5b46ea0cda6e885dc060b4729354ed.txt",
+    "sha256": "5d0e0df975b5b8b2372c1a10c62116440d5b46ea0cda6e885dc060b4729354ed",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type SymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_aes_key",
+    "file": "d5cba123c251e48c0a7aae5818f11b6dfec702a66c3b2216f7e4d80e355a8184.txt",
+    "sha256": "d5cba123c251e48c0a7aae5818f11b6dfec702a66c3b2216f7e4d80e355a8184",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type SymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_aes_key_encryption_key",
+    "file": "6791052f89a62513948e54e2a288b2d3adcd00bf32d98bd65baced18e10a1089.txt",
+    "sha256": "6791052f89a62513948e54e2a288b2d3adcd00bf32d98bd65baced18e10a1089",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type AesKeyEncryptionKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "wrap",
+        "unwrap"
+      ],
+      "hmac_key_type": null,
+      "usage": "WrapAndUnwrap"
+    },
+    "producer": "Session::import_aes_key_encryption_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_introduced_symmetric_key",
+    "file": "37fbad79f06a1bd5278782b9e6f0ebc48b9c083bcd3172b41234b6e3d33e897f.txt",
+    "sha256": "37fbad79f06a1bd5278782b9e6f0ebc48b9c083bcd3172b41234b6e3d33e897f",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type IntroducedSymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_symmetric_key",
+    "file": "6934f19c524dc51560cf17a006955597d4934242280bcb226aadb4521d2c6a1b.txt",
+    "sha256": "6934f19c524dc51560cf17a006955597d4934242280bcb226aadb4521d2c6a1b",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type SymmetricKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_AES",
+      "value_hex": "00000000000000000000000000000000",
+      "algorithm": "Aes128",
+      "usages": [
+        "encrypt",
+        "decrypt"
+      ],
+      "hmac_key_type": null
+    },
+    "producer": "Session::import_symmetric_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

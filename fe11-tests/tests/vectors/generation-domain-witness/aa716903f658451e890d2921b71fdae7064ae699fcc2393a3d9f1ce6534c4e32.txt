@@ -1,0 +1,7 @@
+domain-witness|CKM_DSA_PARAMETER_GEN
+public|CKA_CLASS|symbol|CKO_DOMAIN_PARAMETERS
+public|CKA_KEY_TYPE|symbol|CKK_DSA
+public|CKA_PRIME_BITS|integer|1024
+public|CKA_TOKEN|bool|false
+public|CKA_PRIVATE|bool|false
+public|CKA_LABEL|namespace|label

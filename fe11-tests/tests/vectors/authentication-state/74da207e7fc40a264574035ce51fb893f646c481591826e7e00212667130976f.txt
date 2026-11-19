@@ -1,0 +1,4 @@
+RO_USER
+create_public_session
+RO_USER
+CKR_OK

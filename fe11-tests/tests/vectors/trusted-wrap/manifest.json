@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wrap.trusted.session",
+    "file": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e.txt",
+    "sha256": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e",
+    "worker_mode": "trusted-wrap-session",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": "SO provisions two AES wrapping keys with identical public value, one trusted at creation and one untrusted. Same WRAP_WITH_TRUSTED target refuses the untrusted key; trusted key readback and RFC3394 section4.1 envelope are exact. No mutability of TRUSTED is assumed.",
+    "key_hex": "000102030405060708090a0b0c0d0e0f",
+    "target_hex": "00112233445566778899aabbccddeeff",
+    "expected_envelope": "1fa68b0a8112b447aef34bd8fb5a7b829d3e862371d2cfe5"
+  },
+  {
+    "id": "wrap.trusted.advanced",
+    "file": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36.txt",
+    "sha256": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36",
+    "worker_mode": "trusted-wrap-advanced",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": "SO provisions two AES wrapping keys with identical public value, one trusted at creation and one untrusted. Same WRAP_WITH_TRUSTED target refuses the untrusted key; trusted key readback and RFC3394 section4.1 envelope are exact. No mutability of TRUSTED is assumed.",
+    "key_hex": "000102030405060708090a0b0c0d0e0f",
+    "target_hex": "00112233445566778899aabbccddeeff",
+    "expected_envelope": "1fa68b0a8112b447aef34bd8fb5a7b829d3e862371d2cfe5"
+  }
+]

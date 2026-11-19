@@ -1,0 +1,34 @@
+[
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignEventAlreadyIssued@ForeignEvent::dispatched",
+    "file": "e049646e988505b1c5af8901136b53fdf71f57eeb0df4c0aca7cc90e7114a1e1.txt",
+    "sha256": "e049646e988505b1c5af8901136b53fdf71f57eeb0df4c0aca7cc90e7114a1e1",
+    "worker_mode": "foreign-event-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignEventAlreadyIssued))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_WaitForSlotEvent",
+      "C_Finalize"
+    ],
+    "producer": "Prepare real foreign event wait permit. Call dispatched once; attempt second dispatched before performing the sole nonblocking C_WaitForSlotEvent."
+  }
+]

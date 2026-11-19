@@ -1,0 +1,4 @@
+RW_SO
+open_rw
+RW_SO
+CKR_OK

@@ -1,5 +1,5 @@
 [workspace]
-members = ["library", "verify-engine-api", "verify-engine", "ci/softhsm"]
+members = ["library", "fe11-tests", "verify-engine-api", "verify-engine"]
 default-members = ["library"]
 resolver = "2"
 

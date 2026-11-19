@@ -176,8 +176,11 @@ pub(crate) fn reserve_new_while_in(
                         return Ok(Some(Route::Maintain));
                     }
                     if matches!(admission, crate::ResourceAdmission::WaitUntil { .. }) {
-                        return Err(Error::Busy(crate::BusyReason::OperationOwnership(
-                            crate::OperationOwnershipBusy::AdvancedOperation,
+                        // This branch is reached only after the reserve failed
+                        // for lack of free bytes. Session occupancy by itself
+                        // did not refuse the initializer.
+                        return Err(Error::Busy(crate::BusyReason::MemoryAccounting(
+                            crate::MemoryAccountingBusy::SymmetricByteBudget,
                         )));
                     }
                     Ok(None)
@@ -238,5 +241,3 @@ pub(super) fn reserve_cancellation(
         ControlledReservation::Redirect(()) => CancellationPreparation::UseCurrent,
     })
 }
-
-

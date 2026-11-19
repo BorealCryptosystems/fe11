@@ -1,0 +1,1496 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      11,
+      15
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      17,
+      21
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      23,
+      27
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      29,
+      33
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      35,
+      39
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      41,
+      45
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      47,
+      51
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      11,
+      15
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      17,
+      21
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      23,
+      27
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      29,
+      33
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      35,
+      39
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      41,
+      45
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      47,
+      51
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      55,
+      61
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+    "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+    "lines": [
+      55,
+      61
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 2,
+    "case": 17,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 3,
+    "case": 82,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 4,
+    "case": 101,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 5,
+    "case": 270,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 6,
+    "case": 335,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 7,
+    "case": 351,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 8,
+    "case": 416,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 9,
+    "case": 435,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 10,
+    "case": 604,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 11,
+    "case": 669,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 12,
+    "case": 679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 13,
+    "case": 689,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      25,
+      32
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      34,
+      39
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 2,
+    "case": 17,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 3,
+    "case": 82,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 4,
+    "case": 101,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 5,
+    "case": 270,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 6,
+    "case": 335,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 7,
+    "case": 351,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 8,
+    "case": 416,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 9,
+    "case": 435,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 10,
+    "case": 604,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 11,
+    "case": 669,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 12,
+    "case": 679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+    "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+    "group": 13,
+    "case": 689,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      25,
+      32
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      34,
+      39
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 2,
+    "case": 17,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 3,
+    "case": 82,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 4,
+    "case": 101,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 5,
+    "case": 270,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 6,
+    "case": 335,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 7,
+    "case": 351,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 8,
+    "case": 416,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 9,
+    "case": 435,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 10,
+    "case": 604,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 11,
+    "case": 669,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 12,
+    "case": 679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      16,
+      23
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 2,
+    "case": 17,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 3,
+    "case": 82,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 4,
+    "case": 101,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 5,
+    "case": 270,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 6,
+    "case": 335,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 7,
+    "case": 351,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 8,
+    "case": 416,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 9,
+    "case": 435,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 10,
+    "case": 604,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 11,
+    "case": 669,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+    "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+    "group": 12,
+    "case": 679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des3_common.txt",
+    "sha256": "fd192e332b8d5106172b30aae6b3b8590ec4b1bb4c8e6206942b8c3371066c45",
+    "lines": [
+      16,
+      23
+    ],
+    "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+    "key_transform": "DES odd parity only; effective key bits unchanged"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 2,
+    "case": 8,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 3,
+    "case": 29,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 4,
+    "case": 157,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 5,
+    "case": 285,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 6,
+    "case": 291,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 7,
+    "case": 315,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 8,
+    "case": 443,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 9,
+    "case": 635,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 10,
+    "case": 640,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 11,
+    "case": 656,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 12,
+    "case": 784,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 13,
+    "case": 1040,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 14,
+    "case": 1047,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 15,
+    "case": 1068,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 16,
+    "case": 1196,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 17,
+    "case": 1324,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 18,
+    "case": 1330,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 19,
+    "case": 1354,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 20,
+    "case": 1482,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 21,
+    "case": 1674,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 22,
+    "case": 1679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 23,
+    "case": 1695,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 24,
+    "case": 1823,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 25,
+    "case": 2079,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 26,
+    "case": 2089,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 27,
+    "case": 2099,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 28,
+    "case": 2109,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 29,
+    "case": 2119,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 30,
+    "case": 2129,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 2,
+    "case": 8,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 3,
+    "case": 29,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 4,
+    "case": 157,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 5,
+    "case": 285,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 6,
+    "case": 291,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 7,
+    "case": 315,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 8,
+    "case": 443,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 9,
+    "case": 635,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 10,
+    "case": 640,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 11,
+    "case": 656,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 12,
+    "case": 784,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 13,
+    "case": 1040,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 14,
+    "case": 1047,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 15,
+    "case": 1068,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 16,
+    "case": 1196,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 17,
+    "case": 1324,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 18,
+    "case": 1330,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 19,
+    "case": 1354,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 20,
+    "case": 1482,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 21,
+    "case": 1674,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 22,
+    "case": 1679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 23,
+    "case": 1695,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 24,
+    "case": 1823,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 25,
+    "case": 2079,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 26,
+    "case": 2089,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 27,
+    "case": 2099,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 28,
+    "case": 2109,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 29,
+    "case": 2119,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+    "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+    "group": 30,
+    "case": 2129,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 2,
+    "case": 8,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 3,
+    "case": 29,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 4,
+    "case": 157,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 5,
+    "case": 285,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 6,
+    "case": 291,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 7,
+    "case": 315,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 8,
+    "case": 443,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 9,
+    "case": 635,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 10,
+    "case": 640,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 11,
+    "case": 656,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 12,
+    "case": 784,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 13,
+    "case": 1040,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 14,
+    "case": 1047,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 15,
+    "case": 1068,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 16,
+    "case": 1196,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 17,
+    "case": 1324,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 18,
+    "case": 1330,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 19,
+    "case": 1354,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 20,
+    "case": 1482,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 21,
+    "case": 1674,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 22,
+    "case": 1679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 23,
+    "case": 1695,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 24,
+    "case": 1823,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 25,
+    "case": 2079,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 26,
+    "case": 2089,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 27,
+    "case": 2099,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 28,
+    "case": 2109,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 29,
+    "case": 2119,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 30,
+    "case": 2129,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 31,
+    "case": 2139,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 32,
+    "case": 2141,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 33,
+    "case": 2143,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 34,
+    "case": 2145,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 35,
+    "case": 2147,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 36,
+    "case": 2149,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 1,
+    "case": 1,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 2,
+    "case": 8,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 3,
+    "case": 29,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 4,
+    "case": 157,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 5,
+    "case": 285,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 6,
+    "case": 291,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 7,
+    "case": 315,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 8,
+    "case": 443,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 9,
+    "case": 635,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 10,
+    "case": 640,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 11,
+    "case": 656,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 12,
+    "case": 784,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 13,
+    "case": 1040,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 14,
+    "case": 1047,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 15,
+    "case": 1068,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 16,
+    "case": 1196,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 17,
+    "case": 1324,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 18,
+    "case": 1330,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 19,
+    "case": 1354,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 20,
+    "case": 1482,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 21,
+    "case": 1674,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 22,
+    "case": 1679,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 23,
+    "case": 1695,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 24,
+    "case": 1823,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 25,
+    "case": 2079,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 26,
+    "case": 2089,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 27,
+    "case": 2099,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 28,
+    "case": 2109,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 29,
+    "case": 2119,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 30,
+    "case": 2129,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 31,
+    "case": 2139,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 32,
+    "case": 2141,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 33,
+    "case": 2143,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 34,
+    "case": 2145,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 35,
+    "case": 2147,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+    "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+    "group": 36,
+    "case": 2149,
+    "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  }
+]

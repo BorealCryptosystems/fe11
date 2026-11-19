@@ -1,0 +1,991 @@
+[
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaNullParametersRequired",
+    "file": "b721ffbd847181eb147f5516c024274fc3c929ebeb942976d721408fa99c8ba2.txt",
+    "sha256": "b721ffbd847181eb147f5516c024274fc3c929ebeb942976d721408fa99c8ba2",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaNullParametersRequired))",
+    "cause": "RsaNullParametersRequired",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaParameters",
+    "file": "047c30e55c173a9eebde6cee36e75d541d66e73422a0b863605dc5924addf806.txt",
+    "sha256": "047c30e55c173a9eebde6cee36e75d541d66e73422a0b863605dc5924addf806",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaParameters))",
+    "cause": "RsaParameters",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaPublicDer",
+    "file": "db1461be7cf68a1f8f006657b4f73cfcae9981f018399292b731cdd0205e3a6d.txt",
+    "sha256": "db1461be7cf68a1f8f006657b4f73cfcae9981f018399292b731cdd0205e3a6d",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaPublicDer))",
+    "cause": "RsaPublicDer",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaSpkiAlgorithm",
+    "file": "4faaa471f5c057e9644ee793dab1dc8732997151dc5b9bf0697229a72a170761.txt",
+    "sha256": "4faaa471f5c057e9644ee793dab1dc8732997151dc5b9bf0697229a72a170761",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaSpkiAlgorithm))",
+    "cause": "RsaSpkiAlgorithm",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaSpkiDer",
+    "file": "846a40c506ed104bc82c7e1403f33349d293826fcc9f15f1099487db0e41e6a1.txt",
+    "sha256": "846a40c506ed104bc82c7e1403f33349d293826fcc9f15f1099487db0e41e6a1",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaSpkiDer))",
+    "cause": "RsaSpkiDer",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::RsaUnusedBits",
+    "file": "98b99701d6c3e957ee1cc98c2170fec765d32dabcd0dcea498d94d35937f7d80.txt",
+    "sha256": "98b99701d6c3e957ee1cc98c2170fec765d32dabcd0dcea498d94d35937f7d80",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(RsaUnusedBits))",
+    "cause": "RsaUnusedBits",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::MultiPrimeRsaUnsupported",
+    "file": "55c2b30a5375c00cde1793cf2fd4cfcb62d6b64b6c907110ff5032fd5a1ff70f.txt",
+    "sha256": "55c2b30a5375c00cde1793cf2fd4cfcb62d6b64b6c907110ff5032fd5a1ff70f",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(MultiPrimeRsaUnsupported))",
+    "cause": "MultiPrimeRsaUnsupported",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEcAlgorithm",
+    "file": "ec7b80e6b38e5987f58d0f20564d09307d2a86e74a7b38b3b65e6805f8216df2.txt",
+    "sha256": "ec7b80e6b38e5987f58d0f20564d09307d2a86e74a7b38b3b65e6805f8216df2",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEcAlgorithm))",
+    "cause": "PrivateEcAlgorithm",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEcDer",
+    "file": "625c456baea79905ffc18e335888c59ddf7a573b6849e18cfdb4a242a305fb15.txt",
+    "sha256": "625c456baea79905ffc18e335888c59ddf7a573b6849e18cfdb4a242a305fb15",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEcDer))",
+    "cause": "PrivateEcDer",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEcNamedCurveAbsent",
+    "file": "de368a511b52e45aee72684cea0cc6b8d793844aa20a4cad4ede5803f02df1e1.txt",
+    "sha256": "de368a511b52e45aee72684cea0cc6b8d793844aa20a4cad4ede5803f02df1e1",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEcNamedCurveAbsent))",
+    "cause": "PrivateEcNamedCurveAbsent",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEcParameters",
+    "file": "4b815c766dd1392822fdab66b8b42975fb21f9a44887ea2920b6d0a36bda00e0.txt",
+    "sha256": "4b815c766dd1392822fdab66b8b42975fb21f9a44887ea2920b6d0a36bda00e0",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEcParameters))",
+    "cause": "PrivateEcParameters",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEcVersion",
+    "file": "cb0c2724161a31d5283a5ca3d7085c05cf0b430dab4651ddebdb53c87212829e.txt",
+    "sha256": "cb0c2724161a31d5283a5ca3d7085c05cf0b430dab4651ddebdb53c87212829e",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEcVersion))",
+    "cause": "PrivateEcVersion",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEdwardsAlgorithm",
+    "file": "34892ac54d65d9b401ba238afda982424f94a8769ba3635483d9af9f211280b8.txt",
+    "sha256": "34892ac54d65d9b401ba238afda982424f94a8769ba3635483d9af9f211280b8",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEdwardsAlgorithm))",
+    "cause": "PrivateEdwardsAlgorithm",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEdwardsNestedOctetString",
+    "file": "103bfd1fe5c9fa41be512475061fb01856cc45a7d60dc82528b69c7b9f38c684.txt",
+    "sha256": "103bfd1fe5c9fa41be512475061fb01856cc45a7d60dc82528b69c7b9f38c684",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEdwardsNestedOctetString))",
+    "cause": "PrivateEdwardsNestedOctetString",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEdwardsParameters",
+    "file": "324a1f70715263ccbdba96e214ef16a7db4771574c4407b8c4ee037a5e398629.txt",
+    "sha256": "324a1f70715263ccbdba96e214ef16a7db4771574c4407b8c4ee037a5e398629",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEdwardsParameters))",
+    "cause": "PrivateEdwardsParameters",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateEdwardsSeedLength",
+    "file": "f89c65322a6c5899f6b431702aa50ed1ca032ad163ae5f9ec76cb194d9014122.txt",
+    "sha256": "f89c65322a6c5899f6b431702aa50ed1ca032ad163ae5f9ec76cb194d9014122",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateEdwardsSeedLength))",
+    "cause": "PrivateEdwardsSeedLength",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivatePkcs8Der",
+    "file": "d4f835b5541bee66dd40beeabba4c573135d8cc2a822ea96fd7da1d46c43bce2.txt",
+    "sha256": "d4f835b5541bee66dd40beeabba4c573135d8cc2a822ea96fd7da1d46c43bce2",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivatePkcs8Der))",
+    "cause": "PrivatePkcs8Der",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivatePkcs8Size",
+    "file": "ed13f53e6a50ef3d125b7642eb07d42d306fe1e0ae8a7b739b7de0fcf0f038c1.txt",
+    "sha256": "ed13f53e6a50ef3d125b7642eb07d42d306fe1e0ae8a7b739b7de0fcf0f038c1",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivatePkcs8Size))",
+    "cause": "PrivatePkcs8Size",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivatePkcs8Version",
+    "file": "ff5ad851bc7cc1b6e88a4623972392e7741ea0f1f13086227dc7201ce0a8ea09.txt",
+    "sha256": "ff5ad851bc7cc1b6e88a4623972392e7741ea0f1f13086227dc7201ce0a8ea09",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivatePkcs8Version))",
+    "cause": "PrivatePkcs8Version",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateRsaDer",
+    "file": "c73113125d1aad8027d771c858d60060bd40a3804e9747c40426f592931799b4.txt",
+    "sha256": "c73113125d1aad8027d771c858d60060bd40a3804e9747c40426f592931799b4",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateRsaDer))",
+    "cause": "PrivateRsaDer",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateRsaParameters",
+    "file": "c99ae0d611d3d154b336d472d7755f2823f1366ddc5e541720f8d1c2bcc6a041.txt",
+    "sha256": "c99ae0d611d3d154b336d472d7755f2823f1366ddc5e541720f8d1c2bcc6a041",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateRsaParameters))",
+    "cause": "PrivateRsaParameters",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateRsaParametersAbsent",
+    "file": "4b28c3f757655c7d2546edf5d2b7be115216197dac75590ca5cac6b9ad200dcf.txt",
+    "sha256": "4b28c3f757655c7d2546edf5d2b7be115216197dac75590ca5cac6b9ad200dcf",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateRsaParametersAbsent))",
+    "cause": "PrivateRsaParametersAbsent",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyEncodingRejection::PrivateRsaProfile",
+    "file": "3010933836c19997d13201db191726add589525584febdd9e4292ecb34411c8e.txt",
+    "sha256": "3010933836c19997d13201db191726add589525584febdd9e4292ecb34411c8e",
+    "worker_mode": "import-encoding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncoding(PrivateRsaProfile))",
+    "cause": "PrivateRsaProfile",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Digest",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "format": "RFC5208 PKCS8 and RFC5280 SubjectPublicKeyInfo; structural mutations of published test values",
+      "private_material": "Public test operands only; never operational keys"
+    },
+    "assertions": [
+      "exact typed local refusal",
+      "no C_CreateObject call",
+      "subsequent SHA256(abc) exact known answer on the same session",
+      "independent cleanup"
+    ]
+  }
+]

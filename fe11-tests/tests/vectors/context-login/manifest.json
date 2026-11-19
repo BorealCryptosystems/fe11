@@ -1,0 +1,97 @@
+[
+  {
+    "id": "state.authentication.RW_USER_ALWAYS_AUTH_PENDING.context_login",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "context-login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK; subsequent independently verified signature; USER session role unchanged",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Sign",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": "RSA2048 private session key, ALWAYS_AUTHENTICATE=true; retained single-sign ticket; known SHA256-PKCS1 signature",
+    "reference": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94"
+  },
+  {
+    "id": "state.authentication.RW_USER_ALWAYS_AUTH_PENDING.context_wrong_pin",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "context-wrong-pin",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_PIN_INCORRECT; correct context PIN retry then signing succeeds",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_Login",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Sign",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": "RSA2048 private session key, ALWAYS_AUTHENTICATE=true; retained single-sign ticket; known SHA256-PKCS1 signature",
+    "reference": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94"
+  }
+]

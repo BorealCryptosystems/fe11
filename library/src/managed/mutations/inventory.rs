@@ -313,6 +313,17 @@ impl PreparedInventory {
     /// Wait only for catalog readiness, with no private preparation or session
     /// possession retained. Publication must still recheck after this wakeup.
     pub(crate) fn wait_available(session: &Session, epoch: u64) -> Result<()> {
+        Self::wait_available_observing(session, || {
+            crate::session::recovery::observations::context(session, Some(epoch), epoch)
+        })
+    }
+
+    /// The caller supplies its pure continuation check. Native streams retain
+    /// session/retirement checks without binding catalogue readiness to a role.
+    pub(crate) fn wait_available_observing(
+        session: &Session,
+        check: impl Fn() -> Result<()>,
+    ) -> Result<()> {
         let wake = session
             .inner
             .reservations
@@ -320,7 +331,7 @@ impl PreparedInventory {
             .map_err(|_| Error::Poisoned)?
             .scan_wake();
         wake.acquire(&crate::admission_wait::current(), || {
-            crate::session::recovery::observations::context(session, Some(epoch), epoch)?;
+            check()?;
             let catalog = session
                 .inner
                 .reservations

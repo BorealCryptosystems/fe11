@@ -1,0 +1,101 @@
+[
+  {
+    "id": "negative.CKM_EDDSA.verify.usage",
+    "file": "2b9887c1f1380fc902faa558a037abb0980b577810b0d2f4f06cb60990d456e2.txt",
+    "sha256": "2b9887c1f1380fc902faa558a037abb0980b577810b0d2f4f06cb60990d456e2",
+    "worker_mode": "edwards-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_CopyObject",
+      "C_VerifyInit",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "negative.CKM_EDDSA.verify.changed",
+    "file": "7f8b1dfc466b6249f06cbe55c9174df2578e7754da793fded244ef5cba2a38f1.txt",
+    "sha256": "7f8b1dfc466b6249f06cbe55c9174df2578e7754da793fded244ef5cba2a38f1",
+    "worker_mode": "edwards-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

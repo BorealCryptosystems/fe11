@@ -1,0 +1,404 @@
+[
+  {
+    "id": "authentication.contract.login_user_wrong_pin",
+    "file": "48f47599c32b41e784db02dcfd9e61ac7761101907dcfe08819da23ea5ef972a.txt",
+    "sha256": "48f47599c32b41e784db02dcfd9e61ac7761101907dcfe08819da23ea5ef972a",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "authentication.contract.login_so_with_ro_peer",
+    "file": "03e72170978105f49f2afe6147539ccaa801f1ee8f7054bc47cea4267af64f32.txt",
+    "sha256": "03e72170978105f49f2afe6147539ccaa801f1ee8f7054bc47cea4267af64f32",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "authentication.contract.login_named_empty",
+    "file": "41d18fb35524ece0c58e8d348097a014954591de56cfddd228e95049c6564064.txt",
+    "sha256": "41d18fb35524ece0c58e8d348097a014954591de56cfddd228e95049c6564064",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_LoginUser",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "authentication.contract.login_named_ascii",
+    "file": "1b18a58a685439089f5dfe7d3afd5bcdbd9ca5b3c0cff498d19051ff921f1263.txt",
+    "sha256": "1b18a58a685439089f5dfe7d3afd5bcdbd9ca5b3c0cff498d19051ff921f1263",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_LoginUser",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "authentication.contract.login_named_utf8",
+    "file": "8e2567b27040777644806abf080d2b65a1ce61dcb0ee802b05e4b33857b6ad31.txt",
+    "sha256": "8e2567b27040777644806abf080d2b65a1ce61dcb0ee802b05e4b33857b6ad31",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_LoginUser",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "authentication.contract.login_named_wrong_pin",
+    "file": "0ed077ee61fd8752110ef47c097090ffc6136695bf842a75d86eef8d6d4fca71.txt",
+    "sha256": "0ed077ee61fd8752110ef47c097090ffc6136695bf842a75d86eef8d6d4fca71",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_LoginUser",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact native function/code and subject/peer states; fresh PIN mutation changes one byte only; all owners closed."
+  },
+  {
+    "id": "digest.key.Session.md5",
+    "file": "c0310b2803682a5bf9627bd30e22d9e5d80de4277e325e05c766640a0f308111.txt",
+    "sha256": "c0310b2803682a5bf9627bd30e22d9e5d80de4277e325e05c766640a0f308111",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.key.Session.sensitive_md5",
+    "file": "0eb57e8a7cde271f272fb1c84f99b95b83dbf850f1d8cfd78c1cfb142b80144f.txt",
+    "sha256": "0eb57e8a7cde271f272fb1c84f99b95b83dbf850f1d8cfd78c1cfb142b80144f",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.key.Session.sensitive_sha256",
+    "file": "bb19d215b925efb3b20eece9897046289923661054e5513bbbab4a173fa4fc7a.txt",
+    "sha256": "bb19d215b925efb3b20eece9897046289923661054e5513bbbab4a173fa4fc7a",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.key.AdvancedSession.md5",
+    "file": "850061379a8a7d077190f5db0ee4cd276d02e00877e24e4c452adfb35961cf63.txt",
+    "sha256": "850061379a8a7d077190f5db0ee4cd276d02e00877e24e4c452adfb35961cf63",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.key.AdvancedSession.sensitive_md5",
+    "file": "4a8fa9524b1aecf4277726ce7ed7e2cdf64eb61b505603679b6ab4a3980f1a11.txt",
+    "sha256": "4a8fa9524b1aecf4277726ce7ed7e2cdf64eb61b505603679b6ab4a3980f1a11",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.key.AdvancedSession.sensitive_sha256",
+    "file": "9450a3b446f68c3467a418d093abf2ac6a4b8a291cb6a2250f32334e9c075edb.txt",
+    "sha256": "9450a3b446f68c3467a418d093abf2ac6a4b8a291cb6a2250f32334e9c075edb",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Public abc key, same generic-secret class and extractability. Sensitive MD5: exact C_DigestKey KEY_INDIGESTIBLE; extractable MD5 and sensitive SHA256: independent exact abc KATs. Recipe capability characterization, not a universal sensitive-key refusal rule."
+  },
+  {
+    "id": "digest.contract.initial_exact_capacity",
+    "file": "8011cd54cc1efd9bf81a874e0226fbc3e7adc4056f38b0d304e8423b2785f41a.txt",
+    "sha256": "8011cd54cc1efd9bf81a874e0226fbc3e7adc4056f38b0d304e8423b2785f41a",
+    "worker_mode": "digest-capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "SHA256 abc with output capacity32 selected before Init; first Final succeeds with exact32-byte KAT, no prior short-output or retry."
+  }
+]

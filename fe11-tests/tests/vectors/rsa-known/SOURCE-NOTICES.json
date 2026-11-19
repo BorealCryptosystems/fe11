@@ -1,0 +1,6 @@
+{
+  "source": "vectors\\evppkey_rsa_common.txt",
+  "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+  "provenance": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+  "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+}

@@ -1,0 +1,783 @@
+[
+  {
+    "id": "guard.AttributeValuesRejection::AttributeBooleanRepresentation@FlatAttributeObservation::boolean",
+    "file": "69ce23368a35343cc09ca163f90daa26fee3fb1ea6ce86284a9c58afd2e7ef41.txt",
+    "sha256": "69ce23368a35343cc09ca163f90daa26fee3fb1ea6ce86284a9c58afd2e7ef41",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeBooleanRepresentation))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Create CKO_DATA with CKA_LABEL hex02; read Label as available AttributeBytes, move that value into a public FlatAttributeObservation whose attribute is Token. Keep real read calls; the metadata reassignment is caller input, not a claimed native boolean.",
+    "parameters": {
+      "attribute": "Token",
+      "value_hex": "02"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.AttributeValuesRejection::AttributeUnsignedArrayWidth@FlatAttributeObservation::unsigned_values",
+    "file": "c35283766b56a021ab82078b118871cafd3c6ba9c6e78148fc366e64ecf1bdf8.txt",
+    "sha256": "c35283766b56a021ab82078b118871cafd3c6ba9c6e78148fc366e64ecf1bdf8",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeUnsignedArrayWidth))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Read one-byte CKA_LABEL hex01 from real CKO_DATA, move available bytes to public observation attribute AllowedMechanisms.",
+    "parameters": {
+      "attribute": "AllowedMechanisms",
+      "value_bytes": 1
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.DigestContinuationRejection::DigestContinuationTicketUnavailable@Session::take_digest_ticket",
+    "file": "717d34a3f719a94df41d82075f9b2ccdbc0deef02ef8c757f6337dde509bb504.txt",
+    "sha256": "717d34a3f719a94df41d82075f9b2ccdbc0deef02ef8c757f6337dde509bb504",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestContinuationTicketUnavailable))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Begin native SHA256 digest so observer is already Ticket; test both facades in distinct cases. Success/second-take after facade error is separately in RETAINED-TICKET-CASES.",
+    "parameters": {},
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.KeyTransportRejection::AesKekMaterialLength@Session::import_aes_key_encryption_key",
+    "file": "224aaef8b5ac1eee8f37d0d1428b1e6ec372f8ff7534e9d7b1050065f7c9b31c.txt",
+    "sha256": "224aaef8b5ac1eee8f37d0d1428b1e6ec372f8ff7534e9d7b1050065f7c9b31c",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyTransport(AesKekMaterialLength))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Valid AES128 AesKeyEncryptionSpec, both wrap/unwrap requested.",
+    "parameters": {
+      "material_hex": "000000000000000000000000000000"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.KeyTransportRejection::TransportSecretLength@Session::import_symmetric_key",
+    "file": "4f665359d3069dcc227efda7ad815c8df30f0a3e2f22c2e457601d7b750810f1.txt",
+    "sha256": "4f665359d3069dcc227efda7ad815c8df30f0a3e2f22c2e457601d7b750810f1",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyTransport(TransportSecretLength))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Valid AES128 SymmetricIntroductionSpec with explicit observations.",
+    "parameters": {
+      "material_hex": "000000000000000000000000000000"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.MechanismsRejection::MechanismNotAnnounced@MechanismCatalog::properties",
+    "file": "0b38c4edcac50f2ba42a31483f337cd8d6d728e642f06e610d7a3ec0c561b693.txt",
+    "sha256": "0b38c4edcac50f2ba42a31483f337cd8d6d728e642f06e610d7a3ec0c561b693",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Mechanisms(MechanismNotAnnounced))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Discover exact mechanism catalogue from real token; ensure CKM_HKDF_DERIVE not listed.",
+    "parameters": {
+      "mechanism": "CKM_HKDF_DERIVE"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.ModuleLifecycleRejection::TokenSelectorNotUnique@Module::select",
+    "file": "d3f20531703f4ac51631f074696529265e10dcac5fd87282a21cf8e581884f1d.txt",
+    "sha256": "d3f20531703f4ac51631f074696529265e10dcac5fd87282a21cf8e581884f1d",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(TokenSelectorNotUnique))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Use actual snapshot of one initialized token; clone its public identity and replace serial with different same-length ASCII sequence absent from all discovered identities.",
+    "parameters": {
+      "selector": "exact altered identity",
+      "matches": 0
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.OperationOwnershipRejection::NativeAsynchronousExecutionUnavailable@TokenContext::open_advanced_session",
+    "file": "d38e5b97e2d3fa71091c5499a99f8f786b7e915f8d904fb876511ca1e8a4cbc6.txt",
+    "sha256": "d38e5b97e2d3fa71091c5499a99f8f786b7e915f8d904fb876511ca1e8a4cbc6",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(NativeAsynchronousExecutionUnavailable))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real TokenContext; notify variant supplies owned no-op public NotifyHandler returning the documented continue result.",
+    "parameters": {
+      "read_write": true,
+      "mode": "Asynchronous"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.OperationOwnershipRejection::NativeAsynchronousExecutionUnavailable@TokenContext::open_advanced_session_with_notify",
+    "file": "47fa872e1be121dca261ddc6d05d37c2458413a3a747ec44b2c73aad881efcb6.txt",
+    "sha256": "47fa872e1be121dca261ddc6d05d37c2458413a3a747ec44b2c73aad881efcb6",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(NativeAsynchronousExecutionUnavailable))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real TokenContext; notify variant supplies owned no-op public NotifyHandler returning the documented continue result.",
+    "parameters": {
+      "read_write": true,
+      "mode": "Asynchronous"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "guard.SessionLifecycleRejection::CGetSessionValidationFlagsUnavailable@Session::validation_flags",
+    "file": "411c46c328f24daefe3c2487648663217ed10ac19fc3e95b560fba31fbea9add.txt",
+    "sha256": "411c46c328f24daefe3c2487648663217ed10ac19fc3e95b560fba31fbea9add",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(SessionLifecycle(CGetSessionValidationFlagsUnavailable))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real Legacy240 session; validation selector is a valid public value.",
+    "parameters": {
+      "flags_type": 0,
+      "interface": "Legacy240"
+    },
+    "expected_digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+  },
+  {
+    "id": "boundary.AttributeValuesRejection::AttributeNativeScalarWidth@FlatAttributeObservation::unsigned",
+    "file": "e901358f1541321d0b88ef1f4079e13c789fb21ec220a1644c963a7c4e32a1fb.txt",
+    "sha256": "e901358f1541321d0b88ef1f4079e13c789fb21ec220a1644c963a7c4e32a1fb",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeNativeScalarWidth))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.AttributeValuesRejection::AttributeRepresentationDoesNotMatchConversion@FlatAttributeObservation::unsigned",
+    "file": "0a094c36f5fe2b8a81ad24f37e73398ce5c59893337b437af068ecf1a353f84d.txt",
+    "sha256": "0a094c36f5fe2b8a81ad24f37e73398ce5c59893337b437af068ecf1a353f84d",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeRepresentationDoesNotMatchConversion))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.AttributeValuesRejection::AttributeValueUnavailable@FlatAttributeObservation::unsigned_values",
+    "file": "232551d4a82678fdf554da3596a987f5e70525800fabe025cbf4984d5947a3eb.txt",
+    "sha256": "232551d4a82678fdf554da3596a987f5e70525800fabe025cbf4984d5947a3eb",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeValueUnavailable))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.Module::call_counts",
+    "file": "87e35f6b53ad384bb7855a1e4457c4dc2dda166700c11bac478994d692de24fd.txt",
+    "sha256": "87e35f6b53ad384bb7855a1e4457c4dc2dda166700c11bac478994d692de24fd",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Snapshot before/after exactly one explicit library_info call: C_GetInfo advances by1, unrelated dispatch counts unchanged. Counts describe native dispatch, not timing.",
+    "expected_native_calls": [
+      "C_GetInfo",
+      "C_OpenSession",
+      "C_GetInfo",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "accessor.Module::call_counts",
+      "public_method": "Module::call_counts",
+      "parameters": {
+        "signature": "Source pub fn call_counts (&self) -> Result < BTreeMap <&'static str , u64 >>",
+        "public_contract": "Counts of actual native dispatches, without arguments or secret values. Returns an error when diagnostic bookkeeping cannot establish exact counts.",
+        "source": "library/src/module/open.rs",
+        "lines": [
+          428,
+          430
+        ]
+      },
+      "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+      "action": "Snapshot before/after exactly one explicit library_info call: C_GetInfo advances by1, unrelated dispatch counts unchanged. Counts describe native dispatch, not timing.",
+      "oracle": "Snapshot before/after exactly one explicit library_info call: C_GetInfo advances by1, unrelated dispatch counts unchanged. Counts describe native dispatch, not timing.",
+      "cleanup": "Close owned actual runtime/session explicitly; builder-only case has no native owner",
+      "executed": false
+    }
+  },
+  {
+    "id": "accessor.Module::object_limits",
+    "file": "59530af359d3c1fe61e83b0dba6430c1a3f7ac705d003faf6a7e63ced7d4d2e1.txt",
+    "sha256": "59530af359d3c1fe61e83b0dba6430c1a3f7ac705d003faf6a7e63ced7d4d2e1",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the exact ObjectLimits passed to builder, including per-operation limits; no native object enumeration.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "accessor.Module::object_limits",
+      "public_method": "Module::object_limits",
+      "parameters": {
+        "signature": "Source pub fn object_limits (&self) -> ObjectLimits",
+        "public_contract": "Immutable local object-count choices; does not query the module.",
+        "source": "library/src/module/open.rs",
+        "lines": [
+          27,
+          29
+        ]
+      },
+      "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+      "action": "Read the exact ObjectLimits passed to builder, including per-operation limits; no native object enumeration.",
+      "oracle": "Read the exact ObjectLimits passed to builder, including per-operation limits; no native object enumeration.",
+      "cleanup": "Close owned actual runtime/session explicitly; builder-only case has no native owner",
+      "executed": false
+    }
+  },
+  {
+    "id": "accessor.Module::resource_limits",
+    "file": "55dda9a8c8661e400721dd0e0662a16291106cb1f94f1c4a6dbe1a0d3979b5aa.txt",
+    "sha256": "55dda9a8c8661e400721dd0e0662a16291106cb1f94f1c4a6dbe1a0d3979b5aa",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read configured symmetric resource ceilings exactly; no claim that native allocations are counted.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "accessor.Module::resource_limits",
+      "public_method": "Module::resource_limits",
+      "parameters": {
+        "signature": "Source pub fn resource_limits (&self) -> Limits",
+        "public_contract": "The caller\u2019s discovery/resource ceilings retained by this module. This observation does not query the native module.",
+        "source": "library/src/module/open.rs",
+        "lines": [
+          408,
+          410
+        ]
+      },
+      "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+      "action": "Read configured symmetric resource ceilings exactly; no claim that native allocations are counted.",
+      "oracle": "Read configured symmetric resource ceilings exactly; no claim that native allocations are counted.",
+      "cleanup": "Close owned actual runtime/session explicitly; builder-only case has no native owner",
+      "executed": false
+    }
+  },
+  {
+    "id": "accessor.Module::session_limits",
+    "file": "e076cb87807576ae3d425648e5f4f3f5e63ffbb944236c3ec17e600a3105e744.txt",
+    "sha256": "e076cb87807576ae3d425648e5f4f3f5e63ffbb944236c3ec17e600a3105e744",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the configured SessionLimits, not the native advertised capacity. Compare to the explicit SessionPolicy fixture.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "accessor.Module::session_limits",
+      "public_method": "Module::session_limits",
+      "parameters": {
+        "signature": "Source pub fn session_limits (&self) -> SessionLimit",
+        "public_contract": "Module-wide session ceilings. Token ceilings also apply independently.",
+        "source": "library/src/module/open.rs",
+        "lines": [
+          413,
+          418
+        ]
+      },
+      "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+      "action": "Read the configured SessionLimits, not the native advertised capacity. Compare to the explicit SessionPolicy fixture.",
+      "oracle": "Read the configured SessionLimits, not the native advertised capacity. Compare to the explicit SessionPolicy fixture.",
+      "cleanup": "Close owned actual runtime/session explicitly; builder-only case has no native owner",
+      "executed": false
+    }
+  },
+  {
+    "id": "accessor.Module::session_policy",
+    "file": "b85cedc0f3f7ed101f0f5097cd925b93e05fc1291361ce319ae31158c5ac8601.txt",
+    "sha256": "b85cedc0f3f7ed101f0f5097cd925b93e05fc1291361ce319ae31158c5ac8601",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the complete explicitly selected SessionPolicy, including independent module/token announcement choices.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "accessor.Module::session_policy",
+      "public_method": "Module::session_policy",
+      "parameters": {
+        "signature": "Source pub fn session_policy (&self) -> & SessionPolicy",
+        "public_contract": "The caller\u2019s immutable session selection, without a native query.",
+        "source": "library/src/module/open.rs",
+        "lines": [
+          402,
+          404
+        ]
+      },
+      "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+      "action": "Read the complete explicitly selected SessionPolicy, including independent module/token announcement choices.",
+      "oracle": "Read the complete explicitly selected SessionPolicy, including independent module/token announcement choices.",
+      "cleanup": "Close owned actual runtime/session explicitly; builder-only case has no native owner",
+      "executed": false
+    }
+  },
+  {
+    "id": "boundary.AttributeValuesRejection::StandardAttributeLayoutCannotBeOverridden@Module::declare_attribute_extension",
+    "file": "1f7cf421ab4e6600f5eed9396aa69d7cdc430941e9348e4057079c35d9ff47ef.txt",
+    "sha256": "1f7cf421ab4e6600f5eed9396aa69d7cdc430941e9348e4057079c35d9ff47ef",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(StandardAttributeLayoutCannotBeOverridden))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "boundary.AttributeValuesRejection::StandardAttributeLayoutCannotBeOverridden@Module::declare_attribute_extension",
+      "cause": "AttributeValuesRejection::StandardAttributeLayoutCannotBeOverridden",
+      "public_method": "Module::declare_attribute_extension",
+      "producer": "Real Module; pass a standard attribute with its own valid layout.",
+      "parameters": {
+        "identifier": "CKA_LABEL",
+        "layout": "Bytes"
+      },
+      "oracle": "Rejected(AttributeValues(StandardAttributeLayoutCannotBeOverridden))",
+      "after": "StandardAttributeLayoutCannotBeOverridden; no native call",
+      "executed": false
+    }
+  },
+  {
+    "id": "boundary.MechanismExtensionsRejection::DigestExtensionHasNoKey@Module::declare_mechanism_extension",
+    "file": "ee4313359b280e172354db1bea7dd8a49c8374d4b5fd909f6648448f6d274792.txt",
+    "sha256": "ee4313359b280e172354db1bea7dd8a49c8374d4b5fd909f6648448f6d274792",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(MechanismExtensions(DigestExtensionHasNoKey))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "parameters": {
+      "id": "boundary.MechanismExtensionsRejection::DigestExtensionHasNoKey@Module::declare_mechanism_extension",
+      "cause": "MechanismExtensionsRejection::DigestExtensionHasNoKey",
+      "public_method": "Module::declare_mechanism_extension",
+      "producer": "Real module; standard parameterless digest ABI and no request or native invocation.",
+      "parameters": {
+        "operation": "Digest",
+        "mechanism": "CKM_SHA256",
+        "constants_edition": [
+          3,
+          2
+        ],
+        "mutates_key": true
+      },
+      "oracle": "Rejected(MechanismExtensions(DigestExtensionHasNoKey))",
+      "after": "DigestExtensionHasNoKey; conservative mutates_key flag rejected locally, no native graph created",
+      "executed": false
+    }
+  }
+]

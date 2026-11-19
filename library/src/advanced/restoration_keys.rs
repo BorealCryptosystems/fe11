@@ -96,6 +96,60 @@ pub struct StateRestoreKeys<'a> {
     /// Signature/verification role, if used by the saved plan.
     pub authentication: Option<StateRestoreKey<'a>>,
 }
+/// Native category of an independently addressable classic operation.
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+pub enum ClassicOperation {
+    /// C_DigestInit.
+    Digest,
+    /// C_EncryptInit.
+    Encrypt,
+    /// C_DecryptInit.
+    Decrypt,
+    /// C_SignInit.
+    Sign,
+    /// C_VerifyInit.
+    Verify,
+}
+
+impl ClassicOperation {
+    pub(super) fn from_flags(flags: u64) -> Result<Self> {
+        match flags {
+            v if v == fe11_sys::CKF_DIGEST as u64 => Ok(Self::Digest),
+            v if v == fe11_sys::CKF_ENCRYPT as u64 => Ok(Self::Encrypt),
+            v if v == fe11_sys::CKF_DECRYPT as u64 => Ok(Self::Decrypt),
+            v if v == fe11_sys::CKF_SIGN as u64 => Ok(Self::Sign),
+            v if v == fe11_sys::CKF_VERIFY as u64 => Ok(Self::Verify),
+            _ => Err(Error::Rejected(crate::RejectionReason::CheckpointFormat(
+                crate::CheckpointFormatRejection::SavedRecordKind,
+            ))),
+        }
+    }
+
+    pub(super) fn for_body(body: &crate::advanced::OperationBody) -> Result<Self> {
+        use crate::advanced::OperationBody;
+        let flags = match body {
+            OperationBody::Digest(_) => fe11_sys::CKF_DIGEST,
+            OperationBody::Cipher(owner) => owner.category(),
+            OperationBody::Signature(owner) => owner.category(),
+            _ => 0,
+        };
+        Self::from_flags(flags as u64)
+    }
+
+    pub(super) fn select<'a>(
+        self,
+        bindings: &'a [(Self, StateRestoreKeys<'a>)],
+    ) -> Result<StateRestoreKeys<'a>> {
+        let mut matching = bindings.iter().filter(|(category, _)| *category == self);
+        match (matching.next(), matching.next()) {
+            (Some((_, keys)), None) => Ok(*keys),
+            _ => Err(Error::Rejected(crate::RejectionReason::Restoration(
+                crate::RestorationRejection::SavedStateContextMismatch,
+            ))),
+        }
+    }
+}
+
 pub(super) struct BoundKeys {
     pub(super) extension: Option<crate::MechanismExtension>,
     pub(super) signature: Option<SignatureBinding>,
@@ -409,4 +463,30 @@ impl<'a> StateRestoreKey<'a> {
     }
 }
 
+impl crate::Session {
+    /// Take the parked continuation of the requested classic direction once.
+    /// This identifies the intended observer when two synchronous calls left
+    /// continuations on the same session. It performs no native call.
+    pub fn take_classic_ticket(
+        &self,
+        direction: ClassicOperation,
+    ) -> Result<super::OperationTicket> {
+        match direction {
+            ClassicOperation::Digest => self.take_digest_ticket(),
+            ClassicOperation::Encrypt => self.take_cipher_direction(Some(fe11_sys::CKF_ENCRYPT)),
+            ClassicOperation::Decrypt => self.take_cipher_direction(Some(fe11_sys::CKF_DECRYPT)),
+            ClassicOperation::Sign => self.take_signature_direction(Some(fe11_sys::CKF_SIGN)),
+            ClassicOperation::Verify => self.take_signature_direction(Some(fe11_sys::CKF_VERIFY)),
+        }
+    }
+}
 
+impl super::AdvancedSession {
+    /// Retrieve the parked continuation for exactly one classic direction.
+    pub fn take_classic_ticket(
+        &self,
+        direction: ClassicOperation,
+    ) -> Result<super::OperationTicket> {
+        self.session.take_classic_ticket(direction)
+    }
+}

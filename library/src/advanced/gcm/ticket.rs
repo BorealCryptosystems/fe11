@@ -137,6 +137,7 @@ impl Session {
         }
         body.observer = Observer::Ticket;
         Ok(OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.inner.clone(),
             uid: self.uid,
             id: operation.id,

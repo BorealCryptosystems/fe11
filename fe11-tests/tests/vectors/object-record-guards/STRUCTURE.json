@@ -1,0 +1,33 @@
+{
+  "description": "Synthetic complete Saved extension-digest record; parse only. No authentication, import, restore or native state provenance.",
+  "bytes": 458,
+  "base": "vectors/record-parser/STRUCTURE.json",
+  "changes": [
+    "profile12: single-part extension digest",
+    "digest_extension Some with complete65-byte graph; edition3.2 caller_assertedtrue",
+    "envelope payload length adjusted"
+  ],
+  "graph": {
+    "offset": 307,
+    "length": 65,
+    "pointer_width": 8,
+    "ulong_width": 8,
+    "little_endian": true,
+    "root": 0,
+    "blocks": [
+      {
+        "bytes": 8,
+        "alignment": 8,
+        "direction": "Input",
+        "value": "0000000000000000"
+      }
+    ],
+    "pointers": [],
+    "outputs": []
+  },
+  "negative": {
+    "offset": 310,
+    "field": "graph version magic FG01 to FG02",
+    "unchanged_abi": true
+  }
+}

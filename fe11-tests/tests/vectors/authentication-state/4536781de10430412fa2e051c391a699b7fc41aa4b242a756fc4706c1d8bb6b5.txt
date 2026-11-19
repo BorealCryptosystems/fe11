@@ -1,0 +1,4 @@
+RO_USER
+open_rw
+RO_USER
+CKR_OK

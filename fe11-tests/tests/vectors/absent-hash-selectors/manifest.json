@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "absence.hash.CKM_AES_GMAC",
+    "file": "b61b822d64baf2a42254df57e1c1b314ca235ca90b874071f58a7b67de10adba.txt",
+    "sha256": "b61b822d64baf2a42254df57e1c1b314ca235ca90b874071f58a7b67de10adba",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_AES_GMAC",
+    "native_identifier": 4238,
+    "required_key": "CKK_AES",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.12.2 AES-GMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634469"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.13.4 AES-GMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc527454842"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.13.4 AES-GMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc527454842"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.13.6 AES-GMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407341"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_AES_MAC",
+    "file": "a107af75e30d9edb64855aa239a0743f6c446962e4661897cce85d04cacc8569.txt",
+    "sha256": "a107af75e30d9edb64855aa239a0743f6c446962e4661897cce85d04cacc8569",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_AES_MAC",
+    "native_identifier": 4227,
+    "required_key": "CKK_AES",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.8.10 AES-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc228894704"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.10.10 AES-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc228894704"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.10.10 AES-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203484"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.10.10 AES-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407325"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_AES_XCBC_MAC",
+    "file": "ef852271b118288018c318ad467e68daecef7897dd99a20c086f3ac2e7aba25b.txt",
+    "sha256": "ef852271b118288018c318ad467e68daecef7897dd99a20c086f3ac2e7aba25b",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_AES_XCBC_MAC",
+    "native_identifier": 4236,
+    "required_key": "CKK_AES",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.8.11 AES-XCBC-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634458"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.10.11 AES-XCBC-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634458"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.10.11 AES-XCBC-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203485"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.10.11 AES-XCBC-MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407326"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_AES_XCBC_MAC_96",
+    "file": "369051eccffb9b5da227d6afd103fd1374238157f268b536510cd49e0108bc6e.txt",
+    "sha256": "369051eccffb9b5da227d6afd103fd1374238157f268b536510cd49e0108bc6e",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_AES_XCBC_MAC_96",
+    "native_identifier": 4237,
+    "required_key": "CKK_AES",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.10.12 AES-XCBC-MAC-96",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634459"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.10.12 AES-XCBC-MAC-96",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203486"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.10.12 AES-XCBC-MAC-96",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407327"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_160",
+    "file": "581c27cefe3364af83ffc2484cddae3052ea198721da0057f712d60b9b050f32.txt",
+    "sha256": "581c27cefe3364af83ffc2484cddae3052ea198721da0057f712d60b9b050f32",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_160",
+    "native_identifier": 16396,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.33.2 BLAKE2B-160 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118408"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.33.2 BLAKE2B-160 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203621"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.33.2 BLAKE2B-160 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407464"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_160_HMAC",
+    "file": "14289f4b91ca232d0e70a1a1899b7fd8cdaea07e1d5113ba2780b74d096d500c.txt",
+    "sha256": "14289f4b91ca232d0e70a1a1899b7fd8cdaea07e1d5113ba2780b74d096d500c",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_160_HMAC",
+    "native_identifier": 16397,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.33.4 BLAKE2B-160-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118410"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.33.4 BLAKE2B-160-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203623"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.33.4 BLAKE2B-160-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407466"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_256",
+    "file": "3799fc7dd04aa00f7da2cc447d3e5e4be16599e840b096555c4a2b48259393aa.txt",
+    "sha256": "3799fc7dd04aa00f7da2cc447d3e5e4be16599e840b096555c4a2b48259393aa",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_256",
+    "native_identifier": 16401,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.34.2 BLAKE2B-256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118415"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.34.2 BLAKE2B-256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203628"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.34.2 BLAKE2B-256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407471"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_256_HMAC",
+    "file": "1ec8c104192a71b2427eb020e84078e5b994ec415f29bf829f3ece718dfc5d94.txt",
+    "sha256": "1ec8c104192a71b2427eb020e84078e5b994ec415f29bf829f3ece718dfc5d94",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_256_HMAC",
+    "native_identifier": 16402,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.34.4 BLAKE2B-256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118417"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.34.4 BLAKE2B-256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203630"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.34.4 BLAKE2B-256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407473"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_384",
+    "file": "e57243372b0ec7e0966fd0092af9779d70c91081f21c51495b28846755e15f10.txt",
+    "sha256": "e57243372b0ec7e0966fd0092af9779d70c91081f21c51495b28846755e15f10",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_384",
+    "native_identifier": 16406,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.35.2 BLAKE2B-384 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118422"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.35.2 BLAKE2B-384 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203635"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.35.2 BLAKE2B-384 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407478"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_384_HMAC",
+    "file": "497fb709912f61f3eb830dd82b3908d098c4b6c314d4b3a63ee9511f3d692b60.txt",
+    "sha256": "497fb709912f61f3eb830dd82b3908d098c4b6c314d4b3a63ee9511f3d692b60",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_384_HMAC",
+    "native_identifier": 16407,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.35.4 BLAKE2B-384-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118424"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.35.4 BLAKE2B-384-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203637"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.35.4 BLAKE2B-384-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407480"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_512",
+    "file": "63945127cc00c1305be7d5215a941d6e78a1fb83f62b814b89c2c82630319268.txt",
+    "sha256": "63945127cc00c1305be7d5215a941d6e78a1fb83f62b814b89c2c82630319268",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_512",
+    "native_identifier": 16411,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.36.2 BLAKE2B-512 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118429"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.36.2 BLAKE2B-512 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203642"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.36.2 BLAKE2B-512 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407485"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_BLAKE2B_512_HMAC",
+    "file": "9efe43bb0c8643586166b4cca08ac7bbdd8844db3e43c8659c8c6928c6691cc9.txt",
+    "sha256": "9efe43bb0c8643586166b4cca08ac7bbdd8844db3e43c8659c8c6928c6691cc9",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_BLAKE2B_512_HMAC",
+    "native_identifier": 16412,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.36.4 BLAKE2B-512-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118431"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.36.4 BLAKE2B-512-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203644"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.36.4 BLAKE2B-512-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407487"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_DES3_MAC",
+    "file": "7f277da6b0d5348b5b26d2beeb8df277a3878d96d40442362fe5b39584f248c1.txt",
+    "sha256": "7f277da6b0d5348b5b26d2beeb8df277a3878d96d40442362fe5b39584f248c1",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_DES3_MAC",
+    "native_identifier": 308,
+    "required_key": "CKK_DES3",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.7.14 General block cipher MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651127"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_DES_MAC",
+    "file": "5eb8245136148af08eb5f7c2a23c5897f51798c5529185a8d9acd9a569ad5fd0.txt",
+    "sha256": "5eb8245136148af08eb5f7c2a23c5897f51798c5529185a8d9acd9a569ad5fd0",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_DES_MAC",
+    "native_identifier": 291,
+    "required_key": "CKK_DES",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.7.14 General block cipher MAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651127"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_FASTHASH",
+    "file": "520c471715bd0a26608f8a2fb9f0fcba3d79b4442263e78fb6eab750ba03cc7a.txt",
+    "sha256": "520c471715bd0a26608f8a2fb9f0fcba3d79b4442263e78fb6eab750ba03cc7a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_FASTHASH",
+    "native_identifier": 4208,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.13.2 FASTHASH digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651176"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_MD2",
+    "file": "1551a9ccaafac8d5f89aab49fc6c2a1a42322f864b28c0058c8b0e0155e60567.txt",
+    "sha256": "1551a9ccaafac8d5f89aab49fc6c2a1a42322f864b28c0058c8b0e0155e60567",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_MD2",
+    "native_identifier": 512,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.11.2 MD2 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651164"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_MD2_HMAC",
+    "file": "6ee6cd41b0743949520e3cfef6e2fbcd9512514feb9375b755d18faf1d1748b6.txt",
+    "sha256": "6ee6cd41b0743949520e3cfef6e2fbcd9512514feb9375b755d18faf1d1748b6",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_MD2_HMAC",
+    "native_identifier": 513,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.11.4 MD2-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651166"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_NULL",
+    "file": "6226197af1f54c196bbb8882edfce0583bbc7ed50f432608dd5f473c8802f53a.txt",
+    "sha256": "6226197af1f54c196bbb8882edfce0583bbc7ed50f432608dd5f473c8802f53a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_NULL",
+    "native_identifier": 16395,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr300",
+        "clause": "2.63 NULL Mechanism",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc8118638"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.63 NULL Mechanism",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203841"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.63 NULL Mechanism",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407685"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_RIPEMD128",
+    "file": "4f736f552baa2a8bec0a2ad51f9fb3c0ef7302b0bc4606cca5216c0428050c69.txt",
+    "sha256": "4f736f552baa2a8bec0a2ad51f9fb3c0ef7302b0bc4606cca5216c0428050c69",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_RIPEMD128",
+    "native_identifier": 560,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.16.2 RIPE-MD 128 Digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651194"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_RIPEMD128_HMAC",
+    "file": "62079e352ac697f51692353ef069bb72839a8774febd6a948a8762fc51ef05fb.txt",
+    "sha256": "62079e352ac697f51692353ef069bb72839a8774febd6a948a8762fc51ef05fb",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_RIPEMD128_HMAC",
+    "native_identifier": 561,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.16.4 RIPE-MD 128-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651196"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_RIPEMD160",
+    "file": "0422c8fd2048a8bf0128760c200e0f1170b1ff9927f17a0e5557dc2879c4f6da.txt",
+    "sha256": "0422c8fd2048a8bf0128760c200e0f1170b1ff9927f17a0e5557dc2879c4f6da",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_RIPEMD160",
+    "native_identifier": 576,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.16.5 RIPE-MD 160",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651197"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_RIPEMD160_HMAC",
+    "file": "8a0a0fe7dae1c012e21af0b359a49c38e63c4d0fad2b49ccf0a286253645d62d.txt",
+    "sha256": "8a0a0fe7dae1c012e21af0b359a49c38e63c4d0fad2b49ccf0a286253645d62d",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_RIPEMD160_HMAC",
+    "native_identifier": 577,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "hist300",
+        "clause": "2.16.7 RIPE-MD 160-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-hist/v3.0/os/pkcs11-hist-v3.0-os.html#_Toc380651199"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_224",
+    "file": "0f2770b08d526368d45a28c67aaaa5c9d213ce4e5d8432fab323849bf9a5310a.txt",
+    "sha256": "0f2770b08d526368d45a28c67aaaa5c9d213ce4e5d8432fab323849bf9a5310a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_224",
+    "native_identifier": 72,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.23.2 SHA-512/224 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634537"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.25.2 SHA-512/224 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634537"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.25.2 SHA-512/224 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203569"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.25.2 SHA-512/224 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407412"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_224_HMAC",
+    "file": "b8c2a7ac05f10c1e90286aad701da13008cda383e039481a759cb92151fb1b83.txt",
+    "sha256": "b8c2a7ac05f10c1e90286aad701da13008cda383e039481a759cb92151fb1b83",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_224_HMAC",
+    "native_identifier": 73,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.23.4 SHA-512/224-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634539"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.25.4 SHA-512/224-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634539"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.25.4 SHA-512/224-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203571"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.25.4 SHA-512/224-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407414"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_256",
+    "file": "3dda6d5a33a470ea2c94926373f7f4e92724d482686687ea52145e9b33efef17.txt",
+    "sha256": "3dda6d5a33a470ea2c94926373f7f4e92724d482686687ea52145e9b33efef17",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_256",
+    "native_identifier": 76,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.24.2 SHA-512/256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634543"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.26.2 SHA-512/256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634543"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.26.2 SHA-512/256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203576"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.26.2 SHA-512/256 digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407419"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_256_HMAC",
+    "file": "58b02b7ab791d330774b25f6e4b1a7edeb4b4f65b1d3fba75d24ea3ebf809bb3.txt",
+    "sha256": "58b02b7ab791d330774b25f6e4b1a7edeb4b4f65b1d3fba75d24ea3ebf809bb3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_256_HMAC",
+    "native_identifier": 77,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.24.4 SHA-512/256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634545"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.26.4 SHA-512/256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634545"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.26.4 SHA-512/256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203578"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.26.4 SHA-512/256-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407421"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_T",
+    "file": "95ea64c012e2d84d9ed6a2134658c483708f7c11e2ce93861690a6fdfa5b8581.txt",
+    "sha256": "95ea64c012e2d84d9ed6a2134658c483708f7c11e2ce93861690a6fdfa5b8581",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_T",
+    "native_identifier": 80,
+    "required_key": null,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_DigestInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.25.2 SHA-512/t digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634549"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.27.2 SHA-512/t digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634549"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.27.2 SHA-512/t digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203583"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.27.2 SHA-512/t digest",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407426"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SHA512_T_HMAC",
+    "file": "530d126566ac4a251f1219b8050c8e9c3f04539fd1a73e38227c9d21cbab4d8f.txt",
+    "sha256": "530d126566ac4a251f1219b8050c8e9c3f04539fd1a73e38227c9d21cbab4d8f",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SHA512_T_HMAC",
+    "native_identifier": 81,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.25.4 SHA-512/t-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc370634551"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.27.4 SHA-512/t-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc370634551"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.27.4 SHA-512/t-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203585"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.27.4 SHA-512/t-HMAC",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407428"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SSL3_MD5_MAC",
+    "file": "7d32660ba977e5acd8725233ab6eb64af3fd78b8cff551b1f6644ec96e3437b8.txt",
+    "sha256": "7d32660ba977e5acd8725233ab6eb64af3fd78b8cff551b1f6644ec96e3437b8",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SSL3_MD5_MAC",
+    "native_identifier": 896,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.28.7 MD5 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc228894790"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.39.7 MD5 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc228894790"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.39.7 MD5 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203663"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.39.7 MD5 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407506"
+      }
+    ]
+  },
+  {
+    "id": "absence.hash.CKM_SSL3_SHA1_MAC",
+    "file": "19a359c494d20fc5059724ac2deabf0fcc87ea1b9e53b674e307813bb7380a53.txt",
+    "sha256": "19a359c494d20fc5059724ac2deabf0fcc87ea1b9e53b674e307813bb7380a53",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "absent_hash_selector": "CKM_SSL3_SHA1_MAC",
+    "native_identifier": 897,
+    "required_key": "CKK_GENERIC_SECRET",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue excludes the exact selector. Single and multipart each return C_SignInit CKR_MECHANISM_INVALID. Session and object cleanup succeed.",
+    "source": [
+      {
+        "source": "curr240",
+        "clause": "2.28.8 SHA-1 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/os/pkcs11-curr-v2.40-os.html#_Toc228894791"
+      },
+      {
+        "source": "curr300",
+        "clause": "2.39.8 SHA-1 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-curr/v3.0/os/pkcs11-curr-v3.0-os.html#_Toc228894791"
+      },
+      {
+        "source": "spec310",
+        "clause": "6.39.8 SHA-1 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.1/os/pkcs11-spec-v3.1-os.html#_Toc111203664"
+      },
+      {
+        "source": "spec320",
+        "clause": "6.39.8 SHA-1 MACing in SSL 3.0",
+        "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html#_Toc234407507"
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "ticket-complete.ModuleDrain::poll_advanced.foreign",
+    "file": "ac92320ff334c1ecc172bf0de5c516522628072de9fae03d27dda15f2dd3034f.txt",
+    "sha256": "ac92320ff334c1ecc172bf0de5c516522628072de9fae03d27dda15f2dd3034f",
+    "worker_mode": "drain-ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "ticket-complete.ModuleDrain::poll_advanced.consumed",
+    "file": "312a928d6409e83fab960ce55be4cc0c89686118c4a73003f828cf4e7d188ee0.txt",
+    "sha256": "312a928d6409e83fab960ce55be4cc0c89686118c4a73003f828cf4e7d188ee0",
+    "worker_mode": "drain-ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "ticket-complete.TokenDrain::poll_advanced.foreign",
+    "file": "adf7cd536c4c3d84d62cd396ef92a345665a02306c09ab255ec525a4e4740f9b.txt",
+    "sha256": "adf7cd536c4c3d84d62cd396ef92a345665a02306c09ab255ec525a4e4740f9b",
+    "worker_mode": "drain-ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "ticket-complete.TokenDrain::poll_advanced.consumed",
+    "file": "3052d357ce54e79727daf14fc0472976bf15bab0fb9e773baac2b39a5e0df082.txt",
+    "sha256": "3052d357ce54e79727daf14fc0472976bf15bab0fb9e773baac2b39a5e0df082",
+    "worker_mode": "drain-ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

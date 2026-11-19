@@ -1,0 +1,2338 @@
+[
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411.digest@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6.txt",
+    "sha256": "e528775f88831a94f2630041db1edd5d797d9ba1711ba97102e5d1501aebacd6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411",
+    "operation": "digest",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_DigestInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.sign@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13.txt",
+    "sha256": "c7447f6fb49fb0271e14c9bc7fcaa77a7d5a62e9d1f708892c48f5b503917b13",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3411_HMAC.verify@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7.txt",
+    "sha256": "b3369cef623426bfcb51d4cf394a2def70c5e6a8de09220186dcad097032a8e7",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3411_HMAC",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Generic secret32",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2.txt",
+    "sha256": "d927806c289ead8b1629379fcbd62badecc560169bd3a2a38df3569a931d33e2",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "operation": "generate_pair",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ],
+      "producer": "C_GenerateKeyPair",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "No key operand",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.sign@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd.txt",
+    "sha256": "3323b464b24f67002d2f4dc7ce7c142e36347f1ff0f448bddef4129460200fbd",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410.verify@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa.txt",
+    "sha256": "0d5dd453c36e2438fb38884c71a96006ddf9ceda6398f69151d3e023af6214fa",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.sign@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9.txt",
+    "sha256": "9edd1790cdace1e6ac0eebc95bfd00163b11a6fb51582c2050ecf9b9e390ced9",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_SignInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.81.0.openssl-full.file.Legacy240",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.81.0.openssl-full.file.Standard32",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.81.0.openssl-full.db.Legacy240",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.81.0.openssl-full.db.Standard32",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.100.0.openssl-full.file.Legacy240",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.100.0.openssl-full.file.Standard32",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.file.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.100.0.openssl-full.db.Legacy240",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "unavailable.CKM_GOSTR3410_WITH_GOSTR3411.verify@linux.1.100.0.openssl-full.db.Standard32",
+    "file": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6.txt",
+    "sha256": "4c21e518f989a1eb697ff5bf73a1cc09073aff026254a97cf61ceb8ad80a16e6",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "disposition": "NATIVE_ABSENT_MECHANISM_NEGATIVE",
+      "codes": [
+        "CKR_MECHANISM_INVALID",
+        "CKR_KEY_TYPE_INCONSISTENT"
+      ],
+      "producer": "C_VerifyInit",
+      "positive_kat": false
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "RSA2048 competing condition",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "gost.disabled.single-condition.CKM_GOSTR3410.sign",
+    "file": "ba887a92bd3eb40625b2f4c91a4ea5e79d23fca5427a0c0bcc4a39977d713936.txt",
+    "sha256": "ba887a92bd3eb40625b2f4c91a4ea5e79d23fca5427a0c0bcc4a39977d713936",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "sign",
+    "oracle": {
+      "create": "Characterize actual CK_RV and returned owner. No algorithm capability inferred from object storage.",
+      "init": "CKR_MECHANISM_INVALID only after actual compatible GOST key creation; no operation initialized. Exact absent mechanism is verified against catalogue.",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ]
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Compatible GOST key",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "gost.disabled.single-condition.CKM_GOSTR3410.verify",
+    "file": "684c38f164ce8c1e8b6b02ca2b6fae9485af91db5224daefcf191e4146084d9b.txt",
+    "sha256": "684c38f164ce8c1e8b6b02ca2b6fae9485af91db5224daefcf191e4146084d9b",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410",
+    "operation": "verify",
+    "oracle": {
+      "create": "Characterize actual CK_RV and returned owner. No algorithm capability inferred from object storage.",
+      "init": "CKR_MECHANISM_INVALID only after actual compatible GOST key creation; no operation initialized. Exact absent mechanism is verified against catalogue.",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ]
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Compatible GOST key",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "gost.disabled.single-condition.CKM_GOSTR3410_WITH_GOSTR3411.sign",
+    "file": "df056b4c071ae889d2623be8d599351313df4af44c48d6e58ee025159376d918.txt",
+    "sha256": "df056b4c071ae889d2623be8d599351313df4af44c48d6e58ee025159376d918",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "sign",
+    "oracle": {
+      "create": "Characterize actual CK_RV and returned owner. No algorithm capability inferred from object storage.",
+      "init": "CKR_MECHANISM_INVALID only after actual compatible GOST key creation; no operation initialized. Exact absent mechanism is verified against catalogue.",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ]
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Compatible GOST key",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  },
+  {
+    "id": "gost.disabled.single-condition.CKM_GOSTR3410_WITH_GOSTR3411.verify",
+    "file": "9ab331a017039029606533f0b617c486c3ef9e99c2436e9a4047acdafe748c45.txt",
+    "sha256": "9ab331a017039029606533f0b617c486c3ef9e99c2436e9a4047acdafe748c45",
+    "worker_mode": "absent-mechanism",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+    "operation": "verify",
+    "oracle": {
+      "create": "Characterize actual CK_RV and returned owner. No algorithm capability inferred from object storage.",
+      "init": "CKR_MECHANISM_INVALID only after actual compatible GOST key creation; no operation initialized. Exact absent mechanism is verified against catalogue.",
+      "codes": [
+        "CKR_MECHANISM_INVALID"
+      ]
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "prerequisite": "Compatible GOST key",
+    "assertions": [
+      "exact selector absent from real catalogue",
+      "exact native Init or generation refusal",
+      "no success credit for unavailable algorithm",
+      "destroy every created prerequisite and unexpected result separately"
+    ]
+  }
+]

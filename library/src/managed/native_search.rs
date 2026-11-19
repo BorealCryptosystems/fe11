@@ -596,14 +596,15 @@ fn find<'a>(
                 drop(slot);
                 drop(held);
                 loop {
-                    let matches = AllMatches::prepare(session, epoch, count, &waiter, |bytes| {
-                        reference.objects_with_storage_observing(
-                            count,
-                            bytes,
-                            waiter.budget(),
-                            || waiter.check(),
-                        )
-                    })?;
+                    let matches =
+                        AllMatches::prepare(session, Some(epoch), count, &waiter, |bytes| {
+                            reference.objects_with_storage_observing(
+                                count,
+                                bytes,
+                                waiter.budget(),
+                                || waiter.check(),
+                            )
+                        })?;
                     let resumed =
                         match session.try_operation_access_progress(false, reference.progress()) {
                             Ok(access) => access,

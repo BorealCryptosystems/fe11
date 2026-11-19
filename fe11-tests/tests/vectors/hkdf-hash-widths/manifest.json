@@ -1,0 +1,179 @@
+[
+  {
+    "id": "width.hkdf.derive.zero",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "2c0af6ab16324de4e507e43f34149bdf4f6d53dd90d45de80e88213565eb19c7.txt",
+    "sha256": "2c0af6ab16324de4e507e43f34149bdf4f6d53dd90d45de80e88213565eb19c7",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  },
+  {
+    "id": "width.hkdf.derive.remaining",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "68f789db26b4a4980719a1cb845740e40eac7a0ba90c87a2d24d44bbbc2102f3.txt",
+    "sha256": "68f789db26b4a4980719a1cb845740e40eac7a0ba90c87a2d24d44bbbc2102f3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  },
+  {
+    "id": "width.hkdf.extract.zero",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "89df5ff5bd48f5b56bf0a7a6292c58b4364f0038be4d2f0b6727de18792ecd39.txt",
+    "sha256": "89df5ff5bd48f5b56bf0a7a6292c58b4364f0038be4d2f0b6727de18792ecd39",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  },
+  {
+    "id": "width.hkdf.extract.remaining",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "b727a59377beb68489f93ea5bac569cf7495408389baeba90a4486c827ac0457.txt",
+    "sha256": "b727a59377beb68489f93ea5bac569cf7495408389baeba90a4486c827ac0457",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  },
+  {
+    "id": "width.hkdf.expand.zero",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "39551e3066c19518215fd3b38bf79a518fda3a8075ae54f9bc4361f521011a0a.txt",
+    "sha256": "39551e3066c19518215fd3b38bf79a518fda3a8075ae54f9bc4361f521011a0a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  },
+  {
+    "id": "width.hkdf.expand.remaining",
+    "worker_mode": "hkdf-hash-widths",
+    "file": "52fd4684b1a8ecc0518420db5a319b40cd35486bf98ef65e6a1067762eed7524.txt",
+    "sha256": "52fd4684b1a8ecc0518420db5a319b40cd35486bf98ef65e6a1067762eed7524",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_DeriveKey"
+    ],
+    "oracle": "LP64 typed HKDF on a selected 32-byte generic-secret base. Each of five exact u64 hash values reaches C_DeriveKey and receives CKR_MECHANISM_INVALID; no HKDF output or native hash acceptance is inferred."
+  }
+]

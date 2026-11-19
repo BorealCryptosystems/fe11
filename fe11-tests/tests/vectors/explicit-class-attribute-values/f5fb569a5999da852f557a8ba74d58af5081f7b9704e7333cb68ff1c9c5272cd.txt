@@ -1,0 +1,14 @@
+template
+0|number|1
+1|bool|false
+2|bool|false
+128|number|2152744784
+3|bytes|7075626c6963
+17|bytes|98330453f35f0b16092b06010401da470f010107403f098994bdd916ed4053197934e4a87c80733a1280d62f8010992e43ee3b2406
+257|bytes|
+129|bytes|
+130|bytes|
+attributes
+CKA_LABEL|bytes|7075626c6963
+CKA_PRIVATE|bool|false
+CKA_TOKEN|bool|false

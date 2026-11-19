@@ -1,0 +1,416 @@
+[
+  {
+    "id": "typed.AdvancedSession::find_classical_verification_key",
+    "file": "c35f0a04a068462e0fe17f4670b29e9edaf7d52c308570a3bf566632814f5ff9.txt",
+    "sha256": "c35f0a04a068462e0fe17f4670b29e9edaf7d52c308570a3bf566632814f5ff9",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type VerificationKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "source": "vectors/RSA-REFERENCE-VECTORS.json#key",
+      "usages": [
+        "verify"
+      ],
+      "profiles": [
+        "VerificationProfile::RsaPkcs1(HashAlgorithm::Sha256)"
+      ],
+      "expected_spki": "Canonical RSA SubjectPublicKeyInfo of exact reference n/e, algorithm rsaEncryption with NULL"
+    },
+    "producer": "Session::create_verification_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "public_key_source": {
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "public_spki_sha256": "3da2db606bc2eb4c25e9258f1f5fad50435455e77c2af7ce775a1cb0a0c8b95d"
+    }
+  },
+  {
+    "id": "typed.AdvancedSession::find_montgomery_key",
+    "file": "0ef3f4a5dcc099f95c8f3ac279973970ebd6439a885a5f22e23fac2db8d7d647.txt",
+    "sha256": "0ef3f4a5dcc099f95c8f3ac279973970ebd6439a885a5f22e23fac2db8d7d647",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "No positive typed find: required MontgomeryKey native producer absent. Fresh empty token, no object matching CKA_CLASS PRIVATE_KEY, CKA_KEY_TYPE EC_MONTGOMERY, CKA_ID01020304; execute exact X25519 spec with selection index0. Rejected(ObjectSearch(SelectedSearchResultAbsent)), no typed key returned. No Montgomery derive credit.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_EC_MONTGOMERY",
+      "domain": "X25519",
+      "usages": [
+        "derive"
+      ],
+      "note": "SoftHSM key-object factory has no Montgomery class. No substitution by CKK_EC or GenericSecret"
+    },
+    "producer": "No successful key producer",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_classical_verification_key",
+    "file": "9b7a3ab37ba962cf335e47f81eaf9100789fd7011d613b09eb902e86fb7a8ec6.txt",
+    "sha256": "9b7a3ab37ba962cf335e47f81eaf9100789fd7011d613b09eb902e86fb7a8ec6",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type VerificationKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "source": "vectors/RSA-REFERENCE-VECTORS.json#key",
+      "usages": [
+        "verify"
+      ],
+      "profiles": [
+        "VerificationProfile::RsaPkcs1(HashAlgorithm::Sha256)"
+      ],
+      "expected_spki": "Canonical RSA SubjectPublicKeyInfo of exact reference n/e, algorithm rsaEncryption with NULL"
+    },
+    "producer": "Session::create_verification_key",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "public_key_source": {
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "public_spki_sha256": "3da2db606bc2eb4c25e9258f1f5fad50435455e77c2af7ce775a1cb0a0c8b95d"
+    }
+  },
+  {
+    "id": "typed.Session::find_montgomery_key",
+    "file": "f48b3eb0a864356e126777f3010749b3b568e4a6278264d1805dc320e28a2f04.txt",
+    "sha256": "f48b3eb0a864356e126777f3010749b3b568e4a6278264d1805dc320e28a2f04",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "No positive typed find: required MontgomeryKey native producer absent. Fresh empty token, no object matching CKA_CLASS PRIVATE_KEY, CKA_KEY_TYPE EC_MONTGOMERY, CKA_ID01020304; execute exact X25519 spec with selection index0. Rejected(ObjectSearch(SelectedSearchResultAbsent)), no typed key returned. No Montgomery derive credit.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_EC_MONTGOMERY",
+      "domain": "X25519",
+      "usages": [
+        "derive"
+      ],
+      "note": "SoftHSM key-object factory has no Montgomery class. No substitution by CKK_EC or GenericSecret"
+    },
+    "producer": "No successful key producer",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

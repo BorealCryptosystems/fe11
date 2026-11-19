@@ -60,6 +60,7 @@ impl RestoreOwner {
             .snapshot
             .check_authentication_unchanged(self.saved.authentication)?;
         self.keys.check(entry)?;
+        self.group.check_keys(entry)?;
         super::restoration::check_initialization(
             &self.saved.continuation.body,
             &self.keys,
@@ -120,13 +121,24 @@ impl AdvancedSession {
         let mut waiter: Option<progress::Waiter<'_>> = None;
         loop {
             let s = self.session.advanced_access()?;
-            let held = s.operations.get(self.session.uid)?;
+            let held = s.operations.get_ticket(self.session.uid, ticket.resident)?;
             let mut op = held.lock().map_err(|_| Error::Poisoned)?;
             check(&self.session, ticket, &op)?;
             op.check_authentication(&self.session.entry)?;
             if self.mode() != AdvancedSessionMode::Asynchronous {
                 return Err(Error::Rejected(crate::RejectionReason::Detachment(
                     crate::DetachmentRejection::AsynchronousDetachmentSessionMode,
+                )));
+            }
+            // The detached restoration schema describes one source plan and
+            // one destination control. Whole-session group state is transferred
+            // through the grouped saved-state record, before starting Set.
+            if op
+                .restore_owner()
+                .is_some_and(|owner| owner.group.needs_group_transfer(&owner.saved))
+            {
+                return Err(Error::Rejected(crate::RejectionReason::Detachment(
+                    crate::DetachmentRejection::DetachmentOwnerAdapterNotIntegrated,
                 )));
             }
             if op.rejoin().is_some() || op.detachment().is_some() || op.cancel.is_submitted() {
@@ -250,7 +262,7 @@ impl AdvancedSession {
         ticket: &mut StateRestoreTicket,
     ) -> Result<DetachmentProgress> {
         let s = self.session.advanced_access()?;
-        let held = s.operations.get(self.session.uid)?;
+        let held = s.operations.get_ticket(self.session.uid, ticket.resident)?;
         let mut op = held.lock().map_err(|_| Error::Poisoned)?;
         check(&self.session, ticket, &op)?;
         if op.restore_transfer().is_none() {
@@ -347,7 +359,8 @@ impl AdvancedSession {
             )?;
             record::RestorationRecord::read(publication.record.as_slice(), transfer.limits)?;
             if matches!(op.body, OperationBody::Control) {
-                s.operations.release_closed(&self.session.entry)?;
+                s.operations
+                    .release_operation(&self.session.entry, op._token.identity())?;
             }
             Ok((owner.saved.provenance, transfer.limits))
         })();
@@ -594,6 +607,7 @@ impl PreparedDestination {
             session_state: binding.expected,
             bytes: None,
             continuation: self.continuation.into_bound(),
+            companions: Vec::new(),
             _credit: self.saved_credit,
         };
         let (token, cancel) = token;
@@ -605,6 +619,7 @@ impl PreparedDestination {
                 RestoreOwner {
                     id: 0,
                     replacing: false,
+                    group: Default::default(),
                     saved,
                     keys: bound,
                     initialization: None,

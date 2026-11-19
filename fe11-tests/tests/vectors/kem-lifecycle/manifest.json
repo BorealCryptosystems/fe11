@@ -1,0 +1,807 @@
+[
+  {
+    "id": "state.native_kem_encapsulation.ABSENT.invoke",
+    "file": "bd7d2e92921d9c4b3fbc15a41d39452e1dff2bbeb1b71792684b992625e27301.txt",
+    "sha256": "bd7d2e92921d9c4b3fbc15a41d39452e1dff2bbeb1b71792684b992625e27301",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Result shape, bytes/objects and creation uncertainty per mechanism contract",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "state.native_kem_encapsulation.RESULT_OWNED.read_after_close",
+    "file": "b01377acb319ac6b773a0ab7e24e52a5a14d69b228fbab7fec03c6901b6c7fab.txt",
+    "sha256": "b01377acb319ac6b773a0ab7e24e52a5a14d69b228fbab7fec03c6901b6c7fab",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Owned bytes/diagnostics persist; native objects still need a live session",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "state.native_kem_decapsulation.ABSENT.invoke",
+    "file": "440c02fc3921b04eef6d1799c156c206859a9ceb4374731b11b227fe14706213.txt",
+    "sha256": "440c02fc3921b04eef6d1799c156c206859a9ceb4374731b11b227fe14706213",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Result shape, bytes/objects and creation uncertainty per mechanism contract",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "state.native_kem_decapsulation.RESULT_OWNED.read_after_close",
+    "file": "ec9f2c394a88cc6a1e4687980c58eb85d7c438f84e494631bcdec1c0503e98d8.txt",
+    "sha256": "ec9f2c394a88cc6a1e4687980c58eb85d7c438f84e494631bcdec1c0503e98d8",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Owned bytes/diagnostics persist; native objects still need a live session",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.IDLE.logout",
+    "file": "a5ee97097b4a5d76cbdc2310623463eae7e653a52c8e28dfce5771d6871bf9c5.txt",
+    "sha256": "a5ee97097b4a5d76cbdc2310623463eae7e653a52c8e28dfce5771d6871bf9c5",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.IDLE.close",
+    "file": "b999d8725594b84ab089c2686382a648bb5d987db97025e25bf466706fe8e697.txt",
+    "sha256": "b999d8725594b84ab089c2686382a648bb5d987db97025e25bf466706fe8e697",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.CONSUMED.init",
+    "file": "019a6501688d09ef98ba78978822ffc72a71b94a9ecff02c7292f93458288ec7.txt",
+    "sha256": "019a6501688d09ef98ba78978822ffc72a71b94a9ecff02c7292f93458288ec7",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.CONSUMED.take",
+    "file": "03c51e479025ad161c19bbb898c1acb69c72ec53fdc400c0b279ac6d5643d911.txt",
+    "sha256": "03c51e479025ad161c19bbb898c1acb69c72ec53fdc400c0b279ac6d5643d911",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.CONSUMED.logout",
+    "file": "5274812f2028fe673e131bd6b23a9b4ae7da46bc21ba81b41a266936c2c82e96.txt",
+    "sha256": "5274812f2028fe673e131bd6b23a9b4ae7da46bc21ba81b41a266936c2c82e96",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.CONSUMED.close",
+    "file": "70c97de1b410396884f80e1f5dd7a4617f349bc5b1938f3877d327c0518909ad.txt",
+    "sha256": "70c97de1b410396884f80e1f5dd7a4617f349bc5b1938f3877d327c0518909ad",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.REFUSED_TERMINAL.init",
+    "file": "0819b80f24baacae0de6c34f784f173cee22fe870123b6da56cd4604c0fc581a.txt",
+    "sha256": "0819b80f24baacae0de6c34f784f173cee22fe870123b6da56cd4604c0fc581a",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_EncapsulateKey",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.REFUSED_TERMINAL.logout",
+    "file": "1336b1ab4565602ae127d6b493b112e0a09593d6215c565b832f0f48d672f255.txt",
+    "sha256": "1336b1ab4565602ae127d6b493b112e0a09593d6215c565b832f0f48d672f255",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_EncapsulateKey",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.REFUSED_TERMINAL.close",
+    "file": "50bd5c3c1030eced843d3ef546d31f6c99759c9e468f1083183d6a275528de79.txt",
+    "sha256": "50bd5c3c1030eced843d3ef546d31f6c99759c9e468f1083183d6a275528de79",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_EncapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.RETIRED.init",
+    "file": "eea6d50242ff9075198036b308846398bfa6dd32e0ca237da6e7fe7367348c9b.txt",
+    "sha256": "eea6d50242ff9075198036b308846398bfa6dd32e0ca237da6e7fe7367348c9b",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.RETIRED.logout",
+    "file": "19c9e2f0062740f3b04260b511127c953e5bb98a94b99474faefaa70ed3cd0bd.txt",
+    "sha256": "19c9e2f0062740f3b04260b511127c953e5bb98a94b99474faefaa70ed3cd0bd",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(LogoutRequiresLiveSession)); no native invocation.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_encapsulation.RETIRED.close",
+    "file": "3098e0bf572a9aa9901d8f8966fec45e135a7f37a0204d8a04ded8d1f70e8074.txt",
+    "sha256": "3098e0bf572a9aa9901d8f8966fec45e135a7f37a0204d8a04ded8d1f70e8074",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.IDLE.logout",
+    "file": "4be0d9f3a6f65e1206e3672ca78d0d80aeb694d0caae46ecfa188a96ef2c3f77.txt",
+    "sha256": "4be0d9f3a6f65e1206e3672ca78d0d80aeb694d0caae46ecfa188a96ef2c3f77",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.IDLE.close",
+    "file": "5f36fc481d94d181faf2289e07250c8fe711cbe5be3224cc6ac8f492ae3219ae.txt",
+    "sha256": "5f36fc481d94d181faf2289e07250c8fe711cbe5be3224cc6ac8f492ae3219ae",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.CONSUMED.init",
+    "file": "896ba70b73067aabf23ddedfee674ecf7ede1dec1627af395576b32431a6f8e1.txt",
+    "sha256": "896ba70b73067aabf23ddedfee674ecf7ede1dec1627af395576b32431a6f8e1",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.CONSUMED.take",
+    "file": "1f0e1743a1c455657b02273f7c5a71370ccdfb3b1f1c62fbbb2fa9ac9097521d.txt",
+    "sha256": "1f0e1743a1c455657b02273f7c5a71370ccdfb3b1f1c62fbbb2fa9ac9097521d",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.CONSUMED.logout",
+    "file": "0be1154a18c6f951f92f483e6287497534ac4772a8d8aef96cd1c8ba52fb679f.txt",
+    "sha256": "0be1154a18c6f951f92f483e6287497534ac4772a8d8aef96cd1c8ba52fb679f",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.CONSUMED.close",
+    "file": "e046c0b3a54678e61e20f65d7f6d472904069b70139fc3b05ea056947a077dd6.txt",
+    "sha256": "e046c0b3a54678e61e20f65d7f6d472904069b70139fc3b05ea056947a077dd6",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.REFUSED_TERMINAL.init",
+    "file": "4928d75b0af60728c02e2c844ff306b5f2b52e6c65ec3b5c3ec04591fe528a27.txt",
+    "sha256": "4928d75b0af60728c02e2c844ff306b5f2b52e6c65ec3b5c3ec04591fe528a27",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DecapsulateKey",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.REFUSED_TERMINAL.logout",
+    "file": "bdfb824da940a7865ea5fa0e2d305d77a3ad9c11e755e40c38cb95a55c768cba.txt",
+    "sha256": "bdfb824da940a7865ea5fa0e2d305d77a3ad9c11e755e40c38cb95a55c768cba",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DecapsulateKey",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.REFUSED_TERMINAL.close",
+    "file": "018955708423a923c554b35ea36d3aa55c3ca6267fba682bf305c6d5308583c5.txt",
+    "sha256": "018955708423a923c554b35ea36d3aa55c3ca6267fba682bf305c6d5308583c5",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_DecapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.RETIRED.init",
+    "file": "7a85bc8795b122b374a60152db07ac4a033c2777cfdbda3dc58c5902e5908a32.txt",
+    "sha256": "7a85bc8795b122b374a60152db07ac4a033c2777cfdbda3dc58c5902e5908a32",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.RETIRED.logout",
+    "file": "ee12baff09ae19cf1a14cbb96a79747d8eda43b4ffc480ae3fd40f39510629a6.txt",
+    "sha256": "ee12baff09ae19cf1a14cbb96a79747d8eda43b4ffc480ae3fd40f39510629a6",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(LogoutRequiresLiveSession)); no native invocation.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  },
+  {
+    "id": "direct.cross.native_kem_decapsulation.RETIRED.close",
+    "file": "3ce51c8c35f9cab51483bd691ddcc941aafe87cc269ddb5be279397e27b0e66c.txt",
+    "sha256": "3ce51c8c35f9cab51483bd691ddcc941aafe87cc269ddb5be279397e27b0e66c",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "fixture": "ML-KEM-512 generated pair; exact CKO_SECRET_KEY/CKK_GENERIC_SECRET/VALUE_LEN32/SENSITIVEfalse/EXTRACTABLEtrue output. Native encapsulation checked by a separate matching decapsulation; lifecycle-only, no published ACVP KAT credit."
+  }
+]

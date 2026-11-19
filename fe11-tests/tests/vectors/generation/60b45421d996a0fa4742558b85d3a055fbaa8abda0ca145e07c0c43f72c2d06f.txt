@@ -1,0 +1,17 @@
+CKM_EC_KEY_PAIR_GEN
+public|CKA_CLASS|symbol|CKO_PUBLIC_KEY
+public|CKA_KEY_TYPE|symbol|CKK_EC
+public|CKA_EC_PARAMS|hex|06052b81040008
+public|CKA_VERIFY|bool|true
+public|CKA_DERIVE|bool|true
+public|CKA_TOKEN|bool|false
+public|CKA_PRIVATE|bool|false
+public|CKA_LABEL|namespace|label
+private|CKA_CLASS|symbol|CKO_PRIVATE_KEY
+private|CKA_KEY_TYPE|symbol|CKK_EC
+private|CKA_SIGN|bool|true
+private|CKA_DERIVE|bool|true
+private|CKA_TOKEN|bool|false
+private|CKA_PRIVATE|bool|true
+private|CKA_SENSITIVE|bool|false
+private|CKA_EXTRACTABLE|bool|true

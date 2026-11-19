@@ -1,0 +1,189 @@
+[
+  {
+    "id": "resource.control.scoped-deadline",
+    "file": "aa110d03725d28fea2824986dad2c55f5a49111230091befb6439a10984d5357.txt",
+    "sha256": "aa110d03725d28fea2824986dad2c55f5a49111230091befb6439a10984d5357",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  },
+  {
+    "id": "resource.control.session-deadline",
+    "file": "afd5302f9100c3adce700749d1891c7a394a9c0b628b1189973c9061041ce7f0.txt",
+    "sha256": "afd5302f9100c3adce700749d1891c7a394a9c0b628b1189973c9061041ce7f0",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  },
+  {
+    "id": "resource.control.nested-deadline",
+    "file": "654b515d6e4bc34e18d819a31d9280979a9874ebb17203bd5438f87dd61ae467.txt",
+    "sha256": "654b515d6e4bc34e18d819a31d9280979a9874ebb17203bd5438f87dd61ae467",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  },
+  {
+    "id": "resource.control.cancelled",
+    "file": "49df34be82904e843a1a5c0418302d91c5589c839c6c874236339fcfde0fcb72.txt",
+    "sha256": "49df34be82904e843a1a5c0418302d91c5589c839c6c874236339fcfde0fcb72",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  },
+  {
+    "id": "resource.control.parallel-sessions",
+    "file": "780bebb734008b253d936728789da7e3c0a0b8679a5affedbd267909305e6c17.txt",
+    "sha256": "780bebb734008b253d936728789da7e3c0a0b8679a5affedbd267909305e6c17",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  },
+  {
+    "id": "resource.control.shared-session",
+    "file": "2a68426a85c9fa2518e0c54382bb52327a41e4caa09188ede6d61a3abd8c8bc9.txt",
+    "sha256": "2a68426a85c9fa2518e0c54382bb52327a41e4caa09188ede6d61a3abd8c8bc9",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact AdmissionDeadline/AdmissionCancelled before dispatch, or exact two real session-info results after a barrier. Nested Immediate permits one read and restores expired outer admission. Subsequent SHA256 abc succeeds. No duration or simultaneous native execution claim.",
+    "source": {
+      "contract": "ResourceAdmission, with_resource_admission, Session::set_admission/inherit_admission/info"
+    }
+  }
+]

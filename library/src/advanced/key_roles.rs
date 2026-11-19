@@ -12,6 +12,13 @@ pub(super) enum Roles {
     Transferred(Arc<TransferOwner>),
 }
 impl Roles {
+    pub(super) fn readers_on(&self, activity: &Arc<Activity>, uid: u64) -> usize {
+        match self {
+            Self::Original(owner) => owner.readers_on(activity, uid),
+            Self::Transferred(_) => 0,
+        }
+    }
+
     fn same_owner(&self, other: &Self) -> bool {
         match (self, other) {
             (Self::Original(left), Self::Original(right)) => left.same_owner(right),

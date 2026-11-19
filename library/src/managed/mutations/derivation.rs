@@ -99,7 +99,12 @@ impl Session {
         let provenance = parameters.layout_provenance();
         let mutates_base = parameters.mutates_base();
 
-        let class = parameters.output_class();
+        let plan = InputTemplate::plan_scoped(request.attributes, request.limits, &self.inner)?;
+        let requested_class = parameters.output_class(request.attributes);
+        // PKCS#11 describes a private result for GOST. This expectation is
+        // used for optional observations. Only a definite template class can
+        // narrow the destination reservation on that mechanism.
+        let class = requested_class.unwrap_or(crate::ManagedClass::PrivateKey);
         let mut secondary_keys = parameters.secondary_keys();
         for additional in additional.into_iter().flatten() {
             let slot = secondary_keys
@@ -112,7 +117,6 @@ impl Session {
                 ))?;
             *slot = Some(additional);
         }
-        let plan = InputTemplate::plan_scoped(request.attributes, request.limits, &self.inner)?;
         let specs = || [outputs::Spec::new(class, &request, "derived content")];
         let observation_bytes = outputs::Initial::requested(specs())?;
         let epoch = self.snapshot.authentication_stamp();
@@ -138,7 +142,10 @@ impl Session {
             },
         )?;
         let identity = InputIdentity::new(class, request.attributes, None);
-        let destinations = [identity.destination(self)?];
+        let destinations = [match requested_class {
+            Some(_) => identity.destination(self)?,
+            None => super::DestinationRecipe::token_scope(self),
+        }];
         let (((prepared, observations, registry, permits, prepaid, targets), reservation), state) = loop {
             // The driver has returned before revocation binding. This
             // scope also retires catalogue entries after a failed binding drops

@@ -204,7 +204,8 @@ pub(super) fn start_retained(
         }
         Ok(())
     };
-    let progress = session.advanced_preflight(&check_functions)?;
+    let progress = session
+        .init_preflight_at_epoch(session.snapshot.authentication_stamp(), &check_functions)?;
     let capture = capture_validation || validation_requested;
     let validation_bytes = if capture {
         validation::Capture::allocation_bytes(1)?
@@ -234,8 +235,13 @@ pub(super) fn start_retained(
             crate::DigestContinuationRejection::DigestOperationStorageSize,
         )))?;
     let possession = super::super::keys::KeyReaders::<0>::prepare(session, [])?;
-    let ((diagnostic, frame, cancel, validation), s, _readers) =
-        possession.prepare_with(session, &progress, || loop {
+    let ((diagnostic, frame, cancel, validation), s, _readers) = loop {
+        session.entry.advanced_progress.prepare_init_slot(
+            session,
+            &progress,
+            fe11_sys::CKF_DIGEST,
+        )?;
+        let prepared = possession.prepare_with(session, &progress, || loop {
             let mut prepaid =
                 crate::advanced::preparation::reserve_new_with_progress(session, total, &progress)?;
             let graph = extension
@@ -308,6 +314,18 @@ pub(super) fn start_retained(
             }
             return Ok((diagnostic, frame, cancel, validation));
         })?;
+        if session.entry.advanced_progress.has_vacancy()
+            || prepared
+                .1
+                .operations
+                .init_target(&session.entry, fe11_sys::CKF_DIGEST)?
+                .is_some()
+        {
+            break prepared;
+        }
+        // Another initializer occupied the last leaf before this possession.
+        // Release possession and unpublished owners before planning capacity again.
+    };
     check_functions(&s)?;
     let (lease, cancel) = cancel.bind(&s.lease_admission()?)?;
     let (id, owner) = s.operations.install(
@@ -327,6 +345,7 @@ pub(super) fn start_retained(
         .with_validation(validation),
     )?;
     let ticket = OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,

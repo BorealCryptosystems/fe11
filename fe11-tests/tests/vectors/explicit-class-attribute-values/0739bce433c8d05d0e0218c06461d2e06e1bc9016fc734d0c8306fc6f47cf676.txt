@@ -1,0 +1,4 @@
+CKK_DES3
+0123456789abcdeffedcba987654321089abcdef01234567
+CKA_DECRYPT|bool|true
+CKA_ENCRYPT|bool|true

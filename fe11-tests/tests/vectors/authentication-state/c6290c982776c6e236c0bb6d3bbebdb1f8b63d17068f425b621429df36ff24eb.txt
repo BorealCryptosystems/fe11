@@ -1,0 +1,4 @@
+RW_USER
+logout
+RW_PUBLIC
+CKR_OK

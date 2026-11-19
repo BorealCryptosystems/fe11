@@ -1,0 +1,274 @@
+[
+  {
+    "id": "negative.CKM_AES_CBC_PAD.encrypt.usage",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "CBC first-block identity IV_new=IV_old xor P_old xor PKCS7(00), preserving the exact block-cipher input, key and ciphertext. Only the requested usage is disabled.",
+    "file": "82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d.txt",
+    "sha256": "82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d"
+  },
+  {
+    "id": "negative.CKM_AES_CBC_PAD.decrypt.usage",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "CBC first-block identity IV_new=IV_old xor P_old xor PKCS7(00), preserving the exact block-cipher input, key and ciphertext. Only the requested usage is disabled.",
+    "file": "6baa3c125ef41c880b33e1608716dd4e87fe40a1839346dc1e00352153a409ab.txt",
+    "sha256": "6baa3c125ef41c880b33e1608716dd4e87fe40a1839346dc1e00352153a409ab"
+  },
+  {
+    "id": "negative.CKM_DES_CBC_PAD.encrypt.usage",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_CBC.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.55",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        55,
+        61
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "transformation": "CBC first-block identity IV_new=IV_old xor P_old xor PKCS7(00), preserving the exact block-cipher input, key and ciphertext. Only the requested usage is disabled.",
+    "file": "24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea.txt",
+    "sha256": "24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea"
+  },
+  {
+    "id": "negative.CKM_DES_CBC_PAD.decrypt.usage",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_CBC.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.55",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        55,
+        61
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "transformation": "CBC first-block identity IV_new=IV_old xor P_old xor PKCS7(00), preserving the exact block-cipher input, key and ciphertext. Only the requested usage is disabled.",
+    "file": "67a38c3a4a63184c1153c96d33f2bd895663dcfec78dd95b7458b67357e9121c.txt",
+    "sha256": "67a38c3a4a63184c1153c96d33f2bd895663dcfec78dd95b7458b67357e9121c"
+  },
+  {
+    "id": "negative.CKM_AES_GCM.encrypt.usage",
+    "worker_mode": "gcm-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_GCM.encrypt@Session::encrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact verified published tuple including tag and AAD. Only the requested usage is disabled.",
+    "file": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529.txt",
+    "sha256": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529"
+  },
+  {
+    "id": "negative.CKM_AES_GCM.decrypt.usage",
+    "worker_mode": "gcm-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact verified published tuple including tag and AAD. Only the requested usage is disabled.",
+    "file": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0.txt",
+    "sha256": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0"
+  }
+]

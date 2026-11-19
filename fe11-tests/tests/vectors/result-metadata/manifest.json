@@ -1,0 +1,210 @@
+[
+  {
+    "id": "results.metadata.gcm-decrypt-128",
+    "worker_mode": "gcm-result-metadata",
+    "file": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0.txt",
+    "sha256": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": "Check exact known-answer bytes and the returned mechanism or authentication tag width. Check caller-selected declaration identities without native dispatch."
+  },
+  {
+    "id": "results.metadata.gcm-decrypt-32",
+    "worker_mode": "gcm-result-metadata",
+    "file": "2aa27593ccb25c4c04d4fc245bc81a0d88019fac5a0aec49babc45ed3186d0ac.txt",
+    "sha256": "2aa27593ccb25c4c04d4fc245bc81a0d88019fac5a0aec49babc45ed3186d0ac",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": "Check exact known-answer bytes and the returned mechanism or authentication tag width. Check caller-selected declaration identities without native dispatch."
+  },
+  {
+    "id": "results.metadata.gcm-encrypt-128",
+    "worker_mode": "gcm-result-metadata",
+    "file": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529.txt",
+    "sha256": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "oracle": "Check exact known-answer bytes and the returned mechanism or authentication tag width. Check caller-selected declaration identities without native dispatch."
+  },
+  {
+    "id": "results.metadata.gcm-encrypt-32",
+    "worker_mode": "gcm-result-metadata",
+    "file": "deb2bff3297fcc00935d6ae4ad1ff32841800e20c49eb395d2cb181170133752.txt",
+    "sha256": "deb2bff3297fcc00935d6ae4ad1ff32841800e20c49eb395d2cb181170133752",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "oracle": "Check exact known-answer bytes and the returned mechanism or authentication tag width. Check caller-selected declaration identities without native dispatch."
+  },
+  {
+    "id": "results.metadata.signature-sha256_rsa_pkcs",
+    "worker_mode": "signature-result-metadata",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "The signature mechanism is the requested CKM and the signature matches the independent RSA reference."
+  },
+  {
+    "id": "results.metadata.signature-sha384_rsa_pkcs",
+    "worker_mode": "signature-result-metadata",
+    "file": "fa5c12edef07252fbf90333ecb03bac28037b273d9a8e5a414487eff37cd5080.txt",
+    "sha256": "fa5c12edef07252fbf90333ecb03bac28037b273d9a8e5a414487eff37cd5080",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA384.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "The signature mechanism is the requested CKM and the signature matches the independent RSA reference."
+  }
+]

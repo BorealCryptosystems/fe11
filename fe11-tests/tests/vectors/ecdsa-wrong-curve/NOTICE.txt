@@ -1,0 +1,1 @@
+Published ECDSA vectors and attribution inherited from ../ecdsa. P256 control and P384 point are public verification inputs, not operational keys.

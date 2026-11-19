@@ -1,0 +1,82 @@
+[
+  {
+    "id": "attributes.empty-date.session",
+    "file": "19d3b98ce7ad4df83f843bde5c62ae9929f60e5fdba7a78976dca519af85bbf7.txt",
+    "sha256": "19d3b98ce7ad4df83f843bde5c62ae9929f60e5fdba7a78976dca519af85bbf7",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Create and read empty START_DATE and eight zero END_DATE bytes. Reject nonempty untyped bytes before dispatch. Set and read eight typed START_DATE bytes and empty END_DATE. Destroy the rediscovered session object.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_SetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "attributes.empty-date.advanced",
+    "file": "ec11260153d893034a343c8a7f56cbc10f8cae4a74c661d685cda9d539c7f240.txt",
+    "sha256": "ec11260153d893034a343c8a7f56cbc10f8cae4a74c661d685cda9d539c7f240",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Create and read empty START_DATE and eight zero END_DATE bytes. Reject nonempty untyped bytes before dispatch. Set and read eight typed START_DATE bytes and empty END_DATE. Destroy the rediscovered session object.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_SetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

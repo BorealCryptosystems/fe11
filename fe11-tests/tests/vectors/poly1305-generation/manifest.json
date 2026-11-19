@@ -1,0 +1,68 @@
+[
+  {
+    "id": "generation.explicit.session.poly1305-typed",
+    "file": "84b7e909783e5918ae6d48337282b2846e6d0e34fdf9dee820710293ec68ba27.txt",
+    "sha256": "84b7e909783e5918ae6d48337282b2846e6d0e34fdf9dee820710293ec68ba27",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue absence, native C_GenerateKey MECHANISM_INVALID, no fabricated object. Typed POLY1305 generator,32-byte key template.",
+    "api_owner": "session"
+  },
+  {
+    "id": "generation.explicit.advanced.poly1305-typed",
+    "file": "bc42743e1988a18ff02a2d4e384fc48ce54fdc82d7c3a9c7577f50d61db0e829.txt",
+    "sha256": "bc42743e1988a18ff02a2d4e384fc48ce54fdc82d7c3a9c7577f50d61db0e829",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Catalogue absence, native C_GenerateKey MECHANISM_INVALID, no fabricated object. Typed POLY1305 generator,32-byte key template.",
+    "api_owner": "advanced"
+  }
+]

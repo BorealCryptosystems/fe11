@@ -1,0 +1,559 @@
+[
+  {
+    "id": "state.rsa_signature.ABSENT.start",
+    "file": "d2822c5fa05312351bbe4062b94b0882594ceb3dc2d354a2934b234ad47b51f4.txt",
+    "sha256": "d2822c5fa05312351bbe4062b94b0882594ceb3dc2d354a2934b234ad47b51f4",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Successful Init; public owner retained",
+    "state": "IDLE",
+    "action": "init",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.ACTIVE.complete",
+    "file": "fdddb446cf33e73a84a885ba005184a81e34f7ec5dde0083cbb4f11e26619d18.txt",
+    "sha256": "fdddb446cf33e73a84a885ba005184a81e34f7ec5dde0083cbb4f11e26619d18",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact deterministic bytes or independently verified randomized result; input submitted once",
+    "state": "INITIALIZED",
+    "action": "final",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.PUBLISHED.poll_consumed",
+    "file": "3722104eb26ff873c5e6a40320157ec4fc6b4303321722ece76c28cdb21e9363.txt",
+    "sha256": "3722104eb26ff873c5e6a40320157ec4fc6b4303321722ece76c28cdb21e9363",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket)); returned value unchanged",
+    "state": "CONSUMED",
+    "action": "poll",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.PUBLISHED.close",
+    "file": "984530983dd16c484839ace226c494cf9f92feeb930aeffae346cd296f1a969d.txt",
+    "sha256": "984530983dd16c484839ace226c494cf9f92feeb930aeffae346cd296f1a969d",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Returned owned bytes survive close unchanged",
+    "state": "CONSUMED",
+    "action": "close",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.ACTIVE.capture",
+    "file": "a3754ef93996c9d389dd3b30c4d16f96e2f3041976d32332845349fe5d3ee6fd.txt",
+    "sha256": "a3754ef93996c9d389dd3b30c4d16f96e2f3041976d32332845349fe5d3ee6fd",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_GetOperationState CKR_FUNCTION_NOT_SUPPORTED; active operation remains usable",
+    "state": "INITIALIZED",
+    "action": "capture",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_GetOperationState",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.ACTIVE.cancel",
+    "file": "fde00b227c0680cc920cd073a6d8f839d6b601791ec7857e8f32461e7cad72ce.txt",
+    "sha256": "fde00b227c0680cc920cd073a6d8f839d6b601791ec7857e8f32461e7cad72ce",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}; prior owner and continuation preserved.",
+    "state": "INITIALIZED",
+    "action": "cancel",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_SessionCancel",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.ACTIVE.cancel.legacy240",
+    "file": "fde00b227c0680cc920cd073a6d8f839d6b601791ec7857e8f32461e7cad72ce.txt",
+    "sha256": "fde00b227c0680cc920cd073a6d8f839d6b601791ec7857e8f32461e7cad72ce",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "state": "INITIALIZED",
+    "action": "cancel",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.OUTPUT_REQUIRED.provide_0",
+    "file": "c9da4036444297a0210429119b3bc229435889fc258e0c0042e320633c9db599.txt",
+    "sha256": "c9da4036444297a0210429119b3bc229435889fc258e0c0042e320633c9db599",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "state": "OUTPUT_REQUIRED",
+    "action": "provide_0",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.OUTPUT_REQUIRED.provide_255",
+    "file": "6f16dc268016a6b4b7d3ae57e2141823697b35981f63ee3ed610a110ab1696c5.txt",
+    "sha256": "6f16dc268016a6b4b7d3ae57e2141823697b35981f63ee3ed610a110ab1696c5",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "state": "OUTPUT_REQUIRED",
+    "action": "provide_255",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.OUTPUT_REQUIRED.provide_256",
+    "file": "6441f84ed5d79fc3d2eb18b206e920d17c9a5a54ef8bf81975d268e4f42b55ff.txt",
+    "sha256": "6441f84ed5d79fc3d2eb18b206e920d17c9a5a54ef8bf81975d268e4f42b55ff",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "state": "OUTPUT_REQUIRED",
+    "action": "provide_256",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.OUTPUT_REQUIRED.provide_257",
+    "file": "13bb396803ee789cac36849051b3252493ea5c34cf2d09368956d2deb42b64da.txt",
+    "sha256": "13bb396803ee789cac36849051b3252493ea5c34cf2d09368956d2deb42b64da",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "state": "OUTPUT_REQUIRED",
+    "action": "provide_257",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "state.rsa_signature.OUTPUT_STORAGE_SELECTED.poll_sufficient",
+    "file": "5142d2d968c31d38ee8379ee1da366aa6a40a0764282ccdf5e3cb104cb88b4f6.txt",
+    "sha256": "5142d2d968c31d38ee8379ee1da366aa6a40a0764282ccdf5e3cb104cb88b4f6",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Correct published vector result, actual length L, no duplicate input; native query/output retry distinguished from replaying Init or Update",
+    "state": "OUTPUT_STORAGE_SELECTED",
+    "action": "poll",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  }
+]

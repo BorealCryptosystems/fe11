@@ -1,0 +1,8 @@
+CKK_MD5_HMAC
+000102030405060708090a0b0c0d0e0f
+CKA_CLASS|number|4
+CKA_KEY_TYPE|number|39
+CKA_PRIVATE|bool|false
+CKA_SIGN|bool|true
+CKA_TOKEN|bool|false
+CKA_VERIFY|bool|true

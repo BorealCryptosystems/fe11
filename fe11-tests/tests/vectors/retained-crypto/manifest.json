@@ -1,0 +1,286 @@
+[
+  {
+    "id": "retained.Session::take_signature_ticket",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "retained-signature",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1"
+  },
+  {
+    "id": "retained.Session::take_cipher_ticket",
+    "file": "80dfd3f070859a987c80c48b41e8fafa541fb3653b2f765cf60503b2fb602ca1.txt",
+    "sha256": "80dfd3f070859a987c80c48b41e8fafa541fb3653b2f765cf60503b2fb602ca1",
+    "worker_mode": "retained-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "retained.AdvancedSession::take_signature_ticket",
+    "file": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69.txt",
+    "sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69",
+    "worker_mode": "retained-signature",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_Sign",
+      "C_Sign",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_SHA256_RSA_PKCS.sign@AdvancedSession::sign_native@RFC8017.RSA2048.SHA256.PKCS1"
+  },
+  {
+    "id": "retained.AdvancedSession::take_cipher_ticket",
+    "file": "a1ad8f110bd77d38fc5468fbeec7ddbdb5c850821b659b4110b75154c436b766.txt",
+    "sha256": "a1ad8f110bd77d38fc5468fbeec7ddbdb5c850821b659b4110b75154c436b766",
+    "worker_mode": "retained-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA256_RSA_PKCS.sign.usage",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1"
+  },
+  {
+    "id": "negative.CKM_SHA256_RSA_PKCS.verify.usage",
+    "file": "30029a197b59b9a1c10afb44504f096124be1536e0faed3cbd6908563fb4348f.txt",
+    "sha256": "30029a197b59b9a1c10afb44504f096124be1536e0faed3cbd6908563fb4348f",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_SHA256_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA256.PKCS1"
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.encrypt.usage",
+    "file": "4f3b2fc6e50985017fba992d7c0b8462523bea60181277649b604700be756637.txt",
+    "sha256": "4f3b2fc6e50985017fba992d7c0b8462523bea60181277649b604700be756637",
+    "worker_mode": "oaep-encrypt-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject"
+    ],
+    "valid_control": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.1"
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.decrypt.usage",
+    "file": "4f3b2fc6e50985017fba992d7c0b8462523bea60181277649b604700be756637.txt",
+    "sha256": "4f3b2fc6e50985017fba992d7c0b8462523bea60181277649b604700be756637",
+    "worker_mode": "oaep-decrypt-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject"
+    ],
+    "valid_control": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.1"
+  }
+]

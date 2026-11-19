@@ -196,6 +196,16 @@ impl TokenCall {
     }
 }
 
+/// PKCS#11 3.2 sections 5.5.7 and 5.1.6: these definite refusals do not
+/// reinitialize the token. They do not prove unchanged PIN retry counters.
+/// Input witnesses and native uncertainty are checked separately by the caller.
+pub(crate) fn initialization_preserves_context(rv: CK_RV) -> bool {
+    matches!(
+        rv,
+        CKR_SESSION_EXISTS | CKR_PIN_INCORRECT | CKR_PIN_LOCKED | CKR_TOKEN_WRITE_PROTECTED
+    )
+}
+
 // PIN mutations have no active sequence to abandon. Their possible effect is
 // retained by the caller independently of session/token/module availability.
 #[derive(Clone, Copy, Debug)]

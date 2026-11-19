@@ -1,0 +1,282 @@
+[
+  {
+    "id": "absence.handshake.CKM_SSL3_MASTER_KEY_DERIVE",
+    "file": "8b80fd0980c1e5d773f106c07f5efb8d99764fa5c096e2b5f8e63e113985ebe6.txt",
+    "sha256": "8b80fd0980c1e5d773f106c07f5efb8d99764fa5c096e2b5f8e63e113985ebe6",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-ssl3-master",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_SSL3_MASTER_KEY_DERIVE"
+  },
+  {
+    "id": "absence.handshake.CKM_SSL3_MASTER_KEY_DERIVE_DH",
+    "file": "ca495c13083c31f6e82040627e96d1a43f8429ff14b1826bbfac56d6bdc3676e.txt",
+    "sha256": "ca495c13083c31f6e82040627e96d1a43f8429ff14b1826bbfac56d6bdc3676e",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-ssl3-master-dh",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_SSL3_MASTER_KEY_DERIVE_DH"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS12_EXTENDED_MASTER_KEY_DERIVE",
+    "file": "f15e9087d05d09503a7e6b344154f37b5363249e76734ef31f960d7627a1533d.txt",
+    "sha256": "f15e9087d05d09503a7e6b344154f37b5363249e76734ef31f960d7627a1533d",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls12-extended-master",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS12_EXTENDED_MASTER_KEY_DERIVE"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS12_EXTENDED_MASTER_KEY_DERIVE_DH",
+    "file": "f7e5869620285101e30844e43b9a70ab9dbfdd967c16e2a436f1d29c525f4e1f.txt",
+    "sha256": "f7e5869620285101e30844e43b9a70ab9dbfdd967c16e2a436f1d29c525f4e1f",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls12-extended-master-dh",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS12_EXTENDED_MASTER_KEY_DERIVE_DH"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS12_KDF",
+    "file": "9fe8abae9142bc1d212d819aaa9ed88910d4fe9ba74bf99d31c63dd306c4162e.txt",
+    "sha256": "9fe8abae9142bc1d212d819aaa9ed88910d4fe9ba74bf99d31c63dd306c4162e",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls12-exporter",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS12_KDF"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS12_MASTER_KEY_DERIVE",
+    "file": "1106b00026efdb83981bcd5886f090a92b9b6395d549e5213030a0af7ebdc7fd.txt",
+    "sha256": "1106b00026efdb83981bcd5886f090a92b9b6395d549e5213030a0af7ebdc7fd",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls12-master",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS12_MASTER_KEY_DERIVE"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS12_MASTER_KEY_DERIVE_DH",
+    "file": "dc3bed389f1a36d405e607947dc4a909ccfc3dd6a20c8718b4d37f07871b12d3.txt",
+    "sha256": "dc3bed389f1a36d405e607947dc4a909ccfc3dd6a20c8718b4d37f07871b12d3",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls12-master-dh",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS12_MASTER_KEY_DERIVE_DH"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS_KDF",
+    "file": "d585ff47a8b9437d2dd2ae8b19c80855dd5015de976b70ba98f0fa39a14c4612.txt",
+    "sha256": "d585ff47a8b9437d2dd2ae8b19c80855dd5015de976b70ba98f0fa39a14c4612",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls-exporter",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS_KDF"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS_MASTER_KEY_DERIVE",
+    "file": "4bd35417bd91c7a9d0ca5950b705401b9642bab0e887e02497b6ec7e2d0e4729.txt",
+    "sha256": "4bd35417bd91c7a9d0ca5950b705401b9642bab0e887e02497b6ec7e2d0e4729",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls-master",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS_MASTER_KEY_DERIVE"
+  },
+  {
+    "id": "absence.handshake.CKM_TLS_MASTER_KEY_DERIVE_DH",
+    "file": "267e43bcf89ef5e978e9543a8149f0d699269b4c5adc82977a889f7fa3184b9b.txt",
+    "sha256": "267e43bcf89ef5e978e9543a8149f0d699269b4c5adc82977a889f7fa3184b9b",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "handshake-tls-master-dh",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Real DERIVE-capable 48-byte generic base, distinct client/server randoms (or SHA-256 transcript hash for extended master); requested generic-secret length 48 for master and 16 for exporter. One exact C_DeriveKey native refusal CKR_MECHANISM_INVALID, preserving effect metadata.",
+    "absent_tls_selector": "CKM_TLS_MASTER_KEY_DERIVE_DH"
+  }
+]

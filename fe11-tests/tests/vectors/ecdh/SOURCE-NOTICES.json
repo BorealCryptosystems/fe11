@@ -1,0 +1,102 @@
+{
+  "ecdh_brainpoolP224r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP224r1_test.json",
+    "source_sha256": "9bf4c9c9103af2b11ff4441c81959e3e0e07000449dd68a3ee23733381a3af27",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_brainpoolP256r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP256r1_test.json",
+    "source_sha256": "8502c0259d85813d93cba5a664245b2d5ad1cdd3480a77337f3b377b8d63ccf4",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_brainpoolP320r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP320r1_test.json",
+    "source_sha256": "639cc4be169477ee3bb0faa6e696a3211b23d4c137f2587a1d4c91c35944d86c",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_brainpoolP384r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP384r1_test.json",
+    "source_sha256": "f32542f287664e337e1cc516e879de201ac023b6759a0d0637a4b687e96fd04f",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_brainpoolP512r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP512r1_test.json",
+    "source_sha256": "5f9d2c37b0d8daeca751f8e6467620ad1ad2bb789a6438a51a87f4830cf0f46f",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp224r1_ecpoint_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+    "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp224r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_test.json",
+    "source_sha256": "8663b33953788be6af01d523735b35f59cb8848d213c8fa99d509f4328c6b61b",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp256k1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256k1_test.json",
+    "source_sha256": "049fa2be70e9db836a043aba6132b53cd97de4c0de5277bca6d65a2770075cae",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp256r1_ecpoint_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+    "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp256r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_test.json",
+    "source_sha256": "cdb8bd5d1206fddb6618c69ffa18f303b4752caba321d348d4aacae3f20cbec4",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp384r1_ecpoint_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+    "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp384r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_test.json",
+    "source_sha256": "25a9c41573dbea97c5b4be2dd00369fa68dc37ac8f41807d8e16226d188ec6a7",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp521r1_ecpoint_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+    "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_secp521r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_test.json",
+    "source_sha256": "b5e379919833afa94ef6cb7e085367408a5ea63cf486ad008ad36ef9be4bebf0",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect283k1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect283k1_test.json",
+    "source_sha256": "0eb56c96d14749ad3414f12e782f8ba50ae3112cc07f6c4ed7c8fd6baf6bcee2",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect283r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect283r1_test.json",
+    "source_sha256": "bb9d9f70622af7e0ce06d81c06cb8e443a7780899588c9724d8ec73909dd8f7a",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect409k1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect409k1_test.json",
+    "source_sha256": "840e6c7f5ff5e45839a024ac864daed7325455a54e4753864e88833b4465fceb",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect409r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect409r1_test.json",
+    "source_sha256": "548fe23c0b204dad9ffed7334a7bc9e0781331225e116ad1f6e3cc16b2050fae",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect571k1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect571k1_test.json",
+    "source_sha256": "b33edbb96f2cef542486b38c731a14dc9a5cfd8ff7429c9da5d13b91328916e4",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  },
+  "ecdh_sect571r1_test.json": {
+    "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_sect571r1_test.json",
+    "source_sha256": "50d2f97dde1f2bd9b7c472ef7a17838bc9c94b059949c5aa0560f7a9f246df43",
+    "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+  }
+}

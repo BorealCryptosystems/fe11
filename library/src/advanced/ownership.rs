@@ -145,6 +145,7 @@ impl Operation {
             .drive_before_restore(state, entry, true, remaining, &mut || {
                 owner.check_keys(entry)?;
                 owner.keys.arm_native_keys();
+                owner.group.arm_keys();
                 Ok(())
             })
     }

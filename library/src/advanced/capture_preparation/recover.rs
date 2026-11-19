@@ -31,7 +31,7 @@ pub(super) fn prepare<'a>(
     let mut waiter: Option<progress::Waiter<'a>> = None;
     loop {
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

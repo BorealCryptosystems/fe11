@@ -245,6 +245,17 @@ pub(super) fn output_offset(mechanism: u64, output: &mut Buffer) -> Result<usize
 }
 
 impl SignatureOperation {
+    pub(in crate::advanced) fn readers_on(
+        &self,
+        activity: &Arc<crate::registry::Activity>,
+        uid: u64,
+    ) -> usize {
+        self._roles.readers_on(activity, uid)
+    }
+
+    pub(super) fn category(&self) -> CK_FLAGS {
+        self.kind.category()
+    }
     pub(super) fn replacement_kind(&self) -> Kind {
         self.kind
     }

@@ -58,6 +58,7 @@ pub(super) enum Kind {
     DetachedCapture,
     DetachedValidation,
     DetachedRestore,
+    SavedGroup,
 }
 impl Kind {
     fn wire(self) -> u8 {
@@ -70,6 +71,7 @@ impl Kind {
             Self::DetachedCapture => 6,
             Self::DetachedValidation => 7,
             Self::DetachedRestore => 8,
+            Self::SavedGroup => 9,
         }
     }
 
@@ -83,6 +85,7 @@ impl Kind {
             6 => Ok(Self::DetachedCapture),
             7 => Ok(Self::DetachedValidation),
             8 => Ok(Self::DetachedRestore),
+            9 => Ok(Self::SavedGroup),
             _ => Err(Error::Rejected(crate::RejectionReason::OperationRecord(
                 crate::OperationRecordRejection::RecordKind,
             ))),

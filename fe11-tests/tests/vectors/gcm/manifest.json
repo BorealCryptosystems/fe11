@@ -1,0 +1,1054 @@
+[
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "file": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0.txt",
+    "sha256": "97d8394f08a02abd606fc65e80e7f02e5b028d4f09801b92042889f2e9e3dac0",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.2.16",
+    "file": "2aa27593ccb25c4c04d4fc245bc81a0d88019fac5a0aec49babc45ed3186d0ac.txt",
+    "sha256": "2aa27593ccb25c4c04d4fc245bc81a0d88019fac5a0aec49babc45ed3186d0ac",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.3.31",
+    "file": "49a2ed492b8fbd2bcbef88f18354a982943c5ef6ddfee807f3d5f5bc72a9ad42.txt",
+    "sha256": "49a2ed492b8fbd2bcbef88f18354a982943c5ef6ddfee807f3d5f5bc72a9ad42",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.3.33",
+    "file": "40f425bb1cb5b4d3154a625d314a27fc79150b4da7cfe724bf53b496a9f475bd.txt",
+    "sha256": "40f425bb1cb5b4d3154a625d314a27fc79150b4da7cfe724bf53b496a9f475bd",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native decrypt with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.4.46",
+    "file": "5bdc92b1cfafcfbd442f18e947c0c7dba5be26a7edc5018aace32212f679ac5d.txt",
+    "sha256": "5bdc92b1cfafcfbd442f18e947c0c7dba5be26a7edc5018aace32212f679ac5d",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@Session::decrypt_classic_aead@ACVP-AES-GCM-1.0.4.47",
+    "file": "9486fe5edd15727908c5302aa4790da07bb32b5936bfd572ff23913b1b2de495.txt",
+    "sha256": "9486fe5edd15727908c5302aa4790da07bb32b5936bfd572ff23913b1b2de495",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native decrypt with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "file": "48974868d035b0eb73928c882b49525203aebec23a8e98a3bfd438238f5930aa.txt",
+    "sha256": "48974868d035b0eb73928c882b49525203aebec23a8e98a3bfd438238f5930aa",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.2.16",
+    "file": "cb5dce669b321b686a487044b5dbad304a638c24bbd83f8df972770cf7ae8ae0.txt",
+    "sha256": "cb5dce669b321b686a487044b5dbad304a638c24bbd83f8df972770cf7ae8ae0",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.3.31",
+    "file": "a36fbc69b6adb86aa04bb7dfa29be1761d4980478888bc340fdb91f0a74dc364.txt",
+    "sha256": "a36fbc69b6adb86aa04bb7dfa29be1761d4980478888bc340fdb91f0a74dc364",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.3.33",
+    "file": "8bde1d7fa90ec09b9e9f8ef61db5e2cc3d0ff0ac7d4111510510ead4a7444935.txt",
+    "sha256": "8bde1d7fa90ec09b9e9f8ef61db5e2cc3d0ff0ac7d4111510510ead4a7444935",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native decrypt with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.4.46",
+    "file": "efe239a0dfbb8b33cd955b1c6f7104ed43956e8fc4eee551f08254ca831653f8.txt",
+    "sha256": "efe239a0dfbb8b33cd955b1c6f7104ed43956e8fc4eee551f08254ca831653f8",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_decrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.decrypt@AdvancedSession::start_decrypt_classic_aead@ACVP-AES-GCM-1.0.4.47",
+    "file": "19791b55fd49962ede81ddb19bcbdf727451907d29ea9cafdc28b904f0e3c2b5.txt",
+    "sha256": "19791b55fd49962ede81ddb19bcbdf727451907d29ea9cafdc28b904f0e3c2b5",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native decrypt with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@Session::encrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "file": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529.txt",
+    "sha256": "fe31f107b568b1fa3f2c37547fb1951b7a7c32335bbc6c5305e062b19e367529",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@Session::encrypt_classic_aead@ACVP-AES-GCM-1.0.2.16",
+    "file": "deb2bff3297fcc00935d6ae4ad1ff32841800e20c49eb395d2cb181170133752.txt",
+    "sha256": "deb2bff3297fcc00935d6ae4ad1ff32841800e20c49eb395d2cb181170133752",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@Session::encrypt_classic_aead@ACVP-AES-GCM-1.0.3.31",
+    "file": "5bc1a4b09a8972991821711f4e890ad2ae6ee4e5ce463a03651580dece57094a.txt",
+    "sha256": "5bc1a4b09a8972991821711f4e890ad2ae6ee4e5ce463a03651580dece57094a",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@Session::encrypt_classic_aead@ACVP-AES-GCM-1.0.4.46",
+    "file": "277b61e906fe1dfb7c1ef992ca1824a1c823338966876a03e159f10441707183.txt",
+    "sha256": "277b61e906fe1dfb7c1ef992ca1824a1c823338966876a03e159f10441707183",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "Session::encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@AdvancedSession::start_encrypt_classic_aead@ACVP-AES-GCM-1.0.1.1",
+    "file": "b0dc70b789e16891faf6e7f76c29f878be751428cfb5a377114469bffb9b810c.txt",
+    "sha256": "b0dc70b789e16891faf6e7f76c29f878be751428cfb5a377114469bffb9b810c",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@AdvancedSession::start_encrypt_classic_aead@ACVP-AES-GCM-1.0.2.16",
+    "file": "09aa3aba00b57f712751d547c0208a5894a0352b13979c1e50289448ff9bdb72.txt",
+    "sha256": "09aa3aba00b57f712751d547c0208a5894a0352b13979c1e50289448ff9bdb72",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 15
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@AdvancedSession::start_encrypt_classic_aead@ACVP-AES-GCM-1.0.3.31",
+    "file": "c65a28c4ec7add8ce3157a2a9d047c6c20e2a7dc6eef89bb6c13e486cac2c15a.txt",
+    "sha256": "c65a28c4ec7add8ce3157a2a9d047c6c20e2a7dc6eef89bb6c13e486cac2c15a",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 0
+    }
+  },
+  {
+    "id": "operation.CKM_AES_GCM.encrypt@AdvancedSession::start_encrypt_classic_aead@ACVP-AES-GCM-1.0.4.46",
+    "file": "3141ff766c6ea1490d1c52b2f886e85df7bf478530a9ea2845bdf7edb60bd585.txt",
+    "sha256": "3141ff766c6ea1490d1c52b2f886e85df7bf478530a9ea2845bdf7edb60bd585",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact ct||tag or plaintext; no authenticated plaintext result on failed tag",
+        "Native tag refusal CKR_ENCRYPTED_DATA_INVALID; too-short public input may be Error::InvalidCiphertext and is a separate local case"
+      ],
+      "route": "AdvancedSession::start_encrypt_classic_aead",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-GCM-1.0/internalProjection.json",
+      "source_sha256": "0703118c1f751f32cdb8d32b8e54d5f80eb9bbe7bb99b83a6b0221cb40b34f0e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "caller_input_limits": {
+      "maximum_parts": 1,
+      "maximum_total_bytes": 30
+    }
+  }
+]

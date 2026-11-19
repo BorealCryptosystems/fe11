@@ -1,0 +1,150 @@
+[
+  {
+    "id": "configuration.permissions.umask-zero",
+    "file": "41e0f6f7f2d92581d492c877f7aea59ce745d2be6ee9dca4277b4f5d10e102ec.txt",
+    "sha256": "41e0f6f7f2d92581d492c877f7aea59ce745d2be6ee9dca4277b4f5d10e102ec",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "umask-zero",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Configure before creating token. Child-only OS mask0; inspect every new directory0777&~mask and file0666&~mask. Module invalid octal syntax maps to0. Digest SHA256 control and cleanup pass. Mode000 provisioning uses isolated root container; no access-denial claim.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "references": [
+        "SimpleConfigLoader.cpp:158-159 strtol base8 with no end check",
+        "object_store/File.cpp:91",
+        "object_store/Directory.cpp:236",
+        "object_store/DB.cpp:831"
+      ]
+    }
+  },
+  {
+    "id": "configuration.permissions.umask-private",
+    "file": "83abacbf95c8dad861351efd9e09d6845e1000d50969e01ec6b01bd202feb205.txt",
+    "sha256": "83abacbf95c8dad861351efd9e09d6845e1000d50969e01ec6b01bd202feb205",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "umask-private",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Configure before creating token. Child-only OS mask0; inspect every new directory0777&~mask and file0666&~mask. Module invalid octal syntax maps to0. Digest SHA256 control and cleanup pass. Mode000 provisioning uses isolated root container; no access-denial claim.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "references": [
+        "SimpleConfigLoader.cpp:158-159 strtol base8 with no end check",
+        "object_store/File.cpp:91",
+        "object_store/Directory.cpp:236",
+        "object_store/DB.cpp:831"
+      ]
+    }
+  },
+  {
+    "id": "configuration.permissions.umask-deny",
+    "file": "1f88208cc3039c324009c5bf4ad3a1e20d279ce819040b79a41bfa0a0273a2fe.txt",
+    "sha256": "1f88208cc3039c324009c5bf4ad3a1e20d279ce819040b79a41bfa0a0273a2fe",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "umask-deny",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Configure before creating token. Child-only OS mask0; inspect every new directory0777&~mask and file0666&~mask. Module invalid octal syntax maps to0. Digest SHA256 control and cleanup pass. Mode000 provisioning uses isolated root container; no access-denial claim.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "references": [
+        "SimpleConfigLoader.cpp:158-159 strtol base8 with no end check",
+        "object_store/File.cpp:91",
+        "object_store/Directory.cpp:236",
+        "object_store/DB.cpp:831"
+      ]
+    }
+  },
+  {
+    "id": "configuration.permissions.umask-invalid",
+    "file": "bd49a8d023f77499c08ad6faefc4484a278f20c468b84ddd2b65d0854553ff78.txt",
+    "sha256": "bd49a8d023f77499c08ad6faefc4484a278f20c468b84ddd2b65d0854553ff78",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "umask-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Configure before creating token. Child-only OS mask0; inspect every new directory0777&~mask and file0666&~mask. Module invalid octal syntax maps to0. Digest SHA256 control and cleanup pass. Mode000 provisioning uses isolated root container; no access-denial claim.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "references": [
+        "SimpleConfigLoader.cpp:158-159 strtol base8 with no end check",
+        "object_store/File.cpp:91",
+        "object_store/Directory.cpp:236",
+        "object_store/DB.cpp:831"
+      ]
+    }
+  }
+]

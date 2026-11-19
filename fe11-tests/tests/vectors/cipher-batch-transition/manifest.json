@@ -1,0 +1,583 @@
+[
+  {
+    "id": "state.cipher.ABSENT.start",
+    "file": "302933e12a19d878145a7018741da6ecd95ab4bc2760c0bbeffca16f144d76e2.txt",
+    "sha256": "302933e12a19d878145a7018741da6ecd95ab4bc2760c0bbeffca16f144d76e2",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Successful Init; public owner retained",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.ACTIVE.complete",
+    "file": "b4710541b1b5f8a6c19eb76022898c1bfd47c96689634abf4859b1fe3f372cf8.txt",
+    "sha256": "b4710541b1b5f8a6c19eb76022898c1bfd47c96689634abf4859b1fe3f372cf8",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact deterministic bytes or independently verified randomized result; input submitted once",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.PUBLISHED.poll_consumed",
+    "file": "e1ac9e95e5fa18057423dd1f30a4edb3c7e29d0f307ea32ac015fc873be1a9b6.txt",
+    "sha256": "e1ac9e95e5fa18057423dd1f30a4edb3c7e29d0f307ea32ac015fc873be1a9b6",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket)); returned value unchanged",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.PUBLISHED.close",
+    "file": "7d20f1eb91515b45b3e47b43fda561eafb0d144b0c97afa39d0d3d2027baaea4.txt",
+    "sha256": "7d20f1eb91515b45b3e47b43fda561eafb0d144b0c97afa39d0d3d2027baaea4",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Returned owned bytes survive close unchanged",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.ACTIVE.capture",
+    "file": "83210281267434229b9f7c7c41d42def312979be8cc437c3df96d928ddac8166.txt",
+    "sha256": "83210281267434229b9f7c7c41d42def312979be8cc437c3df96d928ddac8166",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_GetOperationState CKR_FUNCTION_NOT_SUPPORTED; active operation remains usable",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_GetOperationState",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.ACTIVE.cancel",
+    "file": "c29c69135a2190f8b5e21d34dab059d9bfbe501e0657f6cc470c895ba3645252.txt",
+    "sha256": "c29c69135a2190f8b5e21d34dab059d9bfbe501e0657f6cc470c895ba3645252",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}; prior owner and continuation preserved.",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_SessionCancel",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.ACTIVE.cancel.legacy240",
+    "file": "c29c69135a2190f8b5e21d34dab059d9bfbe501e0657f6cc470c895ba3645252.txt",
+    "sha256": "c29c69135a2190f8b5e21d34dab059d9bfbe501e0657f6cc470c895ba3645252",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "producer": "AES128 CBC NIST aligned vector",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.OUTPUT_REQUIRED.provide_0",
+    "file": "dbb83ae1051ca741c6c3013bc3eb021a4c5d9ea9ae787b590d252473ccb45412.txt",
+    "sha256": "dbb83ae1051ca741c6c3013bc3eb021a4c5d9ea9ae787b590d252473ccb45412",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "producer": "AES128 ECB one 16-byte published block; CipherOutputPlan short capacity15; required=16, supplied=0",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.OUTPUT_REQUIRED.provide_15",
+    "file": "d7ba19f61fb9314cdff4b29e393aed779552cf49fbe386117e74e2e106dc34f8.txt",
+    "sha256": "d7ba19f61fb9314cdff4b29e393aed779552cf49fbe386117e74e2e106dc34f8",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "producer": "AES128 ECB one 16-byte published block; CipherOutputPlan short capacity15; required=16, supplied=15",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.OUTPUT_REQUIRED.provide_16",
+    "file": "6b7efc6c9b8677fd9996bcf0f7dad3bdbbe9a57ab59e83200f15262f057bfe5f.txt",
+    "sha256": "6b7efc6c9b8677fd9996bcf0f7dad3bdbbe9a57ab59e83200f15262f057bfe5f",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "producer": "AES128 ECB one 16-byte published block; CipherOutputPlan short capacity15; required=16, supplied=16",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.OUTPUT_REQUIRED.provide_17",
+    "file": "eeaa9acafe68f1740ac51e12f13af2f2ee3757723b8506222866e23b1c684856.txt",
+    "sha256": "eeaa9acafe68f1740ac51e12f13af2f2ee3757723b8506222866e23b1c684856",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Storage selection makes no native call; subsequent poll uses selected capacity; short remains required, sufficient yields exact expected value",
+    "producer": "AES128 ECB one 16-byte published block; CipherOutputPlan short capacity15; required=16, supplied=17",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  },
+  {
+    "id": "state.cipher.OUTPUT_STORAGE_SELECTED.poll_sufficient",
+    "file": "f441dc50115e0b877ceba1647c5952a454d30e5b2ec91f6a8571cd59dbaf5295.txt",
+    "sha256": "f441dc50115e0b877ceba1647c5952a454d30e5b2ec91f6a8571cd59dbaf5295",
+    "worker_mode": "cipher-batch-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Correct published vector result, actual length L, no duplicate input; native query/output retry distinguished from replaying Init or Update",
+    "producer": "AES128 ECB one 16-byte published block; CipherOutputPlan short capacity15; capacity L",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_fixture_sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact native buffer request",
+      "no second Init or input replay",
+      "exact known output",
+      "typed consumed ticket refusal",
+      "output retained across explicit close",
+      "separate cleanup verdict"
+    ],
+    "pacing": "Cooperative",
+    "initial_boundary": "After start: Closed input, zero progress; Init only, no message dispatch"
+  }
+]

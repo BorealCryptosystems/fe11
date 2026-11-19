@@ -1,0 +1,176 @@
+[
+  {
+    "id": "negative.CKM_DH_PKCS_DERIVE.derive.usage",
+    "file": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5.txt",
+    "sha256": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5",
+    "worker_mode": "dh-usage-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DH_PKCS_DERIVE.derive@Session::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.1.1",
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DH_PKCS_DERIVE.derive.template",
+    "file": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5.txt",
+    "sha256": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5",
+    "worker_mode": "dh-template-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DH_PKCS_DERIVE.derive@Session::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.1.1",
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_ECDH1_DERIVE.derive.usage",
+    "file": "749a6acc1c6df57b5f960c03be763a1bf8c718c99bfb60ea4c05711bca8f20c0.txt",
+    "sha256": "749a6acc1c6df57b5f960c03be763a1bf8c718c99bfb60ea4c05711bca8f20c0",
+    "worker_mode": "ecdh-usage-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_brainpoolP224r1_test.json.0.1",
+    "source": {
+      "id": "ecdh_brainpoolP224r1_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP224r1_test.json",
+      "source_sha256": "9bf4c9c9103af2b11ff4441c81959e3e0e07000449dd68a3ee23733381a3af27",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_ECDH1_DERIVE.derive.template",
+    "file": "749a6acc1c6df57b5f960c03be763a1bf8c718c99bfb60ea4c05711bca8f20c0.txt",
+    "sha256": "749a6acc1c6df57b5f960c03be763a1bf8c718c99bfb60ea4c05711bca8f20c0",
+    "worker_mode": "ecdh-template-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_brainpoolP224r1_test.json.0.1",
+    "source": {
+      "id": "ecdh_brainpoolP224r1_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_brainpoolP224r1_test.json",
+      "source_sha256": "9bf4c9c9103af2b11ff4441c81959e3e0e07000449dd68a3ee23733381a3af27",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  }
+]

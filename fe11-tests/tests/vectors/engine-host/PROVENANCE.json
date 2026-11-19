@@ -1,0 +1,32 @@
+[
+  {
+    "file": "valid.txt",
+    "sha256": "f4aa85e740486b36b528f410bd0c39fedf58880c4f0206b3cf6780daf757eee7",
+    "source": "NIST ACVP ML-DSA-sigVer-FIPS204.json",
+    "source_sha256": "ebd7110518ca981dcb3092e246be6cdf6975e465529d675d99f6bbc2668056e8",
+    "tgId": 1,
+    "tcId": 3,
+    "expected": "Valid",
+    "fields": [
+      "public key",
+      "message",
+      "context",
+      "signature"
+    ]
+  },
+  {
+    "file": "invalid.txt",
+    "sha256": "cbaa2f4423dbdf2f6c789d77e2e5844ad07e61a4ba6b524147b99cce53ec693f",
+    "source": "NIST ACVP ML-DSA-sigVer-FIPS204.json",
+    "source_sha256": "ebd7110518ca981dcb3092e246be6cdf6975e465529d675d99f6bbc2668056e8",
+    "tgId": 1,
+    "tcId": 1,
+    "expected": "Invalid",
+    "fields": [
+      "public key",
+      "message",
+      "context",
+      "signature"
+    ]
+  }
+]

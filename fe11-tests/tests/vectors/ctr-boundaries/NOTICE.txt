@@ -1,0 +1,1 @@
+Public AES128 test key and counter boundary inputs. Expected bytes independently checked with PyCryptodome3.23.0 AES-ECB. No operational secrets.

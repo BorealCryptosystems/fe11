@@ -1,0 +1,274 @@
+[
+  {
+    "id": "message.initialization.Session.decrypt",
+    "file": "700009a0876c07ebd3bd8db032d426111f1f70c09a7193f0a3e753c5f8ee0067.txt",
+    "sha256": "700009a0876c07ebd3bd8db032d426111f1f70c09a7193f0a3e753c5f8ee0067",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "Session",
+    "action": "decrypt",
+    "oracle": "C_MessageDecryptInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageDecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "construction": "Public deterministic128-bit test key00..0f; no secret production data."
+    }
+  },
+  {
+    "id": "message.initialization.Session.mac_verify",
+    "file": "dbb808ae54068a2b319c2e376b3c038fe8368c73337bab5add150fa3f0dae564.txt",
+    "sha256": "dbb808ae54068a2b319c2e376b3c038fe8368c73337bab5add150fa3f0dae564",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "Session",
+    "action": "mac_verify",
+    "oracle": "C_MessageVerifyInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageVerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "construction": "Public deterministic128-bit test key00..0f; no secret production data."
+    }
+  },
+  {
+    "id": "message.initialization.Session.rsa_verify",
+    "file": "4ee166e2bcab4c0dce6f0af47eb30f841161c7d7978b934626b38548666672fe.txt",
+    "sha256": "4ee166e2bcab4c0dce6f0af47eb30f841161c7d7978b934626b38548666672fe",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "Session",
+    "action": "rsa_verify",
+    "oracle": "C_MessageVerifyInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageVerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    }
+  },
+  {
+    "id": "message.initialization.Session.verify_signature",
+    "file": "5eb1e0d9dc1baeb786b83db1f5e8bcf9751410dadc0baca7b2f8b41a63df915b.txt",
+    "sha256": "5eb1e0d9dc1baeb786b83db1f5e8bcf9751410dadc0baca7b2f8b41a63df915b",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "Session",
+    "action": "verify_signature",
+    "oracle": "C_VerifySignatureInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifySignatureInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    }
+  },
+  {
+    "id": "message.initialization.AdvancedSession.decrypt",
+    "file": "d4a808d1c7b8b03b4aa94b4673a89c077fc9d1ed89892a36baadcdbeec1e1ebd.txt",
+    "sha256": "d4a808d1c7b8b03b4aa94b4673a89c077fc9d1ed89892a36baadcdbeec1e1ebd",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "AdvancedSession",
+    "action": "decrypt",
+    "oracle": "C_MessageDecryptInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageDecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "construction": "Public deterministic128-bit test key00..0f; no secret production data."
+    }
+  },
+  {
+    "id": "message.initialization.AdvancedSession.mac_verify",
+    "file": "81bf9b9ce7c27e0a5779aea93c194c45b7bbbe808098bfe179a21dde82b993e9.txt",
+    "sha256": "81bf9b9ce7c27e0a5779aea93c194c45b7bbbe808098bfe179a21dde82b993e9",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "AdvancedSession",
+    "action": "mac_verify",
+    "oracle": "C_MessageVerifyInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageVerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "construction": "Public deterministic128-bit test key00..0f; no secret production data."
+    }
+  },
+  {
+    "id": "message.initialization.AdvancedSession.rsa_verify",
+    "file": "f1db21510dff8764f25031f3c83ea0947f675e6f2dba17e29d84a9be6fc625db.txt",
+    "sha256": "f1db21510dff8764f25031f3c83ea0947f675e6f2dba17e29d84a9be6fc625db",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "AdvancedSession",
+    "action": "rsa_verify",
+    "oracle": "C_MessageVerifyInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageVerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    }
+  },
+  {
+    "id": "message.initialization.AdvancedSession.verify_signature",
+    "file": "7c6fa2fc96bd4065d417c19ffa0e687210f9f8bc7643bab2065f85fe60554ec7.txt",
+    "sha256": "7c6fa2fc96bd4065d417c19ffa0e687210f9f8bc7643bab2065f85fe60554ec7",
+    "worker_mode": "unsupported-lifecycle",
+    "message_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "receiver": "AdvancedSession",
+    "action": "verify_signature",
+    "oracle": "C_VerifySignatureInit CKR_FUNCTION_NOT_SUPPORTED; no output, no fallback and no later message/verification call; owned key destruction and session/module close succeed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifySignatureInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    }
+  }
+]

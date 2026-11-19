@@ -1,0 +1,126 @@
+[
+  {
+    "id": "rsa.negative.wrong-key.session.verify",
+    "file": "a78e485351710ea8e3b321b8795d74d81e671ca5282dc96502a09f6f11b7ad38.txt",
+    "sha256": "a78e485351710ea8e3b321b8795d74d81e671ca5282dc96502a09f6f11b7ad38",
+    "worker_mode": "rsa-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "parameters": {
+      "message_hex": "616263",
+      "mechanism": "CKM_SHA256_RSA_PKCS",
+      "modulus_bits": 2048,
+      "changed": "public key; original signature bytes retained",
+      "original_key_source": {
+        "id": "RFC8017.RSA2048.SHA256.PKCS1",
+        "source": "vectors\\evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+        "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+      },
+      "other_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+        "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      }
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Known valid signature for imported key succeeds; unchanged signature belonging to different same-sized key returns C_Verify SIGNATURE_INVALID; original positive control succeeds again.",
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "negative_reference_sha256": "86c2a1b1cddfcd6bf704f584c4f02db7be6817ac8ce3851ed67e855cac263d72"
+  },
+  {
+    "id": "rsa.negative.wrong-key.advanced.verify",
+    "file": "3555f0af81d6e98eb45392e2cac17085037e43d1992bea63b1de724724058017.txt",
+    "sha256": "3555f0af81d6e98eb45392e2cac17085037e43d1992bea63b1de724724058017",
+    "worker_mode": "rsa-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "parameters": {
+      "message_hex": "616263",
+      "mechanism": "CKM_SHA256_RSA_PKCS",
+      "modulus_bits": 2048,
+      "changed": "public key; original signature bytes retained",
+      "original_key_source": {
+        "id": "RFC8017.RSA2048.SHA256.PKCS1",
+        "source": "vectors\\evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+        "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+      },
+      "other_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+        "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      }
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Known valid signature for imported key succeeds; unchanged signature belonging to different same-sized key returns C_Verify SIGNATURE_INVALID; original positive control succeeds again.",
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "negative_reference_sha256": "86c2a1b1cddfcd6bf704f584c4f02db7be6817ac8ce3851ed67e855cac263d72"
+  }
+]

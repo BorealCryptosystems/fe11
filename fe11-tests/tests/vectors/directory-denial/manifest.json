@@ -1,0 +1,24 @@
+[
+  {
+    "id": "configuration.token-directory.actual-dac-denial",
+    "file": "cf59d71de6801d79368c2bff58a8a59d0eb768f02fe2c97e9e64303fd57ddf90.txt",
+    "sha256": "cf59d71de6801d79368c2bff58a8a59d0eb768f02fe2c97e9e64303fd57ddf90",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "directory-inaccessible",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize"
+    ],
+    "oracle": "Owned token root has mode000; actual worker CapEff excludes DAC_OVERRIDE and DAC_READ_SEARCH before module loading. Exact native C_Initialize GENERAL_ERROR, no owner/finalize. Parent restores same directory identity0700 after child reaped, then removes own store.",
+    "provenance": "Pinned ObjectStore constructor cannot open directory; child-only setpriv launcher if parent has DAC bypass, binary identity recorded. No change to host process privileges or external storage."
+  }
+]

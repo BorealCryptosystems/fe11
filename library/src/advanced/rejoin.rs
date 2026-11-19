@@ -543,7 +543,13 @@ impl AdvancedSession {
             ));
         }
         let s = self.session.advanced_access()?;
-        let operation = s.operations.get(ticket.uid)?;
+        let operation = s.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::AsynchronousExecution(
+                crate::AsynchronousExecutionRejection::StaleRejoinTicket,
+            ),
+        )?;
         let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
         if op.id != ticket.id {
             return Err(Error::Rejected(
@@ -609,7 +615,8 @@ impl AdvancedSession {
                 }
                 // Remove first, then move the sole record. A poisoned ledger
                 // leaves this complete owner intact and recoverable by cleanup.
-                s.operations.release_closed(&self.session.entry)?;
+                s.operations
+                    .release_operation(&self.session.entry, op._token.identity())?;
                 let control = op.take_rejoin().unwrap();
                 ticket.id = 0;
                 return Ok(RejoinProgress::Refused(RejoinFailure {
@@ -634,6 +641,7 @@ impl AdvancedSession {
         // no application material-comparison report participates in ownership.
         let restoration = match op.restore_owner() {
             Some(restore) => Some(StateRestoreTicket {
+                resident: op.id,
                 owner: self.session.inner.clone(),
                 uid: self.session.uid,
                 id: restore.id,
@@ -657,6 +665,7 @@ impl AdvancedSession {
             return Ok(RejoinProgress::StateRestore(restoration));
         }
         let next = OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.session.inner.clone(),
             uid: self.session.uid,
             id: op.id,

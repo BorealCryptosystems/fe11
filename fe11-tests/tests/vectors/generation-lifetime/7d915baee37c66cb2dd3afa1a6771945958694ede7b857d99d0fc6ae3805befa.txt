@@ -1,0 +1,16 @@
+lifetime|CKM_ML_DSA_KEY_PAIR_GEN
+public|CKA_CLASS|symbol|CKO_PUBLIC_KEY
+public|CKA_KEY_TYPE|symbol|CKK_ML_DSA
+public|CKA_PARAMETER_SET|symbol|CKP_ML_DSA_44
+public|CKA_VERIFY|bool|true
+public|CKA_PRIVATE|bool|false
+public|CKA_LABEL|namespace|label
+private|CKA_CLASS|symbol|CKO_PRIVATE_KEY
+private|CKA_KEY_TYPE|symbol|CKK_ML_DSA
+private|CKA_SIGN|bool|true
+private|CKA_PRIVATE|bool|true
+private|CKA_SENSITIVE|bool|false
+private|CKA_EXTRACTABLE|bool|true
+public|CKA_TOKEN|bool|false
+private|CKA_TOKEN|bool|false
+private|CKA_LABEL|namespace|label

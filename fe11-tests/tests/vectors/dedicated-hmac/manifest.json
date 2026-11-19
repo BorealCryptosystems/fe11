@@ -1,0 +1,460 @@
+[
+  {
+    "id": "object.key_type.CKK_MD5_HMAC",
+    "file": "af64e7bd2fcd7f88c732720825e5ffc4cd0205a3a45337b7e9d7a7df55098ee0.txt",
+    "sha256": "af64e7bd2fcd7f88c732720825e5ffc4cd0205a3a45337b7e9d7a7df55098ee0",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_MD5_HMAC",
+    "key_type": "CKK_MD5_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc2202.txt",
+      "source_sha256": "c19effeca47e801be304460da3b2fb05f595e2309abceb050e40e024868fe483",
+      "notice": "Published numerical test data; RFC attribution retained, no reference implementation copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA_1_HMAC",
+    "file": "b918631a447b8b583bb4ac41a0ddc3b12bb6bb7242f785fefd5ed3f6a99c7350.txt",
+    "sha256": "b918631a447b8b583bb4ac41a0ddc3b12bb6bb7242f785fefd5ed3f6a99c7350",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA_1_HMAC",
+    "key_type": "CKK_SHA_1_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha1_test.json",
+      "source_sha256": "b521c6180a862247986392d3cb49b511fc7fe790e75bee236f84e36ca290c7c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA224_HMAC",
+    "file": "1f518a0a1ba9747ebb9531fb4d41f06f37232d4a64e6483b8ffff0d0d190944b.txt",
+    "sha256": "1f518a0a1ba9747ebb9531fb4d41f06f37232d4a64e6483b8ffff0d0d190944b",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA224_HMAC",
+    "key_type": "CKK_SHA224_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha224_test.json",
+      "source_sha256": "9b3a2470fe5bc8aa2d3e55f19772dc1f88fda897863ed4eaa4d8536c244c320b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA256_HMAC",
+    "file": "dea9c1a1dffaf5482efcb67e27b188f5b2701ff66724d61c549af19f33addf96.txt",
+    "sha256": "dea9c1a1dffaf5482efcb67e27b188f5b2701ff66724d61c549af19f33addf96",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA256_HMAC",
+    "key_type": "CKK_SHA256_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha256_test.json",
+      "source_sha256": "2d201cfa61d1bf95e6f5d07d96634b4a348b31e8eaa277ad7c8d09677b7a743f",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA384_HMAC",
+    "file": "77faaddec7d1255ed8de4d20e6bbd50b4397901fba9b25c1e86a16d985844e0d.txt",
+    "sha256": "77faaddec7d1255ed8de4d20e6bbd50b4397901fba9b25c1e86a16d985844e0d",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA384_HMAC",
+    "key_type": "CKK_SHA384_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha384_test.json",
+      "source_sha256": "28b9776e979dd755d852ca471043ea6cedce8b15f7a28abdf6ea9efd982b43c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA512_HMAC",
+    "file": "6529cd19ed4204c1098ab33b41eccfde9ac78cde3e8099a9a297f3eaa4539fbd.txt",
+    "sha256": "6529cd19ed4204c1098ab33b41eccfde9ac78cde3e8099a9a297f3eaa4539fbd",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA512_HMAC",
+    "key_type": "CKK_SHA512_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha512_test.json",
+      "source_sha256": "b6c90477bdb4a6fc8ee3d1f7b2c0b69a8dfffab34718abaa6cabd71cc2ba1207",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA3_224_HMAC",
+    "file": "f54e423c90b21740b60866f40af2c2ca36fbd3fc7a2a839b9f11aed84d216954.txt",
+    "sha256": "f54e423c90b21740b60866f40af2c2ca36fbd3fc7a2a839b9f11aed84d216954",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA3_224_HMAC",
+    "key_type": "CKK_SHA3_224_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_224_test.json",
+      "source_sha256": "b795ca6ed71afb662b3b2f8258aa6bbab6056103235301391bba8c25bf4b64ca",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA3_256_HMAC",
+    "file": "53404d5572c3f6d0bc95353696ece89d3b687fd77c7e8b50885a6e793b7b4cb5.txt",
+    "sha256": "53404d5572c3f6d0bc95353696ece89d3b687fd77c7e8b50885a6e793b7b4cb5",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA3_256_HMAC",
+    "key_type": "CKK_SHA3_256_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_256_test.json",
+      "source_sha256": "8f1bad7c725c0f6325ea975ddd661f51663862823cd07084b230efe0f6a0ed6b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA3_384_HMAC",
+    "file": "eaa65f95c3a9c0cb6cf128e3b7bbdcaab199728095f3067171eefbbed612a3aa.txt",
+    "sha256": "eaa65f95c3a9c0cb6cf128e3b7bbdcaab199728095f3067171eefbbed612a3aa",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA3_384_HMAC",
+    "key_type": "CKK_SHA3_384_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_384_test.json",
+      "source_sha256": "66423781ae4aa991b8b457b7736659604fffd46688001ca749f444da18f06728",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  },
+  {
+    "id": "object.key_type.CKK_SHA3_512_HMAC",
+    "file": "fe817db5ccbbb32c70c7da02ebd80675d2a26c66d04299c9610159166c09e05c.txt",
+    "sha256": "fe817db5ccbbb32c70c7da02ebd80675d2a26c66d04299c9610159166c09e05c",
+    "worker_mode": "mac-vector",
+    "mechanism": "CKM_SHA3_512_HMAC",
+    "key_type": "CKK_SHA3_512_HMAC",
+    "route": "Session::compute_native_mac",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_512_test.json",
+      "source_sha256": "60cd4c3be286a9c6ce49d93ce6901762e3cd0ebbfc4f08ccfd5f2b595c641860",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "assertions": [
+        "Read class, dedicated key type, length, token, private, sign and verify.",
+        "Compute the full published tag, then verify it on the same object."
+      ]
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify"
+    ]
+  }
+]

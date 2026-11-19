@@ -1,0 +1,3 @@
+session
+provide_digest_output_capacity
+foreign

@@ -1,0 +1,518 @@
+[
+  {
+    "id": "engine.signature-format.ae42932804b4a731.empty",
+    "file": "7e2097211a0281765b3b43b29a9b72763cc439da71ad172d2a01671c870b66ff.txt",
+    "sha256": "7e2097211a0281765b3b43b29a9b72763cc439da71ad172d2a01671c870b66ff",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after empty signature; exact OK ABI status with invalid verdict. OpenSSL rejects empty signature during provider parameter installation before DER decoding. No native PKCS11 fallback.",
+    "transform": "empty"
+  },
+  {
+    "id": "engine.signature-format.ae42932804b4a731.truncated",
+    "file": "094d388084cf6fe68eb0b7fd6faa488d93e2bebb38ee59be3c9bc4393dbf148b.txt",
+    "sha256": "094d388084cf6fe68eb0b7fd6faa488d93e2bebb38ee59be3c9bc4393dbf148b",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "truncated"
+  },
+  {
+    "id": "engine.signature-format.ae42932804b4a731.trailing",
+    "file": "b778e76531a625049650a5a46aa155d1a67ca89de9ea612f9a3a714553e63f83.txt",
+    "sha256": "b778e76531a625049650a5a46aa155d1a67ca89de9ea612f9a3a714553e63f83",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "trailing"
+  },
+  {
+    "id": "engine.signature-format.ae42932804b4a731.wrong-tag",
+    "file": "368692deea746c81f30ab3b44d42abf5a0a80621f733616b99ecc9bdda1eadb0.txt",
+    "sha256": "368692deea746c81f30ab3b44d42abf5a0a80621f733616b99ecc9bdda1eadb0",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "wrong-tag"
+  },
+  {
+    "id": "engine.signature-format.ae42932804b4a731.nonminimal-length",
+    "file": "49c1ff043b3b781c64ee13afcc85d569ab74d0196f47d7bf756109b68b7262fb.txt",
+    "sha256": "49c1ff043b3b781c64ee13afcc85d569ab74d0196f47d7bf756109b68b7262fb",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "nonminimal-length"
+  },
+  {
+    "id": "engine.signature-format.ae42932804b4a731.zero-scalars",
+    "file": "db5a67dc077b1647fbd4b1360f4a57388b52918433934320f5277afd8987471d.txt",
+    "sha256": "db5a67dc077b1647fbd4b1360f4a57388b52918433934320f5277afd8987471d",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigVer-FIPS186-5/internalProjection.json",
+      "source_sha256": "45f9e9425e68b099d9c029e0e75ec04e9cc5943b60fa24cdb4d5af778f350b63",
+      "group": 4,
+      "case": 28,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b.txt",
+      "sha256": "ae42932804b4a73129e42494bf466545ce223fea79dab22d30025669fdc0498b"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "zero-scalars"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.empty",
+    "file": "3761b1e433a6b85ee9c053b254e827854ed2271e868a092d3d9f133b8870e94a.txt",
+    "sha256": "3761b1e433a6b85ee9c053b254e827854ed2271e868a092d3d9f133b8870e94a",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after empty signature; exact OK ABI status with invalid verdict. OpenSSL rejects empty signature during provider parameter installation before DER decoding. No native PKCS11 fallback.",
+    "transform": "empty"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.truncated",
+    "file": "8417bdb90bed0b375a45f20735b0b4370ce463288159fb8631633971aa7ef67d.txt",
+    "sha256": "8417bdb90bed0b375a45f20735b0b4370ce463288159fb8631633971aa7ef67d",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "truncated"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.trailing",
+    "file": "02ad98092e5de79dde0c8ca8f3082a9b6c7575fa906c3f8c581b18b445173096.txt",
+    "sha256": "02ad98092e5de79dde0c8ca8f3082a9b6c7575fa906c3f8c581b18b445173096",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "trailing"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.wrong-tag",
+    "file": "32fd1a9e44b2abfa4532bf80b69c80963a07a6ed4977b3bbd265c652a889e7dd.txt",
+    "sha256": "32fd1a9e44b2abfa4532bf80b69c80963a07a6ed4977b3bbd265c652a889e7dd",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "wrong-tag"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.nonminimal-length",
+    "file": "6bc38aa896e19875355476fb338fc0ce1dedebd071a0feb716c523607b412e9d.txt",
+    "sha256": "6bc38aa896e19875355476fb338fc0ce1dedebd071a0feb716c523607b412e9d",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "nonminimal-length"
+  },
+  {
+    "id": "engine.signature-format.a41948c64a986f71.zero-scalars",
+    "file": "0e2129f79f9afb8e72128ff47edb24707277d3da6f3e10b039fb7aea238d1ca8.txt",
+    "sha256": "0e2129f79f9afb8e72128ff47edb24707277d3da6f3e10b039fb7aea238d1ca8",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+      "group": 85,
+      "case": 841,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_control": {
+      "path": "vectors/engine-component/a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7.txt",
+      "sha256": "a41948c64a986f719fe8659a0512322c6a24d0ad3c256f9090cfd8f61479fae7"
+    },
+    "oracle": "Same published signature valid before and after the negative. Zero r/s is successful ABI verification with invalid verdict; five malformed DER partitions require ENGINE_FAILURE, never interpreted as a validity verdict. No native PKCS11 fallback.",
+    "transform": "zero-scalars"
+  }
+]

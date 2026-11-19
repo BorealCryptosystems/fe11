@@ -1,0 +1,636 @@
+[
+  {
+    "source": "rsa_oaep_2048_sha1_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha224_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha224_mgf1sha224_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha256_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha256_mgf1sha256_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha384_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha384_mgf1sha384_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha512_224_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha512_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_2048_sha512_mgf1sha512_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_3072_sha256_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_3072_sha256_mgf1sha256_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_3072_sha512_256_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_3072_sha512_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_3072_sha512_mgf1sha512_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_4096_sha256_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_4096_sha256_mgf1sha256_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_4096_sha512_mgf1sha1_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_4096_sha512_mgf1sha512_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "InvalidCiphertext": {
+        "bugType": "MISSING_STEP",
+        "description": "The test vector contains an invalid ciphertext. The test vectors distinguish between InvalidOaepPadding (cases where returning information about the error can lead to Manger's attack) and InvalidCiphertext (cases where the ciphertext is malformed and a decryption should not even be attempted.)"
+      },
+      "InvalidOaepPadding": {
+        "bugType": "CONFIDENTIALITY",
+        "description": "The test vector contains an invalid OAEP padding. Implementations must ensure that different error conditions cannot be distinguished, since otherwise Manger's attack against OAEP may be possible. ",
+        "links": [
+          "https://www.iacr.org/archive/crypto2001/21390229.pdf"
+        ],
+        "cves": [
+          "CVE-2020-26939"
+        ]
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      }
+    }
+  },
+  {
+    "source": "rsa_oaep_misc_test.json",
+    "header": [
+      "Test vectors of type RsaOeapDecrypt check decryption with OAEP."
+    ],
+    "notes": {
+      "Constructed": {
+        "bugType": "EDGE_CASE",
+        "description": "The test vector (i.e. seed and label) has been constructed so that the padded plaintext em has some special properties."
+      },
+      "EncryptionWithLabel": {
+        "bugType": "FUNCTIONALITY",
+        "description": "RSA-OAEP allows an optional parameter label, that is associated with the message. This test vector contains a ciphertext that was encrypted with a non-empty label."
+      },
+      "Normal": {
+        "bugType": "BASIC",
+        "description": "The test vector contains a pseudorandomly generated, valid test case. Implementations are expected to pass this test."
+      },
+      "SmallModulus": {
+        "bugType": "WEAK_PARAMS",
+        "description": "The key for this test vector has a modulus of size < 2048."
+      },
+      "SmallIntegerCiphertext": {
+        "bugType": "EDGE_CASE",
+        "description": "The ciphertext has an integer value of 1 or 0, which violates SP800-56Br2 7.1.2.1"
+      }
+    }
+  }
+]

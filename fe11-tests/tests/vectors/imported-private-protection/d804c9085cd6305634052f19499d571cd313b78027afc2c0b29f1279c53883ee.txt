@@ -1,0 +1,13 @@
+imported-private-attributes
+readable
+264
+17
+0|number|3
+256|number|64
+1|bool|false
+2|bool|false
+354|bool|true
+259|bool|false
+264|bool|true
+384|bytes|06032b6570
+17|bytes|60b9c57ea605c9147656883781ed28c847682faa3c7ad8fbe2fd9daf263c803c

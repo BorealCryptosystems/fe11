@@ -1,0 +1,11 @@
+CKK_DES2
+0123456789abcdeffedcba9876543210
+CKA_AC_ISSUER
+CKA_DECRYPT|bool|true
+CKA_ENCRYPT|bool|true
+CKA_COPYABLE|bool|true
+CKA_DERIVE|bool|false
+CKA_DESTROYABLE|bool|true
+CKA_ID|bytes|
+CKA_MODIFIABLE|bool|true
+CKA_WRAP_WITH_TRUSTED|bool|false

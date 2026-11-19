@@ -1,0 +1,554 @@
+[
+  {
+    "id": "negative.CKM_DSA_SHA3_224.sign.usage",
+    "file": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06.txt",
+    "sha256": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_224.verify.usage",
+    "file": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06.txt",
+    "sha256": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_224.verify.changed",
+    "file": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06.txt",
+    "sha256": "f0bdde7ca14220221621ba46d22fa841a00c6dfd5cbd4228129af995c45bdf06",
+    "worker_mode": "classical-changed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_256.sign.usage",
+    "file": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9.txt",
+    "sha256": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_256.verify.usage",
+    "file": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9.txt",
+    "sha256": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_256.verify.changed",
+    "file": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9.txt",
+    "sha256": "84c929c9c83010968d0753cc978084a7b0bc6b94389ae019e17d4913cdc15cd9",
+    "worker_mode": "classical-changed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_384.sign.usage",
+    "file": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522.txt",
+    "sha256": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_384.verify.usage",
+    "file": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522.txt",
+    "sha256": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_384.verify.changed",
+    "file": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522.txt",
+    "sha256": "29dc8139d1e59e2ec5a846621f2476954c7165a10a8f3da09cb53cdce7cea522",
+    "worker_mode": "classical-changed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_512.sign.usage",
+    "file": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214.txt",
+    "sha256": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_512.verify.usage",
+    "file": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214.txt",
+    "sha256": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA3_512.verify.changed",
+    "file": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214.txt",
+    "sha256": "beb17bdf15c70c37cf0ce8a49b5c08cf305b28f692ef4f886d1eedc006bcc214",
+    "worker_mode": "classical-changed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "public_key_control": "operation.CKM_DSA_SHA224.sign@Session::sign_native@DSA-SigGen-1.0.1.1",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": "Public ACVP p,q,g,y,x and message unchanged. SHA3 signature derived by the DSA equations with fixed PUBLIC TEST nonce1; it is not an original published signature. Modular verification and final-bit negative checked independently. Never use this nonce for operational signing."
+  }
+]

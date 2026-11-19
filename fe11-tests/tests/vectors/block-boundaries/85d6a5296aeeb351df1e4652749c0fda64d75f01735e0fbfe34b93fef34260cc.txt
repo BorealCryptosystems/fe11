@@ -1,0 +1,12 @@
+CKM_DES_CBC
+session
+decrypt
+9
+0123456789abcdef
+000102030405060708
+
+1234567890abcdef
+multipart
+local-length
+d93de8af2b1216c3
+0001020304050607

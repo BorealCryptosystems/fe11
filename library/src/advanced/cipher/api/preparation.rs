@@ -197,7 +197,7 @@ pub(in crate::advanced::cipher) fn start_retained<'a>(
         Ok(())
     };
     let authentication = session.snapshot.authentication_stamp();
-    let progress = session.advanced_preflight_at_epoch(authentication, &check_functions)?;
+    let progress = session.init_preflight_at_epoch(authentication, &check_functions)?;
     let request = if input.incremental {
         if route != MessageRoute::Multipart || !parts.is_empty() {
             return Err(Error::Rejected(crate::RejectionReason::CipherContinuation(
@@ -229,6 +229,11 @@ pub(in crate::advanced::cipher) fn start_retained<'a>(
     let mutates = matches!(parameters, Selection::Extension(source) if source.metadata().mutates_key)
         && super::super::key_preparation::reference(&key).is_some();
     loop {
+        session.entry.advanced_progress.prepare_init_slot(
+            session,
+            &progress,
+            direction.category(),
+        )?;
         // Retiring the registry on a terminal Init refusal must not destroy
         // this entire owner until session/key possession has unwound.
         let held: Arc<crate::advanced::ledger::OperationCell>;
@@ -355,6 +360,15 @@ pub(in crate::advanced::cipher) fn start_retained<'a>(
         session
             .snapshot
             .check_authentication_unchanged(authentication)?;
+        if !session.entry.advanced_progress.has_vacancy()
+            && access
+                .operations
+                .init_target(&session.entry, direction.category())?
+                .is_none()
+        {
+            drop(access);
+            continue;
+        }
         check_functions(&access)?;
         bound_revocation = match revocation.as_mut() {
             Some(prepared) => match prepared.bind(&access)? {
@@ -401,6 +415,7 @@ pub(in crate::advanced::cipher) fn start_retained<'a>(
             |_| {},
         )?;
         let ticket = OperationTicket {
+            restored_companions: Vec::new(),
             owner: session.inner.clone(),
             uid: session.uid,
             id,

@@ -1,0 +1,228 @@
+[
+  {
+    "id": "guard.KeyDerivationRejection::KeyHistoryClass@Session::key_history",
+    "file": "6667b2d1aab6a00caa5aee5af8ad9f1465e567abf1c209d15727d57b3e8f6e5f.txt",
+    "sha256": "6667b2d1aab6a00caa5aee5af8ad9f1465e567abf1c209d15727d57b3e8f6e5f",
+    "worker_mode": "admission-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyDerivation(KeyHistoryClass))",
+    "producer": "Create public CKO_DATA managed reference and keep creator session open.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "guard.KeyEncapsulationRejection::MlKemImportedKeyFamily@Session::admit_imported_kem_decapsulation_key",
+    "file": "d95b3eaaca5f791964caf3e45221164dabe9704b127402ee5676c947e6809431.txt",
+    "sha256": "d95b3eaaca5f791964caf3e45221164dabe9704b127402ee5676c947e6809431",
+    "worker_mode": "admission-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyEncapsulation(MlKemImportedKeyFamily))",
+    "producer": "Import the expanded private value and matching public value of the same published keyGen vector. Observe the actual native class/key type; request the opposite typed admission.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "ML-DSA-keyGen-FIPS204",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-keyGen-FIPS204/internalProjection.json",
+      "git_blob_sha1": "ebf2104da140b725675aea4cc47676c0536421f7",
+      "source_sha256": "e67ee6540d40e11506c3c4e3b1f79fc1cefcd49820db99fc61f87cc8ba463baf",
+      "subset_sha256": "8ce4830bb7945c766597074c06b5aec2ded2a545878ac7ce89970aef4370aa31",
+      "subset_path": "vectors\\ML-DSA-keyGen-FIPS204.json",
+      "groups": 3,
+      "selected_tests": 3,
+      "compressed_bytes": 20417,
+      "algorithm": "ML-DSA",
+      "mode": "keyGen",
+      "source_keys": [
+        "vsId",
+        "algorithm",
+        "mode",
+        "revision",
+        "isSample",
+        "testGroups"
+      ],
+      "selection": "First byte-aligned test of each validity/empty-message class per non-MCT group; deterministic subset of public NIST data",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "test_ids": [
+        {
+          "tgId": 1,
+          "tcIds": [
+            1
+          ],
+          "parameters": {
+            "tgId": 1,
+            "testType": "AFT",
+            "parameterSet": "ML-DSA-44"
+          }
+        },
+        {
+          "tgId": 2,
+          "tcIds": [
+            26
+          ],
+          "parameters": {
+            "tgId": 2,
+            "testType": "AFT",
+            "parameterSet": "ML-DSA-65"
+          }
+        },
+        {
+          "tgId": 3,
+          "tcIds": [
+            51
+          ],
+          "parameters": {
+            "tgId": 3,
+            "testType": "AFT",
+            "parameterSet": "ML-DSA-87"
+          }
+        }
+      ],
+      "group": 1,
+      "case": 1,
+      "private_representation": "expanded CKA_VALUE"
+    },
+    "design_producer": "Import valid ML-DSA44 seed/public from retained public vector through import_pqc_private_key; retain PqcImportedPrivateKey."
+  },
+  {
+    "id": "guard.PostQuantumKeysRejection::MlDsaImportedKeyFamily@Session::admit_imported_pqc_signing_key",
+    "file": "5a70cc8eee231b15f7d00e567a421e42b813c200c2a23599b5c7f639ef909130.txt",
+    "sha256": "5a70cc8eee231b15f7d00e567a421e42b813c200c2a23599b5c7f639ef909130",
+    "worker_mode": "admission-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PostQuantumKeys(MlDsaImportedKeyFamily))",
+    "producer": "Import the expanded private value and matching public value of the same published keyGen vector. Observe the actual native class/key type; request the opposite typed admission.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "ML-KEM-keyGen-FIPS203",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-keyGen-FIPS203/internalProjection.json",
+      "git_blob_sha1": "99973426c8dd03f227ace6d7ac917ba4443e2f27",
+      "source_sha256": "d7a62a2c3476957f56dd8d24f9004ea6776ccfe995ffe71a65bb9506dc9c7b1b",
+      "subset_sha256": "bff8c32c3671fc711c824f2059cb3d132c9bc6511e9ec1441ebeec3ddd9ad607",
+      "subset_path": "vectors\\ML-KEM-keyGen-FIPS203.json",
+      "groups": 3,
+      "selected_tests": 3,
+      "compressed_bytes": 8953,
+      "algorithm": "ML-KEM",
+      "mode": "keyGen",
+      "source_keys": [
+        "vsId",
+        "algorithm",
+        "mode",
+        "revision",
+        "isSample",
+        "testGroups"
+      ],
+      "selection": "First byte-aligned test of each validity/empty-message class per non-MCT group; deterministic subset of public NIST data",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+      "test_ids": [
+        {
+          "tgId": 1,
+          "tcIds": [
+            1
+          ],
+          "parameters": {
+            "tgId": 1,
+            "testType": "AFT",
+            "parameterSet": "ML-KEM-512"
+          }
+        },
+        {
+          "tgId": 2,
+          "tcIds": [
+            26
+          ],
+          "parameters": {
+            "tgId": 2,
+            "testType": "AFT",
+            "parameterSet": "ML-KEM-768"
+          }
+        },
+        {
+          "tgId": 3,
+          "tcIds": [
+            51
+          ],
+          "parameters": {
+            "tgId": 3,
+            "testType": "AFT",
+            "parameterSet": "ML-KEM-1024"
+          }
+        }
+      ],
+      "group": 1,
+      "case": 1,
+      "private_representation": "expanded CKA_VALUE"
+    },
+    "design_producer": "Import valid ML-KEM512 seed/public through import_pqc_private_key; retain PqcImportedPrivateKey."
+  }
+]

@@ -253,24 +253,46 @@ impl State {
                     ))
                 })?;
         }
-        // No native calls or alias-registry acquisition under this short mutex.
+        // Invalidate every snapshot before fallible publication. One poisoned
+        // authentication observation must not leave a later snapshot usable.
         for t in registry
             .tokens
             .iter()
             .filter(|t| t.capabilities.identity.slot == slot as u64)
         {
             t.invalidate();
-            t.forget_authentication()?;
+        }
+        let mut failure = None;
+        // No native calls or alias-registry acquisition under this short mutex.
+        for t in registry
+            .tokens
+            .iter()
+            .filter(|t| t.capabilities.identity.slot == slot as u64)
+        {
+            if let Err(error) = t.forget_authentication() {
+                if failure.is_none() {
+                    failure = Some(error);
+                }
+            }
             if let Some(generations) = generations.as_mut() {
                 generations.push(t.generation);
             }
         }
-        let revision = registry.advance();
+        // Even a failed authentication reset must invalidate a discovery that
+        // captured the old registry revision before taking the slot writer.
+        if let Err(error) = registry.advance() {
+            if failure.is_none() {
+                failure = Some(error);
+            }
+        }
         drop(registry);
-        revision.map_err(|error| {
-            self.native.mark_uncertain();
-            error
-        })
+        match failure {
+            Some(error) => {
+                self.native.mark_uncertain();
+                Err(error)
+            }
+            None => Ok(()),
+        }
     }
 }
 

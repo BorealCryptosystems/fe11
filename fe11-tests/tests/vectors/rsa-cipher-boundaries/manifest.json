@@ -1,0 +1,882 @@
+[
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.encrypt.0",
+    "file": "0e22e7b0cea9f95363dd8b5366dd6ff821c0770ccaabaab21cdf5ea9ae4827ee.txt",
+    "sha256": "0e22e7b0cea9f95363dd8b5366dd6ff821c0770ccaabaab21cdf5ea9ae4827ee",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "0",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.decrypt.0",
+    "file": "a20aa4222607e7efc0f96f2beb1d1d5b38a4ee9422c0a8f82fae3159eb87684f.txt",
+    "sha256": "a20aa4222607e7efc0f96f2beb1d1d5b38a4ee9422c0a8f82fae3159eb87684f",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "0",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.encrypt.1",
+    "file": "cb06f4399fc5481b5ebb5f34f181012bafa16e9179c647487211224981e9536f.txt",
+    "sha256": "cb06f4399fc5481b5ebb5f34f181012bafa16e9179c647487211224981e9536f",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "1",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.decrypt.1",
+    "file": "eba1322914bee685e79061439908b2f6f7cb0445bc47c74bca9df1a516038590.txt",
+    "sha256": "eba1322914bee685e79061439908b2f6f7cb0445bc47c74bca9df1a516038590",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "1",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.encrypt.245",
+    "file": "edca75df229c7a183b9063543d62c56406c47d457521bf5df411ec4c06eb28e0.txt",
+    "sha256": "edca75df229c7a183b9063543d62c56406c47d457521bf5df411ec4c06eb28e0",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "245",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.decrypt.245",
+    "file": "3d1e49c7d7ef5593af34445c81e0eb77e66eb21447ef16ae044c099be449a6a5.txt",
+    "sha256": "3d1e49c7d7ef5593af34445c81e0eb77e66eb21447ef16ae044c099be449a6a5",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "245",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_PKCS.encrypt.246",
+    "file": "84956e01826335243242fbb9f55b977f89aea11c2c23b40b4b96941cc83b4fa3.txt",
+    "sha256": "84956e01826335243242fbb9f55b977f89aea11c2c23b40b4b96941cc83b4fa3",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "246",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_X_509.encrypt.n-minus-one",
+    "file": "ebcb92dc809812665f7d7c55ac0ae70c0b3a856869338a40d688313c60e939ae.txt",
+    "sha256": "ebcb92dc809812665f7d7c55ac0ae70c0b3a856869338a40d688313c60e939ae",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-minus-one",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_X_509.decrypt.n-minus-one",
+    "file": "b717c70aa1be47d3aeb276106af73dbfad10f6324360d13e16068b7b1e78afe5.txt",
+    "sha256": "b717c70aa1be47d3aeb276106af73dbfad10f6324360d13e16068b7b1e78afe5",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "decrypt",
+    "partition": "n-minus-one",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_X_509.encrypt.n-plus-0",
+    "file": "21d0274c7af0b1e4c03ad956bd46258f2ead64a0e1d16bae5516c33bcabd88e9.txt",
+    "sha256": "21d0274c7af0b1e4c03ad956bd46258f2ead64a0e1d16bae5516c33bcabd88e9",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-plus-0",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.session.CKM_RSA_X_509.encrypt.n-plus-1",
+    "file": "71972e2a40500d8233d5d695a145fe16203fb2f3428fd9034379ee9ba3b21a4a.txt",
+    "sha256": "71972e2a40500d8233d5d695a145fe16203fb2f3428fd9034379ee9ba3b21a4a",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "session",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-plus-1",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.encrypt.0",
+    "file": "e90a7e4c692d60c50db6abf9d57c6bf1c66a01654ae9ba9cc2cedb04aa81efc1.txt",
+    "sha256": "e90a7e4c692d60c50db6abf9d57c6bf1c66a01654ae9ba9cc2cedb04aa81efc1",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "0",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.decrypt.0",
+    "file": "60f347591d20edad3dda7a0606f6aaa6f6211b5ebb8efffacec4a0500af4d45b.txt",
+    "sha256": "60f347591d20edad3dda7a0606f6aaa6f6211b5ebb8efffacec4a0500af4d45b",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "0",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.encrypt.1",
+    "file": "41951f2a210acb0cd4f5c44af58bfc605c3b3b4c65f5d15f84507dd2b67be75b.txt",
+    "sha256": "41951f2a210acb0cd4f5c44af58bfc605c3b3b4c65f5d15f84507dd2b67be75b",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "1",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.decrypt.1",
+    "file": "27d7c3c9f5e8670638029f0c705a61353cf42e732aef9c56dd7839cb7e4198f5.txt",
+    "sha256": "27d7c3c9f5e8670638029f0c705a61353cf42e732aef9c56dd7839cb7e4198f5",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "1",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.encrypt.245",
+    "file": "fc75b325d8615be4dcc9a0a46f919a1ea433409634a5babc9117d98c836c2a72.txt",
+    "sha256": "fc75b325d8615be4dcc9a0a46f919a1ea433409634a5babc9117d98c836c2a72",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "245",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.decrypt.245",
+    "file": "74de705d1d181ae6439150a967c896d5449ed49f7ba77b8fff7d8116da94ae25.txt",
+    "sha256": "74de705d1d181ae6439150a967c896d5449ed49f7ba77b8fff7d8116da94ae25",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "decrypt",
+    "partition": "245",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_PKCS.encrypt.246",
+    "file": "5b8decacaefe1f7d4a1c7dc6c0c5beea179f00b950dc9388ec4e8573d641ba61.txt",
+    "sha256": "5b8decacaefe1f7d4a1c7dc6c0c5beea179f00b950dc9388ec4e8573d641ba61",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_PKCS",
+    "action": "encrypt",
+    "partition": "246",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_X_509.encrypt.n-minus-one",
+    "file": "dca590f8696dbc3259bd9d56ff02622456ec39ccd857fcba18348e704a86e4e3.txt",
+    "sha256": "dca590f8696dbc3259bd9d56ff02622456ec39ccd857fcba18348e704a86e4e3",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-minus-one",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_X_509.decrypt.n-minus-one",
+    "file": "92f1f3a89a52af5c6b22f5548dc79f77b46ad797bb350936d37f6cea67a2078d.txt",
+    "sha256": "92f1f3a89a52af5c6b22f5548dc79f77b46ad797bb350936d37f6cea67a2078d",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "decrypt",
+    "partition": "n-minus-one",
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_X_509.encrypt.n-plus-0",
+    "file": "0693bc375e4ce4939db5822c733d30cd1a06256e4f11fef40579ee102c31d723.txt",
+    "sha256": "0693bc375e4ce4939db5822c733d30cd1a06256e4f11fef40579ee102c31d723",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-plus-0",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  },
+  {
+    "id": "rsa.cipher-boundary.advanced.CKM_RSA_X_509.encrypt.n-plus-1",
+    "file": "4b18e0617284139af9eb642f62b31c423dcf006c8bdb1405036ea142193fa18c.txt",
+    "sha256": "4b18e0617284139af9eb642f62b31c423dcf006c8bdb1405036ea142193fa18c",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "facade": "advanced",
+    "mechanism": "CKM_RSA_X_509",
+    "action": "encrypt",
+    "partition": "n-plus-1",
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "public_key": "RSA-REFERENCE-VECTORS.json",
+      "key_sha256": "4dba7cc000f7c95c4c470222fe5988349c0e03bf695113ec09995b8b7335e821",
+      "standard": "RFC8017 sections5.1,7.2; PKCS#11 RSA_PKCS and RSA_X_509"
+    },
+    "oracle": "Exact deterministic modular output or independent private RSA decoding for randomized PKCS ciphertext. Length overflow requires DATA_LEN_RANGE. Raw representative n/n+1 must reach C_Encrypt and refuse with native GENERAL_ERROR; no silently reduced result."
+  }
+]

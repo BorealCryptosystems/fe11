@@ -1,0 +1,151 @@
+[
+  {
+    "id": "boundary.KeyTransportRejection::CWrapKeyAuthenticatedUnavailableInSelectedInterface@Session::wrap_key",
+    "file": "aa99c92e4860b722994fd06ac93c1405817fba4a48336925573a57236ace3bdd.txt",
+    "sha256": "aa99c92e4860b722994fd06ac93c1405817fba4a48336925573a57236ace3bdd",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(KeyTransport(CWrapKeyAuthenticatedUnavailableInSelectedInterface))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.KeyTransportRejection::CUnwrapKeyAuthenticatedUnavailableInSelectedInterface@Session::unwrap_symmetric_key",
+    "file": "602bd56680f1c97596f330f7a38609a1e730bb92a9b3f0c5b8d9781f60b8c13a.txt",
+    "sha256": "602bd56680f1c97596f330f7a38609a1e730bb92a9b3f0c5b8d9781f60b8c13a",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(KeyTransport(CUnwrapKeyAuthenticatedUnavailableInSelectedInterface))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "parameter-boundary.PersistenceRejection::UnsupportedAuthenticatedRecordKind",
+    "file": "be30abca673a9272d61a7c2bb2725fb17673f9a0bd10d38222d290036180a518.txt",
+    "sha256": "be30abca673a9272d61a7c2bb2725fb17673f9a0bd10d38222d290036180a518",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Persistence(UnsupportedAuthenticatedRecordKind))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "wrap.declaration.gcm.identity",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "file": "8933514e005cbe060f69975d58cd343dfb8e9720aaf6d27b8010eb5a9313fa99.txt",
+    "sha256": "8933514e005cbe060f69975d58cd343dfb8e9720aaf6d27b8010eb5a9313fa99",
+    "layout_identity": "CK_GCM_PARAMS",
+    "oracle": "With real objects, require MechanismExtensionModuleFunctionMismatch for a prior module and for an UnwrapKey declaration on WrapKey. With the same module and WrapKey require HistoricalTransportMechanismLayoutMismatch for a different mechanism. Require zero C_WrapKey entries and complete cleanup.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "wrap.declaration.gcm-short.identity",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "file": "9222eca156868072a5cb19302f4df597e113b0b7accf54905c64b61cbafdd4bf.txt",
+    "sha256": "9222eca156868072a5cb19302f4df597e113b0b7accf54905c64b61cbafdd4bf",
+    "layout_identity": "GCM without ulIvBits",
+    "oracle": "With real objects, require MechanismExtensionModuleFunctionMismatch for a prior module and for an UnwrapKey declaration on WrapKey. With the same module and WrapKey require HistoricalTransportMechanismLayoutMismatch for a different mechanism. Require zero C_WrapKey entries and complete cleanup.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "wrap.declaration.ccm.identity",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240"
+    ],
+    "file": "7ed80cd37573cf8e5e7eeb1e6596f7cc8905a321a40ff9c0b6842cad5c6ed2a8.txt",
+    "sha256": "7ed80cd37573cf8e5e7eeb1e6596f7cc8905a321a40ff9c0b6842cad5c6ed2a8",
+    "layout_identity": "CK_CCM_PARAMS",
+    "oracle": "With real objects, require MechanismExtensionModuleFunctionMismatch for a prior module and for an UnwrapKey declaration on WrapKey. With the same module and WrapKey require HistoricalTransportMechanismLayoutMismatch for a different mechanism. Require zero C_WrapKey entries and complete cleanup.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

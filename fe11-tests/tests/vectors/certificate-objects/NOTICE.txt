@@ -1,0 +1,5 @@
+Public certificate fixture: OpenSSL openssl-3.5.9 test/certs/ca-cert.pem (Apache-2.0).
+Public packet fixture: RFC 9580 Appendix A.1 numerical example.
+Exact source URLs and SHA-256 digests are in manifest.json.
+X.509 subject, issuer and serial are extracted verbatim as DER values.
+The OpenPGP certificate type is an explicit extension, not a standard PKCS#11 certificate type.

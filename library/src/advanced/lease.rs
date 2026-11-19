@@ -44,10 +44,15 @@ impl Identity {
     // The borrowed proof can only be constructed after close_entry owns this
     // session's gate and its slot writer. It excludes lease destruction and
     // replacement without locking the (possibly poisoned) Operation body.
-    pub(super) fn classify(&self, proof: &crate::session::CloseOwnership<'_>) -> Result<()> {
+    pub(super) fn classify(
+        &self,
+        proof: &crate::session::CloseOwnership<'_>,
+        ticket: u64,
+    ) -> Result<()> {
         let entry = proof.entry();
         let domain = &entry.snapshot.domain;
-        let ticket = entry.advanced_operation.load(Ordering::Acquire);
+        // The registered cell supplies its ticket; session occupation alone
+        // cannot distinguish two leases on the same native handle.
         if !self.matches(entry)
             || ticket == 0
             || domain.advanced_count_invalid.load(Ordering::Acquire)
@@ -116,23 +121,22 @@ impl Identity {
     pub(super) fn prove_stranded(
         &self,
         ledger: &crate::session_budget::SessionLedger,
+        resident_ticket: u64,
     ) -> Result<()> {
         let Binding::Bound { uid, entry, .. } = &self.binding else {
             return Err(Error::Rejected(crate::RejectionReason::ModuleLifecycle(
                 crate::ModuleLifecycleRejection::RecoveryOwnerMismatch,
             )));
         };
-        if self.class.load(Ordering::Acquire) != LeaseClass::Stranded as u8 {
+        if self.class.load(Ordering::Acquire) != LeaseClass::Stranded as u8
+            || resident_ticket == 0
+            || self.proof_ticket.load(Ordering::Acquire) != resident_ticket
+        {
             return Err(Error::Rejected(crate::RejectionReason::ModuleLifecycle(
                 crate::ModuleLifecycleRejection::RecoveryOwnerMismatch,
             )));
         }
-        ledger.prove_stranded(
-            *uid,
-            entry,
-            self.proof_ticket.load(Ordering::Acquire),
-            |entry| self.matches(entry),
-        )
+        ledger.prove_stranded(*uid, entry, resident_ticket, |entry| self.matches(entry))
     }
 
     pub(super) fn matches(&self, entry: &SessionEntry) -> bool {

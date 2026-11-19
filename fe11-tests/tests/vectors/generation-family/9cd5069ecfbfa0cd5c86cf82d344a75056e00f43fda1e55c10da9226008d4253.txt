@@ -1,0 +1,3 @@
+typed_generate_transport_signing_key_pair
+IDLE
+init

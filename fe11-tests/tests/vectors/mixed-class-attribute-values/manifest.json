@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "attribute.mixed.P11AESSecretKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "5d2e11fae78dc3a1c6791a5911dda649a16716991cdebe41fe7c3b0026b9ac80.txt",
+    "sha256": "5d2e11fae78dc3a1c6791a5911dda649a16716991cdebe41fe7c3b0026b9ac80",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "fa0d13cfadb01704b7474a5271a1fb6b6fcc454ad4c74d99b0382ab9b3ee81c5"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_GENERIC_SECRET",
+    "worker_mode": "attribute-mixed-values",
+    "file": "edaaa0de9dc3b255594b6628517dbed48835db2d777294eabb4e2793bcf7632a.txt",
+    "sha256": "edaaa0de9dc3b255594b6628517dbed48835db2d777294eabb4e2793bcf7632a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "3f3c7da92d0931d25c928d6eb8ed360133b90bc174cf77c268f321d475c494af"
+  },
+  {
+    "id": "attribute.mixed.P11RSAPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "8e91d005ed7e58fbab2091736b7ebdff97d74d2b60beb5c4b81d06165a210efe.txt",
+    "sha256": "8e91d005ed7e58fbab2091736b7ebdff97d74d2b60beb5c4b81d06165a210efe",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "2b47b491690826b8dd839d5901dd888c50492acd54af6ebbeb007f395ec0b052"
+  },
+  {
+    "id": "attribute.mixed.P11RSAPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "d8cd10b4a65c8f5b726d0153ebfb8cd47f924f00fb5a2c04c1ac66092c1217ed.txt",
+    "sha256": "d8cd10b4a65c8f5b726d0153ebfb8cd47f924f00fb5a2c04c1ac66092c1217ed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "931e89f06167906f5a0bf3c66754c518945f42f62e2f1ff1fd8559eaf2a3da08"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_MD5_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "9498311183401e2a7f49d17cdf5224ce6284368d886d700cfc9846b2fd48a5c7.txt",
+    "sha256": "9498311183401e2a7f49d17cdf5224ce6284368d886d700cfc9846b2fd48a5c7",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "a72edddafbd06096eab2ae7535fe584513c5bf55f11cbfbf8b776e750d25108f"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA_1_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "319388081ff62cd01d28d969d3e709e791b127289c019cdd6c5a4a006d461695.txt",
+    "sha256": "319388081ff62cd01d28d969d3e709e791b127289c019cdd6c5a4a006d461695",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "2860cba17a2692d086734ec291ec72d2e8450afe67d0ac64b41857163f0eb3e4"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA224_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "fef1b088ff87afc92fb159b1c416ced114833b3463c8d813a20f625e49fb3686.txt",
+    "sha256": "fef1b088ff87afc92fb159b1c416ced114833b3463c8d813a20f625e49fb3686",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "e573e8b686bf8528388731ea0b4eecd7ac715e3f503bec344a37f6583aca3a79"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA256_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "f83bbd2ba4df20d10b759bd5fb7e658b5802fbf0ff4af2fcd777bc2e6558e4a9.txt",
+    "sha256": "f83bbd2ba4df20d10b759bd5fb7e658b5802fbf0ff4af2fcd777bc2e6558e4a9",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "dfc745fcf657244ee35ac8800a5ff56c07d71dac3923ddbdd3fc8b87abe2eb83"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA384_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "b1acd92a4d84f55fd4ed27cbd723e891f526a60a10fb295829fec21a31a0afda.txt",
+    "sha256": "b1acd92a4d84f55fd4ed27cbd723e891f526a60a10fb295829fec21a31a0afda",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "c5d86b5511d0c7658783491a4f483a90f602d805c78291230da2c6fc3dd4f6e3"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA512_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "fc97f50131f39d751ebf628c342df0204af52d5645f337b90c045c56cdf30df3.txt",
+    "sha256": "fc97f50131f39d751ebf628c342df0204af52d5645f337b90c045c56cdf30df3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "5dfe47c1f529a3ecb58e98a8cfb54427759b6ff8e8e0624501784cdc1f1b01d6"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA3_224_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "c2c72684061e0497398722a83805a02ca6f9a2e8b173564ecb8d0254ccacabc4.txt",
+    "sha256": "c2c72684061e0497398722a83805a02ca6f9a2e8b173564ecb8d0254ccacabc4",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "a4b509eb13a602703bcb7e674208b9baf35c28eb4d03d74989708e42e6aa7019"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA3_256_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "b32d9c75b9ac004399bb7d969297862f7dfc5d424507b0f07b493a2449a7c347.txt",
+    "sha256": "b32d9c75b9ac004399bb7d969297862f7dfc5d424507b0f07b493a2449a7c347",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "900915a8d675b394759c9ffad5fcde2c39f3789e46cca4b9da031b770ec7fe6c"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA3_384_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "24c9bf5d094eb4916e2ea30dfc1b1289d03e2d0f779ba5bba4b6262d14d83f46.txt",
+    "sha256": "24c9bf5d094eb4916e2ea30dfc1b1289d03e2d0f779ba5bba4b6262d14d83f46",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "a2ae5b5fd6790ce610c07c12799d646ddd5d6fde8fb49179ae39c99f96dcf10c"
+  },
+  {
+    "id": "attribute.mixed.P11GenericSecretKeyObj.CKK_SHA3_512_HMAC",
+    "worker_mode": "attribute-mixed-values",
+    "file": "3e00989fff8887d4a2a38eb28a6309df59bd6a58f0508d8e0ec4a36b3b14c366.txt",
+    "sha256": "3e00989fff8887d4a2a38eb28a6309df59bd6a58f0508d8e0ec4a36b3b14c366",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "4da0f0dd296df7db0a636c07f87711f4a5a4bdefff2c2c04e2e50380e8ff274c"
+  },
+  {
+    "id": "attribute.mixed.P11DESSecretKeyObj.CKK_DES",
+    "worker_mode": "attribute-mixed-values",
+    "file": "a90b16ded5108e9e59306df208b1a816f881566b32062123a380c29a7b999f12.txt",
+    "sha256": "a90b16ded5108e9e59306df208b1a816f881566b32062123a380c29a7b999f12",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "3223768be9886fe66f8d3f713951460a4e10b0a4c17e7f243a1b0e3fdc568152"
+  },
+  {
+    "id": "attribute.mixed.P11DESSecretKeyObj.CKK_DES2",
+    "worker_mode": "attribute-mixed-values",
+    "file": "d35cf6e6c88d1a754b7ddf948b1db7bbb78d6415a5853b7a964be6fbb38d92d3.txt",
+    "sha256": "d35cf6e6c88d1a754b7ddf948b1db7bbb78d6415a5853b7a964be6fbb38d92d3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "92497ba86c4ccbc0e776c853abf21be095eb57d840fb346e667bfd5e83b1c8d1"
+  },
+  {
+    "id": "attribute.mixed.P11DESSecretKeyObj.CKK_DES3",
+    "worker_mode": "attribute-mixed-values",
+    "file": "09e4f489509b0c8a47de7323c18f7c04b30f6bcb543f7212d5190d7765aa78b6.txt",
+    "sha256": "09e4f489509b0c8a47de7323c18f7c04b30f6bcb543f7212d5190d7765aa78b6",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "0562390610d9289e7b5965b11bc2f9a951d76fa13caf553fc97171bc0c8c8e1f"
+  },
+  {
+    "id": "attribute.mixed.P11DHPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "1eb75737b9cdf2dcbacc0be4a9a922c6a785b753786f9268c56b1d427a83f607.txt",
+    "sha256": "1eb75737b9cdf2dcbacc0be4a9a922c6a785b753786f9268c56b1d427a83f607",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "337eae749b00f1e5e936f7ca3ddb931f0a4cbbcd9aa4e0a1bb8171532290b238"
+  },
+  {
+    "id": "attribute.mixed.P11DSAPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "30b277039d1eca118e093a59f39c6e4d5785e4e00b34d695402490758ff2cb8c.txt",
+    "sha256": "30b277039d1eca118e093a59f39c6e4d5785e4e00b34d695402490758ff2cb8c",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "f0ad531a0172e8b7fe99d42abf702dfa45fb92ffbef7c0042568d5dd53671a99"
+  },
+  {
+    "id": "attribute.mixed.P11ECPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "1b4f1fc9f9624f275032ff622e21a455517bdd1981dfabfcc86d7e673d083fe3.txt",
+    "sha256": "1b4f1fc9f9624f275032ff622e21a455517bdd1981dfabfcc86d7e673d083fe3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "9cd1e09b32ac8a25c0cefe7616785b60467f812651cef92acfcfea306f2bd277"
+  },
+  {
+    "id": "attribute.mixed.P11EDPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "8e5124c5bc1c3975be18f9779e376b9368b0f50d6818779813e109f4e00f53b6.txt",
+    "sha256": "8e5124c5bc1c3975be18f9779e376b9368b0f50d6818779813e109f4e00f53b6",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "52cf35fce473fdc2cbf59427184f43f512a7d61d3b78710cf65b12f8a0efb19f"
+  },
+  {
+    "id": "attribute.mixed.P11GOSTPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "004c3db256a64dceb644f09109936c0ea323ef36051b3dbb39bac16a2884a879.txt",
+    "sha256": "004c3db256a64dceb644f09109936c0ea323ef36051b3dbb39bac16a2884a879",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "61a4c3bfeb8d6886ec66a9c29214be9b20e4e4161ef3da81a3f52444eae96121"
+  },
+  {
+    "id": "attribute.mixed.P11MLKEMPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "b9256105ef019847d98b4c7ccbb5cc6131b83e9fd461455afa8554603858d111.txt",
+    "sha256": "b9256105ef019847d98b4c7ccbb5cc6131b83e9fd461455afa8554603858d111",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "5a49a8274a0488288ee159a6c5a40a7fb35fc0f4e23d4747a4769ae158bc1114"
+  },
+  {
+    "id": "attribute.mixed.P11X509CertificateObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "b27ae99404aceb20ce8b60089583e4c3eaf017a8766ac75a8f236c90e9670788.txt",
+    "sha256": "b27ae99404aceb20ce8b60089583e4c3eaf017a8766ac75a8f236c90e9670788",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "865e3b86c7d6404f7b9defdff15537a811de3186dc05f5ce2d787b5a516d2d2a"
+  },
+  {
+    "id": "attribute.mixed.P11OpenPGPPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "1f8a3b64193e46fe59edf1db6a7669ae971f05308d64d4d07155eb202292ff63.txt",
+    "sha256": "1f8a3b64193e46fe59edf1db6a7669ae971f05308d64d4d07155eb202292ff63",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "0bdbd93f2a97db2dacaabd0a92e45f723562c53f097aa6fe6260623720cf330b"
+  },
+  {
+    "id": "attribute.mixed.P11DHDomainObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "4f820b232734aea303d21b11aaf26330aa395363f2f8daa704f917a855271287.txt",
+    "sha256": "4f820b232734aea303d21b11aaf26330aa395363f2f8daa704f917a855271287",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "4072d9d0d015c8027013148af57ad5aab35ff0321c85863209111443a4dddfd7"
+  },
+  {
+    "id": "attribute.mixed.P11DHPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "29a6a456b3c55fc7a29ab4b7862022539088ac670666eea5243bdcb960865d24.txt",
+    "sha256": "29a6a456b3c55fc7a29ab4b7862022539088ac670666eea5243bdcb960865d24",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "e08ece5be59a8f7b3c00824e3a3ced4d488b9a25e48a1b985ac01dc635002070"
+  },
+  {
+    "id": "attribute.mixed.P11DSADomainObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "a063b955fa60662a559b37f02097d14e982e656416c18f7fad3f4e24dc2c3749.txt",
+    "sha256": "a063b955fa60662a559b37f02097d14e982e656416c18f7fad3f4e24dc2c3749",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "c0f7ab5380c9562d1ed42f6099aadc7602e6bf56f44da43a14c422563e694b67"
+  },
+  {
+    "id": "attribute.mixed.P11DSAPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "4a380389017a7fa20f1e642aa4015ed26cc6fbfd8b20b75b1e16740163531625.txt",
+    "sha256": "4a380389017a7fa20f1e642aa4015ed26cc6fbfd8b20b75b1e16740163531625",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "9f706f7a4d405c677c502e47e22afaaae917da8c01ca304cc08f5f1dbd33d6b1"
+  },
+  {
+    "id": "attribute.mixed.P11EDPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "c56f9f79e726d6c927be4a6611c289121ae1c6f5ceda8b9abb7e3884a101062b.txt",
+    "sha256": "c56f9f79e726d6c927be4a6611c289121ae1c6f5ceda8b9abb7e3884a101062b",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "c28705b2bd2be11d878ee779cfda3470a510a01886fabfa4eff55cc0ade4f9fd"
+  },
+  {
+    "id": "attribute.mixed.P11ECPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "e6c9895d64d3e4804facac6edc2ad60c580037e851c4b5576b15d166f392f007.txt",
+    "sha256": "e6c9895d64d3e4804facac6edc2ad60c580037e851c4b5576b15d166f392f007",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "9f3ec7b132ad4560dd5e42ec432e7d8dc58a7530ca4f07e14ca70ce53be3b715"
+  },
+  {
+    "id": "attribute.mixed.P11MLDSAPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "291f544c32e42ec78cc1551c243f6fc60403c5b393bd1744732d6e1b13562a4a.txt",
+    "sha256": "291f544c32e42ec78cc1551c243f6fc60403c5b393bd1744732d6e1b13562a4a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "0a1d4ad8bbb648f22a80f5a2fd350bb470f15903018a88cd7a84d492491765ca"
+  },
+  {
+    "id": "attribute.mixed.P11MLDSAPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "5f297a5bef87c9bab6e100968f519f25800c6ba93a6bda96a341ef80c372d922.txt",
+    "sha256": "5f297a5bef87c9bab6e100968f519f25800c6ba93a6bda96a341ef80c372d922",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "e01569d193e009f640a2de1aaa6dbf72ca7f7feb6729614926a05d8a92c05e64"
+  },
+  {
+    "id": "attribute.mixed.P11SLHDSAPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "4604d571d7881eeacc2f67ef4bf894c92e46ca92284178976cbd5b20a2b1247a.txt",
+    "sha256": "4604d571d7881eeacc2f67ef4bf894c92e46ca92284178976cbd5b20a2b1247a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "852721b3e97b3bb8098a792c8309a6ee3b69a0efc78bbaef0cc79ecba8f56256"
+  },
+  {
+    "id": "attribute.mixed.P11SLHDSAPrivateKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "6033bdf34bbd7d068321441fbd954c616ea6e54afc658e85fe3b247f93dd472f.txt",
+    "sha256": "6033bdf34bbd7d068321441fbd954c616ea6e54afc658e85fe3b247f93dd472f",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "f7884927a88ae3a970a910bdcd0398c6458a906deddaed13cf2421adaa7aae3d"
+  },
+  {
+    "id": "attribute.mixed.P11MLKEMPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "c8f5499d455ab6f958fd763f3268d2487250a605a83b89bf4166e7885f2af472.txt",
+    "sha256": "c8f5499d455ab6f958fd763f3268d2487250a605a83b89bf4166e7885f2af472",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "324259578e2d387f965f3f3cae9b9be00ce865b9f5150117f2408ab04d46e4b1"
+  },
+  {
+    "id": "attribute.mixed.P11GOSTPublicKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "47867ca670c9feae21a1aba2b53f9f7bda6aa56c71d95e001dd55b6fc8a82eee.txt",
+    "sha256": "47867ca670c9feae21a1aba2b53f9f7bda6aa56c71d95e001dd55b6fc8a82eee",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "b499ef1c8d25ad6dc3bc7f278e240d894f28e04d1edba81d13c57c48e51fa034"
+  },
+  {
+    "id": "attribute.mixed.P11GOSTSecretKeyObj",
+    "worker_mode": "attribute-mixed-values",
+    "file": "40dc3082a5931f089d0c77e7bf4695b992d8ad70da496327365484d33e71edad.txt",
+    "sha256": "40dc3082a5931f089d0c77e7bf4695b992d8ad70da496327365484d33e71edad",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_GetAttributeValue"
+    ],
+    "oracle": "One grouped native read preserves the identity, order and exact bytes of each available entry and reports unresolved individual reasons on unavailable entries. A repeated selector remains physically distinct.",
+    "source_template_sha256": "6461e588f7bc8cd0f1feeed5305085ac124c3b1144070fc9d593190e11f07efa"
+  }
+]

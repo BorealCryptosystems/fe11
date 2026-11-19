@@ -26,7 +26,7 @@ impl AdvancedSession {
             )));
         }
         let access = self.session.advanced_access()?;
-        let operation = access.operations.get(self.session.uid)?;
+        let operation = access.operations.get_ticket(self.session.uid, ticket.id)?;
         let operation = operation.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -94,6 +94,10 @@ impl AdvancedSession {
     /// Authenticate one retained initialized operation using an owned request.
     /// Its PIN/name are erased on ordinary release, including ticket refusal.
     /// Cooperative pacing leaves the owner available between Init and use.
+    /// If another operation could own the active key, the request returns
+    /// [`crate::AuthenticationRejection::AmbiguousContextKey`] before sending
+    /// the PIN. [`Self::authenticate_session_context`] submits it at session
+    /// scope when the application controls the ordering of the operations.
     pub fn authenticate_context(
         &self,
         ticket: &OperationTicket,
@@ -103,7 +107,61 @@ impl AdvancedSession {
     }
 }
 
+impl AdvancedSession {
+    /// Submit contextual authentication for the native session. The module
+    /// selects the active key; no Rust operation ticket is authenticated by
+    /// this method. See [`Session::authenticate_session_context`].
+    pub fn authenticate_session_context(
+        &self,
+        authentication: crate::ContextAuthentication,
+    ) -> Result<()> {
+        self.session.authenticate_session_context(authentication)
+    }
+}
+
 impl Session {
+    /// Call C_Login or C_LoginUser with CKU_CONTEXT_SPECIFIC on this session.
+    ///
+    /// The module selects the active key and returns the native outcome. Use
+    /// [`Self::authenticate_context`] to identify an operation by its ticket.
+    /// Callers ordering native operations themselves can use this method even
+    /// when Fe11 has no active ticket for the session. An incorrect PIN can
+    /// consume a native retry and CKR_PIN_LOCKED has a token-wide logout effect.
+    /// An existing ticket-scoped binding remains associated with its operation
+    /// until native termination is established.
+    pub fn authenticate_session_context(
+        &self,
+        authentication: crate::ContextAuthentication,
+    ) -> Result<()> {
+        self.check_synchronous_dispatch()?;
+        let mut request = Some(authentication);
+        let progress = crate::session::AdmissionProgress::default();
+        let mut plan = crate::session::ContextLoginPlan::new(self, request.as_ref())?;
+        let budget = &self.inner.symmetric_budget;
+        let (mut storage, access) = plan.prepare_retained(
+            self,
+            &progress,
+            budget,
+            |access, _| {
+                // Context login is session-scoped. A completed Init can remain
+                // active while the module receives the authentication request.
+                access.operations.logout_ready(&self.entry)?;
+                self.entry.advanced_progress.snapshot()
+            },
+            |members| Ok(self.entry.advanced_progress.population_changed(&members)),
+        )?;
+        let mut call = crate::session::PreparedContextLogin::from_prepared(
+            self,
+            &access,
+            &mut request,
+            &mut storage,
+        )?
+        .ok_or(Error::Rejected(crate::RejectionReason::Authentication(
+            crate::AuthenticationRejection::MissingContextualAuthentication,
+        )))?;
+        call.perform(self)
+    }
+
     /// Authenticate a retained initialized operation before its key-use call.
     /// The owned PIN and user name are erased on release, including refusal.
     pub fn authenticate_context(
@@ -137,9 +195,15 @@ impl Session {
         }
         let progress = crate::session::AdmissionProgress::default();
         let mut plan = crate::session::ContextLoginPlan::new(self, authentication.as_ref())?;
-        let (mut storage, access) =
-            plan.prepare_retained(self, ticket.id, &progress, budget, |access, additional| {
-                let cell = access.operations.get(ticket.uid)?;
+        let (mut storage, access) = plan.prepare_retained(
+            self,
+            &progress,
+            budget,
+            |access, additional| {
+                let cell = access.operations.get_ticket(ticket.uid, ticket.id)?;
+                access
+                    .operations
+                    .check_context_siblings(&self.entry, ticket.id)?;
                 let operation = cell.lock().map_err(|_| Error::Poisoned)?;
                 if operation.id != ticket.id {
                     return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -153,8 +217,17 @@ impl Session {
                 // Facade child accounts already include their complete retained
                 // candidate; reserve_controlled_retaining checks those directly.
                 // Capture under the same possession as the footprint measurement.
-                self.entry.advanced_progress.observe_revision(ticket.id)
-            })?;
+                self.entry.advanced_progress.snapshot()
+            },
+            |stamp| {
+                if !self.entry.advanced_progress.contains(ticket.id) {
+                    return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
+                        crate::OperationOwnershipRejection::StaleOperationTicket,
+                    )));
+                }
+                Ok(self.entry.advanced_progress.population_changed(&stamp))
+            },
+        )?;
         // The operation remains in the advanced ledger. Only the authentication
         // input belongs to the call frame; a refused login cannot destroy its parent.
         prepared_authentication = crate::session::PreparedContextLogin::from_prepared(
@@ -168,7 +241,8 @@ impl Session {
                 crate::AuthenticationRejection::MissingContextualAuthentication,
             ),
         ))?;
-        let result = prepared_authentication.perform(self);
+        let cell = access.operations.get_ticket(ticket.uid, ticket.id)?;
+        let result = prepared_authentication.perform_with_binding(self, Some(&cell.context_key));
         Ok(crate::session::ContextLoginOutcome {
             result,
             diagnostics: prepared_authentication.into_diagnostics(),
@@ -205,6 +279,16 @@ impl Operation {
     }
     fn check_context_authentication(&self, entry: &SessionEntry) -> Result<()> {
         self.check_control_access(entry)?;
+        // C_DigestKey consumes input, it does not install a key used by a
+        // subsequent private-key operation. A keyless native extension also
+        // cannot identify a key for this ticket's context login.
+        if matches!(&self.body, OperationBody::Digest(_))
+            || matches!(&self.body, OperationBody::Cipher(body) if !body.has_context_key())
+        {
+            return Err(Error::Rejected(crate::RejectionReason::Authentication(
+                crate::AuthenticationRejection::AmbiguousContextKey,
+            )));
+        }
         if self.active_categories() == 0 || self.body.complete() {
             return Err(Error::Rejected(crate::RejectionReason::Authentication(
                 crate::AuthenticationRejection::ContextAuthenticationRequiresInitializedOperation,

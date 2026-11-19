@@ -1,0 +1,520 @@
+[
+  {
+    "id": "negative.CKM_DES_ECB.decrypt.usage",
+    "file": "dd6667cae1587132dc78ff90cd7c6b1c2ed7541ac895f233bf520701a6211a8d.txt",
+    "sha256": "dd6667cae1587132dc78ff90cd7c6b1c2ed7541ac895f233bf520701a6211a8d",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.decrypt@Session::decrypt_cipher@OPENSSL.evpciph_des.txt.11"
+  },
+  {
+    "id": "negative.CKM_DES_ECB.encrypt.usage",
+    "file": "53981ba80110fe382f6799f34083b80e3d553311103ca82975348c254dbbaf0a.txt",
+    "sha256": "53981ba80110fe382f6799f34083b80e3d553311103ca82975348c254dbbaf0a",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.11"
+  },
+  {
+    "id": "negative.CKM_DES_CBC.decrypt.usage",
+    "file": "cd97456f5a526352d79d87e494b9b7ade49273f52d92d9726230b7ad6f407b13.txt",
+    "sha256": "cd97456f5a526352d79d87e494b9b7ade49273f52d92d9726230b7ad6f407b13",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_CBC.decrypt@Session::decrypt_cipher@OPENSSL.evpciph_des.txt.55"
+  },
+  {
+    "id": "negative.CKM_DES_CBC.encrypt.usage",
+    "file": "d647a84609604e1ed1a02f65ccd41e8ce33b60304bbc6db941f71b263668dc33.txt",
+    "sha256": "d647a84609604e1ed1a02f65ccd41e8ce33b60304bbc6db941f71b263668dc33",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_CBC.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.55"
+  },
+  {
+    "id": "negative.CKM_DES3_ECB.decrypt.usage",
+    "file": "1faed63045a7fa2f3f3ca21a749e2e27145ade803c26358a55725c7bded6c922.txt",
+    "sha256": "1faed63045a7fa2f3f3ca21a749e2e27145ade803c26358a55725c7bded6c922",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_ECB.decrypt@Session::decrypt_cipher@ACVP-TDES-ECB-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_DES3_ECB.encrypt.usage",
+    "file": "78394ae498a9695376ed9a2f2fbdfa4d0e92d461232e30a431d9a4f82d2a8cdf.txt",
+    "sha256": "78394ae498a9695376ed9a2f2fbdfa4d0e92d461232e30a431d9a4f82d2a8cdf",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_ECB.encrypt@Session::encrypt_cipher@ACVP-TDES-ECB-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_DES3_CBC.decrypt.usage",
+    "file": "65273bb77b17eefb8aa79a3b023bcb8f9180730214b6b673231ddf0aaa6fc824.txt",
+    "sha256": "65273bb77b17eefb8aa79a3b023bcb8f9180730214b6b673231ddf0aaa6fc824",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_CBC.decrypt@Session::decrypt_cipher@ACVP-TDES-CBC-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_DES3_CBC.encrypt.usage",
+    "file": "5f2b5442f3b9a323d12031cb90ac17c247b04796a9a35bed45579ed98e6143de.txt",
+    "sha256": "5f2b5442f3b9a323d12031cb90ac17c247b04796a9a35bed45579ed98e6143de",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_CBC.encrypt@Session::encrypt_cipher@ACVP-TDES-CBC-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_AES_ECB.decrypt.usage",
+    "file": "91598a5b18ead10f5f39cc3213c4d358f5b76e41beec634db5942cf52af9c699.txt",
+    "sha256": "91598a5b18ead10f5f39cc3213c4d358f5b76e41beec634db5942cf52af9c699",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_ECB.decrypt@Session::decrypt_cipher@ACVP-AES-ECB-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_AES_ECB.encrypt.usage",
+    "file": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08.txt",
+    "sha256": "3e6f37c519b8eb2acb8cdf3d22d3d88088dfe3ac8d1604294faf9938327b4c08",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_ECB.encrypt@Session::encrypt_cipher@ACVP-AES-ECB-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_AES_CBC.decrypt.usage",
+    "file": "a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9.txt",
+    "sha256": "a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CBC.decrypt@Session::decrypt_cipher@ACVP-AES-CBC-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_AES_CBC.encrypt.usage",
+    "file": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80.txt",
+    "sha256": "12ae73e661ec3ee4ead3d65697d7281567c0fd42e8ea85520ba86061db973d80",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1"
+  },
+  {
+    "id": "negative.CKM_AES_CTR.decrypt.usage",
+    "file": "bce07b832020489e1958f52c4bfcfb7121c2d7aab35cb7689ca34a9f02527cd2.txt",
+    "sha256": "bce07b832020489e1958f52c4bfcfb7121c2d7aab35cb7689ca34a9f02527cd2",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CTR.decrypt@Session::decrypt_cipher@ACVP-AES-CTR-1.0.5.101"
+  },
+  {
+    "id": "negative.CKM_AES_CTR.encrypt.usage",
+    "file": "7576b4f4edbc2f43ec20ba02b1dd3c5a79fc063d3000de364a49d86bcd64b231.txt",
+    "sha256": "7576b4f4edbc2f43ec20ba02b1dd3c5a79fc063d3000de364a49d86bcd64b231",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_AES_CTR.encrypt@Session::encrypt_cipher@ACVP-AES-CTR-1.0.5.101"
+  }
+]

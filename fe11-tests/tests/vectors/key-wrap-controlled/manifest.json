@@ -1,0 +1,2054 @@
+[
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.37.3604",
+    "file": "9e31d1fa894df92f30f9baa56e62635ec6e154eee14109e4e5418bced25e5a7c.txt",
+    "sha256": "9e31d1fa894df92f30f9baa56e62635ec6e154eee14109e4e5418bced25e5a7c",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 37,
+      "case": 3604,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.38.3701",
+    "file": "26bf93ee0f88ef980d68d751b8fcde3da538c0ecce3819be709e7484a512592c.txt",
+    "sha256": "26bf93ee0f88ef980d68d751b8fcde3da538c0ecce3819be709e7484a512592c",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 38,
+      "case": 3701,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.39.3807",
+    "file": "cd7990a236564ea7a8feceb034db71a7a038fa8f583af1ffa685bdbe5d493c63.txt",
+    "sha256": "cd7990a236564ea7a8feceb034db71a7a038fa8f583af1ffa685bdbe5d493c63",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 39,
+      "case": 3807,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.40.3909",
+    "file": "cc320f9821e14446acda0805c63d8a9cbb844979f5241581afea947c92129d8e.txt",
+    "sha256": "cc320f9821e14446acda0805c63d8a9cbb844979f5241581afea947c92129d8e",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 40,
+      "case": 3909,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.41.4003",
+    "file": "9c1be28f1be6227411caed8b82423b89171c14550f09b956c2d8987f7b9502c6.txt",
+    "sha256": "9c1be28f1be6227411caed8b82423b89171c14550f09b956c2d8987f7b9502c6",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 41,
+      "case": 4003,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.42.4103",
+    "file": "a7c0e9115547a6b74bb2c492a117745c2273337f6c3219345db7868655b211e3.txt",
+    "sha256": "a7c0e9115547a6b74bb2c492a117745c2273337f6c3219345db7868655b211e3",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 42,
+      "case": 4103,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.43.4205",
+    "file": "a4d5019a34ec2ea8b9110b61a60504ede8eac5a2ffccd36fd3ca10e010f4a681.txt",
+    "sha256": "a4d5019a34ec2ea8b9110b61a60504ede8eac5a2ffccd36fd3ca10e010f4a681",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 43,
+      "case": 4205,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.44.4301",
+    "file": "9800a6262a6c14d15562a067c734155d09a7f500721ce4b264aaf92b2f2421a6.txt",
+    "sha256": "9800a6262a6c14d15562a067c734155d09a7f500721ce4b264aaf92b2f2421a6",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 44,
+      "case": 4301,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.45.4409",
+    "file": "803d2d266edbc687b6e4d758adf14cd933f6829d7b301cce6630750a3c7c1b14.txt",
+    "sha256": "803d2d266edbc687b6e4d758adf14cd933f6829d7b301cce6630750a3c7c1b14",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 45,
+      "case": 4409,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.46.4508",
+    "file": "eeb533f2c821a9a50dc7a6fc440a99d14862a47a24a9e8f0da45950b307ca8c1.txt",
+    "sha256": "eeb533f2c821a9a50dc7a6fc440a99d14862a47a24a9e8f0da45950b307ca8c1",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 46,
+      "case": 4508,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.47.4614",
+    "file": "f56bc16e51cf8a59d335b9fc063fad24fa37bc713a1f792b877a6536da2b9899.txt",
+    "sha256": "f56bc16e51cf8a59d335b9fc063fad24fa37bc713a1f792b877a6536da2b9899",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 47,
+      "case": 4614,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.48.4705",
+    "file": "8c8b4fc9488f5373fd2e865c4675dba2eed4c437b69ec73cd7aa84e3286fd2e8.txt",
+    "sha256": "8c8b4fc9488f5373fd2e865c4675dba2eed4c437b69ec73cd7aa84e3286fd2e8",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 48,
+      "case": 4705,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.49.4806",
+    "file": "e4838ce82cc72e1cf014ca7474ee63a5c81dc43ccb96550ec65000046b65a34a.txt",
+    "sha256": "e4838ce82cc72e1cf014ca7474ee63a5c81dc43ccb96550ec65000046b65a34a",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 49,
+      "case": 4806,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.50.4905",
+    "file": "15063d16ca0d340fe6b28c54a4f34b9f305f3c0c2bfd92f42de9a5cb60ef6e01.txt",
+    "sha256": "15063d16ca0d340fe6b28c54a4f34b9f305f3c0c2bfd92f42de9a5cb60ef6e01",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 50,
+      "case": 4905,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.51.5004",
+    "file": "eea7e77984c14a0dd258789881b9863644f60e341e5d3c189a072aca9a25bd61.txt",
+    "sha256": "eea7e77984c14a0dd258789881b9863644f60e341e5d3c189a072aca9a25bd61",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 51,
+      "case": 5004,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.52.5102",
+    "file": "45f91a4be460ccdfd768c9b0b464494b63d9a43f24da3afb553a8ae63073f527.txt",
+    "sha256": "45f91a4be460ccdfd768c9b0b464494b63d9a43f24da3afb553a8ae63073f527",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 52,
+      "case": 5102,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.53.5202",
+    "file": "8765232822a2ddbd5178a1553f72e5901fa18935af869acb2f40b97fde40ab5d.txt",
+    "sha256": "8765232822a2ddbd5178a1553f72e5901fa18935af869acb2f40b97fde40ab5d",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 53,
+      "case": 5202,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.54.5301",
+    "file": "8fa204e7002cfe62fd1ab2bdcd695aaf5cdf3b6c752a7b99a8115d6c11e0a0e9.txt",
+    "sha256": "8fa204e7002cfe62fd1ab2bdcd695aaf5cdf3b6c752a7b99a8115d6c11e0a0e9",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 54,
+      "case": 5301,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.37.3604",
+    "file": "069b355631e488879081dcaa2435bc6fa65fff2e500250d609b4e264cf000865.txt",
+    "sha256": "069b355631e488879081dcaa2435bc6fa65fff2e500250d609b4e264cf000865",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 37,
+      "case": 3604,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.38.3701",
+    "file": "af73c08552a1f3965002026de589f16d79e609c631dc8aabb25ccc756e06ccb2.txt",
+    "sha256": "af73c08552a1f3965002026de589f16d79e609c631dc8aabb25ccc756e06ccb2",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 38,
+      "case": 3701,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.39.3807",
+    "file": "072baf8e2b4c159aad1e01518b610e0dd81278aeeab34dcfcab6591b289bbaf6.txt",
+    "sha256": "072baf8e2b4c159aad1e01518b610e0dd81278aeeab34dcfcab6591b289bbaf6",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 39,
+      "case": 3807,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.40.3909",
+    "file": "01dedb93495f5ee17f689df1a213e3d581132c8e792ea5aa4b0d861cb309654a.txt",
+    "sha256": "01dedb93495f5ee17f689df1a213e3d581132c8e792ea5aa4b0d861cb309654a",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 40,
+      "case": 3909,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.41.4003",
+    "file": "c75480ef02a730533b9bec1f673edea5bdc243e729c976dabdc40b48624b867e.txt",
+    "sha256": "c75480ef02a730533b9bec1f673edea5bdc243e729c976dabdc40b48624b867e",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 41,
+      "case": 4003,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.42.4103",
+    "file": "ad49578515d593c2654c6a0681f2d6933ff2f8d20dd9e4f24a4c9f817cd7d310.txt",
+    "sha256": "ad49578515d593c2654c6a0681f2d6933ff2f8d20dd9e4f24a4c9f817cd7d310",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 42,
+      "case": 4103,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.43.4205",
+    "file": "7a2ccad9401c2b0a3ef867bf75768f1777013a93a17ac91b37c7513f07581656.txt",
+    "sha256": "7a2ccad9401c2b0a3ef867bf75768f1777013a93a17ac91b37c7513f07581656",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 43,
+      "case": 4205,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.44.4301",
+    "file": "4b99d39105953d72ab758df4d1b6294530d065f902fdcee4022fc41bb578f5e2.txt",
+    "sha256": "4b99d39105953d72ab758df4d1b6294530d065f902fdcee4022fc41bb578f5e2",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 44,
+      "case": 4301,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.45.4409",
+    "file": "cabbbb2ddbad70e6b3c4a9557e2bd4e954cf067d446c311df537b646550cf8ef.txt",
+    "sha256": "cabbbb2ddbad70e6b3c4a9557e2bd4e954cf067d446c311df537b646550cf8ef",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 45,
+      "case": 4409,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.46.4508",
+    "file": "e55521071d711afbddc0fc3eb4b11b30dda15ba856c128184999242cd5bc7a51.txt",
+    "sha256": "e55521071d711afbddc0fc3eb4b11b30dda15ba856c128184999242cd5bc7a51",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 46,
+      "case": 4508,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.47.4614",
+    "file": "3bb29106b9a6f14bfd296febe007f6e18a9ee7f1b8f627f539cc92f4cf361ace.txt",
+    "sha256": "3bb29106b9a6f14bfd296febe007f6e18a9ee7f1b8f627f539cc92f4cf361ace",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 47,
+      "case": 4614,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.48.4705",
+    "file": "384969dfe98c826a2abdf63227c379baf9a58ab0025d943fde00538b90b0f984.txt",
+    "sha256": "384969dfe98c826a2abdf63227c379baf9a58ab0025d943fde00538b90b0f984",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 48,
+      "case": 4705,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.49.4806",
+    "file": "ee08e568c69ff62b5894744eb8e553f858d56566415031bb7d968f4bbe991df8.txt",
+    "sha256": "ee08e568c69ff62b5894744eb8e553f858d56566415031bb7d968f4bbe991df8",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 49,
+      "case": 4806,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.50.4905",
+    "file": "f28ae0f353bdad3b19a8c139f24d1c1c6fb7f304d07290743be58fab9947863f.txt",
+    "sha256": "f28ae0f353bdad3b19a8c139f24d1c1c6fb7f304d07290743be58fab9947863f",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 50,
+      "case": 4905,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.51.5004",
+    "file": "69773b5eefea019c2a8ee63e579ebe620454a5a4da5415c6819156d8d3a3ca39.txt",
+    "sha256": "69773b5eefea019c2a8ee63e579ebe620454a5a4da5415c6819156d8d3a3ca39",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 51,
+      "case": 5004,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.52.5102",
+    "file": "c3f04e676b22b5e25e72aba8359ce4031e8cf8b7687833d14e6d8e193702315c.txt",
+    "sha256": "c3f04e676b22b5e25e72aba8359ce4031e8cf8b7687833d14e6d8e193702315c",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 52,
+      "case": 5102,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.53.5202",
+    "file": "a9203a20c1db02021a5c9e69450d55791e74908dffb9a8c2c537219716a76e08.txt",
+    "sha256": "a9203a20c1db02021a5c9e69450d55791e74908dffb9a8c2c537219716a76e08",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 53,
+      "case": 5202,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  },
+  {
+    "id": "controlled.operation.CKM_AES_KEY_WRAP.unwrap@AdvancedSession::unwrap_native_key@ACVP-AES-KW-1.0.54.5301",
+    "file": "19bf1d31644d6b723c3b83f71883f014c49ac9da79597c48017a2726e3f57d4e.txt",
+    "sha256": "19bf1d31644d6b723c3b83f71883f014c49ac9da79597c48017a2726e3f57d4e",
+    "worker_mode": "key-wrap-controlled",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_WRAPPED_KEY_INVALID",
+        "CKR_WRAPPED_KEY_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native unwrap with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_WrapKey"
+    ],
+    "parameter_variants": [
+      "NULL default IV",
+      "explicit a6a6a6a6a6a6a6a6"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "vector": {
+      "group": 54,
+      "case": 5301,
+      "kwCipher": "cipher"
+    },
+    "positive_control": "Same KEK: wrap and exact-value unwrap before the invalid envelope; deterministic wrap of the same retained target after it. The latter creates no object and does not reuse the unresolved creation destination."
+  }
+]

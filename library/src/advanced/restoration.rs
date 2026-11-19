@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //! Transactional restore: keep both owners until native replacement is known.
+mod group;
 use super::restoration_keys::BoundKeys;
+use group::{Bindings, Destination, RestoreGroup};
 
 use super::{
     ownership, preparation, progress, state_io, AdvancedSession, Operation, OperationBody,
@@ -10,6 +12,8 @@ use crate::{module::Inner, symmetric::memory::Credit, Error, Result};
 use std::sync::Arc;
 /// Control capability for one explicit restoration. Drop does not cancel it.
 pub struct StateRestoreTicket {
+    // The control id differs from the resident operation during replacement.
+    pub(super) resident: u64,
     pub(super) owner: Arc<Inner>,
     pub(super) uid: u64,
     pub(super) id: u64,
@@ -37,6 +41,7 @@ pub(super) struct RestoreOwner {
     pub(super) id: u64,
     pub(super) replacing: bool,
     pub(super) saved: SavedOperationState,
+    pub(super) group: RestoreGroup,
     pub(super) keys: BoundKeys,
     pub(super) initialization: Option<super::native_messages::restoration::PreparedInitialization>,
     pub(super) encodings: (Option<StateKeyEncoding>, Option<StateKeyEncoding>),
@@ -52,6 +57,9 @@ pub(super) struct RestoreOwner {
 /// the replaced cryptographic body beneath those guards.
 #[derive(Default)]
 struct RetiredRestore {
+    owners: Option<super::ledger::ClosedOperation>,
+    group: Option<RestoreGroup>,
+    bindings: Option<group::DeferredBindings>,
     body: Option<OperationBody>,
     validation: Option<super::validation::Capture>,
     io: Option<state_io::StateIo>,
@@ -101,6 +109,44 @@ impl AdvancedSession {
         keys: StateRestoreKeys<'_>,
         replace: Option<&OperationTicket>,
     ) -> std::result::Result<StateRestoreTicket, StateRestoreFailure> {
+        self.prepare_state_restore(saved, Bindings::Shared(keys), Destination::one(replace))
+    }
+
+    /// Restore an entire saved session with explicit per-operation destination keys.
+    /// Select which bound operation supplies each of the two native key handles.
+    /// An absent selection passes CK_INVALID_HANDLE for that native argument.
+    /// List every currently live destination ticket once, or use an empty slice
+    /// for an idle session. A native refusal returns the complete saved state.
+    pub fn start_group_state_restore(
+        &self,
+        saved: SavedOperationState,
+        bindings: &[(super::ClassicOperation, StateRestoreKeys<'_>)],
+        native_encryption: Option<super::ClassicOperation>,
+        native_authentication: Option<super::ClassicOperation>,
+        replace: &[&OperationTicket],
+    ) -> std::result::Result<StateRestoreTicket, StateRestoreFailure> {
+        let (first, peers) = match replace.split_first() {
+            Some((first, peers)) => (Some(*first), peers),
+            None => (None, &[][..]),
+        };
+        self.prepare_state_restore(
+            saved,
+            Bindings::Explicit {
+                members: bindings,
+                native_encryption,
+                native_authentication,
+            },
+            Destination { first, peers },
+        )
+    }
+
+    fn prepare_state_restore(
+        &self,
+        saved: SavedOperationState,
+        bindings: Bindings<'_>,
+        destination: Destination<'_>,
+    ) -> std::result::Result<StateRestoreTicket, StateRestoreFailure> {
+        let replace = destination.first;
         let mut saved = Some(saved);
         let admission = crate::admission_wait::current();
         let mut diagnostics = None;
@@ -112,6 +158,16 @@ impl AdvancedSession {
                     .unwrap()
                     .retained_bytes(&self.session.inner.symmetric_budget)?,
             )?;
+            let input = saved.as_ref().expect("owned input before preparation");
+            let keys = bindings.primary(input)?;
+            let observed = {
+                let access = self
+                    .session
+                    .advanced_access_progress_at_epoch(&progress, input.authentication)?;
+                destination.observe(&self.session, &access)?
+            };
+            let mut group = RestoreGroup::prepare(&self.session, input, &bindings, &mut progress)?;
+            group.remember(observed);
             let mut key_storage_floor = 0usize;
             'prepare: loop {
                 let input = saved.as_ref().unwrap();
@@ -137,6 +193,7 @@ impl AdvancedSession {
                     let s = self
                         .session
                         .advanced_access_progress_at_epoch(&progress, input.authentication)?;
+                    destination.recheck(&self.session, &s, &observed)?;
                     if s.native.table.C_SetOperationState.is_none() {
                         return Err(Error::Rejected(crate::RejectionReason::Restoration(
                             crate::RestorationRejection::CSetOperationStateUnavailable,
@@ -151,7 +208,13 @@ impl AdvancedSession {
                                 crate::RestorationRejection::ForeignOrConsumedReplacementTicket,
                             )));
                         }
-                        let held = s.operations.get(ticket.uid)?;
+                        let held = s.operations.get_ticket_with(
+                            ticket.uid,
+                            ticket.id,
+                            crate::RejectionReason::Restoration(
+                                crate::RestorationRejection::StaleReplacementTicket,
+                            ),
+                        )?;
                         let operation = held.lock().map_err(|_| Error::Poisoned)?;
                         if operation.id != ticket.id {
                             return Err(Error::Rejected(crate::RejectionReason::Restoration(
@@ -174,12 +237,7 @@ impl AdvancedSession {
                                     input
                                         .snapshot
                                         .observe_authentication_unchanged(input.authentication)?;
-                                    Ok(self
-                                        .session
-                                        .entry
-                                        .advanced_operation
-                                        .load(std::sync::atomic::Ordering::Acquire)
-                                        == ticket.id)
+                                    Ok(self.session.entry.advanced_progress.contains(ticket.id))
                                 },
                             )?
                             .ok_or(Error::Rejected(crate::RejectionReason::Restoration(
@@ -393,6 +451,7 @@ impl AdvancedSession {
                         continue 'prepare;
                     }
                 }
+                destination.recheck(&self.session, &s, &observed)?;
                 bound = prepared_readers.bind(keys, |permits| {
                     input.continuation.restore_keys(
                         &self.session,
@@ -411,7 +470,8 @@ impl AdvancedSession {
                 _retired_readers = readers.retire();
                 // BoundKeys retains the exact destination references through
                 // installation and native restore. The module checks key usability.
-                io.bind_restore_keys(bound.native_encryption, bound.native_authentication)?;
+                let (encryption, authentication) = bindings.native(input, &bound, &group)?;
+                io.bind_restore_keys(encryption, authentication)?;
                 // Both commit closures borrow this owner. If a registry or
                 // state-slot check refuses, its resources outlive session access.
                 restore_payload = Some((
@@ -459,6 +519,7 @@ impl AdvancedSession {
                                         id,
                                         replacing: false,
                                         saved: input,
+                                        group: group.take(),
                                         keys: bound,
                                         initialization: prepared_initialization,
                                         encodings: (
@@ -478,6 +539,7 @@ impl AdvancedSession {
                     // Keep an explicit installed anchor until access leaves.
                     let _ = &installed;
                     return Ok(StateRestoreTicket {
+                        resident: id,
                         owner: self.session.inner.clone(),
                         uid: self.session.uid,
                         id,
@@ -492,7 +554,13 @@ impl AdvancedSession {
                         crate::RestorationRejection::ForeignOrConsumedReplacementTicket,
                     )));
                 }
-                operation = s.operations.get(ticket.uid)?;
+                operation = s.operations.get_ticket_with(
+                    ticket.uid,
+                    ticket.id,
+                    crate::RejectionReason::Restoration(
+                        crate::RestorationRejection::StaleReplacementTicket,
+                    ),
+                )?;
                 let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
                 if op.id != ticket.id {
                     return Err(Error::Rejected(crate::RejectionReason::Restoration(
@@ -518,6 +586,7 @@ impl AdvancedSession {
                             id,
                             replacing: true,
                             saved: input,
+                            group: group.take(),
                             keys: bound,
                             initialization: prepared_initialization,
                             encodings: (
@@ -531,6 +600,7 @@ impl AdvancedSession {
                     )
                 })?;
                 return Ok(StateRestoreTicket {
+                    resident: ticket.id,
                     owner: self.session.inner.clone(),
                     uid: self.session.uid,
                     id,
@@ -571,7 +641,7 @@ impl AdvancedSession {
             )));
         }
         let s = self.session.advanced_access()?;
-        operation = s.operations.get(ticket.uid)?;
+        operation = s.operations.get_ticket(ticket.uid, ticket.resident)?;
         let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
         let control = op.restore_owner().ok_or(Error::Rejected(
             crate::RejectionReason::OperationOwnership(
@@ -594,6 +664,13 @@ impl AdvancedSession {
             .check_authentication_unchanged(control.saved.authentication)?;
         let mut remaining = self.pacing.budget();
         let outcome = (|| -> Result<()> {
+            let resident = op.id;
+            if !op.state_io().is_some_and(|io| io.pending()) && op.joined.is_none() {
+                op.restore_owner_mut()
+                    .expect("checked restore control")
+                    .group
+                    .stage(&self.session, &s, resident)?;
+            }
             if !op.drive_join(&s, &self.session.entry, true, &mut remaining)? {
                 return Ok(());
             }
@@ -616,7 +693,14 @@ impl AdvancedSession {
             if io.pending() || joined {
                 return Err(error);
             }
-            let bytes = io.take_refused_restore()?;
+            op.restore_owner_mut()
+                .expect("checked restore control")
+                .group
+                .discard(&self.session, &s)?;
+            let bytes = op
+                .state_io_mut()
+                .expect("checked restore I/O")
+                .take_refused_restore()?;
             let (io, mut control) = op.take_restore().unwrap();
             retired.io = Some(io);
             control.saved.bytes = Some(bytes);
@@ -627,6 +711,8 @@ impl AdvancedSession {
                 _ => {}
             }
             ticket.id = 0;
+            control.group.retain_refused_keys(&mut control.saved);
+            retired.group = Some(control.group);
             retired.keys = Some(control.keys);
             retired.initialization = control.initialization;
             retired.publication = control.publication;
@@ -635,11 +721,12 @@ impl AdvancedSession {
             // StateIo already applies the native failure scope. Keep any old
             // identity/frames; ordinary access refuses a withdrawn session.
             let release = !control.replacing;
+            let lease = op._token.identity().clone();
             drop(op);
             // Saved state has left the registry. From here every outcome must
             // return it, including a failed local retirement of the empty owner.
             let error = if release {
-                match s.operations.release_closed(&self.session.entry) {
+                match s.operations.release_operation(&self.session.entry, &lease) {
                     Ok(()) => error,
                     Err(cleanup) => retired
                         .refusal
@@ -668,7 +755,8 @@ impl AdvancedSession {
         let replacement = op.restore_owner().unwrap().id;
         if let Err(cause) = s
             .operations
-            .publish_replacement(&self.session.entry, replacement)
+            .commit_state_group(&self.session.entry, &operation, replacement)
+            .map(|owners| retired.owners = Some(owners))
         {
             s.native.mark_uncertain();
             // mark_uncertain prevents another ordinary restore poll from
@@ -686,6 +774,9 @@ impl AdvancedSession {
         // the original creator, even for an embedded native key.
         let (io, mut control) = op.take_restore().unwrap();
         retired.io = Some(io);
+        let (restored_companions, retired_bindings) =
+            control.group.finish(&self.session, &mut control.saved);
+        retired.bindings = Some(retired_bindings);
         if let OperationBody::NativeMessages(body) = &mut control.saved.continuation.body {
             retired.destination = Some(
                 body.commit_restoration(
@@ -720,6 +811,7 @@ impl AdvancedSession {
         retired.saved_credit = Some(control.saved._credit);
         ticket.id = 0;
         Ok(StateRestoreProgress::Restored(OperationTicket {
+            restored_companions,
             owner: self.session.inner.clone(),
             uid: self.session.uid,
             id: control.id,

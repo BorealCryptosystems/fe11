@@ -1,0 +1,8 @@
+CKM_DES_CBC_PAD
+session
+encrypt
+1
+0123456789abcdef
+00
+e5c7cdde872bf27c
+5c5c265ffedfea9c

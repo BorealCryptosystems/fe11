@@ -63,6 +63,34 @@ pub(super) struct Operation {
     pub(super) _token: TokenLease,
 }
 impl Operation {
+    pub(super) fn classic_category(&self) -> Option<CK_FLAGS> {
+        match &self.body {
+            OperationBody::Digest(_) => Some(CKF_DIGEST),
+            OperationBody::Cipher(body) => Some(body.category()),
+            OperationBody::Signature(body) => Some(body.category()),
+            _ => None,
+        }
+    }
+
+    /// Only independent classic calls can leave this owner parked while a
+    /// search dispatches. Capture, cancellation and transfer retain authority
+    /// over session state after returning from C.
+    pub(super) fn permits_search_between_calls(&self) -> bool {
+        matches!(
+            self.body,
+            OperationBody::Digest(_) | OperationBody::Cipher(_) | OperationBody::Signature(_)
+        ) && !self.state.is_some()
+            && !self.transfer.is_some()
+            && self.joined.is_none()
+            && !self.cancel.is_submitted()
+            && !self.cancellation.is_withdrawn()
+            && !self.continuation_status.is_frozen()
+            && !self
+                .validation
+                .as_ref()
+                .is_some_and(|capture| capture.pending() || capture.retains_native_memory())
+    }
+
     /// Check a contextual login before releasing possession to await capacity.
     /// Control owners are excluded by check_context_authentication before this
     /// call. The visitor holds only immutable borrows and never waits itself.
@@ -376,7 +404,10 @@ impl Operation {
                 Ok(diagnostic) => diagnostic,
                 Err(error) => return (error, false),
             };
-            if let Err(cleanup) = s.operations.release_closed(entry) {
+            if let Err(cleanup) = s
+                .operations
+                .release_operation(entry, self._token.identity())
+            {
                 entry.poisoned.store(true, Ordering::Release);
                 return (diagnostic.finish_sequence(Some(cleanup)), false);
             }
@@ -510,7 +541,8 @@ pub(super) fn drive(
                 // requested result/report, but make the healthy session reusable.
                 // Our caller still owns the Arc and session guard, so removing
                 // the registry entry cannot drop or race this locked operation.
-                s.operations.release_closed(entry)?;
+                s.operations
+                    .release_operation(entry, op._token.identity())?;
             }
             // Between messages the native operation is still active: retain it
             // for explicit cancellation/close rather than silently skipping flags.

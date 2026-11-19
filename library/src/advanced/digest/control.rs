@@ -16,7 +16,6 @@ use crate::{
 use fe11_sys::{CK_OBJECT_HANDLE, CK_ULONG};
 use std::sync::{atomic::Ordering, Arc};
 
-
 enum Input<'a> {
     Bytes(&'a [u8], crate::InputLimits),
     Key(&'a crate::NativeObjectRef),
@@ -428,7 +427,13 @@ fn finish(
         )));
     }
     {
-        let held = access.operations.get(session.uid)?;
+        let held = access.operations.get_ticket_with(
+            session.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleDigestTicket,
+            ),
+        )?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -807,7 +812,13 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let held = state.operations.get(self.uid)?;
+        let held = state.operations.get_ticket_with(
+            self.uid,
+            self.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleDigestTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -835,7 +846,9 @@ impl Session {
     /// This transfers its ticket without replaying, finalizing or cancelling it.
     pub fn take_digest_ticket(&self) -> Result<OperationTicket> {
         let access = self.advanced_access()?;
-        let held = access.operations.get(self.uid)?;
+        let held = access.operations.parked_cell(self.uid, |operation| matches!(
+            &operation.body, OperationBody::Digest(body) if body.observer == super::Observer::Session
+        ))?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         let OperationBody::Digest(body) = &mut operation.body else {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -849,6 +862,7 @@ impl Session {
         }
         body.observer = super::Observer::Ticket;
         Ok(OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.inner.clone(),
             uid: self.uid,
             id: operation.id,
@@ -965,4 +979,3 @@ impl AdvancedSession {
 
 mod injection;
 use injection::inject;
-

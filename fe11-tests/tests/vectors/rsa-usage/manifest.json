@@ -1,0 +1,1934 @@
+[
+  {
+    "id": "negative.CKM_RSA_PKCS.decrypt.usage",
+    "file": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc.txt",
+    "sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS.encrypt.usage",
+    "file": "f1ebea4fbe94eaa47c88ccfed292e8409f6d6ce29bb8c59931d862191bd07625.txt",
+    "sha256": "f1ebea4fbe94eaa47c88ccfed292e8409f6d6ce29bb8c59931d862191bd07625",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_PKCS.encrypt@Session::encrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "fixture_sha256": "f1ebea4fbe94eaa47c88ccfed292e8409f6d6ce29bb8c59931d862191bd07625"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_RSA_X_509.decrypt.usage",
+    "file": "1aadf8e58e29296c9b2e3c331110ab4b7bda063d291173f5064adfcf91f98100.txt",
+    "sha256": "1aadf8e58e29296c9b2e3c331110ab4b7bda063d291173f5064adfcf91f98100",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.none",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_X_509.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.none",
+      "fixture_sha256": "1aadf8e58e29296c9b2e3c331110ab4b7bda063d291173f5064adfcf91f98100"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_RSA_X_509.encrypt.usage",
+    "file": "96e1cfed228de986bea5f33c1c379aa122a6798e15f36f5540627c8463044fa8.txt",
+    "sha256": "96e1cfed228de986bea5f33c1c379aa122a6798e15f36f5540627c8463044fa8",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.none",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_X_509.encrypt@Session::encrypt_native_rsa@OPENSSL.RSA.none",
+      "fixture_sha256": "96e1cfed228de986bea5f33c1c379aa122a6798e15f36f5540627c8463044fa8"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_RSA_X_509.sign.usage",
+    "file": "1038449b1156b71cf1915eb0c5e6b223adf8a897d14ff51bead5352f46a0290b.txt",
+    "sha256": "1038449b1156b71cf1915eb0c5e6b223adf8a897d14ff51bead5352f46a0290b",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.none.as-signature",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_X_509.sign@Session::sign_native@OPENSSL.RSA.none.as-signature",
+      "fixture_sha256": "1038449b1156b71cf1915eb0c5e6b223adf8a897d14ff51bead5352f46a0290b"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_RSA_X_509.verify.usage",
+    "file": "46f3fd5e78fea0eeda81232b8c0a93d53553dc1d5e55907c0a1cdebc108fcdc2.txt",
+    "sha256": "46f3fd5e78fea0eeda81232b8c0a93d53553dc1d5e55907c0a1cdebc108fcdc2",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.none.as-signature",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_RSA_X_509.verify@Session::verify_native@OPENSSL.RSA.none.as-signature",
+      "fixture_sha256": "46f3fd5e78fea0eeda81232b8c0a93d53553dc1d5e55907c0a1cdebc108fcdc2"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_MD5_RSA_PKCS.sign.usage",
+    "file": "1987936329b338d7f9cd05cb5c2e4623602f5f9f3b4ec4719280d7d79662178d.txt",
+    "sha256": "1987936329b338d7f9cd05cb5c2e4623602f5f9f3b4ec4719280d7d79662178d",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.MD5.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_MD5_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.MD5.PKCS1",
+      "fixture_sha256": "1987936329b338d7f9cd05cb5c2e4623602f5f9f3b4ec4719280d7d79662178d"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_MD5_RSA_PKCS.verify.usage",
+    "file": "df01fecdfcc5caad965f7135ebccf202ecb4cfe5965668e58467051cd5ab2c62.txt",
+    "sha256": "df01fecdfcc5caad965f7135ebccf202ecb4cfe5965668e58467051cd5ab2c62",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.MD5.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_MD5_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.MD5.PKCS1",
+      "fixture_sha256": "df01fecdfcc5caad965f7135ebccf202ecb4cfe5965668e58467051cd5ab2c62"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA1_RSA_PKCS.sign.usage",
+    "file": "cac0ab53cdf377ab07aec5ce1708f1888d1b520f89999b7e3f0bef64a37037b8.txt",
+    "sha256": "cac0ab53cdf377ab07aec5ce1708f1888d1b520f89999b7e3f0bef64a37037b8",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA1.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA1_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA1.PKCS1",
+      "fixture_sha256": "cac0ab53cdf377ab07aec5ce1708f1888d1b520f89999b7e3f0bef64a37037b8"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA1_RSA_PKCS.verify.usage",
+    "file": "88f9280797798dbe201c0374dbaf0c90d39d68f6273a58aa0ab45cc441b4e878.txt",
+    "sha256": "88f9280797798dbe201c0374dbaf0c90d39d68f6273a58aa0ab45cc441b4e878",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA1.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA1_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA1.PKCS1",
+      "fixture_sha256": "88f9280797798dbe201c0374dbaf0c90d39d68f6273a58aa0ab45cc441b4e878"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA224_RSA_PKCS.sign.usage",
+    "file": "4aaf1fce8f3ff5d94d5722216ed09f7c6f1069022db44b204c2f1c1d207e2048.txt",
+    "sha256": "4aaf1fce8f3ff5d94d5722216ed09f7c6f1069022db44b204c2f1c1d207e2048",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA224.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA224_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA224.PKCS1",
+      "fixture_sha256": "4aaf1fce8f3ff5d94d5722216ed09f7c6f1069022db44b204c2f1c1d207e2048"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA224_RSA_PKCS.verify.usage",
+    "file": "e905bf4613c544a9499ad0761ad06907cc32d3b597e4c16bc52bcd74b262d077.txt",
+    "sha256": "e905bf4613c544a9499ad0761ad06907cc32d3b597e4c16bc52bcd74b262d077",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA224.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA224_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA224.PKCS1",
+      "fixture_sha256": "e905bf4613c544a9499ad0761ad06907cc32d3b597e4c16bc52bcd74b262d077"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA384_RSA_PKCS.sign.usage",
+    "file": "fa5c12edef07252fbf90333ecb03bac28037b273d9a8e5a414487eff37cd5080.txt",
+    "sha256": "fa5c12edef07252fbf90333ecb03bac28037b273d9a8e5a414487eff37cd5080",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA384.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA384_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA384.PKCS1",
+      "fixture_sha256": "fa5c12edef07252fbf90333ecb03bac28037b273d9a8e5a414487eff37cd5080"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA384_RSA_PKCS.verify.usage",
+    "file": "883e02d5754311a4fa6b45efba337d54ba0b1ec143d5391047ed6f48a28bc922.txt",
+    "sha256": "883e02d5754311a4fa6b45efba337d54ba0b1ec143d5391047ed6f48a28bc922",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA384.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA384_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA384.PKCS1",
+      "fixture_sha256": "883e02d5754311a4fa6b45efba337d54ba0b1ec143d5391047ed6f48a28bc922"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA512_RSA_PKCS.sign.usage",
+    "file": "6aa9f420787fbb8b9279c987dc6abcccdf358bf98ab3fd27d8036c1c2c760d99.txt",
+    "sha256": "6aa9f420787fbb8b9279c987dc6abcccdf358bf98ab3fd27d8036c1c2c760d99",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA512.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA512_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA512.PKCS1",
+      "fixture_sha256": "6aa9f420787fbb8b9279c987dc6abcccdf358bf98ab3fd27d8036c1c2c760d99"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA512_RSA_PKCS.verify.usage",
+    "file": "a0f84ee54a795cf99d7f3be2cfd59bd8cb0cc10a3b71347c04af42db8880fd54.txt",
+    "sha256": "a0f84ee54a795cf99d7f3be2cfd59bd8cb0cc10a3b71347c04af42db8880fd54",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA512.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA512_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA512.PKCS1",
+      "fixture_sha256": "a0f84ee54a795cf99d7f3be2cfd59bd8cb0cc10a3b71347c04af42db8880fd54"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_224_RSA_PKCS.sign.usage",
+    "file": "94af007db0447567357c37685d7dbb6ae45ed070c3120bb726c5f57a78f2d66c.txt",
+    "sha256": "94af007db0447567357c37685d7dbb6ae45ed070c3120bb726c5f57a78f2d66c",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_224.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_224_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_224.PKCS1",
+      "fixture_sha256": "94af007db0447567357c37685d7dbb6ae45ed070c3120bb726c5f57a78f2d66c"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_224_RSA_PKCS.verify.usage",
+    "file": "f1fe1af5696c3298283bd9c551c153f1d5cb0bdae1119771f20b7bdff59f5259.txt",
+    "sha256": "f1fe1af5696c3298283bd9c551c153f1d5cb0bdae1119771f20b7bdff59f5259",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_224.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_224_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_224.PKCS1",
+      "fixture_sha256": "f1fe1af5696c3298283bd9c551c153f1d5cb0bdae1119771f20b7bdff59f5259"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_256_RSA_PKCS.sign.usage",
+    "file": "7818b85ab3f4e7b99965692a177bd2bb63180e11b21aff16b597a8b5ab6e9703.txt",
+    "sha256": "7818b85ab3f4e7b99965692a177bd2bb63180e11b21aff16b597a8b5ab6e9703",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_256.PKCS1",
+      "fixture_sha256": "7818b85ab3f4e7b99965692a177bd2bb63180e11b21aff16b597a8b5ab6e9703"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_256_RSA_PKCS.verify.usage",
+    "file": "3d690bca4b620938739e0a9c8c0a3dcd5b13c164a34af5af92263281793ad58c.txt",
+    "sha256": "3d690bca4b620938739e0a9c8c0a3dcd5b13c164a34af5af92263281793ad58c",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_256_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_256.PKCS1",
+      "fixture_sha256": "3d690bca4b620938739e0a9c8c0a3dcd5b13c164a34af5af92263281793ad58c"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_384_RSA_PKCS.sign.usage",
+    "file": "d427ab53b9bbf2310f9f23854d0d5dc02633d3fed6ef8701843636dd56609063.txt",
+    "sha256": "d427ab53b9bbf2310f9f23854d0d5dc02633d3fed6ef8701843636dd56609063",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_384.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_384_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_384.PKCS1",
+      "fixture_sha256": "d427ab53b9bbf2310f9f23854d0d5dc02633d3fed6ef8701843636dd56609063"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_384_RSA_PKCS.verify.usage",
+    "file": "df402d96b45e8d5ae10ebb1a0c0915d20074661af326fb948d6867ea57bbd5b1.txt",
+    "sha256": "df402d96b45e8d5ae10ebb1a0c0915d20074661af326fb948d6867ea57bbd5b1",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_384.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_384_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_384.PKCS1",
+      "fixture_sha256": "df402d96b45e8d5ae10ebb1a0c0915d20074661af326fb948d6867ea57bbd5b1"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_512_RSA_PKCS.sign.usage",
+    "file": "98b7dc2041a24b6273b5fd35381c8e7688fdd1937824d95f04acc3555d292b76.txt",
+    "sha256": "98b7dc2041a24b6273b5fd35381c8e7688fdd1937824d95f04acc3555d292b76",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_512.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_512_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_512.PKCS1",
+      "fixture_sha256": "98b7dc2041a24b6273b5fd35381c8e7688fdd1937824d95f04acc3555d292b76"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_512_RSA_PKCS.verify.usage",
+    "file": "3870d82a06e80b5ab0148d30db31c3626bf3b6087781ac569b2c1da9ca6e388a.txt",
+    "sha256": "3870d82a06e80b5ab0148d30db31c3626bf3b6087781ac569b2c1da9ca6e388a",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_512.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_512_RSA_PKCS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_512.PKCS1",
+      "fixture_sha256": "3870d82a06e80b5ab0148d30db31c3626bf3b6087781ac569b2c1da9ca6e388a"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA1_RSA_PKCS_PSS.sign.usage",
+    "file": "90e3523e2e00f43e2494e42c9b22c82ae79250bea5abe1b073b294d4716dec1c.txt",
+    "sha256": "90e3523e2e00f43e2494e42c9b22c82ae79250bea5abe1b073b294d4716dec1c",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA1.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA1_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA1.PSS",
+      "fixture_sha256": "90e3523e2e00f43e2494e42c9b22c82ae79250bea5abe1b073b294d4716dec1c"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA1_RSA_PKCS_PSS.verify.usage",
+    "file": "c83b2779d09b699dabbbdce8a387772aba57a5b33e5264596e45b1f26d83fa31.txt",
+    "sha256": "c83b2779d09b699dabbbdce8a387772aba57a5b33e5264596e45b1f26d83fa31",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA1.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA1_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA1.PSS",
+      "fixture_sha256": "c83b2779d09b699dabbbdce8a387772aba57a5b33e5264596e45b1f26d83fa31"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA224_RSA_PKCS_PSS.sign.usage",
+    "file": "b09f1c5683b6a6b04063a36f890f0da70ebc659f209009776302f6db68f0574f.txt",
+    "sha256": "b09f1c5683b6a6b04063a36f890f0da70ebc659f209009776302f6db68f0574f",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA224.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA224_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA224.PSS",
+      "fixture_sha256": "b09f1c5683b6a6b04063a36f890f0da70ebc659f209009776302f6db68f0574f"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA224_RSA_PKCS_PSS.verify.usage",
+    "file": "514ac1c47939b5bf6398874661d7ffdb2ac721bfd4ceb58882d27236ae7bd27c.txt",
+    "sha256": "514ac1c47939b5bf6398874661d7ffdb2ac721bfd4ceb58882d27236ae7bd27c",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA224.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA224_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA224.PSS",
+      "fixture_sha256": "514ac1c47939b5bf6398874661d7ffdb2ac721bfd4ceb58882d27236ae7bd27c"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA256_RSA_PKCS_PSS.sign.usage",
+    "file": "69e80786b4ac7e3a157f487bfe4c5a4c973d3fb34d450cd4178595a1bee93649.txt",
+    "sha256": "69e80786b4ac7e3a157f487bfe4c5a4c973d3fb34d450cd4178595a1bee93649",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PSS",
+      "fixture_sha256": "69e80786b4ac7e3a157f487bfe4c5a4c973d3fb34d450cd4178595a1bee93649"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA256_RSA_PKCS_PSS.verify.usage",
+    "file": "ab1fbad44c1a5c269caeadc994361e4ee3ffebde66fa145951e9f30748688076.txt",
+    "sha256": "ab1fbad44c1a5c269caeadc994361e4ee3ffebde66fa145951e9f30748688076",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA256.PSS",
+      "fixture_sha256": "ab1fbad44c1a5c269caeadc994361e4ee3ffebde66fa145951e9f30748688076"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA384_RSA_PKCS_PSS.sign.usage",
+    "file": "c38427833d4707742239212776dca9802f9d294508d115b043b856c13d2ff773.txt",
+    "sha256": "c38427833d4707742239212776dca9802f9d294508d115b043b856c13d2ff773",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA384.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA384_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA384.PSS",
+      "fixture_sha256": "c38427833d4707742239212776dca9802f9d294508d115b043b856c13d2ff773"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA384_RSA_PKCS_PSS.verify.usage",
+    "file": "a98745ab7bbdb6689feb0d877f9f852844c82bbcba1c37fa6ad10fc0cb427ea6.txt",
+    "sha256": "a98745ab7bbdb6689feb0d877f9f852844c82bbcba1c37fa6ad10fc0cb427ea6",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA384.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA384_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA384.PSS",
+      "fixture_sha256": "a98745ab7bbdb6689feb0d877f9f852844c82bbcba1c37fa6ad10fc0cb427ea6"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA512_RSA_PKCS_PSS.sign.usage",
+    "file": "0616e69ec710ccd8bbfaea8fe0b17441d2b0fa57adaa843dccf2bf3227a77f3e.txt",
+    "sha256": "0616e69ec710ccd8bbfaea8fe0b17441d2b0fa57adaa843dccf2bf3227a77f3e",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA512.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA512_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA512.PSS",
+      "fixture_sha256": "0616e69ec710ccd8bbfaea8fe0b17441d2b0fa57adaa843dccf2bf3227a77f3e"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA512_RSA_PKCS_PSS.verify.usage",
+    "file": "ca7f60bd6a010cbc3a40e422a9362e4f03804f36d40dd97fae7dd7e10c7e89b1.txt",
+    "sha256": "ca7f60bd6a010cbc3a40e422a9362e4f03804f36d40dd97fae7dd7e10c7e89b1",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA512.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA512_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA512.PSS",
+      "fixture_sha256": "ca7f60bd6a010cbc3a40e422a9362e4f03804f36d40dd97fae7dd7e10c7e89b1"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_224_RSA_PKCS_PSS.sign.usage",
+    "file": "fde560a78d92fe2db1cf33a9b3d9bc68ca7426a363b1be3a829f667899d2bd51.txt",
+    "sha256": "fde560a78d92fe2db1cf33a9b3d9bc68ca7426a363b1be3a829f667899d2bd51",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_224.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_224_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_224.PSS",
+      "fixture_sha256": "fde560a78d92fe2db1cf33a9b3d9bc68ca7426a363b1be3a829f667899d2bd51"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_224_RSA_PKCS_PSS.verify.usage",
+    "file": "da2325d549476641f3d553d277101ffb115273c956b4955fffe1fa1544f69e0e.txt",
+    "sha256": "da2325d549476641f3d553d277101ffb115273c956b4955fffe1fa1544f69e0e",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_224.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_224_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_224.PSS",
+      "fixture_sha256": "da2325d549476641f3d553d277101ffb115273c956b4955fffe1fa1544f69e0e"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_256_RSA_PKCS_PSS.sign.usage",
+    "file": "aaae47db9937649f9e2f78c2bbe7f4af9984f105ec7db3a100eb14e6a7fefbfa.txt",
+    "sha256": "aaae47db9937649f9e2f78c2bbe7f4af9984f105ec7db3a100eb14e6a7fefbfa",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_256.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_256_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_256.PSS",
+      "fixture_sha256": "aaae47db9937649f9e2f78c2bbe7f4af9984f105ec7db3a100eb14e6a7fefbfa"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_256_RSA_PKCS_PSS.verify.usage",
+    "file": "9769271b6bdc23d061ab9905effd8d23bf01ca75664d6e81d4e78f3ffc614b05.txt",
+    "sha256": "9769271b6bdc23d061ab9905effd8d23bf01ca75664d6e81d4e78f3ffc614b05",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_256.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_256_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_256.PSS",
+      "fixture_sha256": "9769271b6bdc23d061ab9905effd8d23bf01ca75664d6e81d4e78f3ffc614b05"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_384_RSA_PKCS_PSS.sign.usage",
+    "file": "34b96c70f6f5338a5159f5af8185afa888ee0958811733bbb0f0df179c8d2058.txt",
+    "sha256": "34b96c70f6f5338a5159f5af8185afa888ee0958811733bbb0f0df179c8d2058",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_384.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_384_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_384.PSS",
+      "fixture_sha256": "34b96c70f6f5338a5159f5af8185afa888ee0958811733bbb0f0df179c8d2058"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_384_RSA_PKCS_PSS.verify.usage",
+    "file": "c3b047cd8f20538e2b7fc3beeb43926b64e348c25111e9bb0ef711f940801849.txt",
+    "sha256": "c3b047cd8f20538e2b7fc3beeb43926b64e348c25111e9bb0ef711f940801849",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_384.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_384_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_384.PSS",
+      "fixture_sha256": "c3b047cd8f20538e2b7fc3beeb43926b64e348c25111e9bb0ef711f940801849"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_512_RSA_PKCS_PSS.sign.usage",
+    "file": "15d560fa6d29ad323d8c3eb836b1c908e9edfcf8122c52938e46c0758355a1b8.txt",
+    "sha256": "15d560fa6d29ad323d8c3eb836b1c908e9edfcf8122c52938e46c0758355a1b8",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_512.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_512_RSA_PKCS_PSS.sign@Session::sign_native@RFC8017.RSA2048.SHA3_512.PSS",
+      "fixture_sha256": "15d560fa6d29ad323d8c3eb836b1c908e9edfcf8122c52938e46c0758355a1b8"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  },
+  {
+    "id": "negative.CKM_SHA3_512_RSA_PKCS_PSS.verify.usage",
+    "file": "f1735e967b9ff2a65a1246829f69ef9b14c18ad3e6626bf8d41c37425648b345.txt",
+    "sha256": "f1735e967b9ff2a65a1246829f69ef9b14c18ad3e6626bf8d41c37425648b345",
+    "worker_mode": "rsa-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA3_512.PSS",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA3_512_RSA_PKCS_PSS.verify@Session::verify_native@RFC8017.RSA2048.SHA3_512.PSS",
+      "fixture_sha256": "f1735e967b9ff2a65a1246829f69ef9b14c18ad3e6626bf8d41c37425648b345"
+    },
+    "mutation": "Only the operation usage attribute is false; key material, parameters, message/signature and all other imported attributes are unchanged."
+  }
+]

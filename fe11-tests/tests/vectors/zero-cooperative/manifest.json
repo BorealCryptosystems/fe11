@@ -1,0 +1,31 @@
+[
+  {
+    "id": "progression.digest.zero-output.cooperative",
+    "file": "c34ad774640d15620538b8c62030ff0c7c1e47bc41da929deffa0aac575fdec3.txt",
+    "sha256": "c34ad774640d15620538b8c62030ff0c7c1e47bc41da929deffa0aac575fdec3",
+    "worker_mode": "digest-capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact SHA256 abc a/b/c; zero-sized non-NULL output receives native BUFFER_TOO_SMALL(required32,capacity0). Requirement observation makes no native call; explicit resize32 resumes Final once and yields exact answer. Advanced pacing is explicitly Cooperative before Init; companion Eager observation is retained separately."
+  }
+]

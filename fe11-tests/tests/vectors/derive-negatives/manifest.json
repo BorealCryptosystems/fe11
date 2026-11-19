@@ -1,0 +1,498 @@
+[
+  {
+    "id": "negative.CKM_DES_ECB_ENCRYPT_DATA.derive.usage",
+    "file": "10e92d2cfe0f518b3122e4b80af2250f90f5a09c3cd7188acc0bdeba551547af.txt",
+    "sha256": "10e92d2cfe0f518b3122e4b80af2250f90f5a09c3cd7188acc0bdeba551547af",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@OPENSSL.evpciph_des.txt.11",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        11,
+        15
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES_ECB_ENCRYPT_DATA.derive.template",
+    "file": "10e92d2cfe0f518b3122e4b80af2250f90f5a09c3cd7188acc0bdeba551547af.txt",
+    "sha256": "10e92d2cfe0f518b3122e4b80af2250f90f5a09c3cd7188acc0bdeba551547af",
+    "worker_mode": "derive-template-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@OPENSSL.evpciph_des.txt.11",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        11,
+        15
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES_CBC_ENCRYPT_DATA.derive.usage",
+    "file": "1a6d59055c4b2e88f232c86061f50429d865128f51199f1b64016b9cbd889b2c.txt",
+    "sha256": "1a6d59055c4b2e88f232c86061f50429d865128f51199f1b64016b9cbd889b2c",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@OPENSSL.evpciph_des.txt.55",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        55,
+        61
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES_CBC_ENCRYPT_DATA.derive.template",
+    "file": "1a6d59055c4b2e88f232c86061f50429d865128f51199f1b64016b9cbd889b2c.txt",
+    "sha256": "1a6d59055c4b2e88f232c86061f50429d865128f51199f1b64016b9cbd889b2c",
+    "worker_mode": "derive-template-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@OPENSSL.evpciph_des.txt.55",
+    "source": {
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evpciph_des.txt",
+      "sha256": "ec3e1cd75910417454d83234278cfc92f60b8f26877069a133a02badd2178407",
+      "lines": [
+        55,
+        61
+      ],
+      "notice": "Apache-2.0; vectors/OPENSSL-LICENSE.txt",
+      "key_transform": "DES odd parity only; effective key bits unchanged"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_ECB_ENCRYPT_DATA.derive.usage",
+    "file": "5685438044b01e41ddbb021554887d5382c2c56babd969e0db58899eef0755f2.txt",
+    "sha256": "5685438044b01e41ddbb021554887d5382c2c56babd969e0db58899eef0755f2",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES3_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-TDES-ECB-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+      "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_ECB_ENCRYPT_DATA.derive.template",
+    "file": "5685438044b01e41ddbb021554887d5382c2c56babd969e0db58899eef0755f2.txt",
+    "sha256": "5685438044b01e41ddbb021554887d5382c2c56babd969e0db58899eef0755f2",
+    "worker_mode": "derive-template-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES3_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-TDES-ECB-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-ECB-1.0/internalProjection.json",
+      "sha256": "a3a9205768671e89db3c4ef839692e40167ac6e139ac54ae13a4bb736129413c",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_ENCRYPT_DATA.derive.usage",
+    "file": "f324ead76efd7f054faa24fb5d52ce956ab11601b2dd6d249633019db8c14268.txt",
+    "sha256": "f324ead76efd7f054faa24fb5d52ce956ab11601b2dd6d249633019db8c14268",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES3_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-TDES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+      "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_ENCRYPT_DATA.derive.template",
+    "file": "f324ead76efd7f054faa24fb5d52ce956ab11601b2dd6d249633019db8c14268.txt",
+    "sha256": "f324ead76efd7f054faa24fb5d52ce956ab11601b2dd6d249633019db8c14268",
+    "worker_mode": "derive-template-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_DES3_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-TDES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+      "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.usage",
+    "file": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+    "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-ECB-1.0/internalProjection.json",
+      "sha256": "a804bbe1b4efbb775ec5a365245739ffaedad50f43d91b07ede26733e0f3b256",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_AES_CBC_ENCRYPT_DATA.derive.usage",
+    "file": "294567848d4764247444d0b4c1c6589cfe0d03b39ecdf4822f15a25d065235f3.txt",
+    "sha256": "294567848d4764247444d0b4c1c6589cfe0d03b39ecdf4822f15a25d065235f3",
+    "worker_mode": "derive-usage-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_AES_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "negative.CKM_AES_CBC_ENCRYPT_DATA.derive.template",
+    "file": "294567848d4764247444d0b4c1c6589cfe0d03b39ecdf4822f15a25d065235f3.txt",
+    "sha256": "294567848d4764247444d0b4c1c6589cfe0d03b39ecdf4822f15a25d065235f3",
+    "worker_mode": "derive-template-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "valid_control": "operation.CKM_AES_CBC_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-CBC-1.0.1.1",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+      "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  }
+]

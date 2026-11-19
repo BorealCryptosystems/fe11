@@ -486,6 +486,7 @@ impl AdvancedSession {
         // removes this operation; the public entry owns this anchor.
         *retired_owner = Some(operation.clone());
         let ticket = OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.session.inner.clone(),
             uid: self.session.uid,
             id,

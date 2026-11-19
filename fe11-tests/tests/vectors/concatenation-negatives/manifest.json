@@ -1,0 +1,312 @@
+[
+  {
+    "id": "negative.CKM_CONCATENATE_DATA_AND_BASE.derive.usage",
+    "file": "6bc6468ad42101bdbe183efaf867d5606e61b07ceaa001a661f58f284ea15cbb.txt",
+    "sha256": "6bc6468ad42101bdbe183efaf867d5606e61b07ceaa001a661f58f284ea15cbb",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "before",
+      "mutation": "usage"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  },
+  {
+    "id": "negative.CKM_CONCATENATE_DATA_AND_BASE.derive.template",
+    "file": "fcf54c324f8360ecdde89684c439625c47ee57d0ba0703be858fd9fe5b92b0fc.txt",
+    "sha256": "fcf54c324f8360ecdde89684c439625c47ee57d0ba0703be858fd9fe5b92b0fc",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "before",
+      "mutation": "template"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  },
+  {
+    "id": "negative.CKM_CONCATENATE_BASE_AND_DATA.derive.usage",
+    "file": "d6931b78773597efeb27d22aacb687a01bd8941fc3e4d7ac6c22e4974137229f.txt",
+    "sha256": "d6931b78773597efeb27d22aacb687a01bd8941fc3e4d7ac6c22e4974137229f",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "after",
+      "mutation": "usage"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  },
+  {
+    "id": "negative.CKM_CONCATENATE_BASE_AND_DATA.derive.template",
+    "file": "ab135e2b2239ba08d9497f5b29ecd68f4e11dafd47d4dafddf896883432ce60a.txt",
+    "sha256": "ab135e2b2239ba08d9497f5b29ecd68f4e11dafd47d4dafddf896883432ce60a",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "after",
+      "mutation": "template"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  },
+  {
+    "id": "negative.CKM_CONCATENATE_BASE_AND_KEY.derive.usage",
+    "file": "245a7b080b59524e1a676a926685be887e7e4f726d6552700bc2c44e806d7d15.txt",
+    "sha256": "245a7b080b59524e1a676a926685be887e7e4f726d6552700bc2c44e806d7d15",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "key",
+      "mutation": "usage"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  },
+  {
+    "id": "negative.CKM_CONCATENATE_BASE_AND_KEY.derive.template",
+    "file": "74b806e6be35ef8b902eda69eacc8a7ed746365bf2b23ebbfc78db9d7e846fc3.txt",
+    "sha256": "74b806e6be35ef8b902eda69eacc8a7ed746365bf2b23ebbfc78db9d7e846fc3",
+    "worker_mode": "concatenation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_DeriveKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "parameters": {
+      "base": "0123456789abcdef",
+      "data_or_auxiliary": "fedcba9876543210",
+      "placement": "key",
+      "mutation": "template"
+    },
+    "assertions": [
+      "Exact byte concatenation observed before mutation",
+      "Only DERIVE=false or KEY_TYPE=RSA changes",
+      "All known creation owners retained and destroyed; native effect uncertainty unchanged"
+    ]
+  }
+]

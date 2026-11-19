@@ -1,0 +1,12 @@
+CKM_DES_CBC_PAD
+advanced
+encrypt
+9
+0123456789abcdef
+000102030405060708
+d93de8af2b1216c3a64dfa03a84dbfe6
+1234567890abcdef
+stream
+exact
+0001020304050607
+d93de8af2b1216c324bb1e3e3602afc7

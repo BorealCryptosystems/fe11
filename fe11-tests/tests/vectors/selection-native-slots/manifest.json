@@ -1,0 +1,165 @@
+[
+  {
+    "id": "search.exact.rsa-empty",
+    "file": "c112a0e6463053db9d478b57fff546294a309b6edc858517f6522f58edbe307b.txt",
+    "sha256": "c112a0e6463053db9d478b57fff546294a309b6edc858517f6522f58edbe307b",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "find_exact performs both empty class searches with Final, then returns ObjectSearch(SelectedSearchResultAbsent). No admission error. No object is created."
+  },
+  {
+    "id": "search.exact.rsa-after-destroy",
+    "file": "85a98c5d787eee52bed6073c555b59f2aaf259cc1e4ecf7ea26a6eeb945e2fb5.txt",
+    "sha256": "85a98c5d787eee52bed6073c555b59f2aaf259cc1e4ecf7ea26a6eeb945e2fb5",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_DestroyObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "find_exact performs both empty class searches with Final, then returns ObjectSearch(SelectedSearchResultAbsent). No admission error. One real public RSA object is created then destroyed before selection."
+  },
+  {
+    "id": "messages.authenticated-native-wrap",
+    "file": "891ece16993d585597879ea82421f1f16d805ab8f7606c86798bc06c4e6d2d3a.txt",
+    "sha256": "891ece16993d585597879ea82421f1f16d805ab8f7606c86798bc06c4e6d2d3a",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKeyAuthenticated",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "C_WrapKeyAuthenticated returns CKR_FUNCTION_NOT_SUPPORTED after real compatible key import. No authenticated output or unwrap-envelope validity is inferred; retained owned keys are destroyed. Unexpected created objects are retained before assertion.",
+    "native_function": "C_WrapKeyAuthenticated"
+  },
+  {
+    "id": "messages.authenticated-native-unwrap",
+    "file": "bb3d1baf8006b7e9927c6e956934c1b3a38477fab5b218806cb55cfe55100eef.txt",
+    "sha256": "bb3d1baf8006b7e9927c6e956934c1b3a38477fab5b218806cb55cfe55100eef",
+    "worker_mode": "authenticated-transport-guard",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_UnwrapKeyAuthenticated",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "C_UnwrapKeyAuthenticated returns CKR_FUNCTION_NOT_SUPPORTED after real compatible key import. No authenticated output or unwrap-envelope validity is inferred; retained owned keys are destroyed. Unexpected created objects are retained before assertion.",
+    "native_function": "C_UnwrapKeyAuthenticated"
+  },
+  {
+    "id": "messages.validation-flags-native",
+    "file": "b61795056f97315649ce872ff134d339930aa2180d91d29cbc72943e75da533d.txt",
+    "sha256": "b61795056f97315649ce872ff134d339930aa2180d91d29cbc72943e75da533d",
+    "worker_mode": "public-guard",
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionValidationFlags",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit validation_flags(0) returns native FUNCTION_NOT_SUPPORTED with may_have_effect=false, exactly one native call and no fabricated flags."
+  }
+]

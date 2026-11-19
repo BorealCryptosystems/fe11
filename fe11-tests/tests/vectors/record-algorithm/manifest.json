@@ -1,0 +1,138 @@
+[
+  {
+    "id": "record.algorithm.profile",
+    "file": "dfae9b5fb2b0a1ebf2ddedd3e1f1391b500272f2079e5c1b7696337452ea3c89.txt",
+    "sha256": "dfae9b5fb2b0a1ebf2ddedd3e1f1391b500272f2079e5c1b7696337452ea3c89",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact DigestContinuationRejection::RecordDigestProfile with unchanged native call counters and retained valid control. Structural parse only; never authenticate or restore fabricated native state.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "profile",
+      "offset": 164,
+      "before": 4,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.algorithm.mechanism",
+    "file": "9cd81910aa066dff1d53a74c2b43614ac0695370563e91a3dc1584a5bc8b34ab.txt",
+    "sha256": "9cd81910aa066dff1d53a74c2b43614ac0695370563e91a3dc1584a5bc8b34ab",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact DigestContinuationRejection::RecordNativeDigestMechanism with unchanged native call counters and retained valid control. Structural parse only; never authenticate or restore fabricated native state.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "mechanism",
+      "offset": 173,
+      "before": 80,
+      "after": 81
+    }
+  },
+  {
+    "id": "record.algorithm.width",
+    "file": "8d768c001a77a42a37e60f986d9ed4ed2e8ea1807aaa776a78eec955c53bdec8.txt",
+    "sha256": "8d768c001a77a42a37e60f986d9ed4ed2e8ea1807aaa776a78eec955c53bdec8",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact DigestContinuationRejection::RecordDigestWidth with unchanged native call counters and retained valid control. Structural parse only; never authenticate or restore fabricated native state.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "width",
+      "offset": 181,
+      "before": 32,
+      "after": 31
+    }
+  },
+  {
+    "id": "record.algorithm.message_hash",
+    "file": "343f22a2501ab0c69b1af6448802dda68bf83c0023db35598960dced30f9abd7.txt",
+    "sha256": "343f22a2501ab0c69b1af6448802dda68bf83c0023db35598960dced30f9abd7",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact CheckpointFormatRejection::RecordDigestParameters with unchanged native call counters and retained valid control. Structural parse only; never authenticate or restore fabricated native state.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message_hash",
+      "offset": 288,
+      "before": 80,
+      "after": 81
+    }
+  }
+]

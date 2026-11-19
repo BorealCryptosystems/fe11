@@ -231,22 +231,18 @@ impl ContextLoginPlan<'_> {
     /// the ledger while a separate login recipe waits outside all guards.
     /// Unlike new-operation admission, this path must not convert WaitUntil
     /// into Busy merely because the parent operation exists.
-    pub(crate) fn prepare_retained<'s>(
+    pub(crate) fn prepare_retained<'s, Observation: Copy>(
         &mut self,
         session: &'s Session,
-        ticket: u64,
         progress: &crate::session::AdmissionProgress,
         budget: &std::sync::Arc<crate::symmetric::memory::Budget>,
-        mut validate: impl FnMut(
-            &crate::session::SessionAccess<'s>,
-            usize,
-        ) -> Result<crate::advanced::progress::Stamp>,
+        mut validate: impl FnMut(&crate::session::SessionAccess<'s>, usize) -> Result<Observation>,
+        changed: impl Fn(Observation) -> Result<bool>,
     ) -> Result<(
         Option<ContextLoginStorage>,
         crate::session::SessionAccess<'s>,
     )> {
         use crate::symmetric::memory::ControlledReservation;
-        use std::sync::atomic::Ordering;
         let access = session.context_authentication_access_progress(progress)?;
         validate(&access, 0)?;
         drop(access);
@@ -278,18 +274,7 @@ impl ContextLoginPlan<'_> {
                             session
                                 .snapshot
                                 .observe_authentication_unchanged(authentication)?;
-                            if session.entry.advanced_operation.load(Ordering::Acquire) != ticket {
-                                return Err(Error::Rejected(
-                                    crate::RejectionReason::OperationOwnership(
-                                        crate::OperationOwnershipRejection::StaleOperationTicket,
-                                    ),
-                                ));
-                            }
-                            Ok(session
-                                .entry
-                                .advanced_progress
-                                .changed(revision)
-                                .then_some(()))
+                            Ok(changed(revision)?.then_some(()))
                         },
                         || Ok(None),
                     )?;
@@ -308,7 +293,7 @@ impl ContextLoginPlan<'_> {
                             &crate::SessionAdmission::Immediate,
                         )?;
                         validate(&access, 0)?;
-                        if session.entry.advanced_progress.changed(revision) {
+                        if changed(revision)? {
                             return Ok(None);
                         }
                         Ok(Some(access))

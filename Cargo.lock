@@ -120,18 +120,24 @@ dependencies = [
 ]
 
 [[package]]
-name = "fe11-ci-softhsm"
-version = "0.1.1"
-dependencies = [
- "fe11",
- "fe11-sys",
-]
-
-[[package]]
 name = "fe11-sys"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "957bfd2d5312f1669aaeccef199b5c52943dd516e5420ca262218d3e2afdd664"
+
+[[package]]
+name = "fe11-tests"
+version = "0.1.1"
+dependencies = [
+ "der",
+ "fe11",
+ "fe11-sys",
+ "fe11-verify-engine-api",
+ "libloading",
+ "sha2",
+ "x509-cert",
+ "zeroize",
+]
 
 [[package]]
 name = "fe11-verify-engine"

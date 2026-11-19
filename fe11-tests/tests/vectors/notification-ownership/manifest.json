@@ -1,0 +1,110 @@
+[
+  {
+    "id": "notification.ownership.session-continue",
+    "file": "7aa0d8034e864df079f5617066ea8118b40c1da97e5d478178ab0afe7117bc26.txt",
+    "sha256": "7aa0d8034e864df079f5617066ea8118b40c1da97e5d478178ab0afe7117bc26",
+    "worker_mode": "builder-runtime-choices",
+    "notification_owner": "session-continue",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Clone keeps callback capture alive; synchronous registration retains capture through a SHA256 known-answer digest; diagnostics remain zero because the recipe emits no notification. Closing and dropping all owners releases capture exactly once. Continue/Cancel delivery is not claimed."
+  },
+  {
+    "id": "notification.ownership.session-cancel",
+    "file": "8612a0e6c0acb860240f3d0866dbe0c72339d4a26b8f65f259743c2945c7c23a.txt",
+    "sha256": "8612a0e6c0acb860240f3d0866dbe0c72339d4a26b8f65f259743c2945c7c23a",
+    "worker_mode": "builder-runtime-choices",
+    "notification_owner": "session-cancel",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Clone keeps callback capture alive; synchronous registration retains capture through a SHA256 known-answer digest; diagnostics remain zero because the recipe emits no notification. Closing and dropping all owners releases capture exactly once. Continue/Cancel delivery is not claimed."
+  },
+  {
+    "id": "notification.ownership.advanced-continue",
+    "file": "3dd3808894e6fb396d1beaa93ce94e922e53edc3c4d16298ef30db4304a87b93.txt",
+    "sha256": "3dd3808894e6fb396d1beaa93ce94e922e53edc3c4d16298ef30db4304a87b93",
+    "worker_mode": "builder-runtime-choices",
+    "notification_owner": "advanced-continue",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Clone keeps callback capture alive; synchronous registration retains capture through a SHA256 known-answer digest; diagnostics remain zero because the recipe emits no notification. Closing and dropping all owners releases capture exactly once. Continue/Cancel delivery is not claimed."
+  },
+  {
+    "id": "notification.ownership.advanced-cancel",
+    "file": "0430cefb728a74038926711935803b3cc09ca1e50e461f831494123973eeb5dc.txt",
+    "sha256": "0430cefb728a74038926711935803b3cc09ca1e50e461f831494123973eeb5dc",
+    "worker_mode": "builder-runtime-choices",
+    "notification_owner": "advanced-cancel",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Clone keeps callback capture alive; synchronous registration retains capture through a SHA256 known-answer digest; diagnostics remain zero because the recipe emits no notification. Closing and dropping all owners releases capture exactly once. Continue/Cancel delivery is not claimed."
+  }
+]

@@ -26,6 +26,9 @@ impl ModuleDrain {
     }
 
     /// Explicit cleanup of an advanced session, including a pending native close.
+    /// A poisoned token registry prevents new close and completion calls, but
+    /// allows local publication of an already returned close receipt;
+    /// explicit module finalization remains subject to its own recovery contract.
     pub fn close_advanced_session(
         &self,
         session: &crate::AdvancedSession,
@@ -49,6 +52,9 @@ impl ModuleDrain {
 
     /// Close a session belonging to this owner, including a token already drained.
     /// Its activity/ownership guards still apply; token drain flags are preserved.
+    /// A poisoned token registry prevents new close and completion calls, but
+    /// allows local publication of an already returned close receipt;
+    /// explicit module finalization remains subject to its own recovery contract.
     pub fn close_session(&self, session: &crate::Session) -> Result<()> {
         let mut diagnostics = None;
         if !Arc::ptr_eq(&self.inner, &session.inner) {
@@ -65,6 +71,9 @@ impl ModuleDrain {
     }
 
     /// Attempt bounded first closures of deferred resources owned by this module.
+    /// A poisoned token registry prevents new close and completion calls, but
+    /// allows local publication of an already returned close receipt;
+    /// explicit module finalization remains subject to its own recovery contract.
     pub fn reap_sessions(&self, maximum: usize) -> Result<usize> {
         let mut diagnostics = None;
         crate::session::reap_entries(
@@ -525,7 +534,8 @@ impl TokenDrain {
         outcome
     }
 
-    /// Authenticate through this drain once previously admitted operations finish.
+    /// Authenticate through this drain after native calls have returned.
+    /// Suspended operations remain owned; successful login may end them natively.
     pub fn login_as(&self, role: LoginRole, pin: impl Into<crate::PinRequest>) -> Result<()> {
         let mut diagnostic = None;
         self.context
@@ -533,6 +543,7 @@ impl TokenDrain {
     }
 
     /// Authenticate a named user via C_LoginUser while draining this token.
+    /// Operation ownership and completion follow the same rules as [`Self::login_as`].
     pub fn login_user(
         &self,
         role: LoginRole,

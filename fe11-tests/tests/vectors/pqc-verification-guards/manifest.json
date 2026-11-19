@@ -1,0 +1,334 @@
+[
+  {
+    "id": "boundary.PostQuantumKeysRejection::PqcSignatureAlgorithmMismatch@Session::verify_pqc",
+    "file": "a496d37693814c944704bd7d3eb80be5e8dcb0a8392f39c8c983275b4fd0e48b.txt",
+    "sha256": "a496d37693814c944704bd7d3eb80be5e8dcb0a8392f39c8c983275b4fd0e48b",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PostQuantumKeys(PqcSignatureAlgorithmMismatch))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.3.31",
+        "fixture_sha256": "817c1b4949779239750f34f1b2c3d77b62643e0003b23c23d48d64d97b0c8b65",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.3.31",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  },
+  {
+    "id": "boundary.PostQuantumKeysRejection::PqcSignatureAlgorithmMismatch@Session::verify_pqc_multipart",
+    "file": "26fb4b0e559691af9957b4968d7e36c2b4c34215f7b9e6c37d230e043d0912c0.txt",
+    "sha256": "26fb4b0e559691af9957b4968d7e36c2b4c34215f7b9e6c37d230e043d0912c0",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PostQuantumKeys(PqcSignatureAlgorithmMismatch))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.3.31",
+        "fixture_sha256": "817c1b4949779239750f34f1b2c3d77b62643e0003b23c23d48d64d97b0c8b65",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.3.31",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  },
+  {
+    "id": "parameter-boundary.PostQuantumKeysRejection::PqcMessageCeiling",
+    "file": "9581ad76528cc7b28728e9d54beb3aee8b594a1b66e8e81a6f8f457b1a99e31b.txt",
+    "sha256": "9581ad76528cc7b28728e9d54beb3aee8b594a1b66e8e81a6f8f457b1a99e31b",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PostQuantumKeys(PqcMessageCeiling))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  },
+  {
+    "id": "parameter-boundary.PostQuantumKeysRejection::PqcPrehashLength",
+    "file": "1e40e1af2b2dbaacf6e2d0cbb6bc62eb1031269c496589f917d1b4f1da449982.txt",
+    "sha256": "1e40e1af2b2dbaacf6e2d0cbb6bc62eb1031269c496589f917d1b4f1da449982",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PostQuantumKeys(PqcPrehashLength))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  },
+  {
+    "id": "transitive-input.Session::verify_pqc_multipart.Pkcs11PqcExternalPrehashIsSinglePartOnly",
+    "file": "04e4a77999e4f1baf54d7995c7b83c596afc15884b0b282281a421f9e8d9bb11.txt",
+    "sha256": "04e4a77999e4f1baf54d7995c7b83c596afc15884b0b282281a421f9e8d9bb11",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Unsupported(PostQuantumKeys(Pkcs11PqcExternalPrehashIsSinglePartOnly))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  },
+  {
+    "id": "transitive-input.Session::verify_pqc_multipart.PurePqcMultipartVerificationRequiresVerifysignature",
+    "file": "68b940590afeb66afee4eabb058822a9bf3e6c828f41498084180360b0f1db33.txt",
+    "sha256": "68b940590afeb66afee4eabb058822a9bf3e6c828f41498084180360b0f1db33",
+    "worker_mode": "pqc-verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Unsupported(PostQuantumKeys(PurePqcMultipartVerificationRequiresVerifysignature))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+        "source": {
+          "id": "ML-DSA-sigGen-FIPS204.1.1",
+          "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+          "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+          "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+          "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+        }
+      }
+    ],
+    "control": "Exact typed rejection, unchanged public signature and key fingerprint, no native verification; subsequent SHA256 abc control and explicit destruction.",
+    "mode": "HashMessage(Sha256) for multipart algorithm mismatch so an earlier Pure-mode rejection cannot mask the target; other modes exactly specified by design."
+  }
+]

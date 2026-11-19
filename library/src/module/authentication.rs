@@ -85,7 +85,8 @@ impl TokenContext {
                         crate::AuthenticationRejection::ForeignAuthenticationSession,
                     )));
                 }
-                session.entry(access)?;
+                session.check_synchronous_dispatch()?;
+                session.entry_common(access)?;
                 Ok(session.entry.clone())
             }
             None => access.session_ledger.usable_for(
@@ -112,8 +113,11 @@ impl Session {
     /// owned PIN source. Raw bytes, provided empty PIN and protected path stay
     /// distinct through PinRequest. No local role/session-mode policy is added.
     ///
-    /// Login changes token-wide authentication, so active token operations can
-    /// prevent admission. CKU_CONTEXT_SPECIFIC instead uses ContextAuthentication
+    /// Login changes token-wide authentication. Suspended operations remain
+    /// owned, but native execution must have returned before admission. A
+    /// successful login may terminate those operations according to PKCS#11.
+    /// Incoherent or poisoned operation owners retain their explicit errors.
+    /// CKU_CONTEXT_SPECIFIC instead uses ContextAuthentication
     /// attached to the operation that requires it. A native already-logged-in
     /// result does not verify the supplied PIN and remains an error.
     pub fn login_as(&self, role: LoginRole, pin: impl Into<PinRequest>) -> Result<()> {
@@ -131,6 +135,7 @@ impl Session {
     /// Invoke C_LoginUser through this exact session. The owned user name and
     /// PIN retain the same lifetime/erasure rules as token-context login. A native
     /// refusal or missing function never falls back to C_Login.
+    /// Operation ownership and completion follow the same rules as [`Self::login_as`].
     pub fn login_user(
         &self,
         role: LoginRole,

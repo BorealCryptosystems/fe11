@@ -176,19 +176,6 @@ impl SessionLedger {
         Ok(())
     }
 
-    // Native or possibly native sessions only. Reserved capacity must not stop
-    // the last native close from publishing logout, or masquerade as an object
-    // that C_InitToken/C_CloseAllSessions would need to close.
-    pub fn has_slot(&self, slot: CK_SLOT_ID) -> Result<bool> {
-        Ok(self
-            .state
-            .lock()
-            .map_err(|_| Error::Poisoned)?
-            .records
-            .values()
-            .any(|r| r.identity().token.slot == slot as u64 && r.native_present()))
-    }
-
     /// Close has already returned OK for `closed_uid`, but its ledger anchor is
     /// kept until all fallible local publication has finished. Reserved capacity
     /// and this exact UID do not prevent last-session logout publication.
@@ -229,6 +216,30 @@ impl SessionLedger {
                         && !entry.poisoned.load(Ordering::Acquire)
                 })
         }))
+    }
+
+    /// The slot writer is held. Only idle, locally usable native owners may
+    /// reach InitToken; this does not prove their handles still exist natively.
+    pub(crate) fn initialization_sessions_ready(&self, slot: CK_SLOT_ID) -> Result<bool> {
+        let state = self.state.lock().map_err(|_| Error::Poisoned)?;
+        Ok(state
+            .records
+            .values()
+            .filter(|record| record.identity().token.slot == slot as u64)
+            .all(|record| {
+                !record.native_present()
+                    || (record.phase() == Some(Phase::Open)
+                        && record.entry().is_some_and(|entry| {
+                            entry.snapshot.valid.load(Ordering::Acquire)
+                                && !entry.native_handle_retired()
+                                && !entry.poisoned.load(Ordering::Acquire)
+                                && !entry.closed.load(Ordering::Acquire)
+                                && !entry.close_attempted.load(Ordering::Acquire)
+                                && !entry.close_pending.load(Ordering::Acquire)
+                                && !entry.recovery.has_pending_call()
+                                && !entry.snapshot.domain.has_pending_token_call()
+                        }))
+            }))
     }
 
     pub fn has_retention(&self, identity: &TokenIdentity) -> Result<bool> {

@@ -10,7 +10,7 @@ pub(super) fn start<'session, 'input>(
 ) -> Result<NativeObjectIterator<'session>> {
     let template = InputTemplate::plan_scoped(input, limits, &session.inner)?;
     let reference =
-        session.reference_admission(crate::session::ReferenceMode::Synchronous, |state| {
+        session.reference_admission(crate::session::ReferenceMode::NativeSearch, |state| {
             if state.native.table.C_FindObjectsInit.is_none() {
                 return Err(Error::Unsupported(
                     crate::UnsupportedReason::NativeFunction {
@@ -34,6 +34,16 @@ pub(super) fn start<'session, 'input>(
             }
             Ok(())
         })?;
+    // Reject an incompatible resident owner before reserving the search's storage.
+    // The final possession checks the peer again before entering the module.
+    if session
+        .entry
+        .advanced_operation
+        .load(std::sync::atomic::Ordering::Acquire)
+        != 0
+    {
+        drop(search_access(session, reference.progress())?);
+    }
     let epoch = session.snapshot.authentication_stamp();
     let image = session.inner.read()?.native.image.clone();
     let plan = SearchPlan {
@@ -93,16 +103,17 @@ pub(super) fn start<'session, 'input>(
         // This early local also anchors the entire owner on publish refusal.
         // No private parameter/batch allocation is freed under possession.
         let mut prepared = Some(registry.bind_native_search_stream(owner));
-        let access = match session.try_operation_access_progress(false, reference.progress()) {
+        let access = match session.try_advanced_access_progress(reference.progress()) {
             Ok(access) => access,
             Err(Error::Busy(_)) => {
                 drop((prepared, diagnostics, credit));
-                drop(session.access_progress(reference.progress())?);
+                drop(search_access(session, reference.progress())?);
                 continue;
             }
             Err(error) => return Err(error),
         };
         reference.check(&access)?;
+        access.operations.check_search_peer(&session.entry)?;
         context(session, Some(epoch), epoch)?;
         // Native Init decides whether another search prevents this one.
         // This attempt has independent resident storage; refusal must not
@@ -118,16 +129,16 @@ pub(super) fn start<'session, 'input>(
         session,
         cursor: Some(Cursor {
             session,
-            waiter: Waiting::new(session, coordination, Some(epoch), epoch),
-            epoch,
+            waiter: Waiting::native_search(session, coordination),
             pending: Cell::new(false),
+            position: Cell::new(BatchPosition::Fetch),
         }),
         cache: None,
         diagnostics: Some(diagnostics),
     };
     let initialized = (|| {
         let cursor = iterator.cursor.as_ref().expect("prepared search cursor");
-        let access = session.access_progress(reference.progress())?;
+        let access = search_access(session, reference.progress())?;
         reference.check(&access)?;
         cursor.waiter.check()?;
         let slot = session

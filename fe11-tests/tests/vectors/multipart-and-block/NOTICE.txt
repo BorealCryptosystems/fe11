@@ -1,0 +1,1 @@
+DSA/ECDSA public verification vectors retain pinned NIST attribution from ../dsa and ../ecdsa. AES/DES/DES3 public test keys and independent PyCryptodome3.23.0 reference are recorded in ../block-boundaries. No operational key material.

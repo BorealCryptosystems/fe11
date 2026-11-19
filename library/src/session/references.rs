@@ -14,6 +14,7 @@ use std::sync::atomic::Ordering;
 pub(crate) enum ReferenceMode {
     Synchronous,
     SynchronousAdmission,
+    NativeSearch,
     Advanced,
     // Preparation only; an Init attempt does not acquire the occupied ticket.
     InitAttempt,
@@ -172,6 +173,9 @@ impl Session {
     fn reference_context(&self, mode: ReferenceMode) -> Result<()> {
         self.inner.state.check_admission(false)?;
         self.snapshot.check_drain(false)?;
+        if matches!(mode, ReferenceMode::NativeSearch) {
+            self.check_synchronous_dispatch()?;
+        }
         if matches!(mode, ReferenceMode::SynchronousAdmission)
             && self.entry.mode != AdvancedSessionMode::Synchronous
         {

@@ -1,0 +1,799 @@
+[
+  {
+    "id": "generation.cross.typed_generate_agreement_key.REFUSED_TERMINAL.init",
+    "file": "13b66ad6d374022688036f09036c6237016327b25c8309f6443e9a009d45c101.txt",
+    "sha256": "13b66ad6d374022688036f09036c6237016327b25c8309f6443e9a009d45c101",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 2
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_agreement_key.REFUSED_TERMINAL.logout",
+    "file": "e091e9d3ed791bbb54b5cccc91aa068dd63efd8e5f9b152c4151c7de88b3ee3e.txt",
+    "sha256": "e091e9d3ed791bbb54b5cccc91aa068dd63efd8e5f9b152c4151c7de88b3ee3e",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_agreement_key.REFUSED_TERMINAL.close",
+    "file": "723db2c6a9295adaee267437e75eca067ec265b2213f3d218d2977a92dbc43f5.txt",
+    "sha256": "723db2c6a9295adaee267437e75eca067ec265b2213f3d218d2977a92dbc43f5",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_classical_key_pair.REFUSED_TERMINAL.init",
+    "file": "fac83e383e43df4fa7b138450010425bb67f13148cdcfeb970a31fa65fd87fc7.txt",
+    "sha256": "fac83e383e43df4fa7b138450010425bb67f13148cdcfeb970a31fa65fd87fc7",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_classical_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 2
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_classical_key_pair.REFUSED_TERMINAL.logout",
+    "file": "6c46064c6d5fe62e733efca4a9ed20b5623dc83c3a7bee58d2eefa66567882ed.txt",
+    "sha256": "6c46064c6d5fe62e733efca4a9ed20b5623dc83c3a7bee58d2eefa66567882ed",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_classical_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_classical_key_pair.REFUSED_TERMINAL.close",
+    "file": "be6190032d18de272f5949eba91b12b3adcf4f22948d228effcc3f6d791a5fbb.txt",
+    "sha256": "be6190032d18de272f5949eba91b12b3adcf4f22948d228effcc3f6d791a5fbb",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_classical_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_hkdf_key.REFUSED_TERMINAL.init",
+    "file": "7b7364d0953df7c0137ed76d8781d8cf15ddd7c9e2718a1aa3866c82c165ba1a.txt",
+    "sha256": "7b7364d0953df7c0137ed76d8781d8cf15ddd7c9e2718a1aa3866c82c165ba1a",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_hkdf_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 1
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_hkdf_key.REFUSED_TERMINAL.logout",
+    "file": "ae1b02f99ccdf18640a6024d20cd8c8b736eadcb52ab6179e419b222ce4f1abc.txt",
+    "sha256": "ae1b02f99ccdf18640a6024d20cd8c8b736eadcb52ab6179e419b222ce4f1abc",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_hkdf_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_hkdf_key.REFUSED_TERMINAL.close",
+    "file": "9952a38b3eaad5a7b7ebaf951cf351026512849504044e88f916c4753e1dbcf3.txt",
+    "sha256": "9952a38b3eaad5a7b7ebaf951cf351026512849504044e88f916c4753e1dbcf3",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_hkdf_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_montgomery_key.REFUSED_TERMINAL.logout",
+    "file": "9503ba3446f7e68991a0510b76bf2ffebaf92ba0ed3d23df30a9396db5369170.txt",
+    "sha256": "9503ba3446f7e68991a0510b76bf2ffebaf92ba0ed3d23df30a9396db5369170",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_montgomery_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_montgomery_key.REFUSED_TERMINAL.close",
+    "file": "b2b2536728dbb0d3f634fbd781f6442854c3c73acf7af31026ae94ec1380c702.txt",
+    "sha256": "b2b2536728dbb0d3f634fbd781f6442854c3c73acf7af31026ae94ec1380c702",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_montgomery_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_rsa_key_encryption_pair.REFUSED_TERMINAL.init",
+    "file": "fb41ba0750365a275f8cb322cf595d5f8f28a5824e9d83483de884967cb1f947.txt",
+    "sha256": "fb41ba0750365a275f8cb322cf595d5f8f28a5824e9d83483de884967cb1f947",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_rsa_key_encryption_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 2
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_rsa_key_encryption_pair.REFUSED_TERMINAL.logout",
+    "file": "7f31eea194eee8d417048c5b31aa4ba537d6de080bbb4c427e9f8d40a322f714.txt",
+    "sha256": "7f31eea194eee8d417048c5b31aa4ba537d6de080bbb4c427e9f8d40a322f714",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_rsa_key_encryption_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_rsa_key_encryption_pair.REFUSED_TERMINAL.close",
+    "file": "d48c5c2c2c0ecfa81a8ebce4d2d20112b62e3debe36f5d8150b2f721f3c2ce59.txt",
+    "sha256": "d48c5c2c2c0ecfa81a8ebce4d2d20112b62e3debe36f5d8150b2f721f3c2ce59",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_rsa_key_encryption_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_agreement_key.REFUSED_TERMINAL.init",
+    "file": "bd8c97b7ef9c9ee0d260f7bc00920cb4e18ac0f2d2d0ab73c48fb6911e5ea6d9.txt",
+    "sha256": "bd8c97b7ef9c9ee0d260f7bc00920cb4e18ac0f2d2d0ab73c48fb6911e5ea6d9",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 2
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_agreement_key.REFUSED_TERMINAL.logout",
+    "file": "e0dd44091c45de69b820a771ca707cf84ad11148b5471067b1d625252a3c35ae.txt",
+    "sha256": "e0dd44091c45de69b820a771ca707cf84ad11148b5471067b1d625252a3c35ae",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_agreement_key.REFUSED_TERMINAL.close",
+    "file": "94bd800ba54f6e1e779b05cecd69b25153655d74b43fe592c133749c5913d71d.txt",
+    "sha256": "94bd800ba54f6e1e779b05cecd69b25153655d74b43fe592c133749c5913d71d",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_agreement_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_signing_key_pair.REFUSED_TERMINAL.init",
+    "file": "af83f7bee59ec6ea609f2c608d6cadedd3f56d95a176f239a4584aeb17ef411b.txt",
+    "sha256": "af83f7bee59ec6ea609f2c608d6cadedd3f56d95a176f239a4584aeb17ef411b",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_signing_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 2
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_signing_key_pair.REFUSED_TERMINAL.logout",
+    "file": "f8a5a707fe60e9ce2758b018ce08d3260ceba4aa4c34bd218360d8b56a45d48e.txt",
+    "sha256": "f8a5a707fe60e9ce2758b018ce08d3260ceba4aa4c34bd218360d8b56a45d48e",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_signing_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  },
+  {
+    "id": "generation.cross.typed_generate_transport_signing_key_pair.REFUSED_TERMINAL.close",
+    "file": "25282b3f934292e237ce50e5743d6a1f4154c1e3d6e6d661419382b5ba6fd3f5.txt",
+    "sha256": "25282b3f934292e237ce50e5743d6a1f4154c1e3d6e6d661419382b5ba6fd3f5",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_transport_signing_key_pair",
+      "state": "REFUSED_TERMINAL",
+      "action": "close",
+      "local_refusal": "AdmissionCancelled before any native call, using an already cancelled caller signal and otherwise valid typed specification.",
+      "restoration": "Scope ends before the tested action; the original inherited admission is restored.",
+      "generated_objects": 0
+    }
+  }
+]

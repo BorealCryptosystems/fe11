@@ -288,6 +288,7 @@ impl AdvancedSession {
         operation.provenance = Some(StateProvenance::Imported);
         let (id, _) = s.operations.install(&self.session.entry, operation)?;
         Ok(OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.session.inner.clone(),
             uid: self.session.uid,
             id,

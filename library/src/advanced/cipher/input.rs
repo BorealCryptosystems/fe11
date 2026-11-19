@@ -203,7 +203,13 @@ fn submit(
         let displaced_credit: Credit;
         let displaced: InputBuffers;
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleCipherTicket,
+            ),
+        )?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         check_owner(&operation, session, ticket.id, true)?;
         if diagnostics.is_none() {
@@ -312,7 +318,13 @@ fn finish(
     let mut released = crate::advanced::poll::ReleasedInputs::default();
     let access = session.advanced_access()?;
     {
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleCipherTicket,
+            ),
+        )?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         check_owner(&operation, session, ticket.id, false)?;
         access
@@ -334,7 +346,13 @@ fn take_output(session: &Session, ticket: &OperationTicket) -> Result<CipherStre
     let mut credit = session.inner.symmetric_budget.reserve(0)?;
     let replacement = UnboundBuffer::allocate(0)?.bind(&mut credit)?;
     let access = session.advanced_access()?;
-    let held = access.operations.get(ticket.uid)?;
+    let held = access.operations.get_ticket_with(
+        ticket.uid,
+        ticket.id,
+        crate::RejectionReason::OperationOwnership(
+            crate::OperationOwnershipRejection::StaleCipherTicket,
+        ),
+    )?;
     let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
     check_owner(&operation, session, ticket.id, true)?;
     access
@@ -541,7 +559,13 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let held = state.operations.get(self.uid)?;
+        let held = state.operations.get_ticket_with(
+            self.uid,
+            self.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleCipherTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

@@ -1,0 +1,1796 @@
+[
+  {
+    "id": "ticket-complete.AdvancedSession::authenticate_context.foreign",
+    "file": "3ce85a43ebab00d8428546bfaa79311d58c63abf5b17083d383aff892040ac6f.txt",
+    "sha256": "3ce85a43ebab00d8428546bfaa79311d58c63abf5b17083d383aff892040ac6f",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::authenticate_context.consumed",
+    "file": "06efaa7f32fc44adf01283c95851dadcafb91cdd09e8d77acade8e3f3cd016c0.txt",
+    "sha256": "06efaa7f32fc44adf01283c95851dadcafb91cdd09e8d77acade8e3f3cd016c0",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.Session::authenticate_context.foreign",
+    "file": "6076351b9687cc25f1abe3c70746c21f32fa7eedb89e7e8f9e6e90effe5478f0.txt",
+    "sha256": "6076351b9687cc25f1abe3c70746c21f32fa7eedb89e7e8f9e6e90effe5478f0",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.Session::authenticate_context.consumed",
+    "file": "2f548fbf3b9d9e81ebbd0692cc50a421f7958279a3874d8ffcb620293a3b57db.txt",
+    "sha256": "2f548fbf3b9d9e81ebbd0692cc50a421f7958279a3874d8ffcb620293a3b57db",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::login_context.foreign",
+    "file": "31f96246096b8bbba56831946f636215f9f2fc1d87ecc16307ff3bfeff9f16b2.txt",
+    "sha256": "31f96246096b8bbba56831946f636215f9f2fc1d87ecc16307ff3bfeff9f16b2",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::login_context.consumed",
+    "file": "efe2a497cde4854ae43ca2212e48e7dc1f0361ecb2c05b687184dc6e194692ca.txt",
+    "sha256": "efe2a497cde4854ae43ca2212e48e7dc1f0361ecb2c05b687184dc6e194692ca",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": null
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::login_context_user.foreign",
+    "file": "981e24c576bbb8071acb01ccaa5905461bb4a6a1fd19b7b0c5801dfe5a8ce02f.txt",
+    "sha256": "981e24c576bbb8071acb01ccaa5905461bb4a6a1fd19b7b0c5801dfe5a8ce02f",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": "75736572"
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::login_context_user.consumed",
+    "file": "5acb7b43eebbf9134027794292d5ee47c0781126458588887a981d8f13ff7e1d.txt",
+    "sha256": "5acb7b43eebbf9134027794292d5ee47c0781126458588887a981d8f13ff7e1d",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "authentication": "ContextAuthentication::login(PinRequest::Provided(owned fixture USER PIN))",
+      "pin": "owned fixture USER PIN",
+      "user_name_hex": "75736572"
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::next_native_function.foreign",
+    "file": "01c6d62ebc568d0a4c673206c7ef8c54f402d39121da52b9af66cedc5054f224.txt",
+    "sha256": "01c6d62ebc568d0a4c673206c7ef8c54f402d39121da52b9af66cedc5054f224",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::next_native_function.consumed",
+    "file": "7cabb6890966f5810644c2eed52cfb957e29213b49b50f1dfec0f390f3cd6d13.txt",
+    "sha256": "7cabb6890966f5810644c2eed52cfb957e29213b49b50f1dfec0f390f3cd6d13",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll.foreign",
+    "file": "b8553c80f0289343b5f63faeda338eb88a2bc2e55d67c3dab318fab24f2d4258.txt",
+    "sha256": "b8553c80f0289343b5f63faeda338eb88a2bc2e55d67c3dab318fab24f2d4258",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll.consumed",
+    "file": "0158982fffccc691b80e635df17d47963840a5e6b9fa986f23f11bced016ffdd.txt",
+    "sha256": "0158982fffccc691b80e635df17d47963840a5e6b9fa986f23f11bced016ffdd",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_signature.foreign",
+    "file": "98930ce5e0872f704d799b0377af2794c4293f6fb2f43feef1f418a3700a102a.txt",
+    "sha256": "98930ce5e0872f704d799b0377af2794c4293f6fb2f43feef1f418a3700a102a",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_signature.consumed",
+    "file": "e9a8f36a729c6ff067d40827adf1bdf6f16a9f2eedff2bcd9c16ae7ea2b67188.txt",
+    "sha256": "e9a8f36a729c6ff067d40827adf1bdf6f16a9f2eedff2bcd9c16ae7ea2b67188",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.Session::poll_signature.foreign",
+    "file": "3a5f6571809be9825b398006792c81f24770e9428d0fc8011c4653478834c334.txt",
+    "sha256": "3a5f6571809be9825b398006792c81f24770e9428d0fc8011c4653478834c334",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.Session::poll_signature.consumed",
+    "file": "4662efdd60859f053fca8bf573a2170a4182b878b387085f1ed8d7e652744a18.txt",
+    "sha256": "4662efdd60859f053fca8bf573a2170a4182b878b387085f1ed8d7e652744a18",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::start_state_capture.foreign",
+    "file": "6b6695f9737b5f75ec236addc94fd03550ba3c9d06ae19b388ae5d89e4f3efcd.txt",
+    "sha256": "6b6695f9737b5f75ec236addc94fd03550ba3c9d06ae19b388ae5d89e4f3efcd",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "maximum_bytes": 1048576
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::start_state_capture.consumed",
+    "file": "ebf0d2ee76d03322e6b7fcda5e3b207f2adb35953423f155c31cb7fb3e72fd67.txt",
+    "sha256": "ebf0d2ee76d03322e6b7fcda5e3b207f2adb35953423f155c31cb7fb3e72fd67",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "maximum_bytes": 1048576
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_state_capture.foreign",
+    "file": "7650e5ed3d83c493184468f5bc94a64a9d568c1aa55fed6c4718719dc6d62ebb.txt",
+    "sha256": "7650e5ed3d83c493184468f5bc94a64a9d568c1aa55fed6c4718719dc6d62ebb",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_state_capture.consumed",
+    "file": "7a668597653c765705afa4247cf32731f01b673112d5b59b41176e9d19ee1e46.txt",
+    "sha256": "7a668597653c765705afa4247cf32731f01b673112d5b59b41176e9d19ee1e46",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::start_detachment.foreign",
+    "file": "e0890a57c1c1f8d12c136c1a904946892b9156221b40d3332046e11ad644852f.txt",
+    "sha256": "e0890a57c1c1f8d12c136c1a904946892b9156221b40d3332046e11ad644852f",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "maximum_bytes": 1048576
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::start_detachment.consumed",
+    "file": "d44ef3f78b0e5cee0d18f4582a864445a5c6594c52d8eafdb4618c3f114216c3.txt",
+    "sha256": "d44ef3f78b0e5cee0d18f4582a864445a5c6594c52d8eafdb4618c3f114216c3",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "maximum_bytes": 1048576
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_detachment.foreign",
+    "file": "546d4d46ee7068201c6380eb941822f028933f87ed2105a8f2544c46362c2095.txt",
+    "sha256": "546d4d46ee7068201c6380eb941822f028933f87ed2105a8f2544c46362c2095",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::poll_detachment.consumed",
+    "file": "d524a878e7f81d64128146d5637bd1a439fd0c4d3628a91b5423eac9e697a57a.txt",
+    "sha256": "d524a878e7f81d64128146d5637bd1a439fd0c4d3628a91b5423eac9e697a57a",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_gcm_recovery.foreign",
+    "file": "2d191170ec3e6b24301dfc51f170f4706ae11a63c930c505805b612c7d988593.txt",
+    "sha256": "2d191170ec3e6b24301dfc51f170f4706ae11a63c930c505805b612c7d988593",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      }
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_gcm_recovery.consumed",
+    "file": "ff92af3e8922d940d501a290659e40d0401955c2263117a04f64bd027c51e311.txt",
+    "sha256": "ff92af3e8922d940d501a290659e40d0401955c2263117a04f64bd027c51e311",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      }
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_ccm_recovery.foreign",
+    "file": "e70170e2ce8fd66091b38d94a863740cc52ef30e252c51febbb752f841170dd7.txt",
+    "sha256": "e70170e2ce8fd66091b38d94a863740cc52ef30e252c51febbb752f841170dd7",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      }
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_ccm_recovery.consumed",
+    "file": "8c889f72ec11af0eea00c0e98e15640686ea048df77311a3917ceb6048182637.txt",
+    "sha256": "8c889f72ec11af0eea00c0e98e15640686ea048df77311a3917ceb6048182637",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      }
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.foreign.ChaCha20",
+    "file": "c504046d44e81c4cb22a974d8d496c1a50b0e6ee4435660ee17e0832825b52e7.txt",
+    "sha256": "c504046d44e81c4cb22a974d8d496c1a50b0e6ee4435660ee17e0832825b52e7",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      },
+      "algorithm": "StreamAeadAlgorithm::ChaCha20"
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.consumed.ChaCha20",
+    "file": "f62ed66e54444ddfc986d8e7b9040ceed9dca96a9854c40f4b771af10a285b13.txt",
+    "sha256": "f62ed66e54444ddfc986d8e7b9040ceed9dca96a9854c40f4b771af10a285b13",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      },
+      "algorithm": "StreamAeadAlgorithm::ChaCha20"
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.foreign.Salsa20",
+    "file": "b30be322d2ba47ecb60cce925da4b30076696c87b1560ea624378facc74dbc13.txt",
+    "sha256": "b30be322d2ba47ecb60cce925da4b30076696c87b1560ea624378facc74dbc13",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      },
+      "algorithm": "StreamAeadAlgorithm::Salsa20"
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::capture_stream_aead_recovery.consumed.Salsa20",
+    "file": "440ad724de663c352b23958846827e2a660e4c92a6682db3de93d5177db81345.txt",
+    "sha256": "440ad724de663c352b23958846827e2a660e4c92a6682db3de93d5177db81345",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "limits": {
+        "bytes": 1048576,
+        "messages": 1,
+        "fragments": 1
+      },
+      "algorithm": "StreamAeadAlgorithm::Salsa20"
+    }
+  },
+  {
+    "id": "ticket-complete.Session::poll_recovery.foreign",
+    "file": "52872397140b51018bc80999ec8a4e499a2407fb33f30d1fedd0db4af74844f8.txt",
+    "sha256": "52872397140b51018bc80999ec8a4e499a2407fb33f30d1fedd0db4af74844f8",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.Session::poll_recovery.consumed",
+    "file": "69377655ecb889797ce2a985ba3b0bcf674591bd73f4c0b34b29edc07b971817.txt",
+    "sha256": "69377655ecb889797ce2a985ba3b0bcf674591bd73f4c0b34b29edc07b971817",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {}
+  },
+  {
+    "id": "ticket-complete.Session::resize_recovery_output.foreign",
+    "file": "29884a0cb52c464a67c65e34e354691394f74a04c04312be2c1a697e64c17565.txt",
+    "sha256": "29884a0cb52c464a67c65e34e354691394f74a04c04312be2c1a697e64c17565",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "capacity": 256
+    }
+  },
+  {
+    "id": "ticket-complete.Session::resize_recovery_output.consumed",
+    "file": "50450312e88fa94d34ea3972ebd56fb2421ae069fe36cefb1f7d3d4f12bd5a8d.txt",
+    "sha256": "50450312e88fa94d34ea3972ebd56fb2421ae069fe36cefb1f7d3d4f12bd5a8d",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "Session::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "capacity": 256
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::resize_recovery_output.foreign",
+    "file": "2f5c98d2b5645dc1cbb7dc5968273d91823622b0353e6d12a680e226fbc98109.txt",
+    "sha256": "2f5c98d2b5645dc1cbb7dc5968273d91823622b0353e6d12a680e226fbc98109",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "initial_result": "Live caller-fed digest after successful C_DigestInit; no input supplied",
+      "key": null,
+      "sessions": "Two live same-module sessions A and B; create SHA256 digest ticket in A."
+    },
+    "parameters": {
+      "capacity": 256
+    }
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::resize_recovery_output.consumed",
+    "file": "05fcf6d70f19a4a31b671b84452f9a228dca392de9260d7603efede37af8efce.txt",
+    "sha256": "05fcf6d70f19a4a31b671b84452f9a228dca392de9260d7603efede37af8efce",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedRecoveryTicket))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": {
+      "method": "AdvancedSession::begin_digest",
+      "algorithm": "HashAlgorithm::Sha256",
+      "native_mode": "Synchronous",
+      "pacing_before_start": "OperationPacing::Cooperative",
+      "validation_capture": "Disabled",
+      "key": null,
+      "sessions": "Create SHA256 digest ticket in receiver A, update abc, finish_digest and inspect the returned digest (Session: PreparedDigest; AdvancedSession: OperationProgress::Digest); exact SHA256 abc. Keep the now-consumed ticket (id zero); do not poll it to manufacture consumption.",
+      "setup_result": "Digest result already published and checked; retained OperationTicket is consumed (id zero)."
+    },
+    "parameters": {
+      "capacity": 256
+    }
+  }
+]

@@ -1,0 +1,4 @@
+# Preserve the exact bytes used to build the release candidate on every runner.
+/library/** -text
+/fe11-tests/** -text
+/ci/** -text

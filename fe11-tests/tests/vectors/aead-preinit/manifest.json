@@ -1,0 +1,252 @@
+[
+  {
+    "id": "local.aead_preinit.input_ceiling",
+    "file": "d61b40ff817b82907cec14f7deec49fd7daaebc7f3046168ded3af9d1f399f37.txt",
+    "sha256": "d61b40ff817b82907cec14f7deec49fd7daaebc7f3046168ded3af9d1f399f37",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadInputCeiling)); bytes0 passes InputLimits, total adds AAD2 > maximum1",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.begin_input_ceiling",
+    "file": "2b724cccb796fe6ee58c34916b1d683f760d22c7e06e27429806a738b09bcd4d.txt",
+    "sha256": "2b724cccb796fe6ee58c34916b1d683f760d22c7e06e27429806a738b09bcd4d",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadInputCeiling)); AAD2 > maximum1 before owner phase check",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.valid_input_before_init",
+    "file": "cff688dd8d539c32954f77a1821ae4d62608e7dba6e9056e6683065244c2dbf4.txt",
+    "sha256": "cff688dd8d539c32954f77a1821ae4d62608e7dba6e9056e6683065244c2dbf4",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadStreamIsNotAwaitingInput)); public ticket is still Init, not Ready/Receive",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.foreign_ticket",
+    "file": "fc69feec8c4920f671efa7a1d2030bd996e719d1f613c8bf63626c8fd47649f9.txt",
+    "sha256": "fc69feec8c4920f671efa7a1d2030bd996e719d1f613c8bf63626c8fd47649f9",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(ForeignOrConsumedAeadStreamTicket)); checked before input/owner phase",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.input_ceiling.session",
+    "file": "6d7a4d5c958dd7f299b126ceaa9658ce5d686ea48179be02950ecfc898cd1e0e.txt",
+    "sha256": "6d7a4d5c958dd7f299b126ceaa9658ce5d686ea48179be02950ecfc898cd1e0e",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadInputCeiling)); bytes0 passes InputLimits, total adds AAD2 > maximum1",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.begin_input_ceiling.session",
+    "file": "9defb12381640f7e3bfe2f89baded6c375906bd16408c7fe0fa80407c36fac3b.txt",
+    "sha256": "9defb12381640f7e3bfe2f89baded6c375906bd16408c7fe0fa80407c36fac3b",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadInputCeiling)); AAD2 > maximum1 before owner phase check",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.valid_input_before_init.session",
+    "file": "39772a9ced0e4da940b5b98d261c87f3fe9f0f0dbde0a94e5121ba0c0f8c298c.txt",
+    "sha256": "39772a9ced0e4da940b5b98d261c87f3fe9f0f0dbde0a94e5121ba0c0f8c298c",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadStreamIsNotAwaitingInput)); public ticket is still Init, not Ready/Receive",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  },
+  {
+    "id": "local.aead_preinit.foreign_ticket.session",
+    "file": "7053e848aaa8fa81a74ae7c8692f0ed3217bd435907e547768717682a198e6e6.txt",
+    "sha256": "7053e848aaa8fa81a74ae7c8692f0ed3217bd435907e547768717682a198e6e6",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(ForeignOrConsumedAeadStreamTicket)); checked before input/owner phase",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_MessageEncryptInit",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact local refusal before native Init",
+      "original ticket retains its deferred Init",
+      "explicit poll gets exact native FUNCTION_NOT_SUPPORTED",
+      "independent cleanup"
+    ]
+  }
+]

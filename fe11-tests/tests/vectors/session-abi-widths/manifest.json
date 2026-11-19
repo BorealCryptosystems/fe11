@@ -1,0 +1,232 @@
+[
+  {
+    "id": "width.session.flags-legacy",
+    "worker_mode": "session-abi-widths",
+    "file": "7f78d387d0a487bedf28aec4fab60c85c0a2f9336fe2dd1b7d769b176775af2d.txt",
+    "sha256": "7f78d387d0a487bedf28aec4fab60c85c0a2f9336fe2dd1b7d769b176775af2d",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.advanced.flags-legacy",
+    "worker_mode": "session-abi-widths",
+    "file": "7e7061bc9b0394d4d6150f18cd4af841a4affa1f940c1bfdb76aec094f19e2ed.txt",
+    "sha256": "7e7061bc9b0394d4d6150f18cd4af841a4affa1f940c1bfdb76aec094f19e2ed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.session.flags-standard",
+    "worker_mode": "session-abi-widths",
+    "file": "1b224ace41501050bba0acf2d440001d50d635b315734d80885997924a344895.txt",
+    "sha256": "1b224ace41501050bba0acf2d440001d50d635b315734d80885997924a344895",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.advanced.flags-standard",
+    "worker_mode": "session-abi-widths",
+    "file": "279c967f32973283f7b6a32f61acfcc4526ee728520766b6b5ba267ee0ba9c3f.txt",
+    "sha256": "279c967f32973283f7b6a32f61acfcc4526ee728520766b6b5ba267ee0ba9c3f",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_GetSessionValidationFlags",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.session.ccm-encrypt",
+    "worker_mode": "session-abi-widths",
+    "file": "e786c5e14234f796c846577004218ff948e5256015936d705ec35794fb316e91.txt",
+    "sha256": "e786c5e14234f796c846577004218ff948e5256015936d705ec35794fb316e91",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.advanced.ccm-encrypt",
+    "worker_mode": "session-abi-widths",
+    "file": "c7906c1ba6dbd0c25e95b7b158e4578d758889944ba15eac8759e28742986ead.txt",
+    "sha256": "c7906c1ba6dbd0c25e95b7b158e4578d758889944ba15eac8759e28742986ead",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_EncryptInit",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.session.ccm-decrypt",
+    "worker_mode": "session-abi-widths",
+    "file": "faaff8e53bb070374846b009c1e5fc5a3d14762c3527b66c5e24f8c073b31d7e.txt",
+    "sha256": "faaff8e53bb070374846b009c1e5fc5a3d14762c3527b66c5e24f8c073b31d7e",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  },
+  {
+    "id": "width.advanced.ccm-decrypt",
+    "worker_mode": "session-abi-widths",
+    "file": "6013883b3dca1e6b65af397507b617e299901fc2e4b3c79dc3edf958f1deae14.txt",
+    "sha256": "6013883b3dca1e6b65af397507b617e299901fc2e4b3c79dc3edf958f1deae14",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DecryptInit",
+      "C_DestroyObject"
+    ],
+    "oracle": "LP64 declared scalar 0, 1, u32::MAX, 2^32, u64::MAX. Exact native return and function or the precise legacy-table selector absence. CCM uses seven nonce bytes, with no length-proportional allocation."
+  }
+]

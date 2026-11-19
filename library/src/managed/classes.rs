@@ -87,7 +87,7 @@ impl ManagedClass {
             Self::Other(value) => value as _,
         }
     }
-    pub(super) fn from_raw(value: CK_OBJECT_CLASS) -> Self {
+    pub(crate) fn from_raw(value: CK_OBJECT_CLASS) -> Self {
         match value {
             CKO_DATA => Self::Data,
             CKO_CERTIFICATE => Self::Certificate,

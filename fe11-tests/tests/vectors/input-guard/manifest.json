@@ -1,0 +1,420 @@
+[
+  {
+    "id": "guard.AeadMessagesRejection::AeadMessageTicketUnavailable@Session::take_aead_message_ticket",
+    "file": "73b099fdcec195834675a2f9d4f04e75e5864256bfb887b47e1a26212b510065.txt",
+    "sha256": "73b099fdcec195834675a2f9d4f04e75e5864256bfb887b47e1a26212b510065",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadMessageTicketUnavailable))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Original AEAD ticket progress unchanged and owner closed without Init"
+    ]
+  },
+  {
+    "id": "guard.AeadMessagesRejection::AeadMessageTicketUnavailable@AdvancedSession::take_aead_message_ticket",
+    "file": "f813491cfd615b2725a873e1e73d412f95fa435655948ecdc6bbc805035511b3.txt",
+    "sha256": "f813491cfd615b2725a873e1e73d412f95fa435655948ecdc6bbc805035511b3",
+    "worker_mode": "aead-preinit",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadMessageTicketUnavailable))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Original AEAD ticket progress unchanged and owner closed without Init"
+    ]
+  },
+  {
+    "id": "boundary.AttributeValuesRejection::AttributeTemplateSpecificationDeferred@Module::declare_attribute_extension",
+    "file": "626b67d48af13c506460f88af927b877e883b50c9a79897e758cc34307d421ff.txt",
+    "sha256": "626b67d48af13c506460f88af927b877e883b50c9a79897e758cc34307d421ff",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeTemplateSpecificationDeferred))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "boundary.KeyAdmissionRejection::AesKeyRequired@AdvancedSession::find_aes_key",
+    "file": "830884f0dbbb55ce05b41e323ecdbff2968015def4e455503d15b733e847bb1b.txt",
+    "sha256": "830884f0dbbb55ce05b41e323ecdbff2968015def4e455503d15b733e847bb1b",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyAdmission(AesKeyRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "boundary.KeyAdmissionRejection::AesKeyRequired@AdvancedSession::generate_aes_key",
+    "file": "84187e30a08d0d986797dd63edb39488b66f941ae67ef469466dcaed684693fe.txt",
+    "sha256": "84187e30a08d0d986797dd63edb39488b66f941ae67ef469466dcaed684693fe",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyAdmission(AesKeyRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "parameter-boundary.KeyTransportRejection::AesKekAlgorithm",
+    "file": "e6ba13a54b43e0f7c87c2db48fffde23a544059b77b8ed76f32275d6f846d88e.txt",
+    "sha256": "e6ba13a54b43e0f7c87c2db48fffde23a544059b77b8ed76f32275d6f846d88e",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyTransport(AesKekAlgorithm))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::create_native_object.AttributeTemplateCountCeiling",
+    "file": "0661716d01d91b3bb96b3c1ddb978620005476cf1bd418f3c324ea6dc7d55830.txt",
+    "sha256": "0661716d01d91b3bb96b3c1ddb978620005476cf1bd418f3c324ea6dc7d55830",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeTemplateCountCeiling))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::create_native_object.AttributeTemplateValueCeiling",
+    "file": "24b69737533c74ab844c62fee9d9c736f64418a23234b77badc2dbdf4d780067.txt",
+    "sha256": "24b69737533c74ab844c62fee9d9c736f64418a23234b77badc2dbdf4d780067",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeTemplateValueCeiling))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::create_native_object.AttributeTemplateDepthCeiling",
+    "file": "e6374a51973b3603326f422ad189b424afe033b363042fd28a8b0b5660ecec09.txt",
+    "sha256": "e6374a51973b3603326f422ad189b424afe033b363042fd28a8b0b5660ecec09",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AttributeValues(AttributeTemplateDepthCeiling))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::digest_multipart.CryptoInputCeilings",
+    "file": "e25e778605566d592cd9b9f62065788f00c90ccae5cda7abc9bd4b16b1f03062.txt",
+    "sha256": "e25e778605566d592cd9b9f62065788f00c90ccae5cda7abc9bd4b16b1f03062",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(CryptoInputCeilings))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::digest_multipart.CryptoTotalCeiling",
+    "file": "16fe8449baf2dacd22ac1146c1e6fce09562bcb2d91bb171a7ad5b6e4dd94d53.txt",
+    "sha256": "16fe8449baf2dacd22ac1146c1e6fce09562bcb2d91bb171a7ad5b6e4dd94d53",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(CryptoTotalCeiling))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::generate_symmetric_key.HmacKeyTypeRequired",
+    "file": "c259ae61df76af3db7b8bd28017ecaf399ded60bcd129fee5658dc8194b0703e.txt",
+    "sha256": "c259ae61df76af3db7b8bd28017ecaf399ded60bcd129fee5658dc8194b0703e",
+    "worker_mode": "input-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SymmetricParameters(HmacKeyTypeRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Exact typed refusal; native dispatch count unchanged by rejected method",
+      "Independent SHA256 abc result proves idle owner remains usable; no created object expected"
+    ]
+  }
+]

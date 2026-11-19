@@ -1,0 +1,8 @@
+CKM_DES_CBC
+advanced
+decrypt
+0
+0123456789abcdef
+
+
+1234567890abcdef

@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //! Generic derivation inputs: explicit native algorithm parameters, no key profile.
-use crate::{ManagedClass, NativeObjectRef};
+use crate::{
+    AttributeInput, AttributeInputValue, ManagedClass, NativeObjectRef, StandardAttribute,
+};
 use fe11_sys::*;
 
 /// Digest-based secret-key derivation without a mechanism parameter. The module
@@ -587,8 +589,27 @@ impl<'a> NativeKeyDerivation<'a> {
             _ => crate::MechanismLayoutProvenance::StandardLayout,
         }
     }
-    pub(crate) fn output_class(&self) -> ManagedClass {
-        match self {
+    // The output template can name the class independently of the GOST
+    // parameters. A conflicting or absent class cannot narrow a reservation.
+    pub(crate) fn output_class(&self, template: &[AttributeInput<'_>]) -> Option<ManagedClass> {
+        if matches!(self, Self::GostR3410 { .. }) {
+            let mut selected = None;
+            for field in template
+                .iter()
+                .filter(|field| field.attribute == StandardAttribute::CLASS)
+            {
+                let AttributeInputValue::Unsigned(value) = &field.value else {
+                    return None;
+                };
+                let class = ManagedClass::from_raw(CK_OBJECT_CLASS::try_from(*value).ok()?);
+                if selected.is_some_and(|previous| previous != class) {
+                    return None;
+                }
+                selected = Some(class);
+            }
+            return selected;
+        }
+        Some(match self {
             Self::Extension { class, .. } | Self::Null { class } => *class,
             Self::PublicFromPrivate => ManagedClass::PublicKey,
             Self::Hkdf {
@@ -600,6 +621,6 @@ impl<'a> NativeKeyDerivation<'a> {
                 ..
             }) => ManagedClass::Data,
             _ => ManagedClass::SecretKey,
-        }
+        })
     }
 }

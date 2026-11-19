@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "aead.partitions.key-128.session.encrypt",
+    "file": "de9b019ea811be6807d397c899fec1ffbbdd81d02cefcef626fc2cdebc4df6e5.txt",
+    "sha256": "de9b019ea811be6807d397c899fec1ffbbdd81d02cefcef626fc2cdebc4df6e5",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "7346139595c0b41e497bbde365f42d0a"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-128.session.decrypt",
+    "file": "ddb63186662fba122f83c87198257903a9205342fc663e4c737294f67c468a79.txt",
+    "sha256": "ddb63186662fba122f83c87198257903a9205342fc663e4c737294f67c468a79",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.key-128.advanced.encrypt",
+    "file": "15d7b8461b960fafb167f6dd096bafec66ef275f91fa4e100159476467224396.txt",
+    "sha256": "15d7b8461b960fafb167f6dd096bafec66ef275f91fa4e100159476467224396",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "7346139595c0b41e497bbde365f42d0a"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-128.advanced.decrypt",
+    "file": "ed274a7e78738fc9b1e3ace6b02208f6f04f9005537c5a306212b1b0d83c86b4.txt",
+    "sha256": "ed274a7e78738fc9b1e3ace6b02208f6f04f9005537c5a306212b1b0d83c86b4",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.key-192.session.encrypt",
+    "file": "3bfdf4afe179fae6016c5a00c199028298896df6435faf571e0e1d7db5d159f0.txt",
+    "sha256": "3bfdf4afe179fae6016c5a00c199028298896df6435faf571e0e1d7db5d159f0",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 192,
+      "iv_bytes": 12,
+      "expected_hex": "494e385a4b3fafb713eaeca808626717"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-192.session.decrypt",
+    "file": "14997f370681c98d7d060b46e27561a45b8d2af10ec51f08879fdfd59e4db7c3.txt",
+    "sha256": "14997f370681c98d7d060b46e27561a45b8d2af10ec51f08879fdfd59e4db7c3",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 192,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.key-192.advanced.encrypt",
+    "file": "9d02c33f2bf283efdb08a3cd971bc61a6bb258825d8bc0f6bb9b97a365f50e68.txt",
+    "sha256": "9d02c33f2bf283efdb08a3cd971bc61a6bb258825d8bc0f6bb9b97a365f50e68",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 192,
+      "iv_bytes": 12,
+      "expected_hex": "494e385a4b3fafb713eaeca808626717"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-192.advanced.decrypt",
+    "file": "cfd0f45d5887cbbba4744a8db4aa0b13d4688947da000455615febdcf810d4ff.txt",
+    "sha256": "cfd0f45d5887cbbba4744a8db4aa0b13d4688947da000455615febdcf810d4ff",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 192,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.key-256.session.encrypt",
+    "file": "f90d31022dd50c89e70d99eff0763486893985671e9c69911569c2f59620bf63.txt",
+    "sha256": "f90d31022dd50c89e70d99eff0763486893985671e9c69911569c2f59620bf63",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 256,
+      "iv_bytes": 12,
+      "expected_hex": "f05d76ae4ab99fe5a6f69b3148c2363d"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-256.session.decrypt",
+    "file": "7e627a77ad2b7a552430bc920fade76d50c7c6305e7ba2ee5b8ecd69521fa8c7.txt",
+    "sha256": "7e627a77ad2b7a552430bc920fade76d50c7c6305e7ba2ee5b8ecd69521fa8c7",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 256,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.key-256.advanced.encrypt",
+    "file": "a01466430ebe76dc2b6f6741c30e78a91a4547690d2ba6d749bc1d50db1e6d08.txt",
+    "sha256": "a01466430ebe76dc2b6f6741c30e78a91a4547690d2ba6d749bc1d50db1e6d08",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 256,
+      "iv_bytes": 12,
+      "expected_hex": "f05d76ae4ab99fe5a6f69b3148c2363d"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.key-256.advanced.decrypt",
+    "file": "9c6579ee9b7b8782c8c12494f4058e4aee27421c0e344de898059fa3ab3418f0.txt",
+    "sha256": "9c6579ee9b7b8782c8c12494f4058e4aee27421c0e344de898059fa3ab3418f0",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 256,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-1.session.encrypt",
+    "file": "794ed15d48a4a0b83a96574d0df47297e091e1589bce5a0ac88e89bc9f1c645c.txt",
+    "sha256": "794ed15d48a4a0b83a96574d0df47297e091e1589bce5a0ac88e89bc9f1c645c",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 1,
+      "expected_hex": "3c2fa7a9aaaee8e056709d0fb8a3b276"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-1.session.decrypt",
+    "file": "c1b729a5db4bbaa6447dbfea6f878457d338d299d30a81e0bfbb7ab4bc7dfd0e.txt",
+    "sha256": "c1b729a5db4bbaa6447dbfea6f878457d338d299d30a81e0bfbb7ab4bc7dfd0e",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 1,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-1.advanced.encrypt",
+    "file": "f19db79e25ef3745db6f2f6ac79d72783d832b11f9b54f989756646f0eef0343.txt",
+    "sha256": "f19db79e25ef3745db6f2f6ac79d72783d832b11f9b54f989756646f0eef0343",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 1,
+      "expected_hex": "3c2fa7a9aaaee8e056709d0fb8a3b276"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-1.advanced.decrypt",
+    "file": "bc8883a2232fb8f04bbe2aac0bb95abb0bb87afc91db92b7292d4b57f0d81fb4.txt",
+    "sha256": "bc8883a2232fb8f04bbe2aac0bb95abb0bb87afc91db92b7292d4b57f0d81fb4",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 1,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-12.session.encrypt",
+    "file": "0836fde0c8eee1bd973da73d71cd4d5fbec2dc1a3419ab71485624323945d97b.txt",
+    "sha256": "0836fde0c8eee1bd973da73d71cd4d5fbec2dc1a3419ab71485624323945d97b",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "e85323b218448da3922c16fff470b44f"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-12.session.decrypt",
+    "file": "56cdb2928262c95d7d7c586af8de45025ebb75753685ab55bbb972893c619a72.txt",
+    "sha256": "56cdb2928262c95d7d7c586af8de45025ebb75753685ab55bbb972893c619a72",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-12.advanced.encrypt",
+    "file": "31cca20e8adb508dafa2c62bd1286e65c0700e7841d2c7b9eac7afdbdc1fe081.txt",
+    "sha256": "31cca20e8adb508dafa2c62bd1286e65c0700e7841d2c7b9eac7afdbdc1fe081",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "e85323b218448da3922c16fff470b44f"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-12.advanced.decrypt",
+    "file": "2217457415b30a3a0373152f8bebfa8fa59cd1a2ca653430cd7aedc91f34ff56.txt",
+    "sha256": "2217457415b30a3a0373152f8bebfa8fa59cd1a2ca653430cd7aedc91f34ff56",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-13.session.encrypt",
+    "file": "fb343f1187b28c00982cc4e278dadc03cc941c24510a514fe1129f616d60c23b.txt",
+    "sha256": "fb343f1187b28c00982cc4e278dadc03cc941c24510a514fe1129f616d60c23b",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 13,
+      "expected_hex": "e74a465a0cb7420048643fa1243b8392"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-13.session.decrypt",
+    "file": "367ba1ed8f210a0a0524c8c10abc0dc8255ef10ada1db90419819ef8a268b4b1.txt",
+    "sha256": "367ba1ed8f210a0a0524c8c10abc0dc8255ef10ada1db90419819ef8a268b4b1",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 13,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-13.advanced.encrypt",
+    "file": "186d0afb8d5950343758b4028c060ecca0039f67ff45fb270b0c4917e3e5d487.txt",
+    "sha256": "186d0afb8d5950343758b4028c060ecca0039f67ff45fb270b0c4917e3e5d487",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 13,
+      "expected_hex": "e74a465a0cb7420048643fa1243b8392"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-13.advanced.decrypt",
+    "file": "5ff2c06fbe25b3fcdb88bf24c02140fbf24913b158bbab730b33bb5a7f3f2957.txt",
+    "sha256": "5ff2c06fbe25b3fcdb88bf24c02140fbf24913b158bbab730b33bb5a7f3f2957",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 13,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-16.session.encrypt",
+    "file": "fae69c19ad53c69622b64e26fe59e7c08dd820345db13d0257766d26ac56f518.txt",
+    "sha256": "fae69c19ad53c69622b64e26fe59e7c08dd820345db13d0257766d26ac56f518",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 16,
+      "expected_hex": "278a5140d81e9e657b50b78b3ac5726e"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-16.session.decrypt",
+    "file": "f5749dcff4dc04b18c0f6bf6b699b6ad9355f41e522fa42ef7036dea9c4e833c.txt",
+    "sha256": "f5749dcff4dc04b18c0f6bf6b699b6ad9355f41e522fa42ef7036dea9c4e833c",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 16,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-16.advanced.encrypt",
+    "file": "bb68432c3bb78a3ac554af04bea96fc3a7d4cdf1947a8463fb63c8eb72b67d05.txt",
+    "sha256": "bb68432c3bb78a3ac554af04bea96fc3a7d4cdf1947a8463fb63c8eb72b67d05",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 16,
+      "expected_hex": "278a5140d81e9e657b50b78b3ac5726e"
+    },
+    "parts": [
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.iv-16.advanced.decrypt",
+    "file": "436439bc632c92bdf1a1fc149aa28a6f0a654cfc2cc08389729a95c16acd0354.txt",
+    "sha256": "436439bc632c92bdf1a1fc149aa28a6f0a654cfc2cc08389729a95c16acd0354",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 16,
+      "expected_hex": ""
+    },
+    "parts": [
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.split-8-0-8.session.decrypt",
+    "file": "d7a3531f0bdb2fd442ff54440d4e8fba9e3893a03a5fc87863b75b4cde8877e1.txt",
+    "sha256": "d7a3531f0bdb2fd442ff54440d4e8fba9e3893a03a5fc87863b75b4cde8877e1",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      8,
+      0,
+      8
+    ]
+  },
+  {
+    "id": "aead.partitions.split-8-0-8.advanced.decrypt",
+    "file": "44981c13708b3f7904e1a84363c9bcb7518e0dcd8b6a7312eaa6b0dd19176c30.txt",
+    "sha256": "44981c13708b3f7904e1a84363c9bcb7518e0dcd8b6a7312eaa6b0dd19176c30",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      8,
+      0,
+      8
+    ]
+  },
+  {
+    "id": "aead.partitions.split-15-1.session.decrypt",
+    "file": "15643aa24883c459aff5b9070ebb1b46d3d450bb59613586ce413f82c47f61e1.txt",
+    "sha256": "15643aa24883c459aff5b9070ebb1b46d3d450bb59613586ce413f82c47f61e1",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      15,
+      1
+    ]
+  },
+  {
+    "id": "aead.partitions.split-15-1.advanced.decrypt",
+    "file": "d4af7942fc06e5da3022706d674ebaf711c95a0ee5d28498f635b1e344d56b92.txt",
+    "sha256": "d4af7942fc06e5da3022706d674ebaf711c95a0ee5d28498f635b1e344d56b92",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      15,
+      1
+    ]
+  },
+  {
+    "id": "aead.partitions.split-16-0.session.decrypt",
+    "file": "ea0ff1df41c4a966b65fc1b4fe4e3c1b8a9ae4ba2d589a0c24981399b5f6ca73.txt",
+    "sha256": "ea0ff1df41c4a966b65fc1b4fe4e3c1b8a9ae4ba2d589a0c24981399b5f6ca73",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16,
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.split-16-0.advanced.decrypt",
+    "file": "eae570dbd8bbd2092c7e73a8e69fa8858e6c75e68ea8d381355e7f6336858376.txt",
+    "sha256": "eae570dbd8bbd2092c7e73a8e69fa8858e6c75e68ea8d381355e7f6336858376",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      16,
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.split-0-16.session.decrypt",
+    "file": "8407608923ad8c4875758a45ac6821b47ae1b87b70023dbe00dae93d63b70bf6.txt",
+    "sha256": "8407608923ad8c4875758a45ac6821b47ae1b87b70023dbe00dae93d63b70bf6",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      0,
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.split-0-16.advanced.decrypt",
+    "file": "9db1da9fd7cfe7451607d6ab8eb29cde10602e448a17f33e12809ee0b1cd6af6.txt",
+    "sha256": "9db1da9fd7cfe7451607d6ab8eb29cde10602e448a17f33e12809ee0b1cd6af6",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": ""
+    },
+    "parts": [
+      0,
+      16
+    ]
+  },
+  {
+    "id": "aead.partitions.five-empty-parts.session.encrypt",
+    "file": "2d04b3aa11d4c1f78504ae0ebb218be6dfaf46f8830d9bc16937e31b6fe826e1.txt",
+    "sha256": "2d04b3aa11d4c1f78504ae0ebb218be6dfaf46f8830d9bc16937e31b6fe826e1",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "58e2fccefa7e3061367f1d57a4e7455a"
+    },
+    "parts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "aead.partitions.five-empty-parts.advanced.encrypt",
+    "file": "1e75fefffbe4c81876a6f552c0a2afbda87e44e2331c1bb38a22032de42bfec1.txt",
+    "sha256": "1e75fefffbe4c81876a6f552c0a2afbda87e44e2331c1bb38a22032de42bfec1",
+    "worker_mode": "gcm-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Single and multipart routes: exact ciphertext/tag or authenticated empty plaintext. Every input fragment, including empty fragments, is preserved.",
+    "reference": {
+      "tool": "PyCryptodome3.23.0",
+      "algorithm": "AES-GCM",
+      "key_bits": 128,
+      "iv_bytes": 12,
+      "expected_hex": "58e2fccefa7e3061367f1d57a4e7455a"
+    },
+    "parts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

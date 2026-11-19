@@ -115,6 +115,17 @@ pub(crate) fn close_entry(
     // guard publishes a retained local-close signal before possession is lost.
     let guards = super::close_admission::CloseGuards::acquire(&s, entry, admission)?;
     let mut control = super::close_scope::CloseReceipt::new(entry, &s.native);
+    if matches!(admission, CleanupAdmission::Module)
+        && !matches!(
+            control.as_ref().map(|control| control.phase),
+            Some(ClosePhase::Returned { .. })
+        )
+    {
+        // Recheck under slot possession before new or pending native work.
+        // A returned receipt only publishes an already observed result locally;
+        // it must remain publishable even when the registry is poisoned.
+        inner.availability.check_token_registry()?;
+    }
     if entry.native_handle_retired()
         && !matches!(
             control.as_ref().map(|control| control.phase),

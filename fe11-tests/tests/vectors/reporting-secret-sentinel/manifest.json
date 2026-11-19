@@ -1,0 +1,40 @@
+[
+  {
+    "id": "reporting.private-key-and-pin-sentinels",
+    "file": "d5103a5f0dc44f3cf02b66569fc0a93f520906618905434768f3f50d89d28eda.txt",
+    "sha256": "d5103a5f0dc44f3cf02b66569fc0a93f520906618905434768f3f50d89d28eda",
+    "worker_mode": "object-contract",
+    "configuration_variant": "log-secret-sentinel",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Fresh16-byte SO/user PINs only on stdin. Private sensitive nonextractable session key is a distinct XOR marker from user PIN. Actual MAC/verify and cleanup succeed. Seven owned diagnostics plus public JSON contain none of the three markers in bounded raw/hex/base64/escaped/array forms.",
+    "provenance": "Runtime cryptographically generated credentials, no secret fixture or static key; public abc message; native MAC usability only, no KAT claim."
+  }
+]

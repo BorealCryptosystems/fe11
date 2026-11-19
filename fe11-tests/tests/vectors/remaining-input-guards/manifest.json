@@ -1,0 +1,158 @@
+[
+  {
+    "id": "transitive-input.Session::sign_pqc_multipart.Pkcs11PqcExternalPrehashIsSinglePartOnly",
+    "file": "4f5c817dd664d506e7672b5f85e8082eab3bc0b3a7ffb1954d9f825a21b18a6f.txt",
+    "sha256": "4f5c817dd664d506e7672b5f85e8082eab3bc0b3a7ffb1954d9f825a21b18a6f",
+    "worker_mode": "pqc-signing-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Unsupported(PostQuantumKeys(Pkcs11PqcExternalPrehashIsSinglePartOnly))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "control": "Exact typed refusal and unchanged counters before a native SHA256 abc control; explicit object/session cleanup.",
+    "parameters": {
+      "mode": "Prehashed(Sha256)",
+      "context_hex": "",
+      "parts_hex": [
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 32
+      },
+      "interface": "Standard32"
+    }
+  },
+  {
+    "id": "transitive-input.Session::begin_encrypt_classic_aead_stream.OnlyCcmRequiresAnExplicitStreamPlaintextLength",
+    "file": "a9e15c975c01ee21df64f2ea4066f331c5497ed84740bc5750c21922664c24aa.txt",
+    "sha256": "a9e15c975c01ee21df64f2ea4066f331c5497ed84740bc5750c21922664c24aa",
+    "worker_mode": "aead-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CipherContinuation(OnlyCcmRequiresAnExplicitStreamPlaintextLength))",
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "control": "Exact typed refusal and unchanged counters before a native SHA256 abc control; explicit object/session cleanup.",
+    "parameters": {
+      "parameters": "ClassicAeadParameters::Gcm",
+      "ccm_plaintext_length": 3,
+      "output": "CipherOutputPlan::Buffer{capacity:32}"
+    }
+  },
+  {
+    "id": "transitive-input.AdvancedSession::encrypt_gcm_messages.AeadMessageMessageCount",
+    "file": "15d00780d15b679da56dab759af40ee8a273b4ddf4bbeb6c178114d36c4367c5.txt",
+    "sha256": "15d00780d15b679da56dab759af40ee8a273b4ddf4bbeb6c178114d36c4367c5",
+    "worker_mode": "aead-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadMessageMessageCount))",
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "control": "Exact typed refusal and unchanged counters before a native SHA256 abc control; explicit object/session cleanup.",
+    "parameters": {
+      "messages": [],
+      "limits": {
+        "maximum_parts": 0,
+        "maximum_total_bytes": 0
+      },
+      "interface": "Standard32",
+      "route": "MessageRoute::Single"
+    }
+  },
+  {
+    "id": "transitive-input.AdvancedSession::encrypt_gcm_messages.AeadMessageBatchCeiling",
+    "file": "8e5244312e61de60dd0e64b70ba8699b456907712430f370cface3db36f006fb.txt",
+    "sha256": "8e5244312e61de60dd0e64b70ba8699b456907712430f370cface3db36f006fb",
+    "worker_mode": "aead-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(AeadMessageBatchCeiling))",
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "control": "Exact typed refusal and unchanged counters before a native SHA256 abc control; explicit object/session cleanup.",
+    "parameters": {
+      "messages": [
+        {
+          "iv_hex": "000000000000000000000000",
+          "aad_hex": "",
+          "parts_hex": [
+            "616263"
+          ],
+          "tag_bits": 128
+        }
+      ],
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 3
+      },
+      "interface": "Standard32",
+      "route": "MessageRoute::Single"
+    }
+  }
+]

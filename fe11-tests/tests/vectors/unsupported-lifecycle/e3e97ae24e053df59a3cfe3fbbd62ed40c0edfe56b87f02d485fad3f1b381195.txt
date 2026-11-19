@@ -1,0 +1,4 @@
+message
+CLOSED
+close
+0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b

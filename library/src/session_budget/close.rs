@@ -229,7 +229,10 @@ impl SessionLedger {
         if !retained
             || ticket == 0
             || observed.as_ptr() != Arc::as_ptr(entry)
-            || entry.advanced_operation.load(Ordering::Acquire) != ticket
+            // The advanced registry matched the exact cell ticket to the
+            // stranded lease. This ledger proves the native session and its
+            // retained-close phase, which are shared by all its operations.
+            || entry.advanced_operation.load(Ordering::Acquire) == 0
             || !matches(entry)
         {
             return Err(Error::Rejected(crate::RejectionReason::ModuleLifecycle(

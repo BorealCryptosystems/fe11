@@ -1,0 +1,248 @@
+[
+  {
+    "id": "ecdh.point-form.session.compressed",
+    "file": "3a009a44527023d55598d5bddc359e52f0033ba51a4b17378b585826d543b87c.txt",
+    "sha256": "3a009a44527023d55598d5bddc359e52f0033ba51a4b17378b585826d543b87c",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "compressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "defc8a0e17779a2951a8fd3f28d3aacc66b7442669f735ac577b48237b3c5d55"
+  },
+  {
+    "id": "ecdh.point-form.session.der-uncompressed",
+    "file": "710e8b1d51e05173adab94d3c6248345a2428df6470f18e75cd973efae7a0317.txt",
+    "sha256": "710e8b1d51e05173adab94d3c6248345a2428df6470f18e75cd973efae7a0317",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "der-uncompressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "defc8a0e17779a2951a8fd3f28d3aacc66b7442669f735ac577b48237b3c5d55"
+  },
+  {
+    "id": "ecdh.point-form.session.der-compressed",
+    "file": "d33a786f44b27903f291d0f501982066e9b56f579ab454a61f700d53642cbd6e.txt",
+    "sha256": "d33a786f44b27903f291d0f501982066e9b56f579ab454a61f700d53642cbd6e",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "der-compressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "defc8a0e17779a2951a8fd3f28d3aacc66b7442669f735ac577b48237b3c5d55"
+  },
+  {
+    "id": "ecdh.point-form.advanced.compressed",
+    "file": "0f477754357e90cb9c995aa0bce51413d2add91db4c1360b8a528bed306fc128.txt",
+    "sha256": "0f477754357e90cb9c995aa0bce51413d2add91db4c1360b8a528bed306fc128",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "compressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "71958cd508e65dfd32f45973b4158e87eff8896eb2cb54c875591c4a35aebb76"
+  },
+  {
+    "id": "ecdh.point-form.advanced.der-uncompressed",
+    "file": "d435c097c889e6e330fc2bf004ea4dd759c9062926d09c6b5a51ebb33a32c894.txt",
+    "sha256": "d435c097c889e6e330fc2bf004ea4dd759c9062926d09c6b5a51ebb33a32c894",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "der-uncompressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "71958cd508e65dfd32f45973b4158e87eff8896eb2cb54c875591c4a35aebb76"
+  },
+  {
+    "id": "ecdh.point-form.advanced.der-compressed",
+    "file": "e1362f915803e123d3c2b1c7ea6ecbf6ff0ea4dbfee4a9fce13d23255ea564fa.txt",
+    "sha256": "e1362f915803e123d3c2b1c7ea6ecbf6ff0ea4dbfee4a9fce13d23255ea564fa",
+    "worker_mode": "ecdh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Same published P256 scalar, point and shared secret. Raw compressed or DER-wrapped SEC1 point supplied exactly; no manual decode in Fe11 test. Exact derived secret proves equivalent interpretation; original raw uncompressed control retained.",
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "transformation": "Exact scalar and Z; SPKI BIT STRING decoded to native SEC1 point, or ecpoint bytes unchanged; CKD_NULL, no cofactor",
+    "form": "der-compressed",
+    "positive_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "positive_control_sha256": "71958cd508e65dfd32f45973b4158e87eff8896eb2cb54c875591c4a35aebb76"
+  }
+]

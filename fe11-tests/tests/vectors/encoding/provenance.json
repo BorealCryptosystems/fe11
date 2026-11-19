@@ -1,0 +1,16 @@
+{
+  "p256_spki": {
+    "file": "p256-spki.hex",
+    "sha256": "d22222b874f4f962163bd46f1821bf854993eac50b63bc0cd6bd01bf54e4984b",
+    "sources": [
+      "https://www.secg.org/sec2-v2.pdf",
+      "https://www.rfc-editor.org/rfc/rfc5480"
+    ],
+    "description": "SEC 2 P-256 public generator encoded as RFC 5480 SPKI; public numerical data"
+  },
+  "scalar_encodings": {
+    "source": "https://www.rfc-editor.org/rfc/rfc3279",
+    "description": "Constructed DER INTEGER/SEQUENCE boundary cases, not cryptographically valid signatures",
+    "license": "Apache-2.0"
+  }
+}

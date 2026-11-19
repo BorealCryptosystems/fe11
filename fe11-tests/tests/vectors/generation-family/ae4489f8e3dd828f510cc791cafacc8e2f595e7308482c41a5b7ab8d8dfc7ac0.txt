@@ -1,0 +1,3 @@
+typed_generate_montgomery_key
+INITIALIZED
+init

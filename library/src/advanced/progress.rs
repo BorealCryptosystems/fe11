@@ -13,7 +13,7 @@ use std::sync::{
 
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub(crate) struct Stamp {
-    ticket: u64,
+    pub(in crate::advanced) ticket: u64,
     revision: u64,
 }
 
@@ -94,6 +94,9 @@ impl State {
     }
 }
 
+mod group;
+pub(crate) use group::Progress;
+
 pub(super) struct Effects {
     pub(super) stamp: Stamp,
     pub(super) causes: [Option<ResourceCause>; 2],
@@ -102,14 +105,14 @@ pub(super) struct Effects {
 /// Fixed coordination metadata, owned by SessionEntry rather than an operation
 /// allocation. No Arc, native pointer, key, credit or user value lives here.
 #[derive(Default)]
-pub(crate) struct Progress {
+struct Leaf {
     state: Mutex<State>,
     ticket: AtomicU64,
     revision: AtomicU64,
     lifecycle: AtomicU8,
     cleanup: AtomicBool,
 }
-impl Progress {
+impl Leaf {
     fn mirror(&self, state: &State) {
         self.ticket.store(state.ticket, Ordering::Release);
         self.revision.store(state.revision, Ordering::Release);
@@ -119,7 +122,7 @@ impl Progress {
             .store(state.effects.iter().any(Option::is_some), Ordering::Release);
     }
 
-    pub(super) fn install(&self, ticket: u64, occupation: &AtomicU64) -> Result<()> {
+    pub(super) fn install(&self, ticket: u64) -> Result<()> {
         let mut state = self.state.lock().map_err(|_| Error::Poisoned)?;
         if ticket == 0 || state.lifecycle == Lifecycle::Live {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -132,7 +135,6 @@ impl Progress {
             ..State::default()
         };
         self.mirror(&state);
-        occupation.store(ticket, Ordering::Release);
         Ok(())
     }
 
@@ -148,7 +150,7 @@ impl Progress {
             && state.effects.iter().all(Option::is_none))
     }
 
-    pub(super) fn replace(&self, ticket: u64, occupation: &AtomicU64) -> Result<()> {
+    pub(super) fn replace(&self, ticket: u64) -> Result<()> {
         let mut state = self.state.lock().map_err(|_| Error::Poisoned)?;
         if ticket == 0 || state.lifecycle != Lifecycle::Live || ticket == state.ticket {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -161,11 +163,10 @@ impl Progress {
             ..State::default()
         };
         self.mirror(&state);
-        occupation.store(ticket, Ordering::Release);
         Ok(())
     }
 
-    pub(super) fn retire(&self, occupation: &AtomicU64) -> Result<()> {
+    pub(super) fn retire(&self) -> Result<()> {
         let mut state = self.state.lock().map_err(|_| Error::Poisoned)?;
         // Retirement always remains possible at the maximum revision. Preserve
         // the exact last ticket for bounded normalization, without an ABA history.
@@ -175,7 +176,6 @@ impl Progress {
             state.effects = [None; 2];
         }
         self.mirror(&state);
-        occupation.store(0, Ordering::Release);
         Ok(())
     }
 
@@ -341,7 +341,7 @@ impl FailureDiagnostics {
             &policy,
             || {
                 super::preparation::context(session)?;
-                if session.entry.advanced_operation.load(Ordering::Acquire) != ticket {
+                if !session.entry.advanced_progress.contains(ticket) {
                     return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
                         crate::OperationOwnershipRejection::StaleOperationTicket,
                     )));
@@ -395,7 +395,7 @@ impl FailureDiagnostics {
             || {
                 owner.check_request(intrinsic)?;
                 crate::session::activity::context_admitted(session, admission)?;
-                if session.entry.advanced_operation.load(Ordering::Acquire) != ticket {
+                if !session.entry.advanced_progress.contains(ticket) {
                     return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
                         crate::OperationOwnershipRejection::StaleOperationTicket,
                     )));

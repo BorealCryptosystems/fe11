@@ -1,0 +1,55 @@
+[
+  {
+    "id": "search.explicit-index.multiple-matches",
+    "file": "d8d66ac0b8e5955329915d336ad262f739114f0dd97c6606b7c9a1c0dfff3d60.txt",
+    "sha256": "d8d66ac0b8e5955329915d336ad262f739114f0dd97c6606b7c9a1c0dfff3d60",
+    "worker_mode": "search-population",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Three matching GenericSecret16 objects; each requested index0/1/2 returns a member with matched3. Index3 returns None with matched3. No stable order or implicit uniqueness is assumed.",
+    "source": {
+      "contract": "Session::find_native_object_at; NativeObjectSelection; ObjectSearchSelection",
+      "normative": "PKCS#11 C_FindObjects returns matching handles; uniqueness is not a native search guarantee."
+    }
+  }
+]

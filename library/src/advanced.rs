@@ -104,7 +104,7 @@ mod restoration_transfer;
 mod saved_state;
 pub use restoration::{StateRestoreFailure, StateRestoreProgress, StateRestoreTicket};
 pub use restoration_keys::{
-    StateKeyEncoding, StateKeyReference, StateRestoreKey, StateRestoreKeys,
+    ClassicOperation, StateKeyEncoding, StateKeyReference, StateRestoreKey, StateRestoreKeys,
 };
 pub use saved_state::{SavedOperationState, StateCaptureProgress, StateProvenance};
 mod detached_persistence;
@@ -180,6 +180,7 @@ fn unfinished(pending: bool) -> OperationProgress {
 /// Single-use observation capability. Dropping it does not cancel native work.
 /// Use the owning session's explicit close or cancellation for abandoned work.
 pub struct OperationTicket {
+    restored_companions: Vec<(ClassicOperation, OperationTicket)>,
     owner: Arc<Inner>,
     uid: u64,
     id: u64,
@@ -187,6 +188,12 @@ pub struct OperationTicket {
     state_provenance: Option<StateProvenance>,
 }
 impl OperationTicket {
+    /// Transfer the independently usable sibling tickets from a restored
+    /// session image. A second call returns an empty vector.
+    pub fn take_restored_companions(&mut self) -> Vec<(ClassicOperation, OperationTicket)> {
+        std::mem::take(&mut self.restored_companions)
+    }
+
     /// Observe the established progress of an incremental digest without a
     /// native call. Other operation families do not synthesize digest counters.
     pub fn digest_progress(&self) -> Result<(StreamInputStatus, StreamProgress)> {
@@ -196,7 +203,7 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let slot = state.operations.get(self.uid)?;
+        let slot = state.operations.get_ticket(self.uid, self.id)?;
         let operation = slot.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -222,7 +229,7 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let slot = state.operations.get(self.uid)?;
+        let slot = state.operations.get_ticket(self.uid, self.id)?;
         let operation = slot.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

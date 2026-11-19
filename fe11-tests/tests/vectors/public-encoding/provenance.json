@@ -1,0 +1,119 @@
+{
+  "control": {
+    "id": "ML-DSA-sigGen-FIPS204.1.1",
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+    "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+    "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "cases": [
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicAlgorithm@PqcPublicKey::from_spki",
+      "file": "pqc_public_algorithm.bin",
+      "sha256": "182ff9da701fd144e2fd2cd41da8ddba979eb01b2bf7fcc3376f4b1b2ecee4e7",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicAlgorithm))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicKeyLength@PqcPublicKey::from_raw",
+      "file": "pqc_public_key_length.bin",
+      "sha256": "5c03e31975b96b3d151d9e034b884cab9c6fb29576d2b5653c375fc5661b6dd1",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicKeyLength))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicParametersMustBeAbsent@PqcPublicKey::from_spki",
+      "file": "pqc_public_parameters_must_be_absent.bin",
+      "sha256": "1d38cb88d0ff668bdabc28ad04b7b34459c86ebf2f09fb4ab3b54780cb57d5dd",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicParametersMustBeAbsent))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicSpkiDer@PqcPublicKey::from_spki",
+      "file": "pqc_public_spki_der.bin",
+      "sha256": "e4f60d0aa6d7f3d3b6a6494b1c861b99f649c6f9ec51abaf201b20f297327c95",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicSpkiDer))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicUnusedBits@PqcPublicKey::from_spki",
+      "file": "pqc_public_unused_bits.bin",
+      "sha256": "6cd6dfb99f86e902f002d208d8961423b72afd66bcc0356f27184c1c760c7234",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicUnusedBits))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcSignatureLength@PqcSignature::from_bytes",
+      "file": "pqc_signature_length.bin",
+      "sha256": "d6b84006ad5e5daf3a6e88032b406eba3654880582e957f12aefb970edeca031",
+      "oracle": "Rejected(PostQuantumKeys(PqcSignatureLength))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    },
+    {
+      "id": "boundary.SessionLifecycleRejection::Sha256DigestLength@Digest32::from_bytes",
+      "file": "sha256_digest_length.bin",
+      "sha256": "fd08be957bda07dc529ad8100df732f9ce12ae3e42bcda6acabe12c02dfd6989",
+      "oracle": "Rejected(SessionLifecycle(Sha256DigestLength))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "title": "FIPS180-4 SHA256 digest width32"
+      }
+    },
+    {
+      "id": "boundary.PostQuantumKeysRejection::PqcPublicSpkiBound@PqcPublicKey::from_spki",
+      "file": "pqc_public_spki_bound.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "oracle": "Rejected(PostQuantumKeys(PqcPublicSpkiBound))",
+      "control": "NIST ACVP public ML-DSA44 test key; structural encoding only, not a cryptographic verification",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    }
+  ]
+}

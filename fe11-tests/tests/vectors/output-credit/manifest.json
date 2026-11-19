@@ -1,0 +1,154 @@
+[
+  {
+    "id": "resource.output-credit.immediate",
+    "file": "b7170b0da1212decb0521ed4b6a00c530579a44305c2f97e74f753f32bf5ce8c.txt",
+    "sha256": "b7170b0da1212decb0521ed4b6a00c530579a44305c2f97e74f753f32bf5ce8c",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "immediate",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_GenerateRandom",
+      "C_GetSessionInfo",
+      "C_GenerateRandom",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Retained40MiB random output occupies64MiB shared byte budget. A second40MiB cannot complete until release: Immediate yields exact SymmetricByteBudget with zero dispatch; WaitUntil returns after release. Peer info remains usable, subsequent random width and SHA256 abc verified. Barrier does not prove internal scheduler parking or universal deadlock freedom.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.output-credit.wait",
+    "file": "f4c525dbd24e72af4515ddf55d8b56644fdc34424db3eaae007a3ea4c99b059b.txt",
+    "sha256": "f4c525dbd24e72af4515ddf55d8b56644fdc34424db3eaae007a3ea4c99b059b",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "wait",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GenerateRandom",
+      "C_GetSessionInfo",
+      "C_GenerateRandom",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Retained40MiB random output occupies64MiB shared byte budget. A second40MiB cannot complete until release: Immediate yields exact SymmetricByteBudget with zero dispatch; WaitUntil returns after release. Peer info remains usable, subsequent random width and SHA256 abc verified. Barrier does not prove internal scheduler parking or universal deadlock freedom. Authentication observation is established before the resource-only wait; no concurrent login/logout or first observation transition is part of this case.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.output-credit.boundary",
+    "file": "5a43b4b12f472009523fcd923a1b992f1b749e889ff46106fa8523f8115adb17.txt",
+    "sha256": "5a43b4b12f472009523fcd923a1b992f1b749e889ff46106fa8523f8115adb17",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateRandom",
+      "C_GenerateRandom",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Measure intrinsic requested charge through public ResourceLimitExceeded without dispatch; fresh same-shape owner at charge-1 refuses with exact requested/limit; at charge two consecutive64MiB random outputs succeed after first drop. No private size constants or changed product quota.",
+    "source": {
+      "contract": "ResourceLimitExceeded, SymmetricLimits, Session::generate_random"
+    }
+  },
+  {
+    "id": "resource.output-credit.caller-boundary",
+    "file": "ef37429f28bc4420b25d443bbfe051f1a9bacae28c02b84d930c8b8326826a40.txt",
+    "sha256": "ef37429f28bc4420b25d443bbfe051f1a9bacae28c02b84d930c8b8326826a40",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "caller-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateRandom",
+      "C_GenerateRandom",
+      "C_GenerateRandom",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Measure charges for n-1,n,n+1 using public ResourceLimitExceeded. Under charge(n), refuse n+1 with exact diagnostics and zero dispatch, then accept n-1,n,n-1 on the same session with each output dropped. Charge rounding is reported, never credited as an exact byte boundary.",
+    "source": {
+      "contract": "ResourceLimitExceeded, Session::generate_random, owned output credit"
+    }
+  }
+]

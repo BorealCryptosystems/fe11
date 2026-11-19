@@ -1,0 +1,455 @@
+[
+  {
+    "id": "lifecycle.cross.module.OPEN.observe",
+    "file": "439593355e57576f12c7f7609b854ea5cecb8b028315df80282fff70ef2521a9.txt",
+    "sha256": "439593355e57576f12c7f7609b854ea5cecb8b028315df80282fff70ef2521a9",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ok(ModuleResourceStatus), all live/pending resource counts zero; observation is ledger-only and remains available after close.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.DRAINING.begin_drain",
+    "file": "c8d632b1c379e2d55eb0c497e506032b561936fcb0b84c5dc6fb5a62b05098bc.txt",
+    "sha256": "c8d632b1c379e2d55eb0c497e506032b561936fcb0b84c5dc6fb5a62b05098bc",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(LocalAdmission(ModuleDraining)); ordinary access lacks the retained permit, even if native finalization already succeeded.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.DRAINING.close",
+    "file": "5919f78495dac441417300e68c5e6f236189c3a82a29fc762cfba5bd767cb50b.txt",
+    "sha256": "5919f78495dac441417300e68c5e6f236189c3a82a29fc762cfba5bd767cb50b",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(LocalAdmission(ModuleDraining)); ordinary access lacks the retained permit, even if native finalization already succeeded.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.DRAINING.drain_close",
+    "file": "eed755db77748a4386d4cdcf8187ec23189b0702a6b8e556e1b9d18c0f791ed0.txt",
+    "sha256": "eed755db77748a4386d4cdcf8187ec23189b0702a6b8e556e1b9d18c0f791ed0",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Finalize CKR_OK exactly once; Ok(()).",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.DRAINING.observe",
+    "file": "2f3d4dd4dd8a880cef97fa29fbbd5b89122fd85e05a47a989e9db2b5f2b40370.txt",
+    "sha256": "2f3d4dd4dd8a880cef97fa29fbbd5b89122fd85e05a47a989e9db2b5f2b40370",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ok(ModuleResourceStatus), all live/pending resource counts zero; observation is ledger-only and remains available after close.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED_WITH_DRAIN.begin_drain",
+    "file": "bd01f230cfe3ae904cde0a914e22d3f2ec045a4fe6887e6cac1114e692a62258.txt",
+    "sha256": "bd01f230cfe3ae904cde0a914e22d3f2ec045a4fe6887e6cac1114e692a62258",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(LocalAdmission(ModuleDraining)); ordinary access lacks the retained permit, even if native finalization already succeeded.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED_WITH_DRAIN.close",
+    "file": "a221ade6d0d702199ca117ca18b9492c460387208153a80c1bdc28b1affcbd80.txt",
+    "sha256": "a221ade6d0d702199ca117ca18b9492c460387208153a80c1bdc28b1affcbd80",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(LocalAdmission(ModuleDraining)); ordinary access lacks the retained permit, even if native finalization already succeeded.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED_WITH_DRAIN.drain_close",
+    "file": "c8e22b66530cebbf957e29590d7b7f4ac416e7125d318ad1af627002311ece2a.txt",
+    "sha256": "c8e22b66530cebbf957e29590d7b7f4ac416e7125d318ad1af627002311ece2a",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(ModuleClosed)); no second C_Finalize.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED_WITH_DRAIN.drop_drain",
+    "file": "912485728135f6d093d71cc9139fcef6ba91f4c63644045f2fa9d3dcf1816bd6.txt",
+    "sha256": "912485728135f6d093d71cc9139fcef6ba91f4c63644045f2fa9d3dcf1816bd6",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop releases the admission permit. OPEN admits a new session; CLOSED remains Rejected(ModuleLifecycle(ModuleClosed)) on begin_drain; no native call by Drop.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED_WITH_DRAIN.observe",
+    "file": "faacfc5e3fb6c3f7201ad25230accc01d2baba7b09ecc50d168a1249d3740011.txt",
+    "sha256": "faacfc5e3fb6c3f7201ad25230accc01d2baba7b09ecc50d168a1249d3740011",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ok(ModuleResourceStatus), all live/pending resource counts zero; observation is ledger-only and remains available after close.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED.begin_drain",
+    "file": "79c54e8b73bf5ff32ce9294c74bfa0181b9a373f9087f09357b732443fe1fcf4.txt",
+    "sha256": "79c54e8b73bf5ff32ce9294c74bfa0181b9a373f9087f09357b732443fe1fcf4",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(ModuleClosed)); no native call.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.CLOSED.observe",
+    "file": "bbadde23096964fe479f686c9862bbc1b448e9342eda34d8b2a3a5f20ad57244.txt",
+    "sha256": "bbadde23096964fe479f686c9862bbc1b448e9342eda34d8b2a3a5f20ad57244",
+    "worker_mode": "module-controls",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ok(ModuleResourceStatus), all live/pending resource counts zero; observation is ledger-only and remains available after close.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.SHARED_CLIENT.begin_drain",
+    "file": "de3a70a1afd6264589f28a875a4a3c07481281b68c7259b77af01f0b7d338a04.txt",
+    "sha256": "de3a70a1afd6264589f28a875a4a3c07481281b68c7259b77af01f0b7d338a04",
+    "worker_mode": "shared-module",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(RuntimeOwnerRequired)); no C_Finalize and no drain permit; RuntimeOwner client remains usable.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.SHARED_CLIENT.close",
+    "file": "3c48e44cb39fde9985aa5753acd2fb2ce3d392f76a4af9b9c3092a13fcab91ed.txt",
+    "sha256": "3c48e44cb39fde9985aa5753acd2fb2ce3d392f76a4af9b9c3092a13fcab91ed",
+    "worker_mode": "shared-module",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(RuntimeOwnerRequired)); no C_Finalize and no drain permit; RuntimeOwner client remains usable.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "lifecycle.cross.module.SHARED_CLIENT.observe",
+    "file": "e1b0d150d3565b36d9a7c500cfa778084b5defd00cb265d59bfbcdab5bc0c3c7.txt",
+    "sha256": "e1b0d150d3565b36d9a7c500cfa778084b5defd00cb265d59bfbcdab5bc0c3c7",
+    "worker_mode": "shared-module",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ok(ModuleResourceStatus), all live/pending resource counts zero; observation is ledger-only and remains available after close.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

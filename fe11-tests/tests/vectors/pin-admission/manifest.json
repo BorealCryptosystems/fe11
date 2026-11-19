@@ -1,0 +1,946 @@
+[
+  {
+    "id": "pin.session.initialize.immediate.success",
+    "file": "8c81f76b0b4831e7e445bc643d8b916add711e74d2a866fa750584b316b29973.txt",
+    "sha256": "8c81f76b0b4831e7e445bc643d8b916add711e74d2a866fa750584b316b29973",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.immediate.wrong-role",
+    "file": "2954d3e94006f6bfc8dd035241f2c1f1b764e5285d83533e2d299269f126f6f2.txt",
+    "sha256": "2954d3e94006f6bfc8dd035241f2c1f1b764e5285d83533e2d299269f126f6f2",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-role",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.immediate.token-block",
+    "file": "802c66fdd1bb0eeba40fb2f6b909fac6f9d53170e3a96ff18981d4ea742dc1de.txt",
+    "sha256": "802c66fdd1bb0eeba40fb2f6b909fac6f9d53170e3a96ff18981d4ea742dc1de",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "token-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.immediate.module-block",
+    "file": "7f0cb7919f18506be29dc5bc2f0c7322d82baa10dcf0193b5d5ee397e45e6b14.txt",
+    "sha256": "7f0cb7919f18506be29dc5bc2f0c7322d82baa10dcf0193b5d5ee397e45e6b14",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.wait.success",
+    "file": "102678d9c19ac4e08f8cdd11edfebb0096d8d8cff4c6d442d56b7c7b4f34e064.txt",
+    "sha256": "102678d9c19ac4e08f8cdd11edfebb0096d8d8cff4c6d442d56b7c7b4f34e064",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.wait.wrong-role",
+    "file": "fbf4628d9a958cc5037bd81322a0e681e907070c2a1f7b5dfb77f3978792e854.txt",
+    "sha256": "fbf4628d9a958cc5037bd81322a0e681e907070c2a1f7b5dfb77f3978792e854",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-role",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.wait.cancel",
+    "file": "37eb0ddc402a54a09b1c1cec9de838e8e6e37285dc40a7eb2e7f4b6a9b05b99c.txt",
+    "sha256": "37eb0ddc402a54a09b1c1cec9de838e8e6e37285dc40a7eb2e7f4b6a9b05b99c",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "cancel",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.wait.token-block",
+    "file": "5e84def2e8c64d1e7eeca3ce766c5be7fa55208d959259177ed8c91e72d3b4cd.txt",
+    "sha256": "5e84def2e8c64d1e7eeca3ce766c5be7fa55208d959259177ed8c91e72d3b4cd",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "token-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.initialize.wait.module-block",
+    "file": "abbc59a754184a137fee2a1c89554cb98eaee3ac5ba4839f2363ab2b77be620e.txt",
+    "sha256": "abbc59a754184a137fee2a1c89554cb98eaee3ac5ba4839f2363ab2b77be620e",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.immediate.success",
+    "file": "663fda2e9a74dda8f0d678e6250adf13619250a3ae59622be7cae1edf95a4084.txt",
+    "sha256": "663fda2e9a74dda8f0d678e6250adf13619250a3ae59622be7cae1edf95a4084",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.immediate.wrong-old",
+    "file": "83d2ceddfeb045cd22a2bb56061a8b61833f6454bd53270cc5fbec20580d304f.txt",
+    "sha256": "83d2ceddfeb045cd22a2bb56061a8b61833f6454bd53270cc5fbec20580d304f",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-old",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.immediate.token-block",
+    "file": "aacaae9dff605fe071d4ae4a0e432bd7333e2712a826a9740fc19af9cb81bb21.txt",
+    "sha256": "aacaae9dff605fe071d4ae4a0e432bd7333e2712a826a9740fc19af9cb81bb21",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "token-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.immediate.module-block",
+    "file": "534e203746feb8d6f31a65cff26630ae929c5d7938d61fc123efc75d65a1252d.txt",
+    "sha256": "534e203746feb8d6f31a65cff26630ae929c5d7938d61fc123efc75d65a1252d",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.wait.success",
+    "file": "972d94b89f2256d8eaf9b738183ceb09efb949dd0602981b8447d8003ad16508.txt",
+    "sha256": "972d94b89f2256d8eaf9b738183ceb09efb949dd0602981b8447d8003ad16508",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.wait.wrong-old",
+    "file": "4570f9a11aebc51e38f60ece03c4723c5b7b98e5077335670e57d0814a91fbf4.txt",
+    "sha256": "4570f9a11aebc51e38f60ece03c4723c5b7b98e5077335670e57d0814a91fbf4",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-old",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.wait.cancel",
+    "file": "88da288ed66fe083e275ea860e1ec8a9cebf96aa111984a7b7f3f2b6a4254d68.txt",
+    "sha256": "88da288ed66fe083e275ea860e1ec8a9cebf96aa111984a7b7f3f2b6a4254d68",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "cancel",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.wait.token-block",
+    "file": "0b213713a0244d4b4f06b2961a18d7ccfa138fe46aa42b21034980362d80c8b2.txt",
+    "sha256": "0b213713a0244d4b4f06b2961a18d7ccfa138fe46aa42b21034980362d80c8b2",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "token-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.session.change.wait.module-block",
+    "file": "82dee4437d127a8d0956f9f57c87b02b947dbcd8f3eb17a9e64548f1d3855cba.txt",
+    "sha256": "82dee4437d127a8d0956f9f57c87b02b947dbcd8f3eb17a9e64548f1d3855cba",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.immediate.success",
+    "file": "e52bafd8b54250d5ea36de710de7b61eb7756e7f860d9c99142937a9f578051c.txt",
+    "sha256": "e52bafd8b54250d5ea36de710de7b61eb7756e7f860d9c99142937a9f578051c",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.immediate.wrong-role",
+    "file": "da3d3444097e25c6ebbf53c94d571ba4295f8a124bf0809695c269b1d7275511.txt",
+    "sha256": "da3d3444097e25c6ebbf53c94d571ba4295f8a124bf0809695c269b1d7275511",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-role",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.immediate.module-block",
+    "file": "d23a1a245a4dab7999a3d1756b36c5243f94a06657023b8d742042273f4872ad.txt",
+    "sha256": "d23a1a245a4dab7999a3d1756b36c5243f94a06657023b8d742042273f4872ad",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.wait.success",
+    "file": "084a72162a75a81cd9c2ce34571bdb8d0258898c9447441aa4499474eba0b266.txt",
+    "sha256": "084a72162a75a81cd9c2ce34571bdb8d0258898c9447441aa4499474eba0b266",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.wait.wrong-role",
+    "file": "94535c82841a77280f2c29ac7c119ae380b253aef51874efa3bd1853b113d343.txt",
+    "sha256": "94535c82841a77280f2c29ac7c119ae380b253aef51874efa3bd1853b113d343",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-role",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.wait.cancel",
+    "file": "34762b1ce42957b040226d55d6f7e2b314076961df2ef3805a857aa3333fe198.txt",
+    "sha256": "34762b1ce42957b040226d55d6f7e2b314076961df2ef3805a857aa3333fe198",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "cancel",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.initialize.wait.module-block",
+    "file": "534ca0973a187fefbb6736b53e8654b867b3e76a3d1fcf18f2c196c26b8abebb.txt",
+    "sha256": "534ca0973a187fefbb6736b53e8654b867b3e76a3d1fcf18f2c196c26b8abebb",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.immediate.success",
+    "file": "e19a521f9d6fdc4ec20aaa078bd9dd680ea146c5ac90d129ff0b16d7efbdbdb9.txt",
+    "sha256": "e19a521f9d6fdc4ec20aaa078bd9dd680ea146c5ac90d129ff0b16d7efbdbdb9",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.immediate.wrong-old",
+    "file": "2e0865b6bb729aee8710205afae23297c6f7f75a0aee2367661042c8d76f3365.txt",
+    "sha256": "2e0865b6bb729aee8710205afae23297c6f7f75a0aee2367661042c8d76f3365",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-old",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.immediate.module-block",
+    "file": "a7f2d975b56d2d86ccca0f3da31d09916f560ca74e0fe0b133774ff87dcbce4d.txt",
+    "sha256": "a7f2d975b56d2d86ccca0f3da31d09916f560ca74e0fe0b133774ff87dcbce4d",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.wait.success",
+    "file": "64c4db580507de5ed3ae88a3caebc42cd36371fde2574308ad7e626b8387c45d.txt",
+    "sha256": "64c4db580507de5ed3ae88a3caebc42cd36371fde2574308ad7e626b8387c45d",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "success",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.wait.wrong-old",
+    "file": "dad662a5fd6a44846844def6442cdd21fb3ba352a6c3192b3da9e7817687e583.txt",
+    "sha256": "dad662a5fd6a44846844def6442cdd21fb3ba352a6c3192b3da9e7817687e583",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_SetPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "wrong-old",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.wait.cancel",
+    "file": "9c9098f0d4279916d14d954756d82db4c93b1a069099274bc780fb257e58266d.txt",
+    "sha256": "9c9098f0d4279916d14d954756d82db4c93b1a069099274bc780fb257e58266d",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "cancel",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  },
+  {
+    "id": "pin.drain.change.wait.module-block",
+    "file": "630ab22bbd0a00566a40d656b5cf20287ebbeb4681d8da8a8d04d210211b2c8d.txt",
+    "sha256": "630ab22bbd0a00566a40d656b5cf20287ebbeb4681d8da8a8d04d210211b2c8d",
+    "worker_mode": "pin-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "result": "module-block",
+      "pin_state": "new PIN accepted by native Login after success; original accepted after refusal",
+      "cleanup": "logout, close, finalize; isolated token directory removed"
+    },
+    "provenance": "PKCS11 C_InitPIN/C_SetPIN/C_Login; Fe11 explicit token/module drain admission contract"
+  }
+]

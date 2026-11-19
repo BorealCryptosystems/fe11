@@ -1,0 +1,28 @@
+{
+  "ml_dsa": {
+    "id": "ML-DSA-sigGen-FIPS204",
+    "group": 1,
+    "case": 2,
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+    "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+    "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+    "message_bytes": 420,
+    "message_sha256": "e182052fe1aa34ac4d6b5cfdbecc06183f58d398271d29676eb3c8a76801e549",
+    "context_bytes": 24,
+    "selection": "First deterministic external pure published case fitting the prescribed 4096-byte input ceiling. Exact public key, private test key, context, message and signature retained; no target-generated oracle."
+  },
+  "slh_dsa": {
+    "id": "SLH-DSA-sigGen-FIPS205",
+    "group": 19,
+    "case": 159,
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+    "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+    "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+    "message_bytes": 2249,
+    "message_sha256": "1c2870749eabe7722109d069e73ad358763b5eb0635413382e8dcf3f508abcdd",
+    "context_bytes": 37,
+    "selection": "First deterministic external pure published case fitting the prescribed 4096-byte input ceiling. Exact public key, private test key, context, message and signature retained; no target-generated oracle."
+  }
+}

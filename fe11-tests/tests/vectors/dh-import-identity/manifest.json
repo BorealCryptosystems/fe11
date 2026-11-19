@@ -1,0 +1,96 @@
+[
+  {
+    "id": "dh.import-identity.session",
+    "file": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5.txt",
+    "sha256": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5",
+    "worker_mode": "dh-import-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Published FFC shared secret unchanged; imported CKO_DOMAIN_PARAMETERS/CKK_DH p and g read exactly before downstream private-key import consumes those returned bytes. Derive result bytes match published answer; each object destroyed independently.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  },
+  {
+    "id": "dh.import-identity.advanced",
+    "file": "75ed29c0a12943907ff58a0e158a7db9e0fa385e17b85b4a6709d5afea306d05.txt",
+    "sha256": "75ed29c0a12943907ff58a0e158a7db9e0fa385e17b85b4a6709d5afea306d05",
+    "worker_mode": "dh-import-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Published FFC shared secret unchanged; imported CKO_DOMAIN_PARAMETERS/CKK_DH p and g read exactly before downstream private-key import consumes those returned bytes. Derive result bytes match published answer; each object destroyed independently.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  }
+]

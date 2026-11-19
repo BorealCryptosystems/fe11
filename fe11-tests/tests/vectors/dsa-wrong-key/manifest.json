@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dsa.wrong-key.session",
+    "file": "00ed82a686d5f36f21bba6786a264d4cfb983a6d449fe571046b7bd4a5160438.txt",
+    "sha256": "00ed82a686d5f36f21bba6786a264d4cfb983a6d449fe571046b7bd4a5160438",
+    "worker_mode": "dsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "082fb36f72be22b263c1f29b8c89468484ac2f5025631c544c2715e53acbe2ce",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "positive_control": "operation.CKM_DSA.verify@Session::verify_native@DSA-SigVer-1.0.1.1",
+    "positive_control_sha256": "b2d1e10a37aa534a91167700197617d71654ea5c9a813c2b45cb94ec333fef77",
+    "transformation": "Only y replaced by g under unchanged p/q/g. Original signature verified by the public DSA equation; replacement rejected by the same equation. Exact original digest and r||s retained.",
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "oracle": "Exact C_Verify CKR_SIGNATURE_INVALID; a key/import/length refusal is not a passing wrong-key verification.",
+    "data_notice": "Published public verification parameters. No private scalar or signing nonce distributed."
+  },
+  {
+    "id": "dsa.wrong-key.advanced",
+    "file": "59fa5d894bf775bcfd2d1aa3101304144173d61e0e4b295eae4e21699d6f0652.txt",
+    "sha256": "59fa5d894bf775bcfd2d1aa3101304144173d61e0e4b295eae4e21699d6f0652",
+    "worker_mode": "dsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "082fb36f72be22b263c1f29b8c89468484ac2f5025631c544c2715e53acbe2ce",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "positive_control": "operation.CKM_DSA.verify@AdvancedSession::verify_native@DSA-SigVer-1.0.1.1",
+    "positive_control_sha256": "0423f4d301a48c17a0bef7ceb839a04ab1a313cf7f877543541119b95f6578f0",
+    "transformation": "Only y replaced by g under unchanged p/q/g. Original signature verified by the public DSA equation; replacement rejected by the same equation. Exact original digest and r||s retained.",
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "oracle": "Exact C_Verify CKR_SIGNATURE_INVALID; a key/import/length refusal is not a passing wrong-key verification.",
+    "data_notice": "Published public verification parameters. No private scalar or signing nonce distributed."
+  }
+]

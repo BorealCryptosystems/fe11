@@ -77,4 +77,4 @@ Local detection/handling phase and implementation owner:
 Local detection/handling phase and implementation owner:
 
 - `Catalog::begin_scan` — `src/managed/mutations/inventory.rs`. Enclosing true branch: `self.occupied.iter().any(|k| (k.slot, k.generation) == key)`.
-- `PreparedInventory::wait_available` — `src/managed/mutations/inventory.rs`. Enclosing true branch: `catalog .occupied .iter() .any(|item| (item.slot, item.generation) == key)`.
+- `PreparedInventory::wait_available_observing` — `src/managed/mutations/inventory.rs`. Enclosing true branch: `catalog .occupied .iter() .any(|item| (item.slot, item.generation) == key)`.

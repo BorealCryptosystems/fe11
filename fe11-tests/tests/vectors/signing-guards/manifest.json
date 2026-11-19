@@ -1,0 +1,205 @@
+[
+  {
+    "id": "guard.ClassicalSignaturesRejection::SignatureHasNoDerConversion@ClassicalSignature::to_der",
+    "file": "e66af5bafed75f00c4d1083376899ef2acf17fff3e159e5615be83bac3a94b46.txt",
+    "sha256": "e66af5bafed75f00c4d1083376899ef2acf17fff3e159e5615be83bac3a94b46",
+    "worker_mode": "signing-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(SignatureHasNoDerConversion))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Produce a public ClassicalSignature using RSA2048 PKCS1 SHA256 over abc with declared profile.",
+    "assertions": [
+      "Exact generated RSA2048 or ECDSA P256 typed key and declared profile",
+      "No native call across local refusal; unchanged digest/signature bytes",
+      "RSA signature remains exactly256 bytes and successfully verifies after DER refusal",
+      "Owners retained before descriptive checks; explicit object destruction and final session closure"
+    ]
+  },
+  {
+    "id": "boundary.ClassicalSignaturesRejection::RsaPreparedDigestProfile@Session::sign_rsa_digest",
+    "file": "169eb116647affa479561cfae95d0a550da1bb22872f77cb3b0e8b8ef655a5a1.txt",
+    "sha256": "169eb116647affa479561cfae95d0a550da1bb22872f77cb3b0e8b8ef655a5a1",
+    "worker_mode": "signing-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(RsaPreparedDigestProfile))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Real public RsaSigningKey and PreparedDigest SHA256abc.",
+    "assertions": [
+      "Exact generated RSA2048 or ECDSA P256 typed key and declared profile",
+      "No native call across local refusal; unchanged digest/signature bytes",
+      "RSA signature remains exactly256 bytes and successfully verifies after DER refusal",
+      "Owners retained before descriptive checks; explicit object destruction and final session closure"
+    ]
+  },
+  {
+    "id": "boundary.ClassicalSignaturesRejection::RsaPreparedSigningPermission@Session::sign_rsa_digest",
+    "file": "9958723f40ded263efef20bf7991f1e6cb503224c2a3868028f17811085c237e.txt",
+    "sha256": "9958723f40ded263efef20bf7991f1e6cb503224c2a3868028f17811085c237e",
+    "worker_mode": "signing-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(RsaPreparedSigningPermission))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Generate real ECDSA P256 SigningKey through classical pair API; PreparedDigest SHA256abc is valid.",
+    "assertions": [
+      "Exact generated RSA2048 or ECDSA P256 typed key and declared profile",
+      "No native call across local refusal; unchanged digest/signature bytes",
+      "RSA signature remains exactly256 bytes and successfully verifies after DER refusal",
+      "Owners retained before descriptive checks; explicit object destruction and final session closure"
+    ]
+  },
+  {
+    "id": "parameter-boundary.ClassicalSignaturesRejection::MessageRsaSigningKeyRequired",
+    "file": "f2a5ce0f04e4a35363476f4d36672547bf2c36056c68769de319de4757553764.txt",
+    "sha256": "f2a5ce0f04e4a35363476f4d36672547bf2c36056c68769de319de4757553764",
+    "worker_mode": "signing-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(MessageRsaSigningKeyRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Actual ECDSA P256 SigningKey; all PSS parameters SHA256/MGF1SHA256/salt32 valid.",
+    "assertions": [
+      "Exact generated RSA2048 or ECDSA P256 typed key and declared profile",
+      "No native call across local refusal; unchanged digest/signature bytes",
+      "RSA signature remains exactly256 bytes and successfully verifies after DER refusal",
+      "Owners retained before descriptive checks; explicit object destruction and final session closure"
+    ]
+  },
+  {
+    "id": "parameter-boundary.PublicVerificationRejection::MessageRsaVerificationKeyRequired",
+    "file": "ac2e0b43b2386818bfb5fa2d845823d5d9b305324ef45f3aabf95b2f25cca9dc.txt",
+    "sha256": "ac2e0b43b2386818bfb5fa2d845823d5d9b305324ef45f3aabf95b2f25cca9dc",
+    "worker_mode": "signing-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PublicVerification(MessageRsaVerificationKeyRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Real ECDSA P256 VerificationKey; valid PSS profile SHA256/MGF1SHA256/salt32.",
+    "assertions": [
+      "Exact generated RSA2048 or ECDSA P256 typed key and declared profile",
+      "No native call across local refusal; unchanged digest/signature bytes",
+      "RSA signature remains exactly256 bytes and successfully verifies after DER refusal",
+      "Owners retained before descriptive checks; explicit object destruction and final session closure"
+    ]
+  }
+]

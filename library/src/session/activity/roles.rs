@@ -37,6 +37,23 @@ impl crate::symmetric::memory::RetainedStorage for Permissions {
 pub(crate) struct PermissionStorage {
     values: Vec<Option<Permission>>,
 }
+impl Permissions {
+    pub(in crate::session) fn readers_on(
+        &self,
+        activity: &Arc<crate::registry::Activity>,
+        uid: u64,
+    ) -> usize {
+        self.values
+            .iter()
+            .flatten()
+            .filter(|permission| {
+                matches!(
+                    permission, Permission::Read { _permit } if _permit.belongs_to(activity, uid)
+                )
+            })
+            .count()
+    }
+}
 impl PermissionStorage {
     pub(crate) fn requested(count: usize) -> Result<usize> {
         count
@@ -498,11 +515,6 @@ impl<'k, const N: usize> RolePlan<'k, N> {
                 .map(|category| crate::advanced::init_reader_borrow(session, &held, category))
                 .transpose()?
                 .flatten();
-            // This UID is only an availability hint after releasing possession.
-            // A subsequent attempt must obtain a fresh lifetime-bound proof.
-            let borrowed_uid = reader_borrow
-                .as_ref()
-                .map(crate::advanced::InitReaderBorrow::uid);
             let mut blocked = None;
             for (index, role) in self.roles.iter().enumerate() {
                 let Some(role) = role else { continue };
@@ -541,11 +553,30 @@ impl<'k, const N: usize> RolePlan<'k, N> {
             let Some((index, error)) = blocked else {
                 return Ok(held);
             };
+            // Capture only a per-Activity wake hint before dropping possession.
+            // The next acquisition proves the current ticket and roles afresh.
+            let borrowed_uid = match (&self.roles[index], reader_borrow.as_ref()) {
+                (Some(Role::Write(activity)), Some(proof)) => Some(proof.allowance(activity)?),
+                _ => None,
+            };
+            let resident_conflict = if self.init_category.is_some() {
+                match &self.roles[index] {
+                    Some(Role::Read(reader)) => reader.init_conflicts_with_session()?,
+                    Some(Role::Write(activity)) => activity.init_conflicts_with_session(
+                        session.uid,
+                        true,
+                        borrowed_uid.map_or(0, |(_, count)| count),
+                    )?,
+                    None => false,
+                }
+            } else {
+                false
+            };
             drop(held);
             for permission in permissions.iter_mut() {
                 drop(permission.take());
             }
-            if matches!(policy, ResourceAdmission::Immediate) {
+            if resident_conflict || matches!(policy, ResourceAdmission::Immediate) {
                 // One probe means one attempt. Returning the original refusal
                 // lets the outer transaction discard its candidate before any
                 // re-preparation, even if this role just became available.

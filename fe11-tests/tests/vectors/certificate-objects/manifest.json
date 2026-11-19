@@ -1,0 +1,232 @@
+[
+  {
+    "id": "objects.certificate.x509",
+    "file": "3cd8c3dd896734f74b39d6f7721e2af0e6edfba692a45f6d53421e512b0f4850.txt",
+    "sha256": "3cd8c3dd896734f74b39d6f7721e2af0e6edfba692a45f6d53421e512b0f4850",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Native success and exact CLASS/CERTIFICATE_TYPE/SUBJECT/ISSUER/SERIAL_NUMBER/VALUE readback.",
+    "sources": [
+      {
+        "file": "vectors/openssl-ca-cert.pem",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/certs/ca-cert.pem",
+        "sha256": "b88d649376c6c013c4fdd0cb4014d18bace9a8edc1841142233c392cb4271488",
+        "git_blob_sha1": "58f45bd97af16d52ae1357e201e47fc13400ac07"
+      },
+      {
+        "file": "vectors/OPENSSL-LICENSE.txt",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+        "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+        "git_blob_sha1": null
+      }
+    ],
+    "standard_scope": "PKCS11 certificate object attributes; unsupported-type cases characterize type dispatch only, not alternate certificate encodings.",
+    "extension_header": null,
+    "data_notice": "Public encoded certificate or packet data only; no source implementation copied. No operational private keys."
+  },
+  {
+    "id": "objects.certificate.openpgp",
+    "file": "198eae5084ac5c64882e8b380f121131ad59524da18232d6507f1bf56867d1ff.txt",
+    "sha256": "198eae5084ac5c64882e8b380f121131ad59524da18232d6507f1bf56867d1ff",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Native success and exact CLASS/CERTIFICATE_TYPE/SUBJECT/ISSUER/SERIAL_NUMBER/VALUE readback.",
+    "sources": [
+      {
+        "file": "vectors/openpgp-public-packet.hex",
+        "url": "https://www.rfc-editor.org/rfc/rfc9580.txt",
+        "section": "A.1",
+        "source_sha256": "36540e57b63d24c0b17be0748b704bdeed3d643ce99a4fb1abb6469c1eb1ff18",
+        "sha256": "aa539da55f0feb526063abc7898dab8e919ce01fc320d5eb2d29c3ec72a063a3",
+        "notice": "RFC9580 public numerical packet example; attribution retained, no implementation copied"
+      }
+    ],
+    "standard_scope": "Common certificate/storage attributes plus explicit OpenPGP certificate-type extension0x80504750, not a standard CKC type.",
+    "extension_header": {
+      "path": "src/lib/pkcs11/pkcs11.h",
+      "sha256": "39b4ca6e1c3c79a6f460958b2321e3a11b2da082f136fc09beb8776fc0c642bc",
+      "constant": "CKC_VENDOR_DEFINED | 0x504750"
+    },
+    "data_notice": "Public encoded certificate or packet data only; no source implementation copied. No operational private keys."
+  },
+  {
+    "id": "objects.certificate.attribute",
+    "file": "f6fd197fee58eb3276dc67c22cc52930167353f1a65ecf3ba69074cbfc3a02ee.txt",
+    "sha256": "f6fd197fee58eb3276dc67c22cc52930167353f1a65ecf3ba69074cbfc3a02ee",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Successful X509 control/readback; change only certificate type; C_CreateObject ATTRIBUTE_VALUE_INVALID, no returned object, exactly the original control remains in isolated namespace.",
+    "sources": [
+      {
+        "file": "vectors/openssl-ca-cert.pem",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/certs/ca-cert.pem",
+        "sha256": "b88d649376c6c013c4fdd0cb4014d18bace9a8edc1841142233c392cb4271488",
+        "git_blob_sha1": "58f45bd97af16d52ae1357e201e47fc13400ac07"
+      },
+      {
+        "file": "vectors/OPENSSL-LICENSE.txt",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+        "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+        "git_blob_sha1": null
+      }
+    ],
+    "standard_scope": "PKCS11 certificate object attributes; unsupported-type cases characterize type dispatch only, not alternate certificate encodings.",
+    "extension_header": null,
+    "data_notice": "Public encoded certificate or packet data only; no source implementation copied. No operational private keys."
+  },
+  {
+    "id": "objects.certificate.wtls",
+    "file": "89e6e89d65c81cce0068329d5cb1ed87ec577bfabb8f98e56b27725411b045b5.txt",
+    "sha256": "89e6e89d65c81cce0068329d5cb1ed87ec577bfabb8f98e56b27725411b045b5",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Successful X509 control/readback; change only certificate type; C_CreateObject ATTRIBUTE_VALUE_INVALID, no returned object, exactly the original control remains in isolated namespace.",
+    "sources": [
+      {
+        "file": "vectors/openssl-ca-cert.pem",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/certs/ca-cert.pem",
+        "sha256": "b88d649376c6c013c4fdd0cb4014d18bace9a8edc1841142233c392cb4271488",
+        "git_blob_sha1": "58f45bd97af16d52ae1357e201e47fc13400ac07"
+      },
+      {
+        "file": "vectors/OPENSSL-LICENSE.txt",
+        "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/LICENSE.txt",
+        "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+        "git_blob_sha1": null
+      }
+    ],
+    "standard_scope": "PKCS11 certificate object attributes; unsupported-type cases characterize type dispatch only, not alternate certificate encodings.",
+    "extension_header": null,
+    "data_notice": "Public encoded certificate or packet data only; no source implementation copied. No operational private keys."
+  }
+]

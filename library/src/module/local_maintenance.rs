@@ -34,6 +34,17 @@ pub(super) enum LocalMaintenance {
     // Logout changes authentication, not ownership of native operation memory.
     // Keep suspended owners intact; the token writer still excludes dispatch.
     Logout,
+    // Login preserves suspended owners under ordinary module admission.
+    Authentication,
+}
+
+impl LocalMaintenance {
+    fn retains_operations(self) -> bool {
+        match self {
+            Self::Marked => false,
+            Self::Invalidated | Self::Logout | Self::Authentication => true,
+        }
+    }
 }
 
 /// A claimed notification is rearmed after guards leave scope if inspection
@@ -103,10 +114,7 @@ impl TokenSnapshot {
             if self.domain.closing_active.load(Ordering::Acquire) == 0 {
                 self.local_ledgers(state)?;
             }
-            let retain_operations = matches!(
-                scope,
-                LocalMaintenance::Logout | LocalMaintenance::Invalidated
-            );
+            let retain_operations = scope.retains_operations();
             let may_sweep = !retain_operations
                 && (!attempted
                     || (matches!(admission, ResourceAdmission::WaitUntil { .. })
@@ -170,7 +178,10 @@ impl TokenSnapshot {
         if inner.session_ledger.local_poisoned() {
             return Err(Error::Poisoned);
         }
-        if matches!(scope, LocalMaintenance::Logout) {
+        if matches!(
+            scope,
+            LocalMaintenance::Logout | LocalMaintenance::Authentication
+        ) {
             // Context withdrawals notify the module Wake, not this activity's
             // private Wake. Binding also forwards activity releases to it.
             let writer = self.domain.activity.write_in_context(
@@ -178,7 +189,12 @@ impl TokenSnapshot {
                 admission,
                 crate::BusyReason::ModuleLifecycle(crate::ModuleLifecycleBusy::TokenActivity),
                 || {
-                    inner.check_logout_admission()?;
+                    if matches!(scope, LocalMaintenance::Logout) {
+                        inner.check_logout_admission()?;
+                    } else {
+                        inner.state.check_admission(false)?;
+                        inner.availability.check_available()?;
+                    }
                     self.local_context(permit, require_current)?;
                     Ok(
                         (self.domain.closing_active.load(Ordering::Acquire) != 0).then_some(
@@ -190,7 +206,13 @@ impl TokenSnapshot {
                 },
             )?;
             drop(writer);
-            inner.check_logout_admission()?;
+            if matches!(scope, LocalMaintenance::Logout) {
+                inner.check_logout_admission()?;
+            } else {
+                inner.state.check_admission(false)?;
+                inner.availability.check_available()?;
+                self.local_context(permit, require_current)?;
+            }
             return admission.check_available();
         }
         let ready = self.domain.activity.write_with_maintenance(
@@ -203,19 +225,15 @@ impl TokenSnapshot {
                         crate::ModuleLifecycleBusy::SessionClosePending,
                     )));
                 }
-                Ok((!matches!(
-                    scope,
-                    LocalMaintenance::Logout | LocalMaintenance::Invalidated
-                ) && self.domain.advanced_active.load(Ordering::Acquire) != 0)
+                Ok((!scope.retains_operations()
+                    && self.domain.advanced_active.load(Ordering::Acquire) != 0)
                     .then_some(crate::BusyReason::ModuleLifecycle(
                         crate::ModuleLifecycleBusy::AdvancedTokenActivity,
                     )))
             },
             || {
-                !matches!(
-                    scope,
-                    LocalMaintenance::Logout | LocalMaintenance::Invalidated
-                ) && self.domain.closing_active.load(Ordering::Acquire) == 0
+                !scope.retains_operations()
+                    && self.domain.closing_active.load(Ordering::Acquire) == 0
                     && self.domain.needs_local_cleanup.load(Ordering::Acquire)
             },
         )?;
@@ -255,8 +273,11 @@ impl TokenSnapshot {
             && !entry.advanced_progress.is_poisoned()
             && entry.advanced_operation.load(Ordering::Acquire) != 0
             && entry.advanced_progress.cleanup_hint()
-            && (matches!(scope, LocalMaintenance::Marked)
-                || !entry.snapshot.valid.load(Ordering::Acquire))
+            && match scope {
+                LocalMaintenance::Marked => true,
+                LocalMaintenance::Invalidated => !entry.snapshot.valid.load(Ordering::Acquire),
+                LocalMaintenance::Logout | LocalMaintenance::Authentication => false,
+            }
     }
 
     /// One weak snapshot, a complete nonwaiting pass, then only blocked marked

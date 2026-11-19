@@ -30,7 +30,7 @@ pub enum TokenAdministrationRejection {
     NativeTokenInitializationInputChanged,
     /// Refreshed token identity changed. [Detection, owner and recovery](#cause-RefreshedTokenIdentityChanged).
     RefreshedTokenIdentityChanged,
-    /// Target token sessions active. [Detection, owner and recovery](#cause-TargetTokenSessionsActive).
+    /// Unresolved target-token session transitions or retention. [Detection, owner and recovery](#cause-TargetTokenSessionsActive).
     TargetTokenSessionsActive,
     /// Token context replaced. [Detection, owner and recovery](#cause-TokenContextReplaced).
     TokenContextReplaced,

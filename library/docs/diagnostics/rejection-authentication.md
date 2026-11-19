@@ -52,6 +52,17 @@ Local detection/handling phase and implementation owner:
 - `Operation::check_authentication_budget` — `src/advanced/operation.rs`. Enclosing match alternative: `OperationBody::Control | OperationBody::Admission(_)`.
 
 
+<a id="cause-AmbiguousContextKey"></a>
+
+### `AmbiguousContextKey`
+
+PKCS#11 accepts a session handle for contextual login. Fe11 returns this cause
+before sending a ticket-scoped PIN if another operation could own the active
+key. When the application controls the ordering of both operations, call
+`Session::authenticate_session_context` to submit the PIN at session scope.
+If a ticket-scoped grant is already active, finish or explicitly cancel its
+operation before starting another operation that could use the grant.
+
 <a id="cause-ForeignAuthenticationSession"></a>
 
 ### `ForeignAuthenticationSession`

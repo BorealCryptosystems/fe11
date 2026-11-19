@@ -1,0 +1,298 @@
+[
+  {
+    "id": "wrap.class.aes_cbc.secret",
+    "worker_mode": "aes-transport-class",
+    "file": "48719398885f625a0c9f29d27bd86abc02b2670e7998adb2893563821d40f188.txt",
+    "sha256": "48719398885f625a0c9f29d27bd86abc02b2670e7998adb2893563821d40f188",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "RFC 3394 section 4.1 test value",
+      "target_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_cbc.private",
+    "worker_mode": "aes-transport-class",
+    "file": "eeed43f6e5eec7f9b736326f76fda01a871cd7a3c4ffb8695b72a0b8cacda50c.txt",
+    "sha256": "eeed43f6e5eec7f9b736326f76fda01a871cd7a3c4ffb8695b72a0b8cacda50c",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "Published OpenSSL RSA-2048 test key, PKCS #8 DER",
+      "target_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_cbc_pad.secret",
+    "worker_mode": "aes-transport-class",
+    "file": "98115cc66b3e9b7ce9467f35f4c85d8fb68816b681fe6474b2a47dc0c47bd6c5.txt",
+    "sha256": "98115cc66b3e9b7ce9467f35f4c85d8fb68816b681fe6474b2a47dc0c47bd6c5",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "RFC 3394 section 4.1 test value",
+      "target_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_cbc_pad.private",
+    "worker_mode": "aes-transport-class",
+    "file": "33ae533955ab7effef426d8c245065ba509e2a9371e98820d6120114e1503143.txt",
+    "sha256": "33ae533955ab7effef426d8c245065ba509e2a9371e98820d6120114e1503143",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "Published OpenSSL RSA-2048 test key, PKCS #8 DER",
+      "target_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_key_wrap.secret",
+    "worker_mode": "aes-transport-class",
+    "file": "65f361b9c13469c5e35a390c0b9c5ce73940a065f355f45974823418e3081884.txt",
+    "sha256": "65f361b9c13469c5e35a390c0b9c5ce73940a065f355f45974823418e3081884",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "RFC 3394 section 4.1 test value",
+      "target_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_key_wrap.private",
+    "worker_mode": "aes-transport-class",
+    "file": "96ab200260fd50e293ad13db14c4fcfe8a7d7e7bc5c48e32d7fd7fe807115279.txt",
+    "sha256": "96ab200260fd50e293ad13db14c4fcfe8a7d7e7bc5c48e32d7fd7fe807115279",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "2.40 / 3.2",
+    "source": {
+      "target": "Published OpenSSL RSA-2048 test key, PKCS #8 DER",
+      "target_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_key_wrap_pad.secret",
+    "worker_mode": "aes-transport-class",
+    "file": "dac50662ff77d7595bea6bb551136954ef11b7e9293f25586d7782ac5f7debc2.txt",
+    "sha256": "dac50662ff77d7595bea6bb551136954ef11b7e9293f25586d7782ac5f7debc2",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "3.0",
+    "source": {
+      "target": "RFC 3394 section 4.1 test value",
+      "target_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  },
+  {
+    "id": "wrap.class.aes_key_wrap_pad.private",
+    "worker_mode": "aes-transport-class",
+    "file": "82a0b753cd08c94c29818553ed91a438fcbefa0d8d2d0a8084508b2aee5e24b9.txt",
+    "sha256": "82a0b753cd08c94c29818553ed91a438fcbefa0d8d2d0a8084508b2aee5e24b9",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "oracle": "Exact deterministic reference ciphertext; independently prepared envelope produces the same authenticated key witness on abc. For AES_KEY_WRAP_PAD, apply the version 3.0 PKCS7-plus-KW rule. Preserve deviations.",
+    "rule_edition": "3.0",
+    "source": {
+      "target": "Published OpenSSL RSA-2048 test key, PKCS #8 DER",
+      "target_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec",
+      "reference": "AES-CBC or RFC 3394 via Python cryptography; RSA PKCS1-v1.5 SHA-256 or HMAC-MD5 witness over abc. All key material in this vector is public."
+    }
+  }
+]

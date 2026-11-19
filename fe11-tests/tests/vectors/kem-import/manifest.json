@@ -1,0 +1,746 @@
+[
+  {
+    "id": "kem.import_key_check.7.106",
+    "file": "11653e71860ada61dfe9e6b016259cf41b9fdbf1931e1bd6a6df9bf2e8a7ea62.txt",
+    "sha256": "11653e71860ada61dfe9e6b016259cf41b9fdbf1931e1bd6a6df9bf2e8a7ea62",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 7,
+    "source_case": 106,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.7.108",
+    "file": "124d54d392fa2149f73b952c26c7a1497e4a1b12c414100870cc84b6d3fc4336.txt",
+    "sha256": "124d54d392fa2149f73b952c26c7a1497e4a1b12c414100870cc84b6d3fc4336",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 7,
+    "source_case": 108,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.8.116",
+    "file": "0e6c4ad27e7d07e544b1dd9dcf03dfba2f61c2463c111ee8b5203b2dc85b1e86.txt",
+    "sha256": "0e6c4ad27e7d07e544b1dd9dcf03dfba2f61c2463c111ee8b5203b2dc85b1e86",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 8,
+    "source_case": 116,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.8.117",
+    "file": "c8d49ef1e1030c348653ab18fc54fd09cf80277d7bcec4f9f03a474e91c452ed.txt",
+    "sha256": "c8d49ef1e1030c348653ab18fc54fd09cf80277d7bcec4f9f03a474e91c452ed",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 8,
+    "source_case": 117,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.9.126",
+    "file": "7c8b9de95c7f5aa5f7d53d6b2b6cec5b3ff6802715b356731b55961e64e87a88.txt",
+    "sha256": "7c8b9de95c7f5aa5f7d53d6b2b6cec5b3ff6802715b356731b55961e64e87a88",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 9,
+    "source_case": 126,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.9.128",
+    "file": "f3b5639375144881c095bfd737d3bbdea54a723614925cb9f3e0f480b7e22413.txt",
+    "sha256": "f3b5639375144881c095bfd737d3bbdea54a723614925cb9f3e0f480b7e22413",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 9,
+    "source_case": 128,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.10.136",
+    "file": "7deb5c28c1a700ed87b252fa54220eebb6bdc8c00bfcf9d22154b2fd8e8ec500.txt",
+    "sha256": "7deb5c28c1a700ed87b252fa54220eebb6bdc8c00bfcf9d22154b2fd8e8ec500",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 10,
+    "source_case": 136,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.10.137",
+    "file": "4b54bb18aea0ceaa8bc6b9f7e71329a63982d85bc92ff79b717875d156d5d98a.txt",
+    "sha256": "4b54bb18aea0ceaa8bc6b9f7e71329a63982d85bc92ff79b717875d156d5d98a",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 10,
+    "source_case": 137,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.11.146",
+    "file": "2780c94f0034192eb4c946d47efc11ca26b46f4d5e08debd58eab91217a5138e.txt",
+    "sha256": "2780c94f0034192eb4c946d47efc11ca26b46f4d5e08debd58eab91217a5138e",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 11,
+    "source_case": 146,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.11.148",
+    "file": "17ab91a67efda0c5b649defb0c1b87823d3055005c9c723ca3896e1ed12270b2.txt",
+    "sha256": "17ab91a67efda0c5b649defb0c1b87823d3055005c9c723ca3896e1ed12270b2",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 11,
+    "source_case": 148,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.12.156",
+    "file": "e81b7708dc5582822cc04f682705d9d47ffe900e491dd0203932cbf56eb9856a.txt",
+    "sha256": "e81b7708dc5582822cc04f682705d9d47ffe900e491dd0203932cbf56eb9856a",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 12,
+    "source_case": 156,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  },
+  {
+    "id": "kem.import_key_check.12.159",
+    "file": "d52928f7cb1242a87fe7dbdd6692bc766c6395d54f9fb72a12fc46f4fd8d7f27.txt",
+    "sha256": "d52928f7cb1242a87fe7dbdd6692bc766c6395d54f9fb72a12fc46f4fd8d7f27",
+    "worker_mode": "kem-import",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "kind": "IMPORT_CHARACTERIZATION_NOT_FIPS_VALIDATION_VERDICT",
+      "codes": [
+        "CKR_OK",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "basis": "PKCS11 3.2 ML-KEM key object import representation and C_CreateObject, distinct from FIPS203 encapsulation/decapsulation input checking. No requirement that Create performs the ACVP key-check function is inferred.",
+      "success": "Read class/key type/parameter set, retain provenance, explicitly destroy resulting session object; no encapsulation/decapsulation KAT credit",
+      "refusal": "Retain exact producer/code; no successful object. FIPS expected false is not a mandated Create refusal; no normative conformance credit either way"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_group": 12,
+    "source_case": 159,
+    "key_material": "Published NIST ACVP test material; never use for operational cryptography"
+  }
+]

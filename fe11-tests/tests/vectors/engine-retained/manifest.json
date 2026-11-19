@@ -1,0 +1,872 @@
+[
+  {
+    "id": "engine.retained.ml-dsa-44",
+    "file": "c83f041d1f2c2cc56ad4d3672263da18ae968da74d871c94e24cf95191c73f35.txt",
+    "sha256": "c83f041d1f2c2cc56ad4d3672263da18ae968da74d871c94e24cf95191c73f35",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "ML-DSA-sigGen-FIPS204.1.1",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "ML-DSA-sigGen-FIPS204.13.181",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+        "path": "vectors/pqc/fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865.txt",
+        "sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865"
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.13.181",
+        "path": "vectors/pqc/f1a757152dd524546f86b1a9e29a6a380ad34f2e10656b0ad653624035e872e9.txt",
+        "sha256": "f1a757152dd524546f86b1a9e29a6a380ad34f2e10656b0ad653624035e872e9"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.ml-dsa-65",
+    "file": "a7a9300ed7c18be01795ef014b3f2c9d056752b05e1bd485d04b54ef6552650f.txt",
+    "sha256": "a7a9300ed7c18be01795ef014b3f2c9d056752b05e1bd485d04b54ef6552650f",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "ML-DSA-sigGen-FIPS204.3.31",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "ML-DSA-sigGen-FIPS204.15.211",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.3.31",
+        "path": "vectors/pqc/817c1b4949779239750f34f1b2c3d77b62643e0003b23c23d48d64d97b0c8b65.txt",
+        "sha256": "817c1b4949779239750f34f1b2c3d77b62643e0003b23c23d48d64d97b0c8b65"
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.15.211",
+        "path": "vectors/pqc/b8c59e4f86136012e227e73248418a694d1ee90f928b14d3b24775d3c47394f1.txt",
+        "sha256": "b8c59e4f86136012e227e73248418a694d1ee90f928b14d3b24775d3c47394f1"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.ml-dsa-87",
+    "file": "1949b8afbe4b1583b5053115b892a196d05d3949a6555c3accd72001c35a5e9c.txt",
+    "sha256": "1949b8afbe4b1583b5053115b892a196d05d3949a6555c3accd72001c35a5e9c",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "ML-DSA-sigGen-FIPS204.5.61",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "ML-DSA-sigGen-FIPS204.17.241",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.5.61",
+        "path": "vectors/pqc/edc124a84f3d25d92e89385be169ea7a9b08369fdf6d785990db923ee25b371b.txt",
+        "sha256": "edc124a84f3d25d92e89385be169ea7a9b08369fdf6d785990db923ee25b371b"
+      },
+      {
+        "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.17.241",
+        "path": "vectors/pqc/9a369c05cb628805ceb555724b251c2bc87ca60bffe453b07f2a263a9d9a410b.txt",
+        "sha256": "9a369c05cb628805ceb555724b251c2bc87ca60bffe453b07f2a263a9d9a410b"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-128f",
+    "file": "159ed4c01950cb764cca0b3973a22fcd391ff7f03d6a5b32a995b3fef7ba3f5c.txt",
+    "sha256": "159ed4c01950cb764cca0b3973a22fcd391ff7f03d6a5b32a995b3fef7ba3f5c",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.1.1",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.37.313",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.1.1",
+        "path": "vectors/pqc/3c43bcab2b2352e57e892e57710d57ed4ae3c95bff252e4e8418f63b8d7e4ee1.txt",
+        "sha256": "3c43bcab2b2352e57e892e57710d57ed4ae3c95bff252e4e8418f63b8d7e4ee1"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.37.313",
+        "path": "vectors/pqc/280d3caffa9bf7b5942262c9a1c439bc6ecf3f569dfdb76a5b8a0c32a96439c4.txt",
+        "sha256": "280d3caffa9bf7b5942262c9a1c439bc6ecf3f569dfdb76a5b8a0c32a96439c4"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-128s",
+    "file": "bbb0e7b3f75840efdedf5fa12f946d1088fefdfdda7f20f72244d69bb998ec4c.txt",
+    "sha256": "bbb0e7b3f75840efdedf5fa12f946d1088fefdfdda7f20f72244d69bb998ec4c",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.19.157",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.55.469",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.19.157",
+        "path": "vectors/pqc/abc301130468ab7d7a8017defd67723c8cb6e1a4954acaebc7ac61fd9a3ac71f.txt",
+        "sha256": "abc301130468ab7d7a8017defd67723c8cb6e1a4954acaebc7ac61fd9a3ac71f"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.55.469",
+        "path": "vectors/pqc/d1044f160404ec37647fb9e4cdba908418a83732c0c5c99cf664b3c7f267696d.txt",
+        "sha256": "d1044f160404ec37647fb9e4cdba908418a83732c0c5c99cf664b3c7f267696d"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-192f",
+    "file": "230070009ab92ccda3668077d64cd4f83f0d9f894e3a5b2ee4fb3abb8aec988c.txt",
+    "sha256": "230070009ab92ccda3668077d64cd4f83f0d9f894e3a5b2ee4fb3abb8aec988c",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.3.20",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.39.332",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.3.20",
+        "path": "vectors/pqc/4f96b63c4d782192a415ef65f1264263c691798c61ba434308812360aac5dea6.txt",
+        "sha256": "4f96b63c4d782192a415ef65f1264263c691798c61ba434308812360aac5dea6"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.39.332",
+        "path": "vectors/pqc/7c4c339dcdea03f555dcc5aa0f5e5e1ebc8c81b3b0b6393b6f518f3efd394dda.txt",
+        "sha256": "7c4c339dcdea03f555dcc5aa0f5e5e1ebc8c81b3b0b6393b6f518f3efd394dda"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-192s",
+    "file": "e9ede923bcefdac463fcd89c13b5be69d217a413ff6d46c97a97b17d4333f670.txt",
+    "sha256": "e9ede923bcefdac463fcd89c13b5be69d217a413ff6d46c97a97b17d4333f670",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.21.176",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.57.488",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.21.176",
+        "path": "vectors/pqc/80f77e7b8f4a5fec760be5c746fe92da183d8dbd3769632176930909d66f8361.txt",
+        "sha256": "80f77e7b8f4a5fec760be5c746fe92da183d8dbd3769632176930909d66f8361"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.57.488",
+        "path": "vectors/pqc/1eb112cd928eaba1b066f5080696770059a2b18cecedc6a3944c143e834af268.txt",
+        "sha256": "1eb112cd928eaba1b066f5080696770059a2b18cecedc6a3944c143e834af268"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-256f",
+    "file": "1fefc35d820fbeefc18dd68f1d925e99e28cc26b1e3a9f5ade01fff4da0de0da.txt",
+    "sha256": "1fefc35d820fbeefc18dd68f1d925e99e28cc26b1e3a9f5ade01fff4da0de0da",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.5.39",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.41.351",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.5.39",
+        "path": "vectors/pqc/14bce9781dc419ef880309d78a8a29b3017784149b3e524309b4ebe09da24b98.txt",
+        "sha256": "14bce9781dc419ef880309d78a8a29b3017784149b3e524309b4ebe09da24b98"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.41.351",
+        "path": "vectors/pqc/535d1a313250eb59b773524adbd0603d288047810e78a6d7a9d701ceef9e9d75.txt",
+        "sha256": "535d1a313250eb59b773524adbd0603d288047810e78a6d7a9d701ceef9e9d75"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-sha2-256s",
+    "file": "aa004115c6419bcb5486d7bd6f41ef20f04be711abac38e61ff0afbc659a9a56.txt",
+    "sha256": "aa004115c6419bcb5486d7bd6f41ef20f04be711abac38e61ff0afbc659a9a56",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.23.195",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.59.507",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.23.195",
+        "path": "vectors/pqc/b1999ad140a844d28a0a5d9baf43fe78601bc65b8a240b3948ce317ccf8f1eb8.txt",
+        "sha256": "b1999ad140a844d28a0a5d9baf43fe78601bc65b8a240b3948ce317ccf8f1eb8"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.59.507",
+        "path": "vectors/pqc/8ab8ccf5eda50dc6e67f17dd642033d953801b827dd6a1c1cc685dd30863807c.txt",
+        "sha256": "8ab8ccf5eda50dc6e67f17dd642033d953801b827dd6a1c1cc685dd30863807c"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-128f",
+    "file": "6415b53d6fd296ebbb49ed828fa17fcde4a884b9bb35c5c3237f51f6291e3715.txt",
+    "sha256": "6415b53d6fd296ebbb49ed828fa17fcde4a884b9bb35c5c3237f51f6291e3715",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.7.58",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.43.370",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.7.58",
+        "path": "vectors/pqc/4af6d59a619c36326925ee6c057a2f5081e234a47b8f916c04a9a130eefa9478.txt",
+        "sha256": "4af6d59a619c36326925ee6c057a2f5081e234a47b8f916c04a9a130eefa9478"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.43.370",
+        "path": "vectors/pqc/9d96fec95d85b5949f297a93d8271710f54acf47cb2c5218ef0f837457fa0a5c.txt",
+        "sha256": "9d96fec95d85b5949f297a93d8271710f54acf47cb2c5218ef0f837457fa0a5c"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-128s",
+    "file": "9dc8816ac97899240e4c1e33daac3b73f9b2c73f38e7b10232c657690a1bbe75.txt",
+    "sha256": "9dc8816ac97899240e4c1e33daac3b73f9b2c73f38e7b10232c657690a1bbe75",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.25.214",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.61.526",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.25.214",
+        "path": "vectors/pqc/01190af6404f5e3544988dbe1659ae3853c7da92472b16ef087ad22caf22e100.txt",
+        "sha256": "01190af6404f5e3544988dbe1659ae3853c7da92472b16ef087ad22caf22e100"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.61.526",
+        "path": "vectors/pqc/4fb67cb24dfb5d68d0b52f93c88582fc4ca39b1cf89e70554ff01d1ed48f09a8.txt",
+        "sha256": "4fb67cb24dfb5d68d0b52f93c88582fc4ca39b1cf89e70554ff01d1ed48f09a8"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-192f",
+    "file": "b552351d2fd4eb505a8dbfaa2e2d9b6051a1e151292ad83eb4a234c734050a4d.txt",
+    "sha256": "b552351d2fd4eb505a8dbfaa2e2d9b6051a1e151292ad83eb4a234c734050a4d",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.9.77",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.45.389",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.9.77",
+        "path": "vectors/pqc/08be97e739aabd674a85f27b44b8748cb5a00f34761a1c96428bd16026db02cb.txt",
+        "sha256": "08be97e739aabd674a85f27b44b8748cb5a00f34761a1c96428bd16026db02cb"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.45.389",
+        "path": "vectors/pqc/d349b561cd3eecd261cf0fd71ffdfcf6f2fe1600b3a0463691d69c89a156e629.txt",
+        "sha256": "d349b561cd3eecd261cf0fd71ffdfcf6f2fe1600b3a0463691d69c89a156e629"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-192s",
+    "file": "06ed863e7035240d2f1621168649d00195e46c214046fbb9bddb359d6f1377a3.txt",
+    "sha256": "06ed863e7035240d2f1621168649d00195e46c214046fbb9bddb359d6f1377a3",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.27.233",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.63.545",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.27.233",
+        "path": "vectors/pqc/cc077bd450c7364ee7aaed3935af844c77177e5f7725133f57129dab95621b9b.txt",
+        "sha256": "cc077bd450c7364ee7aaed3935af844c77177e5f7725133f57129dab95621b9b"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.63.545",
+        "path": "vectors/pqc/c23c99b650da3f2550302f5eab774460b4b9dcecd1b82f31e9efc2d308d7fa28.txt",
+        "sha256": "c23c99b650da3f2550302f5eab774460b4b9dcecd1b82f31e9efc2d308d7fa28"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-256f",
+    "file": "ef2b464d3bb7472b8db790a6534c0cb2201a69c6e777c574c5fe4c04e5bc9039.txt",
+    "sha256": "ef2b464d3bb7472b8db790a6534c0cb2201a69c6e777c574c5fe4c04e5bc9039",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.11.96",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.47.408",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.11.96",
+        "path": "vectors/pqc/b4e37a7377d9a55cbfa5dcfb4e0fa5edbb1ca1a4de05b1e41bac8dbbc10e659b.txt",
+        "sha256": "b4e37a7377d9a55cbfa5dcfb4e0fa5edbb1ca1a4de05b1e41bac8dbbc10e659b"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.47.408",
+        "path": "vectors/pqc/7a187e1d2cdb8b9094041a42af01cc7e71df60dc05b3b44ca5fe9ae45f6565d9.txt",
+        "sha256": "7a187e1d2cdb8b9094041a42af01cc7e71df60dc05b3b44ca5fe9ae45f6565d9"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  },
+  {
+    "id": "engine.retained.slh-dsa-shake-256s",
+    "file": "b370fd9d91a4386342fbba1d96608960450efc3b0feee061ede5ff26d5aacdc1.txt",
+    "sha256": "b370fd9d91a4386342fbba1d96608960450efc3b0feee061ede5ff26d5aacdc1",
+    "worker_mode": "engine-choices",
+    "engine_action": "retained",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "SLH-DSA-sigGen-FIPS205.29.252",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "other_key_source": {
+      "id": "SLH-DSA-sigGen-FIPS205.65.564",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vectors": [
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.29.252",
+        "path": "vectors/pqc/963ba6597aeb97bc4c474532af9248c54f017d8952a39fc6651537f39aa976f6.txt",
+        "sha256": "963ba6597aeb97bc4c474532af9248c54f017d8952a39fc6651537f39aa976f6"
+      },
+      {
+        "case": "operation.CKM_SLH_DSA.verify@Session::verify_native@SLH-DSA-sigGen-FIPS205.65.564",
+        "path": "vectors/pqc/e9080d4deb363b675aba6e916bedf7473f4b1d18ea5f8e4542723f10cd68032c.txt",
+        "sha256": "e9080d4deb363b675aba6e916bedf7473f4b1d18ea5f8e4542723f10cd68032c"
+      }
+    ],
+    "oracle": "Public Rust PqcPublicKey::verify: valid before module close/drop; retained engine clone verifies valid/changed message/different published key/changed context/valid afterward. Exact Valid/Invalid, never generic error.",
+    "lifetime": "Initial engine moved into Module, one clone retained from Module, explicit Module.close then drop(Module). No second native image owner is constructed by the worker."
+  }
+]

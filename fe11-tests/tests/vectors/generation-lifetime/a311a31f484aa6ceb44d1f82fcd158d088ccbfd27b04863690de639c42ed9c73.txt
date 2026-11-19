@@ -1,0 +1,7 @@
+lifetime|CKM_AES_KEY_GEN
+public|CKA_CLASS|symbol|CKO_SECRET_KEY
+public|CKA_KEY_TYPE|symbol|CKK_AES
+public|CKA_VALUE_LEN|integer|16
+public|CKA_PRIVATE|bool|false
+public|CKA_LABEL|namespace|label
+public|CKA_TOKEN|bool|true

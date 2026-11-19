@@ -1,0 +1,12 @@
+{
+  "source": {
+    "id": "evppkey_rsa_common.txt",
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.9/test/recipes/30-test_evp_data/evppkey_rsa_common.txt",
+    "git_blob": "81ce317fa78cc9a004ffbd90ba9b2df0fba1f76c",
+    "sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+    "path": "vectors/evppkey_rsa_common.txt",
+    "license": "Apache-2.0; vectors/OPENSSL-LICENSE.txt"
+  },
+  "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+  "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+}

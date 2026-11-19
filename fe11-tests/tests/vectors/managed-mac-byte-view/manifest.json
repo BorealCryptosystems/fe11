@@ -1,0 +1,33 @@
+[
+  {
+    "id": "managed.hmac_sha256.byte_view",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "file": "b5ac2e4bec9e2aa6cef2493c80a66c35f587b4beda47bcac48b3b2cb5f92ac74.txt",
+    "sha256": "b5ac2e4bec9e2aa6cef2493c80a66c35f587b4beda47bcac48b3b2cb5f92ac74",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Generated HMAC-SHA256 key. Byte view has 32 bytes and dispatches no native call; the returned tag verifies and a single changed bit fails native verification with the same key and message."
+  }
+]

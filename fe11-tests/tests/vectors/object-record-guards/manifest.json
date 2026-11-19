@@ -1,0 +1,138 @@
+[
+  {
+    "id": "boundary.ObjectObservationRejection::ForeignOrStaleObject@Session::encrypt_oaep",
+    "file": "98f059308e647d8fe178114f3f6796e3408bb08ba05c25dc01b25fb7426810ee.txt",
+    "sha256": "98f059308e647d8fe178114f3f6796e3408bb08ba05c25dc01b25fb7426810ee",
+    "worker_mode": "oaep-reference-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ObjectObservation(ForeignOrStaleObject))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_OpenSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.ObjectObservationRejection::ObjectContextOrClass@Session::encrypt_oaep",
+    "file": "25bc6f78b121a07272cc30e64fcac1bafac8b7fe6c72fdf8526caf15a4c6b7b9.txt",
+    "sha256": "25bc6f78b121a07272cc30e64fcac1bafac8b7fe6c72fdf8526caf15a4c6b7b9",
+    "worker_mode": "oaep-reference-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ObjectObservation(ObjectContextOrClass))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.PublicVerificationRejection::EddsaInstanceAndKeyCurveDiffer@Session::verify_eddsa",
+    "file": "3da0d2887e47da070c0ed0b0cf8592953aa41a5feb48f694e4a44465089a8038.txt",
+    "sha256": "3da0d2887e47da070c0ed0b0cf8592953aa41a5feb48f694e4a44465089a8038",
+    "worker_mode": "verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(PublicVerification(EddsaInstanceAndKeyCurveDiffer))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.MechanismExtensionsRejection::GraphSnapshotAbiOrVersion@ParsedRecord::parse",
+    "file": "8deff20cff4eb375343480c890a9ad0df5b6cac476befa1a6998768ac9911fc8.txt",
+    "sha256": "8deff20cff4eb375343480c890a9ad0df5b6cac476befa1a6998768ac9911fc8",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(MechanismExtensions(GraphSnapshotAbiOrVersion))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ]
+  }
+]

@@ -165,6 +165,7 @@ pub(super) fn start_shared_messages(
             .with_validation(validation),
     )?;
     let mut ticket = OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,

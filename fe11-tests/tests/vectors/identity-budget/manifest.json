@@ -1,0 +1,183 @@
+[
+  {
+    "id": "identity-entry.Session::digest_key.foreign",
+    "file": "25043b368f803ec3c52918e23e0f814121deffcc835efe6218d156d7762c5d3f.txt",
+    "sha256": "25043b368f803ec3c52918e23e0f814121deffcc835efe6218d156d7762c5d3f",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "identity-entry.Session::digest_key.consumed",
+    "file": "ee57fcbbd6f1be0db7e103177cd76595aa49d582487968f5f3efd087abfbdf8e.txt",
+    "sha256": "ee57fcbbd6f1be0db7e103177cd76595aa49d582487968f5f3efd087abfbdf8e",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "identity-entry.AdvancedSession::digest_key.foreign",
+    "file": "350e1971d052f03f5c4cbbd115895b72487133084a5097aa5c65817398f3553e.txt",
+    "sha256": "350e1971d052f03f5c4cbbd115895b72487133084a5097aa5c65817398f3553e",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "identity-entry.AdvancedSession::digest_key.consumed",
+    "file": "ba7136523b2b84e5a1e60c6f48440a644080b74dc09eeb066cd73e5e82a1153e.txt",
+    "sha256": "ba7136523b2b84e5a1e60c6f48440a644080b74dc09eeb066cd73e5e82a1153e",
+    "worker_mode": "digest-key-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "parameter-boundary.MechanismsRejection::MechanismRequestBudget",
+    "file": "cd3f2b882fbdf285d398fbb4e4899a4b93626fa89a229dba2e3d297f1694f1ef.txt",
+    "sha256": "cd3f2b882fbdf285d398fbb4e4899a4b93626fa89a229dba2e3d297f1694f1ef",
+    "worker_mode": "mechanism-request-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Mechanisms(MechanismRequestBudget))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_ML_DSA.verify@Session::verify_native@ML-DSA-sigGen-FIPS204.1.1",
+      "fixture_sha256": "fd94ecb46eecc6fa0d8e5010f65523f277cf844aa908269e8da4368ec2f46865",
+      "source": {
+        "id": "ML-DSA-sigGen-FIPS204.1.1",
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+        "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+        "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+        "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      }
+    }
+  }
+]

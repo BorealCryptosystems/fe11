@@ -1,0 +1,3 @@
+session
+transitive
+provide_extension_digest_output_capacity

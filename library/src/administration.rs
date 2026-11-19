@@ -10,6 +10,34 @@ use std::sync::{atomic::Ordering, Arc};
 
 mod discovery_admission;
 
+/// Retire observations if dispatch may have replaced the token, including unwind.
+/// The token writer outlives this guard; retirement never reacquires it.
+struct InitializationRetirement<'a> {
+    state: &'a State,
+    slot: CK_SLOT_ID,
+    armed: bool,
+}
+impl InitializationRetirement<'_> {
+    fn retire(&mut self) -> Result<()> {
+        let retired = self.state.retire_slot(self.slot);
+        // Revocation is still attempted after a retirement failure.
+        let revoked = crate::managed::revoke_token(self.state, self.slot);
+        self.armed = false;
+        let result = retired.and(revoked);
+        if result.is_err() {
+            self.state.native.mark_uncertain();
+        }
+        result
+    }
+}
+impl Drop for InitializationRetirement<'_> {
+    fn drop(&mut self) {
+        if self.armed {
+            let _ = self.retire();
+        }
+    }
+}
+
 /// Opaque observed administrative target, tied to one module and token generation.
 /// Holding it does not prevent administration of another token.
 pub struct TokenAdministrationTarget {
@@ -346,8 +374,18 @@ impl Module {
     /// The application must arrange maintenance with no concurrent sessions on
     /// this token, including other processes. PKCS#11 C_InitToken has undefined
     /// consequences when an existing session is not detected by the module.
-    /// Fe11 checks its known sessions; that registry cannot establish the
-    /// interprocess condition. Ordinary token use needs no such maintenance.
+    /// Idle local sessions are submitted to the module's SESSION_EXISTS check;
+    /// unresolved local transitions or retained calls still prevent dispatch.
+    /// Certain SESSION_EXISTS, PIN_INCORRECT, PIN_LOCKED and TOKEN_WRITE_PROTECTED
+    /// refusals preserve this target and its sessions when inputs are unchanged.
+    /// This applies to blank and initialized tokens (PKCS#11 section 5.1.6);
+    /// every reuse revalidates token identity and initialization state.
+    /// PIN counters can still change. Other returns retire this slot's contexts,
+    /// including other clients' sessions, whose native resources may remain open.
+    /// Old handles cannot be closed individually. Explicit module finalization
+    /// requires closing usable sessions across all clients/slots and satisfying
+    /// its native-loan and pending-call conditions. TokenDrain cannot recover an
+    /// earlier generation. Local records do not establish interprocess absence.
     /// Shared clients must invoke this through RuntimeOwner::module.
     pub fn initialize_token(
         &self,
@@ -368,7 +406,9 @@ impl Module {
         self.initialize_observed(target, so_pin.into(), native_label, false, &mut diagnostic)
     }
     /// Destructively reinitialize an explicitly observed initialized token.
-    /// Any native return invalidates the target; reconcile through explicit refresh.
+    /// The refusals documented on initialize_token preserve the target. Other
+    /// native returns retire it; reconcile through explicit refresh, with the
+    /// same cross-client retirement and finalization conditions.
     /// The same cross-process maintenance precondition as initialize_token
     /// applies. Closing this caller's last session alone does not establish it.
     pub fn reinitialize_token(
@@ -392,7 +432,7 @@ impl Module {
     /// Initialize an observed blank token with exactly the supplied 32 label bytes.
     /// No UTF-8 conversion, trimming or implicit padding is performed.
     /// The lifecycle authority and maintenance preconditions of initialize_token
-    /// apply equally to this byte-preserving form.
+    /// and refusal/retirement rules apply equally to this byte-preserving form.
     pub fn initialize_token_bytes(
         &self,
         target: &TokenAdministrationTarget,
@@ -404,7 +444,7 @@ impl Module {
     }
     /// Destructively reinitialize an observed token with an exact native label.
     /// The lifecycle authority and maintenance preconditions of initialize_token
-    /// apply equally to this byte-preserving form.
+    /// and refusal/retirement rules apply equally to this byte-preserving form.
     pub fn reinitialize_token_bytes(
         &self,
         target: &TokenAdministrationTarget,
@@ -494,7 +534,7 @@ impl Module {
         let slot = cap.identity.slot as CK_SLOT_ID;
         let _callback_window = _foreign_callbacks.native_window();
         self.inner.foreign.maintenance_ready(slot as u64)?;
-        if access.session_ledger.has_slot(slot)?
+        if !access.session_ledger.initialization_sessions_ready(slot)?
             || access.session_ledger.has_retention(&cap.identity)?
         {
             return Err(Error::Rejected(
@@ -555,17 +595,19 @@ impl Module {
 
         crate::module::Inner::validate(s)?;
         let (pin_pointer, length) = body.data.pin.arguments()?;
-        // Invalidate before the destructive dispatch; no failed/unwound request
-        // can silently revive the old context or its object authorizations.
-        // A local retirement refusal must not count an unissued C_InitToken.
-        s.retire_slot(slot)?;
-        crate::managed::revoke_token(s, slot)?;
         s.native.record("C_InitToken")?;
+        // Declared after the frame: uncertain dispatch retires observations
+        // before the writer and any retained native inputs can be released.
+        let mut retirement = InitializationRetirement {
+            state: s,
+            slot,
+            armed: true,
+        };
         returned.arm();
         // SAFETY: owned PIN/sentinel and exact 32-byte label remain stable even
-        // on unexpected PENDING. The target gate excludes known Fe11 sessions.
-        // Absence of sessions in other processes is the caller's documented
-        // maintenance precondition, not a fact proved by our local registry.
+        // on unexpected PENDING. The writer excludes concurrent local calls;
+        // an idle session may receive the module's SESSION_EXISTS refusal.
+        // The application coordinates sessions the module cannot detect.
         let rv = returned.observe(
             unsafe { init(slot, pin_pointer, length, body.data.label.as_mut_ptr()) },
             &s.native,
@@ -578,8 +620,19 @@ impl Module {
             &target.snapshot,
             crate::native_return::slot_scope("C_InitToken", rv),
         );
-        let native_result = check(rv, "C_InitToken", true);
-        if certain && (!witnesses.pins[0].unchanged(&body.data.pin) || body.data.label != label) {
+        let input_changed =
+            certain && (!witnesses.pins[0].unchanged(&body.data.pin) || body.data.label != label);
+        if certain && !input_changed && crate::native_return::initialization_preserves_context(rv) {
+            retirement.armed = false;
+            // A PIN refusal may update retry counters without reinitializing.
+            return check(
+                rv,
+                "C_InitToken",
+                rv != CKR_SESSION_EXISTS || s.native.is_uncertain(),
+            );
+        }
+        let retired = retirement.retire();
+        if input_changed {
             returned.quarantine(&s.native);
             return Err(diagnostic.take()?.boundary_failure(
                 rv,
@@ -588,7 +641,8 @@ impl Module {
                 )),
             ));
         }
-        native_result
+        diagnostic.take()?.finish_native(rv, retired)?;
+        check(rv, "C_InitToken", true)
     }
 }
 impl Session {

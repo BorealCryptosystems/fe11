@@ -1,0 +1,62 @@
+[
+  {
+    "id": "width.owner.declarations",
+    "file": "5d01aca4fcbc7ad2b6c79a53f776209fb279cacb8c766a534d36fac99bbaefae.txt",
+    "sha256": "5d01aca4fcbc7ad2b6c79a53f776209fb279cacb8c766a534d36fac99bbaefae",
+    "worker_mode": "foreign-session",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact supported declaration and slot identities. Preparation and metadata reads cause no native dispatch. Native initialization and finalization still observed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "width.owner.prepare-widths",
+    "file": "402f8fe0e64700dd35e43263d34938c6ec1a79efb4712c396d8419c26c579c0b.txt",
+    "sha256": "402f8fe0e64700dd35e43263d34938c6ec1a79efb4712c396d8419c26c579c0b",
+    "worker_mode": "foreign-session",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact supported declaration and slot identities. Preparation and metadata reads cause no native dispatch. Native initialization and finalization still observed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  }
+]

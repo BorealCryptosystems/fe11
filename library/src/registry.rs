@@ -49,12 +49,22 @@ pub(crate) struct ReadPermit {
     activity: Arc<Activity>,
     owner: Option<u64>,
 }
+impl ReadPermit {
+    pub(crate) fn belongs_to(&self, activity: &Arc<Activity>, uid: u64) -> bool {
+        self.owner == Some(uid) && Arc::ptr_eq(&self.activity, activity)
+    }
+}
 pub(crate) struct WritePermit {
     activity: Arc<Activity>,
     was_panicking: bool,
 }
 
 impl PreparedReader {
+    pub(crate) fn init_conflicts_with_session(&self) -> Result<bool> {
+        self.activity
+            .init_conflicts_with_session(self.uid, false, 0)
+    }
+
     pub(crate) fn acquire_once(&self, admission: &crate::ResourceAdmission) -> Result<ReadPermit> {
         admission.try_once(|| self.acquire_ready())
     }
@@ -118,7 +128,7 @@ impl PreparedReader {
         admission: &crate::ResourceAdmission,
         before: impl FnMut() -> Result<()>,
     ) -> Result<()> {
-        self.wait_on(&self.activity.1, admission, before)
+        self.wait_on(&self.activity.1, admission, false, before)
     }
 
     /// Publication must also stop when its enclosing context is withdrawn.
@@ -127,6 +137,25 @@ impl PreparedReader {
     pub(crate) fn wait_available_in_context(
         &self,
         admission: &crate::ResourceAdmission,
+        before: impl FnMut() -> Result<()>,
+    ) -> Result<()> {
+        self.wait_on_context(admission, false, before)
+    }
+
+    /// The search already owns the returned batch. Waiting for its session's
+    /// own writer could prevent the caller from ever releasing that writer.
+    pub(crate) fn wait_for_search_publication(
+        &self,
+        admission: &crate::ResourceAdmission,
+        before: impl FnMut() -> Result<()>,
+    ) -> Result<()> {
+        self.wait_on_context(admission, true, before)
+    }
+
+    fn wait_on_context(
+        &self,
+        admission: &crate::ResourceAdmission,
+        defer_own_writer: bool,
         before: impl FnMut() -> Result<()>,
     ) -> Result<()> {
         let wake = {
@@ -139,13 +168,14 @@ impl PreparedReader {
                     crate::ReferenceRegistryRejection::ActivityContextNotifierAbsent,
                 )))?
         };
-        self.wait_on(&wake, admission, before)
+        self.wait_on(&wake, admission, defer_own_writer, before)
     }
 
     fn wait_on(
         &self,
         wake: &Arc<Wake>,
         admission: &crate::ResourceAdmission,
+        defer_own_writer: bool,
         mut before: impl FnMut() -> Result<()>,
     ) -> Result<()> {
         wake.acquire(admission, || {
@@ -153,6 +183,18 @@ impl PreparedReader {
             let state = self.activity.0.lock().map_err(|_| Error::Poisoned)?;
             if state.poisoned {
                 return Err(Error::Poisoned);
+            }
+            if defer_own_writer
+                && state.writer
+                && (state.owned_writer.is_some_and(|(uid, _)| uid == self.uid)
+                    || state
+                        .owned
+                        .iter()
+                        .any(|owner| owner.uid == self.uid && owner.transferred_writers != 0))
+            {
+                return Err(Error::Busy(crate::BusyReason::OperationOwnership(
+                    crate::OperationOwnershipBusy::AdvancedOperation,
+                )));
             }
             if state.writer {
                 return Ok(Attempt::Occupied(crate::BusyReason::ReferenceRegistry(

@@ -1,0 +1,14 @@
+template
+0|number|2
+1|bool|false
+2|bool|false
+256|number|3
+384|bytes|06082a8648ce3d030107
+385|bytes|044104481e1f2e738ba6ffb58c62cb55995bdd3740fe3d44ce105ae2004910c67d5fc77d714add6bd00488eb160e980edf70c2500e2b16b5b299d964b985909e170eb1
+266|bool|true
+attributes
+CKA_COPYABLE|bool|true
+CKA_DESTROYABLE|bool|true
+CKA_ID|bytes|
+CKA_MODIFIABLE|bool|true
+CKA_SUBJECT|bytes|

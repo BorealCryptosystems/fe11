@@ -1,0 +1,212 @@
+[
+  {
+    "id": "parity.OPENSSL.evpciph_des.txt.11",
+    "file": "b1e74676141c99cb63d241a9217e64329de2f73a09e02875f00c97069f0ac916.txt",
+    "sha256": "b1e74676141c99cb63d241a9217e64329de2f73a09e02875f00c97069f0ac916",
+    "worker_mode": "des-parity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "key_hex": "0000000000000000",
+      "native_function": "C_CreateObject",
+      "codes": [
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "result": "Normative refusal for bad DES parity; do not claim one uniquely mandated CK_RV. Exact input differs from successful odd-parity import only in parity bits. Any CKR_OK is a module deviation; retain unexpected created owner and destroy it explicitly, recording cleanup separately.",
+      "normative_basis": "DES/DES2/DES3 odd-parity MUST return an error plus C_CreateObject return list; nonspecific errors are retained, not proof of no creation",
+      "source_prediction": "Pinned SoftHSM P11Objects import does not validate parity; CKR_OK with created object expected as a deviation"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.11"
+  },
+  {
+    "id": "parity.OPENSSL.evpciph_des.txt.17",
+    "file": "b6b81c16478beed0252dbf598e77a54c9e63796826067ef4143cd4e1915c6ce3.txt",
+    "sha256": "b6b81c16478beed0252dbf598e77a54c9e63796826067ef4143cd4e1915c6ce3",
+    "worker_mode": "des-parity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "key_hex": "ffffffffffffffff",
+      "native_function": "C_CreateObject",
+      "codes": [
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "result": "Normative refusal for bad DES parity; do not claim one uniquely mandated CK_RV. Exact input differs from successful odd-parity import only in parity bits. Any CKR_OK is a module deviation; retain unexpected created owner and destroy it explicitly, recording cleanup separately.",
+      "normative_basis": "DES/DES2/DES3 odd-parity MUST return an error plus C_CreateObject return list; nonspecific errors are retained, not proof of no creation",
+      "source_prediction": "Pinned SoftHSM P11Objects import does not validate parity; CKR_OK with created object expected as a deviation"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.17"
+  },
+  {
+    "id": "parity.OPENSSL.evpciph_des.txt.23",
+    "file": "b56a5f3d4f119778eaa0377f19ff3440f526132605530b3f556f29c5d9b25eba.txt",
+    "sha256": "b56a5f3d4f119778eaa0377f19ff3440f526132605530b3f556f29c5d9b25eba",
+    "worker_mode": "des-parity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "key_hex": "3000000000000000",
+      "native_function": "C_CreateObject",
+      "codes": [
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "result": "Normative refusal for bad DES parity; do not claim one uniquely mandated CK_RV. Exact input differs from successful odd-parity import only in parity bits. Any CKR_OK is a module deviation; retain unexpected created owner and destroy it explicitly, recording cleanup separately.",
+      "normative_basis": "DES/DES2/DES3 odd-parity MUST return an error plus C_CreateObject return list; nonspecific errors are retained, not proof of no creation",
+      "source_prediction": "Pinned SoftHSM P11Objects import does not validate parity; CKR_OK with created object expected as a deviation"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.23"
+  },
+  {
+    "id": "parity.OPENSSL.evpciph_des.txt.29",
+    "file": "798f08c572a989b81d24d6704a5cfb6740ccf9a62caee843f418bc08d3c73c6a.txt",
+    "sha256": "798f08c572a989b81d24d6704a5cfb6740ccf9a62caee843f418bc08d3c73c6a",
+    "worker_mode": "des-parity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "key_hex": "1111111111111111",
+      "native_function": "C_CreateObject",
+      "codes": [
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "result": "Normative refusal for bad DES parity; do not claim one uniquely mandated CK_RV. Exact input differs from successful odd-parity import only in parity bits. Any CKR_OK is a module deviation; retain unexpected created owner and destroy it explicitly, recording cleanup separately.",
+      "normative_basis": "DES/DES2/DES3 odd-parity MUST return an error plus C_CreateObject return list; nonspecific errors are retained, not proof of no creation",
+      "source_prediction": "Pinned SoftHSM P11Objects import does not validate parity; CKR_OK with created object expected as a deviation"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.29"
+  },
+  {
+    "id": "parity.OPENSSL.evpciph_des.txt.41",
+    "file": "798f08c572a989b81d24d6704a5cfb6740ccf9a62caee843f418bc08d3c73c6a.txt",
+    "sha256": "798f08c572a989b81d24d6704a5cfb6740ccf9a62caee843f418bc08d3c73c6a",
+    "worker_mode": "des-parity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "key_hex": "1111111111111111",
+      "native_function": "C_CreateObject",
+      "codes": [
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_TEMPLATE_INCONSISTENT",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ],
+      "result": "Normative refusal for bad DES parity; do not claim one uniquely mandated CK_RV. Exact input differs from successful odd-parity import only in parity bits. Any CKR_OK is a module deviation; retain unexpected created owner and destroy it explicitly, recording cleanup separately.",
+      "normative_basis": "DES/DES2/DES3 odd-parity MUST return an error plus C_CreateObject return list; nonspecific errors are retained, not proof of no creation",
+      "source_prediction": "Pinned SoftHSM P11Objects import does not validate parity; CKR_OK with created object expected as a deviation"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES_ECB.encrypt@Session::encrypt_cipher@OPENSSL.evpciph_des.txt.41"
+  }
+]

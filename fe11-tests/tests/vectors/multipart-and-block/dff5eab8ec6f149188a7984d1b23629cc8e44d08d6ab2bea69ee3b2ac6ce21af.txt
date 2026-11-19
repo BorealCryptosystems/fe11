@@ -1,0 +1,12 @@
+CKM_DES_CBC
+advanced
+decrypt
+8
+0123456789abcdef
+d93de8af2b1216c3
+0001020304050607
+1234567890abcdef
+stream
+exact
+d93de8af2b1216c3
+0001020304050607

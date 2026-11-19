@@ -346,6 +346,7 @@ impl AdvancedSession {
                 .with_validation(validation),
         )?;
         let ticket = OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.session.inner.clone(),
             uid: self.session.uid,
             id,

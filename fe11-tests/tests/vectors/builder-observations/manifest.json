@@ -1,0 +1,60 @@
+[
+  {
+    "id": "state.module.BUILDER.observe",
+    "file": "9f352d2057e596c78df130f29fbad261e07f4ea3331e4bef78cbe42eb7ca3e07.txt",
+    "sha256": "9f352d2057e596c78df130f29fbad261e07f4ea3331e4bef78cbe42eb7ca3e07",
+    "worker_mode": "builder-observation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact table/name/flags; no initialized runtime claim",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::observe_functions",
+    "file": "0f5cbffdb0292610132cac5fe2116249c0a807f1bd304ff143b83121f9966590.txt",
+    "sha256": "0f5cbffdb0292610132cac5fe2116249c0a807f1bd304ff143b83121f9966590",
+    "worker_mode": "builder-observation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Select the actual native table; check presence snapshot against function-table inventory. No C_Initialize, C_Finalize, token discovery or crypto dispatch; image loading is still allowed.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  }
+]

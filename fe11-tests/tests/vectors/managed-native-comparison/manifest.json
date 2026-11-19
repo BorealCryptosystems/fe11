@@ -1,0 +1,97 @@
+[
+  {
+    "id": "attributes.managed-available",
+    "file": "ff152c3ee716468e675b6a1606a5c473967c0b772462d19f80ef18a203fa7051.txt",
+    "sha256": "ff152c3ee716468e675b6a1606a5c473967c0b772462d19f80ef18a203fa7051",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact same native object: CLASS and binary LABEL agree with managed metadata; VALUE bytes or precise Sensitive content agree with individual flat read. Unsupported MODULUS remains Indeterminate under managed BatchOnly and precise Unsupported under flat read. No replacement object or search.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "managed-available"
+  },
+  {
+    "id": "attributes.managed-sensitive",
+    "file": "6da4eca13db4cf09611c4625b348e0ab67568fe3d1f740d79fc3fef2990ae969.txt",
+    "sha256": "6da4eca13db4cf09611c4625b348e0ab67568fe3d1f740d79fc3fef2990ae969",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact same native object: CLASS and binary LABEL agree with managed metadata; VALUE bytes or precise Sensitive content agree with individual flat read. Unsupported MODULUS remains Indeterminate under managed BatchOnly and precise Unsupported under flat read. No replacement object or search.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "managed-sensitive"
+  }
+]

@@ -1,0 +1,1 @@
+Exact AES-GCM tuples and public zero test keys. Expected tags calculated with PyCryptodome3.23.0; empty-AAD tag also matches the published zero-key GCM example. No operational secrets.

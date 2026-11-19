@@ -1,0 +1,353 @@
+[
+  {
+    "id": "accessor.Module::administration_targets",
+    "file": "ddd2474c623f127f6ce5db7c636dbf4a6a3889bb5f8c5277ea2ef85c2861e07a.txt",
+    "sha256": "ddd2474c623f127f6ce5db7c636dbf4a6a3889bb5f8c5277ea2ef85c2861e07a",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Compare the initial blank/initialized disposable token targets with initial_discovery; no refresh or native call by the getter.",
+    "design_oracle": "Compare the initial blank/initialized disposable token targets with initial_discovery; no refresh or native call by the getter.",
+    "action": "targets",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.Module::chacha_nonce_length_encoding",
+    "file": "f81df1ea488e2503086e319f4c2e058df2bb7e699064237b5280907ad733b700.txt",
+    "sha256": "f81df1ea488e2503086e319f4c2e058df2bb7e699064237b5280907ad733b700",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read exactly the builder-selected Bits or Bytes encoding. No nonce or native probing; independent roundtrip for each legal enum.",
+    "design_oracle": "Read exactly the builder-selected Bits or Bytes encoding. No nonce or native probing; independent roundtrip for each legal enum.",
+    "action": "chacha",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.Module::initial_discovery",
+    "file": "243cbee7b17eafa72efd7d1b2fc338240de2f1eab6cacac1449337aa2bccc875.txt",
+    "sha256": "243cbee7b17eafa72efd7d1b2fc338240de2f1eab6cacac1449337aa2bccc875",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Inspect immutable requested discovery scope, observed slots and exact failures from the selected opening recipe; subsequent refresh does not rewrite it.",
+    "design_oracle": "Inspect immutable requested discovery scope, observed slots and exact failures from the selected opening recipe; subsequent refresh does not rewrite it.",
+    "action": "discovery",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.Module::resource_status",
+    "file": "8117228b95063e1fa53b162da42453647490eb5a7cfee4259144f0bc07ca792c.txt",
+    "sha256": "8117228b95063e1fa53b162da42453647490eb5a7cfee4259144f0bc07ca792c",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Observe empty local session reservations; open one RW session, require exact total/RW/open=1 and token identity; close, require exact baseline restoration. Every resource getter has zero native dispatch. No buffer-accounting or provider-allocation claim.",
+    "design_oracle": "Compare idle status and owned temporary buffer lifecycle: charged values stay within ceilings and return to baseline after release. No provider-memory claim.",
+    "action": "resources",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::chacha_nonce_length_encoding",
+    "file": "f81df1ea488e2503086e319f4c2e058df2bb7e699064237b5280907ad733b700.txt",
+    "sha256": "f81df1ea488e2503086e319f4c2e058df2bb7e699064237b5280907ad733b700",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only chacha_nonce_length_encoding. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select the explicit native ChaCha nonce-length encoding. Compatibility encodings retain their documented limits; this never changes nonce size.",
+    "design_oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only chacha_nonce_length_encoding. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select the explicit native ChaCha nonce-length encoding. Compatibility encodings retain their documented limits; this never changes nonce size.",
+    "action": "chacha",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::discovery",
+    "file": "c1298e719cfc0d4473225fc137facf1e66ba2282ebb631c685b055052f2f6d56.txt",
+    "sha256": "c1298e719cfc0d4473225fc137facf1e66ba2282ebb631c685b055052f2f6d56",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only discovery. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Choose all present slots, exact slots, or deferred token discovery.",
+    "design_oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only discovery. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Choose all present slots, exact slots, or deferred token discovery.",
+    "action": "builder_discovery",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::interface",
+    "file": "739e175714f36ceb98e826db01d146a30ad75d0b74c7000d60f4a2716b1eac6e.txt",
+    "sha256": "739e175714f36ceb98e826db01d146a30ad75d0b74c7000d60f4a2716b1eac6e",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only interface. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select provider-default or exact interface behavior before opening.",
+    "design_oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only interface. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select provider-default or exact interface behavior before opening.",
+    "action": "builder_interface",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::object_limits",
+    "file": "e2b383459a46a948f1304d301af2a0cd940db6a60dcec38b520a52504d3ef55f.txt",
+    "sha256": "e2b383459a46a948f1304d301af2a0cd940db6a60dcec38b520a52504d3ef55f",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only object_limits. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Replace all local object-count choices before opening the module.",
+    "design_oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only object_limits. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Replace all local object-count choices before opening the module.",
+    "action": "builder_objects",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::session_policy",
+    "file": "b5177ca580b1ea40203fdf8138cca59eb79efa3a35d715a2a6aac73c19d0e4a0.txt",
+    "sha256": "b5177ca580b1ea40203fdf8138cca59eb79efa3a35d715a2a6aac73c19d0e4a0",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only session_policy. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select module/token ceilings and whether to prefilter on announcements. These never reserve capacity in other processes.",
+    "design_oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only session_policy. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select module/token ceilings and whether to prefilter on announcements. These never reserve capacity in other processes.",
+    "action": "builder_sessions",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.TokenContext::capabilities",
+    "file": "4df8f6dc32ddd53d6b80a9d4629e4dd2960dbfc4a2f8d1d17360ea59318140b6.txt",
+    "sha256": "4df8f6dc32ddd53d6b80a9d4629e4dd2960dbfc4a2f8d1d17360ea59318140b6",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Compare all public fields, mechanism observations and discovery timestamp of the initialized token context against its initial discovery entry; no native getter dispatch. Blank-token NotRequested catalogue is covered by administration_targets, because Module::select refuses uninitialized targets.",
+    "design_oracle": "Read exact requested mechanism observations, including NotRequested; no new native probe and no inferred operation success.",
+    "action": "capabilities",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "accessor.TokenContext::effective_session_limits",
+    "file": "0bb8396a195d3e8536b3a8964da25ac94adb1a63cad5de9ef6de4d9f4bd0da33.txt",
+    "sha256": "0bb8396a195d3e8536b3a8964da25ac94adb1a63cad5de9ef6de4d9f4bd0da33",
+    "worker_mode": "module-accessor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Compare computed limits with caller SessionPolicy and observed native announcement; handle CK_EFFECTIVELY_INFINITE and CK_UNAVAILABLE_INFORMATION as their defined distinct cases.",
+    "design_oracle": "Compare computed limits with caller SessionPolicy and observed native announcement; handle CK_EFFECTIVELY_INFINITE and CK_UNAVAILABLE_INFORMATION as their defined distinct cases.",
+    "action": "limits",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  }
+]

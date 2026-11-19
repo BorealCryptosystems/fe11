@@ -1,0 +1,4 @@
+RW_SO
+create_public_token
+RW_SO
+CKR_OK

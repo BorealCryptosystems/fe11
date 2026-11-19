@@ -1,0 +1,4 @@
+RW_PUBLIC
+login_named_ascii
+RW_USER
+CKR_OK

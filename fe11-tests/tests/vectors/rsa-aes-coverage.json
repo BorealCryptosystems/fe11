@@ -1,0 +1,51 @@
+{
+  "mechanism": "CKM_RSA_AES_KEY_WRAP",
+  "asymmetric_key_cases": [
+    {
+      "id": "rsa-aes.unwrap.rsa-private.128",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    },
+    {
+      "id": "rsa-aes.unwrap.rsa-private.192",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    },
+    {
+      "id": "rsa-aes.unwrap.rsa-private.256",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    },
+    {
+      "id": "rsa-aes.wrap.rsa-private.128",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    },
+    {
+      "id": "rsa-aes.wrap.rsa-private.192",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    },
+    {
+      "id": "rsa-aes.wrap.rsa-private.256",
+      "manifest": "vectors/rsa-aes-private-unwrap/manifest.json"
+    }
+  ],
+  "generic_secret_interoperability_cases": [
+    {
+      "id": "extension.rsa-aes.advanced.nested-empty-label",
+      "manifest": "vectors/extension-layout-complements/manifest.json"
+    },
+    {
+      "id": "extension.rsa-aes.session.nested-empty-label",
+      "manifest": "vectors/extension-layout-complements/manifest.json"
+    },
+    {
+      "id": "negative.CKM_RSA_AES_KEY_WRAP.unwrap.template",
+      "manifest": "vectors/rsa-unwrap-negatives/manifest.json"
+    },
+    {
+      "id": "negative.CKM_RSA_AES_KEY_WRAP.unwrap.usage",
+      "manifest": "vectors/rsa-unwrap-negatives/manifest.json"
+    },
+    {
+      "id": "negative.CKM_RSA_AES_KEY_WRAP.wrap.usage",
+      "manifest": "vectors/rsa-wrap-negatives/manifest.json"
+    }
+  ]
+}

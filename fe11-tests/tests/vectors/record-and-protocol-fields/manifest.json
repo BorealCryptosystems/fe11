@@ -1,0 +1,1848 @@
+[
+  {
+    "id": "record.field.magic",
+    "file": "6eafff29bb009d849e26d811a49c3d6675e1e65c3b2262dedc11fd99b823ace8.txt",
+    "sha256": "6eafff29bb009d849e26d811a49c3d6675e1e65c3b2262dedc11fd99b823ace8",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordVersion) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "magic",
+      "offset": 0,
+      "before": 66,
+      "after": 0
+    }
+  },
+  {
+    "id": "record.field.kind",
+    "file": "728acda8d24e24b885c4cb957682d358ae0197b8ead490211e5e3544186089ed.txt",
+    "sha256": "728acda8d24e24b885c4cb957682d358ae0197b8ead490211e5e3544186089ed",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordKind) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "kind",
+      "offset": 8,
+      "before": 1,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.payload_length",
+    "file": "a15007ed536feef4c811f72d602457c581f410c67928b02fa3ce6e42418954be.txt",
+    "sha256": "a15007ed536feef4c811f72d602457c581f410c67928b02fa3ce6e42418954be",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordPayloadLength) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "payload_length",
+      "offset": 16,
+      "before": 109,
+      "after": 108
+    }
+  },
+  {
+    "id": "record.field.context.session_state",
+    "file": "78c8bc894935fd30749bb6cdf9390f4189ec10c2b6a00d56293061893866d340.txt",
+    "sha256": "78c8bc894935fd30749bb6cdf9390f4189ec10c2b6a00d56293061893866d340",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordSessionState) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "context.session_state",
+      "offset": 162,
+      "before": 0,
+      "after": 5
+    }
+  },
+  {
+    "id": "record.field.descriptor.family",
+    "file": "666ea053e1bbdace699d91d61bfb33b98bc7879ced71c0a231319dfc9b460139.txt",
+    "sha256": "666ea053e1bbdace699d91d61bfb33b98bc7879ced71c0a231319dfc9b460139",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(CheckpointFormatRejection::RecordOperationFamily) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.family",
+      "offset": 163,
+      "before": 1,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.descriptor.family_with_digest_output",
+    "file": "959af8ef2e07ba40186b2fca0e70f790927d9c4cec7e82045ccf29dee3df4c57.txt",
+    "sha256": "959af8ef2e07ba40186b2fca0e70f790927d9c4cec7e82045ccf29dee3df4c57",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(CheckpointFormatRejection::DigestOutputOnAnotherFamily) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.family_with_digest_output",
+      "offset": 163,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.descriptor.phase",
+    "file": "e46513b0e566b972cddd4932248f27cc89f7c5c32695311cbce33e24b997f125.txt",
+    "sha256": "e46513b0e566b972cddd4932248f27cc89f7c5c32695311cbce33e24b997f125",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordPhaseCode) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.phase",
+      "offset": 165,
+      "before": 2,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.descriptor.validation_requested",
+    "file": "a5a1747d85386972f293195f09f59d3a0d1fcdd866c2454cbdadb3bf3dc98891.txt",
+    "sha256": "a5a1747d85386972f293195f09f59d3a0d1fcdd866c2454cbdadb3bf3dc98891",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(CheckpointFormatRejection::RecordValidationRequest) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.validation_requested",
+      "offset": 190,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.descriptor.carried_messages",
+    "file": "5e34f7d6cd8203b85dbf44055e1ca45368c092a9e70a642adf3cb3cc127b2af5.txt",
+    "sha256": "5e34f7d6cd8203b85dbf44055e1ca45368c092a9e70a642adf3cb3cc127b2af5",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(CheckpointFormatRejection::RecordCarriedPrefix) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.carried_messages",
+      "offset": 194,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.descriptor.options",
+    "file": "621252c3c7f2cf1139c122fd53c98bfd7ad1f89e598cb523cd327a9c98291757.txt",
+    "sha256": "621252c3c7f2cf1139c122fd53c98bfd7ad1f89e598cb523cd327a9c98291757",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordCipherOptionsTag) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.options",
+      "offset": 262,
+      "before": 0,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.keys.count",
+    "file": "1dcd6ab69cd29275f11dbe844eacaea6e6c05c86e77c13a6c35203a94d4611fb.txt",
+    "sha256": "1dcd6ab69cd29275f11dbe844eacaea6e6c05c86e77c13a6c35203a94d4611fb",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordCount) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "keys.count",
+      "offset": 266,
+      "before": 0,
+      "after": 3
+    }
+  },
+  {
+    "id": "record.field.messages.kind",
+    "file": "f39f778660d30dedfc2d7e3b71c8e8e048d8cfa8bc552b51d107511350c8eeaf.txt",
+    "sha256": "f39f778660d30dedfc2d7e3b71c8e8e048d8cfa8bc552b51d107511350c8eeaf",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::MessageStreamParent) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "messages.kind",
+      "offset": 267,
+      "before": 0,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.messages.output",
+    "file": "0ff16a3644dee2de461bad3841a3864ead6a12541a693e86f03de5fef4e3e6af.txt",
+    "sha256": "0ff16a3644dee2de461bad3841a3864ead6a12541a693e86f03de5fef4e3e6af",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::MessageOutputContinuation) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "messages.output",
+      "offset": 268,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.messages.count_over",
+    "file": "e37e6d11bf03abd12177464ab711737de20581d5c50f87358ae9c6378c7aaf75.txt",
+    "sha256": "e37e6d11bf03abd12177464ab711737de20581d5c50f87358ae9c6378c7aaf75",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordCount) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "messages.count_over",
+      "offset": 272,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.messages.count_zero",
+    "file": "3c9c3ec73071db09528ff101cc7a4657ea105015e31db57abf7592d800896b09.txt",
+    "sha256": "3c9c3ec73071db09528ff101cc7a4657ea105015e31db57abf7592d800896b09",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageCount) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "messages.count_zero",
+      "offset": 272,
+      "before": 1,
+      "after": 0
+    }
+  },
+  {
+    "id": "record.field.message.route",
+    "file": "dc0fa5e55a34f272273c80ba697ff7cafc0a39bc4a297237be6ab8094248fcb0.txt",
+    "sha256": "dc0fa5e55a34f272273c80ba697ff7cafc0a39bc4a297237be6ab8094248fcb0",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageRoute) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.route",
+      "offset": 273,
+      "before": 1,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.message.parameters.message_init",
+    "file": "e4a1d62465bc9719b2d2f1b717a8e5ed02384497dc69fe2bbd458b972beb4829.txt",
+    "sha256": "e4a1d62465bc9719b2d2f1b717a8e5ed02384497dc69fe2bbd458b972beb4829",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageInitLayout) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.parameters.message_init",
+      "offset": 294,
+      "before": 0,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.message.parameters.signature",
+    "file": "6c383f144d2048a5dd56fee19492020492430ccf72c6faca03689942297cf5e1.txt",
+    "sha256": "6c383f144d2048a5dd56fee19492020492430ccf72c6faca03689942297cf5e1",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::SignatureRecordParameters) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.parameters.signature",
+      "offset": 297,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.parameters.digest_extension",
+    "file": "ed48a9010717632db547828de04552949acb3fc49bbcd27c50ea5b7e43c740ee.txt",
+    "sha256": "ed48a9010717632db547828de04552949acb3fc49bbcd27c50ea5b7e43c740ee",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::DigestExtensionParameters) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.parameters.digest_extension",
+      "offset": 298,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.parameters.cipher_extension",
+    "file": "654902c5e2f0ff5db9a5b4a2031c0d48cdad93dc942a5568db62c7a63eff8cc2.txt",
+    "sha256": "654902c5e2f0ff5db9a5b4a2031c0d48cdad93dc942a5568db62c7a63eff8cc2",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::CipherExtensionParameters) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.parameters.cipher_extension",
+      "offset": 299,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.parameters.digest_output",
+    "file": "a4dc09376911ae8db5e1fd13bca3dc8a66ed0c0eac36b0a9e393667561fa994e.txt",
+    "sha256": "a4dc09376911ae8db5e1fd13bca3dc8a66ed0c0eac36b0a9e393667561fa994e",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::DigestOutputStorage) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.parameters.digest_output",
+      "offset": 300,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.origin",
+    "file": "2ddc98d247bd441a135c9e6571c0291e2f58b52e6a72621dd0218d4816f9fc78.txt",
+    "sha256": "2ddc98d247bd441a135c9e6571c0291e2f58b52e6a72621dd0218d4816f9fc78",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordNonceOrigin) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.origin",
+      "offset": 310,
+      "before": 0,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.message.state",
+    "file": "30c86ef65236efd92c0269f23200a3b73455888f3b8c210d62a34b70201b49fa.txt",
+    "sha256": "30c86ef65236efd92c0269f23200a3b73455888f3b8c210d62a34b70201b49fa",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageState) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.state",
+      "offset": 311,
+      "before": 1,
+      "after": 255
+    }
+  },
+  {
+    "id": "record.field.message.fragment_count",
+    "file": "c6b8554d890469dba5dac2888a4f26d04ee52cde0a7d2f12ee179df6474da7d8.txt",
+    "sha256": "c6b8554d890469dba5dac2888a4f26d04ee52cde0a7d2f12ee179df6474da7d8",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordCount) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.fragment_count",
+      "offset": 315,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.fragment_length",
+    "file": "b4f4f7fd44df4eea6922d44a8762fd733fc55e261b64fbe518f5cf25e3fb0a1c.txt",
+    "sha256": "b4f4f7fd44df4eea6922d44a8762fd733fc55e261b64fbe518f5cf25e3fb0a1c",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordByteCeiling) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.fragment_length",
+      "offset": 316,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.message.next_fragment",
+    "file": "ac9dfb175c2eb3761c9513b7c4ddd41a27c3fcf88e1d42e8a93868e2f3d77e15.txt",
+    "sha256": "ac9dfb175c2eb3761c9513b7c4ddd41a27c3fcf88e1d42e8a93868e2f3d77e15",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordCount) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.next_fragment",
+      "offset": 330,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.produced",
+    "file": "738a853a7459a91f06705facadfc0ea3ac28a624cc19bfeaf9fdcb8d646bef0a.txt",
+    "sha256": "738a853a7459a91f06705facadfc0ea3ac28a624cc19bfeaf9fdcb8d646bef0a",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageProgression) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.produced",
+      "offset": 338,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.message.expected",
+    "file": "b0921d70417b1c642b46d9e5d2007942c04e814f7b2718a148ce7eed0fad3743.txt",
+    "sha256": "b0921d70417b1c642b46d9e5d2007942c04e814f7b2718a148ce7eed0fad3743",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordMessageProgression) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.expected",
+      "offset": 339,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.message.result_length",
+    "file": "58cad1e4b4dbc077dea1dd2f7381e08d1d6411cfd559f16ea1d566926ad61a78.txt",
+    "sha256": "58cad1e4b4dbc077dea1dd2f7381e08d1d6411cfd559f16ea1d566926ad61a78",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordByteCeiling) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.result_length",
+      "offset": 347,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.message.residual_start",
+    "file": "a134d61dc6cda591bb832a663cbb82ef525f5a6b56a22a7d0bb31c314d802f1e.txt",
+    "sha256": "a134d61dc6cda591bb832a663cbb82ef525f5a6b56a22a7d0bb31c314d802f1e",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordResidualRange) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.residual_start",
+      "offset": 363,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.message.residual_length",
+    "file": "955c7e0c69ca49453ee4e1c632c5bcc8c7b112471fa039d20d406cabebd33295.txt",
+    "sha256": "955c7e0c69ca49453ee4e1c632c5bcc8c7b112471fa039d20d406cabebd33295",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(MessageRecordRejection::RecordResidualRange) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.residual_length",
+      "offset": 371,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.validation.present",
+    "file": "bdd014bb5fffa5d138196a535af2462b13a9914cd4fa0ebc903d3a706044b9c1.txt",
+    "sha256": "bdd014bb5fffa5d138196a535af2462b13a9914cd4fa0ebc903d3a706044b9c1",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordValidationMode) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "validation.present",
+      "offset": 372,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.native_state_length.ceiling",
+    "file": "ed2cf63ffac7faadb5de31b45b6ac64e70e17c761d32d8c10fa335ea05d2c51f.txt",
+    "sha256": "ed2cf63ffac7faadb5de31b45b6ac64e70e17c761d32d8c10fa335ea05d2c51f",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordByteCeiling) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "native_state_length.ceiling",
+      "offset": 373,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "record.field.native_state_length.short",
+    "file": "09723ca7d00c172e7f5f125ec356528753df741d8346eb0f15bb24c3d4203b39.txt",
+    "sha256": "09723ca7d00c172e7f5f125ec356528753df741d8346eb0f15bb24c3d4203b39",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordTrailingBytes) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "native_state_length.short",
+      "offset": 380,
+      "before": 1,
+      "after": 0
+    }
+  },
+  {
+    "id": "record.field.native_state_length.long",
+    "file": "a4e5eb2d3887a33e61652430b459042acb882767904937ccf25742297acf3bc3.txt",
+    "sha256": "a4e5eb2d3887a33e61652430b459042acb882767904937ccf25742297acf3bc3",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::TruncatedRecord) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "native_state_length.long",
+      "offset": 380,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.nonce",
+    "file": "a7eed4e699123c4f68690c6dc5d925712bc416b94d49b6dbca4d496278d9a3d6.txt",
+    "sha256": "a7eed4e699123c4f68690c6dc5d925712bc416b94d49b6dbca4d496278d9a3d6",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.nonce",
+      "offset": 274,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.aad",
+    "file": "28f87b775e0f981d94d50552b44b283cd6cd6896f35b688e3f1654b07156a76d.txt",
+    "sha256": "28f87b775e0f981d94d50552b44b283cd6cd6896f35b688e3f1654b07156a76d",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.aad",
+      "offset": 275,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.hash",
+    "file": "b822a361effc98965e914bd4514a43a3ca76369e3e9ec2c8e0117e197fe0fcae.txt",
+    "sha256": "b822a361effc98965e914bd4514a43a3ca76369e3e9ec2c8e0117e197fe0fcae",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.hash",
+      "offset": 280,
+      "before": 1,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.mgf",
+    "file": "9afae50c5b936f5db7a0edbb12e83aed97ccfdc2395f28b2d22965181ceeab54.txt",
+    "sha256": "9afae50c5b936f5db7a0edbb12e83aed97ccfdc2395f28b2d22965181ceeab54",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.mgf",
+      "offset": 289,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.salt",
+    "file": "6e9a156019da223a3b737bd4a03d783a98e3f106ad76d02acd513342a923c454.txt",
+    "sha256": "6e9a156019da223a3b737bd4a03d783a98e3f106ad76d02acd513342a923c454",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.salt",
+      "offset": 290,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.iv_generator",
+    "file": "2d032ff71c0ef73728729c8749c71fe95bd21cbc8905a49532060b5bf971237d.txt",
+    "sha256": "2d032ff71c0ef73728729c8749c71fe95bd21cbc8905a49532060b5bf971237d",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.iv_generator",
+      "offset": 291,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.iv_fixed_bits",
+    "file": "136af2ad0738fdc10abd5c074075fb00644487ed7e867c9e1b87f5ea8ca872b6.txt",
+    "sha256": "136af2ad0738fdc10abd5c074075fb00644487ed7e867c9e1b87f5ea8ca872b6",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.iv_fixed_bits",
+      "offset": 292,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.iv_initial",
+    "file": "bdd60bcc67f102810e8757f53dde709f768c6fbdba4af265e52904c2d621d81a.txt",
+    "sha256": "bdd60bcc67f102810e8757f53dde709f768c6fbdba4af265e52904c2d621d81a",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.iv_initial",
+      "offset": 293,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.counter_bits",
+    "file": "c1d678ff2f7e3fb5d2f00506552286eea5f63f4fdd51ebc0d194a30b6ccc4856.txt",
+    "sha256": "c1d678ff2f7e3fb5d2f00506552286eea5f63f4fdd51ebc0d194a30b6ccc4856",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.counter_bits",
+      "offset": 295,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.digest_oid",
+    "file": "904365712721b935c88435cd6936eaaae8bb68326aa4e08d16e4263ee3cbc091.txt",
+    "sha256": "904365712721b935c88435cd6936eaaae8bb68326aa4e08d16e4263ee3cbc091",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.digest_oid",
+      "offset": 296,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.digest_output.waiting",
+    "file": "d975586efddbf76d11b2f71bfbfc8636e177498b63801d878b3a890e671ebadb.txt",
+    "sha256": "d975586efddbf76d11b2f71bfbfc8636e177498b63801d878b3a890e671ebadb",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.digest_output.waiting",
+      "offset": 309,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "record.field.message.optional.tag_or_signature",
+    "file": "7d057998c74c248b418d4ec7bb147598c21bcf64799d92a5d3010880e366c582.txt",
+    "sha256": "7d057998c74c248b418d4ec7bb147598c21bcf64799d92a5d3010880e366c582",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact Error::Rejected(OperationRecordRejection::RecordOption) with unchanged native counters and retained positive control; structural parser only.",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "message.optional.tag_or_signature",
+      "offset": 355,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-mac-sign",
+    "file": "b602cc981f744bb535fd072eace050c145be07c86c8041a9a9988d04ab1cba24.txt",
+    "sha256": "b602cc981f744bb535fd072eace050c145be07c86c8041a9a9988d04ab1cba24",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-mac-sign",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_SignInit CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-mac-verify",
+    "file": "e93e72f232e64d7566b1aeea6af38953e7d531923f90c3a65ca55aa64ea0a67b.txt",
+    "sha256": "e93e72f232e64d7566b1aeea6af38953e7d531923f90c3a65ca55aa64ea0a67b",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-mac-verify",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_VerifyInit CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-wrap",
+    "file": "26d5852b42c5b0324682d9fb198dbc3d60336a4fc62c1608561dd45d2944c914.txt",
+    "sha256": "26d5852b42c5b0324682d9fb198dbc3d60336a4fc62c1608561dd45d2944c914",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-wrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_WrapKey CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-unwrap",
+    "file": "703f33a212de2a1039ca0ddece5c33c61030ba7510d6797537a10e298dceffcd.txt",
+    "sha256": "703f33a212de2a1039ca0ddece5c33c61030ba7510d6797537a10e298dceffcd",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-unwrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_UnwrapKey CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-mac-sign",
+    "file": "0c81ef4b582f43380ce77ab33f277361b92a1376d92defd1221817ad7daf3f99.txt",
+    "sha256": "0c81ef4b582f43380ce77ab33f277361b92a1376d92defd1221817ad7daf3f99",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-mac-sign",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_SignInit CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-mac-verify",
+    "file": "979f634f6f09f1346783ed73768871cc87168e91fd6f87bb12919d3f24046006.txt",
+    "sha256": "979f634f6f09f1346783ed73768871cc87168e91fd6f87bb12919d3f24046006",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-mac-verify",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_VerifyInit CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-wrap",
+    "file": "f3e21ee55bc776e7355a81b65eb9f4c1a9ba16815e7c4b1e35d2192a223441e9.txt",
+    "sha256": "f3e21ee55bc776e7355a81b65eb9f4c1a9ba16815e7c4b1e35d2192a223441e9",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-wrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_WrapKey CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-unwrap",
+    "file": "24c5af0cf15a178291a7091d6e97c55a2f60b198a89da75c60cc0b448ab67765.txt",
+    "sha256": "24c5af0cf15a178291a7091d6e97c55a2f60b198a89da75c60cc0b448ab67765",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-unwrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact native C_UnwrapKey CKR_MECHANISM_INVALID; no continuation after refused Init, no fabricated output; unexpected created owner retained for cleanup. Mechanism absence only, not valid CT-KIP exchange.",
+    "source": {
+      "normative": "PKCS#11 Current Mechanisms3.0 sections2.54.4,2.54.6,2.54.7",
+      "input": "Public fixed32byte generic secret; explicit usage, hKey forMAC, absent seed, nestedSHA256HMAC; opaque32byte unwrap input is not a claimed valid envelope."
+    }
+  }
+]

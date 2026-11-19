@@ -1,0 +1,112 @@
+[
+  {
+    "id": "negative.CKM_RSA_PKCS.wrap.distinct-private-class",
+    "file": "2d17d63e35235b7627764a1d9b8cf9545354f936eb66984d1100db650a9b9c8f.txt",
+    "sha256": "2d17d63e35235b7627764a1d9b8cf9545354f936eb66984d1100db650a9b9c8f",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": {
+      "producer": "C_WrapKey",
+      "codes": [
+        "CKR_KEY_NOT_WRAPPABLE"
+      ]
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "wrapping_key": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "target": {
+        "upstream": "OpenSSL test/recipes/30-test_evp_data/evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "description": "Published RSA-2048 private test key, distinct from the wrapping key."
+      }
+    },
+    "control": "Read the effective private target class, extractability, trusted-wrapping restriction and wrapping-key permission before C_WrapKey.",
+    "producer": "C_WrapKey",
+    "code": 105
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.wrap.distinct-private-class",
+    "file": "f4214d0def5ad093b35e048dbc04855cc7ebab0eb66951cd15ebcab6eaf5dd15.txt",
+    "sha256": "f4214d0def5ad093b35e048dbc04855cc7ebab0eb66951cd15ebcab6eaf5dd15",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": {
+      "producer": "C_WrapKey",
+      "codes": [
+        "CKR_KEY_NOT_WRAPPABLE"
+      ]
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "wrapping_key": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "target": {
+        "upstream": "OpenSSL test/recipes/30-test_evp_data/evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "description": "Published RSA-2048 private test key, distinct from the wrapping key."
+      }
+    },
+    "control": "Read the effective private target class, extractability, trusted-wrapping restriction and wrapping-key permission before C_WrapKey.",
+    "producer": "C_WrapKey",
+    "code": 105
+  }
+]

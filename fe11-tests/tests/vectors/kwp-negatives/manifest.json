@@ -1,0 +1,141 @@
+[
+  {
+    "id": "negative.CKM_AES_KEY_WRAP_PAD.wrap.usage",
+    "file": "ba49578c352cb6a149f9a3b932e8289c1fb34206d71ef71344d341698448f6c5.txt",
+    "sha256": "ba49578c352cb6a149f9a3b932e8289c1fb34206d71ef71344d341698448f6c5",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6",
+      "example": 1,
+      "attribution": "R. Housley and M. Dworkin; Copyright (c) 2009 IETF Trust and the persons identified as the document authors."
+    },
+    "control": "Exact published RFC5649 ciphertext/plaintext required on native route before changing only permission or removing CLASS. Default IV, no retry."
+  },
+  {
+    "id": "negative.CKM_AES_KEY_WRAP_PAD.unwrap.usage",
+    "file": "0b77505e89308dab2cc4ce1f2ab94cbcb9fb8188af83e6c03a87f2056cd5ae6c.txt",
+    "sha256": "0b77505e89308dab2cc4ce1f2ab94cbcb9fb8188af83e6c03a87f2056cd5ae6c",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6",
+      "example": 1,
+      "attribution": "R. Housley and M. Dworkin; Copyright (c) 2009 IETF Trust and the persons identified as the document authors."
+    },
+    "control": "Exact published RFC5649 ciphertext/plaintext required on native route before changing only permission or removing CLASS. Default IV, no retry."
+  },
+  {
+    "id": "negative.CKM_AES_KEY_WRAP_PAD.unwrap.template",
+    "file": "c2f3be4943f00558683b3f97b47e39a39784a6e6b37992577a9e4772d3686642.txt",
+    "sha256": "c2f3be4943f00558683b3f97b47e39a39784a6e6b37992577a9e4772d3686642",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6",
+      "example": 1,
+      "attribution": "R. Housley and M. Dworkin; Copyright (c) 2009 IETF Trust and the persons identified as the document authors."
+    },
+    "control": "Exact published RFC5649 ciphertext/plaintext required on native route before changing only permission or removing CLASS. Default IV, no retry."
+  }
+]

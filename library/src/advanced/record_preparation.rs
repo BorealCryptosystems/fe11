@@ -40,7 +40,13 @@ pub(super) fn copy_registered<'a>(
     let mut waiter: Option<progress::Waiter<'_>> = None;
     loop {
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleRecoveryTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

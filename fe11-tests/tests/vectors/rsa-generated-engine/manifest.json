@@ -1,0 +1,131 @@
+[
+  {
+    "id": "rsa.generated-engine.valid",
+    "file": "c35aebe553de97fdfdda765990c8bd619b1fff7f3db2a05a30519720fec177a5.txt",
+    "sha256": "c35aebe553de97fdfdda765990c8bd619b1fff7f3db2a05a30519720fec177a5",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "oracle": "Verify engine component ABI verifies exactly the deterministic SHA256 RSA PKCS1 bytes already returned and compared in retained native Session and Advanced signing receipts. Changed message/signature are independent negative controls; no new native signing execution.",
+    "native_producers": [
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+      },
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@AdvancedSession::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69"
+      }
+    ],
+    "expected_verdict": 1,
+    "ancestry_limit": "Software reference engine and SoftHSM may share OpenSSL; deterministic known RSA output additionally has independent Python integer/encoding construction and published hash controls."
+  },
+  {
+    "id": "rsa.generated-engine.changed-message",
+    "file": "b4746a7c41176cfbb4d78aac7fca446c0e8a52d0347541f11f5b6beeb02c1ce2.txt",
+    "sha256": "b4746a7c41176cfbb4d78aac7fca446c0e8a52d0347541f11f5b6beeb02c1ce2",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "oracle": "Verify engine component ABI verifies exactly the deterministic SHA256 RSA PKCS1 bytes already returned and compared in retained native Session and Advanced signing receipts. Changed message/signature are independent negative controls; no new native signing execution.",
+    "native_producers": [
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+      },
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@AdvancedSession::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69"
+      }
+    ],
+    "expected_verdict": 0,
+    "ancestry_limit": "Software reference engine and SoftHSM may share OpenSSL; deterministic known RSA output additionally has independent Python integer/encoding construction and published hash controls."
+  },
+  {
+    "id": "rsa.generated-engine.changed-signature",
+    "file": "dda94509746b9eabdc9061f61632857b783ec05f00ea8727ae91036464072c60.txt",
+    "sha256": "dda94509746b9eabdc9061f61632857b783ec05f00ea8727ae91036464072c60",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "oracle": "Verify engine component ABI verifies exactly the deterministic SHA256 RSA PKCS1 bytes already returned and compared in retained native Session and Advanced signing receipts. Changed message/signature are independent negative controls; no new native signing execution.",
+    "native_producers": [
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+      },
+      {
+        "case": "operation.CKM_SHA256_RSA_PKCS.sign@AdvancedSession::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+        "fixture_sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69"
+      }
+    ],
+    "expected_verdict": 0,
+    "ancestry_limit": "Software reference engine and SoftHSM may share OpenSSL; deterministic known RSA output additionally has independent Python integer/encoding construction and published hash controls."
+  }
+]

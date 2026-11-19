@@ -142,7 +142,18 @@ pub(super) fn inject(
                 crate::OperationOwnershipRejection::ForeignOrConsumedDigestTicket,
             )));
         }
-        held = access.operations.get(session.uid)?;
+        held = access.operations.get_ticket_with(
+            session.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleDigestTicket,
+            ),
+        )?;
+        if matches!(request, Input::Key(..)) {
+            access
+                .operations
+                .check_key_dispatch(&session.entry, Some(ticket.id))?;
+        }
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

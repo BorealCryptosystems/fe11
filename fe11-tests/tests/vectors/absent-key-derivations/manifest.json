@@ -1,0 +1,590 @@
+[
+  {
+    "id": "absence.derivation.CKM_BLAKE2B_160_KEY_DERIVE",
+    "file": "724411302f8a82ec148c13f12a9cfceef30cdb34408d2ef301a362f655f0b75c.txt",
+    "sha256": "724411302f8a82ec148c13f12a9cfceef30cdb34408d2ef301a362f655f0b75c",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-16399",
+    "absent_derivation_selector": "CKM_BLAKE2B_160_KEY_DERIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_BLAKE2B_256_KEY_DERIVE",
+    "file": "bc42721d477899af79aa0dd74c146d56cacc234c76abd6f22b59de3fa503f5a5.txt",
+    "sha256": "bc42721d477899af79aa0dd74c146d56cacc234c76abd6f22b59de3fa503f5a5",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-16404",
+    "absent_derivation_selector": "CKM_BLAKE2B_256_KEY_DERIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_BLAKE2B_384_KEY_DERIVE",
+    "file": "c673a74ac6fb0080e27263b8ec81e7c352ab5ceefc9cc1c12f1f798b887b4651.txt",
+    "sha256": "c673a74ac6fb0080e27263b8ec81e7c352ab5ceefc9cc1c12f1f798b887b4651",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-16409",
+    "absent_derivation_selector": "CKM_BLAKE2B_384_KEY_DERIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_BLAKE2B_512_KEY_DERIVE",
+    "file": "c3f7254325784e5b19751299377e54e1abea2394e42e897970ce15e3348d6894.txt",
+    "sha256": "c3f7254325784e5b19751299377e54e1abea2394e42e897970ce15e3348d6894",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-16414",
+    "absent_derivation_selector": "CKM_BLAKE2B_512_KEY_DERIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_EXTRACT_KEY_FROM_KEY",
+    "file": "734d343d5e1c8b03b12bca3b2326911c90468391e0a7ae54f3789eb01eea3f73.txt",
+    "sha256": "734d343d5e1c8b03b12bca3b2326911c90468391e0a7ae54f3789eb01eea3f73",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "extract-first",
+    "absent_derivation_selector": "CKM_EXTRACT_KEY_FROM_KEY",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_MD2_KEY_DERIVATION",
+    "file": "d434ee25d7ac7845ce4f3f1b79743ea06d3785377c3cc9a8d89ec6db11f12ab0.txt",
+    "sha256": "d434ee25d7ac7845ce4f3f1b79743ea06d3785377c3cc9a8d89ec6db11f12ab0",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-913",
+    "absent_derivation_selector": "CKM_MD2_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_MD5_KEY_DERIVATION",
+    "file": "46fa7d8dd488eab45ccd993e379e7dd771cc9178f0434929d3f9006c706ad202.txt",
+    "sha256": "46fa7d8dd488eab45ccd993e379e7dd771cc9178f0434929d3f9006c706ad202",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-912",
+    "absent_derivation_selector": "CKM_MD5_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA1_KEY_DERIVATION",
+    "file": "6a6d913df969c1134fbfaa6c3a8df369da97109afc2546549d9ce429fe97bbd2.txt",
+    "sha256": "6a6d913df969c1134fbfaa6c3a8df369da97109afc2546549d9ce429fe97bbd2",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-914",
+    "absent_derivation_selector": "CKM_SHA1_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA224_KEY_DERIVATION",
+    "file": "277d3281c479939f8f9485ed5e9919e7eef011f7cb2fc2bda8dac8a6ad8fa8f0.txt",
+    "sha256": "277d3281c479939f8f9485ed5e9919e7eef011f7cb2fc2bda8dac8a6ad8fa8f0",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-918",
+    "absent_derivation_selector": "CKM_SHA224_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA256_KEY_DERIVATION",
+    "file": "88e68167101044c5863d6b9744748f1225a3d6e951151b9313d097143835a791.txt",
+    "sha256": "88e68167101044c5863d6b9744748f1225a3d6e951151b9313d097143835a791",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-915",
+    "absent_derivation_selector": "CKM_SHA256_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA384_KEY_DERIVATION",
+    "file": "997d0d54465da3e958d37b5214db7baf9ee89a796a1f20da3ee30ee7a58196c1.txt",
+    "sha256": "997d0d54465da3e958d37b5214db7baf9ee89a796a1f20da3ee30ee7a58196c1",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-916",
+    "absent_derivation_selector": "CKM_SHA384_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA3_224_KEY_DERIVATION",
+    "file": "3615751ef26ba7b53334f6d55467074248c55d7f414e3acd2e74393c4f4c51bb.txt",
+    "sha256": "3615751ef26ba7b53334f6d55467074248c55d7f414e3acd2e74393c4f4c51bb",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-920",
+    "absent_derivation_selector": "CKM_SHA3_224_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA3_256_KEY_DERIVATION",
+    "file": "b611b1826e86bb01404e147aae03b4c3bdaf4584c7ea93daeb4ee7ca631b62be.txt",
+    "sha256": "b611b1826e86bb01404e147aae03b4c3bdaf4584c7ea93daeb4ee7ca631b62be",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-919",
+    "absent_derivation_selector": "CKM_SHA3_256_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA3_384_KEY_DERIVATION",
+    "file": "db5da63d92da6e055cdcd5f8ca51f140b453f549074fb62226ffedc90e6a36cc.txt",
+    "sha256": "db5da63d92da6e055cdcd5f8ca51f140b453f549074fb62226ffedc90e6a36cc",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-921",
+    "absent_derivation_selector": "CKM_SHA3_384_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA3_512_KEY_DERIVATION",
+    "file": "ed77247e084175b008bba342038f71e0ab37bcbc2cd24984fa0c6d51284593a4.txt",
+    "sha256": "ed77247e084175b008bba342038f71e0ab37bcbc2cd24984fa0c6d51284593a4",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-922",
+    "absent_derivation_selector": "CKM_SHA3_512_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA512_224_KEY_DERIVATION",
+    "file": "6afa6534d9039e7d86caeac9d638ac52bc622276ab6faf8cfc36f88d612b5cc2.txt",
+    "sha256": "6afa6534d9039e7d86caeac9d638ac52bc622276ab6faf8cfc36f88d612b5cc2",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-75",
+    "absent_derivation_selector": "CKM_SHA512_224_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA512_256_KEY_DERIVATION",
+    "file": "5bc0805fd49a715a43562c40340fea49fccdb6c5286ff71452c8c7558826fa27.txt",
+    "sha256": "5bc0805fd49a715a43562c40340fea49fccdb6c5286ff71452c8c7558826fa27",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-79",
+    "absent_derivation_selector": "CKM_SHA512_256_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHA512_KEY_DERIVATION",
+    "file": "dbe4ce707bc0429cdf6513641a26b5727aa38a4fb613875619d3df61375a181e.txt",
+    "sha256": "dbe4ce707bc0429cdf6513641a26b5727aa38a4fb613875619d3df61375a181e",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-917",
+    "absent_derivation_selector": "CKM_SHA512_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHAKE_128_KEY_DERIVATION",
+    "file": "8998ce03d86d64be25308de686c3ae14e748ecb2a36da5b4200861b038002372.txt",
+    "sha256": "8998ce03d86d64be25308de686c3ae14e748ecb2a36da5b4200861b038002372",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-923",
+    "absent_derivation_selector": "CKM_SHAKE_128_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_SHAKE_256_KEY_DERIVATION",
+    "file": "fee40486f9cac997691d9634e0841475bc92bf0d73c1602b8ceb903894a549f3.txt",
+    "sha256": "fee40486f9cac997691d9634e0841475bc92bf0d73c1602b8ceb903894a549f3",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "hash-924",
+    "absent_derivation_selector": "CKM_SHAKE_256_KEY_DERIVATION",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  },
+  {
+    "id": "absence.derivation.CKM_XOR_BASE_AND_DATA",
+    "file": "8b33386790a05be72e102eb9ea8430272bdb97d989399149eae4ed668fdc55dc.txt",
+    "sha256": "8b33386790a05be72e102eb9ea8430272bdb97d989399149eae4ed668fdc55dc",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "xor-block",
+    "absent_derivation_selector": "CKM_XOR_BASE_AND_DATA",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "A real 32-byte generic secret with DERIVE set and a 16-byte generic-secret output template reach C_DeriveKey. Capture CKR_MECHANISM_INVALID with the actual effect flag. Destroy any unexpected returned objects."
+  }
+]

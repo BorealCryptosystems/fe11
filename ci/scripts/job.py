@@ -16,13 +16,11 @@ if sys.version_info < (3, 11):
 
 from common import Job, diagnostic, digest, extract, save
 import documentation
+import public_contracts
 import native
 import rust_toolchain
-import soft_hsm
 
 SYS_SHA = "957bfd2d5312f1669aaeccef199b5c52943dd516e5420ca262218d3e2afdd664"
-SCENARIOS = ("discovery", "authentication", "invalid_pin", "digest_single", "digest_multipart",
-             "rsa_sign_verify", "invalid_signature", "aes_gcm", "invalid_gcm_tag", "object_search")
 
 
 def identity(job):
@@ -67,49 +65,12 @@ def build(job):
     native.inspect(job)
     standalone_sys(job)
     documentation.check(job)
-
-
-def softhsm(job):
-    soft_hsm.build(job)
-    run_suite(job)
-
-
-def run_suite(job):
-    """Execute and validate all ten scenarios against the prepared module."""
-    tokens = job.root / "tokens"
-    tokens.mkdir(mode=0o700)
-    job.env["FE11_CI_ROOT"] = str(tokens)
-    seen, lines = [], []
-    try:
-        job.cargo("public-softhsm", "test", "--locked", "--release", "-p", "fe11-ci-softhsm",
-                  "--test", "integration", inherit=True)
-    finally:
-        # Never copy child paths, logs or arbitrary fields into a public artifact.
-        result = tokens / "results.tsv"
-        if result.is_file():
-            with result.open("rb") as stream:
-                raw = stream.read(4097)
-            if len(raw) > 4096:
-                raise ValueError("result size limit")
-            lines = raw.decode("ascii").splitlines()
-            if not lines or lines[0] != "scenario\tstatus\tcause\tnative_code\tcleanup\tcleanup_native_code\tchild_exit":
-                raise ValueError("result header")
-            seen = []
-            pattern = r"[a-z_]+\t(PASS|FAIL)\t(none|native_error|local_error|assertion|setup|prerequisite|panic)\t(-|0x[0-9a-f]{1,16})\t(PASS|FAIL)\t(-|0x[0-9a-f]{1,16})\t(PASS|FAIL)"
-            for line in lines[1:]:
-                if not re.fullmatch(pattern, line) or line.split("\t")[0] not in SCENARIOS:
-                    raise ValueError("invalid result row")
-                seen.append(line.split("\t")[0])
-            if len(seen) != len(set(seen)):
-                raise ValueError("duplicate result")
-            (job.reports / "results.tsv").write_bytes(raw)
-    if seen != list(SCENARIOS) or any(line.split("\t")[1:] != ["PASS", "none", "-", "PASS", "-", "PASS"] for line in lines[1:]):
-        raise ValueError("suite incomplete or failed")
+    public_contracts.validate(job)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("build", "softhsm"))
+    parser.add_argument("mode", choices=("build",))
     parser.add_argument("--rust", choices=("1.81.0", "1.100.0"), required=True)
     parser.add_argument("--root", type=Path, required=True)
     args = parser.parse_args()
@@ -122,7 +83,7 @@ def main():
         identity(job)
         native.msvc(job)
         rust_toolchain.install(job)
-        (build if args.mode == "build" else softhsm)(job)
+        build(job)
         status = "PASS"
         return 0
     except (Exception, KeyboardInterrupt) as error:

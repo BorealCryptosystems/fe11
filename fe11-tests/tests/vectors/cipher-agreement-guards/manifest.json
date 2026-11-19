@@ -1,0 +1,162 @@
+[
+  {
+    "id": "boundary.CombinedOperationsRejection::DualContextCeiling@AdvancedSession::decrypt_digest_with_hash",
+    "file": "780b7e002a8840a385e76577861cae603d869b03406a5fd997cd43127bf1de91.txt",
+    "sha256": "780b7e002a8840a385e76577861cae603d869b03406a5fd997cd43127bf1de91",
+    "worker_mode": "aead-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CombinedOperations(DualContextCeiling))",
+    "parameters": {
+      "cipher": "Gcm IV00x12,AADempty,tag128",
+      "parts_hex": [
+        "00000000000000000000000000000000"
+      ],
+      "maximum_parts": 1,
+      "maximum_total_bytes": 16
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "transitive-input.Session::begin_extension_cipher_stream.MultipartCipherDeclarationRequired",
+    "file": "69ae3c85402a9f08b7d55593e13f3f8bd4b96c8aefa2331c0a9b2ffe81ff5996.txt",
+    "sha256": "69ae3c85402a9f08b7d55593e13f3f8bd4b96c8aefa2331c0a9b2ffe81ff5996",
+    "worker_mode": "aead-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CipherContinuation(MultipartCipherDeclarationRequired))",
+    "parameters": {
+      "operation": "ExtensionOperation::Encrypt",
+      "request": "no parameters; graphNone",
+      "output": "CipherOutputPlan::Buffer{capacity:16}"
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "boundary.KeyDerivationRejection::AgreementCurveMismatch@Session::derive_ecdh",
+    "file": "5e4a63abb4cae7b590b9edfb2bb14458d4851ec8258a3c15c232d442ab5adf29.txt",
+    "sha256": "5e4a63abb4cae7b590b9edfb2bb14458d4851ec8258a3c15c232d442ab5adf29",
+    "worker_mode": "agreement-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyDerivation(AgreementCurveMismatch))",
+    "parameters": {
+      "peer_curve": "P384",
+      "key_curve": "P256",
+      "kdf": "Null",
+      "target": "generic secret32"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "source_url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_test.json",
+      "source_sha256": "25a9c41573dbea97c5b4be2dd00369fa68dc37ac8f41807d8e16226d188ec6a7",
+      "group": 0,
+      "tcId": 1,
+      "field": "public",
+      "fixture_sha256": "6a1d1150d4289b06f5cdcdeab662458a43da881d16fc57349203884fa809087f",
+      "notice": "Wycheproof Apache-2.0; public numerical data only, no private scalar or implementation copied."
+    }
+  },
+  {
+    "id": "boundary.KeyDerivationRejection::MontgomeryPublicCoordinateWidth@MontgomeryPublicKey::from_native",
+    "file": "f2db3a423c0c719d67e56b06e1b5f0ba7985422414e756e653a54eb777a14c3b.txt",
+    "sha256": "f2db3a423c0c719d67e56b06e1b5f0ba7985422414e756e653a54eb777a14c3b",
+    "worker_mode": "agreement-input-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyDerivation(MontgomeryPublicCoordinateWidth))",
+    "parameters": {
+      "bytes_hex": "00000000000000000000000000000000000000000000000000000000000000"
+    },
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession"
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+typed_generate_symmetric_key
+RETIRED
+capture

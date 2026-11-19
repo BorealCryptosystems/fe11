@@ -1,0 +1,301 @@
+[
+  {
+    "id": "boundary.NativeMacRejection::SinglePartMacRequiresOneInput@Session::verify_signature_native_mac",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "single-part-guard-2",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeMac(SinglePartMacRequiresOneInput))",
+    "producer": "Real HMACSHA256 NativeObjectRef withVERIFYtrue; single route, valid SHA256HMAC parameters.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ],
+      "signature_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeMacRejection::SinglePartMacRequiresOneInput@AdvancedSession::verify_signature_native_mac",
+    "file": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69.txt",
+    "sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69",
+    "worker_mode": "single-part-guard-2",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeMac(SinglePartMacRequiresOneInput))",
+    "producer": "Real HMACSHA256 NativeObjectRef withVERIFYtrue; single route, valid SHA256HMAC parameters.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ],
+      "signature_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeProtocolsRejection::SingleCmsCallRequiresOneInput@Session::sign_native_cms",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "single-part-guard-3",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeProtocols(SingleCmsCallRequiresOneInput))",
+    "producer": "Real signing/verification native RSA key and structurally valid CMS mechanism input.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ]
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeProtocolsRejection::SingleCmsCallRequiresOneInput@Session::verify_native_cms",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "single-part-guard-4",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeProtocols(SingleCmsCallRequiresOneInput))",
+    "producer": "Real signing/verification native RSA key and structurally valid CMS mechanism input.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ]
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeSignatureRejection::SinglePartSignatureRequiresOneInput@Session::sign_native",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "single-part-guard-0",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeSignature(SinglePartSignatureRequiresOneInput))",
+    "producer": "Real RSA2048 private NativeObjectRef, CKM_SHA256_RSA_PKCS Single route.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ],
+      "output_capacity": 256
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeSignatureRejection::SinglePartVerificationRequiresOneInput@Session::verify_signature_native",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "single-part-guard-1",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeSignature(SinglePartVerificationRequiresOneInput))",
+    "producer": "Real RSA2048 public NativeObjectRef, CKM_SHA256_RSA_PKCS Single route.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ],
+      "signature_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.NativeSignatureRejection::SinglePartVerificationRequiresOneInput@AdvancedSession::verify_signature_native",
+    "file": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69.txt",
+    "sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69",
+    "worker_mode": "single-part-guard-1",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(NativeSignature(SinglePartVerificationRequiresOneInput))",
+    "producer": "Real RSA2048 public NativeObjectRef, CKM_SHA256_RSA_PKCS Single route.",
+    "input_parameters": {
+      "parts_hex": [
+        "61",
+        "6263"
+      ],
+      "signature_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "source_case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+    "source_fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

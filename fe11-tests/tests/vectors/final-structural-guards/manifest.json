@@ -1,0 +1,89 @@
+[
+  {
+    "id": "boundary.ModuleLifecycleUnsupported::FileLoadingOptionsForProcessSource@ModuleBuilder::open",
+    "file": "6040f7bc123bbeebe9e8cbf291c5ef4822a8aea4104123d30437a177b5af140b.txt",
+    "sha256": "6040f7bc123bbeebe9e8cbf291c5ef4822a8aea4104123d30437a177b5af140b",
+    "worker_mode": "module-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Unsupported(ModuleLifecycle(FileLoadingOptionsForProcessSource))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.SymmetricParametersRejection::AeadRequiresAnAdmittedSecretKey@Session::encrypt_stream_aead",
+    "file": "ccad5be86b0b175299d2e5c551ef990ecfbfd652adedc735d482df10046b8abf.txt",
+    "sha256": "ccad5be86b0b175299d2e5c551ef990ecfbfd652adedc735d482df10046b8abf",
+    "worker_mode": "admission-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SymmetricParameters(AeadRequiresAnAdmittedSecretKey))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.KeyEncapsulationRejection::MlKemRequiresSelected32Interface@Session::admit_imported_kem_decapsulation_key",
+    "file": "fed498fe3f7728078cbae30191c2ac05ac0a81e206004b11ff46967e26f9653b.txt",
+    "sha256": "fed498fe3f7728078cbae30191c2ac05ac0a81e206004b11ff46967e26f9653b",
+    "worker_mode": "admission-family",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(KeyEncapsulation(MlKemRequiresSelected32Interface))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

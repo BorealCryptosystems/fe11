@@ -1,0 +1,3 @@
+typed_generate_aes_key
+OBSERVER_DROPPED
+close

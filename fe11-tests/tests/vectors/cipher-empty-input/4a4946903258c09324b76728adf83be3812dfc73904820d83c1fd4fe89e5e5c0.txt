@@ -1,0 +1,8 @@
+CKM_DES_ECB
+session
+decrypt
+0
+0101010101010101
+
+
+

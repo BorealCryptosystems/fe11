@@ -1,0 +1,870 @@
+[
+  {
+    "id": "protocol.absent.session.kip-null",
+    "file": "8645715de01a5cb85d5d5c136082f0792ca942113f3120be890a117be0c87721.txt",
+    "sha256": "8645715de01a5cb85d5d5c136082f0792ca942113f3120be890a117be0c87721",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-null",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-empty",
+    "file": "15adbf15604d732bed7b3b2ebe65389acab6dd18401120f13c4f2489627f03a5.txt",
+    "sha256": "15adbf15604d732bed7b3b2ebe65389acab6dd18401120f13c4f2489627f03a5",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-empty",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.kip-key",
+    "file": "6f64e267ddae056940f47d3bf29aede9804a2fd4527a321030496ce316863ff2.txt",
+    "sha256": "6f64e267ddae056940f47d3bf29aede9804a2fd4527a321030496ce316863ff2",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.counter",
+    "file": "9b57c10f823129d7d58e357e78da4bbcdf11f33b95fc49d7aaf288a0e1f74c86.txt",
+    "sha256": "9b57c10f823129d7d58e357e78da4bbcdf11f33b95fc49d7aaf288a0e1f74c86",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "counter",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.feedback",
+    "file": "909e9e49a6124ff908a6bab1a54a56f4a15a4a939525371c35ca4cd365235f08.txt",
+    "sha256": "909e9e49a6124ff908a6bab1a54a56f4a15a4a939525371c35ca4cd365235f08",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "feedback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.pipeline",
+    "file": "fef9e5521526da4db30ac1b8c70d7449ec968a4fc2017d8425a26b5b79e473b4.txt",
+    "sha256": "fef9e5521526da4db30ac1b8c70d7449ec968a4fc2017d8425a26b5b79e473b4",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "pipeline",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.tls-prf",
+    "file": "5278c912eedd2ce7b15d8cc2be282a14f63c00414755c4ab3e170e1df52ca138.txt",
+    "sha256": "5278c912eedd2ce7b15d8cc2be282a14f63c00414755c4ab3e170e1df52ca138",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls-prf",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.wtls-prf",
+    "file": "7b5e6facdb60b93c9b754727c8a192528aa33472f02cd0bf6dd26fe32652cdba.txt",
+    "sha256": "7b5e6facdb60b93c9b754727c8a192528aa33472f02cd0bf6dd26fe32652cdba",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-prf",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.ssl3-material",
+    "file": "32707ebf874948d2620ce0e8cae162a6af1d9b006d1aca533518af41affc8b32.txt",
+    "sha256": "32707ebf874948d2620ce0e8cae162a6af1d9b006d1aca533518af41affc8b32",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "ssl3-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.tls-material",
+    "file": "1296b4cc0b4eb01994fa1f9206435cb3980dfb6ab0d03fca985e4dd217d06a69.txt",
+    "sha256": "1296b4cc0b4eb01994fa1f9206435cb3980dfb6ab0d03fca985e4dd217d06a69",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.tls12-material",
+    "file": "e35ea174d691b07ac835a36aca3ecd7040d4d384829ecc9678fa6f459538f942.txt",
+    "sha256": "e35ea174d691b07ac835a36aca3ecd7040d4d384829ecc9678fa6f459538f942",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls12-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.tls12-safe",
+    "file": "5405bfa1f68b6e4bce7a5d4b7143c7ba603ff4cf5ae9c893c93631a5de82a0bb.txt",
+    "sha256": "5405bfa1f68b6e4bce7a5d4b7143c7ba603ff4cf5ae9c893c93631a5de82a0bb",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls12-safe",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.wtls-server",
+    "file": "b8d9a25356e80df86a49bcc62d5b02f75c855dc1bd26a8b18d46ec7f12114de8.txt",
+    "sha256": "b8d9a25356e80df86a49bcc62d5b02f75c855dc1bd26a8b18d46ec7f12114de8",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-server",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.session.wtls-client",
+    "file": "61fa7f28c02ee4dc4f4710594aa0a03541f394c362075042f1d8cddaea64c7d7.txt",
+    "sha256": "61fa7f28c02ee4dc4f4710594aa0a03541f394c362075042f1d8cddaea64c7d7",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-client",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-null",
+    "file": "dceebf9ab1e192fef647b83a497c8c10a0e1e39259ba5be9749185d4284882c1.txt",
+    "sha256": "dceebf9ab1e192fef647b83a497c8c10a0e1e39259ba5be9749185d4284882c1",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-null",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-empty",
+    "file": "e2df8484b1e95be637d80ff265a3a161e178091bb85e61e2b8d9cd400bb38adb.txt",
+    "sha256": "e2df8484b1e95be637d80ff265a3a161e178091bb85e61e2b8d9cd400bb38adb",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-empty",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.kip-key",
+    "file": "7558541cf589ba3f4761c6a66198d71880706b6c57261e51c2e7cba65a2f7dc1.txt",
+    "sha256": "7558541cf589ba3f4761c6a66198d71880706b6c57261e51c2e7cba65a2f7dc1",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "kip-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.counter",
+    "file": "45c8289f0db6f4c054c8ee6a024cf0aff6a8d32e9bbc9719f3ceb87755e4c386.txt",
+    "sha256": "45c8289f0db6f4c054c8ee6a024cf0aff6a8d32e9bbc9719f3ceb87755e4c386",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "counter",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.feedback",
+    "file": "ac3794711c7e543d973b1119bf23b3f0207324953d79692ffd1ff0457d24970e.txt",
+    "sha256": "ac3794711c7e543d973b1119bf23b3f0207324953d79692ffd1ff0457d24970e",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "feedback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.pipeline",
+    "file": "92391b74e0a48a15d071214a553a4eef3850805ac955048dbe071764df164e2d.txt",
+    "sha256": "92391b74e0a48a15d071214a553a4eef3850805ac955048dbe071764df164e2d",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "pipeline",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.tls-prf",
+    "file": "fe954f66e1f4bae441a356f82d68ac0e7a122e6207d9837a6d099cab7f33d4c7.txt",
+    "sha256": "fe954f66e1f4bae441a356f82d68ac0e7a122e6207d9837a6d099cab7f33d4c7",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls-prf",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.wtls-prf",
+    "file": "09bff0dbfb31f744cc5cb65fea45f7990eadcc22a57b575a02835fa7de5bcc7f.txt",
+    "sha256": "09bff0dbfb31f744cc5cb65fea45f7990eadcc22a57b575a02835fa7de5bcc7f",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-prf",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.ssl3-material",
+    "file": "e3425a02c3f179a03e6d6a03218a87cc78c3ae3ed7bcb3d50ada6d298d987c85.txt",
+    "sha256": "e3425a02c3f179a03e6d6a03218a87cc78c3ae3ed7bcb3d50ada6d298d987c85",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "ssl3-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.tls-material",
+    "file": "1ea6a7c7a993e318c3bb6e78fb0252e4de3536dff4e02f94321f7b04f6fa2e6a.txt",
+    "sha256": "1ea6a7c7a993e318c3bb6e78fb0252e4de3536dff4e02f94321f7b04f6fa2e6a",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.tls12-material",
+    "file": "9c5e2e6cd3a6840479e35b1fc23b584edab7ddb93d5c327dd3cdbec6fefc6e93.txt",
+    "sha256": "9c5e2e6cd3a6840479e35b1fc23b584edab7ddb93d5c327dd3cdbec6fefc6e93",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls12-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.tls12-safe",
+    "file": "5dbe63756f869d7bef34771ee9ba2b2ef511d573a569d70e2e5dd49c63776896.txt",
+    "sha256": "5dbe63756f869d7bef34771ee9ba2b2ef511d573a569d70e2e5dd49c63776896",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "tls12-safe",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.wtls-server",
+    "file": "1d3cd974db4afd1f3e1217007143163cd53d6deb0b4644363b0e64462b9aed27.txt",
+    "sha256": "1d3cd974db4afd1f3e1217007143163cd53d6deb0b4644363b0e64462b9aed27",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-server",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  },
+  {
+    "id": "protocol.absent.advanced.wtls-client",
+    "file": "ac816afe73386d6845c71cdc5e0274ffb31308564e275557e981a186824c5e14.txt",
+    "sha256": "ac816afe73386d6845c71cdc5e0274ffb31308564e275557e981a186824c5e14",
+    "worker_mode": "builder-runtime-choices",
+    "protocol_absence": "wtls-client",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Frozen catalogue absence and exact C_DeriveKey CKR_MECHANISM_INVALID with real imported generic-secret DERIVE base. KIP/SP800 creation uncertainty=true; byte-output PRF and key-material ordinary refusal=false under function-specific contract. No output or handle fabricated, unexpected created owners retained and destroyed.",
+    "source": {
+      "contract": "NativeKipParameters, Sp800Request, TlsPrfRequest, TlsKeyMaterialRequest; PKCS#11 selected mechanism contracts",
+      "prerequisite": "Real CKK_GENERIC_SECRET session key, DERIVE true,32 bytes or48-byte TLS/WTLS master input; no substituted KEA key"
+    }
+  }
+]

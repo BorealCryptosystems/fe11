@@ -139,7 +139,10 @@ fn publish_retained_completion(
         if session.entry.advanced_progress.retired(ticket.id)? {
             return Ok(None);
         }
-        let held = state.operations.get(ticket.uid)?;
+        if !session.entry.advanced_progress.contains(ticket.id) {
+            return Ok(None);
+        }
+        let held = state.operations.get_ticket(ticket.uid, ticket.id)?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id || !operation._token.identity().matches(&session.entry) {
             return Ok(None);
@@ -162,7 +165,9 @@ fn publish_retained_completion(
         // Retirement is fallible, so perform it before moving any result.
         // The session gate excludes replacement; the exact owner remains
         // anchored until after all guards leave, even if projection fails.
-        retired_owner = state.operations.take_closed(&session.entry)?;
+        retired_owner = state
+            .operations
+            .take_operation(&session.entry, operation._token.identity())?;
         ticket.id = 0;
         publish_completed_result(&mut operation, session, ticket, &mut released)?;
         Ok(released.result.take())
@@ -218,7 +223,7 @@ fn poll_live_operation(
                     crate::AuthenticationRejection::ForeignOrConsumedOperationTicket,
                 )));
             }
-            let held = access.operations.get(ticket.uid)?;
+            let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
             let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -262,7 +267,7 @@ fn poll_live_operation(
                     crate::AuthenticationRejection::ForeignOrConsumedOperationTicket,
                 )));
             }
-            let held = access.operations.get(ticket.uid)?;
+            let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
             let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -313,7 +318,7 @@ fn poll_live_operation(
         let result = result?;
         if !matches!(result, OperationProgress::Ready) {
             if matches!(result, OperationProgress::Pending) && diagnostics.failure.is_some() {
-                let held = access.operations.get(ticket.uid)?;
+                let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
                 let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
                 if operation.id == ticket.id {
                     if let OperationBody::Admission(body) = &mut operation.body {
@@ -325,7 +330,7 @@ fn poll_live_operation(
             }
             return Ok(result);
         }
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -438,7 +443,7 @@ fn poll_owned(
             crate::AuthenticationRejection::ForeignOrConsumedOperationTicket,
         )));
     }
-    let held = s.operations.get(ticket.uid)?;
+    let held = s.operations.get_ticket(ticket.uid, ticket.id)?;
     let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
     if operation.id != ticket.id {
         return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -473,8 +478,9 @@ fn poll_owned(
         }
         if operation.active_categories() == 0 && !operation.uncancellable_retained() {
             ticket.id = 0;
+            let lease = operation._token.identity().clone();
             drop(operation);
-            s.operations.release_closed(&session.entry)?;
+            s.operations.release_operation(&session.entry, &lease)?;
         }
         return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
             crate::OperationOwnershipRejection::CancelledOperationCannotContinue,
@@ -554,8 +560,12 @@ fn poll_owned(
         // a local ledger refusal. Failed retirement leaves the registry owner
         // retained; the already-published object references still reach the caller.
         ticket.id = 0;
+        let lease = operation._token.identity().clone();
         drop(operation);
-        return match (result, s.operations.release_closed(&session.entry)) {
+        return match (
+            result,
+            s.operations.release_operation(&session.entry, &lease),
+        ) {
             (Ok(OperationProgress::CreatedObjects(mut outcome)), Err(failure)) => {
                 outcome.observation = Err(match outcome.observation {
                     Ok(_) => failure,
@@ -624,8 +634,9 @@ fn poll_owned(
         }
     };
     ticket.id = 0;
+    let lease = operation._token.identity().clone();
     drop(operation);
-    s.operations.release_closed(&session.entry)?;
+    s.operations.release_operation(&session.entry, &lease)?;
     Ok(released.result.take().expect("completed publication"))
 }
 

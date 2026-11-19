@@ -1,0 +1,12 @@
+{
+  "EDDSA-SigGen-1.0": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+    "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "EDDSA-SigVer-1.0": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+    "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  }
+}

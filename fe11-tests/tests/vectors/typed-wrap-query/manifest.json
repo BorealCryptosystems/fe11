@@ -1,0 +1,51 @@
+[
+  {
+    "id": "wrap.typed.query-capacity-rfc3394",
+    "worker_mode": "authenticated-transport-guard",
+    "standard_wrap": true,
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "RFC3394 section4.1 exact envelope; each explicit capacity0/23/24/25 makes size query then output. Exact native required24/caller capacity on BUFFER_TOO_SMALL, exact ciphertext and profile on success; no implicit resize/retry. Original key owners retained.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc3394",
+      "section": "4.1",
+      "notice": "Published RFC3394 vector data; no reference implementation copied."
+    },
+    "file": "8021587b2047ff4563a4de18857870bd50c73e7127508f724d9dea963ad1ec9b.txt",
+    "sha256": "8021587b2047ff4563a4de18857870bd50c73e7127508f724d9dea963ad1ec9b"
+  }
+]

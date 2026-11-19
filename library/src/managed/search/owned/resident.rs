@@ -30,9 +30,17 @@ pub(crate) struct SearchOwner {
     call: Box<SearchCall>,
     collection: SearchCollection,
     phase: Phase,
-    epoch: u64,
+    authentication: AuthenticationBinding,
     // No strong Inner/SessionEntry link: the session registry owns this value.
     _image: Arc<crate::native::image::LoadedImage>,
+}
+
+enum AuthenticationBinding {
+    /// Typed observations require one unchanged authentication context.
+    Observation(u64),
+    /// Init is prepared in one context; later native calls decide whether the
+    /// search survived an authentication change. This binds no private report.
+    Initialization(u64),
 }
 
 pub(crate) struct Storage {
@@ -150,7 +158,7 @@ impl Storage {
             }),
             collection: SearchCollection::from_credit(plan, collection_credit),
             phase: Phase::Init,
-            epoch,
+            authentication: AuthenticationBinding::Observation(epoch),
             _image: access.native.image.clone(),
         })
     }
@@ -224,7 +232,7 @@ impl NativeStorage {
             }),
             collection: SearchCollection::from_prepaid(plan, prepaid)?,
             phase: Phase::Init,
-            epoch,
+            authentication: AuthenticationBinding::Initialization(epoch),
             _image: image,
         })
     }
@@ -288,11 +296,18 @@ impl SearchOwner {
                 crate::ObjectSearchRejection::SearchAccessOwner,
             )));
         }
-        // Cleanup of an already active Find is also permitted if an unrelated
-        // advanced owner was installed while this inventory waited. This does
-        // not admit a new ordinary operation or replace that advanced owner.
+        // The caller selects admission for Init, Next or Final. Here the
+        // session and authentication checks bind the search to its context.
         session.entry_common(access)?;
-        session.snapshot.check_authentication_unchanged(self.epoch)
+        match self.authentication {
+            AuthenticationBinding::Observation(epoch) => {
+                session.snapshot.check_authentication_unchanged(epoch)
+            }
+            AuthenticationBinding::Initialization(epoch) if matches!(self.phase, Phase::Init) => {
+                session.snapshot.check_authentication_unchanged(epoch)
+            }
+            AuthenticationBinding::Initialization(_) => Ok(()),
+        }
     }
     pub(crate) fn check_functions(access: &SessionAccess<'_>) -> Result<()> {
         if access.native.table.C_FindObjectsInit.is_none() {

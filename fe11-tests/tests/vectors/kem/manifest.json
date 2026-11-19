@@ -1,0 +1,554 @@
+[
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "file": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430.txt",
+    "sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.1.1",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.2.26",
+    "file": "032bd1296580eac10b59d1189b3c5c0018c7aa181c2a3c933c1bf4d1efab0b72.txt",
+    "sha256": "032bd1296580eac10b59d1189b3c5c0018c7aa181c2a3c933c1bf4d1efab0b72",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.2.26",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.3.51",
+    "file": "560cbb79a52886f657cb3ee5e7337826da0d7be908db6394f0599720fc59dc0e.txt",
+    "sha256": "560cbb79a52886f657cb3ee5e7337826da0d7be908db6394f0599720fc59dc0e",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.3.51",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.4.76",
+    "file": "651604c05014aab456522bc693efb8233b5346b18d165ebd1cb1765817beb34c.txt",
+    "sha256": "651604c05014aab456522bc693efb8233b5346b18d165ebd1cb1765817beb34c",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.4.76",
+    "reference_function": "decapsulation",
+    "reason": "modified ciphertext",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.5.86",
+    "file": "c5a3d811ca5422627b738ee0ffaf4a91f65184db6ffae694e3b503694ced2d00.txt",
+    "sha256": "c5a3d811ca5422627b738ee0ffaf4a91f65184db6ffae694e3b503694ced2d00",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.5.86",
+    "reference_function": "decapsulation",
+    "reason": "valid decapsulation",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.6.96",
+    "file": "b95b9d07f87cacdb706c28402c3ddf11639d5760bb9c1347060a9c09e6f49e60.txt",
+    "sha256": "b95b9d07f87cacdb706c28402c3ddf11639d5760bb9c1347060a9c09e6f49e60",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "Session::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.6.96",
+    "reference_function": "decapsulation",
+    "reason": "modified ciphertext",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "file": "6f2d4dd1d095193bededfd46523fad83a3d37c7178124333fc24c87ebd0969e9.txt",
+    "sha256": "6f2d4dd1d095193bededfd46523fad83a3d37c7178124333fc24c87ebd0969e9",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.1.1",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.2.26",
+    "file": "d39309149149f86d210f1d8670267e9ffed5ea761419f75aba11566a91941a8b.txt",
+    "sha256": "d39309149149f86d210f1d8670267e9ffed5ea761419f75aba11566a91941a8b",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.2.26",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.3.51",
+    "file": "6d2ad760746b9173e47a2078f57583fca360e27eb61aceb80ed4529bea868bb8.txt",
+    "sha256": "6d2ad760746b9173e47a2078f57583fca360e27eb61aceb80ed4529bea868bb8",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "DECAPSULATION_KAT_ONLY",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.3.51",
+    "reference_function": "encapsulation",
+    "reason": null,
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.4.76",
+    "file": "221569d20d255dbad959a2dff22611a235fef8b7f7e393e9c110c576c48145b8.txt",
+    "sha256": "221569d20d255dbad959a2dff22611a235fef8b7f7e393e9c110c576c48145b8",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.4.76",
+    "reference_function": "decapsulation",
+    "reason": "modified ciphertext",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.5.86",
+    "file": "fa296aa63cd9bf3bfa0e1df0658817223f02c1804a4a405b93c69bbe7c52b7ab.txt",
+    "sha256": "fa296aa63cd9bf3bfa0e1df0658817223f02c1804a4a405b93c69bbe7c52b7ab",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.5.86",
+    "reference_function": "decapsulation",
+    "reason": "valid decapsulation",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  },
+  {
+    "id": "operation.CKM_ML_KEM.decapsulate@AdvancedSession::decapsulate_native@ML-KEM-encapDecap-FIPS203.6.96",
+    "file": "3ce8d7bf1960a6cc176ec8758d667611cbe766bddfcea27b3aa7353ba5d49482.txt",
+    "sha256": "3ce8d7bf1960a6cc176ec8758d667611cbe766bddfcea27b3aa7353ba5d49482",
+    "worker_mode": "kem-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Decapsulation exact published k including implicit-rejection output",
+        "Encapsulation random result: exact ciphertext length plus independently decapsulated matching secret; never expected fixed ACVP random c"
+      ],
+      "route": "AdvancedSession::decapsulate_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/internalProjection.json",
+      "source_sha256": "a556952ce869bb89c3a3196a701dad89647c193a34c86eafb61a9d710d5b810f",
+      "git_blob_sha1": "73692fe52abe2f937b7884baa46475c77c68a1d3",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "source_case": "ML-KEM-encapDecap-FIPS203.6.96",
+    "reference_function": "decapsulation",
+    "reason": "modified ciphertext",
+    "key_material": "Published NIST ACVP test keys only; never use for operational cryptography"
+  }
+]

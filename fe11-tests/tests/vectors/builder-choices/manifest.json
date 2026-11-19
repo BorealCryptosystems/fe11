@@ -1,0 +1,197 @@
+[
+  {
+    "id": "accessor.ModuleBuilder::crypto_options",
+    "file": "890ace5209865e25cad35bc9387e093feeb1fb28a9ec920ce0e12c85ebd9f701.txt",
+    "sha256": "890ace5209865e25cad35bc9387e093feeb1fb28a9ec920ce0e12c85ebd9f701",
+    "worker_mode": "builder-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only crypto_options. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select crypto ceilings and explicit representation semantics. Hashing origin remains an individual operation choice.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+    "assertions": [
+      "Two explicit successive setter values, final selection observed through real opened module.",
+      "Unrelated object-reference limits retain77/66/55.",
+      "Native SHA256 abc; crypto ceiling3 accepts3 and refuses4 with zero dispatch."
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::windows_file_pinning",
+    "file": "8b911a8716b94442f9ca3dff20584048536e4c2f47b8b5bb9096cbd43c3432d5.txt",
+    "sha256": "8b911a8716b94442f9ca3dff20584048536e4c2f47b8b5bb9096cbd43c3432d5",
+    "worker_mode": "builder-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only windows_file_pinning. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Request Windows file/ancestor pins, with explicit reparse and resource choices. Ordinary loading leaves this control NotRequested. Selecting it on another platform is refused before loading, not silently ignored.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+    "assertions": [
+      "Two explicit successive setter values, final selection observed through real opened module.",
+      "Unrelated object-reference limits retain77/66/55.",
+      "Native SHA256 abc; crypto ceiling3 accepts3 and refuses4 with zero dispatch."
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::windows_image_consistency",
+    "file": "254eddf15d9534e3b20c55469077aa2f24f167aa4b897a36381d3e251e4829c2.txt",
+    "sha256": "254eddf15d9534e3b20c55469077aa2f24f167aa4b897a36381d3e251e4829c2",
+    "worker_mode": "builder-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only windows_image_consistency. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Compare the Windows image and table-selection exports with a pinned file. Requires an explicit file pin and is refused on other platforms. Native initializers run before this optional check; it does not sandbox a DLL.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+    "assertions": [
+      "Two explicit successive setter values, final selection observed through real opened module.",
+      "Unrelated object-reference limits retain77/66/55.",
+      "Native SHA256 abc; crypto ceiling3 accepts3 and refuses4 with zero dispatch."
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::windows_dependency_search",
+    "file": "f8121b52a038a4ebb36784f023ba2cb4f863ebe60e1b87e998a903775ecfbaf6.txt",
+    "sha256": "f8121b52a038a4ebb36784f023ba2cb4f863ebe60e1b87e998a903775ecfbaf6",
+    "worker_mode": "builder-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only windows_dependency_search. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Select dependency-directory contributions for this Windows load only. This never modifies process-global loader settings or verifies dependency identities. The application retains responsibility for its loader state.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+    "assertions": [
+      "Two explicit successive setter values, final selection observed through real opened module.",
+      "Unrelated object-reference limits retain77/66/55.",
+      "Native SHA256 abc; crypto ceiling3 accepts3 and refuses4 with zero dispatch."
+    ]
+  },
+  {
+    "id": "accessor.ModuleBuilder::windows_loader_observations",
+    "file": "2fab32e1c9b2563de012ad885944a89a91e95ae99f72e420136a5b3c57361f09.txt",
+    "sha256": "2fab32e1c9b2563de012ad885944a89a91e95ae99f72e420136a5b3c57361f09",
+    "worker_mode": "builder-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Start a fresh builder; apply the exact parameter type from the signature with two distinct valid explicit values in sequence. Last selection replaces only windows_loader_observations. No native call occurs in this setter. Observe the final selection through its corresponding public report/opening behavior: Request dated observations of selected Windows loader channels. RequireKnown refuses before loading if that channel cannot be observed. Reports contain paths and public registry data; applications choose how to expose them. No observation proves absence of concurrent redirection.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_Digest",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read.",
+    "assertions": [
+      "Two explicit successive setter values, final selection observed through real opened module.",
+      "Unrelated object-reference limits retain77/66/55.",
+      "Native SHA256 abc; crypto ceiling3 accepts3 and refuses4 with zero dispatch."
+    ]
+  }
+]

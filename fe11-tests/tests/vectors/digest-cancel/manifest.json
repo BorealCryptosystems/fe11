@@ -1,0 +1,488 @@
+[
+  {
+    "id": "state.digest.ACTIVE.cancel",
+    "file": "883d3bff9a26459c06c2dae4b4993c3f6bf4059f8abefb81bef9985f280237ff.txt",
+    "sha256": "883d3bff9a26459c06c2dae4b4993c3f6bf4059f8abefb81bef9985f280237ff",
+    "worker_mode": "digest-cancel",
+    "state": "ACTIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}; prior owner and continuation preserved.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_SessionCancel",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "state.digest.ACTIVE.cancel.legacy240",
+    "file": "883d3bff9a26459c06c2dae4b4993c3f6bf4059f8abefb81bef9985f280237ff.txt",
+    "sha256": "883d3bff9a26459c06c2dae4b4993c3f6bf4059f8abefb81bef9985f280237ff",
+    "worker_mode": "digest-cancel",
+    "state": "ACTIVE",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.ABSENT.cancel",
+    "file": "ede4663fa9a5e8031704705268edde90aae07273f42b7b7274db7b317a40b001.txt",
+    "sha256": "ede4663fa9a5e8031704705268edde90aae07273f42b7b7274db7b317a40b001",
+    "worker_mode": "digest-cancel",
+    "state": "ABSENT",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SessionCancel",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.ABSENT.cancel.legacy240",
+    "file": "ede4663fa9a5e8031704705268edde90aae07273f42b7b7274db7b317a40b001.txt",
+    "sha256": "ede4663fa9a5e8031704705268edde90aae07273f42b7b7274db7b317a40b001",
+    "worker_mode": "digest-cancel",
+    "state": "ABSENT",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.INITIALIZED.cancel",
+    "file": "254829082c2fd058ba607c6de24be389a9358f14b8ee835ddd0fa0a02417cd9d.txt",
+    "sha256": "254829082c2fd058ba607c6de24be389a9358f14b8ee835ddd0fa0a02417cd9d",
+    "worker_mode": "digest-cancel",
+    "state": "INITIALIZED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_SessionCancel",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.INITIALIZED.cancel.legacy240",
+    "file": "254829082c2fd058ba607c6de24be389a9358f14b8ee835ddd0fa0a02417cd9d.txt",
+    "sha256": "254829082c2fd058ba607c6de24be389a9358f14b8ee835ddd0fa0a02417cd9d",
+    "worker_mode": "digest-cancel",
+    "state": "INITIALIZED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.PUBLISHED.cancel",
+    "file": "07d97d714b6b8c6a4b7956ba0509850a3e70e576fbf1b33a8a8291390053907e.txt",
+    "sha256": "07d97d714b6b8c6a4b7956ba0509850a3e70e576fbf1b33a8a8291390053907e",
+    "worker_mode": "digest-cancel",
+    "state": "PUBLISHED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_SessionCancel",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.PUBLISHED.cancel.legacy240",
+    "file": "07d97d714b6b8c6a4b7956ba0509850a3e70e576fbf1b33a8a8291390053907e.txt",
+    "sha256": "07d97d714b6b8c6a4b7956ba0509850a3e70e576fbf1b33a8a8291390053907e",
+    "worker_mode": "digest-cancel",
+    "state": "PUBLISHED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.cancel",
+    "file": "7fe79002c357c4882a4c2a542df137d83fb7300a9b878578949581f8365e6643.txt",
+    "sha256": "7fe79002c357c4882a4c2a542df137d83fb7300a9b878578949581f8365e6643",
+    "worker_mode": "digest-cancel",
+    "state": "LOCAL_REFUSAL",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_SessionCancel",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.cancel.legacy240",
+    "file": "7fe79002c357c4882a4c2a542df137d83fb7300a9b878578949581f8365e6643.txt",
+    "sha256": "7fe79002c357c4882a4c2a542df137d83fb7300a9b878578949581f8365e6643",
+    "worker_mode": "digest-cancel",
+    "state": "LOCAL_REFUSAL",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal"
+  },
+  {
+    "id": "digest.cross.CLOSED.cancel",
+    "file": "7cc56ae813810c0c17f72177bd9770564a360b8b5e078aa16fa1b37371a43549.txt",
+    "sha256": "7cc56ae813810c0c17f72177bd9770564a360b8b5e078aa16fa1b37371a43549",
+    "worker_mode": "digest-cancel",
+    "state": "CLOSED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.CLOSED.cancel.legacy240",
+    "file": "7cc56ae813810c0c17f72177bd9770564a360b8b5e078aa16fa1b37371a43549.txt",
+    "sha256": "7cc56ae813810c0c17f72177bd9770564a360b8b5e078aa16fa1b37371a43549",
+    "worker_mode": "digest-cancel",
+    "state": "CLOSED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.cancel",
+    "file": "bb2e4882ddf406d897805ecf709f3990bdcbe4983706b0c974690abcd91ead69.txt",
+    "sha256": "bb2e4882ddf406d897805ecf709f3990bdcbe4983706b0c974690abcd91ead69",
+    "worker_mode": "digest-cancel",
+    "state": "TICKET_DROPPED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_SessionCancel",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.cancel.legacy240",
+    "file": "bb2e4882ddf406d897805ecf709f3990bdcbe4983706b0c974690abcd91ead69.txt",
+    "sha256": "bb2e4882ddf406d897805ecf709f3990bdcbe4983706b0c974690abcd91ead69",
+    "worker_mode": "digest-cancel",
+    "state": "TICKET_DROPPED",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "output_oracle": "SHA-256(616263) = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "reference": "FIPS 180-4; PKCS#11 3.2 C_SessionCancel and C_DigestFinal",
+    "producer_input_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    }
+  }
+]

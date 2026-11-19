@@ -1,0 +1,46 @@
+[
+  {
+    "id": "generation.cross.typed_generate_montgomery_key.REFUSED_TERMINAL.init",
+    "file": "0bea342b61beba6b7bdf6c473d366d4faa308c9f465e671734c62f45f03dcfd2.txt",
+    "sha256": "0bea342b61beba6b7bdf6c473d366d4faa308c9f465e671734c62f45f03dcfd2",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Cancelled admission refuses locally with zero native calls; after restoring admission the exact valid Montgomery generation must succeed. Unavailable native generation remains an incomplete continuation, never PASS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "route": "typed_generate_montgomery_key",
+      "state": "REFUSED_TERMINAL",
+      "action": "init",
+      "algorithm": "Curve25519",
+      "persistent": true,
+      "private": false,
+      "generated_objects": 2,
+      "negative": null
+    }
+  }
+]

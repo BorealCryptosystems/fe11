@@ -242,7 +242,13 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let held = state.operations.get(self.uid)?;
+        let held = state.operations.get_ticket_with(
+            self.uid,
+            self.id,
+            crate::RejectionReason::SignatureMessages(
+                crate::SignatureMessagesRejection::StaleMessageTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::SignatureMessages(

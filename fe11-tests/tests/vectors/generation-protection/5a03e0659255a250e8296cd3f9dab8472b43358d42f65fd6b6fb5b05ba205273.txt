@@ -1,0 +1,9 @@
+protection|CKM_GENERIC_SECRET_KEY_GEN
+public|CKA_CLASS|symbol|CKO_SECRET_KEY
+public|CKA_KEY_TYPE|symbol|CKK_GENERIC_SECRET
+public|CKA_VALUE_LEN|integer|1
+public|CKA_TOKEN|bool|false
+public|CKA_LABEL|namespace|label
+public|CKA_PRIVATE|bool|false
+public|CKA_SENSITIVE|bool|false
+public|CKA_EXTRACTABLE|bool|false

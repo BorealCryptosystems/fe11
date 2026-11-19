@@ -1,0 +1,12 @@
+{
+  "DSA-SigGen-1.0": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigGen-1.0/internalProjection.json",
+    "source_sha256": "69155f3963a0e9c4685c8e6e3be2e342f912fbc5655b1fb79c3e57ecd5d888bb",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "ECDSA-SigGen-FIPS186-5": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ECDSA-SigGen-FIPS186-5/internalProjection.json",
+    "source_sha256": "025a8ae9906d49e387d7c12fc8b721661797faf8ab39cef16ec8809d788a8a3d",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  }
+}

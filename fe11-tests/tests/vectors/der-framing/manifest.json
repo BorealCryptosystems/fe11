@@ -1,0 +1,52 @@
+{
+  "controls": {
+    "p256": {
+      "file": "p256.der",
+      "sha256": "5cd252fb0ce8932436faf8ccd1040981b89ee4ad6b9fe9e2a2b7e71aacb27cd3",
+      "bytes": 91
+    },
+    "x25519": {
+      "file": "x25519.der",
+      "sha256": "291c5293e030452a599851a7c7298f3f16c3ff1bdfafcb598927f2631f9fa641",
+      "bytes": 44
+    },
+    "mlkem512": {
+      "file": "mlkem512.der",
+      "sha256": "0de02908ea0975cf43594d441ee4ceb3d48b14a6dac65557fc3459c4a7eec2a7",
+      "bytes": 822
+    },
+    "mldsa44": {
+      "file": "mldsa44.der",
+      "sha256": "861a3380d95a1d1d5ddc49b88bd54754305dc59a133eea12628e24caaa3b57be",
+      "bytes": 1334
+    }
+  },
+  "provenance": {
+    "p256": "SEC2 P-256 generator, RFC5480 encoding; exact existing public constant",
+    "x25519": "RFC7748 section6.1 Alice public key, RFC8410 SPKI with absent parameters",
+    "mlkem512": {
+      "source_fixture": "../kem/652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430.txt",
+      "source_sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430",
+      "key_slice": [
+        768,
+        1568
+      ],
+      "rule": "FIPS203 dk=dkPKE||ek||H(ek)||z; independently encode public ek using RFC9935 ML-KEM-512 OID"
+    },
+    "mldsa44": {
+      "source_fixture": "../public-encoding/mldsa44-spki.der",
+      "sha256": "861a3380d95a1d1d5ddc49b88bd54754305dc59a133eea12628e24caaa3b57be",
+      "rule": "Existing public ACVP key and canonical algorithm wrapper"
+    }
+  },
+  "partitions": [
+    "wrong outer tag",
+    "truncated tag",
+    "truncated long length",
+    "truncated value",
+    "overlong length with leading zero",
+    "trailing byte",
+    "unterminated OID base128 subidentifier"
+  ],
+  "scope": "Four public SPKI parsers; framing only, no mathematical validation or operation claim."
+}

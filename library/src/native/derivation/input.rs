@@ -51,10 +51,13 @@ impl<'r, 'a> Input<'r, 'a> {
             Self::Recipe { request, .. } => request.contract.mutates_key(),
         }
     }
-    pub(crate) fn output_class(&self) -> ManagedClass {
+    pub(crate) fn output_class(
+        &self,
+        template: &[crate::AttributeInput<'_>],
+    ) -> Option<ManagedClass> {
         match self {
-            Self::Native(input) => input.output_class(),
-            Self::Recipe { class, .. } => *class,
+            Self::Native(input) => input.output_class(template),
+            Self::Recipe { class, .. } => Some(*class),
         }
     }
     pub(crate) fn secondary_keys(&self) -> [Option<&'a NativeObjectRef>; 4] {

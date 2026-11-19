@@ -1,0 +1,3 @@
+NIST ACVP public numerical test vectors and explicit test mutations.
+Sources, original vector identities and SHA-256 digests are in manifest.json.
+No NIST implementation source is included. Test keys are public and must not be used operationally.

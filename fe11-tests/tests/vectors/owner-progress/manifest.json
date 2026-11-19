@@ -1,0 +1,274 @@
+[
+  {
+    "id": "progression.owner-session-idle",
+    "file": "e398ad85f6d2877d087e87d17f853e64067e5bec60a8f1ef6d63a5382da2900b.txt",
+    "sha256": "e398ad85f6d2877d087e87d17f853e64067e5bec60a8f1ef6d63a5382da2900b",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-session-active",
+    "file": "e698059562c193f46a5ecd5eef997f484c5c82ba79e84751c26c779c9457851a.txt",
+    "sha256": "e698059562c193f46a5ecd5eef997f484c5c82ba79e84751c26c779c9457851a",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-session-completed",
+    "file": "f65465c611b3ed61bc2f9ccddb4b8f51ab3ac093604aee7e48a953509518ca25.txt",
+    "sha256": "f65465c611b3ed61bc2f9ccddb4b8f51ab3ac093604aee7e48a953509518ca25",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-eager-idle",
+    "file": "50ad35b8b1a6743888e9218c5af74561d6cb8b03aa995cde25f365a742c9c61b.txt",
+    "sha256": "50ad35b8b1a6743888e9218c5af74561d6cb8b03aa995cde25f365a742c9c61b",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-eager-active",
+    "file": "0c36b4726a607fc64f8f25749054fa8a0dba702d65fcb0dd6e48a80dbcb6f10e.txt",
+    "sha256": "0c36b4726a607fc64f8f25749054fa8a0dba702d65fcb0dd6e48a80dbcb6f10e",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-eager-completed",
+    "file": "5f1426c7be633b2970e5158c2e7563b91ded90943cd7d9a9ec38bcdd7d46ef91.txt",
+    "sha256": "5f1426c7be633b2970e5158c2e7563b91ded90943cd7d9a9ec38bcdd7d46ef91",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-cooperative-idle",
+    "file": "546ea7806ac59a7d406e2bd0b98ddaab9d277ae8fc7db0a44a50495307e8bf76.txt",
+    "sha256": "546ea7806ac59a7d406e2bd0b98ddaab9d277ae8fc7db0a44a50495307e8bf76",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-cooperative-active",
+    "file": "80e542cf9a79e40ef086cfe337703dea229f30df79de8f28d38a38d89444543d.txt",
+    "sha256": "80e542cf9a79e40ef086cfe337703dea229f30df79de8f28d38a38d89444543d",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.owner-cooperative-completed",
+    "file": "74f11fee5926a0c9a269b169fe09c8ca442fa0953d0ca3fda12cf9590aebea20.txt",
+    "sha256": "74f11fee5926a0c9a269b169fe09c8ca442fa0953d0ca3fda12cf9590aebea20",
+    "worker_mode": "builder-runtime-choices",
+    "owner_progress": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Explicit owner close from idle, updated active or published completed SHA256 abc. Exact Close-only counter delta; no native cancellation. Completed output survives close. Cooperative completed case samples next function and full counters before/after every poll."
+  },
+  {
+    "id": "progression.digest.zero-output",
+    "file": "2299747d40d0ffb571e12e5737bdf4a7fdcd7baef9600408a40965d92bf3de86.txt",
+    "sha256": "2299747d40d0ffb571e12e5737bdf4a7fdcd7baef9600408a40965d92bf3de86",
+    "worker_mode": "digest-capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact SHA256 abc a/b/c; zero-sized non-NULL output receives native BUFFER_TOO_SMALL(required32,capacity0). Requirement observation makes no native call; explicit resize32 resumes Final once and yields exact answer."
+  }
+]

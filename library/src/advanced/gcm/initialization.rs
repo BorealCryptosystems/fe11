@@ -389,6 +389,7 @@ fn start_inner(
     // Return the sole ticket before any Init call. An error on the first poll
     // therefore cannot strand a native operation without its caller's handle.
     Ok(OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,

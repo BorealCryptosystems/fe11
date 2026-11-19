@@ -1,0 +1,3 @@
+advanced
+transitive
+provide_digest_output_capacity

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "operation.CKM_DH_PKCS_DERIVE.derive@Session::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.1.1",
+    "file": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5.txt",
+    "sha256": "1cacf77fb376e3257ff302ca6cefb223c8e494558190d0e7858fd2c5fe11a4d5",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact published SSC secret with PKCS#3 length/truncation rule"
+      ],
+      "route": "Session::derive_native_key",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  },
+  {
+    "id": "operation.CKM_DH_PKCS_DERIVE.derive@Session::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.2.6",
+    "file": "776854f6f226d87c00c0d23bc4433dfa3874d97f4709ba1640bb6d271b008f58.txt",
+    "sha256": "776854f6f226d87c00c0d23bc4433dfa3874d97f4709ba1640bb6d271b008f58",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact published SSC secret with PKCS#3 length/truncation rule"
+      ],
+      "route": "Session::derive_native_key",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  },
+  {
+    "id": "operation.CKM_DH_PKCS_DERIVE.derive@AdvancedSession::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.1.1",
+    "file": "75ed29c0a12943907ff58a0e158a7db9e0fa385e17b85b4a6709d5afea306d05.txt",
+    "sha256": "75ed29c0a12943907ff58a0e158a7db9e0fa385e17b85b4a6709d5afea306d05",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact published SSC secret with PKCS#3 length/truncation rule"
+      ],
+      "route": "AdvancedSession::derive_native_key",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  },
+  {
+    "id": "operation.CKM_DH_PKCS_DERIVE.derive@AdvancedSession::derive_native_key@KAS-FFC-SSC-Sp800-56Ar3.2.6",
+    "file": "543e71ccf69e7dcdc0f287f9ddacb7c73890a9501fa60b5b6a5be391784d5d32.txt",
+    "sha256": "543e71ccf69e7dcdc0f287f9ddacb7c73890a9501fa60b5b6a5be391784d5d32",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Exact published SSC secret with PKCS#3 length/truncation rule"
+      ],
+      "route": "AdvancedSession::derive_native_key",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Exact published p/g, PrivateIut, PublicServer and full-width Z. No hashing, KDF, random replacement key or computed answer."
+  }
+]

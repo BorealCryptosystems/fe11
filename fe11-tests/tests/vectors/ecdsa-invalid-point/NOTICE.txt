@@ -1,0 +1,1 @@
+Public NIST ECDSA verification data, attribution and pinned source inherited from ../ecdsa. Four deterministic SEC1 mutations are test inputs only.

@@ -1,0 +1,8 @@
+CKM_DES_ECB
+advanced
+encrypt
+8
+0123456789abcdef
+1111111111111111
+17668dfc7292532d
+

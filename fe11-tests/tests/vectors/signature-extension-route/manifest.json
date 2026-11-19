@@ -1,0 +1,182 @@
+[
+  {
+    "id": "guard.SignatureContinuationRejection::SignatureStreamExtensionRoute@Session::begin_extension_signature_stream",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "signature-extension-stream-route",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureContinuation(SignatureStreamExtensionRoute))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+      "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+    },
+    "assertions": [
+      "Real RSA2048 key, SIGN=true; no unrelated key fault",
+      "Correct standard ABI and request graph; only public route mismatched",
+      "Exact typed refusal before any native signature Init or continuation",
+      "Declaration dispatch count unchanged; explicit destroy and close"
+    ]
+  },
+  {
+    "id": "guard.SignatureContinuationRejection::SignatureStreamExtensionRoute@AdvancedSession::begin_extension_signature_stream",
+    "file": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69.txt",
+    "sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69",
+    "worker_mode": "signature-extension-stream-route",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureContinuation(SignatureStreamExtensionRoute))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+      "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+    },
+    "assertions": [
+      "Real RSA2048 key, SIGN=true; no unrelated key fault",
+      "Correct standard ABI and request graph; only public route mismatched",
+      "Exact typed refusal before any native signature Init or continuation",
+      "Declaration dispatch count unchanged; explicit destroy and close"
+    ]
+  },
+  {
+    "id": "guard.SignatureContinuationRejection::SingleSignatureExtensionRoute@Session::begin_extension_signature_single",
+    "file": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5.txt",
+    "sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5",
+    "worker_mode": "signature-extension-single-route",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureContinuation(SingleSignatureExtensionRoute))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+      "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+    },
+    "assertions": [
+      "Real RSA2048 key, SIGN=true; no unrelated key fault",
+      "Correct standard ABI and request graph; only public route mismatched",
+      "Exact typed refusal before any native signature Init or continuation",
+      "Declaration dispatch count unchanged; explicit destroy and close"
+    ]
+  },
+  {
+    "id": "guard.SignatureContinuationRejection::SingleSignatureExtensionRoute@AdvancedSession::begin_extension_signature_single",
+    "file": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69.txt",
+    "sha256": "95e55bf97a9033c39ff9dc1e10a0667137afd63fcdf2fb9f008d4490eed4fa69",
+    "worker_mode": "signature-extension-single-route",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureContinuation(SingleSignatureExtensionRoute))",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required.",
+      "case": "operation.CKM_SHA256_RSA_PKCS.sign@Session::sign_native@RFC8017.RSA2048.SHA256.PKCS1",
+      "fixture_sha256": "c2ecb9a042c1ce08681af92f89c52cab5a4eae5170c515999a46d19ab23a46a5"
+    },
+    "assertions": [
+      "Real RSA2048 key, SIGN=true; no unrelated key fault",
+      "Correct standard ABI and request graph; only public route mismatched",
+      "Exact typed refusal before any native signature Init or continuation",
+      "Declaration dispatch count unchanged; explicit destroy and close"
+    ]
+  }
+]

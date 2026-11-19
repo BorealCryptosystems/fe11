@@ -1,0 +1,8 @@
+CKM_DES_ECB
+advanced
+encrypt
+8
+fedcba9876543210
+0123456789abcdef
+ed39d950fa74bcc4
+

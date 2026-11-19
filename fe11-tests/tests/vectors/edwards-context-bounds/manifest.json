@@ -1,0 +1,642 @@
+[
+  {
+    "id": "eddsa.context.ED-25519.session.ph-False.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": false,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "c8db1c24efec942db1a4242512e9c2c446dd06da843b2bec8c68235e951b1169.txt",
+    "sha256": "c8db1c24efec942db1a4242512e9c2c446dd06da843b2bec8c68235e951b1169"
+  },
+  {
+    "id": "eddsa.context.ED-25519.advanced.ph-False.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": false,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "1ebc3a66dabb7faba690ae0b2457a2982847496b9ad333d01b286d41e3c880fd.txt",
+    "sha256": "1ebc3a66dabb7faba690ae0b2457a2982847496b9ad333d01b286d41e3c880fd"
+  },
+  {
+    "id": "eddsa.context.ED-25519.session.ph-False.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": false,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "1bf0f4dddcb4e39ad4b38876baecab7095d82ba166a8745a3756616e12a1bee4.txt",
+    "sha256": "1bf0f4dddcb4e39ad4b38876baecab7095d82ba166a8745a3756616e12a1bee4"
+  },
+  {
+    "id": "eddsa.context.ED-25519.advanced.ph-False.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": false,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "d6d4dc46feefd50ee490d5a8d44505b02497f22ad3b4086b168536bda499475d.txt",
+    "sha256": "d6d4dc46feefd50ee490d5a8d44505b02497f22ad3b4086b168536bda499475d"
+  },
+  {
+    "id": "eddsa.context.ED-25519.session.ph-True.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "23f30da9acbb88d65ad0720ffc136778d0ef1dfc49a36aea874e0d4f802b26c1.txt",
+    "sha256": "23f30da9acbb88d65ad0720ffc136778d0ef1dfc49a36aea874e0d4f802b26c1"
+  },
+  {
+    "id": "eddsa.context.ED-25519.advanced.ph-True.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "5cc6310c7a7d584f8f05118728e361c85e9bc1f384259babac92720f9e13cd85.txt",
+    "sha256": "5cc6310c7a7d584f8f05118728e361c85e9bc1f384259babac92720f9e13cd85"
+  },
+  {
+    "id": "eddsa.context.ED-25519.session.ph-True.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "23ef5aacc735ee8395184e510bf2f1ca67d68b8d335ad3b130e3915c21bd9f23.txt",
+    "sha256": "23ef5aacc735ee8395184e510bf2f1ca67d68b8d335ad3b130e3915c21bd9f23"
+  },
+  {
+    "id": "eddsa.context.ED-25519.advanced.ph-True.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "dab9500e44ff5c1df39d48caf8491c0548e9d2523ef7081f00e3c16902b26ff6.txt",
+    "sha256": "dab9500e44ff5c1df39d48caf8491c0548e9d2523ef7081f00e3c16902b26ff6"
+  },
+  {
+    "id": "eddsa.context.ED-448.session.ph-False.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": false,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "41e60622f31f72dd61dd13b4c3e0eb5469bf02f2ee299582ad9010cd85229034.txt",
+    "sha256": "41e60622f31f72dd61dd13b4c3e0eb5469bf02f2ee299582ad9010cd85229034"
+  },
+  {
+    "id": "eddsa.context.ED-448.advanced.ph-False.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": false,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "9c10956b932dadf2f130c9f8ee927832c33750f7c3ea13d9ca54a775ff20cbc8.txt",
+    "sha256": "9c10956b932dadf2f130c9f8ee927832c33750f7c3ea13d9ca54a775ff20cbc8"
+  },
+  {
+    "id": "eddsa.context.ED-448.session.ph-False.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": false,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "3a74ac3759cfea5ae032502481b3b9fbe8b723ae2f02efa178ff5a74c7c0c098.txt",
+    "sha256": "3a74ac3759cfea5ae032502481b3b9fbe8b723ae2f02efa178ff5a74c7c0c098"
+  },
+  {
+    "id": "eddsa.context.ED-448.advanced.ph-False.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": false,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "bb9c8c0d81b5c7b1811c85eb177e01ae8a274c2d8706b9fd257e4a396591b910.txt",
+    "sha256": "bb9c8c0d81b5c7b1811c85eb177e01ae8a274c2d8706b9fd257e4a396591b910"
+  },
+  {
+    "id": "eddsa.context.ED-448.session.ph-True.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "0d9a26c0f892bd53be02ba1c1c5bbeed5e938ccff0d700559602ac8bd34423eb.txt",
+    "sha256": "0d9a26c0f892bd53be02ba1c1c5bbeed5e938ccff0d700559602ac8bd34423eb"
+  },
+  {
+    "id": "eddsa.context.ED-448.advanced.ph-True.len-1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 1,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "7a26cac24f81132f7daa53fdfeea80514c2d809fd9c2fe8ea269d2f548247919.txt",
+    "sha256": "7a26cac24f81132f7daa53fdfeea80514c2d809fd9c2fe8ea269d2f548247919"
+  },
+  {
+    "id": "eddsa.context.ED-448.session.ph-True.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "1a7129679bb4a075e1609f52635304985312aca6b5520ba2032e6ea9b7d3fa7a.txt",
+    "sha256": "1a7129679bb4a075e1609f52635304985312aca6b5520ba2032e6ea9b7d3fa7a"
+  },
+  {
+    "id": "eddsa.context.ED-448.advanced.ph-True.len-255",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 255,
+    "oracle": "Exact signature from independent PyCryptodome3.23.0 RFC8032 implementation. Fe11 submits the original message with native prehash flag/context; no prehash by the worker. Ed25519 with nonempty context selects Ed25519ctx, not pure Ed25519.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "0db5f170017a25ada0fd30807e17ffb9ac4e7094bf0d100417d50a66993605ec.txt",
+    "sha256": "0db5f170017a25ada0fd30807e17ffb9ac4e7094bf0d100417d50a66993605ec"
+  }
+]

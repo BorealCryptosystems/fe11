@@ -1,0 +1,4 @@
+RO_USER
+create_public_token
+RO_USER
+CKR_SESSION_READ_ONLY

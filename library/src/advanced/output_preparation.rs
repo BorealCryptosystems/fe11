@@ -140,26 +140,29 @@ pub(super) fn replace(
     let mut waiter: Option<progress::Waiter<'_>> = None;
     loop {
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let stale = match family {
+            Family::Digest => crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleDigestTicket,
+            ),
+            Family::Cipher => crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleCipherTicket,
+            ),
+            Family::Aead => crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleAeadMessageTicket,
+            ),
+            Family::Recovery => crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleRecoveryTicket,
+            ),
+            Family::Signature => crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleSignatureTicket,
+            ),
+        };
+        let held = access
+            .operations
+            .get_ticket_with(ticket.uid, ticket.id, stale)?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
-            return Err(Error::Rejected(match family {
-                Family::Digest => crate::RejectionReason::OperationOwnership(
-                    crate::OperationOwnershipRejection::StaleDigestTicket,
-                ),
-                Family::Cipher => crate::RejectionReason::OperationOwnership(
-                    crate::OperationOwnershipRejection::StaleCipherTicket,
-                ),
-                Family::Aead => crate::RejectionReason::OperationOwnership(
-                    crate::OperationOwnershipRejection::StaleAeadMessageTicket,
-                ),
-                Family::Recovery => crate::RejectionReason::OperationOwnership(
-                    crate::OperationOwnershipRejection::StaleRecoveryTicket,
-                ),
-                Family::Signature => crate::RejectionReason::OperationOwnership(
-                    crate::OperationOwnershipRejection::StaleSignatureTicket,
-                ),
-            }));
+            return Err(Error::Rejected(stale));
         }
         operation.check_continuation_control(&session.entry)?;
         super::rejoin::check_keys(&operation.body, &session.entry)?;

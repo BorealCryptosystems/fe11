@@ -1,0 +1,158 @@
+[
+  {
+    "id": "kip-seed",
+    "positive": {
+      "file": "kip-seed-positive.rs",
+      "sha256": "46e4e1dc1fbc159e106ac9611f8760cfcdb04f443f5525a8d178daa688e32aa7"
+    },
+    "negative": {
+      "file": "kip-seed-negative.rs",
+      "sha256": "5e502b1155f36beb70d3bde7f3be1922c2efc76447be9aae6f4ebc21945ebbde",
+      "code": "E0597",
+      "line": 10
+    }
+  },
+  {
+    "id": "kip-nested-oid",
+    "positive": {
+      "file": "kip-nested-oid-positive.rs",
+      "sha256": "a1ed44bd2f602c81f275ec1d66752fbc9884c8350dafe182c786970a6a322330"
+    },
+    "negative": {
+      "file": "kip-nested-oid-negative.rs",
+      "sha256": "1dd7fdc787cd47d1e366379e68f2526ccc2575269bd639f577b98f41397deba1",
+      "code": "E0597",
+      "line": 8
+    }
+  },
+  {
+    "id": "kea-random-a",
+    "positive": {
+      "file": "kea-random-a-positive.rs",
+      "sha256": "e6af792b11c7a70228f38915bd0ec01bd9b327f0908a08997b1c996d0c91720d"
+    },
+    "negative": {
+      "file": "kea-random-a-negative.rs",
+      "sha256": "ee285a168b0f73a7b5fe19b7ed3a3f942b87ea6beeea6c71564120208b4127a6",
+      "code": "E0597",
+      "line": 10
+    }
+  },
+  {
+    "id": "kea-random-b",
+    "positive": {
+      "file": "kea-random-b-positive.rs",
+      "sha256": "8c2eb83a9634c127c10e16593a11e8f80e25d6e910cc14abf849664ad87aa1e5"
+    },
+    "negative": {
+      "file": "kea-random-b-negative.rs",
+      "sha256": "faaf407d6eb4b922be7f8d67feb0e3a8fa876ca998da303b4538049c2a3bb026",
+      "code": "E0597",
+      "line": 11
+    }
+  },
+  {
+    "id": "kea-peer-public",
+    "positive": {
+      "file": "kea-peer-public-positive.rs",
+      "sha256": "22e90695b6c4e44cabf819091619cbc7ae4b476a30743f394f8c76fd516ff95f"
+    },
+    "negative": {
+      "file": "kea-peer-public-negative.rs",
+      "sha256": "6041a2578ac0fb6cc5a24f0ce9637adc879b3c81a7bfc313a5f34405a0dae934",
+      "code": "E0597",
+      "line": 12
+    }
+  },
+  {
+    "id": "x3dh-init-prekey-signature",
+    "positive": {
+      "file": "x3dh-init-prekey-signature-positive.rs",
+      "sha256": "e677a853fdb24cf3262cfd8607af7edbb6b95e7cc07f099a0baea4225deb49d0"
+    },
+    "negative": {
+      "file": "x3dh-init-prekey-signature-negative.rs",
+      "sha256": "bab3a9aec05272c91661e6fd72c78410199138349613254f445f7fb5c5a5cbad",
+      "code": "E0597",
+      "line": 11
+    }
+  },
+  {
+    "id": "x3dh-init-onetime-key",
+    "positive": {
+      "file": "x3dh-init-onetime-key-positive.rs",
+      "sha256": "003a93fb23f9a6bc40b4b5c195395f07833150d4923279988882dc7ef8cc158f"
+    },
+    "negative": {
+      "file": "x3dh-init-onetime-key-negative.rs",
+      "sha256": "b619b51c3ad91d101a4d2ef9568f9b0b012950e386ef060e8428bc9150404f2e",
+      "code": "E0597",
+      "line": 12
+    }
+  },
+  {
+    "id": "x3dh-respond-identity-id",
+    "positive": {
+      "file": "x3dh-respond-identity-id-positive.rs",
+      "sha256": "b8f1a91f0f293e58422006de9cf833a9ae42a648134ebe9b5c8a9e92bfd7fe28"
+    },
+    "negative": {
+      "file": "x3dh-respond-identity-id-negative.rs",
+      "sha256": "738d3b664269d7cf3b9d0854eef548e2b2182f83c0aee48d8623a9092fc95f7a",
+      "code": "E0597",
+      "line": 9
+    }
+  },
+  {
+    "id": "x3dh-respond-prekey-id",
+    "positive": {
+      "file": "x3dh-respond-prekey-id-positive.rs",
+      "sha256": "306e332859ee3bfb08aaf728944900ec4abf3079f1eea6aa94e3aab0c2d257db"
+    },
+    "negative": {
+      "file": "x3dh-respond-prekey-id-negative.rs",
+      "sha256": "c4c23a9c80f236440985cd418017e5e4831a238d4c8703e82bc3f277cb6f11e0",
+      "code": "E0597",
+      "line": 10
+    }
+  },
+  {
+    "id": "x3dh-respond-onetime-id",
+    "positive": {
+      "file": "x3dh-respond-onetime-id-positive.rs",
+      "sha256": "be0c57e49605c6267574b1d2a8c63922414c34b64b0b915454074c957d37c55c"
+    },
+    "negative": {
+      "file": "x3dh-respond-onetime-id-negative.rs",
+      "sha256": "536acb58f4cede53b13a48f65c0a8e950a9c1c782650b8b8ebf55056ad53a841",
+      "code": "E0597",
+      "line": 11
+    }
+  },
+  {
+    "id": "x3dh-respond-initiator-ephemeral",
+    "positive": {
+      "file": "x3dh-respond-initiator-ephemeral-positive.rs",
+      "sha256": "d0bf3c92fba4f761d6cf88e89cefff372af0ba0d1291b30551365198561953ae"
+    },
+    "negative": {
+      "file": "x3dh-respond-initiator-ephemeral-negative.rs",
+      "sha256": "ef372d154e5484e04497a56af928a2b8c4aee46398359ea5d5754168e2b68730",
+      "code": "E0597",
+      "line": 12
+    }
+  },
+  {
+    "id": "ratchet-secret",
+    "positive": {
+      "file": "ratchet-secret-positive.rs",
+      "sha256": "be9818637bd345dd3c1b5e077d47fd39793fd6b43c676a9577c1e5910690122a"
+    },
+    "negative": {
+      "file": "ratchet-secret-negative.rs",
+      "sha256": "92cbffbe7e6a155714863422f1e673914bab79ecbb84f00410a74fe2628f53a6",
+      "code": "E0597",
+      "line": 8
+    }
+  }
+]

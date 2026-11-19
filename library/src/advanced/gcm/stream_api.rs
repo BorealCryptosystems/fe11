@@ -346,7 +346,13 @@ impl Session {
         let mut released = crate::advanced::poll::ReleasedInputs::default();
         let access = self.advanced_access()?;
         {
-            let held = access.operations.get(self.uid)?;
+            let held = access.operations.get_ticket_with(
+                self.uid,
+                ticket.id,
+                crate::RejectionReason::OperationOwnership(
+                    crate::OperationOwnershipRejection::AeadMessageTicketRequired,
+                ),
+            )?;
             let operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id
                 || !matches!(
@@ -505,7 +511,13 @@ impl OperationTicket {
             )));
         }
         let state = self.owner.read()?;
-        let held = state.operations.get(self.uid)?;
+        let held = state.operations.get_ticket_with(
+            self.uid,
+            self.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleAeadMessageTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

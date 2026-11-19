@@ -1,0 +1,92 @@
+[
+  {
+    "id": "negative.CKM_DES3_CBC_PAD.encrypt.usage",
+    "file": "b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6.txt",
+    "sha256": "b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_CBC.decrypt@Session::decrypt_cipher@ACVP-TDES-CBC-1.0.5.270",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+      "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+      "group": 5,
+      "case": 270,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Published CBC plaintext ends in valid PKCS#7 padding. Remove exactly that suffix for CBC-PAD plaintext; key, IV and ciphertext unchanged. Only target usage is disabled."
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_PAD.decrypt.usage",
+    "file": "8fcfdb8e34b9a99548260c64f78aa4295ddfdd49d2bbb434b2af369a6ab2d42c.txt",
+    "sha256": "8fcfdb8e34b9a99548260c64f78aa4295ddfdd49d2bbb434b2af369a6ab2d42c",
+    "worker_mode": "cipher-usage",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecryptInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "valid_control": "operation.CKM_DES3_CBC.decrypt@Session::decrypt_cipher@ACVP-TDES-CBC-1.0.5.270",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-TDES-CBC-1.0/internalProjection.json",
+      "sha256": "41327d791744b308e07949b5fa2eb856f87ccc8893fd2722ea15998e8f05b23e",
+      "group": 5,
+      "case": 270,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "transformation": "Published CBC plaintext ends in valid PKCS#7 padding. Remove exactly that suffix for CBC-PAD plaintext; key, IV and ciphertext unchanged. Only target usage is disabled."
+  }
+]

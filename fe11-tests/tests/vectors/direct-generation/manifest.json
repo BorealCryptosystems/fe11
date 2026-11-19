@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "direct.cross.native_generation.IDLE.init",
+    "file": "cd3835dbe6a565277d0d58ee02f7bc2ba4de815d2d5bc4eb62d0a3bf51fa6af5.txt",
+    "sha256": "cd3835dbe6a565277d0d58ee02f7bc2ba4de815d2d5bc4eb62d0a3bf51fa6af5",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "IDLE",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.IDLE.logout",
+    "file": "1f923be4f66c617fec21f24f96c3079679f01652815edce6c49cbb9bde87972c.txt",
+    "sha256": "1f923be4f66c617fec21f24f96c3079679f01652815edce6c49cbb9bde87972c",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "IDLE",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.IDLE.close",
+    "file": "8eff21b6186bdc0346dcbb36158da439efb0beb6988e09f21a164e16321fb860.txt",
+    "sha256": "8eff21b6186bdc0346dcbb36158da439efb0beb6988e09f21a164e16321fb860",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "IDLE",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.CONSUMED.init",
+    "file": "06cad5ad225c9684c9e168ebc8cbaa249d4139d22d2e5fb745283104d3bde2cf.txt",
+    "sha256": "06cad5ad225c9684c9e168ebc8cbaa249d4139d22d2e5fb745283104d3bde2cf",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "CONSUMED",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.CONSUMED.take",
+    "file": "35ce7a4d6bb05094c4e949471bee5445e870a18b2f8aa91acd9f1b815f8cf34e.txt",
+    "sha256": "35ce7a4d6bb05094c4e949471bee5445e870a18b2f8aa91acd9f1b815f8cf34e",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "CONSUMED",
+      "action": "take"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.CONSUMED.logout",
+    "file": "ad3ca2c925fb99beff0358803854463ae723b41dea7cc8c895567b61e88be1c6.txt",
+    "sha256": "ad3ca2c925fb99beff0358803854463ae723b41dea7cc8c895567b61e88be1c6",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "CONSUMED",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.CONSUMED.close",
+    "file": "c1c3a6815d87e39269315e111745ed73fe1c630ae0b5ba225788b26e81c302a7.txt",
+    "sha256": "c1c3a6815d87e39269315e111745ed73fe1c630ae0b5ba225788b26e81c302a7",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "CONSUMED",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.REFUSED_TERMINAL.init",
+    "file": "65837c4cec2ee0c01e47b9b0197774c9a9d47378e106ef5312b92b5289523a43.txt",
+    "sha256": "65837c4cec2ee0c01e47b9b0197774c9a9d47378e106ef5312b92b5289523a43",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "REFUSED_TERMINAL",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.REFUSED_TERMINAL.logout",
+    "file": "3b85294b5d932641e45484e93013708dbc72bd644c2d5988dd1d263ffb683d68.txt",
+    "sha256": "3b85294b5d932641e45484e93013708dbc72bd644c2d5988dd1d263ffb683d68",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.REFUSED_TERMINAL.close",
+    "file": "a7a460b3ef66214541f6a3a51f0fd1f18dcb5f551efddad162b321239d6455d5.txt",
+    "sha256": "a7a460b3ef66214541f6a3a51f0fd1f18dcb5f551efddad162b321239d6455d5",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "REFUSED_TERMINAL",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.RETIRED.init",
+    "file": "808113019ec84b1e96be70e96967582119984527fb03c05fd5156bc319c1cd34.txt",
+    "sha256": "808113019ec84b1e96be70e96967582119984527fb03c05fd5156bc319c1cd34",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "RETIRED",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.RETIRED.logout",
+    "file": "1a90b6299fa1ec4532879973add679b5c24136123c0a46a5f137277abaf36fa5.txt",
+    "sha256": "1a90b6299fa1ec4532879973add679b5c24136123c0a46a5f137277abaf36fa5",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(LogoutRequiresLiveSession)); no native C_Logout on the explicitly closed selected session",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "RETIRED",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_generation.RETIRED.close",
+    "file": "1beeb0ea448c58d07e60cdb255dad5c550fcf86ee10568f5f07ccaa75e3cae76.txt",
+    "sha256": "1beeb0ea448c58d07e60cdb255dad5c550fcf86ee10568f5f07ccaa75e3cae76",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_AES_KEY_GEN",
+      "parameters": "AES128",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_VALUE_LEN",
+      "state": "RETIRED",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.IDLE.init",
+    "file": "209b131ff1e6fcc96b5906602f836f7b597a65f986894ea15d4d2ec33c35acc1.txt",
+    "sha256": "209b131ff1e6fcc96b5906602f836f7b597a65f986894ea15d4d2ec33c35acc1",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "IDLE",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.IDLE.logout",
+    "file": "f6e4090ce885899443cdca718ddcd817c0f0a977dcfc67af9236bd1464001906.txt",
+    "sha256": "f6e4090ce885899443cdca718ddcd817c0f0a977dcfc67af9236bd1464001906",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "IDLE",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.IDLE.close",
+    "file": "50c55eeb1729b58d9be3e48cc6ec072120a91763328103b947912c5ae7cc6e4d.txt",
+    "sha256": "50c55eeb1729b58d9be3e48cc6ec072120a91763328103b947912c5ae7cc6e4d",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "IDLE",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.CONSUMED.init",
+    "file": "02698e7b42883bb20c48f10917b97e1ac708ce48cd16be1183a99823d18f6d8f.txt",
+    "sha256": "02698e7b42883bb20c48f10917b97e1ac708ce48cd16be1183a99823d18f6d8f",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "CONSUMED",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.CONSUMED.take",
+    "file": "9cccdbd900eb8991d50ce9547b5a5e7398ef77759ddab36d5f397e167d3785d3.txt",
+    "sha256": "9cccdbd900eb8991d50ce9547b5a5e7398ef77759ddab36d5f397e167d3785d3",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "CONSUMED",
+      "action": "take"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.CONSUMED.logout",
+    "file": "1d6fb5d50574b78ac1c5a107b74f7b8a0f0a8f150c63ca2ccb5a2ab43a9ab92d.txt",
+    "sha256": "1d6fb5d50574b78ac1c5a107b74f7b8a0f0a8f150c63ca2ccb5a2ab43a9ab92d",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "CONSUMED",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.CONSUMED.close",
+    "file": "81e41f8fa14bc2e006d87392ab73bec22e06b5c5a5396ddfb5519b543f1efdeb.txt",
+    "sha256": "81e41f8fa14bc2e006d87392ab73bec22e06b5c5a5396ddfb5519b543f1efdeb",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "CONSUMED",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.REFUSED_TERMINAL.init",
+    "file": "a2a30b85af667637b58b80717f1a55d6e3a87269a7354e384f5d0bc64beb7efd.txt",
+    "sha256": "a2a30b85af667637b58b80717f1a55d6e3a87269a7354e384f5d0bc64beb7efd",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "REFUSED_TERMINAL",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.REFUSED_TERMINAL.logout",
+    "file": "24ec4aeff56bf93e05c07e8286a7b9f285f20b8f7110df7a4fd8c5426136663f.txt",
+    "sha256": "24ec4aeff56bf93e05c07e8286a7b9f285f20b8f7110df7a4fd8c5426136663f",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "REFUSED_TERMINAL",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.REFUSED_TERMINAL.close",
+    "file": "9c2dfb6a321118377781ac1251cf3b5f8b02863b74eab6560ded201cb98bea3c.txt",
+    "sha256": "9c2dfb6a321118377781ac1251cf3b5f8b02863b74eab6560ded201cb98bea3c",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "REFUSED_TERMINAL",
+      "action": "close"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.RETIRED.init",
+    "file": "c33f1408bb6c7999bf47a1d72c568bbb4714ae57e6289d879ffc68968ad2dd4e.txt",
+    "sha256": "c33f1408bb6c7999bf47a1d72c568bbb4714ae57e6289d879ffc68968ad2dd4e",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "RETIRED",
+      "action": "init"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.RETIRED.logout",
+    "file": "97ae30938ff98efd1d0e3941aef439e2a378032aca8361c913db934178674b61.txt",
+    "sha256": "97ae30938ff98efd1d0e3941aef439e2a378032aca8361c913db934178674b61",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(LogoutRequiresLiveSession)); no native C_Logout on the explicitly closed selected session",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "RETIRED",
+      "action": "logout"
+    }
+  },
+  {
+    "id": "direct.cross.native_pair_generation.RETIRED.close",
+    "file": "181abc77527c9e98a61d11a82fc6abfdef521f29f92b36be778bd835172fb474.txt",
+    "sha256": "181abc77527c9e98a61d11a82fc6abfdef521f29f92b36be778bd835172fb474",
+    "worker_mode": "direct-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession"
+    ],
+    "fixture": {
+      "generator": "CKM_EC_KEY_PAIR_GEN",
+      "parameters": "P-256",
+      "token": false,
+      "private": false,
+      "negative": "Omit only CKA_EC_PARAMS",
+      "state": "RETIRED",
+      "action": "close"
+    }
+  }
+]

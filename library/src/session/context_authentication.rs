@@ -95,6 +95,26 @@ impl ContextDiagnostics {
     }
 }
 
+/// Native context authentication has no operation argument. When a caller
+/// selects a ticket, its cell retains the possible grant across post-call
+/// diagnostics. Session possession serializes all writes to this marker.
+#[derive(Default)]
+pub(crate) struct ContextKeyBinding(std::sync::atomic::AtomicBool);
+
+impl ContextKeyBinding {
+    fn arm(&self) -> bool {
+        self.0.swap(true, std::sync::atomic::Ordering::AcqRel)
+    }
+
+    pub(crate) fn is_bound(&self) -> bool {
+        self.0.load(std::sync::atomic::Ordering::Acquire)
+    }
+
+    pub(crate) fn retire(&self) {
+        self.0.store(false, std::sync::atomic::Ordering::Release);
+    }
+}
+
 pub(crate) struct PreparedContextLogin<'a> {
     frame: Option<
         crate::native::frame::NativeFrame<
@@ -152,6 +172,14 @@ impl<'a> PreparedContextLogin<'a> {
     /// caller. Credentials are still erased/retained at the original call
     /// boundary. The caller keeps this owner until its final error transfer.
     pub(crate) fn perform(&mut self, session: &Session) -> Result<()> {
+        self.perform_with_binding(session, None)
+    }
+
+    pub(crate) fn perform_with_binding(
+        &mut self,
+        session: &Session,
+        binding: Option<&ContextKeyBinding>,
+    ) -> Result<()> {
         let call = self.call;
         let mut frame =
             self.frame
@@ -180,6 +208,7 @@ impl<'a> PreparedContextLogin<'a> {
         let (pointer, length) = input.pin.arguments()?;
         let s = &body.access;
         Inner::validate(s)?;
+        let previously_bound;
         let rv = if matches!(call, crate::native_return::SessionCall::ContextLoginUser) {
             let native = s.native.login_user.ok_or(Error::Unsupported(
                 crate::UnsupportedReason::NativeFunction {
@@ -194,6 +223,7 @@ impl<'a> PreparedContextLogin<'a> {
                 name.as_mut_ptr()
             };
             s.native.record(call.function())?;
+            previously_bound = binding.map(ContextKeyBinding::arm);
             returned.arm();
             // SAFETY: PIN/name/sentinels belong to this stable frame; the
             // caller's sequence owner and token writer preserve its parent.
@@ -217,6 +247,7 @@ impl<'a> PreparedContextLogin<'a> {
                 ),
             ))?;
             s.native.record(call.function())?;
+            previously_bound = binding.map(ContextKeyBinding::arm);
             returned.arm();
             // SAFETY: the frame retains the same complete ownership for the
             // ordinary login variant; the writer excludes concurrent calls.
@@ -226,6 +257,14 @@ impl<'a> PreparedContextLogin<'a> {
             )
         };
         let complete = call.completion_known(rv);
+        // This refusal establishes that this PIN attempt granted no access.
+        // Preserve an earlier grant on retry. In particular, a wrapper error
+        // on native success and an unresolved native return retain the marker.
+        if complete && rv == fe11_sys::CKR_PIN_INCORRECT && previously_bound == Some(false) {
+            if let Some(binding) = binding {
+                binding.retire();
+            }
+        }
         if complete {
             returned.terminated();
         }

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "lifecycle.cross.native_messages.ABSENT.start",
+    "file": "01f225cdb7583c0a2f715e7991786f4712f0f959c53dfc1e6e4f35f5c107295e.txt",
+    "sha256": "01f225cdb7583c0a2f715e7991786f4712f0f959c53dfc1e6e4f35f5c107295e",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_MessageSignInit CKR_FUNCTION_NOT_SUPPORTED; no successful native operation owner or output.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageSignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.native_messages.ABSENT.close",
+    "file": "000a316781b6b545d96f78f91b2b7e2b6cd4638b5ba8d5a6f54c6644cf5c1c13.txt",
+    "sha256": "000a316781b6b545d96f78f91b2b7e2b6cd4638b5ba8d5a6f54c6644cf5c1c13",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; no completed crypto value inferred.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.native_messages.REFUSED.start",
+    "file": "33a2964c5c44f09c84b535d91f2682e77e07027bf65cf967ba725dd73ce8190c.txt",
+    "sha256": "33a2964c5c44f09c84b535d91f2682e77e07027bf65cf967ba725dd73ce8190c",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_MessageSignInit CKR_FUNCTION_NOT_SUPPORTED; no successful native operation owner or output.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageSignInit",
+      "C_MessageSignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.native_messages.REFUSED.close",
+    "file": "912a743ab1cbdafc9e88703be2320f2720e1a7edb7d75ce6adc3cd7a44c1e1b0.txt",
+    "sha256": "912a743ab1cbdafc9e88703be2320f2720e1a7edb7d75ce6adc3cd7a44c1e1b0",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; no completed crypto value inferred.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_MessageSignInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.native_messages.CLOSED.start",
+    "file": "f2223140b55ad6ef30991c9aee672d60e089d69cc7f6ed0430cda78e4bea7366.txt",
+    "sha256": "f2223140b55ad6ef30991c9aee672d60e089d69cc7f6ed0430cda78e4bea7366",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.native_messages.CLOSED.close",
+    "file": "e3e97ae24e053df59a3cfe3fbbd62ed40c0edfe56b87f02d485fad3f1b381195.txt",
+    "sha256": "e3e97ae24e053df59a3cfe3fbbd62ed40c0edfe56b87f02d485fad3f1b381195",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "public_hmac_key": "RFC4231 test case1"
+    },
+    "receiver": "AdvancedSession synchronous owner"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.ABSENT.start",
+    "file": "f6ee53ebac7de9f24f0ead5c6edf795c6267c6e6922e3e298a7dc742477952f4.txt",
+    "sha256": "f6ee53ebac7de9f24f0ead5c6edf795c6267c6e6922e3e298a7dc742477952f4",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_SignRecoverInit CKR_FUNCTION_NOT_SUPPORTED; no successful native operation owner or output.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.ABSENT.close",
+    "file": "ff1a7a86d4fc54836a670d6fab8861ed2c1c006083c17a699911bad42d05b01f.txt",
+    "sha256": "ff1a7a86d4fc54836a670d6fab8861ed2c1c006083c17a699911bad42d05b01f",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; no completed crypto value inferred.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.REFUSED.start",
+    "file": "74688282dbbdba486bab861fb6104fa91670b3882c9a501c075f345dcf9300be.txt",
+    "sha256": "74688282dbbdba486bab861fb6104fa91670b3882c9a501c075f345dcf9300be",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_SignRecoverInit CKR_FUNCTION_NOT_SUPPORTED; no successful native operation owner or output.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_SignRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.REFUSED.close",
+    "file": "cc662300934f1f723ed5928e0cc6977137b53d9754904e1bcbb80039db6e31a2.txt",
+    "sha256": "cc662300934f1f723ed5928e0cc6977137b53d9754904e1bcbb80039db6e31a2",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; no completed crypto value inferred.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.CLOSED.start",
+    "file": "e4ab4866905bd1db318277f6287c1c3afa90d6befdf60be00df58e8f940d6628.txt",
+    "sha256": "e4ab4866905bd1db318277f6287c1c3afa90d6befdf60be00df58e8f940d6628",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  },
+  {
+    "id": "lifecycle.cross.signature_recovery.CLOSED.close",
+    "file": "7d8003ee43f2d71e4f93aecb7aff1ff39bcdfd634da87c3d882e5923c7dd2609.txt",
+    "sha256": "7d8003ee43f2d71e4f93aecb7aff1ff39bcdfd634da87c3d882e5923c7dd2609",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "id": "OPENSSL.RSA.pkcs1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "receiver": "Session"
+  }
+]

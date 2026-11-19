@@ -1,0 +1,4 @@
+RW_USER
+create_private_session
+RW_USER
+CKR_OK

@@ -1,0 +1,224 @@
+[
+  {
+    "id": "resource.drain-owner-order.012",
+    "file": "8b4e3ee80ff35d661ea1f5181534ee8afa1e217400d0cab7ec8c58220a4722d7.txt",
+    "sha256": "8b4e3ee80ff35d661ea1f5181534ee8afa1e217400d0cab7ec8c58220a4722d7",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-012",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.drain-owner-order.021",
+    "file": "98ce860a074cc742d05e3b19a4fbea68a99c5ca306fac26d9de9543959a1b9ae.txt",
+    "sha256": "98ce860a074cc742d05e3b19a4fbea68a99c5ca306fac26d9de9543959a1b9ae",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-021",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.drain-owner-order.102",
+    "file": "2004b31d4e99ba008998d7b11c11d0d0e83286c8350dda9e5a6157f8ad7b6b8d.txt",
+    "sha256": "2004b31d4e99ba008998d7b11c11d0d0e83286c8350dda9e5a6157f8ad7b6b8d",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-102",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.drain-owner-order.120",
+    "file": "05c33d0f533084dc1ceb1fc877a666ddcb2daffea98c9748efb3b3214c6719f6.txt",
+    "sha256": "05c33d0f533084dc1ceb1fc877a666ddcb2daffea98c9748efb3b3214c6719f6",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-120",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.drain-owner-order.201",
+    "file": "53542f67b37ce7310bd848e044d29d20c0aceeda92eebeb3650f2d9835add01c.txt",
+    "sha256": "53542f67b37ce7310bd848e044d29d20c0aceeda92eebeb3650f2d9835add01c",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-201",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  },
+  {
+    "id": "resource.drain-owner-order.210",
+    "file": "e39381404773be5cac2783dd6837fadb5b018a8c19c7386483759172cf737571.txt",
+    "sha256": "e39381404773be5cac2783dd6837fadb5b018a8c19c7386483759172cf737571",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "drain-order-210",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "All six orders of idle, completed and active owners. Drain acquisition dispatches nothing; exact typed finalization refusal and zero dispatch until all owners close. Active digest advances only through drain; session usage3/2/1/0 and exact retained SHA256 outputs survive module close.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  }
+]

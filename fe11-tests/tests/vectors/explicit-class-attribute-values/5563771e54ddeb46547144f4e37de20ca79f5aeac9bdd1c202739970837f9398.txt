@@ -1,0 +1,3 @@
+generic
+CKA_SIGN|bool|true
+CKA_VERIFY|bool|true

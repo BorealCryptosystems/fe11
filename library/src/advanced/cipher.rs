@@ -307,6 +307,21 @@ pub(super) struct CipherOperation {
 // proof. Its operation mutex serializes calls and observation of native output.
 unsafe impl Send for CipherOperation {}
 impl CipherOperation {
+    pub(in crate::advanced) fn has_context_key(&self) -> bool {
+        matches!(self.key, CipherLease::WithKey(_))
+    }
+
+    pub(in crate::advanced) fn readers_on(
+        &self,
+        activity: &std::sync::Arc<crate::registry::Activity>,
+        uid: u64,
+    ) -> usize {
+        match &self.key {
+            CipherLease::WithKey(key) => key.readers_on(activity, uid),
+            CipherLease::NoKey => 0,
+        }
+    }
+
     fn new(key: CipherLease, frame: PreparedCipher, plan: CipherOutputPlan) -> Self {
         Self {
             observer: OutputObserver::Ticket,
@@ -332,6 +347,9 @@ impl CipherOperation {
         self.activity == NativeActivity::InitializationRefused
     }
 
+    pub(super) fn category(&self) -> CK_FLAGS {
+        self.frame.direction.category()
+    }
     pub(super) fn native_inactive(&self) -> bool {
         self.activity.inactive()
     }

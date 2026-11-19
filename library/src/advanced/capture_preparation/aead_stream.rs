@@ -20,7 +20,7 @@ pub(super) fn prepare<'a>(
     let mut allocation_floor = 0;
     loop {
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != ticket.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -120,7 +120,7 @@ pub(super) fn prepare<'a>(
             let owner_credit = credit.split(CaptureOwner::allocation_bytes())?;
             let io = StateIo::capture_prepaid(&mut credit, state_maximum)?;
             let access = session.advanced_access()?;
-            let held = access.operations.get(ticket.uid)?;
+            let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
             let operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

@@ -198,7 +198,6 @@ impl SessionLedger {
             .find(|e| {
                 e.mode == crate::AdvancedSessionMode::Synchronous
                     && e.credit.client_id() == client
-                    && e.advanced_operation.load(Ordering::Acquire) == 0
                     && Arc::ptr_eq(&e.snapshot, snapshot)
                     && (!rw || e.read_write)
                     && !e.closed.load(Ordering::Acquire)

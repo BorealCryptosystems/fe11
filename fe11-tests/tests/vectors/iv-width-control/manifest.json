@@ -1,0 +1,134 @@
+[
+  {
+    "id": "iv-width.native.session.encrypt",
+    "file": "1a4175ec7bb2277d31304d35b8bb2b912431bf5167d245ccda244c4c72e0b338.txt",
+    "sha256": "1a4175ec7bb2277d31304d35b8bb2b912431bf5167d245ccda244c4c72e0b338",
+    "worker_mode": "cipher-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Accepted AES key and IV000102...0f, plaintext32zeros. Exact independent PyCryptodome3.23.0 CBC answer and inverse; single and multipart routes."
+  },
+  {
+    "id": "iv-width.native.session.decrypt",
+    "file": "3e8e1c6471956f969a7e40364b954546c2909732989a9cf8d784bfe0946a4fbf.txt",
+    "sha256": "3e8e1c6471956f969a7e40364b954546c2909732989a9cf8d784bfe0946a4fbf",
+    "worker_mode": "cipher-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Accepted AES key and IV000102...0f, plaintext32zeros. Exact independent PyCryptodome3.23.0 CBC answer and inverse; single and multipart routes."
+  },
+  {
+    "id": "iv-width.native.advanced.encrypt",
+    "file": "d87f598f91010fc9cb78ac828c7bf19c32c4485797c0d601997e93d08a5f4f23.txt",
+    "sha256": "d87f598f91010fc9cb78ac828c7bf19c32c4485797c0d601997e93d08a5f4f23",
+    "worker_mode": "cipher-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal"
+    ],
+    "oracle": "Accepted AES key and IV000102...0f, plaintext32zeros. Exact independent PyCryptodome3.23.0 CBC answer and inverse; single and multipart routes."
+  },
+  {
+    "id": "iv-width.native.advanced.decrypt",
+    "file": "04dd74785c9c7981b1ee2267343fd6e2cdf4f3ef62e8b827da2b63d6ffd7701c.txt",
+    "sha256": "04dd74785c9c7981b1ee2267343fd6e2cdf4f3ef62e8b827da2b63d6ffd7701c",
+    "worker_mode": "cipher-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal"
+    ],
+    "oracle": "Accepted AES key and IV000102...0f, plaintext32zeros. Exact independent PyCryptodome3.23.0 CBC answer and inverse; single and multipart routes."
+  }
+]

@@ -63,6 +63,7 @@ pub(super) fn start_admission(
         &mut guarded.registry,
     )?;
     let ticket = OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,

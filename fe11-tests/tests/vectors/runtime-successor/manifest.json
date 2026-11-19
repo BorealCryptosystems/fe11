@@ -1,0 +1,102 @@
+[
+  {
+    "id": "coexistence.successor.owned",
+    "file": "33bff9108736f23280e9cd50cb1472e3a5b4403ed3f2da1fe67b8487a4fb75c6.txt",
+    "sha256": "33bff9108736f23280e9cd50cb1472e3a5b4403ed3f2da1fe67b8487a4fb75c6",
+    "worker_mode": "runtime-successor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Owner closes both sessions and finalizes; completed SHA256 bytes and public attribute remain readable. Explicit successor initializes or adopts application initialization once; repeat successor and old references refuse locally with exact types and no dispatch. Fresh search sees only persistent object, reads its value, destroys it; new session performs SHA256. This is owner closure, not external loss.",
+    "source": {
+      "contract": "Module::successor, attach_successor, owned results, NativeObjectRef provenance"
+    }
+  },
+  {
+    "id": "coexistence.successor.attached",
+    "file": "df35a6e25179552aef05aff2513eb13f072f1e88f0548deaa074ed91218d7889.txt",
+    "sha256": "df35a6e25179552aef05aff2513eb13f072f1e88f0548deaa074ed91218d7889",
+    "worker_mode": "runtime-successor",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize",
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Owner closes both sessions and finalizes; completed SHA256 bytes and public attribute remain readable. Explicit successor initializes or adopts application initialization once; repeat successor and old references refuse locally with exact types and no dispatch. Fresh search sees only persistent object, reads its value, destroys it; new session performs SHA256. This is owner closure, not external loss.",
+    "source": {
+      "contract": "Module::successor, attach_successor, owned results, NativeObjectRef provenance"
+    }
+  }
+]

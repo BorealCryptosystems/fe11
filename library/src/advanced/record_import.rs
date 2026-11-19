@@ -164,3 +164,10 @@ impl CallerAssertedAuthenticatedRecord {
         })
     }
 }
+
+impl crate::symmetric::memory::RetainedStorage for CallerAssertedAuthenticatedRecord {
+    fn retain_credits(&self, retained: &mut crate::symmetric::memory::RetainedBytes) -> Result<()> {
+        self.bytes.retain_credit(retained)?;
+        retained.add_credit(&self._credit)
+    }
+}

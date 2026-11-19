@@ -1,0 +1,2452 @@
+[
+  {
+    "id": "state.authentication.RO_PUBLIC.login_user",
+    "file": "2ff19100053559568c69280e5e79dc6868dff47a69ba6e8866b346c983c62629.txt",
+    "sha256": "2ff19100053559568c69280e5e79dc6868dff47a69ba6e8866b346c983c62629",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.login_so",
+    "file": "c05faba19fcd9c954b11d6903bed60c5abd8eb7fd7a0cdc36b25a4103a2e9bd9.txt",
+    "sha256": "c05faba19fcd9c954b11d6903bed60c5abd8eb7fd7a0cdc36b25a4103a2e9bd9",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY_EXISTS",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.logout",
+    "file": "6abc32b675b534fd1b5c233a21bbba1cf1450c228854e5795fd33b79e1cfb562.txt",
+    "sha256": "6abc32b675b534fd1b5c233a21bbba1cf1450c228854e5795fd33b79e1cfb562",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN normative; SoftHSM C_Logout unconditionally returns OK: source-indicated deviation, not expected conformity",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.open_ro",
+    "file": "1f558f0e6306317330d77001e2241fc5828297101ad9f2c2ec6e6461633ae858.txt",
+    "sha256": "1f558f0e6306317330d77001e2241fc5828297101ad9f2c2ec6e6461633ae858",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.open_rw",
+    "file": "d51d4663af718d142fe2d4993d4f268193e0b07f759049a782ad40bc191b027d.txt",
+    "sha256": "d51d4663af718d142fe2d4993d4f268193e0b07f759049a782ad40bc191b027d",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.close_last",
+    "file": "f45367c9de94a92c3174c7569c3dfd20244ff1b306f3a3ef27b54e3f32d8c567.txt",
+    "sha256": "f45367c9de94a92c3174c7569c3dfd20244ff1b306f3a3ef27b54e3f32d8c567",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.close_with_peer",
+    "file": "9a99c394a9d2bf18cac50e58174bd80089a624b1d35ce950045833d1f2fe34fc.txt",
+    "sha256": "9a99c394a9d2bf18cac50e58174bd80089a624b1d35ce950045833d1f2fe34fc",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.create_public_session",
+    "file": "fb5dea5adfbcd6de275dafc5b10bf42acd261172cf7f4b447e3d8bc23d8d2f75.txt",
+    "sha256": "fb5dea5adfbcd6de275dafc5b10bf42acd261172cf7f4b447e3d8bc23d8d2f75",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.create_private_session",
+    "file": "626ab3547d8b9d0683ae7aebfc110d41aa3c967eb1ce5291ad154dc4aa11c782.txt",
+    "sha256": "626ab3547d8b9d0683ae7aebfc110d41aa3c967eb1ce5291ad154dc4aa11c782",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.create_public_token",
+    "file": "513cefd0913a558cac69943f21483478bfcd193912bc1180f680dfc5fb85e366.txt",
+    "sha256": "513cefd0913a558cac69943f21483478bfcd193912bc1180f680dfc5fb85e366",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_PUBLIC.set_pin",
+    "file": "34aed104255cb5f3232ab32e9e4758b40a83f601c85ef2d511e05df99f033c63.txt",
+    "sha256": "34aed104255cb5f3232ab32e9e4758b40a83f601c85ef2d511e05df99f033c63",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_SetPIN",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_PUBLIC",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_USER.login_user",
+    "file": "8dc933f8cd1ec7032dbadd0fe499bb33e45b311f286b8e160efac109c133f6d6.txt",
+    "sha256": "8dc933f8cd1ec7032dbadd0fe499bb33e45b311f286b8e160efac109c133f6d6",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_ALREADY_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.logout",
+    "file": "ad6c5e98ebdad5b6fb3dff0ddb41b38cd496750d5c8d90e71d22aa6c76e6228a.txt",
+    "sha256": "ad6c5e98ebdad5b6fb3dff0ddb41b38cd496750d5c8d90e71d22aa6c76e6228a",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_USER.open_ro",
+    "file": "751e0fb6db9ae095d86d4eb07931af8496132f3ec072405e4b85afcf75bf66e9.txt",
+    "sha256": "751e0fb6db9ae095d86d4eb07931af8496132f3ec072405e4b85afcf75bf66e9",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.open_rw",
+    "file": "4536781de10430412fa2e051c391a699b7fc41aa4b242a756fc4706c1d8bb6b5.txt",
+    "sha256": "4536781de10430412fa2e051c391a699b7fc41aa4b242a756fc4706c1d8bb6b5",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.close_last",
+    "file": "9a7821334af2fd06dbdd67c8715bd11ddc3957cb66ec2b19ecbd2d508839a046.txt",
+    "sha256": "9a7821334af2fd06dbdd67c8715bd11ddc3957cb66ec2b19ecbd2d508839a046",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RO_USER.close_with_peer",
+    "file": "a016075c14ee3b1f761e2edc0011fdb37a92d41bc7221df0d7d35463f83fa774.txt",
+    "sha256": "a016075c14ee3b1f761e2edc0011fdb37a92d41bc7221df0d7d35463f83fa774",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.create_public_session",
+    "file": "74da207e7fc40a264574035ce51fb893f646c481591826e7e00212667130976f.txt",
+    "sha256": "74da207e7fc40a264574035ce51fb893f646c481591826e7e00212667130976f",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.create_private_session",
+    "file": "514fc3c374263c30d5ed3e4fc4eb4f38fc6720185debfc02713ae0e241d159a3.txt",
+    "sha256": "514fc3c374263c30d5ed3e4fc4eb4f38fc6720185debfc02713ae0e241d159a3",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.create_public_token",
+    "file": "61599454879376f7593588a34f1d4e8495f64be3b055ac905dc61e738489777f.txt",
+    "sha256": "61599454879376f7593588a34f1d4e8495f64be3b055ac905dc61e738489777f",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.create_private_token",
+    "file": "0fd2cbedd13270ca53df3e17af7e7d8620d77cdf69d46607b5daeb1520baf676.txt",
+    "sha256": "0fd2cbedd13270ca53df3e17af7e7d8620d77cdf69d46607b5daeb1520baf676",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RO_USER.set_pin",
+    "file": "3ebdee7b4fa99715820c6235db0337c45df99ca9d5e9162f86d337ecd9aa27f6.txt",
+    "sha256": "3ebdee7b4fa99715820c6235db0337c45df99ca9d5e9162f86d337ecd9aa27f6",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_ONLY",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_SetPIN",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RO_USER",
+    "expected_state_after": "RO_USER"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.login_user",
+    "file": "6fcbec0e9aed8bb632cecfed0d7f2ceca6bf51bb77b71b0ff4f097751b609cbb.txt",
+    "sha256": "6fcbec0e9aed8bb632cecfed0d7f2ceca6bf51bb77b71b0ff4f097751b609cbb",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.login_so",
+    "file": "94e02598853c0a50da23b2b6acd4706b051bbea4696da747bc9c44fcef084bcc.txt",
+    "sha256": "94e02598853c0a50da23b2b6acd4706b051bbea4696da747bc9c44fcef084bcc",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.logout",
+    "file": "f146fdaf8bf3b0407154b7ebe7dd408e4adcb47e69cc99b4b2f95204b27407e6.txt",
+    "sha256": "f146fdaf8bf3b0407154b7ebe7dd408e4adcb47e69cc99b4b2f95204b27407e6",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN normative; SoftHSM C_Logout unconditionally returns OK: source-indicated deviation, not expected conformity",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.open_ro",
+    "file": "c55236b6533259d6047e459419b85d5ac05dd4e6213163f00afc97ee59939ee4.txt",
+    "sha256": "c55236b6533259d6047e459419b85d5ac05dd4e6213163f00afc97ee59939ee4",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.open_rw",
+    "file": "5703299d24240bf2ac0558161ad0dbfc4e3e07b869654970f73f6e5d4336ff9b.txt",
+    "sha256": "5703299d24240bf2ac0558161ad0dbfc4e3e07b869654970f73f6e5d4336ff9b",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.close_last",
+    "file": "3fe10815cc739c2c60acd15dab2b8cb0be952663f548cef8e551e5dc4265f4ad.txt",
+    "sha256": "3fe10815cc739c2c60acd15dab2b8cb0be952663f548cef8e551e5dc4265f4ad",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.close_with_peer",
+    "file": "5be530db5bc62873698cf9777ab331aefd2ab12161c18139bbeee1c1726325c2.txt",
+    "sha256": "5be530db5bc62873698cf9777ab331aefd2ab12161c18139bbeee1c1726325c2",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.create_public_session",
+    "file": "874adaaa8c6addd232fb9ffd332a7d044adfce23848bf95e58704004e4938b68.txt",
+    "sha256": "874adaaa8c6addd232fb9ffd332a7d044adfce23848bf95e58704004e4938b68",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.create_private_session",
+    "file": "13bfb2f5c5b1f0a982fbf5435e88e0fea5708b8c50f1aab5c9ebf33643e27a83.txt",
+    "sha256": "13bfb2f5c5b1f0a982fbf5435e88e0fea5708b8c50f1aab5c9ebf33643e27a83",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.create_public_token",
+    "file": "f333fb84b74131dcf6e980ac7969735b787a9f162548437dfd6d1670250fc532.txt",
+    "sha256": "f333fb84b74131dcf6e980ac7969735b787a9f162548437dfd6d1670250fc532",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.create_private_token",
+    "file": "84034b197eb87584f78be82b2a7ed8a3d8c2b0aac4c36bfd78b34fe927a09eb6.txt",
+    "sha256": "84034b197eb87584f78be82b2a7ed8a3d8c2b0aac4c36bfd78b34fe927a09eb6",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.set_pin",
+    "file": "e5706ea896eee0d319d9236ed46e72c0b1b970202e834487b872c34998264f25.txt",
+    "sha256": "e5706ea896eee0d319d9236ed46e72c0b1b970202e834487b872c34998264f25",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK; public RW changes USER PIN; SO changes SO PIN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_SetPIN",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_PUBLIC.init_pin",
+    "file": "532bc019bd768e8f6feadc19cb2772aa659582b8d6fa2938fb2ff479ed8e8f55.txt",
+    "sha256": "532bc019bd768e8f6feadc19cb2772aa659582b8d6fa2938fb2ff479ed8e8f55",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_InitPIN",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_PUBLIC",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_USER.login_user",
+    "file": "e4d9ecec78e225d16362fa234f5e1320c9934541cb864ed379e66ae9a9a9b72e.txt",
+    "sha256": "e4d9ecec78e225d16362fa234f5e1320c9934541cb864ed379e66ae9a9a9b72e",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_ALREADY_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.login_so",
+    "file": "843a4ca5300dd0983394a16168b3dd6c19c82d3569ae85197a933be2fad78670.txt",
+    "sha256": "843a4ca5300dd0983394a16168b3dd6c19c82d3569ae85197a933be2fad78670",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_ANOTHER_ALREADY_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.logout",
+    "file": "c6290c982776c6e236c0bb6d3bbebdb1f8b63d17068f425b621429df36ff24eb.txt",
+    "sha256": "c6290c982776c6e236c0bb6d3bbebdb1f8b63d17068f425b621429df36ff24eb",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_USER.open_ro",
+    "file": "bcca95503e459009a574aa500fda20a3abc80192e2f51744cba74eee52932a71.txt",
+    "sha256": "bcca95503e459009a574aa500fda20a3abc80192e2f51744cba74eee52932a71",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.open_rw",
+    "file": "205590bba157800720fbdd88bb6e93a0558b4d03542e95d4616f35ccac2f099b.txt",
+    "sha256": "205590bba157800720fbdd88bb6e93a0558b4d03542e95d4616f35ccac2f099b",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.close_last",
+    "file": "b1117923c704678f38329fcb848925cc23d9615ccd0fd11b4a29322d6f3d9b7e.txt",
+    "sha256": "b1117923c704678f38329fcb848925cc23d9615ccd0fd11b4a29322d6f3d9b7e",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_USER.close_with_peer",
+    "file": "3848bf3497ea3a44c16b79a9e6b9bdb0699b45054760b6ad011e7ad14f13570d.txt",
+    "sha256": "3848bf3497ea3a44c16b79a9e6b9bdb0699b45054760b6ad011e7ad14f13570d",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.create_public_session",
+    "file": "408a68ea62551fbd00732698b02792956ed84495a86bbd12b8c5725f750c9b43.txt",
+    "sha256": "408a68ea62551fbd00732698b02792956ed84495a86bbd12b8c5725f750c9b43",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.create_private_session",
+    "file": "98560d94940037282ee5bdc2e9839aa6bab2bf2d27e463ba5226dd16d2533bad.txt",
+    "sha256": "98560d94940037282ee5bdc2e9839aa6bab2bf2d27e463ba5226dd16d2533bad",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.create_public_token",
+    "file": "3a4ff66bfdc1b228596dd79ff8c957148dce8744f9ff00dfd1f269e3ee5bb44e.txt",
+    "sha256": "3a4ff66bfdc1b228596dd79ff8c957148dce8744f9ff00dfd1f269e3ee5bb44e",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.create_private_token",
+    "file": "53b9a06c9dfe7ee85cbbb5ff83b7237fcb7fbfb61185ceab377cfe2f6f56e427.txt",
+    "sha256": "53b9a06c9dfe7ee85cbbb5ff83b7237fcb7fbfb61185ceab377cfe2f6f56e427",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.set_pin",
+    "file": "7e9126cbfd7661127fd800c93f0063a7dc6f43e11d905e6d549f23dfdfd14ea2.txt",
+    "sha256": "7e9126cbfd7661127fd800c93f0063a7dc6f43e11d905e6d549f23dfdfd14ea2",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK; public RW changes USER PIN; SO changes SO PIN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_SetPIN",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_USER.init_pin",
+    "file": "dc68e215cbb7dcf99b79058aad454b6a4dbb30a6393eea25b5ff447cb928caad.txt",
+    "sha256": "dc68e215cbb7dcf99b79058aad454b6a4dbb30a6393eea25b5ff447cb928caad",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_InitPIN",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_USER",
+    "expected_state_after": "RW_USER"
+  },
+  {
+    "id": "state.authentication.RW_SO.login_user",
+    "file": "8f14d37e234070ba8413c2f0809cc8669f3205b7c7f9cb02d9c5c9c327adedd3.txt",
+    "sha256": "8f14d37e234070ba8413c2f0809cc8669f3205b7c7f9cb02d9c5c9c327adedd3",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_ANOTHER_ALREADY_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.login_so",
+    "file": "f387eb4e90b3bd6b7d68333d929c4374c124260635adfbe7c4db53a051e5cf53.txt",
+    "sha256": "f387eb4e90b3bd6b7d68333d929c4374c124260635adfbe7c4db53a051e5cf53",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_ALREADY_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.logout",
+    "file": "176c4af1bf2b4fa9db4c98b7f83798e3b9782e2d5a162959dee7b7371e094203.txt",
+    "sha256": "176c4af1bf2b4fa9db4c98b7f83798e3b9782e2d5a162959dee7b7371e094203",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_SO.open_ro",
+    "file": "9079344656b78f40e148d8f661f03915909229db62d9fc045b3c1372794f2d4e.txt",
+    "sha256": "9079344656b78f40e148d8f661f03915909229db62d9fc045b3c1372794f2d4e",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_SESSION_READ_WRITE_SO_EXISTS",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.open_rw",
+    "file": "18d6897f0d4db44ee135067dc58da5f99c98c3c4eaf7111434d7aab4fdad3797.txt",
+    "sha256": "18d6897f0d4db44ee135067dc58da5f99c98c3c4eaf7111434d7aab4fdad3797",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.close_last",
+    "file": "dea2f6b6b78245f5eb9778cc42bc4f39bc73e1996239381d861b4c29f79dd124.txt",
+    "sha256": "dea2f6b6b78245f5eb9778cc42bc4f39bc73e1996239381d861b4c29f79dd124",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_PUBLIC"
+  },
+  {
+    "id": "state.authentication.RW_SO.close_with_peer",
+    "file": "6ebdd34686274e1b9804e9df791ad257c7dbb60f1430ae6bb32605b060858b46.txt",
+    "sha256": "6ebdd34686274e1b9804e9df791ad257c7dbb60f1430ae6bb32605b060858b46",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.create_public_session",
+    "file": "9a3d67d2e5fa1ef18179987f117f6ee3dd56102ee924ae52542ee57cc61c12ff.txt",
+    "sha256": "9a3d67d2e5fa1ef18179987f117f6ee3dd56102ee924ae52542ee57cc61c12ff",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.create_private_session",
+    "file": "7306ccd889b4fb271d35b8dbdfc81f87bb621c61bc5ec1432d621ef8f4fc6b65.txt",
+    "sha256": "7306ccd889b4fb271d35b8dbdfc81f87bb621c61bc5ec1432d621ef8f4fc6b65",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.create_public_token",
+    "file": "e3c7f17720953b0d8f1e92de533e8317019ba00c64bd18cde4999f4ea40a4a03.txt",
+    "sha256": "e3c7f17720953b0d8f1e92de533e8317019ba00c64bd18cde4999f4ea40a4a03",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_DestroyObject",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.create_private_token",
+    "file": "717138021f63ef910a01849a63eee790bf157743feae494686170b4f0250d5fd.txt",
+    "sha256": "717138021f63ef910a01849a63eee790bf157743feae494686170b4f0250d5fd",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_USER_NOT_LOGGED_IN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_CreateObject",
+      "C_GetSessionInfo",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.set_pin",
+    "file": "fd672dc71c9cc7be6d8347863ba233eca3dc6cafa9a7aaba28506ce0cab77d34.txt",
+    "sha256": "fd672dc71c9cc7be6d8347863ba233eca3dc6cafa9a7aaba28506ce0cab77d34",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK; public RW changes USER PIN; SO changes SO PIN",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_SetPIN",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  },
+  {
+    "id": "state.authentication.RW_SO.init_pin",
+    "file": "4d50506704ac00dc754df0b2f2b7aeca138a0610d50144d62835abf71f2e476e.txt",
+    "sha256": "4d50506704ac00dc754df0b2f2b7aeca138a0610d50144d62835abf71f2e476e",
+    "worker_mode": "authentication-state",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "CKR_OK",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_InitPIN",
+      "C_GetSessionInfo",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_CloseSession"
+    ],
+    "source": {
+      "specification": "PKCS#11 session states and function-specific return values"
+    },
+    "expected_state_before": "RW_SO",
+    "expected_state_after": "RW_SO"
+  }
+]

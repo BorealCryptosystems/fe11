@@ -1,0 +1,200 @@
+[
+  {
+    "id": "negative.CKM_DSA_SHA1.sign.usage",
+    "file": "192292641bb4ad906350c456f02c5888e406ab44e77451ec7d81ae48a043e057.txt",
+    "sha256": "192292641bb4ad906350c456f02c5888e406ab44e77451ec7d81ae48a043e057",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source_control": "operation.CKM_DSA_SHA1.verify@Session::verify_native@DSA-SigVer-1.0.1.1",
+    "source_fixture_sha256": "2cdb6e1843a966a707b4baf370a8f6b7d4f1d9426f6239e885889ee28aa84bd3",
+    "provenance": "Derived public test signature, not an original published vector. Arithmetic calibrated against original published signature; fixed public test nonce1. DSA uses derived public test private scalar1 and corresponding y=g. Never use these scalars for operational keys."
+  },
+  {
+    "id": "negative.CKM_DSA_SHA1.verify.usage",
+    "file": "192292641bb4ad906350c456f02c5888e406ab44e77451ec7d81ae48a043e057.txt",
+    "sha256": "192292641bb4ad906350c456f02c5888e406ab44e77451ec7d81ae48a043e057",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source_control": "operation.CKM_DSA_SHA1.verify@Session::verify_native@DSA-SigVer-1.0.1.1",
+    "source_fixture_sha256": "2cdb6e1843a966a707b4baf370a8f6b7d4f1d9426f6239e885889ee28aa84bd3",
+    "provenance": "Derived public test signature, not an original published vector. Arithmetic calibrated against original published signature; fixed public test nonce1. DSA uses derived public test private scalar1 and corresponding y=g. Never use these scalars for operational keys."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA1.sign.usage",
+    "file": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483.txt",
+    "sha256": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483",
+    "worker_mode": "classical-sign-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source_control": "operation.CKM_ECDSA_SHA256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.14.131",
+    "source_fixture_sha256": "b9facf84eeee0b7ffd42c4509a0c30a284a7b0eb08ee260a4c143eba234fdf48",
+    "provenance": "Derived public test signature, not an original published vector. Arithmetic calibrated against original published signature; fixed public test nonce1. DSA uses derived public test private scalar1 and corresponding y=g. Never use these scalars for operational keys."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA1.verify.usage",
+    "file": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483.txt",
+    "sha256": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483",
+    "worker_mode": "classical-verify-denied",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source_control": "operation.CKM_ECDSA_SHA256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.14.131",
+    "source_fixture_sha256": "b9facf84eeee0b7ffd42c4509a0c30a284a7b0eb08ee260a4c143eba234fdf48",
+    "provenance": "Derived public test signature, not an original published vector. Arithmetic calibrated against original published signature; fixed public test nonce1. DSA uses derived public test private scalar1 and corresponding y=g. Never use these scalars for operational keys."
+  },
+  {
+    "id": "negative.CKM_ECDSA_SHA1.verify.changed",
+    "file": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483.txt",
+    "sha256": "0aafb07e10d62620545a99487d6be180f14e75929fad8bf83a6f64aa24e62483",
+    "worker_mode": "classical-changed",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_SIGNATURE_INVALID"
+      ],
+      "producer": "C_Verify or C_VerifyFinal according to selected route"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source_control": "operation.CKM_ECDSA_SHA256.sign@Session::sign_native@ECDSA-SigGen-FIPS186-5.14.131",
+    "source_fixture_sha256": "b9facf84eeee0b7ffd42c4509a0c30a284a7b0eb08ee260a4c143eba234fdf48",
+    "provenance": "Derived public test signature, not an original published vector. Arithmetic calibrated against original published signature; fixed public test nonce1. DSA uses derived public test private scalar1 and corresponding y=g. Never use these scalars for operational keys."
+  }
+]

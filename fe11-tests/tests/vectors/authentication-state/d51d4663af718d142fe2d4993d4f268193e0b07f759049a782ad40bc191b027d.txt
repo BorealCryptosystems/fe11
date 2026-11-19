@@ -1,0 +1,4 @@
+RO_PUBLIC
+open_rw
+RO_PUBLIC
+CKR_OK

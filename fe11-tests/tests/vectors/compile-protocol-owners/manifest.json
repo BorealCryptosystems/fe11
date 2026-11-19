@@ -1,0 +1,132 @@
+[
+  {
+    "id": "x3dh-owner-peer-identity",
+    "positive": {
+      "file": "x3dh-owner-peer-identity-positive.rs",
+      "sha256": "7bef1156fbccd9c43faccea8adc6de6286ba7dc98d8bba082ec99c69ddbae6b0"
+    },
+    "negative": {
+      "file": "x3dh-owner-peer-identity-negative.rs",
+      "sha256": "a927a6620fcf10b2537be9517c67d1cd0edebf72b98f5a2b97b4a2516f24db90",
+      "code": "E0597",
+      "line": 11
+    }
+  },
+  {
+    "id": "x3dh-owner-peer-prekey",
+    "positive": {
+      "file": "x3dh-owner-peer-prekey-positive.rs",
+      "sha256": "1e1118f2a4e13c384f7037a1027cad392a82acffafb02e699a3d4ccab2feabc8"
+    },
+    "negative": {
+      "file": "x3dh-owner-peer-prekey-negative.rs",
+      "sha256": "cbcb2c13020ff710365f600cfcd3bd8928a033373154f795e22b09af1058ff50",
+      "code": "E0597",
+      "line": 12
+    }
+  },
+  {
+    "id": "x3dh-owner-own-identity",
+    "positive": {
+      "file": "x3dh-owner-own-identity-positive.rs",
+      "sha256": "b8acfd7c8dde0d6cf61abb3a8ec9155a7965e0f7c19578456c171f57821a96b6"
+    },
+    "negative": {
+      "file": "x3dh-owner-own-identity-negative.rs",
+      "sha256": "b479999f6bc6a2c97cadf22fabfe4b3d59944dace25d0a3380497ecc18218b2d",
+      "code": "E0597",
+      "line": 13
+    }
+  },
+  {
+    "id": "x3dh-owner-own-ephemeral",
+    "positive": {
+      "file": "x3dh-owner-own-ephemeral-positive.rs",
+      "sha256": "bbc6f367c63c68b1ddc5db6e629cfc855288ca689ed880b737ae31bf9f629ffd"
+    },
+    "negative": {
+      "file": "x3dh-owner-own-ephemeral-negative.rs",
+      "sha256": "46033dc54c0b6062651ea837925f416558f383a1f243f565c797ee1c31248b92",
+      "code": "E0597",
+      "line": 14
+    }
+  },
+  {
+    "id": "x3dh-responder-owner",
+    "positive": {
+      "file": "x3dh-responder-owner-positive.rs",
+      "sha256": "2ee7294ed7d3a9b7177195cfdb7802f5bca9667fb781659b1adf63ac3f863647"
+    },
+    "negative": {
+      "file": "x3dh-responder-owner-negative.rs",
+      "sha256": "03d41684603d4947355bb54ad9c05d17d55f14059646e8c6ca87752f6f5c8809",
+      "code": "E0597",
+      "line": 13
+    }
+  },
+  {
+    "id": "kip-owner",
+    "positive": {
+      "file": "kip-owner-positive.rs",
+      "sha256": "8734a06cc617d6b99a30d07d746b83a257d8bfd7d277e73b1e8ac218854f088c"
+    },
+    "negative": {
+      "file": "kip-owner-negative.rs",
+      "sha256": "085438d5373122947773f5285c6220e950fa756076362710111bd632fd2da0ec",
+      "code": "E0597",
+      "line": 9
+    }
+  },
+  {
+    "id": "cms-certificate",
+    "positive": {
+      "file": "cms-certificate-positive.rs",
+      "sha256": "8f2998982cc78ec4a9b30654c49f47daa20d48729d284afe89739627c030c1f4"
+    },
+    "negative": {
+      "file": "cms-certificate-negative.rs",
+      "sha256": "9c343f93832aa72251c24506b3a1ea464ce1071e63c2e9a01afa46c3f5cae2ad",
+      "code": "E0597",
+      "line": 10
+    }
+  },
+  {
+    "id": "cms-content-type",
+    "positive": {
+      "file": "cms-content-type-positive.rs",
+      "sha256": "3509a66678d0f449101f6949238e8492ba58420836214f136d59fff4f679a1cf"
+    },
+    "negative": {
+      "file": "cms-content-type-negative.rs",
+      "sha256": "4cf0b84dec4bdbbb1a56e2176e20226d38725d1859cb33ff736988fe1ff3f34d",
+      "code": "E0597",
+      "line": 11
+    }
+  },
+  {
+    "id": "cms-requested-attributes",
+    "positive": {
+      "file": "cms-requested-attributes-positive.rs",
+      "sha256": "103bd4c8766ab3f25c0b7181b7f641f89e41aba0ed4b4ec7339aea91e30f0a2b"
+    },
+    "negative": {
+      "file": "cms-requested-attributes-negative.rs",
+      "sha256": "26dd93aaa2a7d58d4e996d34f109df05008bba33ff45b342e2cb44c1fbcda0ab",
+      "code": "E0597",
+      "line": 12
+    }
+  },
+  {
+    "id": "cms-required-attributes",
+    "positive": {
+      "file": "cms-required-attributes-positive.rs",
+      "sha256": "c9247592577fd959f3574e823e7e40221e0b47355b85d46c42c0ae3e2479e9bb"
+    },
+    "negative": {
+      "file": "cms-required-attributes-negative.rs",
+      "sha256": "f1e422c58514daa589301433a80d6bdec3bc094ab60a2b9f2a07347e650506e1",
+      "code": "E0597",
+      "line": 13
+    }
+  }
+]

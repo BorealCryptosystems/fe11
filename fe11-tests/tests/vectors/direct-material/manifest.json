@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "direct.cross.native_derivation.IDLE.init",
+    "file": "d798148c82583402ce4b7daecdf6ad183079a3ee256ad4422ea297dce7f22fb2.txt",
+    "sha256": "d798148c82583402ce4b7daecdf6ad183079a3ee256ad4422ea297dce7f22fb2",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.IDLE.logout",
+    "file": "b6ce4cae7a1158bd150846355a5b7079ab733f6183ce204aea14a29de816fe63.txt",
+    "sha256": "b6ce4cae7a1158bd150846355a5b7079ab733f6183ce204aea14a29de816fe63",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.IDLE.close",
+    "file": "8af535ce0faf68e711201b971ccd03c7d8fa78233b1afd26f819ff710d5256fb.txt",
+    "sha256": "8af535ce0faf68e711201b971ccd03c7d8fa78233b1afd26f819ff710d5256fb",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.CONSUMED.init",
+    "file": "f3a32237ee06282e6cdf63180fa712f3e1e4c78f89b884cff2b45fcb5da23920.txt",
+    "sha256": "f3a32237ee06282e6cdf63180fa712f3e1e4c78f89b884cff2b45fcb5da23920",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.CONSUMED.take",
+    "file": "c967af2df97f37370bc5503512a03bbc5025a89dcd84fc1bd9442f76dda3578c.txt",
+    "sha256": "c967af2df97f37370bc5503512a03bbc5025a89dcd84fc1bd9442f76dda3578c",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.CONSUMED.logout",
+    "file": "7f8b483a439202a1d93325bd95e839be0fa2be852a1059245f67e6f31fd9fd0a.txt",
+    "sha256": "7f8b483a439202a1d93325bd95e839be0fa2be852a1059245f67e6f31fd9fd0a",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.CONSUMED.close",
+    "file": "d4dbbb3d723925cd4a2ea4ae887251a34ef02394614c5a9f3f7f83e85c5d5a8c.txt",
+    "sha256": "d4dbbb3d723925cd4a2ea4ae887251a34ef02394614c5a9f3f7f83e85c5d5a8c",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.REFUSED_TERMINAL.init",
+    "file": "47afcf2a1436428a2e81f18651ecd135e8f46641692b5fa8f38d007c2bdee72a.txt",
+    "sha256": "47afcf2a1436428a2e81f18651ecd135e8f46641692b5fa8f38d007c2bdee72a",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.REFUSED_TERMINAL.logout",
+    "file": "d20aae732dba7515e2ab9ab129577b8a2c2c4773cf54e746117c60edc391dc40.txt",
+    "sha256": "d20aae732dba7515e2ab9ab129577b8a2c2c4773cf54e746117c60edc391dc40",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.REFUSED_TERMINAL.close",
+    "file": "f7de6cf92e99875d3fccf5557f83a6817a2b7e01d4bedae57c87c2bc61ed4d5d.txt",
+    "sha256": "f7de6cf92e99875d3fccf5557f83a6817a2b7e01d4bedae57c87c2bc61ed4d5d",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.RETIRED.init",
+    "file": "fbbe267ca5d8c916428bf088dfe3119f13c310a49f45d930c699f729a34813f1.txt",
+    "sha256": "fbbe267ca5d8c916428bf088dfe3119f13c310a49f45d930c699f729a34813f1",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.RETIRED.logout",
+    "file": "b43c0fa8e32b555d694b3147ef0e6b2bf75351d47f9aab7be790e6e56b1d9024.txt",
+    "sha256": "b43c0fa8e32b555d694b3147ef0e6b2bf75351d47f9aab7be790e6e56b1d9024",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_derivation.RETIRED.close",
+    "file": "d3785a7a7b6cc092b0bc70475f857b2e04f3cf6b6962050d20c81aa484f0d4a3.txt",
+    "sha256": "d3785a7a7b6cc092b0bc70475f857b2e04f3cf6b6962050d20c81aa484f0d4a3",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_ECB_ENCRYPT_DATA.derive@Session::derive_native_key@ACVP-AES-ECB-1.0.1.1",
+      "fixture": "vectors\\encrypt-data\\d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2.txt",
+      "sha256": "d0f574934cea179ec68eab2fbc12cafcfb55321c517b28bf96e620f22b6b5aa2"
+    },
+    "negative": "negative.CKM_AES_ECB_ENCRYPT_DATA.derive.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.IDLE.init",
+    "file": "22230d50f83afcc329935cfb7b558088783cf55e54cd2a963d430f0456466590.txt",
+    "sha256": "22230d50f83afcc329935cfb7b558088783cf55e54cd2a963d430f0456466590",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.IDLE.logout",
+    "file": "209aa42ed9e87b23fd2512bf72a6d870c45f0bc57a832fb2baf0b790d97858c6.txt",
+    "sha256": "209aa42ed9e87b23fd2512bf72a6d870c45f0bc57a832fb2baf0b790d97858c6",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.IDLE.close",
+    "file": "21aecee43e4b76ddedf3c6e7b65f34191d4c8d79b882c6a6bf3606a918a81c41.txt",
+    "sha256": "21aecee43e4b76ddedf3c6e7b65f34191d4c8d79b882c6a6bf3606a918a81c41",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.CONSUMED.init",
+    "file": "45486bb91196079842e7f61bccf77685f6e46323b12c6c20a29118f5f1cf56dd.txt",
+    "sha256": "45486bb91196079842e7f61bccf77685f6e46323b12c6c20a29118f5f1cf56dd",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.CONSUMED.take",
+    "file": "a7d43e748435fcdc4f3fd4683c47f1f5692db5c15b83dbaf05fdcbdb0497ca99.txt",
+    "sha256": "a7d43e748435fcdc4f3fd4683c47f1f5692db5c15b83dbaf05fdcbdb0497ca99",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.CONSUMED.logout",
+    "file": "5be2c4a65f7a821fe73a0cfb3f75653d1b0538c216f9ed1053a1142b5271cffc.txt",
+    "sha256": "5be2c4a65f7a821fe73a0cfb3f75653d1b0538c216f9ed1053a1142b5271cffc",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.CONSUMED.close",
+    "file": "9b91d0fdbbe1ba9a724ba07c132936a619fbbc886023340b420f64ee11b84660.txt",
+    "sha256": "9b91d0fdbbe1ba9a724ba07c132936a619fbbc886023340b420f64ee11b84660",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.REFUSED_TERMINAL.init",
+    "file": "853f4fe948f1dd352e423b141b77da629af493090d83a033bc7af5d6ddd7aa31.txt",
+    "sha256": "853f4fe948f1dd352e423b141b77da629af493090d83a033bc7af5d6ddd7aa31",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.REFUSED_TERMINAL.logout",
+    "file": "419fe05c0b32fc4ffbbfb1406f282d0e9c340f7af448f7d387a383e9a36ba7e4.txt",
+    "sha256": "419fe05c0b32fc4ffbbfb1406f282d0e9c340f7af448f7d387a383e9a36ba7e4",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.REFUSED_TERMINAL.close",
+    "file": "6bba751ed2022e240ab3e7340944ba7a00cd33e0e7cdcd64d8414c7cf875b837.txt",
+    "sha256": "6bba751ed2022e240ab3e7340944ba7a00cd33e0e7cdcd64d8414c7cf875b837",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.RETIRED.init",
+    "file": "cd20cc27de1aef102b988231291e9a3f6bfc720cc0af4c704f6bf7ca256a1425.txt",
+    "sha256": "cd20cc27de1aef102b988231291e9a3f6bfc720cc0af4c704f6bf7ca256a1425",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.RETIRED.logout",
+    "file": "8309693ace919f39a987401a35eac417e5f17abefac23bd04e5c985c55c6f560.txt",
+    "sha256": "8309693ace919f39a987401a35eac417e5f17abefac23bd04e5c985c55c6f560",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_wrap.RETIRED.close",
+    "file": "967ecc4683580aaca44072f01c29b1967ac040d34d39dc4785273a6509da533b.txt",
+    "sha256": "967ecc4683580aaca44072f01c29b1967ac040d34d39dc4785273a6509da533b",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.wrap.usage",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.IDLE.init",
+    "file": "06cb1039f5f3f371c18b36b953c1330080d19e1c28972cd860e8af195d01e1e1.txt",
+    "sha256": "06cb1039f5f3f371c18b36b953c1330080d19e1c28972cd860e8af195d01e1e1",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.IDLE.logout",
+    "file": "c609158d46636b0fa6492f2493b0c2f6eb6a85cba654f3f5b7c2b133732e8f6e.txt",
+    "sha256": "c609158d46636b0fa6492f2493b0c2f6eb6a85cba654f3f5b7c2b133732e8f6e",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.IDLE.close",
+    "file": "88e94c7bc6b7267c57adf1adf7fa375651d911446cb7d648f9a92bf8d0de9340.txt",
+    "sha256": "88e94c7bc6b7267c57adf1adf7fa375651d911446cb7d648f9a92bf8d0de9340",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.CONSUMED.init",
+    "file": "346dedb8cec3e3c0d4d080bd77d43423adcde66cb10ca1e6d4233233b71529a2.txt",
+    "sha256": "346dedb8cec3e3c0d4d080bd77d43423adcde66cb10ca1e6d4233233b71529a2",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.CONSUMED.take",
+    "file": "8deec37c5007aa6743a2b70a1d4f991c8ed418b70acba172e60d6a527d485ff3.txt",
+    "sha256": "8deec37c5007aa6743a2b70a1d4f991c8ed418b70acba172e60d6a527d485ff3",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read the actual returned object/envelope/length accessors specified by API-PRODUCERS and the mechanism result contract. No second native call; do not invent take_ticket on a synchronous result.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.CONSUMED.logout",
+    "file": "68a65555df83729ac1c7d7cfef36ed09f1acd7bf1fcadf57d06651b939e55a09.txt",
+    "sha256": "68a65555df83729ac1c7d7cfef36ed09f1acd7bf1fcadf57d06651b939e55a09",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.CONSUMED.close",
+    "file": "24dbe7aeadc1dc9eb5e499a117375d46195a40a0e05d7d13bbfcc531cbe35ade.txt",
+    "sha256": "24dbe7aeadc1dc9eb5e499a117375d46195a40a0e05d7d13bbfcc531cbe35ade",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.REFUSED_TERMINAL.init",
+    "file": "1ee69f2ee36868514583ccd9f847f54bdc65246caa45f3ebc194f024ad1b6a5e.txt",
+    "sha256": "1ee69f2ee36868514583ccd9f847f54bdc65246caa45f3ebc194f024ad1b6a5e",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Use the exact operation tuple and per-mechanism oracle referenced below; one public invocation. Capture native function/code and owned result/creation uncertainty independently.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.REFUSED_TERMINAL.logout",
+    "file": "70919b53b552ccdd4e7c84781346ce4a53dc833befe34ca8926693b7070f4222.txt",
+    "sha256": "70919b53b552ccdd4e7c84781346ce4a53dc833befe34ca8926693b7070f4222",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_Logout CKR_OK from RW_USER. Owned output bytes remain unchanged; private object visibility follows OBJECT-STATE-CROSS.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_Logout",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.REFUSED_TERMINAL.close",
+    "file": "be23c501297da6b0d933826616d006efbe335424a84e3d204a3c8ee94908f95b.txt",
+    "sha256": "be23c501297da6b0d933826616d006efbe335424a84e3d204a3c8ee94908f95b",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_CloseSession CKR_OK; owned envelopes and diagnostics unchanged; object references require a live session.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.RETIRED.init",
+    "file": "9dee74cb64edaded5f960b9de1336bbeed4f9883b64911d7fdd598647617547a.txt",
+    "sha256": "9dee74cb64edaded5f960b9de1336bbeed4f9883b64911d7fdd598647617547a",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native invocation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.RETIRED.logout",
+    "file": "4cffc457e0d7f017af2f4558cd2acd053ea0bcc823c68d58a688f69379965fdc.txt",
+    "sha256": "4cffc457e0d7f017af2f4558cd2acd053ea0bcc823c68d58a688f69379965fdc",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  },
+  {
+    "id": "direct.cross.native_unwrap.RETIRED.close",
+    "file": "d2b06d3f262b7806631540a440a5fb9f815735e746167953ec00783f320543e6.txt",
+    "sha256": "d2b06d3f262b7806631540a440a5fb9f815735e746167953ec00783f320543e6",
+    "worker_mode": "direct-material",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+      "fixture": "vectors\\key-wrap\\69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852.txt",
+      "sha256": "69d1c9bb32adb0ba12c2e72d52c1840561c17d6538a9464bd44d45bf9c00d852"
+    },
+    "negative": "negative.CKM_AES_KEY_WRAP.unwrap.template",
+    "assertions": [
+      "Published exact native output, real USER session and session-owned known-answer keys",
+      "Retain native refusal and conservative creation uncertainty independently",
+      "Retain creation owners before observation; cleanup errors remain separate",
+      "Owned results survive logout/close; consumed accessors and closed actions do not dispatch"
+    ]
+  }
+]

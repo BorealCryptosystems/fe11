@@ -1,0 +1,87 @@
+[
+  {
+    "id": "resource.owner.preparation-release",
+    "file": "70520e9e8a2470f1376d351a05e0ac9730ff63dfc85d4e8ab76dfcf77637df9f.txt",
+    "sha256": "70520e9e8a2470f1376d351a05e0ac9730ff63dfc85d4e8ab76dfcf77637df9f",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One total/RW session allowance; reject preparation before Init, exact unchanged owned quota; same-session SHA256 abc control; close and drop owner restores exact initial public resource_status.",
+    "scope": "Public session reservations only. Eager native sequence has completed but output is unpublished; Cooperative sequence remains active. No private byte-balance assertion.",
+    "source": "stage1 CASE-PARAMETERS resources.failure_releases_local_credits and progression.drop_observer; SHA256 abc reference from FIPS180-4."
+  },
+  {
+    "id": "resource.owner.drop-eager",
+    "file": "fe54b00778a14049029d4a7d31ec8850e82c38e474424d9cc971fa6519b25979.txt",
+    "sha256": "fe54b00778a14049029d4a7d31ec8850e82c38e474424d9cc971fa6519b25979",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Closed SHA256 batch a/b/c: actual native Init-only for Cooperative or Init+3Update+Final for Eager. Drop observer; second Init remains locally Busy without dispatch or quota change. Explicit owner close restores zero session reservations.",
+    "scope": "Public session reservations only. Eager native sequence has completed but output is unpublished; Cooperative sequence remains active. No private byte-balance assertion.",
+    "source": "stage1 CASE-PARAMETERS resources.failure_releases_local_credits and progression.drop_observer; SHA256 abc reference from FIPS180-4."
+  },
+  {
+    "id": "resource.owner.drop-cooperative",
+    "file": "626d6ebc0d31e370fd4a3da414e205a2bce844f238325e3606ea94c5951f3303.txt",
+    "sha256": "626d6ebc0d31e370fd4a3da414e205a2bce844f238325e3606ea94c5951f3303",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Closed SHA256 batch a/b/c: actual native Init-only for Cooperative or Init+3Update+Final for Eager. Drop observer; second Init remains locally Busy without dispatch or quota change. Explicit owner close restores zero session reservations.",
+    "scope": "Public session reservations only. Eager native sequence has completed but output is unpublished; Cooperative sequence remains active. No private byte-balance assertion.",
+    "source": "stage1 CASE-PARAMETERS resources.failure_releases_local_credits and progression.drop_observer; SHA256 abc reference from FIPS180-4."
+  }
+]

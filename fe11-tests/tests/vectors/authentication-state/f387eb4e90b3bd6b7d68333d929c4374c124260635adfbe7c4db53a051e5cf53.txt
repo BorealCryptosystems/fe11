@@ -1,0 +1,4 @@
+RW_SO
+login_so
+RW_SO
+CKR_USER_ALREADY_LOGGED_IN

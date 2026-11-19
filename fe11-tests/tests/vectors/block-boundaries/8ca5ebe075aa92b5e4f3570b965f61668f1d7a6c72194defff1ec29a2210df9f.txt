@@ -1,0 +1,12 @@
+CKM_DES_CBC
+advanced
+encrypt
+7
+0123456789abcdef
+00010203040506
+
+1234567890abcdef
+stream
+native-length
+0001020304050607
+d93de8af2b1216c3

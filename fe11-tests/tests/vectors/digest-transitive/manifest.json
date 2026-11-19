@@ -1,0 +1,326 @@
+[
+  {
+    "id": "transitive.Session::provide_digest_output_capacity.DigestTicketRequired",
+    "file": "f94a51aef2a54f83e20fdb5799b2e48562063f24a3e5d3871615d0978839f225.txt",
+    "sha256": "f94a51aef2a54f83e20fdb5799b2e48562063f24a3e5d3871615d0978839f225",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.AdvancedSession::provide_digest_output_capacity.DigestTicketRequired",
+    "file": "2ebd000c4e5012f25e1f92b485534893df19fda900c0500ef7ef98cd728fbdd5.txt",
+    "sha256": "2ebd000c4e5012f25e1f92b485534893df19fda900c0500ef7ef98cd728fbdd5",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.Session::provide_extension_digest_output_capacity.DigestTicketRequired",
+    "file": "0e71e7d9caa9aab4f6119f3f3f6c3accae26454878e2743d5c73c55ea9fd9b31.txt",
+    "sha256": "0e71e7d9caa9aab4f6119f3f3f6c3accae26454878e2743d5c73c55ea9fd9b31",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.AdvancedSession::provide_extension_digest_output_capacity.DigestTicketRequired",
+    "file": "1335e7796a0e60395b15e5f787ed70ed19dc41dc035698c8b50783acf46402ee.txt",
+    "sha256": "1335e7796a0e60395b15e5f787ed70ed19dc41dc035698c8b50783acf46402ee",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.Session::digest_update.DigestTicketRequired",
+    "file": "a67cb7b7db9542cb42b286f2118b466ae53153180f0b159ec3fd6de9120a38c2.txt",
+    "sha256": "a67cb7b7db9542cb42b286f2118b466ae53153180f0b159ec3fd6de9120a38c2",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.Session::digest_key.DigestTicketRequired",
+    "file": "2486c36b1ae91209a76c793814d069640a93ab2a3af8a1f7ac12544972a19b71.txt",
+    "sha256": "2486c36b1ae91209a76c793814d069640a93ab2a3af8a1f7ac12544972a19b71",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.AdvancedSession::digest_update.DigestTicketRequired",
+    "file": "67568d7e9fb8afc3bf56e04fde02a569dcfd80999a43973034512aa3cd7cb7f2.txt",
+    "sha256": "67568d7e9fb8afc3bf56e04fde02a569dcfd80999a43973034512aa3cd7cb7f2",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  },
+  {
+    "id": "transitive.AdvancedSession::digest_key.DigestTicketRequired",
+    "file": "a682bb05df3cefcbc647fbb144f9766164f14e6e54bc5c92fb01296c86088e23.txt",
+    "sha256": "a682bb05df3cefcbc647fbb144f9766164f14e6e54bc5c92fb01296c86088e23",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(DigestTicketRequired))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact DigestTicketRequired before any native digest call; all call counters and original AES progress unchanged",
+      "Original typed AES ticket resumes once and yields published ciphertext; no re-Init",
+      "DigestKey operand is a separate real GenericSecret16 object, with explicit cleanup"
+    ]
+  }
+]

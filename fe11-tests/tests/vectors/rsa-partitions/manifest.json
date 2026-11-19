@@ -1,0 +1,332 @@
+[
+  {
+    "id": "rsa.partitions.session.sign",
+    "file": "4241b949a885789b60984f8d661afc4e2d99364ffd2009f85c7099091b7a2cab.txt",
+    "sha256": "4241b949a885789b60984f8d661afc4e2d99364ffd2009f85c7099091b7a2cab",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::Parameterless(NativeSignatureAlgorithm::SHA256_RSA_PKCS)",
+      "input": "fixed-width raw digest for DSA/ECDSA/GOST; RFC8017 DigestInfo(hash(message)) for RSA_PKCS signature KATs; modulus-width integer for RSA_X_509; original message for combined hashes; exact transform in child input"
+    },
+    "modes": [
+      "Single",
+      "Multipart"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignFinal"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "key_material": "Public known test key only; never use for operational cryptography",
+    "part_lengths": [
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "input_limits": {
+      "maximum_parts": 5,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "rsa.partitions.advanced.sign",
+    "file": "79fe422420e5abf3bd3673fe684fafc578d0837f907b8bf990367138d315f2dd.txt",
+    "sha256": "79fe422420e5abf3bd3673fe684fafc578d0837f907b8bf990367138d315f2dd",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::Parameterless(NativeSignatureAlgorithm::SHA256_RSA_PKCS)",
+      "input": "fixed-width raw digest for DSA/ECDSA/GOST; RFC8017 DigestInfo(hash(message)) for RSA_PKCS signature KATs; modulus-width integer for RSA_X_509; original message for combined hashes; exact transform in child input"
+    },
+    "modes": [
+      "Single",
+      "Multipart"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignUpdate",
+      "C_SignFinal"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "key_material": "Public known test key only; never use for operational cryptography",
+    "part_lengths": [
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "input_limits": {
+      "maximum_parts": 5,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "rsa.partitions.session.verify",
+    "file": "c099343e05606c9897d7d0e94b746434bffae37b83b6cf18d76b078b2311ec11.txt",
+    "sha256": "c099343e05606c9897d7d0e94b746434bffae37b83b6cf18d76b078b2311ec11",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::Parameterless(NativeSignatureAlgorithm::SHA256_RSA_PKCS)",
+      "input": "fixed-width raw digest for DSA/ECDSA/GOST; RFC8017 DigestInfo(hash(message)) for RSA_PKCS signature KATs; modulus-width integer for RSA_X_509; original message for combined hashes; exact transform in child input"
+    },
+    "modes": [
+      "Single",
+      "Multipart"
+    ],
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyFinal",
+      "C_VerifyInit",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyFinal"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "key_material": "Public known test key only; never use for operational cryptography",
+    "part_lengths": [
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "input_limits": {
+      "maximum_parts": 5,
+      "maximum_total_bytes": 3
+    }
+  },
+  {
+    "id": "rsa.partitions.advanced.verify",
+    "file": "6ad880f96c0122cb5f358a6a45b09f410afcb34309d05dec9cba9b012f5cb426.txt",
+    "sha256": "6ad880f96c0122cb5f358a6a45b09f410afcb34309d05dec9cba9b012f5cb426",
+    "worker_mode": "rsa-known",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::Parameterless(NativeSignatureAlgorithm::SHA256_RSA_PKCS)",
+      "input": "fixed-width raw digest for DSA/ECDSA/GOST; RFC8017 DigestInfo(hash(message)) for RSA_PKCS signature KATs; modulus-width integer for RSA_X_509; original message for combined hashes; exact transform in child input"
+    },
+    "modes": [
+      "Single",
+      "Multipart"
+    ],
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyFinal",
+      "C_VerifyInit",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyUpdate",
+      "C_VerifyFinal"
+    ],
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc",
+    "known_reference_sha256": "f451ed92112f4581b45a6641fd4a5928c3e27651c9d848aa3c13dcca4be18d94",
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "key_material": "Public known test key only; never use for operational cryptography",
+    "part_lengths": [
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "input_limits": {
+      "maximum_parts": 5,
+      "maximum_total_bytes": 3
+    }
+  }
+]

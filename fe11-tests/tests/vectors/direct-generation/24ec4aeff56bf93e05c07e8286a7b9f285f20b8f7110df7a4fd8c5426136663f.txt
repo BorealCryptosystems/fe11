@@ -1,0 +1,3 @@
+pair
+REFUSED_TERMINAL
+logout

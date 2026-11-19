@@ -1,0 +1,409 @@
+{
+  "description": "Synthetic structural Saved SHA256 input, not native state. No authentication, import or restore is permitted by this fixture. The message is Engaged: DigestInit has completed and the saved next call is Digest.",
+  "envelope": "BPKIOP09",
+  "bytes": 382,
+  "fields": [
+    {
+      "field": "magic",
+      "offset": 0,
+      "bytes": 8,
+      "hex": "42504b494f503039"
+    },
+    {
+      "field": "kind",
+      "offset": 8,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "payload_length",
+      "offset": 9,
+      "bytes": 8,
+      "hex": "000000000000016d"
+    },
+    {
+      "field": "context.digest",
+      "offset": 17,
+      "bytes": 32,
+      "hex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "field": "context.table",
+      "offset": 49,
+      "bytes": 2,
+      "hex": "0302"
+    },
+    {
+      "field": "context.flags",
+      "offset": 51,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "context.label",
+      "offset": 59,
+      "bytes": 32,
+      "hex": "2020202020202020202020202020202020202020202020202020202020202020"
+    },
+    {
+      "field": "context.manufacturer",
+      "offset": 91,
+      "bytes": 32,
+      "hex": "2020202020202020202020202020202020202020202020202020202020202020"
+    },
+    {
+      "field": "context.model",
+      "offset": 123,
+      "bytes": 16,
+      "hex": "20202020202020202020202020202020"
+    },
+    {
+      "field": "context.serial",
+      "offset": 139,
+      "bytes": 16,
+      "hex": "20202020202020202020202020202020"
+    },
+    {
+      "field": "context.session_state",
+      "offset": 155,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "descriptor.family",
+      "offset": 163,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "descriptor.profile",
+      "offset": 164,
+      "bytes": 1,
+      "hex": "04"
+    },
+    {
+      "field": "descriptor.phase",
+      "offset": 165,
+      "bytes": 1,
+      "hex": "02"
+    },
+    {
+      "field": "descriptor.mechanism",
+      "offset": 166,
+      "bytes": 8,
+      "hex": "0000000000000250"
+    },
+    {
+      "field": "descriptor.size",
+      "offset": 174,
+      "bytes": 8,
+      "hex": "0000000000000020"
+    },
+    {
+      "field": "descriptor.active_flags",
+      "offset": 182,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "descriptor.validation_requested",
+      "offset": 190,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "descriptor.carried_messages",
+      "offset": 191,
+      "bytes": 4,
+      "hex": "00000000"
+    },
+    {
+      "field": "descriptor.input.status",
+      "offset": 195,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "descriptor.input.incremental",
+      "offset": 196,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "descriptor.input.retained_submission",
+      "offset": 197,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "descriptor.input.submissions",
+      "offset": 198,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "descriptor.input.key_inputs",
+      "offset": 206,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "descriptor.input.input_bytes",
+      "offset": 214,
+      "bytes": 16,
+      "hex": "00000000000000000000000000000000"
+    },
+    {
+      "field": "descriptor.input.output_bytes",
+      "offset": 230,
+      "bytes": 16,
+      "hex": "00000000000000000000000000000000"
+    },
+    {
+      "field": "descriptor.input.delivered_bytes",
+      "offset": 246,
+      "bytes": 16,
+      "hex": "00000000000000000000000000000000"
+    },
+    {
+      "field": "descriptor.options",
+      "offset": 262,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "keys.count",
+      "offset": 263,
+      "bytes": 4,
+      "hex": "00000000"
+    },
+    {
+      "field": "messages.kind",
+      "offset": 267,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "messages.output",
+      "offset": 268,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "messages.count",
+      "offset": 269,
+      "bytes": 4,
+      "hex": "00000001"
+    },
+    {
+      "field": "message.route",
+      "offset": 273,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "message.parameters.nonce",
+      "offset": 274,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.aad",
+      "offset": 275,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.tag_bits",
+      "offset": 276,
+      "bytes": 4,
+      "hex": "00000000"
+    },
+    {
+      "field": "message.parameters.hash.present",
+      "offset": 280,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "message.parameters.hash.value",
+      "offset": 281,
+      "bytes": 8,
+      "hex": "0000000000000250"
+    },
+    {
+      "field": "message.parameters.mgf",
+      "offset": 289,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.salt",
+      "offset": 290,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.iv_generator",
+      "offset": 291,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.iv_fixed_bits",
+      "offset": 292,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.iv_initial",
+      "offset": 293,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.message_init",
+      "offset": 294,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.counter_bits",
+      "offset": 295,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.digest_oid",
+      "offset": 296,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.signature",
+      "offset": 297,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.digest_extension",
+      "offset": 298,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.cipher_extension",
+      "offset": 299,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.parameters.digest_output.present",
+      "offset": 300,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "message.parameters.digest_output.capacity",
+      "offset": 301,
+      "bytes": 8,
+      "hex": "0000000000000020"
+    },
+    {
+      "field": "message.parameters.digest_output.waiting",
+      "offset": 309,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.origin",
+      "offset": 310,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.state",
+      "offset": 311,
+      "bytes": 1,
+      "hex": "01"
+    },
+    {
+      "field": "message.fragment_count",
+      "offset": 312,
+      "bytes": 4,
+      "hex": "00000001"
+    },
+    {
+      "field": "message.fragment_length",
+      "offset": 316,
+      "bytes": 8,
+      "hex": "0000000000000003"
+    },
+    {
+      "field": "message.fragment",
+      "offset": 324,
+      "bytes": 3,
+      "hex": "616263"
+    },
+    {
+      "field": "message.next_fragment",
+      "offset": 327,
+      "bytes": 4,
+      "hex": "00000000"
+    },
+    {
+      "field": "message.produced",
+      "offset": 331,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "message.expected",
+      "offset": 339,
+      "bytes": 8,
+      "hex": "0000000000000020"
+    },
+    {
+      "field": "message.result_length",
+      "offset": 347,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "message.tag_or_signature",
+      "offset": 355,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "message.residual_start",
+      "offset": 356,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "message.residual_length",
+      "offset": 364,
+      "bytes": 8,
+      "hex": "0000000000000000"
+    },
+    {
+      "field": "validation.present",
+      "offset": 372,
+      "bytes": 1,
+      "hex": "00"
+    },
+    {
+      "field": "native_state_length",
+      "offset": 373,
+      "bytes": 8,
+      "hex": "0000000000000001"
+    },
+    {
+      "field": "native_state",
+      "offset": 381,
+      "bytes": 1,
+      "hex": "00"
+    }
+  ]
+}

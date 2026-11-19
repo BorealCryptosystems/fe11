@@ -1,0 +1,2334 @@
+[
+  {
+    "id": "oaep.contract.session.hash.SHA-1",
+    "file": "0db3cdfbafcd67fc567f519e9c7f8ded303667e0451f046dc8a1d07cf0f41a5c.txt",
+    "sha256": "0db3cdfbafcd67fc567f519e9c7f8ded303667e0451f046dc8a1d07cf0f41a5c",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-1",
+      "mgf": "SHA-1",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA-224",
+    "file": "e81e9c05186417fc8cb4cb7acbf54ab7e61ccc440798b65862b6b364c20c2146.txt",
+    "sha256": "e81e9c05186417fc8cb4cb7acbf54ab7e61ccc440798b65862b6b364c20c2146",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-224",
+      "mgf": "SHA-224",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA-256",
+    "file": "9cc1c3c65c973666c1b2335a82c056f7bb0e1e62c99379257deb3bcefc785aa2.txt",
+    "sha256": "9cc1c3c65c973666c1b2335a82c056f7bb0e1e62c99379257deb3bcefc785aa2",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA-384",
+    "file": "a2db574db1681c7dae2af4062c073fd1f7af4de624d89dd95a70376a1cf88143.txt",
+    "sha256": "a2db574db1681c7dae2af4062c073fd1f7af4de624d89dd95a70376a1cf88143",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-384",
+      "mgf": "SHA-384",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA-512",
+    "file": "39eb639d4df259fb4d556ad8c3e8a91a69ff8f9114a04377fa1d0c476737e6d4.txt",
+    "sha256": "39eb639d4df259fb4d556ad8c3e8a91a69ff8f9114a04377fa1d0c476737e6d4",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-512",
+      "mgf": "SHA-512",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA3-224",
+    "file": "33043f84131d62bc40fba3db3c767957ff6aa26a59c7a571ff915719a72a04fd.txt",
+    "sha256": "33043f84131d62bc40fba3db3c767957ff6aa26a59c7a571ff915719a72a04fd",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-224",
+      "mgf": "SHA3-224",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA3-256",
+    "file": "1601953ea8937d662bc05872cf1874f11681f9a0e6add059abb156f2a4f6fb56.txt",
+    "sha256": "1601953ea8937d662bc05872cf1874f11681f9a0e6add059abb156f2a4f6fb56",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-256",
+      "mgf": "SHA3-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA3-384",
+    "file": "7c3619d1e137c22f1b0faa5d3f464b36cccbd8b4b0f1e4699614668bdf6adabb.txt",
+    "sha256": "7c3619d1e137c22f1b0faa5d3f464b36cccbd8b4b0f1e4699614668bdf6adabb",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-384",
+      "mgf": "SHA3-384",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.hash.SHA3-512",
+    "file": "748c4467dc7f2138b4216512d286b31b17087590f6f654ad2e7b6c705c8386b7.txt",
+    "sha256": "748c4467dc7f2138b4216512d286b31b17087590f6f654ad2e7b6c705c8386b7",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-512",
+      "mgf": "SHA3-512",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.label.absent",
+    "file": "828f8f1fb070e9333ad6c5dc8ab0c49d557beeaec88e3152546db290edf86c3f.txt",
+    "sha256": "828f8f1fb070e9333ad6c5dc8ab0c49d557beeaec88e3152546db290edf86c3f",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": null,
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.label.binary",
+    "file": "4f497636bc923d63629c707a277a74ae0e51c3805bcaadef937e110f350fbc09.txt",
+    "sha256": "4f497636bc923d63629c707a277a74ae0e51c3805bcaadef937e110f350fbc09",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "ff00ff",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.wrong-label",
+    "file": "7549ae87ae5be36a2fe3bf5284698f3d1cdbbc268ea914134efaa4619ff188fe.txt",
+    "sha256": "7549ae87ae5be36a2fe3bf5284698f3d1cdbbc268ea914134efaa4619ff188fe",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "ff00ff",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "wrong-label"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.wrong-key",
+    "file": "14e2ddd4f3b4850ddb81d8a757f4784b4f2b95e37cfea7e79985495634f34fc5.txt",
+    "sha256": "14e2ddd4f3b4850ddb81d8a757f4784b4f2b95e37cfea7e79985495634f34fc5",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "wrong-key"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": {
+        "id": "OPENSSL.RSA.pkcs1",
+        "source": "vectors\\evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+        "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+      }
+    }
+  },
+  {
+    "id": "oaep.contract.session.altered",
+    "file": "8774e8d284d44de52317d94a1a3e4c859b3ec866d358e0a168647f0dfef0e0d8.txt",
+    "sha256": "8774e8d284d44de52317d94a1a3e4c859b3ec866d358e0a168647f0dfef0e0d8",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "altered"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.ciphertext.0",
+    "file": "38301e5fd3f1e079231fde68ccf53bd89ad98071b878094fe56677035c1dc69a.txt",
+    "sha256": "38301e5fd3f1e079231fde68ccf53bd89ad98071b878094fe56677035c1dc69a",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 0,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.ciphertext.255",
+    "file": "fd8b4b6fc8e0c13a9ec36eeb162ee04cad8e1e332dceea4a20f4867ac4f755c2.txt",
+    "sha256": "fd8b4b6fc8e0c13a9ec36eeb162ee04cad8e1e332dceea4a20f4867ac4f755c2",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 255,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.ciphertext.257",
+    "file": "ae54bd9acdde98640f033e6c30f1c15cf2043edba6129c0d895fa001712d9fd7.txt",
+    "sha256": "ae54bd9acdde98640f033e6c30f1c15cf2043edba6129c0d895fa001712d9fd7",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 257,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.session.continuation",
+    "file": "442dada3ebcfe0cfffdf6d8efcc978345a648200c6af7b95f9f3beb810e6a899.txt",
+    "sha256": "442dada3ebcfe0cfffdf6d8efcc978345a648200c6af7b95f9f3beb810e6a899",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "continuation"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA-1",
+    "file": "21e766bd8182a3d907466620314404e07137d4dc98915d72b39ec6a2633f92ca.txt",
+    "sha256": "21e766bd8182a3d907466620314404e07137d4dc98915d72b39ec6a2633f92ca",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-1",
+      "mgf": "SHA-1",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA-224",
+    "file": "5b4ace1e5f230caa3b244ba32e0d88918a943ec25cd80654b992e6c007f7608f.txt",
+    "sha256": "5b4ace1e5f230caa3b244ba32e0d88918a943ec25cd80654b992e6c007f7608f",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-224",
+      "mgf": "SHA-224",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA-256",
+    "file": "c65721f399b709d819761802f4e7999204251db5d717cc25fdcc293c79904256.txt",
+    "sha256": "c65721f399b709d819761802f4e7999204251db5d717cc25fdcc293c79904256",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA-384",
+    "file": "ea58fc1ae6b97c11e0f1b8e40ab5f749a79487db9b1f7f8b02b04b459c39e00e.txt",
+    "sha256": "ea58fc1ae6b97c11e0f1b8e40ab5f749a79487db9b1f7f8b02b04b459c39e00e",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-384",
+      "mgf": "SHA-384",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA-512",
+    "file": "43e0fb18c6665ff581faa61072a837746206a19452c6b290a97daa1127ec1091.txt",
+    "sha256": "43e0fb18c6665ff581faa61072a837746206a19452c6b290a97daa1127ec1091",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-512",
+      "mgf": "SHA-512",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA3-224",
+    "file": "3566851843c2f0159a8e7b23ef5a0153415003d39a71a4835d9959128c477eea.txt",
+    "sha256": "3566851843c2f0159a8e7b23ef5a0153415003d39a71a4835d9959128c477eea",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-224",
+      "mgf": "SHA3-224",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA3-256",
+    "file": "4e820a87206e6ba2a423c653e3c890d16e7ce90fd38fab20ea56eb5148fb4890.txt",
+    "sha256": "4e820a87206e6ba2a423c653e3c890d16e7ce90fd38fab20ea56eb5148fb4890",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-256",
+      "mgf": "SHA3-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA3-384",
+    "file": "17e5de7040ed90cf8aa8261d3453ed018b5336442b9ddc0f5f238c9fbfc4596d.txt",
+    "sha256": "17e5de7040ed90cf8aa8261d3453ed018b5336442b9ddc0f5f238c9fbfc4596d",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-384",
+      "mgf": "SHA3-384",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.hash.SHA3-512",
+    "file": "fd279dd496cfe1555649e76bb85ffa9cf84a8a115e827d507578bc2bbb50c07a.txt",
+    "sha256": "fd279dd496cfe1555649e76bb85ffa9cf84a8a115e827d507578bc2bbb50c07a",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA3-512",
+      "mgf": "SHA3-512",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.label.absent",
+    "file": "ec149c63543b98282d79885a4031802488e43391a6a4d5a872ffce9aea70ed25.txt",
+    "sha256": "ec149c63543b98282d79885a4031802488e43391a6a4d5a872ffce9aea70ed25",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": null,
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.label.binary",
+    "file": "24cda01e0e6d39159d3b9bde22fa1018224b0dab20fd066cc27930725a3c8519.txt",
+    "sha256": "24cda01e0e6d39159d3b9bde22fa1018224b0dab20fd066cc27930725a3c8519",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "ff00ff",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "roundtrip"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.wrong-label",
+    "file": "b139ebae0e0cd8bdf5b93b814310769187021e787b3c3f2977cb75c3fbc42d7d.txt",
+    "sha256": "b139ebae0e0cd8bdf5b93b814310769187021e787b3c3f2977cb75c3fbc42d7d",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "ff00ff",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "wrong-label"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.wrong-key",
+    "file": "5a321e5e355896f1e0fedd09e8feed145a400bece8e1a2e976493ea5b0d99b3b.txt",
+    "sha256": "5a321e5e355896f1e0fedd09e8feed145a400bece8e1a2e976493ea5b0d99b3b",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "wrong-key"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": {
+        "id": "OPENSSL.RSA.pkcs1",
+        "source": "vectors\\evppkey_rsa_common.txt",
+        "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+        "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+        "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+      }
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.altered",
+    "file": "fb2837ca1959811144a659756972e4708f2c35fa07e0b078533a80970133c8a6.txt",
+    "sha256": "fb2837ca1959811144a659756972e4708f2c35fa07e0b078533a80970133c8a6",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "code": "CKR_ENCRYPTED_DATA_INVALID",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "altered"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.ciphertext.0",
+    "file": "bc87e77ad75c9467961cc2b310e6a4c93daa05149741e6a8bf023ba5d7ec3ff2.txt",
+    "sha256": "bc87e77ad75c9467961cc2b310e6a4c93daa05149741e6a8bf023ba5d7ec3ff2",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 0,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.ciphertext.255",
+    "file": "735bbd5166fb2b396dc3f311b6d8aef4dc03f36ffb1520d8fd3c3d8a8a5a0e59.txt",
+    "sha256": "735bbd5166fb2b396dc3f311b6d8aef4dc03f36ffb1520d8fd3c3d8a8a5a0e59",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 255,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.ciphertext.257",
+    "file": "685881d15bbf099d6d414bf1004fed404eb8182d3fc5ebc038b639cdcfc485a4.txt",
+    "sha256": "685881d15bbf099d6d414bf1004fed404eb8182d3fc5ebc038b639cdcfc485a4",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "NATIVE_REFUSAL",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ],
+      "allowed_codes": [
+        "CKR_ENCRYPTED_DATA_INVALID",
+        "CKR_ENCRYPTED_DATA_LEN_RANGE"
+      ],
+      "normative_basis": "C_Decrypt: PKCS11 2.40 section5.9;3.0,3.1,3.2 section5.10.2"
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 257,
+      "contract": "length"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  },
+  {
+    "id": "oaep.contract.advanced.continuation",
+    "file": "5baf5e5de9373f7b870c3a0ad48e027b0bfe80fcc1404e7690bc981bfbb7ff2d.txt",
+    "sha256": "5baf5e5de9373f7b870c3a0ad48e027b0bfe80fcc1404e7690bc981bfbb7ff2d",
+    "worker_mode": "oaep-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt"
+    ],
+    "oracle": {
+      "disposition": "VALID_KAT_AND_ROUNDTRIP",
+      "code": "CKR_OK",
+      "assertions": [
+        "Exact independent RFC8017 fixture",
+        "Native function and code preserved",
+        "Setup and cleanup separately required"
+      ]
+    },
+    "parameters": {
+      "hash": "SHA-256",
+      "mgf": "SHA-256",
+      "label_hex": "",
+      "plaintext_hex": "616263",
+      "ciphertext_bytes": 256,
+      "contract": "continuation"
+    },
+    "source": {
+      "standard": "RFC8017 7.1.1/7.1.2; PKCS#11 2.40 2.1.8 /3.2 6.1.8 and C_Decrypt",
+      "key_provenance": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 1,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "ciphertext_origin": "Constructed RFC8017 encoding from public test key, fixed public seed, independent Python modular exponentiation; not a published ciphertext vector",
+      "wrong_key_provenance": null
+    }
+  }
+]

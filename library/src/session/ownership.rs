@@ -86,6 +86,15 @@ impl Drop for AccessOwners {
 }
 
 impl ObjectRoleLease {
+    pub(crate) fn readers_on(&self, activity: &Arc<crate::registry::Activity>, uid: u64) -> usize {
+        match self._owner.values.get().and_then(|p| p.resources.as_ref()) {
+            Some(ResourceProtection::Roles { _permissions }) => {
+                _permissions.readers_on(activity, uid)
+            }
+            _ => 0,
+        }
+    }
+
     pub(crate) fn same_owner(&self, other: &Self) -> bool {
         Arc::ptr_eq(&self._owner, &other._owner)
     }

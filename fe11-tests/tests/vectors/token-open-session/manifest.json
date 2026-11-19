@@ -1,0 +1,34 @@
+[
+  {
+    "id": "administration.token.open_session",
+    "file": "331a88891c590354fa3d21fbcc405ff0398b7ff3154b52fda7fdc01ef3252050.txt",
+    "sha256": "331a88891c590354fa3d21fbcc405ff0398b7ff3154b52fda7fdc01ef3252050",
+    "worker_mode": "token-label-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "InitToken with an existing idle owned session returns native CKR_SESSION_EXISTS; identity and session state remain unchanged, explicit session close succeeds.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_InitToken",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+RO_USER
+close_last
+RO_PUBLIC
+CKR_OK

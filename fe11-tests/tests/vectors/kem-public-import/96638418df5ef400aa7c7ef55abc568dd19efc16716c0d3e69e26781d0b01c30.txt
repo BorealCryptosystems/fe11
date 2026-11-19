@@ -1,0 +1,4 @@
+encapsulate
+IDLE
+public-import
+ML-KEM-512

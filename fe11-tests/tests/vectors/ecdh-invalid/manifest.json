@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.441",
+    "file": "5ad84ea3d8238af25d8a828ef6815d8cb619caf99d992c5effc057cc7bc04fa0.txt",
+    "sha256": "5ad84ea3d8238af25d8a828ef6815d8cb619caf99d992c5effc057cc7bc04fa0",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.457",
+    "file": "1f2a8eb160322c15ac10e60fab0ee568a744802848fd7c66e807b2bb365b0990.txt",
+    "sha256": "1f2a8eb160322c15ac10e60fab0ee568a744802848fd7c66e807b2bb365b0990",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.458",
+    "file": "b852532d26ca4c863afddca983dd1e87efebdefcb1a594c80c3f90bd1b248513.txt",
+    "sha256": "b852532d26ca4c863afddca983dd1e87efebdefcb1a594c80c3f90bd1b248513",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.332",
+    "file": "fb3f194498274eba2924b43a463b0873fad4106d6c1babc5a646c06229c9e785.txt",
+    "sha256": "fb3f194498274eba2924b43a463b0873fad4106d6c1babc5a646c06229c9e785",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.348",
+    "file": "f6f056662144196a4caa34881d5809c626cd355b257817ec9034faf4692148d7.txt",
+    "sha256": "f6f056662144196a4caa34881d5809c626cd355b257817ec9034faf4692148d7",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.349",
+    "file": "8d1960c45bd9df055f4a0e64aa741ebb4998a67ef45ed29a681cabf1ac8a0fed.txt",
+    "sha256": "8d1960c45bd9df055f4a0e64aa741ebb4998a67ef45ed29a681cabf1ac8a0fed",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.350",
+    "file": "acf06daf490976d508e6911c77c3338ddeda44a00f66788f9f408a22376aab83.txt",
+    "sha256": "acf06daf490976d508e6911c77c3338ddeda44a00f66788f9f408a22376aab83",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.773",
+    "file": "857a6d3414befcb1937d924aa4dd28a4a01d482f3a27f251107d646d4d6c4fa8.txt",
+    "sha256": "857a6d3414befcb1937d924aa4dd28a4a01d482f3a27f251107d646d4d6c4fa8",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.789",
+    "file": "9e8441567abbc184cebb8d9bbb5d226ac9fa6edab67b35042d12270da0c70fa3.txt",
+    "sha256": "9e8441567abbc184cebb8d9bbb5d226ac9fa6edab67b35042d12270da0c70fa3",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.790",
+    "file": "cd2c8a8767417e2ecb3ef04050f1bbedbe483db0cb6be15e7b71cd8016424e32.txt",
+    "sha256": "cd2c8a8767417e2ecb3ef04050f1bbedbe483db0cb6be15e7b71cd8016424e32",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.634",
+    "file": "84a30e878858bb996a7f4bb7e31cb236007f1114a4012e1ea71fdefbcf150987.txt",
+    "sha256": "84a30e878858bb996a7f4bb7e31cb236007f1114a4012e1ea71fdefbcf150987",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.650",
+    "file": "a68f65e6b6a3974a82a74faff41a525293294a1e2e3482de0452877834edaf46.txt",
+    "sha256": "a68f65e6b6a3974a82a74faff41a525293294a1e2e3482de0452877834edaf46",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.651",
+    "file": "280c49a850c177dcd74e802c3ba002da3e5f2b7e25095449ea9c8c4d5a4b5a42.txt",
+    "sha256": "280c49a850c177dcd74e802c3ba002da3e5f2b7e25095449ea9c8c4d5a4b5a42",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.652",
+    "file": "1a41e3b0793f4e79479dca4fdc1ebeb4d50d08b076fe77bafc7acb19c95200eb.txt",
+    "sha256": "1a41e3b0793f4e79479dca4fdc1ebeb4d50d08b076fe77bafc7acb19c95200eb",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.441",
+    "file": "65bac5a30d1aab109f9f350b42b5835e0cc5ca60c61dbe6b83d8c984ebf60547.txt",
+    "sha256": "65bac5a30d1aab109f9f350b42b5835e0cc5ca60c61dbe6b83d8c984ebf60547",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.457",
+    "file": "39bfe4596560d45479148a64f1652b7e53db948706bd0e6154102fd540334dba.txt",
+    "sha256": "39bfe4596560d45479148a64f1652b7e53db948706bd0e6154102fd540334dba",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.458",
+    "file": "ba6495457cbb2c5459faa305f50aa560dd9a34a7f210c10694ad00846e13b053.txt",
+    "sha256": "ba6495457cbb2c5459faa305f50aa560dd9a34a7f210c10694ad00846e13b053",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp224r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp224r1_ecpoint_test.json",
+      "source_sha256": "6ab1c04f60158fe034c44c5e2616605c069160bbb018a74338d0c04be19b2cac",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp224r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.332",
+    "file": "954128c22b7e8bb02aaefa76f53a91d222efbe9a2026ab96d534c86775b2eeab.txt",
+    "sha256": "954128c22b7e8bb02aaefa76f53a91d222efbe9a2026ab96d534c86775b2eeab",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.348",
+    "file": "ba7be0c99f3c6f4cd67a0b176b595a390659a970b2401066b03b351377695a7e.txt",
+    "sha256": "ba7be0c99f3c6f4cd67a0b176b595a390659a970b2401066b03b351377695a7e",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.349",
+    "file": "ea79f22900d2129b43953e604d3c035c9d14ad7d1953e05a8e92a9d6bb298666.txt",
+    "sha256": "ea79f22900d2129b43953e604d3c035c9d14ad7d1953e05a8e92a9d6bb298666",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.350",
+    "file": "ae84a0ad395b4cfb944dbbdd923812bacf5b6d02e5f3024694acdf05876d5f1a.txt",
+    "sha256": "ae84a0ad395b4cfb944dbbdd923812bacf5b6d02e5f3024694acdf05876d5f1a",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp256r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp256r1_ecpoint_test.json",
+      "source_sha256": "648f16d077caf2400d02331ca51f44744c72c799830c8d0595d0b18b6dd9f886",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp256r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.773",
+    "file": "9f9aead5559a2b189e3d9618a94ecb7d8651de1a7f90e138b3171a893e58cf7b.txt",
+    "sha256": "9f9aead5559a2b189e3d9618a94ecb7d8651de1a7f90e138b3171a893e58cf7b",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.789",
+    "file": "b1b0d9fefccd8ee774feaadbaf6308c6b78a1bec0d7425a6fd06a3c828d9061d.txt",
+    "sha256": "b1b0d9fefccd8ee774feaadbaf6308c6b78a1bec0d7425a6fd06a3c828d9061d",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.790",
+    "file": "938e54e872f27a3424ad7411efc2d2b6d89c9d993cf2bf0283882dfe029a1b0b.txt",
+    "sha256": "938e54e872f27a3424ad7411efc2d2b6d89c9d993cf2bf0283882dfe029a1b0b",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp384r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_ecpoint_test.json",
+      "source_sha256": "ffa7835fe1de359dff762c8f1272b98acebd5578e2f855d969051ff956c6dca3",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp384r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.634",
+    "file": "e991c700395987cde9a873443ad965ed68c193f9f069e5aac3ccfed2a0e147ff.txt",
+    "sha256": "e991c700395987cde9a873443ad965ed68c193f9f069e5aac3ccfed2a0e147ff",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.650",
+    "file": "2826fcfaf942df9cfc6b03a02d0168ca76d12e6a48594e294b12fe90b227e7e6.txt",
+    "sha256": "2826fcfaf942df9cfc6b03a02d0168ca76d12e6a48594e294b12fe90b227e7e6",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.651",
+    "file": "4c5d650fcbdaa4a83e72369df4e06770b75ca2bf521844c63c83f5d810c531f8.txt",
+    "sha256": "4c5d650fcbdaa4a83e72369df4e06770b75ca2bf521844c63c83f5d810c531f8",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  },
+  {
+    "id": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.652",
+    "file": "869748b01c77713fb74370e145cf6e306034e3ed511dfef7c1aa9bdaa0915765.txt",
+    "sha256": "869748b01c77713fb74370e145cf6e306034e3ed511dfef7c1aa9bdaa0915765",
+    "worker_mode": "ecdh-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_MECHANISM_PARAM_INVALID",
+        "CKR_ARGUMENTS_BAD"
+      ],
+      "source_expected": "invalid",
+      "phase": "Native derive with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": {
+      "id": "ecdh_secp521r1_ecpoint_test.json",
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp521r1_ecpoint_test.json",
+      "source_sha256": "87aba8739c96de2bde8c75b60ffea09d0493192c4d9543d1d969e5e998931f35",
+      "license": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "valid_curve_control": "operation.CKM_ECDH1_DERIVE.derive@AdvancedSession::derive_native_key@ecdh_secp521r1_ecpoint_test.json.0.1",
+    "transformation": "Exact invalid raw SEC1 bytes, including empty. Curve/OID from successful control; exact published scalar checked against subgroup order; complete generic-secret destination at field width. No changed-Z vector treated as invalid input."
+  }
+]

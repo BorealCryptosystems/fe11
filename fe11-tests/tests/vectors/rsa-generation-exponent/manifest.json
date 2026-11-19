@@ -1,0 +1,223 @@
+[
+  {
+    "id": "generation.explicit_exponent.rsa-pair",
+    "file": "eb421f4ad31f19dfa5c831c7c1dc2cb387585f077ce0169c1091d51931611dc3.txt",
+    "sha256": "eb421f4ad31f19dfa5c831c7c1dc2cb387585f077ce0169c1091d51931611dc3",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generate an RSA pair with exponent 17. Require exponent 17 in canonical public SPKI and in an independent CKA_PUBLIC_EXPONENT read of the same public object.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "bits": 2048,
+      "public_exponent_hex": "11",
+      "public_usages": [
+        "verify"
+      ],
+      "private_usages": [
+        "sign"
+      ],
+      "profiles": [
+        "SignatureProfile::RsaPkcs1(HashAlgorithm::Sha256)"
+      ],
+      "expected_spki": "Canonical DER from this exact generated public RSA modulus/exponent; compare method result bytes exactly"
+    },
+    "producer": "Session::generate_classical_key_pair",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "generation.explicit_exponent.rsa-wrap",
+    "file": "dbf628a92c73c62c13c0f2e33c5c711cd8798623ddb9f8a9b630f009bfa8a38b.txt",
+    "sha256": "dbf628a92c73c62c13c0f2e33c5c711cd8798623ddb9f8a9b630f009bfa8a38b",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generate an RSA pair with exponent 17. Require exponent 17 in canonical public SPKI and in an independent CKA_PUBLIC_EXPONENT read of the same public object.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "bits": 2048,
+      "public_exponent_hex": "11",
+      "public_usages": [
+        "wrap",
+        "encrypt"
+      ],
+      "private_usages": [
+        "unwrap",
+        "decrypt"
+      ],
+      "expected_spki": "Canonical SPKI from this exact generated pair"
+    },
+    "producer": "Session::generate_rsa_key_encryption_pair",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

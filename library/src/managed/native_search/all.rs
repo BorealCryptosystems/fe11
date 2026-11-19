@@ -13,7 +13,7 @@ pub(super) struct AllMatches {
 impl AllMatches {
     pub(super) fn prepare(
         session: &Session,
-        epoch: u64,
+        epoch: Option<u64>,
         count: usize,
         waiter: &Waiting<'_>,
         mut reserve: impl FnMut(usize) -> Result<(crate::registry::Reservation<NativeIdentity>, Credit)>,
@@ -34,7 +34,7 @@ impl AllMatches {
             .ok_or(Error::Rejected(crate::RejectionReason::ObjectSearch(
                 crate::ObjectSearchRejection::SearchResultStorageAccounting,
             )))?;
-        loop {
+        'prepare: loop {
             waiter.check()?;
             let (mut permit, mut credit) = reserve(required)?;
             waiter.check()?;
@@ -70,13 +70,24 @@ impl AllMatches {
                 continue;
             }
             credit.release(required - actual);
+            // Full observations stay pinned. A native stream publishes only
+            // unobserved handles, so its bookkeeping stamp may follow the
+            // current context without promoting any private attribute report.
+            let stamp = epoch.unwrap_or_else(|| session.snapshot.authentication_stamp());
             for _ in 0..count {
-                identities.push(NativeIdentity::prepare_discovery(
-                    session,
-                    epoch,
-                    &mut permit,
-                    &mut credit,
-                )?);
+                match NativeIdentity::prepare_discovery(session, stamp, &mut permit, &mut credit) {
+                    Ok(identity) => identities.push(identity),
+                    Err(Error::Rejected(crate::RejectionReason::Authentication(
+                        crate::AuthenticationRejection::AuthenticationEpochChanged,
+                    ))) if epoch.is_none() => {
+                        // The native batch remains resident: retry only local
+                        // preparation, never Find. Release every partial credit
+                        // and reference before another admission can wait.
+                        drop((identities, objects, credit, permit));
+                        continue 'prepare;
+                    }
+                    Err(error) => return Err(error),
+                }
             }
             return Ok(Self {
                 identities,

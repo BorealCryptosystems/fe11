@@ -1,0 +1,202 @@
+[
+  {
+    "id": "legacy.Session.status",
+    "file": "6cb0f4a17213439bd43d89f13639f2ee4fdb2329caf37bc9c17c34e46685bc01.txt",
+    "sha256": "6cb0f4a17213439bd43d89f13639f2ee4fdb2329caf37bc9c17c34e46685bc01",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetFunctionStatus",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "legacy.Session.cancel",
+    "file": "b8747a6ff9631950424d8c51548ab46767692c37ef2052b0939277de7f2f71cb.txt",
+    "sha256": "b8747a6ff9631950424d8c51548ab46767692c37ef2052b0939277de7f2f71cb",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CancelFunction",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "legacy.Session.active",
+    "file": "f92ba4dd6a0042f8b3658ecce1e6d13cc988377f068e89236ae6280cb0dfa826.txt",
+    "sha256": "f92ba4dd6a0042f8b3658ecce1e6d13cc988377f068e89236ae6280cb0dfa826",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_GetFunctionStatus",
+      "C_CancelFunction",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "legacy.AdvancedSession.status",
+    "file": "8400438aeefb19ac17ba9329c4b80ef91698935ac102e0cb67483e7d563d29a3.txt",
+    "sha256": "8400438aeefb19ac17ba9329c4b80ef91698935ac102e0cb67483e7d563d29a3",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetFunctionStatus",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "legacy.AdvancedSession.cancel",
+    "file": "03b8a6df029d1d21f84f68ff69dee3b88a3cc8d08724e458435f04479dac891f.txt",
+    "sha256": "03b8a6df029d1d21f84f68ff69dee3b88a3cc8d08724e458435f04479dac891f",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CancelFunction",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "legacy.AdvancedSession.active",
+    "file": "287055cc11957389135c5be6a13394dcf981b1802c794af2b11d64f83f157557.txt",
+    "sha256": "287055cc11957389135c5be6a13394dcf981b1802c794af2b11d64f83f157557",
+    "worker_mode": "legacy-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native CKR_FUNCTION_NOT_PARALLEL for each legacy call; active SHA256 owner still yields the abc KAT. No cancellation/completion inferred from legacy returns.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_GetFunctionStatus",
+      "C_CancelFunction",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

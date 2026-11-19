@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "operation.CKM_ML_DSA.sign@Session::sign_native@ML-DSA-sigGen-FIPS204.13.181",
+    "file": "efeba38d74b5ca6ddf316f6bd6e0ad258f9c9827ad37523c775f5a56a6baf80a.txt",
+    "sha256": "efeba38d74b5ca6ddf316f6bd6e0ad258f9c9827ad37523c775f5a56a6baf80a",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_ML_DSA.sign@Session::sign_native@ML-DSA-sigGen-FIPS204.15.211",
+    "file": "33a15a201cddc0e17e6ca5a2e7256323c33efabeb0c30489d93e2bd213faa151.txt",
+    "sha256": "33a15a201cddc0e17e6ca5a2e7256323c33efabeb0c30489d93e2bd213faa151",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_ML_DSA.sign@Session::sign_native@ML-DSA-sigGen-FIPS204.17.241",
+    "file": "0a5b63724615511fc4e486412cee4bae497dcf54f3bacba739e7d769cbfaa954.txt",
+    "sha256": "0a5b63724615511fc4e486412cee4bae497dcf54f3bacba739e7d769cbfaa954",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_ML_DSA.sign@AdvancedSession::sign_native@ML-DSA-sigGen-FIPS204.13.181",
+    "file": "ef893476bf8cd52bcfec723fa497c663910ecfe71c9a322a3aa9f7b27f9fc854.txt",
+    "sha256": "ef893476bf8cd52bcfec723fa497c663910ecfe71c9a322a3aa9f7b27f9fc854",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_ML_DSA.sign@AdvancedSession::sign_native@ML-DSA-sigGen-FIPS204.15.211",
+    "file": "0b585a86938245524ced8f0f8b44acee63ea3f23316716d70d0259cd23719955.txt",
+    "sha256": "0b585a86938245524ced8f0f8b44acee63ea3f23316716d70d0259cd23719955",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_ML_DSA.sign@AdvancedSession::sign_native@ML-DSA-sigGen-FIPS204.17.241",
+    "file": "b99e9eaa090a50c3dc76a883a86e48cd7291867fc5df6eb864c876b9258fa534.txt",
+    "sha256": "b99e9eaa090a50c3dc76a883a86e48cd7291867fc5df6eb864c876b9258fa534",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::MlDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+      "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.37.313",
+    "file": "41a3319c9c3f0835fd13f62add6104cdb3eac3fbe9afd0cbef68c2dde9e67071.txt",
+    "sha256": "41a3319c9c3f0835fd13f62add6104cdb3eac3fbe9afd0cbef68c2dde9e67071",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.39.332",
+    "file": "58959c42272b30b24b42c637df9d813c9d80fbee54b2024418aecbe02a0c0609.txt",
+    "sha256": "58959c42272b30b24b42c637df9d813c9d80fbee54b2024418aecbe02a0c0609",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.41.351",
+    "file": "ba745df1a01e66f75d0db4c59a619412d8c74aa5346be28c93a2d80638baf3b9.txt",
+    "sha256": "ba745df1a01e66f75d0db4c59a619412d8c74aa5346be28c93a2d80638baf3b9",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.43.370",
+    "file": "237ef03544fa7d03076bb036e14d01a553eade18b292ff6f9a91a64d9ef70d00.txt",
+    "sha256": "237ef03544fa7d03076bb036e14d01a553eade18b292ff6f9a91a64d9ef70d00",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.45.389",
+    "file": "111588192ff4e31fb093df99def7b0bf4be5d03b5630d101ba8641a247ffa46f.txt",
+    "sha256": "111588192ff4e31fb093df99def7b0bf4be5d03b5630d101ba8641a247ffa46f",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.47.408",
+    "file": "a4125cf5dd97a2aa9d2620ffcdf516990f75605aef2ccedb4d714df38b855c4b.txt",
+    "sha256": "a4125cf5dd97a2aa9d2620ffcdf516990f75605aef2ccedb4d714df38b855c4b",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.55.469",
+    "file": "40ba34abd11518c8a44d92b3aed6d9afe714e26cc88efd2799691857549f6063.txt",
+    "sha256": "40ba34abd11518c8a44d92b3aed6d9afe714e26cc88efd2799691857549f6063",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.57.488",
+    "file": "70ce7b82534f367495df659f313804bbc1fc96ff07e86016482b5e0a6fe69f21.txt",
+    "sha256": "70ce7b82534f367495df659f313804bbc1fc96ff07e86016482b5e0a6fe69f21",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.59.507",
+    "file": "0b9bced55e95564201c74ee98b4ea4b8f232e25e386a8539cfdb5b01710af608.txt",
+    "sha256": "0b9bced55e95564201c74ee98b4ea4b8f232e25e386a8539cfdb5b01710af608",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.61.526",
+    "file": "af88079bcb88d063c1e6302130b07303b2775c2e2955dcfb60062abd171d4851.txt",
+    "sha256": "af88079bcb88d063c1e6302130b07303b2775c2e2955dcfb60062abd171d4851",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.63.545",
+    "file": "5b2073ba1465d05b6511d42cb6acc747e6ce61b1f7aa2ccbdf93cd5712098076.txt",
+    "sha256": "5b2073ba1465d05b6511d42cb6acc747e6ce61b1f7aa2ccbdf93cd5712098076",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@Session::sign_native@SLH-DSA-sigGen-FIPS205.65.564",
+    "file": "d07a487111c9ad78076a875d4a78e5e81a6b814d1b6d3d61cc470ed29d9a8f69.txt",
+    "sha256": "d07a487111c9ad78076a875d4a78e5e81a6b814d1b6d3d61cc470ed29d9a8f69",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.37.313",
+    "file": "cfab89b2ff2d96cf2368750093bac0ff3704653ff36d3477ad48ade066da6431.txt",
+    "sha256": "cfab89b2ff2d96cf2368750093bac0ff3704653ff36d3477ad48ade066da6431",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.39.332",
+    "file": "9f36ab8623012e86c6f1557efe9a74a4ed1cb7ea2d9738be61587f333b215c2c.txt",
+    "sha256": "9f36ab8623012e86c6f1557efe9a74a4ed1cb7ea2d9738be61587f333b215c2c",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.41.351",
+    "file": "21d25bd5e3f5b06e7c3fff3ad00f666122cb88b2c489681112fa78701d0c9664.txt",
+    "sha256": "21d25bd5e3f5b06e7c3fff3ad00f666122cb88b2c489681112fa78701d0c9664",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.43.370",
+    "file": "3b6a856f3c0772ae2d5559986ed1462662ab6b0738ba95743fb1fc49368b90e0.txt",
+    "sha256": "3b6a856f3c0772ae2d5559986ed1462662ab6b0738ba95743fb1fc49368b90e0",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.45.389",
+    "file": "fd184a7ba4219eaa69f99e3935fd8f4699f8c0cd7fc8f661ec5c0470cbcee1b0.txt",
+    "sha256": "fd184a7ba4219eaa69f99e3935fd8f4699f8c0cd7fc8f661ec5c0470cbcee1b0",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.47.408",
+    "file": "d6b81f5012103b9c25362b8a190b52991550c2cca0394e34beb72e5fa0a601da.txt",
+    "sha256": "d6b81f5012103b9c25362b8a190b52991550c2cca0394e34beb72e5fa0a601da",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.55.469",
+    "file": "8a02c0532ccf2b08006606582a89fb88d68b8a8707e884e0d76d8015432132ac.txt",
+    "sha256": "8a02c0532ccf2b08006606582a89fb88d68b8a8707e884e0d76d8015432132ac",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.57.488",
+    "file": "367354276ab58d3672a6ae34e7721544aea33948dcd32ef93fe941d3cccec64c.txt",
+    "sha256": "367354276ab58d3672a6ae34e7721544aea33948dcd32ef93fe941d3cccec64c",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.59.507",
+    "file": "f785436fdde407f1eb00e7413e14ffd1024ee3eb3d6e528ab360152c73b09962.txt",
+    "sha256": "f785436fdde407f1eb00e7413e14ffd1024ee3eb3d6e528ab360152c73b09962",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.61.526",
+    "file": "c0472d42f2094571cdb9f711bf9a3ce90b6aa85eb6809381a3c4aed51e74bf5b.txt",
+    "sha256": "c0472d42f2094571cdb9f711bf9a3ce90b6aa85eb6809381a3c4aed51e74bf5b",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.63.545",
+    "file": "4b186fa650d5b1e10896b5724949741430826688a09b43121831c55fda8dec19.txt",
+    "sha256": "4b186fa650d5b1e10896b5724949741430826688a09b43121831c55fda8dec19",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  },
+  {
+    "id": "operation.CKM_SLH_DSA.sign@AdvancedSession::sign_native@SLH-DSA-sigGen-FIPS205.65.564",
+    "file": "1f3221c5439e30bc25f8b0d88aa864f95a29cbc9a2a67173f62d0a6b83a20deb.txt",
+    "sha256": "1f3221c5439e30bc25f8b0d88aa864f95a29cbc9a2a67173f62d0a6b83a20deb",
+    "worker_mode": "pqc-random",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "parameters": {
+      "selector": "NativeSignatureParameters::PqcPure",
+      "family": "NativePqcFamily::SlhDsa",
+      "parameters": "Some(NativePqcContext)",
+      "hedging": "DeterministicRequired for deterministic SigGen KAT; all public values in hedge-specific cases",
+      "context": "exact vector context bytes",
+      "input": "external pure message"
+    },
+    "reference_sha256": "a80cacf5d36fdaa131858235605e6d0ea7a6041c872feeef6f24a6c8f1f5b4b6",
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+      "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reference_boundary": "Pinned OpenSSL CLI, shares backend; mandatory published NIST positive and changed-signature negative controls",
+    "encoding_sha256": "bde4cfb176a5a5336b13034d268b36eec0b0b18938fd21109c7fb964a0199274"
+  }
+]

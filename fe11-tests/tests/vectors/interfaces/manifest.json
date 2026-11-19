@@ -1,0 +1,503 @@
+[
+  {
+    "id": "interfaces.selection.provider_default",
+    "file": "3b7383df9d565168b8d44c1120b3152e85cf760197238b1c6750055795a6c4fc.txt",
+    "sha256": "3b7383df9d565168b8d44c1120b3152e85cf760197238b1c6750055795a6c4fc",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.legacy240",
+    "file": "e20e9fc48c72dc810481c2030f3cf2fbd2ecc60a992442434f5e76b67af61666.txt",
+    "sha256": "e20e9fc48c72dc810481c2030f3cf2fbd2ecc60a992442434f5e76b67af61666",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetFunctionList",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.standard32",
+    "file": "f0a884e07edf7e43ada389494b04e8ed1e7429c24b9e73ba1e34bf284fbb14dd.txt",
+    "sha256": "f0a884e07edf7e43ada389494b04e8ed1e7429c24b9e73ba1e34bf284fbb14dd",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.fork_flag",
+    "file": "b0d116228acd64643454d7a69c03c14f6e63dbc03bf936a12318642770cda748.txt",
+    "sha256": "b0d116228acd64643454d7a69c03c14f6e63dbc03bf936a12318642770cda748",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.absent240",
+    "file": "491ecc19002c141de1e83dc059dfa6f1e10a76318e0fa5b941b7c841d00f6dbe.txt",
+    "sha256": "491ecc19002c141de1e83dc059dfa6f1e10a76318e0fa5b941b7c841d00f6dbe",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.absent30",
+    "file": "39b0dfc34f64ad95a2231ff63a54bae9fa7657a209e5b1d46ab2bee09cecbf28.txt",
+    "sha256": "39b0dfc34f64ad95a2231ff63a54bae9fa7657a209e5b1d46ab2bee09cecbf28",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.absent31",
+    "file": "8be54e8b26af09e50794fe9512700adb8ace211a7a68f93570d58e37b9040526.txt",
+    "sha256": "8be54e8b26af09e50794fe9512700adb8ace211a7a68f93570d58e37b9040526",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.legacy220",
+    "file": "4711e797c64a65806c84c835396655b36a6292aa2790cb8e4e52546f6a35c4d6.txt",
+    "sha256": "4711e797c64a65806c84c835396655b36a6292aa2790cb8e4e52546f6a35c4d6",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetFunctionList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.legacy230",
+    "file": "8ca937caaa39c6d84ae3e0ba745e1b4aef83f1a8c2d3f4d9408cda32572f29c5.txt",
+    "sha256": "8ca937caaa39c6d84ae3e0ba745e1b4aef83f1a8c2d3f4d9408cda32572f29c5",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetFunctionList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.unknown_flags",
+    "file": "f811947ad7b403bd38f062d40d6c55cd1676072d0d46e0482ca37754e5e4bb43.txt",
+    "sha256": "f811947ad7b403bd38f062d40d6c55cd1676072d0d46e0482ca37754e5e4bb43",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.major4",
+    "file": "1c71ef5e591d3a19dc55718b318defe48252c17997cd4004e1c80fc39cdc336c.txt",
+    "sha256": "1c71ef5e591d3a19dc55718b318defe48252c17997cd4004e1c80fc39cdc336c",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.version33",
+    "file": "a2f8dd4815a0a788acb006698436fb614264f172e79b5527ebdc564d143c00e5.txt",
+    "sha256": "a2f8dd4815a0a788acb006698436fb614264f172e79b5527ebdc564d143c00e5",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.version239",
+    "file": "d0789e255450a247437c7949aa96fb0a042f0a2d620da97c4ae9464e0811292d.txt",
+    "sha256": "d0789e255450a247437c7949aa96fb0a042f0a2d620da97c4ae9464e0811292d",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.interfaces0",
+    "file": "bd288858e8947d8bb818668fba4d8441e9fc03cd85d9fc621f9f3ccd76e69750.txt",
+    "sha256": "bd288858e8947d8bb818668fba4d8441e9fc03cd85d9fc621f9f3ccd76e69750",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList"
+    ]
+  },
+  {
+    "id": "interfaces.selection.interfaces1",
+    "file": "2ea798b0416a9e8319795a05655e6572c6feac560c7ed21b15ebce866a2e9244.txt",
+    "sha256": "2ea798b0416a9e8319795a05655e6572c6feac560c7ed21b15ebce866a2e9244",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.interfaces2",
+    "file": "c2acb02ec7af45c173a145a2aef091bfa759cbf1f0e0ae3cd7bafa0da0925092.txt",
+    "sha256": "c2acb02ec7af45c173a145a2aef091bfa759cbf1f0e0ae3cd7bafa0da0925092",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.attempts0",
+    "file": "49827060b0691d87dc3b1888b4cb3fb7d86ede72181485040879365b542fd30d.txt",
+    "sha256": "49827060b0691d87dc3b1888b4cb3fb7d86ede72181485040879365b542fd30d",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.attempts1",
+    "file": "b32930d93716840c141c3c1b9d0789248955953886829dc3a4285c7d188c2e9d.txt",
+    "sha256": "b32930d93716840c141c3c1b9d0789248955953886829dc3a4285c7d188c2e9d",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "interfaces.selection.attempts2",
+    "file": "0191766c1df0c9bb5b6fb7b345b0d38deb0eb452f65e12a75d69b5ff62d77891.txt",
+    "sha256": "0191766c1df0c9bb5b6fb7b345b0d38deb0eb452f65e12a75d69b5ff62d77891",
+    "worker_mode": "interface-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact selected table and native metadata, SHA256 known answer after success; precise typed rejection and native list-size diagnostic on refusal; independent selection and initialization trace.",
+    "expected_native_calls": [
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize",
+      "C_GetInterfaceList",
+      "C_GetInterfaceList",
+      "C_GetInterface",
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  }
+]

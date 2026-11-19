@@ -1,0 +1,658 @@
+[
+  {
+    "id": "record.aead.encrypt.empty_output",
+    "file": "d3e84b8f60d89c8b666423d2162f68c5bfe20db430d6609335bb6a45e8874825.txt",
+    "sha256": "d3e84b8f60d89c8b666423d2162f68c5bfe20db430d6609335bb6a45e8874825",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.short_output",
+    "file": "defdf4a164d814a554ea6f8832339da9cb43f1ff59360400c16329d6b0e957d1.txt",
+    "sha256": "defdf4a164d814a554ea6f8832339da9cb43f1ff59360400c16329d6b0e957d1",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.long_output",
+    "file": "7b32475111c8cd922bf9551883b90ee38af3e987bed31c8913ff16c4340e7147.txt",
+    "sha256": "7b32475111c8cd922bf9551883b90ee38af3e987bed31c8913ff16c4340e7147",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.empty_input_nonempty_output",
+    "file": "55d90f624f86599e938cccd51cd97a4187c0c17d57ab854977f9d0a7fb4c1acf.txt",
+    "sha256": "55d90f624f86599e938cccd51cd97a4187c0c17d57ab854977f9d0a7fb4c1acf",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 0,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.reported_length_mismatch",
+    "file": "8358f8242e42ef978412a150ca06f4be005ef90299f3da0841ae2ce94005f328.txt",
+    "sha256": "8358f8242e42ef978412a150ca06f4be005ef90299f3da0841ae2ce94005f328",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.capacity_too_short",
+    "file": "d8c396f8dd86a648a1903359cf6774bc6d2c77e2e2cfc2b4267ef5f8f55fea5a.txt",
+    "sha256": "d8c396f8dd86a648a1903359cf6774bc6d2c77e2e2cfc2b4267ef5f8f55fea5a",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "capacity"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.unfinished_input",
+    "file": "068a2c0de37373007a3b23223291522ce448ece6c5f016f3def3cc99a9ba4cde.txt",
+    "sha256": "068a2c0de37373007a3b23223291522ce448ece6c5f016f3def3cc99a9ba4cde",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordFinishedMessageIncomplete for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "next_fragment"
+      ],
+      "expected_error": "MessageRecordRejection::RecordFinishedMessageIncomplete"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.short_tag",
+    "file": "7897cb1b08d3ec19c0699195991bcd4f59d3bfdc716d5acae01088771a5fb998.txt",
+    "sha256": "7897cb1b08d3ec19c0699195991bcd4f59d3bfdc716d5acae01088771a5fb998",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "tag"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.encrypt.residual_on_message",
+    "file": "03b7e8c7123285cf4ea0a8812d2f63aff51d8cf0e3ef6e665415e67a1200a7f4.txt",
+    "sha256": "03b7e8c7123285cf4ea0a8812d2f63aff51d8cf0e3ef6e665415e67a1200a7f4",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordUnexpectedResidual for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "encrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "residual_start"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordUnexpectedResidual"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.empty_output",
+    "file": "5008b399877e0d4a7fc186af25f124d921b40d742fd23aa942a9dfc1ce4506ae.txt",
+    "sha256": "5008b399877e0d4a7fc186af25f124d921b40d742fd23aa942a9dfc1ce4506ae",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.short_output",
+    "file": "1ff1cb9b15cc1e793817bfa8a1684ff22d1e794d71d4a91005993276d6947769.txt",
+    "sha256": "1ff1cb9b15cc1e793817bfa8a1684ff22d1e794d71d4a91005993276d6947769",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.long_output",
+    "file": "b38c44351219850f6f7c3eee9251b090f83c7ca773e05a0541b8f29255945fe2.txt",
+    "sha256": "b38c44351219850f6f7c3eee9251b090f83c7ca773e05a0541b8f29255945fe2",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.empty_input_nonempty_output",
+    "file": "1f7c75814b25c47fd8ae918dcab78f0de7bff0110d0f6fc28b787cd95f8f17ac.txt",
+    "sha256": "1f7c75814b25c47fd8ae918dcab78f0de7bff0110d0f6fc28b787cd95f8f17ac",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 0,
+      "changed_fields": [
+        "produced",
+        "result"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.reported_length_mismatch",
+    "file": "0b8840bfe91eebef286ccd01f6abf25027a8df5e910cf823779a9f50809c9360.txt",
+    "sha256": "0b8840bfe91eebef286ccd01f6abf25027a8df5e910cf823779a9f50809c9360",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "produced"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.capacity_too_short",
+    "file": "714cdcdc9b15f8ce0056c20a2b233cfe66c7c16f8c35bf85b74eee900bdc812b.txt",
+    "sha256": "714cdcdc9b15f8ce0056c20a2b233cfe66c7c16f8c35bf85b74eee900bdc812b",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordMessageProgression for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "capacity"
+      ],
+      "expected_error": "MessageRecordRejection::RecordMessageProgression"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.unfinished_input",
+    "file": "01db499f96d15d462de76dac18161e1775d6cefb12186dfa6c681a166293aa6f.txt",
+    "sha256": "01db499f96d15d462de76dac18161e1775d6cefb12186dfa6c681a166293aa6f",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact MessageRecordRejection::RecordFinishedMessageIncomplete for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "next_fragment"
+      ],
+      "expected_error": "MessageRecordRejection::RecordFinishedMessageIncomplete"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.short_tag",
+    "file": "1bfe54541bbe8202bd62b0963c3c2e0bed6403cfc42240adbbfe242c1a9ae2c6.txt",
+    "sha256": "1bfe54541bbe8202bd62b0963c3c2e0bed6403cfc42240adbbfe242c1a9ae2c6",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordAeadOutput for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "tag"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordAeadOutput"
+    }
+  },
+  {
+    "id": "record.aead.decrypt.residual_on_message",
+    "file": "ae298f08596d8da05dda321d82e2a54128578fd693493a668af7e0041c7de273.txt",
+    "sha256": "ae298f08596d8da05dda321d82e2a54128578fd693493a668af7e0041c7de273",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Positive completed AES-GCM structural frame, followed by exact CheckpointFormatRejection::RecordUnexpectedResidual for the declared length relationship; no native dispatch/authentication/restore.",
+    "mutation": {
+      "direction": "decrypt",
+      "input_length": 3,
+      "changed_fields": [
+        "residual_start"
+      ],
+      "expected_error": "CheckpointFormatRejection::RecordUnexpectedResidual"
+    }
+  }
+]

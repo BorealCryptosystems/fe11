@@ -72,6 +72,12 @@ pub(super) struct KeyLease {
     permission: permission::Permission,
 }
 impl KeyLease {
+    pub(super) fn readers_on(&self, activity: &Arc<crate::registry::Activity>, uid: u64) -> usize {
+        match &self.permission {
+            permission::Permission::Read(reader) => usize::from(reader.belongs_to(activity, uid)),
+            permission::Permission::Write { roles, .. } => roles.readers_on(activity, uid),
+        }
+    }
     pub(super) fn authentication_stamp(&self) -> u64 {
         self.stamp
     }

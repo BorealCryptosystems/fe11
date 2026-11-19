@@ -1,0 +1,38 @@
+[
+  {
+    "id": "administration.pin.init_standard",
+    "file": "c3c65bd16e812929bc9c8f934a4c6c620c248bb4c2f102f49c4f6d98a7e7b1ad.txt",
+    "sha256": "c3c65bd16e812929bc9c8f934a4c6c620c248bb4c2f102f49c4f6d98a7e7b1ad",
+    "worker_mode": "pin-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Initialize previously absent USER PIN with fresh16-byte fixture; initialized flag set and real USER login succeeds after SO logout.",
+    "expected_native_calls": [
+      "C_InitToken",
+      "C_OpenSession",
+      "C_Login",
+      "C_InitPIN",
+      "C_Logout",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

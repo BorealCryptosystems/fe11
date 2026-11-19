@@ -64,11 +64,12 @@ must establish local symbol binding and static linkage of OpenSSL.
 Documentation and validation
 ----------------------------
 
-The public CI has four build jobs (Windows/Linux, Rust 1.81.0/1.100.0) and two
-Linux SoftHSM jobs. Its new public scenarios live in ci/softhsm/tests, separate
-from the library sources. This workspace member has publish=false; the default
-workspace member remains library. See ci/softhsm/README.md for the scenarios,
-module provenance, ephemeral-token handling and local invocation.
+The public CI builds Fe11 on Windows and Linux with Rust 1.81.0 and 1.100.0.
+The Linux native jobs run the fe11-tests package against the pinned SoftHSM
+runtime. Each compiler, object store and interface has 32 partitions. The
+reconciliation job checks every declared case against the partition reports.
+See fe11-tests/tests/README.md for local invocation, test vectors and token
+isolation, and VALIDATION.md for the native observations and CI verdicts.
 
 The build jobs compile examples, the standalone fe11-sys crate and the optional
 verification engine. They also compile Rust documentation snippets and generate
@@ -86,8 +87,8 @@ components and verified upstream sources into that directory. Windows CI selects
 Python 3.13.17 explicitly; every job records its interpreter version. Local raw
 command logs remain private. On GitHub, a failed command prints a bounded
 diagnostic tail; Python validation errors print their bounded type and message.
-Public scenario output is streamed directly. Only explicitly
-named reports are uploaded as artifacts, never token files or raw build logs.
+Native jobs upload per-case results and partition summaries. Disposable token
+storage and private process logs stay in the job's working directory.
 After the job ends, cleanup.py can remove reproducible files under its checked
 parent directory while retaining reports and private build diagnostics.
 

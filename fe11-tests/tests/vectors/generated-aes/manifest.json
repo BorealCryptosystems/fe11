@@ -1,0 +1,63 @@
+[
+  {
+    "id": "aes.generated.gcm-authentication",
+    "file": "06a7ecd3621ff1b72acae4c375e3d3436aac4898c1df4103023dd9187298b955.txt",
+    "sha256": "06a7ecd3621ff1b72acae4c375e3d3436aac4898c1df4103023dd9187298b955",
+    "worker_mode": "generated-aes",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": "Generate one private AES-128 session key and a 96-bit nonce. Require a 128-bit tag, exact recovered plaintext, C_Decrypt/CKR_ENCRYPTED_DATA_INVALID after flipping the last tag bit, and recovery of the original plaintext with the same key.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_GenerateRandom",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "aes.generated.private-session-search",
+    "file": "fb2bac2f92762dc51dcddf77ff18c2d6354cac348eff4555cb46646f640c7b0f.txt",
+    "sha256": "fb2bac2f92762dc51dcddf77ff18c2d6354cac348eff4555cb46646f640c7b0f",
+    "worker_mode": "generated-aes",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": "Generate one private AES session key with this case's ID. A search using only CKA_ID must find one object. Destroy the originally generated key and require an empty result from the identical search.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_FindObjectsInit",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

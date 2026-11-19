@@ -71,6 +71,10 @@ impl OutputStep {
 }
 
 impl CipherOperation {
+    pub(in crate::advanced) fn parked_for_session(&self) -> bool {
+        self.observer == OutputObserver::Session
+    }
+
     pub(super) fn park_observer(&mut self, expected: CipherBufferRequest) -> Result<()> {
         let Stage::Waiting { request, .. } = &self.stage else {
             return Err(Error::Rejected(crate::RejectionReason::CipherContinuation(

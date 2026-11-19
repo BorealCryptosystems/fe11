@@ -406,6 +406,7 @@ pub(super) fn take_ticket(session: &Session) -> Result<OperationTicket> {
     }
     body.observer = Observer::Ticket;
     Ok(OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id: operation.id,

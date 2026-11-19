@@ -1,0 +1,12 @@
+CKM_DES_ECB
+session
+decrypt
+7
+0101010101010101
+00010203040506
+
+
+single
+local-length
+491e890de9ace932
+0001020304050607

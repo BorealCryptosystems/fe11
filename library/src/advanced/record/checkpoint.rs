@@ -77,12 +77,17 @@ impl<'a> SavedRecord<'a> {
             )));
         }
         let context = Context::read(&mut r)?;
-        let descriptor = Descriptor::read(&mut r)?;
-        let keys = KeyBindings::read(&mut r)?;
-        let messages = Messages::read(&mut r, limits)?;
-        let validation = ValidationRecord::read(&mut r, limits)?;
-        let native = r.bytes(limits.bytes)?;
+        let mut record = Self::read_plan(context, &mut r, limits)?;
+        record.native = r.bytes(limits.bytes)?;
         r.finish()?;
+        Ok(record)
+    }
+
+    fn read_plan(context: Context, reader: &mut Reader<'a>, limits: Limits) -> Result<Self> {
+        let descriptor = Descriptor::read(reader)?;
+        let keys = KeyBindings::read(reader)?;
+        let messages = Messages::read(reader, limits)?;
+        let validation = ValidationRecord::read(reader, limits)?;
         descriptor.validate(&keys, &messages, validation.as_ref(), limits)?;
         Ok(Self {
             context,
@@ -90,8 +95,54 @@ impl<'a> SavedRecord<'a> {
             keys,
             messages,
             validation,
-            native,
+            native: &[],
         })
+    }
+
+    /// A group has one token context, two or more distinct classic categories
+    /// and one opaque native state. The selected member is always first.
+    pub(in crate::advanced) fn read_group(
+        bytes: &'a [u8],
+        limits: Limits,
+        observer: super::GraphObserver<'a>,
+    ) -> Result<[Option<Self>; 5]> {
+        let invalid = || {
+            Error::Rejected(crate::RejectionReason::CheckpointFormat(
+                crate::CheckpointFormatRejection::SavedRecordKind,
+            ))
+        };
+        let (kind, mut reader) = super::decode_with(bytes, limits, observer)?;
+        if kind != Kind::SavedGroup {
+            return Err(invalid());
+        }
+        let context = Context::read(&mut reader)?;
+        let count = usize::from(reader.u8()?);
+        let mut members = std::array::from_fn(|_| None);
+        if !(2..=members.len()).contains(&count) {
+            return Err(invalid());
+        }
+        let mut used = 0;
+        for slot in &mut members[..count] {
+            let member = Self::read_plan(context, &mut reader, limits)?;
+            let category = member.descriptor.active_flags;
+            if !matches!(
+                member.descriptor.family,
+                Family::Digest | Family::CipherEncrypt | Family::CipherDecrypt | Family::Signature
+            ) || category.count_ones() != 1
+                || used & category != 0
+            {
+                return Err(invalid());
+            }
+            used |= category;
+            *slot = Some(member);
+        }
+        let native = reader.bytes(limits.bytes)?;
+        reader.finish()?;
+        members[0]
+            .as_mut()
+            .expect("at least two validated plans")
+            .native = native;
+        Ok(members)
     }
 }
 

@@ -1,0 +1,312 @@
+[
+  {
+    "id": "random.generate.0",
+    "file": "5d21f0e253ad834c16140dfcf6865757a3c40552a4676d92edbbbacbbca9c96f.txt",
+    "sha256": "5d21f0e253ad834c16140dfcf6865757a3c40552a4676d92edbbbacbbca9c96f",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.1",
+    "file": "292808220b9d6f3f45c208f6e42a94fbbc4d68ae46dccb2654b9fda260645c67.txt",
+    "sha256": "292808220b9d6f3f45c208f6e42a94fbbc4d68ae46dccb2654b9fda260645c67",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.15",
+    "file": "a439eb1a9ab670217cb0d270ec6c13b13ed94cd588700ef92d1097d4ffd498a5.txt",
+    "sha256": "a439eb1a9ab670217cb0d270ec6c13b13ed94cd588700ef92d1097d4ffd498a5",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.16",
+    "file": "021dd4d168998bf8e873e38038bf2f554f6520603f8244cdd5cb0e860682f2c2.txt",
+    "sha256": "021dd4d168998bf8e873e38038bf2f554f6520603f8244cdd5cb0e860682f2c2",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.17",
+    "file": "35d47648cfad1fd7e8f9c8d3e0578999bbb57443e0745d40c80441643ce8237d.txt",
+    "sha256": "35d47648cfad1fd7e8f9c8d3e0578999bbb57443e0745d40c80441643ce8237d",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.32",
+    "file": "4596a202bafc4df8c869694c036ec6dab4743b844a04caad0ef48fc9ba9cc9ad.txt",
+    "sha256": "4596a202bafc4df8c869694c036ec6dab4743b844a04caad0ef48fc9ba9cc9ad",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.64",
+    "file": "6c21d7dbe6f310839ce36b29c186e548caeda20b8107c6fdbb12cb7fd90c88e7.txt",
+    "sha256": "6c21d7dbe6f310839ce36b29c186e548caeda20b8107c6fdbb12cb7fd90c88e7",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.generate.257",
+    "file": "88448c0ee6ad4359203bdda550f2e492e0e018dbe67c6771909d682c1e539e90.txt",
+    "sha256": "88448c0ee6ad4359203bdda550f2e492e0e018dbe67c6771909d682c1e539e90",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.seed.empty",
+    "file": "0c573c85dac9d1def95d81a0cb30817f09230f7e43f3784a6361b69187353f6a.txt",
+    "sha256": "0c573c85dac9d1def95d81a0cb30817f09230f7e43f3784a6361b69187353f6a",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SeedRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.seed.binary",
+    "file": "84d1e41f1232b460df619b87dcfbc64954706ebdf82e80968035f2c1b4ac84ac.txt",
+    "sha256": "84d1e41f1232b460df619b87dcfbc64954706ebdf82e80968035f2c1b4ac84ac",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact native success and single dispatch; generated SecretBytes has requested length. No entropy, uniqueness or deterministic reseeding claim.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SeedRandom",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

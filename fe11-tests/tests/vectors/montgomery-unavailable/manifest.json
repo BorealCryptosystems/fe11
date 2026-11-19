@@ -1,0 +1,78 @@
+[
+  {
+    "id": "generation.montgomery.x25519.unavailable",
+    "file": "2c58011cf31c284794e9f0192122a53a0bbd29adf3537ffbb8df1cf9aee58989.txt",
+    "sha256": "2c58011cf31c284794e9f0192122a53a0bbd29adf3537ffbb8df1cf9aee58989",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact CKR_MECHANISM_INVALID from C_GenerateKeyPair using the typed Montgomery domain; no substitute generator or successful key-creation claim.",
+    "fixture": {
+      "route": "typed_generate_montgomery_key",
+      "state": "IDLE",
+      "action": "unsupported",
+      "domain": "x25519"
+    }
+  },
+  {
+    "id": "generation.montgomery.x448.unavailable",
+    "file": "a0b4d61abab0dcc4294d1ad46b5e4b79d82bfbe56c1afb8f8a5b564c50516bce.txt",
+    "sha256": "a0b4d61abab0dcc4294d1ad46b5e4b79d82bfbe56c1afb8f8a5b564c50516bce",
+    "worker_mode": "generation-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact CKR_MECHANISM_INVALID from C_GenerateKeyPair using the typed Montgomery domain; no substitute generator or successful key-creation claim.",
+    "fixture": {
+      "route": "typed_generate_montgomery_key_448",
+      "state": "IDLE",
+      "action": "unsupported",
+      "domain": "x448"
+    }
+  }
+]

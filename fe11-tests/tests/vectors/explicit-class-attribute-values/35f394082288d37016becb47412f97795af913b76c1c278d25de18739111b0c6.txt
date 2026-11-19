@@ -1,0 +1,10 @@
+template
+0|number|2
+1|bool|false
+2|bool|false
+256|number|75
+1565|number|1
+266|bool|true
+17|bytes|2aacbc8669722400423d9cbfc5e3fb9ed5717c0c9f35fb62db7437f5c5d4d387
+attributes
+CKA_VALUE|bytes|2aacbc8669722400423d9cbfc5e3fb9ed5717c0c9f35fb62db7437f5c5d4d387

@@ -1,0 +1,25 @@
+{
+  "recipe": "openssl-full",
+  "upstream_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+  "inputs": {
+    "openssl.tar.gz": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+    "softhsm.tar.gz": "4a13de4512cbfcc29b6cc674f2f5f56972ab82c4081e8d25c486c96792718ee8",
+    "sqlite.tar.gz": "b6ced585c750916b1052667239a12c25a7ff34e7f06e1e6e01ecb0427657d9c4"
+  },
+  "recipe_driver": "eefa5b981c17c6af44bf65e0b6b7f5e9505c6a08daf956d89f0ea466abf8a43d",
+  "recipe_support": "fe81618d9357b2d6eabb473bd95a74ebd722a636708930a36a9e66a2cb233bea",
+  "images": {
+    "openssl/bin/openssl": "becfabc152cc77269e9406f2a857cb17226702f3c4379aacc2a7ee7e27afc88e",
+    "openssl/lib/libssl.so.3": "10eeb89299540b67da5609bc8484f0935929e7d87e754097d8ac3a623a2044a5",
+    "openssl-full.cnf": "893a315fa4be60ddf1a4e0fa44a81627d8c436695eb1e2ceccf50954212c4eb2",
+    "openssl/lib/libcrypto.so.3": "e361e7afabd0760cecf4a852441be6fdfce59db89b4df949dd9b022cafe0a698",
+    "sqlite/lib/libsqlite3.so.0": "d192753d7763af140320865c173ae40ba6c609fb33d220675d36167e527816f1",
+    "openssl/lib/ossl-modules/legacy.so": "cd5c78f93d097adf4ad0e07c76824d70bac571225cf04575347515a3e9d57174",
+    "softhsm-full/lib/softhsm/libsofthsm2.so": "7a12bdbe19f9812d02a2169ccf5b0cacc28cd12e6d42a91c603477866f59a97e"
+  },
+  "dependency_names": {
+    "openssl/lib/libcrypto.so.3": "libcrypto.so.3",
+    "sqlite/lib/libsqlite3.so.0": "libsqlite3.so.3.54.1",
+    "openssl/lib/ossl-modules/legacy.so": "legacy.so"
+  }
+}

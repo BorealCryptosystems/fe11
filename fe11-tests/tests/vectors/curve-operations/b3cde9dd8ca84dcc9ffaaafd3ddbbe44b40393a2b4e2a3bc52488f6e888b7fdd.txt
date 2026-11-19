@@ -1,0 +1,4 @@
+curve-ops-v1
+06052b8104001b
+30
+named

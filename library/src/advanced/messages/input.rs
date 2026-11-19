@@ -259,7 +259,13 @@ pub(super) fn submit(
     let mut candidate: Option<(Need, storage::Prepared)> = None;
     loop {
         let access = session.advanced_access()?;
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::SignatureMessages(
+                crate::SignatureMessagesRejection::StaleMessageSignatureTicket,
+            ),
+        )?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         let body = check_owner(&operation, session, ticket.id)?;
         let current = need(&operation, body, submission)?;
@@ -383,7 +389,13 @@ pub(super) fn finish(
     let mut released = crate::advanced::poll::ReleasedInputs::default();
     let access = session.advanced_access()?;
     {
-        let held = access.operations.get(ticket.uid)?;
+        let held = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::SignatureMessages(
+                crate::SignatureMessagesRejection::StaleMessageSignatureTicket,
+            ),
+        )?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         let body = check_owner(&operation, session, ticket.id)?;
         if body.step != MessageStep::Ready {

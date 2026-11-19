@@ -1,0 +1,8 @@
+CKM_DES_ECB
+session
+decrypt
+8
+0123456789abcdef
+17668dfc7292532d
+1111111111111111
+

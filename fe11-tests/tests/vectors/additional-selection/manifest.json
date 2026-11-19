@@ -1,0 +1,691 @@
+[
+  {
+    "id": "typed.AdvancedSession::find_hkdf_key",
+    "file": "5be56c71c467509f592a3b17df221da8c890e1267c51956408baf2cf32e5998b.txt",
+    "sha256": "5be56c71c467509f592a3b17df221da8c890e1267c51956408baf2cf32e5998b",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type HkdfKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "original_design_spec": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_GENERIC_SECRET",
+      "value_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "length": 32,
+      "kind": "HkdfKeyType::Generic",
+      "usages": [
+        "derive"
+      ],
+      "note": "HKDF operation is unsupported; this tests discovery of an existing generic secret, not HKDF derivation"
+    },
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_GENERIC_SECRET",
+      "value_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "length": 32,
+      "kind": "HkdfKeyType::Generic",
+      "usages": [
+        "derive"
+      ],
+      "note": "HKDF operation is unsupported; this tests discovery of an existing generic secret, not HKDF derivation"
+    },
+    "producer": "Session::create_native_object then find_managed",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.AdvancedSession::find_managed",
+    "file": "f47b32f63be6a01039e9a28343945637d8837352a4e16830a40e626f8311fb88.txt",
+    "sha256": "f47b32f63be6a01039e9a28343945637d8837352a4e16830a40e626f8311fb88",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Return the unique CKO_DATA matching the exact CKA_OBJECT_ID and label. Observe requested public/private visibility and value; no key type, CKA_ID, SPKI or key policy assertion. Empty/duplicate cases retain their own exact search oracle. CKA_OBJECT_ID is canonical DER 06032a0304 (OID1.2.3.4); original arbitrary key-like bytes corrected. Advanced find_managed returns ManagedObjectRef synchronously, not an OperationTicket.",
+    "original_design_spec": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "Data",
+      "application": "public-selection",
+      "value_hex": "616263",
+      "private": false,
+      "object_id_hex": "01020304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected"
+    },
+    "input_parameters": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "Data",
+      "application": "public-selection",
+      "value_hex": "616263",
+      "private": false,
+      "object_id_hex": "06032a0304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected",
+      "object_identifier": "1.2.3.4"
+    },
+    "producer": "Session::create_data",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_hkdf_key",
+    "file": "14645cbfd510720f4e89e02b44e9d260ad8f941210fa959c187ff5a86f882738.txt",
+    "sha256": "14645cbfd510720f4e89e02b44e9d260ad8f941210fa959c187ff5a86f882738",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Resolve exact fixture type HkdfKey; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "original_design_spec": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_GENERIC_SECRET",
+      "value_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "length": 32,
+      "kind": "HkdfKeyType::Generic",
+      "usages": [
+        "derive"
+      ],
+      "note": "HKDF operation is unsupported; this tests discovery of an existing generic secret, not HKDF derivation"
+    },
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_GENERIC_SECRET",
+      "value_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "length": 32,
+      "kind": "HkdfKeyType::Generic",
+      "usages": [
+        "derive"
+      ],
+      "note": "HKDF operation is unsupported; this tests discovery of an existing generic secret, not HKDF derivation"
+    },
+    "producer": "Session::create_native_object then find_managed",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_managed",
+    "file": "168140382e542647ef6cc16554910f1513cdc0f1cd25a2b02ab50ebf059de729.txt",
+    "sha256": "168140382e542647ef6cc16554910f1513cdc0f1cd25a2b02ab50ebf059de729",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Return the unique CKO_DATA matching the exact CKA_OBJECT_ID and label. Observe requested public/private visibility and value; no key type, CKA_ID, SPKI or key policy assertion. Empty/duplicate cases retain their own exact search oracle. CKA_OBJECT_ID is canonical DER 06032a0304 (OID1.2.3.4); original arbitrary key-like bytes corrected.",
+    "original_design_spec": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "Data",
+      "application": "public-selection",
+      "value_hex": "616263",
+      "private": false,
+      "object_id_hex": "01020304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected"
+    },
+    "input_parameters": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "Data",
+      "application": "public-selection",
+      "value_hex": "616263",
+      "private": false,
+      "object_id_hex": "06032a0304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected",
+      "object_identifier": "1.2.3.4"
+    },
+    "producer": "Session::create_data",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_native_object_at",
+    "file": "826f073727e559aa6cbe07979e26a4cd67ebeb0accc7709700d3e2f6668d6c03.txt",
+    "sha256": "826f073727e559aa6cbe07979e26a4cd67ebeb0accc7709700d3e2f6668d6c03",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Return the unique CKO_DATA matching the exact CKA_OBJECT_ID and label. Observe requested public/private visibility and value; no key type, CKA_ID, SPKI or key policy assertion. Empty/duplicate cases retain their own exact search oracle. CKA_OBJECT_ID is canonical DER 06032a0304 (OID1.2.3.4); original arbitrary key-like bytes corrected.",
+    "original_design_spec": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "CKO_DATA",
+      "value_hex": "616263",
+      "private": false,
+      "index": 0,
+      "template": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304",
+      "object_id_hex": "01020304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected"
+    },
+    "input_parameters": {
+      "label": "public-data-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "ObjectId",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "baseline": "Exactly one CKO_DATA with CKA_OBJECT_ID01020304 and selected label. Unrelated data objects have a different CKA_OBJECT_ID; no key pair or CKA_ID selector.",
+      "class_name": "CKO_DATA",
+      "value_hex": "616263",
+      "private": false,
+      "index": 0,
+      "template": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304",
+      "object_id_hex": "06032a0304",
+      "selector": "CKA_CLASS CKO_DATA, CKA_OBJECT_ID01020304; never CKA_ID for a data object",
+      "base_selection": "CKA_CLASS=CKO_DATA + exact CKA_OBJECT_ID; label if selected",
+      "object_identifier": "1.2.3.4"
+    },
+    "producer": "Session::create_native_object",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

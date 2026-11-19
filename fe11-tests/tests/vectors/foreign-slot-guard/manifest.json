@@ -1,0 +1,35 @@
+[
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignDrainingSlot@TokenDrain::begin_foreign",
+    "file": "9cf24d12b6dfbb90a22fd72bc5327e1274e4c22262df1c91ac3e69ece5f4bed9.txt",
+    "sha256": "9cf24d12b6dfbb90a22fd72bc5327e1274e4c22262df1c91ac3e69ece5f4bed9",
+    "worker_mode": "foreign-slot-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignDrainingSlot))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_InitToken",
+      "C_OpenSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+RO_PUBLIC
+create_public_session
+RO_PUBLIC
+CKR_OK

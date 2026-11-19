@@ -1,0 +1,48 @@
+[
+  {
+    "id": "coexistence.foreign-authentication.public-observation",
+    "file": "557212052a5022b1055b5c259eadd48a13c79a360215300c5753d17870d4a62b.txt",
+    "sha256": "557212052a5022b1055b5c259eadd48a13c79a360215300c5753d17870d4a62b",
+    "worker_mode": "foreign-session",
+    "foreign_authentication": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_Login",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_Logout",
+      "C_GetSessionInfo",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Registered direct-C Login/Logout each returns CKR_OK without changing Fe11 call counters; subject session observes public/user/public. One public token and one public session object remain readable as abc and are explicitly destroyed. Completed SHA256(abc) bytes survive Logout. Every session is explicitly closed, runtime finalized once.",
+    "source": {
+      "contract": "PKCS11 C_Login/C_Logout; ForeignParticipant.prepare_operation token-wide admission; completed digest byte ownership"
+    }
+  }
+]

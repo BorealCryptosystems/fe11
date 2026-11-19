@@ -1,0 +1,3 @@
+session
+provide_extension_digest_output_capacity
+consumed

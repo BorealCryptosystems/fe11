@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //! Explicit native cancellation, with a separate retained control frame.
 
+mod group;
+use group::CancelGroup;
+
 use super::{
     ownership, preparation, AdvancedSession, AdvancedSessionMode, Operation, OperationBody,
 };
@@ -13,7 +16,8 @@ use fe11_sys::{
     CKF_DECAPSULATE, CKF_DECRYPT, CKF_DERIVE, CKF_DIGEST, CKF_ENCAPSULATE, CKF_ENCRYPT,
     CKF_FIND_OBJECTS, CKF_GENERATE, CKF_GENERATE_KEY_PAIR, CKF_MESSAGE_DECRYPT,
     CKF_MESSAGE_ENCRYPT, CKF_MESSAGE_SIGN, CKF_MESSAGE_VERIFY, CKF_SIGN, CKF_SIGN_RECOVER,
-    CKF_UNWRAP, CKF_VERIFY, CKF_VERIFY_RECOVER, CKF_WRAP, CKR_OK, CKR_PENDING, CK_FLAGS, CK_RV,
+    CKF_UNWRAP, CKF_VERIFY, CKF_VERIFY_RECOVER, CKF_WRAP, CKR_FUNCTION_NOT_SUPPORTED, CKR_OK,
+    CKR_PENDING, CK_FLAGS, CK_RV,
 };
 use std::sync::atomic::Ordering;
 const CATEGORIES: CK_FLAGS = CKF_FIND_OBJECTS
@@ -174,15 +178,26 @@ pub(super) struct CancelControl {
 enum CancellationCall {
     Issued,
     Pending,
-    Returned(CK_RV),
+    DirectReturn(CK_RV),
+    CompletionReturn(CK_RV),
+}
+
+// An unsupported completion observer says nothing about the effects of the
+// original cancellation. Keep its return distinct from the direct invocation.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+enum CancellationReturnSource {
+    SessionCancel,
+    AsyncComplete,
 }
 
 impl CancelControl {
-    fn record_return(&mut self, rv: CK_RV) {
-        self.call = if rv == CKR_PENDING {
-            CancellationCall::Pending
-        } else {
-            CancellationCall::Returned(rv)
+    fn record_return(&mut self, rv: CK_RV, source: CancellationReturnSource) {
+        self.call = match (rv, source) {
+            (CKR_PENDING, _) => CancellationCall::Pending,
+            (code, CancellationReturnSource::SessionCancel) => CancellationCall::DirectReturn(code),
+            (code, CancellationReturnSource::AsyncComplete) => {
+                CancellationCall::CompletionReturn(code)
+            }
         };
     }
 }
@@ -190,11 +205,14 @@ impl AdvancedSession {
     /// Cancel exactly the specified native categories. The call does not retry
     /// and never substitutes CloseSession. A cancelled dual half prevents any
     /// further result publication; remaining native state needs explicit cleanup.
+    /// If the native function is unsupported, its error leaves the existing
+    /// operation unchanged and reports that the cancellation had no effect.
     pub fn cancel(&self, flags: CancellationFlags) -> Result<CancellationProgress> {
         let mut retired = None;
+        let mut peer_retirements = Default::default();
         let _retired_anchor;
         let mut prepared: Option<preparation::Shell> = None;
-        let (s, operation, installed, call) = loop {
+        let (s, group, operation, installed, call) = loop {
             let s = self.session.advanced_access()?;
             let call = s
                 .native
@@ -210,8 +228,8 @@ impl AdvancedSession {
                 .load(Ordering::Acquire)
                 != 0
             {
-                let operation = s.operations.get(self.session.uid)?;
-                break (s, operation, false, call);
+                let (group, operation) = CancelGroup::select(&s, self.session.uid, Some(flags.0))?;
+                break (s, group, operation, false, call);
             }
             if let Some(slot) = prepared.take() {
                 let (token, cancel) = slot.bind(&s.lease_admission()?)?;
@@ -219,7 +237,7 @@ impl AdvancedSession {
                     &self.session.entry,
                     Operation::new(OperationBody::Control, token, cancel),
                 )?;
-                break (s, operation, true, call);
+                break (s, CancelGroup::default(), operation, true, call);
             }
             // Resource waiting must not retain the gates required by the owner
             // which may appear while this inactive cancellation is preparing.
@@ -261,9 +279,8 @@ impl AdvancedSession {
                 crate::CancellationBusy::CancellationPending,
             )));
         }
-        if let Err(error) = s
-            .operations
-            .claim_progress(&self.session.entry, op.id)
+        if let Err(error) = group
+            .claim(&s, &self.session.entry, op.id, flags.0)
             .and_then(|_| s.native.record("C_SessionCancel"))
         {
             if installed {
@@ -271,8 +288,9 @@ impl AdvancedSession {
                     self.session.entry.poisoned.store(true, Ordering::Release);
                     error
                 })?;
+                let lease = op._token.identity().clone();
                 drop(op);
-                let cleanup = match s.operations.take_closed(&self.session.entry) {
+                let cleanup = match s.operations.take_operation(&self.session.entry, &lease) {
                     Ok(owner) => {
                         retired = owner;
                         None
@@ -292,7 +310,7 @@ impl AdvancedSession {
             return Err(error);
         }
         // No fallible local step separates submission from the native call.
-        let pending_parent = op.execution_incomplete();
+        let pending_parent = op.execution_incomplete() || group.pending_parent;
         op.cancel.submit(flags.0);
         // SAFETY: session ownership and separate control are installed; arguments
         // are native scalar values and the target's allocations remain retained.
@@ -314,7 +332,10 @@ impl AdvancedSession {
         // This call has scalar operands and no native-addressable result.
         .inspect(|| Ok(()))
         .resolve(|_, cause| cause)?;
-        op.cancel.as_mut().unwrap().record_return(rv);
+        op.cancel
+            .as_mut()
+            .unwrap()
+            .record_return(rv, CancellationReturnSource::SessionCancel);
         if rv == CKR_PENDING {
             if self.mode() != AdvancedSessionMode::Asynchronous {
                 s.native.mark_uncertain();
@@ -331,22 +352,24 @@ impl AdvancedSession {
         } else {
             crate::native_return::call_memory_returned(rv)
         };
-        finish_and_retire(
+        group.complete(
             &s,
             &self.session.entry,
             &mut op,
             rv,
             memory_returned,
+            CancellationReturnSource::SessionCancel,
             &mut retired,
+            &mut peer_retirements,
         )
     }
     /// Observe one pending C_SessionCancel. This cannot reissue that function,
     /// complete the original operation or publish its output.
     pub fn poll_cancellation(&self) -> Result<CancellationProgress> {
         let mut retired = None;
-        let operation;
+        let mut peer_retirements = Default::default();
         let s = self.session.advanced_access()?;
-        operation = s.operations.get(self.session.uid)?;
+        let (group, operation) = CancelGroup::select(&s, self.session.uid, None)?;
         let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
         let id = op.id;
         let control =
@@ -367,7 +390,7 @@ impl AdvancedSession {
             .ok_or(Error::Rejected(crate::RejectionReason::SessionLifecycle(
                 crate::SessionLifecycleRejection::CAsyncCompleteUnavailable,
             )))?;
-        s.operations.claim_progress(&self.session.entry, id)?;
+        group.claim(&s, &self.session.entry, id, control.flags)?;
         s.native.record("C_AsyncComplete")?;
         control.call = CancellationCall::Issued;
         // SAFETY: name lives in the installed control. Cancellation has no
@@ -379,7 +402,7 @@ impl AdvancedSession {
                 std::ptr::null_mut(),
             )
         };
-        control.record_return(rv);
+        control.record_return(rv, CancellationReturnSource::AsyncComplete);
         crate::native_return::protocol::PendingInspection::completed("C_SessionCancel", rv, |_| {
             s.native.observe_async_return(rv);
             if rv != CKR_PENDING {
@@ -396,13 +419,15 @@ impl AdvancedSession {
         if rv == CKR_PENDING {
             return Ok(CancellationProgress::Pending);
         }
-        finish_and_retire(
+        group.complete(
             &s,
             &self.session.entry,
             &mut op,
             rv,
             crate::native_return::async_memory_returned(rv as u64),
+            CancellationReturnSource::AsyncComplete,
             &mut retired,
+            &mut peer_retirements,
         )
     }
 }
@@ -437,7 +462,7 @@ fn finish_and_retire(
     }
     match result {
         Ok((progress, _)) => {
-            *retired = s.operations.take_closed(entry)?;
+            *retired = s.operations.take_operation(entry, op._token.identity())?;
             Ok(progress)
         }
         Err(error) => {
@@ -445,7 +470,7 @@ fn finish_and_retire(
                 entry.poisoned.store(true, Ordering::Release);
                 error
             })?;
-            let cleanup = match s.operations.take_closed(entry) {
+            let cleanup = match s.operations.take_operation(entry, op._token.identity()) {
                 Ok(owner) => {
                     *retired = owner;
                     None
@@ -471,11 +496,19 @@ fn finish(
             .ok_or(Error::Rejected(crate::RejectionReason::Cancellation(
                 crate::CancellationRejection::CancellationControlAbsent,
             )))?;
-    if !matches!(observed.call, CancellationCall::Returned(code) if code == rv) {
-        return Err(Error::Rejected(crate::RejectionReason::Cancellation(
-            crate::CancellationRejection::CancellationReturnUnproven,
-        )));
-    }
+    let source = match observed.call {
+        CancellationCall::DirectReturn(code) if code == rv => {
+            CancellationReturnSource::SessionCancel
+        }
+        CancellationCall::CompletionReturn(code) if code == rv => {
+            CancellationReturnSource::AsyncComplete
+        }
+        _ => {
+            return Err(Error::Rejected(crate::RejectionReason::Cancellation(
+                crate::CancellationRejection::CancellationReturnUnproven,
+            )));
+        }
+    };
     if !memory_returned {
         // In particular GENERAL_ERROR does not authorize moving/destroying the
         // control whose name storage may have been borrowed by AsyncComplete.
@@ -495,11 +528,23 @@ fn finish(
         .ok_or(Error::Rejected(crate::RejectionReason::Cancellation(
             crate::CancellationRejection::CancellationControlAbsent,
         )))?;
+    if rv == CKR_FUNCTION_NOT_SUPPORTED && source == CancellationReturnSource::SessionCancel {
+        // PKCS#11 5.1.6: an unsupported function's stub only returns its error.
+        // The returned call releases its control, not the original operation.
+        // Preserve any earlier withdrawal instead of making it runnable again.
+        return Err(Error::Native {
+            function: "C_SessionCancel",
+            code: rv as u64,
+            may_have_effect: false,
+        });
+    }
     let active = op.active_categories();
     if rv != CKR_OK {
         // A failed multi-category cancel provides no map of partial effects.
         // Keep all original frames/leases and forbid their result publication.
-        op.cancellation = ownership::CancellationState::Withdrawn { remaining: active };
+        if active & control.flags != 0 {
+            op.cancellation = ownership::CancellationState::Withdrawn { remaining: active };
+        }
         return Err(Error::Native {
             function: "C_SessionCancel",
             code: rv as u64,

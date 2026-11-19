@@ -78,5 +78,5 @@ Local detection/handling phase and implementation owner:
 
 Local detection/handling phase and implementation owner:
 
-- `finish` (module-level helper) — `src/advanced/cancellation.rs`. Enclosing true branch: `!matches!(observed.call, CancellationCall::Returned(code) if code == rv)`.
+- `finish` (module-level helper) — `src/advanced/cancellation.rs`. The recorded call must be `CancellationCall::DirectReturn(code)` or `CancellationCall::CompletionReturn(code)`, with `code == rv`. Any other state or return code is rejected before the cancellation control is released.
 

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "local.parameter.session_gcm_plaintext_withholding",
+    "file": "82ad2019d1edd43f61d2842c21e58f40e8eaadcfba3618684e82464d33c10ae5.txt",
+    "sha256": "82ad2019d1edd43f61d2842c21e58f40e8eaadcfba3618684e82464d33c10ae5",
+    "worker_mode": "gcm-withholding",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Before authenticated Final: Busy(CipherContinuation(AeadPlaintextAwaitsSuccessfulFinal)), zero native calls during take. The denial does not consume the ticket; proper continuation returns exactly16 zero plaintext bytes.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "source": "NIST GCM public zero-key, zero-IV, one-block vector; exact ciphertext, tag and plaintext retained",
+    "assertions": [
+      "exact pre-authentication Busy",
+      "unchanged open input and zero progress after refused take",
+      "authenticated plaintext16zero bytes",
+      "Exact BUFFER_TOO_SMALL Update requires32 from initial16; resize then poll retained ciphertext without resubmission"
+    ]
+  }
+]

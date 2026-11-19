@@ -1,0 +1,4 @@
+RW_SO
+init_pin
+RW_SO
+CKR_OK

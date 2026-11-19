@@ -1,0 +1,746 @@
+[
+  {
+    "id": "negative.CKM_DES_ECB.wrap.usage",
+    "file": "e0e3a243e3b831bdfa6705889774d2c1aa456d7035b2ab3ace67c70b17578bd3.txt",
+    "sha256": "e0e3a243e3b831bdfa6705889774d2c1aa456d7035b2ab3ace67c70b17578bd3",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_DES_ECB.decrypt@Session::decrypt_cipher@OPENSSL.evpciph_des.txt.11",
+      "fixture": "vectors\\cipher\\dd6667cae1587132dc78ff90cd7c6b1c2ed7541ac895f233bf520701a6211a8d.txt",
+      "sha256": "dd6667cae1587132dc78ff90cd7c6b1c2ed7541ac895f233bf520701a6211a8d"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES_CBC.wrap.usage",
+    "file": "831890e1820dc4fa041b2932c62a48ddd2f024b75e23403fcfc98d65b1d16abb.txt",
+    "sha256": "831890e1820dc4fa041b2932c62a48ddd2f024b75e23403fcfc98d65b1d16abb",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_DES_CBC.decrypt@Session::decrypt_cipher@OPENSSL.evpciph_des.txt.55",
+      "fixture": "vectors\\cipher\\cd97456f5a526352d79d87e494b9b7ade49273f52d92d9726230b7ad6f407b13.txt",
+      "sha256": "cd97456f5a526352d79d87e494b9b7ade49273f52d92d9726230b7ad6f407b13"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES_CBC_PAD.wrap.usage",
+    "file": "b02ddc01d5d52ababa2bc7b9f5d7963a8a40db0668741793fcb890a5a79282b2.txt",
+    "sha256": "b02ddc01d5d52ababa2bc7b9f5d7963a8a40db0668741793fcb890a5a79282b2",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea.txt",
+      "sha256": "24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES_CBC_PAD.unwrap.usage",
+    "file": "2ff9a37dd766f9bbd7927fe7dd00fb4a75f91dd0665394912039f08a50accb2e.txt",
+    "sha256": "2ff9a37dd766f9bbd7927fe7dd00fb4a75f91dd0665394912039f08a50accb2e",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea.txt",
+      "sha256": "24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES_CBC_PAD.unwrap.template",
+    "file": "9f98dea91276feecd59e8b1da93cf7e70c352664d6587d8b82abc2a7e420334b.txt",
+    "sha256": "9f98dea91276feecd59e8b1da93cf7e70c352664d6587d8b82abc2a7e420334b",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea.txt",
+      "sha256": "24da15723626ca6298fa2277830d5e0283a4eea65c892d03b2b5c1525bd429ea"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES3_CBC.wrap.usage",
+    "file": "f5d2029782bac6f380d633879559004ce3e88338de7d564afbeda0c4a1980439.txt",
+    "sha256": "f5d2029782bac6f380d633879559004ce3e88338de7d564afbeda0c4a1980439",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_DES3_CBC.decrypt@Session::decrypt_cipher@ACVP-TDES-CBC-1.0.1.1",
+      "fixture": "vectors\\cipher\\65273bb77b17eefb8aa79a3b023bcb8f9180730214b6b673231ddf0aaa6fc824.txt",
+      "sha256": "65273bb77b17eefb8aa79a3b023bcb8f9180730214b6b673231ddf0aaa6fc824"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_PAD.wrap.usage",
+    "file": "348ad015a392fbc4968b956c8a3869b6e4c7a66e40146205a14d0fa878c8bbe2.txt",
+    "sha256": "348ad015a392fbc4968b956c8a3869b6e4c7a66e40146205a14d0fa878c8bbe2",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES3_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\tdes-padding-usage\\b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6.txt",
+      "sha256": "b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_PAD.unwrap.usage",
+    "file": "f9dbf484ecdf957c645a4a686c08beb0be7931c79f468da873252e6d22a248b3.txt",
+    "sha256": "f9dbf484ecdf957c645a4a686c08beb0be7931c79f468da873252e6d22a248b3",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES3_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\tdes-padding-usage\\b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6.txt",
+      "sha256": "b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_DES3_CBC_PAD.unwrap.template",
+    "file": "ba11b664ef7126adeadf6750aef1a540305faac333e4f1768ec9864a6b5e8f56.txt",
+    "sha256": "ba11b664ef7126adeadf6750aef1a540305faac333e4f1768ec9864a6b5e8f56",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_DES3_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\tdes-padding-usage\\b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6.txt",
+      "sha256": "b688667f626dc7842eddaca2daa98b2ae1585d42945612323e4ab075fe2e69f6"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC.wrap.usage",
+    "file": "cffb13aed3459633c91bf7c732cb4bb9c7117a2b810735cd4f6a82bfd4c888b8.txt",
+    "sha256": "cffb13aed3459633c91bf7c732cb4bb9c7117a2b810735cd4f6a82bfd4c888b8",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_AES_CBC.decrypt@Session::decrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "fixture": "vectors\\cipher\\a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9.txt",
+      "sha256": "a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC.unwrap.usage",
+    "file": "afde669d1f2a476ebda2dcd34125f5a4d159b0d02be4f413a9f09f8e700c8d5c.txt",
+    "sha256": "afde669d1f2a476ebda2dcd34125f5a4d159b0d02be4f413a9f09f8e700c8d5c",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_AES_CBC.decrypt@Session::decrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "fixture": "vectors\\cipher\\a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9.txt",
+      "sha256": "a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC.unwrap.template",
+    "file": "4610620b1574f11b27cc5aea478a119a10193594bb7ba786564cb914fcfae686.txt",
+    "sha256": "4610620b1574f11b27cc5aea478a119a10193594bb7ba786564cb914fcfae686",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "operation.CKM_AES_CBC.decrypt@Session::decrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "fixture": "vectors\\cipher\\a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9.txt",
+      "sha256": "a8920396a2f2c5a8be49f39a38f57eecf5f0947ebec211da7e783c4f8192a8c9"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC_PAD.wrap.usage",
+    "file": "8fded80b3bf0d30d59b34d5876d11cf4afacf044710da76e9429fd9741116ad1.txt",
+    "sha256": "8fded80b3bf0d30d59b34d5876d11cf4afacf044710da76e9429fd9741116ad1",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_WrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_AES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d.txt",
+      "sha256": "82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC_PAD.unwrap.usage",
+    "file": "911656b0deb44d249cef6b262952f2aabc84b7d510309ca32d50820ed7c670a9.txt",
+    "sha256": "911656b0deb44d249cef6b262952f2aabc84b7d510309ca32d50820ed7c670a9",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_AES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d.txt",
+      "sha256": "82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_CBC_PAD.unwrap.template",
+    "file": "376a71f4dbcbbe94d804dff9408add428165020e38416ee2f83e288476fbcf56.txt",
+    "sha256": "376a71f4dbcbbe94d804dff9408add428165020e38416ee2f83e288476fbcf56",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "negative.CKM_AES_CBC_PAD.encrypt.usage",
+      "fixture": "vectors\\additional-cipher-usage\\82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d.txt",
+      "sha256": "82bf754c13e95e8f557dd32993079f7763d29c45dac5bae758dcfc8ac9afd52d"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  },
+  {
+    "id": "negative.CKM_AES_KEY_WRAP.unwrap.usage",
+    "file": "de29020ad9795c184ed4da088c02530226a1c4d58aae257e09040f803f38ea8b.txt",
+    "sha256": "de29020ad9795c184ed4da088c02530226a1c4d58aae257e09040f803f38ea8b",
+    "worker_mode": "transport-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "id": "direct.cross.native_unwrap.CONSUMED.take",
+      "fixture": "vectors\\direct-material\\8deec37c5007aa6743a2b70a1d4f991c8ed418b70acba172e60d6a527d485ff3.txt",
+      "sha256": "8deec37c5007aa6743a2b70a1d4f991c8ed418b70acba172e60d6a527d485ff3"
+    },
+    "control": "Same selected native Wrap/Unwrap route with full permissions/template must first produce the exact independent ciphertext/plaintext; only then apply one negative mutation."
+  }
+]

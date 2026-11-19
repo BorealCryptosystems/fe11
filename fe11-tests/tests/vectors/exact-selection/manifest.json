@@ -1,0 +1,224 @@
+[
+  {
+    "id": "typed.Session::find_exact",
+    "file": "de90bfb48ace23e300b939795301b33337629d1fc750e96b31757a378d5a2476.txt",
+    "sha256": "de90bfb48ace23e300b939795301b33337629d1fc750e96b31757a378d5a2476",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Return public ObjectRef with exact class/type/id/token/private observations; both class searches have cardinality1 and index0; native public n/e match the independently encoded published-key SPKI. No creation/destruction during find; exact native search Final and owned-reference cleanup.",
+    "design_oracle": "Resolve exact fixture type ObjectRef; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "design_producer": "Session::create_native_object then admitted public RSA reference",
+    "producer": "Import published RSA public and companion private objects through C_CreateObject, keep creator alive, then select only the public reference.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "source": "vectors/RSA-REFERENCE-VECTORS.json#key",
+      "class_name": "PublicKey",
+      "usages": [
+        "verify"
+      ]
+    },
+    "public_vector_source": "vectors\\evppkey_rsa_common.txt",
+    "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "typed.Session::find_oaep_exact",
+    "file": "5d925baa9dc5dbe7d4af8a57a50aa5be9badf4f59bddc370b95fa14fb769b86a.txt",
+    "sha256": "5d925baa9dc5dbe7d4af8a57a50aa5be9badf4f59bddc370b95fa14fb769b86a",
+    "worker_mode": "typed-selection",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Return public ObjectRef with exact class/type/id/token/private observations; both class searches have cardinality1 and index0; native public n/e match the independently encoded published-key SPKI. No creation/destruction during find; exact native search Final and owned-reference cleanup.",
+    "design_oracle": "Resolve exact fixture type ObjectRef; verify observed class/key type/id and exact SPKI/domain where required. No creation during find. Advanced variant returns ticket then matching typed OperationProgress; retain native search Final evidence and final resource cleanup.",
+    "design_producer": "Session::create_native_object then admitted public RSA reference",
+    "producer": "Import published RSA public and companion private objects through C_CreateObject, keep creator alive, then select only the public reference.",
+    "input_parameters": {
+      "id_hex": "01020304",
+      "label": "public-key-selection",
+      "persistent": false,
+      "session": "RW USER, fresh per case; creator session stays open throughout selection",
+      "mechanism_observation": "MechanismObservationPlan::NotRequested",
+      "history_observation": {
+        "sensitive": true,
+        "extractable": true,
+        "always_sensitive": true,
+        "never_extractable": true,
+        "local": true,
+        "generation": true,
+        "maximum_bytes": 32
+      },
+      "protection": {
+        "sensitive": false,
+        "extractable": true
+      },
+      "public_visibility": "Public",
+      "private_visibility": "Private",
+      "object_admission": {
+        "public_attributes": [
+          "Class",
+          "KeyType",
+          "Id",
+          "Token",
+          "Private"
+        ],
+        "search": {
+          "maximum_objects": 4,
+          "batch_size": 2
+        },
+        "selection": {
+          "index": 0
+        },
+        "destination": {
+          "search": "NotRequested",
+          "user": "NotRequested"
+        },
+        "metadata": {
+          "maximum_bytes": 32768,
+          "clarification": "BatchOnly"
+        },
+        "observation": "all boolean switches false; maximum_bytes32768"
+      },
+      "creation_policy": {
+        "request": "MechanismRequest::Omitted",
+        "admission": "MechanismObservationPlan::NotRequested"
+      },
+      "key_usages": "Set only named usages true. All other KeyUsageRequest fields None; no hidden role defaults.",
+      "baseline": "Exact one subject object per class+id, or public/private pair sharing id; unrelated objects have another id. No other object matches the selector.",
+      "key_type": "CKK_RSA",
+      "source": "vectors/RSA-REFERENCE-VECTORS.json#key",
+      "class_name": "PublicKey",
+      "usages": [
+        "encrypt"
+      ]
+    },
+    "public_vector_source": "vectors\\evppkey_rsa_common.txt",
+    "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_OpenSession",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

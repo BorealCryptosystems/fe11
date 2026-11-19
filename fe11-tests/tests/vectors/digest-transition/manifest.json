@@ -1,0 +1,3421 @@
+[
+  {
+    "id": "digest.cross.ABSENT.init",
+    "file": "8f2b5f21e6b139fbb811e6dd40061c9d29c8698cc8cfeef99d253f35b3a745c6.txt",
+    "sha256": "8f2b5f21e6b139fbb811e6dd40061c9d29c8698cc8cfeef99d253f35b3a745c6",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestInit CKR_OK; new caller-fed ticket",
+    "producer": "Fresh synchronous AdvancedSession, no ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ABSENT.take",
+    "file": "cfb30a707bb2328063943901ceecd2bda77ae8e2d552b7e11b8e1af8e44981a7.txt",
+    "sha256": "cfb30a707bb2328063943901ceecd2bda77ae8e2d552b7e11b8e1af8e44981a7",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(OperationAbsent)); no live digest ledger owner and no continuation manufactured",
+    "producer": "Fresh synchronous AdvancedSession, no ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ABSENT.login",
+    "file": "938a4f6cd47c24becbbcaf89fa6af27d87a03a8fd9f1004852eb3605f9744671.txt",
+    "sha256": "938a4f6cd47c24becbbcaf89fa6af27d87a03a8fd9f1004852eb3605f9744671",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "Fresh synchronous AdvancedSession, no ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ABSENT.logout",
+    "file": "07b93a61ba86b05976c548763a6f428ccc1db2fc440cd955b8aa327b33441de7.txt",
+    "sha256": "07b93a61ba86b05976c548763a6f428ccc1db2fc440cd955b8aa327b33441de7",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "Fresh synchronous AdvancedSession, no ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ABSENT.close",
+    "file": "8723b8915adc1e65b5a42f84b8b02f6e8c3b827ebc40db883b39e3e002afd1c3.txt",
+    "sha256": "8723b8915adc1e65b5a42f84b8b02f6e8c3b827ebc40db883b39e3e002afd1c3",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; no digest value has been published by this fixture",
+    "producer": "Fresh synchronous AdvancedSession, no ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.init",
+    "file": "d115ddd5d5d781121d6366a1aff73df2f341f4bc6c35598702d0a0b07d20c59c.txt",
+    "sha256": "d115ddd5d5d781121d6366a1aff73df2f341f4bc6c35598702d0a0b07d20c59c",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(OperationOwnership(AdvancedOperation)); original owner intact; no second DigestInit",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.update",
+    "file": "4d18bb5c8a9085ccf7b5289277edba1a5c1c47c5ed654833572f13bd4aae9282.txt",
+    "sha256": "4d18bb5c8a9085ccf7b5289277edba1a5c1c47c5ed654833572f13bd4aae9282",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "update",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestUpdate CKR_OK for bytes64; Final independently equals SHA256(previous bytes || 64)",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+    "expected_digest_input_hex": "64",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.final",
+    "file": "493f178c49ec8c584a6d260c491958aad18179bcf78f36a41b6d986f5978ac4b.txt",
+    "sha256": "493f178c49ec8c584a6d260c491958aad18179bcf78f36a41b6d986f5978ac4b",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "final",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestFinal CKR_OK; SHA256(empty) for INITIALIZED/LOCAL_REFUSAL, SHA256(abc) for ACTIVE",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.take",
+    "file": "0a7d1a07582aa8f971127d00b3cd2aed57a416b683acdf6a3164383e6f8f27f1.txt",
+    "sha256": "0a7d1a07582aa8f971127d00b3cd2aed57a416b683acdf6a3164383e6f8f27f1",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestContinuationTicketUnavailable)); no observer duplicated and no native call",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.poll",
+    "file": "786726642421a7362a8c5b7a840fd5be5f153a1ba15b73d4b72011d082f4e4fe.txt",
+    "sha256": "786726642421a7362a8c5b7a840fd5be5f153a1ba15b73d4b72011d082f4e4fe",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "poll",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ready while caller input remains open; no implicit Final; subsequent explicit update/final remains usable",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+    "expected_digest_input_hex": "64",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.output_capacity",
+    "file": "2dfcdf140a9c6c15b8bcd462f8c9521d3be0507927c0b750e5f59ab183bd12bd.txt",
+    "sha256": "2dfcdf140a9c6c15b8bcd462f8c9521d3be0507927c0b750e5f59ab183bd12bd",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "output_capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestOutputIsNotAwaitingStorage)); prior input state preserved",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.capture",
+    "file": "0f3327edae81e32b7a3ced25ca7a55d7c10865065aba32c0554817a2ba787ff1.txt",
+    "sha256": "0f3327edae81e32b7a3ced25ca7a55d7c10865065aba32c0554817a2ba787ff1",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "capture",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_GetOperationState CKR_FUNCTION_NOT_SUPPORTED; no SavedOperationState; original digest retained",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_GetOperationState",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.login",
+    "file": "d314cf6ccf13d3a8c6a4defbcf1f145ad7fdfa210f4734716069677b18c9bc49.txt",
+    "sha256": "d314cf6ccf13d3a8c6a4defbcf1f145ad7fdfa210f4734716069677b18c9bc49",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.logout",
+    "file": "3c29a8a5212e9d98a05c1012c698fe70d98912c74286338d00238a74c3e294d1.txt",
+    "sha256": "3c29a8a5212e9d98a05c1012c698fe70d98912c74286338d00238a74c3e294d1",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.close",
+    "file": "fdd938e21146053b79c48bc4299f3caea4c29fb981f7a5d1b99c9b49d2e924ec.txt",
+    "sha256": "fdd938e21146053b79c48bc4299f3caea4c29fb981f7a5d1b99c9b49d2e924ec",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; no digest value has been published by this fixture",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.INITIALIZED.drop_ticket",
+    "file": "e1e2e27bdef4507bf3e87bea934347c5f05007bfd10efc445aa69764a6fe9c27.txt",
+    "sha256": "e1e2e27bdef4507bf3e87bea934347c5f05007bfd10efc445aa69764a6fe9c27",
+    "worker_mode": "digest-transition",
+    "state": "INITIALIZED",
+    "action": "drop_ticket",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop observer makes no native cancellation/close; no digest published; session explicitly closed afterward",
+    "producer": "begin_native_digest(Sha256) completed Init; caller input remains open; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.init",
+    "file": "79d99ef004f223bffaa906bee6f34fa309de06e0c19d8359cd4beeea49833b61.txt",
+    "sha256": "79d99ef004f223bffaa906bee6f34fa309de06e0c19d8359cd4beeea49833b61",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(OperationOwnership(AdvancedOperation)); original owner intact; no second DigestInit",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.update",
+    "file": "77249b16618062cb67396bf2c097fc3c17b48767c99e080cf81f9a2452cd646b.txt",
+    "sha256": "77249b16618062cb67396bf2c097fc3c17b48767c99e080cf81f9a2452cd646b",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "update",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestUpdate CKR_OK for bytes64; Final independently equals SHA256(previous bytes || 64)",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "88d4266fd4e6338d13b845fcf289579d209c897823b9217da3e161936f031589",
+    "expected_digest_input_hex": "61626364",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.final",
+    "file": "aa52b665ba9ea5bfce7e8f1bc03712e0eb8bcebc47bd3e96fff3b2ae8bb46d53.txt",
+    "sha256": "aa52b665ba9ea5bfce7e8f1bc03712e0eb8bcebc47bd3e96fff3b2ae8bb46d53",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "final",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestFinal CKR_OK; SHA256(empty) for INITIALIZED/LOCAL_REFUSAL, SHA256(abc) for ACTIVE",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.take",
+    "file": "ef926bde17f8c6d433d28d5348205392c1515dfd1123c9e944ca387f03f363b8.txt",
+    "sha256": "ef926bde17f8c6d433d28d5348205392c1515dfd1123c9e944ca387f03f363b8",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestContinuationTicketUnavailable)); no observer duplicated and no native call",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.poll",
+    "file": "00ce18825429ac047c334c383d5037b9fde0cd37a51a682fba79c1b5fb74552d.txt",
+    "sha256": "00ce18825429ac047c334c383d5037b9fde0cd37a51a682fba79c1b5fb74552d",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "poll",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ready while caller input remains open; no implicit Final; subsequent explicit update/final remains usable",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "88d4266fd4e6338d13b845fcf289579d209c897823b9217da3e161936f031589",
+    "expected_digest_input_hex": "61626364",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.output_capacity",
+    "file": "e0337dd91f598ea229513252b860b1e9912536104150f7747618ac14e9a2d422.txt",
+    "sha256": "e0337dd91f598ea229513252b860b1e9912536104150f7747618ac14e9a2d422",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "output_capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestOutputIsNotAwaitingStorage)); prior input state preserved",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.capture",
+    "file": "0cdc8eadd1826d2f7f88e59d66717a7e32ff1fdcad3021242f1df2991d2c671d.txt",
+    "sha256": "0cdc8eadd1826d2f7f88e59d66717a7e32ff1fdcad3021242f1df2991d2c671d",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "capture",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_GetOperationState CKR_FUNCTION_NOT_SUPPORTED; no SavedOperationState; original digest retained",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_GetOperationState",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.login",
+    "file": "24ca73d20aabb268b491240a6e68f7e05c31be0c525af475eea14614c9a60f51.txt",
+    "sha256": "24ca73d20aabb268b491240a6e68f7e05c31be0c525af475eea14614c9a60f51",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.logout",
+    "file": "be746c449a8c2917e532b2b702fee04ebf22dc33aae49ccfbc306f76719130af.txt",
+    "sha256": "be746c449a8c2917e532b2b702fee04ebf22dc33aae49ccfbc306f76719130af",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.close",
+    "file": "69e8b9e77b0a75d6e7c5b7a0b282087bf812f0d9c03550add91c28b8303c94d0.txt",
+    "sha256": "69e8b9e77b0a75d6e7c5b7a0b282087bf812f0d9c03550add91c28b8303c94d0",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; no digest value has been published by this fixture",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.ACTIVE.drop_ticket",
+    "file": "4e5f00fa14a601cff437db3b312af741b2c426a9d36f58d2776c57d20a89e1ec.txt",
+    "sha256": "4e5f00fa14a601cff437db3b312af741b2c426a9d36f58d2776c57d20a89e1ec",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "drop_ticket",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop observer makes no native cancellation/close; no digest published; session explicitly closed afterward",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.init",
+    "file": "0e21860f53bf1a8e1c55d60407fe849d90833eb381bf933e85f93b1eb34dbe46.txt",
+    "sha256": "0e21860f53bf1a8e1c55d60407fe849d90833eb381bf933e85f93b1eb34dbe46",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestInit CKR_OK; new caller-fed ticket",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.update",
+    "file": "cd66b86ed816efe1c90b3179c4fdb23b6cb6ae2109eae4ed51ad489d0d9e92ef.txt",
+    "sha256": "cd66b86ed816efe1c90b3179c4fdb23b6cb6ae2109eae4ed51ad489d0d9e92ef",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "update",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket)); published bytes unchanged",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.final",
+    "file": "5842bd1ba15ba058750110d33cb958011c858308cfdf267760f1b1cb0ef129d6.txt",
+    "sha256": "5842bd1ba15ba058750110d33cb958011c858308cfdf267760f1b1cb0ef129d6",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "final",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket)); published bytes unchanged",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.take",
+    "file": "f49cb1245576331ff156d9474b9fe41682e9c38b350a2871d0e20eb00a24cf0e.txt",
+    "sha256": "f49cb1245576331ff156d9474b9fe41682e9c38b350a2871d0e20eb00a24cf0e",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(OperationAbsent)); no live digest ledger owner and no continuation manufactured",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.poll",
+    "file": "6c6e907b0a08c57a5fe3c101a2ba5cee6753b1d71c0a2ae4d506721ba0fdf46c.txt",
+    "sha256": "6c6e907b0a08c57a5fe3c101a2ba5cee6753b1d71c0a2ae4d506721ba0fdf46c",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "poll",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.output_capacity",
+    "file": "85713e0c7eeaaf1a8fe6c3460ed0f935e3adfe7fe71935e83e6c481c151dce30.txt",
+    "sha256": "85713e0c7eeaaf1a8fe6c3460ed0f935e3adfe7fe71935e83e6c481c151dce30",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "output_capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.capture",
+    "file": "3592a5a1be5d2639361ef25e2c8aea81a486fff3b2c083008cb0c7079de31d10.txt",
+    "sha256": "3592a5a1be5d2639361ef25e2c8aea81a486fff3b2c083008cb0c7079de31d10",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "capture",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(Authentication(ForeignOrConsumedOperationTicket))",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.login",
+    "file": "3d89ddef3f3ecd6536c5b26c598fadb1cc6cab9b538d49d2364dc6e3a25dd114.txt",
+    "sha256": "3d89ddef3f3ecd6536c5b26c598fadb1cc6cab9b538d49d2364dc6e3a25dd114",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.logout",
+    "file": "5144b9bf395944ef38005db80c82a3a15b38d6968439ba501d8fb7cb132d6c2f.txt",
+    "sha256": "5144b9bf395944ef38005db80c82a3a15b38d6968439ba501d8fb7cb132d6c2f",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.close",
+    "file": "d6ea14dff29be62c8bc73ee06e6c7590ccae9ef8dc95964d2752117ccdd80f2d.txt",
+    "sha256": "d6ea14dff29be62c8bc73ee06e6c7590ccae9ef8dc95964d2752117ccdd80f2d",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; previously owned published bytes unchanged",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.drop_ticket",
+    "file": "63288eec59c92d4c81ca1ac25ab5ea970baf51be00db3b3e630960670ed49f76.txt",
+    "sha256": "63288eec59c92d4c81ca1ac25ab5ea970baf51be00db3b3e630960670ed49f76",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "drop_ticket",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop consumed observer only; previously owned digest retained",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.PUBLISHED.read_output",
+    "file": "be78a68df4b6671a49bc8c1e7c83205a5917e25c1fcbdc1c7a748c27723c6e80.txt",
+    "sha256": "be78a68df4b6671a49bc8c1e7c83205a5917e25c1fcbdc1c7a748c27723c6e80",
+    "worker_mode": "digest-transition",
+    "state": "PUBLISHED",
+    "action": "read_output",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Owned output bytes equal SHA256(616263), length32; NativeDigest for typed producer, ExtensionResult for extension producer; use each public result accessor. After close same owned bytes.",
+    "producer": "ACTIVE then finish_native_digest: own exact NativeDigest and retain consumed ticket; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.init",
+    "file": "65392c89387e8ceafd4280ff1a8a606f9d203b81b5a7decad5d989d5a762bf2a.txt",
+    "sha256": "65392c89387e8ceafd4280ff1a8a606f9d203b81b5a7decad5d989d5a762bf2a",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(OperationOwnership(AdvancedOperation)); original owner intact; no second DigestInit",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.update",
+    "file": "78e8b1be4c347e8bb5ee421a1f10f1a62b0195c4ce380afaf5f7e239b6c5eaea.txt",
+    "sha256": "78e8b1be4c347e8bb5ee421a1f10f1a62b0195c4ce380afaf5f7e239b6c5eaea",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "update",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestUpdate CKR_OK for bytes64; Final independently equals SHA256(previous bytes || 64)",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+    "expected_digest_input_hex": "64",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.final",
+    "file": "9acbb24ea09812025f224692f51cf92e361a0beda81b62efd729df431097f6d0.txt",
+    "sha256": "9acbb24ea09812025f224692f51cf92e361a0beda81b62efd729df431097f6d0",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "final",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_DigestFinal CKR_OK; SHA256(empty) for INITIALIZED/LOCAL_REFUSAL, SHA256(abc) for ACTIVE",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.take",
+    "file": "1795512a63c2fca6d1e77356cd1a03cd3cbf9061b46e32cf2381b7ac7b2d33b9.txt",
+    "sha256": "1795512a63c2fca6d1e77356cd1a03cd3cbf9061b46e32cf2381b7ac7b2d33b9",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestContinuationTicketUnavailable)); no observer duplicated and no native call",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.poll",
+    "file": "a19bb107fe8eda8d3e25c51d400450c5758a76a14d229e21aa16a3ca40981b35.txt",
+    "sha256": "a19bb107fe8eda8d3e25c51d400450c5758a76a14d229e21aa16a3ca40981b35",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "poll",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ready while caller input remains open; no implicit Final; subsequent explicit update/final remains usable",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4",
+    "expected_digest_input_hex": "64",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.output_capacity",
+    "file": "2f4f11143d7b9fc1039c767d6bc44c53cc677ac5906015260f676a28b2f96806.txt",
+    "sha256": "2f4f11143d7b9fc1039c767d6bc44c53cc677ac5906015260f676a28b2f96806",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "output_capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestOutputIsNotAwaitingStorage)); prior input state preserved",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.capture",
+    "file": "6e46cbdfbd829c8d1ca911ba2be952936aebaeeda89cd87055e2fe8de5af7a21.txt",
+    "sha256": "6e46cbdfbd829c8d1ca911ba2be952936aebaeeda89cd87055e2fe8de5af7a21",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "capture",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "C_GetOperationState CKR_FUNCTION_NOT_SUPPORTED; no SavedOperationState; original digest retained",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_GetOperationState",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.login",
+    "file": "3d4856ae09986901e16a3b4edb359e1383d0d5bcec6657b64ba487411881c986.txt",
+    "sha256": "3d4856ae09986901e16a3b4edb359e1383d0d5bcec6657b64ba487411881c986",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.logout",
+    "file": "3a94bfdebf17f75fedd58d15cbeb74a302c86cb06c3fc7828f7533ccfad5b1e4.txt",
+    "sha256": "3a94bfdebf17f75fedd58d15cbeb74a302c86cb06c3fc7828f7533ccfad5b1e4",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.close",
+    "file": "34ff4e637e0d94f3cd1ad0d0a9232ab462417b03ca5fe04033f5f9b0fe0a008c.txt",
+    "sha256": "34ff4e637e0d94f3cd1ad0d0a9232ab462417b03ca5fe04033f5f9b0fe0a008c",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; no digest value has been published by this fixture",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.LOCAL_REFUSAL.drop_ticket",
+    "file": "4c414b84e02c5cb4f68669f65bd99ec32e377b4558e5f430aacf0217b90b714e.txt",
+    "sha256": "4c414b84e02c5cb4f68669f65bd99ec32e377b4558e5f430aacf0217b90b714e",
+    "worker_mode": "digest-transition",
+    "state": "LOCAL_REFUSAL",
+    "action": "drop_ticket",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop observer makes no native cancellation/close; no digest published; session explicitly closed afterward",
+    "producer": "INITIALIZED then digest_update(61, InputLimits{maximum_parts:1,maximum_total_bytes:0}) refused before native Update; original owner retained; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_digest_input_hex": "",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.init",
+    "file": "dca941e0c0720f6d43ef243e98fc70392f6203b957c0c5c22180bbb485157038.txt",
+    "sha256": "dca941e0c0720f6d43ef243e98fc70392f6203b957c0c5c22180bbb485157038",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native call",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.update",
+    "file": "30f82835102e326722f7df6c7f76f5b21fb116a74909b8a158a720785a611c02.txt",
+    "sha256": "30f82835102e326722f7df6c7f76f5b21fb116a74909b8a158a720785a611c02",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "update",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.final",
+    "file": "c501c5c029eaaa25a33d731811d7ed901fa8c52d734791f72858dd6bd6485c24.txt",
+    "sha256": "c501c5c029eaaa25a33d731811d7ed901fa8c52d734791f72858dd6bd6485c24",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "final",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.take",
+    "file": "f42fe64026814fa40ee2949d5d77ea798a82e1ae59c4a7351350767ee57a3f77.txt",
+    "sha256": "f42fe64026814fa40ee2949d5d77ea798a82e1ae59c4a7351350767ee57a3f77",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native call",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.poll",
+    "file": "530bd5a5592b2f3e1db54ccb6c0c9af873039f0fa0b5df8968974d3b60993dc4.txt",
+    "sha256": "530bd5a5592b2f3e1db54ccb6c0c9af873039f0fa0b5df8968974d3b60993dc4",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "poll",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.output_capacity",
+    "file": "b4b383a839e7bbaa10bd448c05baa0b2cc1c6326503f0fb8da1c1ca740f76431.txt",
+    "sha256": "b4b383a839e7bbaa10bd448c05baa0b2cc1c6326503f0fb8da1c1ca740f76431",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "output_capacity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.capture",
+    "file": "d508ae06ecc4e0406f2e8f7421910897a47f74df1e095a6e31cd3d22c0a40f9f.txt",
+    "sha256": "d508ae06ecc4e0406f2e8f7421910897a47f74df1e095a6e31cd3d22c0a40f9f",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "capture",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.login",
+    "file": "4e4b311ae4f0cdc83bd725b30a1e6982631b481dee788267bd94642d4f320129.txt",
+    "sha256": "4e4b311ae4f0cdc83bd725b30a1e6982631b481dee788267bd94642d4f320129",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.logout",
+    "file": "2f73a68c256604d9d20b8ad60c206332d575055bc309586274758bc1b61cec69.txt",
+    "sha256": "2f73a68c256604d9d20b8ad60c206332d575055bc309586274758bc1b61cec69",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.close",
+    "file": "2dfce9cb68f126c3bb81cf06b8e64c44884ea8fc7dc81826283b069cf5633d39.txt",
+    "sha256": "2dfce9cb68f126c3bb81cf06b8e64c44884ea8fc7dc81826283b069cf5633d39",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no repeat native close",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.CLOSED.drop_ticket",
+    "file": "f5e687e07b489e4788ccc53defa8682043926bf1d9583ebf9f8c062dfac68011.txt",
+    "sha256": "f5e687e07b489e4788ccc53defa8682043926bf1d9583ebf9f8c062dfac68011",
+    "worker_mode": "digest-transition",
+    "state": "CLOSED",
+    "action": "drop_ticket",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop observer of closed session; no native call and no output appeared",
+    "producer": "ACTIVE then AdvancedSession.close returns Complete; retained ticket is not a session handle; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.init",
+    "file": "0e81bd723709e4f1878856d213116bf9335adb97eb3f185495e9c05141395d08.txt",
+    "sha256": "0e81bd723709e4f1878856d213116bf9335adb97eb3f185495e9c05141395d08",
+    "worker_mode": "digest-transition",
+    "state": "TICKET_DROPPED",
+    "action": "init",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Busy(OperationOwnership(AdvancedOperation)); original owner intact; no second DigestInit",
+    "producer": "ACTIVE then drop its observer ticket; native operation and session remain owned, no published digest; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.take",
+    "file": "71ae094accb94be150d1cb7b27451630505b6a2be9cacb53f71fd2dcfdb03d54.txt",
+    "sha256": "71ae094accb94be150d1cb7b27451630505b6a2be9cacb53f71fd2dcfdb03d54",
+    "worker_mode": "digest-transition",
+    "state": "TICKET_DROPPED",
+    "action": "take",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestContinuationTicketUnavailable)); no observer duplicated and no native call",
+    "producer": "ACTIVE then drop its observer ticket; native operation and session remain owned, no published digest; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.login",
+    "file": "8df4299ce0170c7251383d76ba43723a284a4b0d22aeb643d62e830e05a239d0.txt",
+    "sha256": "8df4299ce0170c7251383d76ba43723a284a4b0d22aeb643d62e830e05a239d0",
+    "worker_mode": "digest-transition",
+    "state": "TICKET_DROPPED",
+    "action": "login",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Login CKR_USER_ALREADY_LOGGED_IN; subject digest unchanged",
+    "producer": "ACTIVE then drop its observer ticket; native operation and session remain owned, no published digest; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_Login",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.logout",
+    "file": "5e001743247127464c19ca21f70ac2b395af5c56d2639b7ae69fc550ffa1fb38.txt",
+    "sha256": "5e001743247127464c19ca21f70ac2b395af5c56d2639b7ae69fc550ffa1fb38",
+    "worker_mode": "digest-transition",
+    "state": "TICKET_DROPPED",
+    "action": "logout",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Peer C_Logout CKR_OK; public digest state unaffected, no operation cancellation",
+    "producer": "ACTIVE then drop its observer ticket; native operation and session remain owned, no published digest; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_Logout",
+      "C_CloseSession",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "digest.cross.TICKET_DROPPED.close",
+    "file": "c67b77619d25f257503c33affcb911a2b455d581b3f5aceab9dd4279fd13d8b4.txt",
+    "sha256": "c67b77619d25f257503c33affcb911a2b455d581b3f5aceab9dd4279fd13d8b4",
+    "worker_mode": "digest-transition",
+    "state": "TICKET_DROPPED",
+    "action": "close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "AdvancedCloseStatus::Complete after C_CloseSession CKR_OK; no digest value has been published by this fixture",
+    "producer": "ACTIVE then drop its observer ticket; native operation and session remain owned, no published digest; same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

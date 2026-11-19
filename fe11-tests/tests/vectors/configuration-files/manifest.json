@@ -1,0 +1,210 @@
+[
+  {
+    "id": "configuration.files-and-flags.directory-missing",
+    "file": "3346e2bbac89d0f3938dd482e134b3b4b915d926e6c7289b3052cad3be33277b.txt",
+    "sha256": "3346e2bbac89d0f3938dd482e134b3b4b915d926e6c7289b3052cad3be33277b",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "directory-missing",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.files-and-flags.directory-file",
+    "file": "7a0d1e9e67ead027edad7c8b0613cb63edf32fbac5c0d827648898da0a175702.txt",
+    "sha256": "7a0d1e9e67ead027edad7c8b0613cb63edf32fbac5c0d827648898da0a175702",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "directory-file",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.files-and-flags.log-owned",
+    "file": "d5300c22a378546d1d937c5424169612515f3a15c8c0c2d33df5e2152d71d006.txt",
+    "sha256": "d5300c22a378546d1d937c5424169612515f3a15c8c0c2d33df5e2152d71d006",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-owned",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.files-and-flags.log-unopenable",
+    "file": "a125c0391c7c7ce7311cd305076615471c4a31468718aa1bcce5ca8f94b5a300.txt",
+    "sha256": "a125c0391c7c7ce7311cd305076615471c4a31468718aa1bcce5ca8f94b5a300",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-unopenable",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.files-and-flags.mechanisms-include",
+    "file": "74feec8c7b7011a90f0165698ec2e7816baa7f1557708c03251c9486a7284219.txt",
+    "sha256": "74feec8c7b7011a90f0165698ec2e7816baa7f1557708c03251c9486a7284219",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-include",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.files-and-flags.mechanisms-exclude",
+    "file": "78718af1ebaf95879b0dcd7b12af282b72eaeb47e816cfecb770033a6397ed69.txt",
+    "sha256": "78718af1ebaf95879b0dcd7b12af282b72eaeb47e816cfecb770033a6397ed69",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-exclude",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Missing/file token directory: exact C_Initialize GENERAL_ERROR, no owner/Finalize. Log file: bounded owned nonempty file with no PIN bytes. Unopenable path: documented syslog fallback, owned missing parent remains absent, crypto still works. Mechanism filters: exact retained catalogue and all key-size/flag metadata.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  }
+]

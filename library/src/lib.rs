@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
 #![doc = include_str!("../docs/overview.md")]
-
 #![deny(unsafe_op_in_unsafe_fn)]
 #![deny(missing_docs)]
 
@@ -86,8 +85,8 @@ pub use advanced::CipherStreamChunk;
 pub use advanced::OperationPacing;
 pub use advanced::SignatureMessage;
 pub use advanced::{
-    AdvancedCloseStatus, AdvancedSession, AdvancedSessionMode, GeneratedObjects, MacMessage,
-    MessageRoute, MessageSignatures, MessageVerificationDetails, OperationProgress,
+    AdvancedCloseStatus, AdvancedSession, AdvancedSessionMode, ClassicOperation, GeneratedObjects,
+    MacMessage, MessageRoute, MessageSignatures, MessageVerificationDetails, OperationProgress,
     OperationTicket, SavedOperationState, SessionValidation, StateCaptureProgress,
     StateKeyEncoding, StateKeyReference, StateRestoreFailure, StateRestoreKey, StateRestoreKeys,
     StateRestoreProgress, StateRestoreTicket,
@@ -236,8 +235,8 @@ pub use attributes::{Attribute, AttributeClarification, AttributeReadPlan, Attri
 pub use diagnostics::*;
 pub use error::{AttributeAdmissionFailure, Error, NativeOutputSize, Result};
 pub use interfaces::{
-    FunctionCatalog, FunctionPresence, InterfaceDiscoveryLimits, InterfaceSelection,
-    InterfaceDescriptor, InterfaceInventory, InterfaceInventoryLimits,
+    FunctionCatalog, FunctionPresence, InterfaceDescriptor, InterfaceDiscoveryLimits,
+    InterfaceInventory, InterfaceInventoryLimits, InterfaceSelection,
 };
 pub use managed::{
     AttributeMutationReport, ManagedClass, ManagedObjectRef, ManagedSelector, NativeObjectIterator,

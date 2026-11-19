@@ -69,6 +69,9 @@ pub(super) fn validate_import_with<'a>(
         record::Kind::DetachedRestore => {
             record::RestorationRecord::read_with(bytes, limits, observer)?;
         }
+        record::Kind::SavedGroup => {
+            record::SavedRecord::read_group(bytes, limits, observer)?;
+        }
         record::Kind::Saved => {
             record::SavedRecord::read_with(bytes, limits, observer)?;
         }
@@ -127,9 +130,20 @@ impl SavedOperationState {
                 Some(&retained),
                 || Ok(()),
             )?;
-            record::encode_into(record::Kind::Saved, limits, &mut bytes, write)?;
-            let parsed = record::SavedRecord::read(bytes.as_slice(), limits)?;
-            parsed.context.check(&context)?;
+            let kind = self.record_kind();
+            record::encode_into(kind, limits, &mut bytes, write)?;
+            if kind == record::Kind::SavedGroup {
+                let group = record::SavedRecord::read_group(bytes.as_slice(), limits, None)?;
+                group[0]
+                    .as_ref()
+                    .expect("validated group")
+                    .context
+                    .check(&context)?;
+            } else {
+                record::SavedRecord::read(bytes.as_slice(), limits)?
+                    .context
+                    .check(&context)?;
+            }
             Ok(NativeStateRecord {
                 bytes,
                 _credit: credit,
@@ -159,10 +173,75 @@ impl AdvancedSession {
         let r = record::SavedRecord::read(record.bytes.as_slice(), record.limits)?;
         let progress = crate::session::AdmissionProgress::default()
             .retaining(record.retained_bytes(&self.session.inner.symmetric_budget)?)?;
+        self.import_member(r, record.limits, keys, &progress)
+    }
+
+    /// Import every local continuation of a caller-authenticated session image.
+    /// Supply one destination binding per category. The image's native bytes
+    /// are stored once and remain opaque until a separate restoration call.
+    pub fn import_group_state<'a>(
+        &self,
+        record: CallerAssertedAuthenticatedRecord,
+        bindings: &'a [(super::ClassicOperation, StateRestoreKeys<'a>)],
+    ) -> Result<SavedOperationState> {
+        self.session.inner.module_binding.persistent_digest()?;
+        let group = record::SavedRecord::read_group(record.bytes.as_slice(), record.limits, None)?;
+        let group_count = group.iter().flatten().count();
+        let mut members = group.into_iter().flatten();
+        let invalid = || {
+            Error::Rejected(crate::RejectionReason::Restoration(
+                crate::RestorationRejection::SavedStateContextMismatch,
+            ))
+        };
+        if group_count != bindings.len() {
+            return Err(invalid());
+        }
+        let mut progress = crate::session::AdmissionProgress::default()
+            .retaining(record.retained_bytes(&self.session.inner.symmetric_budget)?)?;
+        let first = members.next().ok_or_else(invalid)?;
+        let category = super::ClassicOperation::from_flags(first.descriptor.active_flags)?;
+        let mut state =
+            self.import_member(first, record.limits, category.select(bindings)?, &progress)?;
+        state
+            .companions
+            .try_reserve_exact(bindings.len() - 1)
+            .map_err(|_| invalid())?;
+        for member in members {
+            // Include all already retained continuations when planning the
+            // next one. The recorded module image is held by the primary.
+            progress = crate::session::AdmissionProgress::default().retaining(
+                crate::symmetric::memory::RetainedBytes::measure(
+                    &self.session.inner.symmetric_budget,
+                    |bytes| {
+                        use crate::symmetric::memory::RetainedStorage;
+                        record.retain_credits(bytes)?;
+                        state.retain_credits(bytes)
+                    },
+                )?,
+            )?;
+            let category = super::ClassicOperation::from_flags(member.descriptor.active_flags)?;
+            let peer =
+                self.import_member(member, record.limits, category.select(bindings)?, &progress)?;
+            state.companions.push(super::saved_state::SavedCompanion {
+                stamp: None,
+                continuation: peer.continuation,
+                credit: peer._credit,
+            });
+        }
+        Ok(state)
+    }
+
+    fn import_member(
+        &self,
+        r: record::SavedRecord<'_>,
+        limits: record::Limits,
+        keys: StateRestoreKeys<'_>,
+        progress: &crate::session::AdmissionProgress,
+    ) -> Result<SavedOperationState> {
         let authentication = {
             let access = self
                 .session
-                .advanced_access_progress(crate::session::CleanupAdmission::Ordinary, &progress)?;
+                .advanced_access_progress(crate::session::CleanupAdmission::Ordinary, progress)?;
             r.context
                 .check_destination_binding(&self.session.inner, &self.session.snapshot)?;
             for key in [keys.encryption, keys.authentication].into_iter().flatten() {
@@ -177,14 +256,14 @@ impl AdvancedSession {
             r.descriptor,
             &r.messages,
             keys,
-            &progress,
+            progress,
             authentication,
         )?;
         // The recipe owns its borrowed graph description; it does not borrow
         // the mutable destination that acquires roles after resource preparation.
         let initialization = readers.initialization_plan();
         let ((prepared, credit, bytes), _access, prepared_readers) =
-            readers.prepare_with(&self.session, &progress, authentication, |key_plan| {
+            readers.prepare_with(&self.session, progress, authentication, |key_plan| {
                 let recipe = if let Some(initialization) = initialization {
                     let Some(crate::StateRestoreKey {
                         reference: crate::StateKeyReference::NativeMessages { parameters, .. },
@@ -201,7 +280,7 @@ impl AdvancedSession {
                         &r.keys,
                         &r.messages,
                         r.validation.as_ref(),
-                        record.limits,
+                        limits,
                         self.session.inner.crypto_options.limits,
                         initialization,
                         parameters,
@@ -212,13 +291,13 @@ impl AdvancedSession {
                         &r.keys,
                         &r.messages,
                         r.validation.as_ref(),
-                        record.limits,
+                        limits,
                         self.session.inner.crypto_options.limits,
                     )?
                 };
                 let resources = reconstruction::resources::Resources::prepare_with_key_storage(
                     &self.session,
-                    &progress,
+                    progress,
                     recipe,
                     Some(r.native.len()),
                     None,
@@ -267,6 +346,7 @@ impl AdvancedSession {
             session_state,
             bytes: Some(bytes),
             continuation,
+            companions: Vec::new(),
             _credit: credit,
         })
     }

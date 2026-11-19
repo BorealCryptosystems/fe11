@@ -27,7 +27,8 @@ pub(crate) mod observation_protection;
 pub(crate) mod recovery;
 pub use context_authentication::ContextAuthentication;
 pub(crate) use context_authentication::{
-    ContextDiagnostics, ContextLoginOutcome, ContextLoginPlan, PreparedContextLogin,
+    ContextDiagnostics, ContextKeyBinding, ContextLoginOutcome, ContextLoginPlan,
+    PreparedContextLogin,
 };
 
 /// Session resource. Crypto sequences serialize per session; targeted close

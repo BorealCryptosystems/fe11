@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //! Owned native state; captured and service-asserted imported provenance remain distinct.
 use super::continuation::Continuation;
+mod companions;
+pub(super) use companions::SavedCompanion;
 
 use super::{
     ownership, preparation, progress, record, rejoin, AdvancedSession, Operation, OperationBody,
@@ -32,12 +34,33 @@ pub struct SavedOperationState {
     pub(super) session_state: CK_STATE,
     pub(super) bytes: Option<Buffer>,
     pub(super) continuation: Continuation,
+    pub(super) companions: Vec<SavedCompanion>,
     pub(super) _credit: Credit,
 }
 impl SavedOperationState {
+    /// Return the classic categories in a grouped session image, beginning
+    /// with the selected member. Single-owner images yield no group entries.
+    pub fn grouped_operations(&self) -> impl Iterator<Item = super::ClassicOperation> + '_ {
+        std::iter::once(&self.continuation)
+            .chain(self.companions.iter().map(|p| &p.continuation))
+            .filter(move |_| !self.companions.is_empty())
+            .map(|p| {
+                super::ClassicOperation::for_body(&p.body)
+                    .expect("group members have verified classic categories")
+            })
+    }
+
     /// Provenance is never promoted by recapture or by a serialized field.
     pub fn provenance(&self) -> StateProvenance {
         self.provenance
+    }
+
+    pub(super) fn record_kind(&self) -> record::Kind {
+        if self.companions.is_empty() {
+            record::Kind::Saved
+        } else {
+            record::Kind::SavedGroup
+        }
     }
 
     pub(super) fn write_checkpoint_with_native(
@@ -49,7 +72,20 @@ impl SavedOperationState {
         writer: &mut record::Writer<'_>,
     ) -> Result<()> {
         context.write(writer)?;
+        if !self.companions.is_empty() {
+            let count = u8::try_from(1 + self.companions.len()).map_err(|_| {
+                Error::Rejected(crate::RejectionReason::CheckpointFormat(
+                    crate::CheckpointFormatRejection::SavedRecordKind,
+                ))
+            })?;
+            writer.u8(count)?;
+        }
         self.continuation.write_checkpoint(budget, writer, limits)?;
+        for member in &self.companions {
+            member
+                .continuation
+                .write_checkpoint(budget, writer, limits)?;
+        }
         writer.bytes(native)
     }
 
@@ -80,6 +116,7 @@ pub(super) struct CaptureOwner {
     snapshot: Arc<TokenSnapshot>,
     authentication: u64,
     continuation: Continuation,
+    companions: Vec<SavedCompanion>,
     // An idle capture retains one prepaid waiter envelope across public polls.
     // An invocation borrows it exclusively; concurrent invocations prepare
     // their own envelope before engaging, never share consumable error leaves.
@@ -87,6 +124,10 @@ pub(super) struct CaptureOwner {
     _credit: Credit,
 }
 impl CaptureOwner {
+    pub(super) fn is_grouped(&self) -> bool {
+        !self.companions.is_empty()
+    }
+
     pub(super) fn allocation_bytes() -> usize {
         std::mem::size_of::<Self>() + std::mem::size_of::<SavedOperationState>()
     }
@@ -102,6 +143,7 @@ impl CaptureOwner {
             snapshot: session.snapshot.clone(),
             authentication: session.snapshot.authentication_stamp(),
             continuation,
+            companions: Vec::new(),
             resource_diagnostics: None,
             _credit: credit,
         }
@@ -119,6 +161,9 @@ impl CaptureOwner {
     pub(super) fn check_keys(&self, entry: &SessionEntry) -> Result<()> {
         self.snapshot
             .check_authentication_unchanged(self.authentication)?;
+        for peer in &self.companions {
+            rejoin::check_keys(&peer.continuation.body, entry)?;
+        }
         rejoin::check_keys(&self.continuation.body, entry)
     }
 }
@@ -193,14 +238,7 @@ impl AdvancedSession {
         let admission = crate::admission_wait::current();
         // These owners precede every access guard, including error/unwind exits.
         let mut initial = maximum
-            .map(|maximum| {
-                super::capture_preparation::prepare(
-                    &self.session,
-                    ticket,
-                    maximum,
-                    &mut diagnostics,
-                )
-            })
+            .map(|maximum| companions::prepare(&self.session, ticket, maximum, &mut diagnostics))
             .transpose()?;
         let mut prepared: Option<Buffer> = None;
         let mut waiter: Option<progress::Waiter<'_>> = None;
@@ -214,7 +252,7 @@ impl AdvancedSession {
             // precede any further resource wait in this invocation.
             let mut retired_diagnostics = None;
             let access = self.session.advanced_access()?;
-            let held = access.operations.get(ticket.uid)?;
+            let held = access.operations.get_ticket(ticket.uid, ticket.id)?;
             let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -275,7 +313,7 @@ impl AdvancedSession {
                     drop(held);
                     drop(access);
                     drop(initial.take());
-                    initial = Some(super::capture_preparation::prepare(
+                    initial = Some(companions::prepare(
                         &self.session,
                         ticket,
                         maximum.expect("initial capture maximum"),
@@ -284,6 +322,9 @@ impl AdvancedSession {
                     continue;
                 }
                 let mut prepared = initial.take().expect("initial capture");
+                prepared
+                    .owner
+                    .check_members(&self.session.entry, operation.id)?;
                 Continuation::check_capture(&operation, &self.session.entry)?;
                 prepared.waiter.succeed()?;
                 let (io, owner) = (prepared.io, prepared.owner);
@@ -362,7 +403,9 @@ impl AdvancedSession {
                     if matches!(operation.body, OperationBody::Control)
                         && matches!(&progress, StateCaptureProgress::Captured(_))
                     {
-                        _retired_operation = access.operations.take_closed(&self.session.entry)?;
+                        _retired_operation = access
+                            .operations
+                            .take_operation(&self.session.entry, operation._token.identity())?;
                     }
                     if let Some(owner) = operation.capture_owner_mut() {
                         if owner.resource_diagnostics.is_none() {
@@ -438,6 +481,17 @@ impl AdvancedSession {
         }
         let withdrawn = op.cancellation.is_withdrawn();
         let result = (|| -> Result<()> {
+            let owner = op.capture_owner().ok_or(Error::Rejected(
+                crate::RejectionReason::OperationState(
+                    crate::OperationStateRejection::StateIoAbsent,
+                ),
+            ))?;
+            // An already submitted call still owns its pointers. Observe that
+            // call to its return even if a later cancellation withdrew a peer.
+            if !withdrawn && !op.state_io().is_some_and(|io| io.pending()) {
+                owner.check_members(&self.session.entry, op.id)?;
+                owner.check_keys(&self.session.entry)?;
+            }
             if !op.drive_join(s, &self.session.entry, observe, remaining)? {
                 return Ok(());
             }
@@ -460,6 +514,42 @@ impl AdvancedSession {
         let (captured, pending, complete) = (io.captured(), io.pending(), io.complete());
         // Read local completion metadata under the same guard, then freeze before
         // publication. No provider-owned output is accessed while pending.
+        // A completion observation may be the first instant at which the
+        // opaque result is available. Validate the captured set at that
+        // boundary too, before returning bytes or freezing another owner.
+        if captured {
+            if let Err(changed) = op
+                .capture_owner()
+                .expect("completed capture owner")
+                .check_members(&self.session.entry, op.id)
+            {
+                // Discard an unpublished image once every native borrower
+                // has returned. No stale ciphertext checkpoint may escape.
+                if !pending && op.joined.is_none() && !s.native.is_uncertain() {
+                    *retired = op.state.take();
+                }
+                return Err(changed);
+            }
+        }
+        if captured {
+            let owner = op
+                .capture_owner()
+                .expect("capture owns the completed native state");
+            for peer in &owner.companions {
+                if peer.continuation.encrypting {
+                    let cell = s.operations.get_ticket(
+                        self.session.uid,
+                        peer.stamp
+                            .expect("captured companion has a live revision")
+                            .ticket,
+                    )?;
+                    let mut peer_operation = cell.lock().map_err(|_| Error::Poisoned)?;
+                    peer_operation.continuation_status = ownership::ContinuationStatus::Frozen(
+                        ownership::FreezeReason::CapturedEncryption,
+                    );
+                }
+            }
+        }
         if captured && op.capture_owner().unwrap().continuation.encrypting {
             op.continuation_status =
                 ownership::ContinuationStatus::Frozen(ownership::FreezeReason::CapturedEncryption);
@@ -508,6 +598,7 @@ impl AdvancedSession {
                 session_state,
                 bytes: Some(bytes),
                 continuation: owner.continuation,
+                companions: owner.companions,
                 _credit: owner._credit,
             },
         )))
@@ -522,9 +613,16 @@ impl SavedOperationState {
     ) -> Result<crate::symmetric::memory::RetainedBytes> {
         use crate::symmetric::memory::RetainedStorage;
         crate::symmetric::memory::RetainedBytes::measure(budget, |retained| {
-            self.bytes.retain_credits(retained)?;
-            self.continuation.retain_credits(retained)?;
-            retained.add_credit(&self._credit)
+            self.retain_credits(retained)
         })
+    }
+}
+
+impl crate::symmetric::memory::RetainedStorage for SavedOperationState {
+    fn retain_credits(&self, retained: &mut crate::symmetric::memory::RetainedBytes) -> Result<()> {
+        self.bytes.retain_credits(retained)?;
+        self.continuation.retain_credits(retained)?;
+        self.companions.retain_credits(retained)?;
+        retained.add_credit(&self._credit)
     }
 }

@@ -420,7 +420,9 @@ impl TokenContext {
     }
 
     /// Authenticate the requested native role; already logged in never validates a PIN.
-    /// Returns Busy without dispatch while this token has active operations.
+    /// Suspended operations remain owned; native calls must have returned.
+    /// PKCS#11 permits successful login to terminate existing operations.
+    /// A poisoned or incoherent operation owner retains its explicit error.
     pub fn login_as(&self, role: LoginRole, pin: impl Into<crate::PinRequest>) -> Result<()> {
         let mut diagnostic = None;
         self.login_admitted(role, pin.into(), None, false, &mut diagnostic)
@@ -429,6 +431,7 @@ impl TokenContext {
     /// Authenticate a named user through the selected table's C_LoginUser.
     /// The user name is owned separately from the PIN and erased on release.
     /// Absence or refusal of C_LoginUser never calls C_Login as a substitute.
+    /// Operation ownership and completion follow the same rules as [`Self::login_as`].
     pub fn login_user(
         &self,
         role: LoginRole,
@@ -468,14 +471,14 @@ impl TokenContext {
         type Data = crate::pin::Credited<LoginCall>;
         let fixed = std::mem::size_of::<Data>() + TokenCallFrame::<'_, Data>::allocation_bytes();
         let ((prepared, diagnostic), access) =
-            TokenAccess::prepare(&self.inner, &self.snapshot, permit, || {
+            TokenAccess::prepare_authentication(&self.inner, &self.snapshot, permit, || {
                 crate::pin::PreparedPins::prepare_with_completion(
                     fixed,
                     [Some(&input.pin), None],
                     input.user_name.as_ref().map(|name| &**name),
                     call.function(),
                     |bytes| {
-                        TokenAccess::reserve_preparation(
+                        TokenAccess::reserve_authentication_preparation(
                             &self.inner,
                             &self.snapshot,
                             permit,
@@ -491,6 +494,18 @@ impl TokenContext {
         // Select a live owner, not a locally predicted login outcome. The
         // module validates the requested role against all of its sessions.
         let entry = self.authentication_entry(&access, selected)?;
+        {
+            // The writer excludes dispatch, not an asynchronous execution that
+            // has already returned PENDING. Inspect every owner in this domain
+            // before lending the PIN; suspended caller-fed sequences are allowed.
+            let entries = access
+                .session_ledger
+                .logout_entries(&self.snapshot.domain)?;
+            for owner in entries.all() {
+                access.operations.logout_ready(owner)?;
+            }
+        }
+        // No ledger or operation guard crosses the native call.
         let handle = entry.handle;
         let user_type = role.native()?;
         let (input, witnesses) = prepared.bind(LoginCall { entry, input });
@@ -581,7 +596,9 @@ impl TokenContext {
     /// cryptographic operation is suspended between native calls. Actual native
     /// execution and session closure remain mutually exclusive with Logout.
     /// A successful Logout does not prove that previous operations terminated;
-    /// their buffers remain owned and their old authentication epoch is revoked.
+    /// their buffers remain owned. Observations tied to the old authentication
+    /// epoch become stale; generic native handles are still submitted to the
+    /// module, which decides their current usability.
     pub fn logout(&self) -> Result<()> {
         let mut diagnostics = None;
         self.logout_admitted(false, &mut diagnostics)

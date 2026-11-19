@@ -1,0 +1,172 @@
+[
+  {
+    "id": "guard.OperationOwnershipRejection::OpenCompleteInputStream@ParsedRecord::parse",
+    "file": "07b8827229311ab44e22bce1fa98d79c979e6a4e612ca56697419e4f7c71c7c7.txt",
+    "sha256": "07b8827229311ab44e22bce1fa98d79c979e6a4e612ca56697419e4f7c71c7c7",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(OpenCompleteInputStream))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.input.status",
+      "offset": 195,
+      "before": 0,
+      "after": 1
+    }
+  },
+  {
+    "id": "guard.OperationOwnershipRejection::StreamIncrementalRoute@ParsedRecord::parse",
+    "file": "f3472ce7566adf541a0c6caac9f06835edce6f95e4d201fc6556f1c94db38d51.txt",
+    "sha256": "f3472ce7566adf541a0c6caac9f06835edce6f95e4d201fc6556f1c94db38d51",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(StreamIncrementalRoute))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.input.incremental",
+      "offset": 196,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "guard.OperationOwnershipRejection::StreamRetainedInput@ParsedRecord::parse",
+    "file": "24eb7d0183a00bfea1461788a6b0740fee36d18c31ebd6c1af86cf1090818c09.txt",
+    "sha256": "24eb7d0183a00bfea1461788a6b0740fee36d18c31ebd6c1af86cf1090818c09",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(StreamRetainedInput))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.input.retained_submission",
+      "offset": 197,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::StreamInputClosureEncoding@ParsedRecord::parse",
+    "file": "b1faf161b112b846f3e4a76d5f398fca92863d5082c2ecdbbb0a91a8c47d2ed0.txt",
+    "sha256": "b1faf161b112b846f3e4a76d5f398fca92863d5082c2ecdbbb0a91a8c47d2ed0",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(StreamInputClosureEncoding))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.input.status",
+      "offset": 195,
+      "before": 0,
+      "after": 2
+    }
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::StreamProgressEncoding@ParsedRecord::parse",
+    "file": "d58b6f551b7bedc35474b8a4eb7822f45d24f1c09a2ddaac0b6841df2c26806a.txt",
+    "sha256": "d58b6f551b7bedc35474b8a4eb7822f45d24f1c09a2ddaac0b6841df2c26806a",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(StreamProgressEncoding))",
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "parameters": {
+      "field": "descriptor.input.key_inputs",
+      "offset": 213,
+      "before": 0,
+      "after": 1
+    }
+  }
+]

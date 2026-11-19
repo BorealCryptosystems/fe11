@@ -1,0 +1,8 @@
+CKM_DES_ECB
+session
+encrypt
+8
+1010101010101010
+0123456789abcdef
+8a5ae1f81ab8f2dd
+

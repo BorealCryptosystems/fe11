@@ -1,0 +1,360 @@
+[
+  {
+    "id": "negative.CKM_RSA_PKCS.unwrap.usage",
+    "file": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f.txt",
+    "sha256": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS."
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS.unwrap.template",
+    "file": "1bb9fea4be3636ad5083f07e45101790f8d2ffb61b90dc3dcdeb663b8f094489.txt",
+    "sha256": "1bb9fea4be3636ad5083f07e45101790f8d2ffb61b90dc3dcdeb663b8f094489",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS."
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.unwrap.usage",
+    "file": "1f5104a065ddd49f3f26e84dfeb7172b567e4c1694abd94f0eade14eacd0d1a1.txt",
+    "sha256": "1f5104a065ddd49f3f26e84dfeb7172b567e4c1694abd94f0eade14eacd0d1a1",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Unchanged published OAEP vector",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS."
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.unwrap.template",
+    "file": "fa13a38e853f04709d787cfcef7759be2d0693827cef29ea97a02a9a09feb029.txt",
+    "sha256": "fa13a38e853f04709d787cfcef7759be2d0693827cef29ea97a02a9a09feb029",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Unchanged published OAEP vector",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS."
+  },
+  {
+    "id": "negative.CKM_RSA_AES_KEY_WRAP.unwrap.usage",
+    "file": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38.txt",
+    "sha256": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6"
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS.",
+    "authentication": "USER login before both positive control and negative operation; private intermediate key supported."
+  },
+  {
+    "id": "negative.CKM_RSA_AES_KEY_WRAP.unwrap.template",
+    "file": "d6595db51ebada7a95105e09f726b4f4e87d2c174bca59ba8167629ae6f32a2d.txt",
+    "sha256": "d6595db51ebada7a95105e09f726b4f4e87d2c174bca59ba8167629ae6f32a2d",
+    "worker_mode": "rsa-unwrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCOMPLETE"
+      ],
+      "producer": "C_UnwrapKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6"
+    },
+    "control": "Successful native Unwrap must first return the exact independently known plaintext; then change only UNWRAP permission or remove CLASS.",
+    "authentication": "USER login before both positive control and negative operation; private intermediate key supported."
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "id": "protocol.cms.session.sign",
+    "file": "2c7bd6457b46b6ccbafde1e31c57cc05f993cde3b8553ecf6449263d980a859c.txt",
+    "sha256": "2c7bd6457b46b6ccbafde1e31c57cc05f993cde3b8553ecf6449263d980a859c",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_SignInit",
+    "code": 112,
+    "oracle": "Exact native initializer refusal: MECHANISM_INVALID. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f.txt",
+      "sha256": "da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.session.sign-recover",
+    "file": "8d122f18af9227ae72eab05af94ce700511e592081e306b21ed9d298f633c1a0.txt",
+    "sha256": "8d122f18af9227ae72eab05af94ce700511e592081e306b21ed9d298f633c1a0",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_SignRecoverInit",
+    "code": 84,
+    "oracle": "Exact native initializer refusal: FUNCTION_NOT_SUPPORTED. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f.txt",
+      "sha256": "da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.session.verify",
+    "file": "b5e28a4c97ead146229a4174f1c77138d9e730c951fe90bca9b3100c14428db7.txt",
+    "sha256": "b5e28a4c97ead146229a4174f1c77138d9e730c951fe90bca9b3100c14428db7",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_VerifyInit",
+    "code": 112,
+    "oracle": "Exact native initializer refusal: MECHANISM_INVALID. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8.txt",
+      "sha256": "448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.session.verify-recover",
+    "file": "8012e736ae075489f81bffb9119792886300efeac71b16369175d1349dfc4271.txt",
+    "sha256": "8012e736ae075489f81bffb9119792886300efeac71b16369175d1349dfc4271",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_VerifyRecoverInit",
+    "code": 84,
+    "oracle": "Exact native initializer refusal: FUNCTION_NOT_SUPPORTED. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8.txt",
+      "sha256": "448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.advanced.sign",
+    "file": "b1c7f685f3334e061c661ac17a416c922472c836ab2b974c8997045e73cc7d49.txt",
+    "sha256": "b1c7f685f3334e061c661ac17a416c922472c836ab2b974c8997045e73cc7d49",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_SignInit",
+    "code": 112,
+    "oracle": "Exact native initializer refusal: MECHANISM_INVALID. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704.txt",
+      "sha256": "f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.advanced.sign-recover",
+    "file": "143ecf998631ee5b7fecd00722d3a2be9a96fe159006fb75f977a000aeb845a9.txt",
+    "sha256": "143ecf998631ee5b7fecd00722d3a2be9a96fe159006fb75f977a000aeb845a9",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_SignRecoverInit",
+    "code": 84,
+    "oracle": "Exact native initializer refusal: FUNCTION_NOT_SUPPORTED. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704.txt",
+      "sha256": "f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.advanced.verify",
+    "file": "903351b040b16448b79b24288c5834e663c376de4c43fcfc0971479deef9617f.txt",
+    "sha256": "903351b040b16448b79b24288c5834e663c376de4c43fcfc0971479deef9617f",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_VerifyInit",
+    "code": 112,
+    "oracle": "Exact native initializer refusal: MECHANISM_INVALID. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e.txt",
+      "sha256": "0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  },
+  {
+    "id": "protocol.cms.advanced.verify-recover",
+    "file": "16e2c604ed08528fb899edcc1a4c7075b2c3f30c8c3f85fb4ca44e3a548f27d5.txt",
+    "sha256": "16e2c604ed08528fb899edcc1a4c7075b2c3f30c8c3f85fb4ca44e3a548f27d5",
+    "worker_mode": "unsupported-lifecycle",
+    "cms_initialization": true,
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_VerifyRecoverInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "function": "C_VerifyRecoverInit",
+    "code": 84,
+    "oracle": "Exact native initializer refusal: FUNCTION_NOT_SUPPORTED. No CMS content parsing or successful CMS cryptography is inferred; complete native effect diagnostics are retained.",
+    "control": {
+      "path": "recovery-cipher-initializers/0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e.txt",
+      "sha256": "0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e",
+      "evidence": "RECOVERY-CIPHER-INITIALIZER-OBSERVATIONS.json",
+      "scope": "Same RSA components; CMS normal routes select SIGN/VERIFY, recovery selects SIGN_RECOVER/VERIFY_RECOVER."
+    },
+    "parameters": {
+      "certificate": null,
+      "signing": "CKM_SHA256_RSA_PKCS",
+      "digest": "CKM_SHA256",
+      "content_type": null,
+      "requested_attributes": null,
+      "required_attributes": null
+    }
+  }
+]

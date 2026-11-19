@@ -1,0 +1,4 @@
+RW_SO
+create_private_session
+RW_SO
+CKR_USER_NOT_LOGGED_IN

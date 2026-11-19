@@ -1,0 +1,1 @@
+RFC3394 section4.1 public AES key-wrap example and literal concatenation bytes. No operational secrets. Extension layouts are the explicit standard ABIs.

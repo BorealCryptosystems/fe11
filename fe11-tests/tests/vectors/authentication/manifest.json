@@ -1,0 +1,1616 @@
+[
+  {
+    "id": "authentication.suspended_digest.session.immediate.already.Legacy240",
+    "file": "d1433c20426599a5750948794189ad71249228d75f877b9b080ac737aa13e210.txt",
+    "sha256": "d1433c20426599a5750948794189ad71249228d75f877b9b080ac737aa13e210",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.immediate.already.Standard32",
+    "file": "d1433c20426599a5750948794189ad71249228d75f877b9b080ac737aa13e210.txt",
+    "sha256": "d1433c20426599a5750948794189ad71249228d75f877b9b080ac737aa13e210",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.immediate.success.Legacy240",
+    "file": "f5fe90b1a8d0b331f5b96b51e9f2d03fb917eb265fffb574130c0024d04b32ca.txt",
+    "sha256": "f5fe90b1a8d0b331f5b96b51e9f2d03fb917eb265fffb574130c0024d04b32ca",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.immediate.success.Standard32",
+    "file": "f5fe90b1a8d0b331f5b96b51e9f2d03fb917eb265fffb574130c0024d04b32ca.txt",
+    "sha256": "f5fe90b1a8d0b331f5b96b51e9f2d03fb917eb265fffb574130c0024d04b32ca",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.wait.already.Legacy240",
+    "file": "837a3feae90ddd780cad0536ab62d1cf5f9daabe67f32e043eef6ad6e58cf629.txt",
+    "sha256": "837a3feae90ddd780cad0536ab62d1cf5f9daabe67f32e043eef6ad6e58cf629",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.wait.already.Standard32",
+    "file": "837a3feae90ddd780cad0536ab62d1cf5f9daabe67f32e043eef6ad6e58cf629.txt",
+    "sha256": "837a3feae90ddd780cad0536ab62d1cf5f9daabe67f32e043eef6ad6e58cf629",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.wait.success.Legacy240",
+    "file": "95652a2e272c5b9bfc130ddf60c584518db1f8aeae758906a03390f015c393f5.txt",
+    "sha256": "95652a2e272c5b9bfc130ddf60c584518db1f8aeae758906a03390f015c393f5",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.session.wait.success.Standard32",
+    "file": "95652a2e272c5b9bfc130ddf60c584518db1f8aeae758906a03390f015c393f5.txt",
+    "sha256": "95652a2e272c5b9bfc130ddf60c584518db1f8aeae758906a03390f015c393f5",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.immediate.already.Legacy240",
+    "file": "0d89e451d351d5ac845f9c8bb34eddb38ff27187183ccb2ca09d3e84cffae171.txt",
+    "sha256": "0d89e451d351d5ac845f9c8bb34eddb38ff27187183ccb2ca09d3e84cffae171",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.immediate.already.Standard32",
+    "file": "0d89e451d351d5ac845f9c8bb34eddb38ff27187183ccb2ca09d3e84cffae171.txt",
+    "sha256": "0d89e451d351d5ac845f9c8bb34eddb38ff27187183ccb2ca09d3e84cffae171",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.immediate.success.Legacy240",
+    "file": "f7498d6dee2f69f389d26d4e2e6905b3a1750ebe1506e8c2adeaf3727a9841d7.txt",
+    "sha256": "f7498d6dee2f69f389d26d4e2e6905b3a1750ebe1506e8c2adeaf3727a9841d7",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.immediate.success.Standard32",
+    "file": "f7498d6dee2f69f389d26d4e2e6905b3a1750ebe1506e8c2adeaf3727a9841d7.txt",
+    "sha256": "f7498d6dee2f69f389d26d4e2e6905b3a1750ebe1506e8c2adeaf3727a9841d7",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.wait.already.Legacy240",
+    "file": "ee5d82bbdde62c7f4e34fb936b7b70d5492831bfc1a60bbfe497be2627d159ff.txt",
+    "sha256": "ee5d82bbdde62c7f4e34fb936b7b70d5492831bfc1a60bbfe497be2627d159ff",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.wait.already.Standard32",
+    "file": "ee5d82bbdde62c7f4e34fb936b7b70d5492831bfc1a60bbfe497be2627d159ff.txt",
+    "sha256": "ee5d82bbdde62c7f4e34fb936b7b70d5492831bfc1a60bbfe497be2627d159ff",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.wait.success.Legacy240",
+    "file": "7698f657153c8eff29a651786e6bc34d9719f9668040d60258dfdb745db6c004.txt",
+    "sha256": "7698f657153c8eff29a651786e6bc34d9719f9668040d60258dfdb745db6c004",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token.wait.success.Standard32",
+    "file": "7698f657153c8eff29a651786e6bc34d9719f9668040d60258dfdb745db6c004.txt",
+    "sha256": "7698f657153c8eff29a651786e6bc34d9719f9668040d60258dfdb745db6c004",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token-only.immediate.already.Legacy240",
+    "file": "b73aa59c0c6b4836eea4eeafeea3df4a02c2c0cd18f575b03c0de135ab8d707b.txt",
+    "sha256": "b73aa59c0c6b4836eea4eeafeea3df4a02c2c0cd18f575b03c0de135ab8d707b",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token-only.immediate.already.Standard32",
+    "file": "b73aa59c0c6b4836eea4eeafeea3df4a02c2c0cd18f575b03c0de135ab8d707b.txt",
+    "sha256": "b73aa59c0c6b4836eea4eeafeea3df4a02c2c0cd18f575b03c0de135ab8d707b",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token-only.wait.already.Legacy240",
+    "file": "c05ec45923f61c633d42e4add6fbf5f6e0ff7466daa31bc0aa826c9aeee7bf2a.txt",
+    "sha256": "c05ec45923f61c633d42e4add6fbf5f6e0ff7466daa31bc0aa826c9aeee7bf2a",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.token-only.wait.already.Standard32",
+    "file": "c05ec45923f61c633d42e4add6fbf5f6e0ff7466daa31bc0aa826c9aeee7bf2a.txt",
+    "sha256": "c05ec45923f61c633d42e4add6fbf5f6e0ff7466daa31bc0aa826c9aeee7bf2a",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_CloseSession",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.immediate.already.Legacy240",
+    "file": "7ad948d84b19777200c44296abd19b04c54053cdc1d727ce1dbf20ac7818fdde.txt",
+    "sha256": "7ad948d84b19777200c44296abd19b04c54053cdc1d727ce1dbf20ac7818fdde",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.immediate.already.Standard32",
+    "file": "7ad948d84b19777200c44296abd19b04c54053cdc1d727ce1dbf20ac7818fdde.txt",
+    "sha256": "7ad948d84b19777200c44296abd19b04c54053cdc1d727ce1dbf20ac7818fdde",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.immediate.success.Legacy240",
+    "file": "c3daa331889c9d7e0a9751d200e415829252dcf536f60881c3429ab5ba38316e.txt",
+    "sha256": "c3daa331889c9d7e0a9751d200e415829252dcf536f60881c3429ab5ba38316e",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.immediate.success.Standard32",
+    "file": "c3daa331889c9d7e0a9751d200e415829252dcf536f60881c3429ab5ba38316e.txt",
+    "sha256": "c3daa331889c9d7e0a9751d200e415829252dcf536f60881c3429ab5ba38316e",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.wait.already.Legacy240",
+    "file": "4c7ed0e3e55311a74020ac4363dcac3a71f2b3d9705d8ed9f2bc59bf99f94ee3.txt",
+    "sha256": "4c7ed0e3e55311a74020ac4363dcac3a71f2b3d9705d8ed9f2bc59bf99f94ee3",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.wait.already.Standard32",
+    "file": "4c7ed0e3e55311a74020ac4363dcac3a71f2b3d9705d8ed9f2bc59bf99f94ee3.txt",
+    "sha256": "4c7ed0e3e55311a74020ac4363dcac3a71f2b3d9705d8ed9f2bc59bf99f94ee3",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.wait.success.Legacy240",
+    "file": "6fcca19d879cdbb66498d81cb018e72520e0993b63ad953c8c8d24765a17cd75.txt",
+    "sha256": "6fcca19d879cdbb66498d81cb018e72520e0993b63ad953c8c8d24765a17cd75",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.drain.wait.success.Standard32",
+    "file": "6fcca19d879cdbb66498d81cb018e72520e0993b63ad953c8c8d24765a17cd75.txt",
+    "sha256": "6fcca19d879cdbb66498d81cb018e72520e0993b63ad953c8c8d24765a17cd75",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_Login",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.immediate.already.Legacy240",
+    "file": "3b81eb5ebd75b2f48893ad9cd63c2bf32e3c11f8fc9390a842edf618c0113d95.txt",
+    "sha256": "3b81eb5ebd75b2f48893ad9cd63c2bf32e3c11f8fc9390a842edf618c0113d95",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.immediate.already.Standard32",
+    "file": "3b81eb5ebd75b2f48893ad9cd63c2bf32e3c11f8fc9390a842edf618c0113d95.txt",
+    "sha256": "3b81eb5ebd75b2f48893ad9cd63c2bf32e3c11f8fc9390a842edf618c0113d95",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.immediate.success.Legacy240",
+    "file": "75ad908dabcdc6de61aeb7410b2986fc890f1d70bcf7e9872c762df7b6a7d8cf.txt",
+    "sha256": "75ad908dabcdc6de61aeb7410b2986fc890f1d70bcf7e9872c762df7b6a7d8cf",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.immediate.success.Standard32",
+    "file": "75ad908dabcdc6de61aeb7410b2986fc890f1d70bcf7e9872c762df7b6a7d8cf.txt",
+    "sha256": "75ad908dabcdc6de61aeb7410b2986fc890f1d70bcf7e9872c762df7b6a7d8cf",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.wait.already.Legacy240",
+    "file": "05c724f6f916bc9771e397d7debb74b93965eb98c02c6cde8d76e431cbc34b39.txt",
+    "sha256": "05c724f6f916bc9771e397d7debb74b93965eb98c02c6cde8d76e431cbc34b39",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.wait.already.Standard32",
+    "file": "05c724f6f916bc9771e397d7debb74b93965eb98c02c6cde8d76e431cbc34b39.txt",
+    "sha256": "05c724f6f916bc9771e397d7debb74b93965eb98c02c6cde8d76e431cbc34b39",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.wait.success.Legacy240",
+    "file": "3c034881a7730815ef37a86caba33e7cecc1bf01377c90764f0586bab7f953dd.txt",
+    "sha256": "3c034881a7730815ef37a86caba33e7cecc1bf01377c90764f0586bab7f953dd",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-session.wait.success.Standard32",
+    "file": "3c034881a7730815ef37a86caba33e7cecc1bf01377c90764f0586bab7f953dd.txt",
+    "sha256": "3c034881a7730815ef37a86caba33e7cecc1bf01377c90764f0586bab7f953dd",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.immediate.already.Legacy240",
+    "file": "a5fbcecc6127c35225b34141bc6433cef4a50d23eda3e4c461fdc40f769da8ee.txt",
+    "sha256": "a5fbcecc6127c35225b34141bc6433cef4a50d23eda3e4c461fdc40f769da8ee",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.immediate.already.Standard32",
+    "file": "a5fbcecc6127c35225b34141bc6433cef4a50d23eda3e4c461fdc40f769da8ee.txt",
+    "sha256": "a5fbcecc6127c35225b34141bc6433cef4a50d23eda3e4c461fdc40f769da8ee",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.immediate.success.Legacy240",
+    "file": "a59b95b15ddda1c1e4ce0affc7fc49c658dc79d2427e7366d3b82cb63082d1a2.txt",
+    "sha256": "a59b95b15ddda1c1e4ce0affc7fc49c658dc79d2427e7366d3b82cb63082d1a2",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.immediate.success.Standard32",
+    "file": "a59b95b15ddda1c1e4ce0affc7fc49c658dc79d2427e7366d3b82cb63082d1a2.txt",
+    "sha256": "a59b95b15ddda1c1e4ce0affc7fc49c658dc79d2427e7366d3b82cb63082d1a2",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.wait.already.Legacy240",
+    "file": "e7125e10fb93eb89b03d9da0ba10d52e9841aa417213081dcb4457800c9d3d13.txt",
+    "sha256": "e7125e10fb93eb89b03d9da0ba10d52e9841aa417213081dcb4457800c9d3d13",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.wait.already.Standard32",
+    "file": "e7125e10fb93eb89b03d9da0ba10d52e9841aa417213081dcb4457800c9d3d13.txt",
+    "sha256": "e7125e10fb93eb89b03d9da0ba10d52e9841aa417213081dcb4457800c9d3d13",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.wait.success.Legacy240",
+    "file": "6dc28814ffb3704c658073f833bd97209bc69b53c6e2f85653ebefb8767a9747.txt",
+    "sha256": "6dc28814ffb3704c658073f833bd97209bc69b53c6e2f85653ebefb8767a9747",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-token.wait.success.Standard32",
+    "file": "6dc28814ffb3704c658073f833bd97209bc69b53c6e2f85653ebefb8767a9747.txt",
+    "sha256": "6dc28814ffb3704c658073f833bd97209bc69b53c6e2f85653ebefb8767a9747",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.immediate.already.Legacy240",
+    "file": "7922451d1c194dd0b6aa2173d56f5e3cc60d5d0cfaf7c5b287f9477ae4fbef86.txt",
+    "sha256": "7922451d1c194dd0b6aa2173d56f5e3cc60d5d0cfaf7c5b287f9477ae4fbef86",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.immediate.already.Standard32",
+    "file": "7922451d1c194dd0b6aa2173d56f5e3cc60d5d0cfaf7c5b287f9477ae4fbef86.txt",
+    "sha256": "7922451d1c194dd0b6aa2173d56f5e3cc60d5d0cfaf7c5b287f9477ae4fbef86",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.immediate.success.Legacy240",
+    "file": "4d0173df7881551c230ca943e251a8a863d3050027c2911fcca42fd68b578925.txt",
+    "sha256": "4d0173df7881551c230ca943e251a8a863d3050027c2911fcca42fd68b578925",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.immediate.success.Standard32",
+    "file": "4d0173df7881551c230ca943e251a8a863d3050027c2911fcca42fd68b578925.txt",
+    "sha256": "4d0173df7881551c230ca943e251a8a863d3050027c2911fcca42fd68b578925",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.wait.already.Legacy240",
+    "file": "08d4416d300bae11e0222418a63fc9625a722764ea9e221227d94fcb5996c944.txt",
+    "sha256": "08d4416d300bae11e0222418a63fc9625a722764ea9e221227d94fcb5996c944",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.wait.already.Standard32",
+    "file": "08d4416d300bae11e0222418a63fc9625a722764ea9e221227d94fcb5996c944.txt",
+    "sha256": "08d4416d300bae11e0222418a63fc9625a722764ea9e221227d94fcb5996c944",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_USER_ALREADY_LOGGED_IN",
+      "continuation": "same ticket; exact SHA256(empty)",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 C_Login/C_LoginUser authentication semantics; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.wait.success.Legacy240",
+    "file": "ac7f73b75f6dd0022ce89e21bf00e4cc8f5a41205894fb2ab07de743d9c2fca4.txt",
+    "sha256": "ac7f73b75f6dd0022ce89e21bf00e4cc8f5a41205894fb2ab07de743d9c2fca4",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "Unsupported NativeFunction C_LoginUser",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  },
+  {
+    "id": "authentication.suspended_digest.named-drain.wait.success.Standard32",
+    "file": "ac7f73b75f6dd0022ce89e21bf00e4cc8f5a41205894fb2ab07de743d9c2fca4.txt",
+    "sha256": "ac7f73b75f6dd0022ce89e21bf00e4cc8f5a41205894fb2ab07de743d9c2fca4",
+    "worker_mode": "authentication-admission",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_Logout",
+      "C_LoginUser",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": {
+      "authentication": "CKR_OK",
+      "continuation": "same original ticket; exact SHA256(empty) or native CKR_OPERATION_NOT_INITIALIZED after successful Logout/Login; no local ticket rejection",
+      "cleanup": "all owned sessions close successfully"
+    },
+    "provenance": "PKCS11 3.2 sections 5.6.8-5.6.10 C_Login/C_LoginUser/C_Logout; SHA256 empty-message known answer"
+  }
+]

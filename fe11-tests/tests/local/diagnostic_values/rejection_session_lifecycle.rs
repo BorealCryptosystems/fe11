@@ -1,0 +1,115 @@
+// SPDX-License-Identifier: Apache-2.0
+//! Public SessionLifecycleRejection values retain identity through category conversion.
+use fe11::{Error, RejectionReason, SessionLifecycleRejection};
+
+#[test]
+fn variants_preserve_category_and_payload() {
+    let cases = [
+        SessionLifecycleRejection::CAsyncCompleteUnavailable,
+        SessionLifecycleRejection::CFindObjectsUnavailable,
+        SessionLifecycleRejection::CFindObjectsFinalUnavailable,
+        SessionLifecycleRejection::CFindObjectsInitUnavailable,
+        SessionLifecycleRejection::CGetSessionValidationFlagsUnavailable,
+        SessionLifecycleRejection::CSignUnavailable,
+        SessionLifecycleRejection::CSignInitUnavailable,
+        SessionLifecycleRejection::CVerifyUnavailable,
+        SessionLifecycleRejection::CVerifyInitUnavailable,
+        SessionLifecycleRejection::Digest32RequiresSha256,
+        SessionLifecycleRejection::PqcExportOwnerKind,
+        SessionLifecycleRejection::PssInputChanged,
+        SessionLifecycleRejection::PssInputChangedDuringContextAuthentication,
+        SessionLifecycleRejection::PssInputDescriptorChanged,
+        SessionLifecycleRejection::PssStorageAccounting,
+        SessionLifecycleRejection::PssVerificationInputChanged,
+        SessionLifecycleRejection::RsaObjectsOwnerKind,
+        SessionLifecycleRejection::RsaSignatureAllocation,
+        SessionLifecycleRejection::RsaSignatureCapacity,
+        SessionLifecycleRejection::RsaSignatureLength,
+        SessionLifecycleRejection::Sha256DigestLength,
+        SessionLifecycleRejection::AsynchronousSessionRequiresOwnedDispatch,
+        SessionLifecycleRejection::AttributeObservationAbsent,
+        SessionLifecycleRejection::AttributeObservationRetired,
+        SessionLifecycleRejection::AttributeOwnerKind,
+        SessionLifecycleRejection::ContextAuthenticationPreparationMismatch,
+        SessionLifecycleRejection::ContextAuthenticationRequiresTokenWriter,
+        SessionLifecycleRejection::ContextAuthenticationStorageAccounting,
+        SessionLifecycleRejection::ContextLoginAlreadyPerformed,
+        SessionLifecycleRejection::ControlFrameAccounting,
+        SessionLifecycleRejection::CreationOwnerKind,
+        SessionLifecycleRejection::CreationProtectionInCryptographicContinuation,
+        SessionLifecycleRejection::DerivationOwnerKind,
+        SessionLifecycleRejection::ForeignContextualAuthenticationSession,
+        SessionLifecycleRejection::ForeignInventoryProtection,
+        SessionLifecycleRejection::ForeignMutationPossession,
+        SessionLifecycleRejection::ForeignMutationProtection,
+        SessionLifecycleRejection::ForeignObservationCredit,
+        SessionLifecycleRejection::ForeignObservationSelection,
+        SessionLifecycleRejection::ForeignReferenceObservationBudget,
+        SessionLifecycleRejection::InventoryOwnerKind,
+        SessionLifecycleRejection::LegacyParallelFunctionUnavailable,
+        SessionLifecycleRejection::LifecycleDiagnosticAlreadyConsumed,
+        SessionLifecycleRejection::LifecycleSecondaryDiagnosticAlreadyConsumed,
+        SessionLifecycleRejection::ManagedCopyOwnerKind,
+        SessionLifecycleRejection::ManagedDestructionOwnerKind,
+        SessionLifecycleRejection::ManagedDiscoveryOwnerKind,
+        SessionLifecycleRejection::ManagedLabelOwnerKind,
+        SessionLifecycleRejection::ManagedSetAttributesOwnerKind,
+        SessionLifecycleRejection::ModuleAcceptedACompetingObjectSearch,
+        SessionLifecycleRejection::MutationProtectionAbsent,
+        SessionLifecycleRejection::NativeOutputsOwnerKind,
+        SessionLifecycleRejection::NativeSearchOwnerKind,
+        SessionLifecycleRejection::NativeSearchOwnershipChanged,
+        SessionLifecycleRejection::NativeSearchStreamOwnerKind,
+        SessionLifecycleRejection::NativeSessionHandleRetired,
+        SessionLifecycleRejection::ObjectActivityOwnersAllocation,
+        SessionLifecycleRejection::ObjectActivityStorageAccounting,
+        SessionLifecycleRejection::ObjectActivityStorageShapeChanged,
+        SessionLifecycleRejection::ObjectPermissionStorageAccounting,
+        SessionLifecycleRejection::ObjectPermissionStorageAllocation,
+        SessionLifecycleRejection::ObjectPermissionStorageShape,
+        SessionLifecycleRejection::ObjectProtectionsAlreadyRetained,
+        SessionLifecycleRejection::ObjectResourceRolesAlreadyRetained,
+        SessionLifecycleRejection::ObservationPreparationAbsent,
+        SessionLifecycleRejection::ObservationSelectionAbsent,
+        SessionLifecycleRejection::OperationDestinationsAlreadyRetained,
+        SessionLifecycleRejection::OperationLeaseRequiresOrdinaryAdmission,
+        SessionLifecycleRejection::PolicyObservationOwnerKind,
+        SessionLifecycleRejection::PublicFingerprintOwnerKind,
+        SessionLifecycleRejection::ReferenceAdmissionAbsent,
+        SessionLifecycleRejection::ReferenceOwnerKind,
+        SessionLifecycleRejection::ReferenceReservationAbsent,
+        SessionLifecycleRejection::RetainedRoleProtectionsAbsent,
+        SessionLifecycleRejection::RetainedSourceAbsent,
+        SessionLifecycleRejection::RetainedSourceAlreadyAttached,
+        SessionLifecycleRejection::SearchRetirementOwnerKind,
+        SessionLifecycleRejection::SequenceContextUnavailable,
+        SessionLifecycleRejection::SequenceOutcomeUncertain,
+        SessionLifecycleRejection::SessionCloseAlreadyAttempted,
+        SessionLifecycleRejection::SessionClosed,
+        SessionLifecycleRejection::SessionClosingOrCloseFailed,
+        SessionLifecycleRejection::SessionGenerationMismatch,
+        SessionLifecycleRejection::SessionLifecycleDiagnosticAbsent,
+        SessionLifecycleRejection::SessionLifecycleStorageAccounting,
+        SessionLifecycleRejection::SessionStateUncertain,
+        SessionLifecycleRejection::SignatureWriterCapabilityAbsent,
+        SessionLifecycleRejection::SignatureWriterNotInstalled,
+        SessionLifecycleRejection::SigningSelectionOwnerKind,
+        SessionLifecycleRejection::SourceFreeRolesAlreadyRetained,
+        SessionLifecycleRejection::SynchronousAdmissionRequiresASynchronousSession,
+        SessionLifecycleRejection::UnplannedProtectionInCryptographicContinuation,
+        SessionLifecycleRejection::ValidationFlagsTypeConversion,
+    ];
+    for value in cases {
+        let category: RejectionReason = value.into();
+        assert!(matches!(category, RejectionReason::SessionLifecycle(actual) if actual == value));
+        let error = Error::Rejected(category);
+        assert_eq!(error.clone(), error);
+        assert!(
+            matches!(&error, Error::Rejected(RejectionReason::SessionLifecycle(actual)) if *actual == value)
+        );
+        assert!(!value.to_string().is_empty());
+        assert!(!category.to_string().is_empty());
+        assert!(!error.to_string().is_empty());
+        assert!(!format!("{value:?}").is_empty());
+    }
+}

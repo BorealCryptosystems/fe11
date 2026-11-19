@@ -1,0 +1,500 @@
+[
+  {
+    "id": "ticket-family.Session::finish_digest",
+    "file": "648419b95ada8b1736c53025564a0317fd2beb082cf631df99a01d5c61f322b5.txt",
+    "sha256": "648419b95ada8b1736c53025564a0317fd2beb082cf631df99a01d5c61f322b5",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-family.Session::finish_native_digest",
+    "file": "4e867faa2ab35973214c8b382d6000fe5106f8e4b6aa4629585dd31e35142538.txt",
+    "sha256": "4e867faa2ab35973214c8b382d6000fe5106f8e4b6aa4629585dd31e35142538",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-family.Session::finish_extension_digest_stream",
+    "file": "3baf02486a7cbf2e0beef0151d6bc5778456e643e3dbd5d1c09ef3a1cfd2cab5.txt",
+    "sha256": "3baf02486a7cbf2e0beef0151d6bc5778456e643e3dbd5d1c09ef3a1cfd2cab5",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-family.AdvancedSession::finish_digest",
+    "file": "d8801dfe4fa2ca3555ddb359efc8ac8c021e02102e7ab734603060dc19ef06ce.txt",
+    "sha256": "d8801dfe4fa2ca3555ddb359efc8ac8c021e02102e7ab734603060dc19ef06ce",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-family.AdvancedSession::finish_native_digest",
+    "file": "3732089a8b367cca371befd625528f39960c39f71b990693b6273f7487ee8bab.txt",
+    "sha256": "3732089a8b367cca371befd625528f39960c39f71b990693b6273f7487ee8bab",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-family.AdvancedSession::finish_extension_digest_stream",
+    "file": "facd00b8e70fb8598e0aaced81b9239a07f6cbe87e0ffc1db1ad4598a23396a3.txt",
+    "sha256": "facd00b8e70fb8598e0aaced81b9239a07f6cbe87e0ffc1db1ad4598a23396a3",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestResultContractMismatch))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.Session::finish_digest",
+    "file": "c150ccdfa00f369a23a7996183d798826848fbd17672ca5db2166f57949895e9.txt",
+    "sha256": "c150ccdfa00f369a23a7996183d798826848fbd17672ca5db2166f57949895e9",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.Session::finish_native_digest",
+    "file": "ea3773598d7649d4bb731f0a1e484376bdf45fba4da59d45f820e7f8016589bd.txt",
+    "sha256": "ea3773598d7649d4bb731f0a1e484376bdf45fba4da59d45f820e7f8016589bd",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.Session::finish_extension_digest_stream",
+    "file": "cfb65ca3142aec02628df1bd3fa9c9a65f401c35355ccbdf64cae27b7bcbf429.txt",
+    "sha256": "cfb65ca3142aec02628df1bd3fa9c9a65f401c35355ccbdf64cae27b7bcbf429",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.AdvancedSession::finish_digest",
+    "file": "715142daadca747cfcf3024e6e6146c61e9814b7e8349ca437e095807f9e560c.txt",
+    "sha256": "715142daadca747cfcf3024e6e6146c61e9814b7e8349ca437e095807f9e560c",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.AdvancedSession::finish_native_digest",
+    "file": "46a7cfe74d0f81783dfad0c446a9677a93c16a4333a5dadc244cc47a1df50fd3.txt",
+    "sha256": "46a7cfe74d0f81783dfad0c446a9677a93c16a4333a5dadc244cc47a1df50fd3",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  },
+  {
+    "id": "ticket-foreign.AdvancedSession::finish_extension_digest_stream",
+    "file": "0b8dcc746031d1a3d87753bae44c6fea640a62e7e15e2c505a9e28c262c7b23c.txt",
+    "sha256": "0b8dcc746031d1a3d87753bae44c6fea640a62e7e15e2c505a9e28c262c7b23c",
+    "worker_mode": "digest-ticket-cipher",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "Exact typed AES producer with retained zero block; only Init before body",
+      "Correct typed family/foreign refusal and zero native calls during refused digest finish",
+      "Unchanged cipher progress; one C_Encrypt on original ticket gives exact sixteen-byte result",
+      "Only returned object reference destroyed; explicit owner, peer and login-session cleanup"
+    ]
+  }
+]

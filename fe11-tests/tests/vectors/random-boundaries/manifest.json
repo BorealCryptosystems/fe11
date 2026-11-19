@@ -1,0 +1,152 @@
+[
+  {
+    "id": "random.local.budget_-1",
+    "file": "60b42688b24f94c8b69bfb83dd6d815121b5c3372727a13cba9a3c428e7ee59b.txt",
+    "sha256": "60b42688b24f94c8b69bfb83dd6d815121b5c3372727a13cba9a3c428e7ee59b",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact caller aggregate byte-budget or length/accounting refusal without native dispatch. SecretBytes initialization, mutable borrow, ownership and absence of Clone/Debug are distinct; no allocator erasure observation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.local.budget_0",
+    "file": "18acc7414935173853de3be0f97e4477c554c1f252ad4fdad1e5889a4e4c15ec.txt",
+    "sha256": "18acc7414935173853de3be0f97e4477c554c1f252ad4fdad1e5889a4e4c15ec",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact caller aggregate byte-budget or length/accounting refusal without native dispatch. SecretBytes initialization, mutable borrow, ownership and absence of Clone/Debug are distinct; no allocator erasure observation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.local.budget_1",
+    "file": "882068ba7217db786e843105655237039a6fbf5d3fa9a8f7a09551cabb0f5378.txt",
+    "sha256": "882068ba7217db786e843105655237039a6fbf5d3fa9a8f7a09551cabb0f5378",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact caller aggregate byte-budget or length/accounting refusal without native dispatch. SecretBytes initialization, mutable borrow, ownership and absence of Clone/Debug are distinct; no allocator erasure observation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.local.overflow",
+    "file": "752cb47eaa3053675714896ac151b5e41bf42be622401f0d1c1a1d866543c935.txt",
+    "sha256": "752cb47eaa3053675714896ac151b5e41bf42be622401f0d1c1a1d866543c935",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact caller aggregate byte-budget or length/accounting refusal without native dispatch. SecretBytes initialization, mutable borrow, ownership and absence of Clone/Debug are distinct; no allocator erasure observation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "random.local.ownership",
+    "file": "cc4adaf27463b239b22a167b453e6f29eecdaea5b581a265a58e3a94e806beb3.txt",
+    "sha256": "cc4adaf27463b239b22a167b453e6f29eecdaea5b581a265a58e3a94e806beb3",
+    "worker_mode": "random-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact caller aggregate byte-budget or length/accounting refusal without native dispatch. SecretBytes initialization, mutable borrow, ownership and absence of Clone/Debug are distinct; no allocator erasure observation.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

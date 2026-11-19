@@ -1,0 +1,496 @@
+[
+  {
+    "id": "objects.contract.empty",
+    "file": "d6e19229d02637fc77519dc4492d6e437d7dd81ccd30ff37ef157f7d2be80a91.txt",
+    "sha256": "d6e19229d02637fc77519dc4492d6e437d7dd81ccd30ff37ef157f7d2be80a91",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Zero-length LABEL and VALUE on a data object remain available, distinct from an unavailable attribute.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "empty"
+  },
+  {
+    "id": "objects.contract.short",
+    "file": "275394fc9bcdfa32c55e2e7ec9c3fd17031f58548c2dca133dd31c0b37e344da.txt",
+    "sha256": "275394fc9bcdfa32c55e2e7ec9c3fd17031f58548c2dca133dd31c0b37e344da",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Direct VALUE buffer15 for a16-byte value: BUFFER_TOO_SMALL, supplied15, required unavailable; no retry.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "short"
+  },
+  {
+    "id": "objects.contract.oversized",
+    "file": "1804a6a19bbdf0f64f95d8ac292f0bfd260f7157ff0f85271f7378aeee3cef7f.txt",
+    "sha256": "1804a6a19bbdf0f64f95d8ac292f0bfd260f7157ff0f85271f7378aeee3cef7f",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Direct VALUE buffer17 contains exactly the original16 bytes, without its spare byte.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "oversized"
+  },
+  {
+    "id": "objects.contract.sensitive",
+    "file": "5c6d56c01fcf1e4e824d03833e753cd7853e9f5bdb80c80e3ea165fcb518b411.txt",
+    "sha256": "5c6d56c01fcf1e4e824d03833e753cd7853e9f5bdb80c80e3ea165fcb518b411",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "SENSITIVE=true EXTRACTABLE=false VALUE: ATTRIBUTE_SENSITIVE and explicit Sensitive cause, no bytes.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "sensitive"
+  },
+  {
+    "id": "objects.contract.unknown",
+    "file": "fe208b89cfca36318d4a29e78e06cae70834a842099774d1f843ee3818d2ab2b.txt",
+    "sha256": "fe208b89cfca36318d4a29e78e06cae70834a842099774d1f843ee3818d2ab2b",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "APPLICATION is not an attribute of this secret key: ATTRIBUTE_TYPE_INVALID and Unsupported cause.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "unknown"
+  },
+  {
+    "id": "objects.contract.unavailable",
+    "file": "57150bd28a9346c860620ae1b45e4cfedd53323261468611ddeee4e3e406eb0c.txt",
+    "sha256": "57150bd28a9346c860620ae1b45e4cfedd53323261468611ddeee4e3e406eb0c",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "One native call preserves empty LABEL and unavailable APPLICATION as different entries.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "unavailable"
+  },
+  {
+    "id": "objects.contract.mixed",
+    "file": "69afc93f01f5b8b93f9d5388d319a16b671cb0249b6bbe1200bb483030fc2e51.txt",
+    "sha256": "69afc93f01f5b8b93f9d5388d319a16b671cb0249b6bbe1200bb483030fc2e51",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "One native call preserves exact LABEL while sensitive VALUE and absent APPLICATION remain unavailable; aggregate error does not guess individual causes.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "mixed"
+  },
+  {
+    "id": "objects.contract.order",
+    "file": "52b8eedeffc1b3b8a532946af856debe6217f1952c87ae5f8b37db58ebbcd8dd.txt",
+    "sha256": "52b8eedeffc1b3b8a532946af856debe6217f1952c87ae5f8b37db58ebbcd8dd",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Reversing the complete creation template preserves CLASS, KEY_TYPE, binary LABEL and VALUE and independent HMAC-MD5(abc).",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management; independent HMAC-MD5 equality witness with fixed public key00..0f and message616263",
+      "expected_hmac": "773369799e54eb49ff21e6f963e5bb49"
+    },
+    "action": "order"
+  },
+  {
+    "id": "objects.contract.copy-refusal",
+    "file": "05d94ef4132f90c614fe07dc2d570b55e15eaaf457eb82c19a694ec0b9e88dfb.txt",
+    "sha256": "05d94ef4132f90c614fe07dc2d570b55e15eaaf457eb82c19a694ec0b9e88dfb",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Create with COPYABLE=false, then C_CopyObject returns ACTION_PROHIBITED; original VALUE remains unchanged. No CKA_COPYABLE post-creation mutation claimed.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CopyObject",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "copy-refusal",
+    "parameter_reconciliation": "The action sets CKA_COPYABLE=false in the creation template. The pinned module rejects a later C_SetAttributeValue of this attribute; that original attempt remains failed and does not cover C_CopyObject."
+  },
+  {
+    "id": "objects.contract.read-only",
+    "file": "2d513760dba1b62d4200df7dfac78d7acf3662038e81de6c72b961b6f063f55b.txt",
+    "sha256": "2d513760dba1b62d4200df7dfac78d7acf3662038e81de6c72b961b6f063f55b",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Changes to CLASS and KEY_TYPE return ATTRIBUTE_READ_ONLY; original unsigned values remain observable. Reacquire the uniquely labelled object after every nonempty mutation before native readback and cleanup.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_SetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_SetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "read-only"
+  },
+  {
+    "id": "objects.contract.size",
+    "file": "ee160a1ef521b235dce6793fb0ebc27378dd0a19c9bad0c5e11f21e469487a33.txt",
+    "sha256": "ee160a1ef521b235dce6793fb0ebc27378dd0a19c9bad0c5e11f21e469487a33",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Preserve the pinned recipe native unavailable-size sentinel before/after LABEL mutation and read back that mutation. Reacquire the uniquely labelled object after every nonempty mutation before native readback and cleanup.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetObjectSize",
+      "C_SetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetObjectSize",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 object management and attributes; independent HMAC-SHA256 known public key00..0f, message616263",
+      "expected_hmac": "d601cc177559b0248459787f7e804ed7f27689b5995c59b661802d9682fdf8d2"
+    },
+    "action": "size"
+  },
+  {
+    "id": "objects.contract.allowed",
+    "file": "a28dfc27448015534f989fc7854ca4b45c8808adff0bc164f7835ec6106da700.txt",
+    "sha256": "a28dfc27448015534f989fc7854ca4b45c8808adff0bc164f7835ec6106da700",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read back caller-supplied ALLOWED_MECHANISMS; permitted SHA256 HMAC matches independent reference, excluded SHA1 HMAC returns native MECHANISM_INVALID.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "PKCS11 caller-supplied allowed mechanisms; HMAC-SHA256 known public key00..1f, message616263",
+      "expected_hmac": "f0133729c4163dede81e21cd47839256da58171238c8a0d874397c73b14e1e47"
+    },
+    "action": "allowed",
+    "parameter_reconciliation": "Policy witness extends generic fixture key16 to key32 so both permitted SHA256 and excluded SHA1 are within advertised key bounds; all other parent templates retain key16."
+  }
+]

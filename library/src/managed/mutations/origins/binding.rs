@@ -516,9 +516,14 @@ pub(crate) fn forget_private_origins(
                 .is_some_and(|v| v != crate::Observation::Observed(false)))
     });
     catalog.resource_activities.retain(|key, entry| {
+        // A prepared reader can outlive Logout before its object reference is
+        // published. Keep its canonical synchronization identity while any
+        // owner retains it; this grants neither visibility nor native access.
+        // The catalogue stores only a Weak, so it does not extend that lifetime.
         !(key.slot == slot
             && key.generation == generation
             && !survivors.contains(key)
+            && entry.activity.strong_count() == 0
             && entry
                 .visibility
                 .is_some_and(|v| v != crate::Observation::Observed(false)))

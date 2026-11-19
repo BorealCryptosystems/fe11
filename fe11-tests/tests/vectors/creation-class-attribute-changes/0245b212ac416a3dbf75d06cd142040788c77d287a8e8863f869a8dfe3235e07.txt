@@ -1,0 +1,13 @@
+template
+0|number|3
+256|number|48
+1|bool|false
+2|bool|false
+354|bool|true
+259|bool|false
+264|bool|true
+592|bytes|06072a850302022301
+593|bytes|06072a850302021e01
+17|bytes|0100000000000000000000000000000000000000000000000000000000000000
+attributes
+supply|CKA_ALWAYS_SENSITIVE

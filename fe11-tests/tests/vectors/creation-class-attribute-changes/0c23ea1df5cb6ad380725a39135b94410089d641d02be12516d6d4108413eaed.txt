@@ -1,0 +1,10 @@
+template
+0|number|4
+256|number|40
+1|bool|false
+2|bool|false
+264|bool|true
+266|bool|true
+17|bytes|000102030405060708090a0b0c0d0e0f10111213
+attributes
+omit|CKA_CLASS

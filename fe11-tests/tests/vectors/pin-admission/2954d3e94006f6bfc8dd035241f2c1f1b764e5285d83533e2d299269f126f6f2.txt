@@ -1,0 +1,4 @@
+session
+initialize
+immediate
+wrong-role

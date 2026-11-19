@@ -167,6 +167,10 @@ pub(super) fn start_retained(
         AccessMode::Read
     };
     loop {
+        session
+            .entry
+            .advanced_progress
+            .prepare_init_slot(session, &progress, kind.category())?;
         // Both anchors outlive session/key access on every error return.
         // Successful construction transfers the complete installed owner.
         let installed: std::sync::Arc<crate::advanced::ledger::OperationCell>;
@@ -383,6 +387,15 @@ pub(super) fn start_retained(
             drop(access);
             continue;
         }
+        if !session.entry.advanced_progress.has_vacancy()
+            && access
+                .operations
+                .init_target(&session.entry, kind.category())?
+                .is_none()
+        {
+            drop(access);
+            continue;
+        }
         check_functions(&access)?;
         session.native_object_handle(&access, key)?;
         bound_revocation = match revocation.as_mut() {
@@ -434,11 +447,10 @@ pub(super) fn start_retained(
             _credit: scalars._credit,
         };
         retained_shell = Some(shell);
-        if session
-            .entry
-            .advanced_operation
-            .load(std::sync::atomic::Ordering::Acquire)
-            != 0
+        if access
+            .operations
+            .init_target(&session.entry, kind.category())?
+            .is_some()
         {
             let prepared =
                 competing_preparation.expect("competing frame prepared before possession");
@@ -481,6 +493,7 @@ pub(super) fn start_retained(
             |_| {},
         )?;
         let ticket = OperationTicket {
+            restored_companions: Vec::new(),
             owner: session.inner.clone(),
             uid: session.uid,
             id,

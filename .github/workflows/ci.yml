@@ -3,7 +3,7 @@ name: Public validation
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, codex/fe11-0.1.1-hosted-acceptance]
   workflow_dispatch:
 
 permissions:
@@ -14,7 +14,27 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  preflight:
+    name: Verify acceptance inputs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Verify checkout, packages and native inputs
+        env:
+          EXPECTED_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_COMMIT"
+          python3 -B ci/scripts/candidate_inputs.py
+          python3 -B fe11-tests/tests/driver/fixture_archive.py check
+          python3 -B ci/scripts/candidate_matrix.py
+          test -z "$(git status --porcelain)"
+
   build:
+    needs: preflight
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
@@ -53,6 +73,14 @@ jobs:
         run: |
           & '${{ matrix.python }}' ci/scripts/job.py build --rust '${{ matrix.rust }}' --root $env:FE11_JOB_ROOT
           exit $LASTEXITCODE
+      - name: Transfer the package-built Linux native worker
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: native-kit-${{ matrix.rust }}
+          path: ${{ runner.temp }}/fe11-public-build/native-kit/
+          retention-days: 1
+          if-no-files-found: error
       - name: Upload public reports
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
@@ -66,6 +94,8 @@ jobs:
             ${{ runner.temp }}/fe11-public-build/reports/native.json
             ${{ runner.temp }}/fe11-public-build/reports/native-inspection.json
             ${{ runner.temp }}/fe11-public-build/reports/sys.json
+            ${{ runner.temp }}/fe11-public-build/reports/public-contracts.json
+            ${{ runner.temp }}/fe11-public-build/reports/engine-isolation.json
             ${{ runner.temp }}/fe11-public-build/reports/documentation.json
             ${{ runner.temp }}/fe11-public-build/reports/summary.json
       - name: Clean reproducible job files
@@ -77,49 +107,100 @@ jobs:
           & '${{ matrix.python }}' ci/scripts/cleanup.py --root $env:FE11_JOB_ROOT --parent $env:RUNNER_TEMP
           exit $LASTEXITCODE
 
+  runtime:
+    needs: preflight
+    name: Prepare the pinned SoftHSM runtime
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - id: matrix
+        run: python3 -B ci/scripts/native_matrix.py matrix
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends autoconf automake libtool pkg-config build-essential perl tcl
+          printf 'Runner image %s %s\n' "$ImageOS" "$ImageVersion"
+          dpkg-query -W gcc build-essential make autoconf automake libtool tcl perl
+          python3 -B ci/scripts/build_soft_hsm.py
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: native-runtime
+          path: ${{ runner.temp }}/fe11-native-build/runtime/
+          retention-days: 1
+          if-no-files-found: error
+
   softhsm:
-    name: ${{ matrix.name }}
+    needs: [build, runtime]
+    name: SoftHSM ${{ matrix.rust }} ${{ matrix.backend }} ${{ matrix.interface }} ${{ matrix.shard }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - { name: softhsm-msrv, rust: '1.81.0' }
-          - { name: softhsm-current, rust: '1.100.0' }
-    env:
-      FE11_EXPECTED_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
-      FE11_BASE_COMMIT: ${{ github.event.pull_request.base.sha }}
-      PYTHONDONTWRITEBYTECODE: '1'
+      matrix: ${{ fromJSON(needs.runtime.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: ${{ env.FE11_EXPECTED_COMMIT }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
-      - name: Install module prerequisites
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          name: native-kit-${{ matrix.rust }}
+          path: ${{ runner.temp }}/native-kit
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          name: native-runtime
+          path: ${{ runner.temp }}/native-runtime
+      - name: Execute the declared native cases
+        env:
+          FE11_ROW: ${{ toJSON(matrix) }}
+          PYTHONDONTWRITEBYTECODE: '1'
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends build-essential autoconf automake libtool pkg-config libssl-dev perl python3 git ca-certificates
-      - name: Run the public SoftHSM scenarios
-        env:
-          FE11_RUST: ${{ matrix.rust }}
-          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-softhsm
-        run: python3 ci/scripts/job.py softhsm --rust "$FE11_RUST" --root "$FE11_JOB_ROOT"
-      - name: Upload public reports
+          sudo apt-get install -y --no-install-recommends gdb
+          (cd "$RUNNER_TEMP/native-runtime" && sha256sum --check SHA256SUMS)
+          python3 ci/scripts/native_matrix.py shard --row "$FE11_ROW" --root "$RUNNER_TEMP"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name: ${{ matrix.name }}-reports
+          name: native-result-${{ matrix.rust }}-${{ matrix.backend }}-${{ matrix.interface }}-${{ matrix.shard }}
           if-no-files-found: error
           path: |
-            ${{ runner.temp }}/fe11-public-softhsm/reports/identity.json
-            ${{ runner.temp }}/fe11-public-softhsm/reports/toolchain.json
-            ${{ runner.temp }}/fe11-public-softhsm/reports/commands.json
-            ${{ runner.temp }}/fe11-public-softhsm/reports/softhsm.json
-            ${{ runner.temp }}/fe11-public-softhsm/reports/results.tsv
-            ${{ runner.temp }}/fe11-public-softhsm/reports/summary.json
-      - name: Clean reproducible job files
+            ${{ runner.temp }}/out/plan.json
+            ${{ runner.temp }}/out/results.jsonl
+            ${{ runner.temp }}/out/summary.json
+
+  acceptance:
+    name: Reconcile native coverage
+    if: always()
+    needs: softhsm
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          pattern: native-result-*
+          path: ${{ runner.temp }}/reports
+      - name: Reconcile every declared coordinate
         if: always()
         env:
-          FE11_JOB_ROOT: ${{ runner.temp }}/fe11-public-softhsm
-        run: python3 ci/scripts/cleanup.py --root "$FE11_JOB_ROOT" --parent "$RUNNER_TEMP"
+          NATIVE_JOB_RESULT: ${{ needs.softhsm.result }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/reports"
+          python3 -B fe11-tests/tests/driver/fixture_archive.py unpack
+          python3 -B ci/scripts/native_matrix.py reconcile --root "$RUNNER_TEMP/reports" --package fe11-tests
+          test "$NATIVE_JOB_RESULT" = success
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: native-acceptance
+          if-no-files-found: error
+          path: ${{ runner.temp }}/reports/acceptance.json

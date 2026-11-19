@@ -1,0 +1,802 @@
+[
+  {
+    "id": "operation.CKM_SHA224.digest@Session::begin_native_digest@SHA2-224-1.0.3.514",
+    "file": "b9aea3b6e45558e99ae111aacc9e8ccc24b8ba7e2a09d51b87e3562b1de2774d.txt",
+    "sha256": "b9aea3b6e45558e99ae111aacc9e8ccc24b8ba7e2a09d51b87e3562b1de2774d",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA224",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-224-1.0/internalProjection.json",
+      "source_sha256": "288d0a4dbec49759c63462ca9e4bd82b794e27f50605c8fca7fad0a415649ca9",
+      "group": 3,
+      "case": 514,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA224.digest@AdvancedSession::begin_native_digest@SHA2-224-1.0.3.514",
+    "file": "da19c63b927ea9c8e99e06439cb3036d7b4528837b7653736af9f47efb0fb535.txt",
+    "sha256": "da19c63b927ea9c8e99e06439cb3036d7b4528837b7653736af9f47efb0fb535",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA224",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-224-1.0/internalProjection.json",
+      "source_sha256": "288d0a4dbec49759c63462ca9e4bd82b794e27f50605c8fca7fad0a415649ca9",
+      "group": 3,
+      "case": 514,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA256.digest@Session::begin_native_digest@SHA2-256-1.0.3.514",
+    "file": "b696a60e65e7b22d7650002dd3641392e5ace1e6726a6a4e4ab23999d671313a.txt",
+    "sha256": "b696a60e65e7b22d7650002dd3641392e5ace1e6726a6a4e4ab23999d671313a",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA256",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-256-1.0/internalProjection.json",
+      "source_sha256": "a7e0bf4f5c661f1787b343bf3ae1a809b1e62f8fb2c8a627791510d03a570a6c",
+      "group": 3,
+      "case": 514,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA256.digest@AdvancedSession::begin_native_digest@SHA2-256-1.0.3.514",
+    "file": "de23c46ff1239a07530f50e56841ab7ece7f3ba3b429eebfb834f198bfd96d5e.txt",
+    "sha256": "de23c46ff1239a07530f50e56841ab7ece7f3ba3b429eebfb834f198bfd96d5e",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA256",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-256-1.0/internalProjection.json",
+      "source_sha256": "a7e0bf4f5c661f1787b343bf3ae1a809b1e62f8fb2c8a627791510d03a570a6c",
+      "group": 3,
+      "case": 514,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA384.digest@Session::begin_native_digest@SHA2-384-1.0.3.1026",
+    "file": "4189d92f31fe236528899501684635c8f4155696d67b4c718d71d1074cc1e31e.txt",
+    "sha256": "4189d92f31fe236528899501684635c8f4155696d67b4c718d71d1074cc1e31e",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA384",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-384-1.0/internalProjection.json",
+      "source_sha256": "b22d80da99444af78feecaaae49493ee6189f1e6675e49db8764fb77bf16e847",
+      "group": 3,
+      "case": 1026,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA384.digest@AdvancedSession::begin_native_digest@SHA2-384-1.0.3.1026",
+    "file": "500edbe3855a55c81495734e2659abb1057f3d169afa454cc1ed981c0bf57942.txt",
+    "sha256": "500edbe3855a55c81495734e2659abb1057f3d169afa454cc1ed981c0bf57942",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA384",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-384-1.0/internalProjection.json",
+      "source_sha256": "b22d80da99444af78feecaaae49493ee6189f1e6675e49db8764fb77bf16e847",
+      "group": 3,
+      "case": 1026,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA512.digest@Session::begin_native_digest@SHA2-512-1.0.3.1026",
+    "file": "6788d4c9723e09e50d6b6e2cbe10451e1b4a6e5ed667fa012341a4188dfd2679.txt",
+    "sha256": "6788d4c9723e09e50d6b6e2cbe10451e1b4a6e5ed667fa012341a4188dfd2679",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA512",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 2147483648,
+    "update_calls": 32768,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        32768
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-1.0/internalProjection.json",
+      "source_sha256": "2b514c517a2ef150d240efc52fdb2c4127925f0b4291b5a5b9153515e0ec7478",
+      "group": 3,
+      "case": 1026,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA512.digest@AdvancedSession::begin_native_digest@SHA2-512-1.0.3.1026",
+    "file": "47a11c5e2775fd25c107b61352dd0c2305742f5438fbc74c18eeeeb90078831d.txt",
+    "sha256": "47a11c5e2775fd25c107b61352dd0c2305742f5438fbc74c18eeeeb90078831d",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA512",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 2147483648,
+    "update_calls": 32768,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        32768
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-1.0/internalProjection.json",
+      "source_sha256": "2b514c517a2ef150d240efc52fdb2c4127925f0b4291b5a5b9153515e0ec7478",
+      "group": 3,
+      "case": 1026,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_224.digest@Session::begin_native_digest@SHA3-224-2.0.3.1260",
+    "file": "9e0efe00b932a2f66331cd0a14a6f9fc57600d19d5c1a3f8e1c306a855a01c1d.txt",
+    "sha256": "9e0efe00b932a2f66331cd0a14a6f9fc57600d19d5c1a3f8e1c306a855a01c1d",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA3_224",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 2147483648,
+    "update_calls": 32768,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        32768
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-224-2.0/internalProjection.json",
+      "source_sha256": "9ae4b1480d15526b29498d442125dfcfe80d74fe74c1b56fa840b1fae702ae34",
+      "group": 3,
+      "case": 1260,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_224.digest@AdvancedSession::begin_native_digest@SHA3-224-2.0.3.1260",
+    "file": "d370a62ac1cb59e0db6124518e107986355ba01ac26f46bf36c9b821a1f87462.txt",
+    "sha256": "d370a62ac1cb59e0db6124518e107986355ba01ac26f46bf36c9b821a1f87462",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA3_224",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 2147483648,
+    "update_calls": 32768,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        32768
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-224-2.0/internalProjection.json",
+      "source_sha256": "9ae4b1480d15526b29498d442125dfcfe80d74fe74c1b56fa840b1fae702ae34",
+      "group": 3,
+      "case": 1260,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_256.digest@Session::begin_native_digest@SHA3-256-2.0.3.1196",
+    "file": "a03acce62bfb36ea6ddcba857c44243fef9c98061dad600fba4bc78f9c94544e.txt",
+    "sha256": "a03acce62bfb36ea6ddcba857c44243fef9c98061dad600fba4bc78f9c94544e",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA3_256",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 8589934592,
+    "update_calls": 131072,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        131072
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-256-2.0/internalProjection.json",
+      "source_sha256": "dba4689436c7e440e61dc517210def3e8e09e50c0e9eff29ea66d89bdd0f2c63",
+      "group": 3,
+      "case": 1196,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_256.digest@AdvancedSession::begin_native_digest@SHA3-256-2.0.3.1196",
+    "file": "e687623aa496a3c550eb9813ca9347d99f5504cd2a4407c27bdd6f2872b0b6d0.txt",
+    "sha256": "e687623aa496a3c550eb9813ca9347d99f5504cd2a4407c27bdd6f2872b0b6d0",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA3_256",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 8589934592,
+    "update_calls": 131072,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        131072
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-256-2.0/internalProjection.json",
+      "source_sha256": "dba4689436c7e440e61dc517210def3e8e09e50c0e9eff29ea66d89bdd0f2c63",
+      "group": 3,
+      "case": 1196,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_384.digest@Session::begin_native_digest@SHA3-384-2.0.3.940",
+    "file": "8eb31f8076a958dba333fc492ecf9e9c14ad8f668f0c0b095b93660af5807799.txt",
+    "sha256": "8eb31f8076a958dba333fc492ecf9e9c14ad8f668f0c0b095b93660af5807799",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA3_384",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-384-2.0/internalProjection.json",
+      "source_sha256": "e9eae46bd676dc82e911dcc3af92ef0093e0118615b62ab431086fce47574396",
+      "group": 3,
+      "case": 940,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_384.digest@AdvancedSession::begin_native_digest@SHA3-384-2.0.3.940",
+    "file": "8a69cd9f0ef8d05cf5e6e74f32a155d97fac879e5f3e0b9e56f26ce58f7317c8.txt",
+    "sha256": "8a69cd9f0ef8d05cf5e6e74f32a155d97fac879e5f3e0b9e56f26ce58f7317c8",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA3_384",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 1073741824,
+    "update_calls": 16384,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        16384
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-384-2.0/internalProjection.json",
+      "source_sha256": "e9eae46bd676dc82e911dcc3af92ef0093e0118615b62ab431086fce47574396",
+      "group": 3,
+      "case": 940,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_512.digest@Session::begin_native_digest@SHA3-512-2.0.3.684",
+    "file": "8d188989130545abc854ecd9b297bb1cdda2d3249544e03d77c3c28e9d4c1dda.txt",
+    "sha256": "8d188989130545abc854ecd9b297bb1cdda2d3249544e03d77c3c28e9d4c1dda",
+    "route": "Session::begin_native_digest",
+    "mechanism": "CKM_SHA3_512",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 8589934592,
+    "update_calls": 131072,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        131072
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-512-2.0/internalProjection.json",
+      "source_sha256": "b0521468a178f7fd362d63319aa69b708885d08f0c71cee99ac70729f5bdf64b",
+      "group": 3,
+      "case": 684,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  },
+  {
+    "id": "operation.CKM_SHA3_512.digest@AdvancedSession::begin_native_digest@SHA3-512-2.0.3.684",
+    "file": "a99da744bfbacd722de8d381ef3c0ae694377b2c3db9fc3e3ba0b4035b01dc6c.txt",
+    "sha256": "a99da744bfbacd722de8d381ef3c0ae694377b2c3db9fc3e3ba0b4035b01dc6c",
+    "route": "AdvancedSession::begin_native_digest",
+    "mechanism": "CKM_SHA3_512",
+    "worker_mode": "digest-stream",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "total_bytes": 8589934592,
+    "update_calls": 131072,
+    "expected_native_call_runs": [
+      [
+        "C_DigestInit",
+        1
+      ],
+      [
+        "C_DigestUpdate",
+        131072
+      ],
+      [
+        "C_DigestFinal",
+        1
+      ]
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA3-512-2.0/internalProjection.json",
+      "source_sha256": "b0521468a178f7fd362d63319aa69b708885d08f0c71cee99ac70729f5bdf64b",
+      "group": 3,
+      "case": 684,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact published digest bytes and length; exact completed byte and update counts"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "negative.CKM_RSA_PKCS.wrap.private-class",
+    "file": "2cab3b31a9aece83673b6f77f7f5dae230763bb3046aca84184daef4c505bcb7.txt",
+    "sha256": "2cab3b31a9aece83673b6f77f7f5dae230763bb3046aca84184daef4c505bcb7",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": {
+      "producer": "C_WrapKey",
+      "codes": [
+        "CKR_KEY_NOT_WRAPPABLE"
+      ]
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Read the effective private target class, extractability, trusted-wrapping restriction and wrapping-key permission before C_WrapKey.",
+    "producer": "C_WrapKey",
+    "code": 105
+  },
+  {
+    "id": "negative.CKM_RSA_PKCS_OAEP.wrap.private-class",
+    "file": "3ee57a357775fc057a305a4f08a7453aec2407208c56538a5eab2f4ed0e98db8.txt",
+    "sha256": "3ee57a357775fc057a305a4f08a7453aec2407208c56538a5eab2f4ed0e98db8",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": {
+      "producer": "C_WrapKey",
+      "codes": [
+        "CKR_KEY_NOT_WRAPPABLE"
+      ]
+    },
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Unchanged published OAEP vector",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "Read the effective private target class, extractability, trusted-wrapping restriction and wrapping-key permission before C_WrapKey.",
+    "producer": "C_WrapKey",
+    "code": 105
+  }
+]

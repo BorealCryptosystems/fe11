@@ -2,22 +2,53 @@
 
 ## 0.1.1
 
-- Validate Rust 1.100 on Linux x86_64 GNU and Windows x86_64 MSVC while retaining
-  Rust 1.81 as the minimum supported compiler.
-- Keep fresh application dependency resolution compatible with Rust 1.81 by
-  constraining the already-used `base64ct` and `zeroize_derive` packages.
-- Add public SoftHSM integration scenarios and a six-job compiler/integration CI.
-- Publish versioned API documentation and guides alongside the retained 0.1.0 site.
+### Sessions and operations
 
-The PKCS#11 API, verification ABI and native-operation behavior are unchanged.
-`fe11-sys`, `fe11-verify-engine-api` and `fe11-verify-engine` remain at 0.1.0.
+- Search for objects while a synchronous session has a quiescent classic
+  cryptographic operation. The module decides whether the search can start.
+  After a successful logout, Fe11 forwards continuation and finalization of
+  an existing generic native object search. The module determines the outcome.
+- Start a second classic operation of a different kind on the same session.
+  When the module accepts both, each ticket tracks its own progress. Use
+  `ClassicOperation` and `take_classic_ticket` to select a ticket. Grouped
+  state capture and restoration retain the participating operations on modules
+  that support native operation state.
+- Call `C_Login` or `C_LoginUser` between native calls of an active operation.
+  `authenticate_session_context` also lets the module select the key for a
+  context-specific login. Ticket-scoped authentication remains available.
+- Preserve a live operation when a direct `C_SessionCancel` returns
+  `CKR_FUNCTION_NOT_SUPPORTED`. Fe11 reports the native code and marks that
+  cancellation attempt as having no effect.
 
+### Tokens, attributes and key derivation
 
-The exact `base64ct = 1.6.0` and `zeroize_derive = 1.4.3` constraints preserve
-the minimum compiler for fresh resolutions. They can conflict with application
-dependencies requiring newer compatible versions of those packages; review the
-combined graph when updating dependencies. Fresh-resolution checks apply to the
-registry state at validation time and do not guarantee every future resolution.
+- Submit `C_InitToken` when the token has idle sessions. A native
+  `CKR_SESSION_EXISTS` preserves those sessions. During a token drain,
+  `initialize_user_pin` and `change_pin` can reach `C_InitPIN` and `C_SetPIN`.
+- Accept a zero-length byte value for a date attribute. An explicitly supplied
+  eight-byte `CK_DATE` keeps all eight bytes, including an all-zero date.
+- Honor an explicit object class in the output template of `CKM_GOSTR3410_DERIVE`
+  when reserving and observing the destination. The native module decides
+  whether to accept the derivation.
+
+### Build and public tests
+
+- Distribute the public suite in the separate `fe11-tests` package, pinned to Fe11 0.1.1. The versioned HTML documentation is available as an offline archive.
+
+- Support Rust 1.100 on Linux x86_64 GNU and Windows x86_64 MSVC while retaining
+  Rust 1.81 as the minimum supported compiler. Fe11 pins `base64ct = 1.6.0` and
+  `zeroize_derive = 1.4.3` for fresh resolutions with Rust 1.81. Applications
+  requiring newer versions of either package should check their combined graph.
+- Add public local API tests, SoftHSM integration scenarios, a [case catalogue](fe11-tests/tests/vectors/CASES.md)
+  and a [guide to observed module results](fe11-tests/tests/README.md#known-softhsm-results).
+  The GitHub workflow schedules the native suite with both Rust versions,
+  the file and database object stores, and the legacy and standard module
+  interfaces. Its coverage report retains raw results and identifies exact
+  reproductions of documented module behavior.
+- Record the length and encoding shape of each public point used in the
+  `sect239k1` ECDH scenario so that a native refusal can be investigated.
+- Provide versioned API documentation and usage guides. The companion crates
+  `fe11-sys`, `fe11-verify-engine-api` and `fe11-verify-engine` remain at 0.1.0.
 
 ## 0.1.0
 

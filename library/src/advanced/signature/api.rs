@@ -183,14 +183,29 @@ impl Session {
     /// not retry, cancel, or issue another Init. Explicit stream ceilings remain
     /// in force. Complete-input facades retain the ABI and memory budget limits.
     pub fn take_signature_ticket(&self) -> Result<OperationTicket> {
+        self.take_signature_direction(None)
+    }
+
+    pub(in crate::advanced) fn take_signature_direction(
+        &self,
+        direction: Option<fe11_sys::CK_FLAGS>,
+    ) -> Result<OperationTicket> {
         let access = self.advanced_access()?;
-        let held = access.operations.get(self.uid)?;
+        let held = access.operations.parked_cell(self.uid, |operation| matches!(
+            &operation.body, OperationBody::Signature(body) if body.observer == super::Observer::Session
+                && direction.map_or(true, |value| value == body.category())
+        ))?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         let OperationBody::Signature(body) = &mut operation.body else {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
                 crate::OperationOwnershipRejection::SignatureTicketRequired,
             )));
         };
+        if direction.is_some_and(|value| value != body.category()) {
+            return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::SignatureTicketRequired,
+            )));
+        }
         // Retrieval also permits explicit cancellation of an owner whose
         // key is no longer usable. Crypto transitions still check that key.
         if body.observer != super::Observer::Session {
@@ -202,6 +217,7 @@ impl Session {
         }
         body.observer = super::Observer::Ticket;
         Ok(OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.inner.clone(),
             uid: self.uid,
             id: operation.id,
@@ -416,7 +432,13 @@ impl OperationTicket {
             ));
         }
         let state = self.owner.read()?;
-        let held = state.operations.get(self.uid)?;
+        let held = state.operations.get_ticket_with(
+            self.uid,
+            self.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleSignatureTicket,
+            ),
+        )?;
         let operation = held.lock().map_err(|_| Error::Poisoned)?;
         if operation.id != self.id {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -731,4 +753,3 @@ pub(super) use preparation::change;
 pub(super) use preparation::change_with_budget;
 
 pub(super) use preparation::initial_limits;
-

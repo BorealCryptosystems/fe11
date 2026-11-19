@@ -1,0 +1,38 @@
+[
+  {
+    "id": "resource.output-credit.cancel-waiting",
+    "file": "10b52bad734d0636a291bd596d0323b782795488aeeb3876607908227822ef4f.txt",
+    "sha256": "10b52bad734d0636a291bd596d0323b782795488aeeb3876607908227822ef4f",
+    "worker_mode": "builder-runtime-choices",
+    "output_credit": "cancel-waiting",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_GenerateRandom",
+      "C_GenerateRandom",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Retain40MiB against64MiB. Observe Linux waiter in futex with atomic phase bracketing only Fe11 admission. Cancel while output remains held, require exact AdmissionCancelled and zero native calls. Release, then fresh same-session random request and exact digest control succeed. Every thread joins before cleanup.",
+    "source": {
+      "contract": "Session::generate_random, SecretBytes ownership, ResourceAdmission"
+    }
+  }
+]

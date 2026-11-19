@@ -1,0 +1,382 @@
+[
+  {
+    "id": "dh.peer.session.zero",
+    "file": "31bacd6d0d5bc62e6af9b23dd703a67b54dea289ffe752d83f3b9a7b1e946f69.txt",
+    "sha256": "31bacd6d0d5bc62e6af9b23dd703a67b54dea289ffe752d83f3b9a7b1e946f69",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "zero",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.session.one",
+    "file": "959e16a23fdb206269813b0ee1a0477a3c674e41541e8c3218a173e736f6553e.txt",
+    "sha256": "959e16a23fdb206269813b0ee1a0477a3c674e41541e8c3218a173e736f6553e",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.session.p_minus_one",
+    "file": "268ffec8db81577ed3e31d4c325e7072c74d65aeb523f061977e639395c3c185.txt",
+    "sha256": "268ffec8db81577ed3e31d4c325e7072c74d65aeb523f061977e639395c3c185",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p_minus_one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.session.p",
+    "file": "a2b4f6d9de6a437b3e8a9249eaac0a861f49d2358aee799ec46edd6118fe5653.txt",
+    "sha256": "a2b4f6d9de6a437b3e8a9249eaac0a861f49d2358aee799ec46edd6118fe5653",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.session.p_plus_one",
+    "file": "bc97e4ed95082f6e8e2cbd66aba181edd47de0eaf68f5d04071e098149899261.txt",
+    "sha256": "bc97e4ed95082f6e8e2cbd66aba181edd47de0eaf68f5d04071e098149899261",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p_plus_one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.advanced.zero",
+    "file": "39cd171b199b2a03120516cc654283f7e5b8aac3c5a245883ba0336a04239e96.txt",
+    "sha256": "39cd171b199b2a03120516cc654283f7e5b8aac3c5a245883ba0336a04239e96",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "zero",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.advanced.one",
+    "file": "affa0b3b29fa24fa011574d76e74ba8251f4cd639fe44c63dfd6aa3ae4982092.txt",
+    "sha256": "affa0b3b29fa24fa011574d76e74ba8251f4cd639fe44c63dfd6aa3ae4982092",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.advanced.p_minus_one",
+    "file": "1d35970158be9f64012b12179933bcabc1e5bfe82d95832381b19157e6f935f2.txt",
+    "sha256": "1d35970158be9f64012b12179933bcabc1e5bfe82d95832381b19157e6f935f2",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p_minus_one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.advanced.p",
+    "file": "db64eefc54c475fd8da9037b9aad2388a12673362ce7a2e66cf621bf0554edd2.txt",
+    "sha256": "db64eefc54c475fd8da9037b9aad2388a12673362ce7a2e66cf621bf0554edd2",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  },
+  {
+    "id": "dh.peer.advanced.p_plus_one",
+    "file": "f01b2340200f5465542de6602a037da6d9e3837e6025f6d9c84129616a3a6d43.txt",
+    "sha256": "f01b2340200f5465542de6602a037da6d9e3837e6025f6d9c84129616a3a6d43",
+    "worker_mode": "dh-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "KAS-FFC-SSC-Sp800-56Ar3",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+      "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+      "subset_sha256": "b7883580827aab6b1eb9d8059bf586421f5e3528f5cbeaec75117ba545e081df",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "peer_boundary": "p_plus_one",
+    "oracle": "Pinned recipe C_DeriveKey GENERAL_ERROR, may_have_effect=true, no returned ownership; no shared-secret assertion. Same complete DH private key and derivation destination as retained published positive; only peer integer changes. Cleanup of owned base key remains required.",
+    "transformation": "Keep public NIST prime/base/private fixture; replace peer with fixed-width non-group boundary. No new private source or secret; vectors remain public test data."
+  }
+]

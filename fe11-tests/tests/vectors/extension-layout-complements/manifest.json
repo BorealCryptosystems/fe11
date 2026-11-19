@@ -1,0 +1,450 @@
+[
+  {
+    "id": "extension.oaep.session.null-empty",
+    "file": "028efb8c01ea3afc1bf755cf74670e007127ae32806c00a3dd246de4c569ca81.txt",
+    "sha256": "028efb8c01ea3afc1bf755cf74670e007127ae32806c00a3dd246de4c569ca81",
+    "worker_mode": "extension-oaep-null",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.oaep.session.end-empty",
+    "file": "028efb8c01ea3afc1bf755cf74670e007127ae32806c00a3dd246de4c569ca81.txt",
+    "sha256": "028efb8c01ea3afc1bf755cf74670e007127ae32806c00a3dd246de4c569ca81",
+    "worker_mode": "extension-oaep",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.oaep.session.end-label",
+    "file": "a548a8e7775b6640a3476a626e44933b279f13dea343e00cf64d5bdc42f60fc1.txt",
+    "sha256": "a548a8e7775b6640a3476a626e44933b279f13dea343e00cf64d5bdc42f60fc1",
+    "worker_mode": "extension-oaep",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 8,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "EncryptionWithLabel"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.cbc-data.session.tail",
+    "file": "0dd284253d25a83fa62b7a470a88f69bf973b45e324ddac071694554d6765c05.txt",
+    "sha256": "0dd284253d25a83fa62b7a470a88f69bf973b45e324ddac071694554d6765c05",
+    "worker_mode": "extension-objects",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "NIST SP800-38A F.2.1 AES128 CBC first block; data pointer skips16 prefix bytes and addresses exactly16 bytes at block end; derived generic-secret value equals published cipher block.",
+    "provenance": "NIST SP800-38A F.2.1: key2b7e..., IV000102...0f, plaintext6bc1..., ciphertext7649..."
+  },
+  {
+    "id": "extension.rsa-aes.session.nested-empty-label",
+    "file": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38.txt",
+    "sha256": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38",
+    "worker_mode": "extension-rsa-aes-session",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact independent RSA-AES envelope from existing public fixture; root points to aligned OAEP block, then zero-length label at block end. Native returned object retained before observation and destroyed on every body outcome.",
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6"
+    }
+  },
+  {
+    "id": "extension.oaep.advanced.null-empty",
+    "file": "ae964b7532686fb7033f69dadc1ef12f23311cdebf851b19cecc689cdf62cfe4.txt",
+    "sha256": "ae964b7532686fb7033f69dadc1ef12f23311cdebf851b19cecc689cdf62cfe4",
+    "worker_mode": "extension-oaep-null",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.oaep.advanced.end-empty",
+    "file": "ae964b7532686fb7033f69dadc1ef12f23311cdebf851b19cecc689cdf62cfe4.txt",
+    "sha256": "ae964b7532686fb7033f69dadc1ef12f23311cdebf851b19cecc689cdf62cfe4",
+    "worker_mode": "extension-oaep",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.oaep.advanced.end-label",
+    "file": "ee621bab4e73925f1d31da0c8d2047458c347f78b0665188534a3d10a0b3226f.txt",
+    "sha256": "ee621bab4e73925f1d31da0c8d2047458c347f78b0665188534a3d10a0b3226f",
+    "worker_mode": "extension-oaep",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact published plaintext; label span fits at owned block end, or NULL/0; output capacity equals RSA modulus width. No padding oracles adapted.",
+    "provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha1_mgf1sha1_test.json",
+      "source_sha256": "2c7b3694cd9265eb88ddb586ca29aefcea02938bde772e19a71a4fa601fc71c5",
+      "group": 0,
+      "case": 8,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "EncryptionWithLabel"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "id": "extension.cbc-data.advanced.tail",
+    "file": "1c6f55cdae8612dbd15244f6b889316145c204c3fe6f2802ac8553f425c85963.txt",
+    "sha256": "1c6f55cdae8612dbd15244f6b889316145c204c3fe6f2802ac8553f425c85963",
+    "worker_mode": "extension-objects",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "NIST SP800-38A F.2.1 AES128 CBC first block; data pointer skips16 prefix bytes and addresses exactly16 bytes at block end; derived generic-secret value equals published cipher block.",
+    "provenance": "NIST SP800-38A F.2.1: key2b7e..., IV000102...0f, plaintext6bc1..., ciphertext7649..."
+  },
+  {
+    "id": "extension.rsa-aes.advanced.nested-empty-label",
+    "file": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38.txt",
+    "sha256": "cdbf822c751ec22d49e36917a125d272cf0764bd16c913e84d346d2edaaf7c38",
+    "worker_mode": "extension-rsa-aes-advanced",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact independent RSA-AES envelope from existing public fixture; root points to aligned OAEP block, then zero-length label at block end. Native returned object retained before observation and destroyed on every body outcome.",
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": "https://www.rfc-editor.org/rfc/rfc5649.html#section-6"
+    }
+  }
+]

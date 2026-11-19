@@ -149,7 +149,7 @@ impl AdvancedSession {
                     crate::AuthenticationRejection::ForeignOrConsumedOperationTicket,
                 )));
             }
-            let operation = s.operations.get(ticket.uid)?;
+            let operation = s.operations.get_ticket(ticket.uid, ticket.id)?;
             let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
             if op.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -174,6 +174,17 @@ impl AdvancedSession {
             if self.mode() != AdvancedSessionMode::Asynchronous {
                 return Err(Error::Rejected(crate::RejectionReason::Detachment(
                     crate::DetachmentRejection::AsynchronousDetachmentSessionMode,
+                )));
+            }
+            // Native transfer identifies one pending operation. Its detached
+            // record has exactly one local continuation. Reject a group before
+            // GetID could transfer authority or release borrowed memory.
+            if op
+                .capture_owner()
+                .is_some_and(|capture| capture.is_grouped())
+            {
+                return Err(Error::Rejected(crate::RejectionReason::Detachment(
+                    crate::DetachmentRejection::DetachmentOwnerAdapterNotIntegrated,
                 )));
             }
             let budget = &self.session.inner.symmetric_budget;
@@ -366,7 +377,7 @@ impl AdvancedSession {
                     crate::AuthenticationRejection::ForeignOrConsumedOperationTicket,
                 )));
             }
-            let operation = s.operations.get(ticket.uid)?;
+            let operation = s.operations.get_ticket(ticket.uid, ticket.id)?;
             let mut op = operation.lock().map_err(|_| Error::Poisoned)?;
             if op.id != ticket.id {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
@@ -561,7 +572,10 @@ impl AdvancedSession {
         let original_crypto =
             control.kind == DetachKind::Capture && !matches!(op.body, OperationBody::Control);
         if !original_crypto {
-            if let Err(error) = s.operations.release_closed(&self.session.entry) {
+            if let Err(error) = s
+                .operations
+                .release_operation(&self.session.entry, op._token.identity())
+            {
                 op.detachment_mut().unwrap().record_storage = Some(bytes);
                 return Err(error);
             }

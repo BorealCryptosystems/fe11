@@ -1,0 +1,162 @@
+[
+  {
+    "id": "ecdsa.wrong-curve.session",
+    "file": "d24b331b16196a11c8825e1358128669ab1be026fbc0840174a0b357a1f43043.txt",
+    "sha256": "d24b331b16196a11c8825e1358128669ab1be026fbc0840174a0b357a1f43043",
+    "worker_mode": "ecdsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "wrong_curve": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "expected_native_sequences": [
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ],
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_DestroyObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ],
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_DestroyObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ]
+    ],
+    "oracle": "First verify the published P256 signature and reject its mutation. Replace only the point with a published P384 point under the P256 OID; require native attribute/key/signature rejection, never successful verification or generic failure. Retain and destroy every object actually created.",
+    "control_vector": "operation.CKM_ECDSA.verify@Session::verify_native@ECDSA-SigGen-FIPS186-5.13.121",
+    "control_sha256": "8016996edf540ab8cb5a243063883ab677376ccfe65db67b23e9b85f88a31707",
+    "other_curve_vector": "operation.CKM_ECDSA.verify@Session::verify_native@ECDSA-SigGen-FIPS186-5.25.241",
+    "other_curve_sha256": "1121a92c6b9ba28877307cbddc9e137293fc846e6f62fb3dab80cd282af67e3d"
+  },
+  {
+    "id": "ecdsa.wrong-curve.advanced",
+    "file": "739fcee2f87e37dd04994b8e2284c2732c0dbdf65aa78ae29fe6a522911708f7.txt",
+    "sha256": "739fcee2f87e37dd04994b8e2284c2732c0dbdf65aa78ae29fe6a522911708f7",
+    "worker_mode": "ecdsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "wrong_curve": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_CreateObject",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "expected_native_sequences": [
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ],
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_DestroyObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ],
+      [
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_CreateObject",
+        "C_VerifyInit",
+        "C_Verify",
+        "C_DestroyObject",
+        "C_DestroyObject",
+        "C_CloseSession"
+      ]
+    ],
+    "oracle": "First verify the published P256 signature and reject its mutation. Replace only the point with a published P384 point under the P256 OID; require native attribute/key/signature rejection, never successful verification or generic failure. Retain and destroy every object actually created.",
+    "control_vector": "operation.CKM_ECDSA.verify@AdvancedSession::verify_native@ECDSA-SigGen-FIPS186-5.13.121",
+    "control_sha256": "685b594c163e748644540f0f4a5403abd1e243777a0602c9081e87afa7369b3f",
+    "other_curve_vector": "operation.CKM_ECDSA.verify@Session::verify_native@ECDSA-SigGen-FIPS186-5.25.241",
+    "other_curve_sha256": "1121a92c6b9ba28877307cbddc9e137293fc846e6f62fb3dab80cd282af67e3d"
+  }
+]

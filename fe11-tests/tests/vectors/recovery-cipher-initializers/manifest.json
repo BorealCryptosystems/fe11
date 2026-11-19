@@ -1,0 +1,222 @@
+[
+  {
+    "id": "rsa.recover-initializer.session.sign",
+    "file": "da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f.txt",
+    "sha256": "da97f600c0e879c0c3db4314d33b2a33cec293c2bb1c8b3cb0d8bc3c2ce2fa5f",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "recover_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "oracle": "Published valid RSA2048 key with explicit SIGN_RECOVER; CKM_RSA_PKCS. Exact C_SignRecoverInit FUNCTION_NOT_SUPPORTED, effect=false; no Recover call after refused Init."
+  },
+  {
+    "id": "rsa.recover-initializer.session.verify",
+    "file": "448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8.txt",
+    "sha256": "448165e8fc461ec6574d46ef39061913df478af7adbd7b0628f6e54745b0b7b8",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "recover_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyRecoverInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "oracle": "Published valid RSA2048 key with explicit VERIFY_RECOVER; CKM_RSA_PKCS. Exact C_VerifyRecoverInit FUNCTION_NOT_SUPPORTED, effect=false; no Recover call after refused Init."
+  },
+  {
+    "id": "aead.ccm-initializer.session",
+    "file": "7565b05b5ce7a575a10eb71ad28a99f1c30ab7aa319cd38aad2083c797d828ac.txt",
+    "sha256": "7565b05b5ce7a575a10eb71ad28a99f1c30ab7aa319cd38aad2083c797d828ac",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "ccm_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "normative": "PKCS#11 AES-CCM, classic C_EncryptInit; pinned recipe lacks mechanism."
+    },
+    "oracle": "Real AES128 zero key, nonce000102030405060708090a0b, emptyAAD, data length1, MAC16. Exact native EncryptInit112 with the effect diagnostic preserved. No encryption output or ChaCha credit."
+  },
+  {
+    "id": "rsa.recover-initializer.advanced.sign",
+    "file": "f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704.txt",
+    "sha256": "f01d547018a749cb4a5e0be8fb905cc79a10ecaa3d84091b3af291561cdf9704",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "recover_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_SignRecoverInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "oracle": "Published valid RSA2048 key with explicit SIGN_RECOVER; CKM_RSA_PKCS. Exact C_SignRecoverInit FUNCTION_NOT_SUPPORTED, effect=false; no Recover call after refused Init."
+  },
+  {
+    "id": "rsa.recover-initializer.advanced.verify",
+    "file": "0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e.txt",
+    "sha256": "0499eb5269a16d2b5f84479d266b0aa019c2e6b29e997d873934068183c4c40e",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "recover_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_VerifyRecoverInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "id": "RFC8017.RSA2048.SHA256.PKCS1",
+      "source": "vectors\\evppkey_rsa_common.txt",
+      "source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "construction": "Published OpenSSL test key; RFC8017 arithmetic fixture construction; not a published NIST KAT",
+      "independence": "Python integer pow/encoding independent of native RSA; hashlib hash backend may share OpenSSL. Published hash KATs remain required."
+    },
+    "oracle": "Published valid RSA2048 key with explicit VERIFY_RECOVER; CKM_RSA_PKCS. Exact C_VerifyRecoverInit FUNCTION_NOT_SUPPORTED, effect=false; no Recover call after refused Init."
+  },
+  {
+    "id": "aead.ccm-initializer.advanced",
+    "file": "4b6302c53d43bed50f61f8c5186760af0edf19c63271c3087039d38ff0971c2c.txt",
+    "sha256": "4b6302c53d43bed50f61f8c5186760af0edf19c63271c3087039d38ff0971c2c",
+    "worker_mode": "unsupported-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "ccm_initialization": true,
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject"
+    ],
+    "source": {
+      "normative": "PKCS#11 AES-CCM, classic C_EncryptInit; pinned recipe lacks mechanism."
+    },
+    "oracle": "Real AES128 zero key, nonce000102030405060708090a0b, emptyAAD, data length1, MAC16. Exact native EncryptInit112 with the effect diagnostic preserved. No encryption output or ChaCha credit."
+  }
+]

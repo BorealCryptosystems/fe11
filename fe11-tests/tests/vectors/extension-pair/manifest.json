@@ -1,0 +1,88 @@
+[
+  {
+    "id": "generation.extension-pair.session.rsa2048",
+    "file": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e.txt",
+    "sha256": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e",
+    "worker_mode": "extension-pair",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKeyPair",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One RSA2048 pair generation; two owned references in slots0/1, exact public/private classes and RSA type, caller-asserted layout provenance. SHA256-RSA signature256bytes; native valid verification, changed-message SIGNATURE_INVALID, valid verification again; both references destroyed. Native-use witness, not independent randomized-key KAT.",
+    "source": {
+      "type": "normative construction",
+      "clause": "PKCS11 RSA key-pair generation and SHA256 RSA PKCS signatures",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    }
+  },
+  {
+    "id": "generation.extension-pair.advanced.rsa2048",
+    "file": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36.txt",
+    "sha256": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36",
+    "worker_mode": "extension-pair",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKeyPair",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One RSA2048 pair generation; two owned references in slots0/1, exact public/private classes and RSA type, caller-asserted layout provenance. SHA256-RSA signature256bytes; native valid verification, changed-message SIGNATURE_INVALID, valid verification again; both references destroyed. Native-use witness, not independent randomized-key KAT.",
+    "source": {
+      "type": "normative construction",
+      "clause": "PKCS11 RSA key-pair generation and SHA256 RSA PKCS signatures",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    }
+  }
+]

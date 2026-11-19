@@ -1,0 +1,2570 @@
+[
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.1.1",
+    "file": "3646b1f951cdfc89189a9ef86380d589d622b9724685b7525930e8e1f5750d5c.txt",
+    "sha256": "3646b1f951cdfc89189a9ef86380d589d622b9724685b7525930e8e1f5750d5c",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.2.11",
+    "file": "a292497a664cd4a64851d15bfdfb8af2dd442e288277206db0c7f35724aa581d.txt",
+    "sha256": "a292497a664cd4a64851d15bfdfb8af2dd442e288277206db0c7f35724aa581d",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.3.21",
+    "file": "b760994cd2c0c2286216a44d5892b998f690bcad77e51e125ce5bea1f2c9cb92.txt",
+    "sha256": "b760994cd2c0c2286216a44d5892b998f690bcad77e51e125ce5bea1f2c9cb92",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.4.31",
+    "file": "29369395eb388493635011091e27cd9a79d21d5a493d176678bc60e5697258de.txt",
+    "sha256": "29369395eb388493635011091e27cd9a79d21d5a493d176678bc60e5697258de",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.5.41",
+    "file": "4a5db836aea98c833fe8b8099d9a15cd51ed1cc17f05ffc91cbbe154e3e738bf.txt",
+    "sha256": "4a5db836aea98c833fe8b8099d9a15cd51ed1cc17f05ffc91cbbe154e3e738bf",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.6.73",
+    "file": "c01ea1724b47632d618d8fe24676a9ed93a07194d52f60097877a854c19f3d89.txt",
+    "sha256": "c01ea1724b47632d618d8fe24676a9ed93a07194d52f60097877a854c19f3d89",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.7.105",
+    "file": "60830ca354c87be18f69f271d4d92f420116a57e6d74b3aaae5bb91bf23b420e.txt",
+    "sha256": "60830ca354c87be18f69f271d4d92f420116a57e6d74b3aaae5bb91bf23b420e",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@Session::sign_native@EDDSA-SigGen-1.0.8.137",
+    "file": "617d47417a8eb472d8e406e3deaf3112efb412f8cd498e67e7d45eaf6c72a054.txt",
+    "sha256": "617d47417a8eb472d8e406e3deaf3112efb412f8cd498e67e7d45eaf6c72a054",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.1.1",
+    "file": "f8b6590b386a07a676a0c17a6162fb64db26e8c28bf3cfb87c1b374c61efa3b4.txt",
+    "sha256": "f8b6590b386a07a676a0c17a6162fb64db26e8c28bf3cfb87c1b374c61efa3b4",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.2.11",
+    "file": "7abcecb56d5422a4ea612f49e620b8833c5b284ba8528035ee3a2c28eb2c0fd6.txt",
+    "sha256": "7abcecb56d5422a4ea612f49e620b8833c5b284ba8528035ee3a2c28eb2c0fd6",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.3.21",
+    "file": "bddfa7b31c1da6f6d9352c6769e9ecc7048e8d52658aad02b6b3223e5456f113.txt",
+    "sha256": "bddfa7b31c1da6f6d9352c6769e9ecc7048e8d52658aad02b6b3223e5456f113",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.4.31",
+    "file": "549277dcda6206057483ef689efb63c15e4a19bcd2979b14c1cb01626aa5d2b6.txt",
+    "sha256": "549277dcda6206057483ef689efb63c15e4a19bcd2979b14c1cb01626aa5d2b6",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.5.41",
+    "file": "0e8852ac0756cbbbe5bdd20820b791812b6dd9898485f2c75e631b4eee278650.txt",
+    "sha256": "0e8852ac0756cbbbe5bdd20820b791812b6dd9898485f2c75e631b4eee278650",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.6.73",
+    "file": "3e65e1a9a577a05f9a7bb051efa70403c401dc9bed7cadfdc47f911fa86be259.txt",
+    "sha256": "3e65e1a9a577a05f9a7bb051efa70403c401dc9bed7cadfdc47f911fa86be259",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.7.105",
+    "file": "c92e89f7762d794af58a898b54a97a17546a9a0f0819affb08f501541803eb8b.txt",
+    "sha256": "c92e89f7762d794af58a898b54a97a17546a9a0f0819affb08f501541803eb8b",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.sign@AdvancedSession::sign_native@EDDSA-SigGen-1.0.8.137",
+    "file": "830629aeb57c763d9564e6595fa2c50f7c7f42e3f225e52a42d055991da65ab0.txt",
+    "sha256": "830629aeb57c763d9564e6595fa2c50f7c7f42e3f225e52a42d055991da65ab0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::sign_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.1.1",
+    "file": "43893985028d8d420e38cac6070c17e9021426912dda248dde37069e97d10920.txt",
+    "sha256": "43893985028d8d420e38cac6070c17e9021426912dda248dde37069e97d10920",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.2.11",
+    "file": "67816ab4b6129131e8dcb082d6d8856e68692c8be45b7024488f575868ea0e5e.txt",
+    "sha256": "67816ab4b6129131e8dcb082d6d8856e68692c8be45b7024488f575868ea0e5e",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.3.21",
+    "file": "76eb96d116f5bded5bf8f7009a171d152ec61ace72ae7ea4c5a09d13e8ee00e1.txt",
+    "sha256": "76eb96d116f5bded5bf8f7009a171d152ec61ace72ae7ea4c5a09d13e8ee00e1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.4.31",
+    "file": "be26fe7c617f8c0d5b7e51a84220de02061b8dc582366b63bc3cec4a67e94280.txt",
+    "sha256": "be26fe7c617f8c0d5b7e51a84220de02061b8dc582366b63bc3cec4a67e94280",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.5.41",
+    "file": "b332deb70935ea0b72afae677ff858636ce74a46a0ab4d93e27ded1bf7e0a457.txt",
+    "sha256": "b332deb70935ea0b72afae677ff858636ce74a46a0ab4d93e27ded1bf7e0a457",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.6.73",
+    "file": "10aa7394e938cda7bdeb1a78a0af4a2674c3476a2be88ada6c68a06fa040241b.txt",
+    "sha256": "10aa7394e938cda7bdeb1a78a0af4a2674c3476a2be88ada6c68a06fa040241b",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.7.105",
+    "file": "5aeb09eb648f70aaa586ec0d36a92f55e2939cd60a8c4a7265c6da278683beb8.txt",
+    "sha256": "5aeb09eb648f70aaa586ec0d36a92f55e2939cd60a8c4a7265c6da278683beb8",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigGen-1.0.8.137",
+    "file": "dacf1408c2b4358283e87f9787999d800dc2254e5ca0337b02adaec7b892f122.txt",
+    "sha256": "dacf1408c2b4358283e87f9787999d800dc2254e5ca0337b02adaec7b892f122",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.1.1",
+    "file": "f65e05a09643b32614deee5dd90f9cd84521b012f5ade31687a7531dcf723d77.txt",
+    "sha256": "f65e05a09643b32614deee5dd90f9cd84521b012f5ade31687a7531dcf723d77",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.1.2",
+    "file": "adcb0a3c92362795f9b4b5d7e01acf5b58c83de134ea6de6277a06c4baa8cccf.txt",
+    "sha256": "adcb0a3c92362795f9b4b5d7e01acf5b58c83de134ea6de6277a06c4baa8cccf",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.2.6",
+    "file": "75d2249711c2789a9c4bef46e46cc8a5edfec517e47ec3ccdee684a3972639ad.txt",
+    "sha256": "75d2249711c2789a9c4bef46e46cc8a5edfec517e47ec3ccdee684a3972639ad",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.2.10",
+    "file": "57587da0856f91bc48fe15f2a447f38d28ff612eae4c995240ed16451a83631a.txt",
+    "sha256": "57587da0856f91bc48fe15f2a447f38d28ff612eae4c995240ed16451a83631a",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.3.11",
+    "file": "9ed172bf86002fdc916fbad98b7ce14478240a2a4af907b45564ccbf0cec7571.txt",
+    "sha256": "9ed172bf86002fdc916fbad98b7ce14478240a2a4af907b45564ccbf0cec7571",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.3.14",
+    "file": "3f8428c6935a00170baf8cbbcdf317f7f6d4f1cd0940b13392520b356b306b95.txt",
+    "sha256": "3f8428c6935a00170baf8cbbcdf317f7f6d4f1cd0940b13392520b356b306b95",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.4.16",
+    "file": "3f3f06748d16e63e49e4036e7faa2895b2b6ea051204ff1dcbe98e6dd872c1a5.txt",
+    "sha256": "3f3f06748d16e63e49e4036e7faa2895b2b6ea051204ff1dcbe98e6dd872c1a5",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@Session::verify_native@EDDSA-SigVer-1.0.4.17",
+    "file": "3d6205fde0298f69b78dab25585c9f337df142a3fc362aa8273190cf8e787e13.txt",
+    "sha256": "3d6205fde0298f69b78dab25585c9f337df142a3fc362aa8273190cf8e787e13",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "Session::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.1.1",
+    "file": "6cfe156491538c5eaab747ff2b7841b0b8198562518d29e27374dfa6193691b1.txt",
+    "sha256": "6cfe156491538c5eaab747ff2b7841b0b8198562518d29e27374dfa6193691b1",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.2.11",
+    "file": "67524b8e3fe439e4da0e6ec74bcf6b736bea53054b0ba5fa4a64d7be98649309.txt",
+    "sha256": "67524b8e3fe439e4da0e6ec74bcf6b736bea53054b0ba5fa4a64d7be98649309",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.3.21",
+    "file": "b119b9fef5f732ce35074fee6b2df0e32248366ad428add281a6e613145889c8.txt",
+    "sha256": "b119b9fef5f732ce35074fee6b2df0e32248366ad428add281a6e613145889c8",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.4.31",
+    "file": "a72e2f16a810bba21c3cc3d269a3a980a2449cde4c2704dc2e45c4c81977ffaf.txt",
+    "sha256": "a72e2f16a810bba21c3cc3d269a3a980a2449cde4c2704dc2e45c4c81977ffaf",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.5.41",
+    "file": "7a7cb6333970679568c5a7614dbdf12b63fb83fa2e719025a5476311a43d9445.txt",
+    "sha256": "7a7cb6333970679568c5a7614dbdf12b63fb83fa2e719025a5476311a43d9445",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.6.73",
+    "file": "4216af045bbd1d92c5f8d86df4ca9902160e045c31e167d1e0f59f30e1fc8bc4.txt",
+    "sha256": "4216af045bbd1d92c5f8d86df4ca9902160e045c31e167d1e0f59f30e1fc8bc4",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.7.105",
+    "file": "8c323e31c21250e60bd6449eaad1d1de981e13d0e7e68e754f68220e2b6f2d5a.txt",
+    "sha256": "8c323e31c21250e60bd6449eaad1d1de981e13d0e7e68e754f68220e2b6f2d5a",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigGen-1.0.8.137",
+    "file": "940a3158ae71daef435ef1be7057fe6dbcb848af63696fe0a7d7201d42783332.txt",
+    "sha256": "940a3158ae71daef435ef1be7057fe6dbcb848af63696fe0a7d7201d42783332",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "SIGN_AND_VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": "exact published bytes",
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(exact)"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.1.1",
+    "file": "bb48a68c36cbed9ab8dec0be8e6ff4ced6965c294255b8f12941c4cbb9a73886.txt",
+    "sha256": "bb48a68c36cbed9ab8dec0be8e6ff4ced6965c294255b8f12941c4cbb9a73886",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.1.2",
+    "file": "628cf0d3311387454e807db3076b267e89612acee9d845671575ddd51fc57c81.txt",
+    "sha256": "628cf0d3311387454e807db3076b267e89612acee9d845671575ddd51fc57c81",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.2.6",
+    "file": "9c8f79ecbd8f56b454849590882c1a4bb9e5f76180a9c4628662899dc13b0662.txt",
+    "sha256": "9c8f79ecbd8f56b454849590882c1a4bb9e5f76180a9c4628662899dc13b0662",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.2.10",
+    "file": "ea4014723f664aa96b0260f1bdba2c72ec1f652cdfebbcdefe730f2a6979e515.txt",
+    "sha256": "ea4014723f664aa96b0260f1bdba2c72ec1f652cdfebbcdefe730f2a6979e515",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.3.11",
+    "file": "618760e624cc8fc7a2ed8927a7a02830129480387e8dcd5ab969106d6a2153e9.txt",
+    "sha256": "618760e624cc8fc7a2ed8927a7a02830129480387e8dcd5ab969106d6a2153e9",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.3.14",
+    "file": "d9abf387be67881144331a4e76b3874f6aaae0044f9b14d0e0680636f8487bb9.txt",
+    "sha256": "d9abf387be67881144331a4e76b3874f6aaae0044f9b14d0e0680636f8487bb9",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.4.16",
+    "file": "7aa188c3a0f87a84017a6ddea9c16d2e46fcd57363b1de65568d8dbb73996da0.txt",
+    "sha256": "7aa188c3a0f87a84017a6ddea9c16d2e46fcd57363b1de65568d8dbb73996da0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "NEGATIVE_VECTOR",
+      "codes": [
+        "CKR_SIGNATURE_INVALID",
+        "CKR_SIGNATURE_LEN_RANGE"
+      ],
+      "source_expected": false,
+      "phase": "Native verify with valid imported key; input shape chooses length vs content refusal",
+      "result": "No successful verified/decrypted/derived result",
+      "note": "Allowed set bounded by function clauses; record actual producer and code separately, not arbitrary error acceptance"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  },
+  {
+    "id": "operation.CKM_EDDSA.verify@AdvancedSession::verify_native@EDDSA-SigVer-1.0.4.17",
+    "file": "de18585ade372ef74ad16d346ef93f928ede02abee98a7ded90d27ef398daf7e.txt",
+    "sha256": "de18585ade372ef74ad16d346ef93f928ede02abee98a7ded90d27ef398daf7e",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "disposition": "VERIFY_KAT",
+      "codes": [
+        "CKR_OK"
+      ],
+      "source_expected": true,
+      "assertions": [
+        "Signature encoding and exact algorithm size",
+        "Deterministic SigGen: exact published bytes; randomized: independent public-key verification, not equality to unrelated randomness",
+        "Verify KAT uses expected verdict; changed valid signature separately CKR_SIGNATURE_INVALID"
+      ],
+      "route": "AdvancedSession::verify_native",
+      "route_mode": "declared public method contract"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigVer-1.0/internalProjection.json",
+      "source_sha256": "8556b9c48ef7ff209a9f866ed83e3c3881cfdd3c4c1ee1abe2602da69c1e97b0",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "key_encoding": "RFC8410 OID for pure Ed25519; RFC8032 PrintableString for prehash/context routes; raw little-endian point/seed",
+    "context_forms": [
+      "Some(empty)",
+      "None"
+    ]
+  }
+]

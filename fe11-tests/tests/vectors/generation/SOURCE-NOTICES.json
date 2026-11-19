@@ -1,0 +1,18 @@
+{
+  "DSA-KeyGen-1.0": {
+    "normative": "PKCS#11 mechanism and key-generation attribute contracts",
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-KeyGen-1.0/internalProjection.json",
+    "source_sha256": "b9326c981852c797244238bccd83e94d7eff437aad8b52071b217fd923d3fc5a",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+    "group": 3,
+    "case": 21
+  },
+  "KAS-FFC-SSC-Sp800-56Ar3": {
+    "normative": "PKCS#11 mechanism and key-generation attribute contracts",
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+    "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused",
+    "group": 2,
+    "case": 6
+  }
+}

@@ -1,0 +1,4 @@
+RO_PUBLIC
+close_with_peer
+RO_PUBLIC
+CKR_OK

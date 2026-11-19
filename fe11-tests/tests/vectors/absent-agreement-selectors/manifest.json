@@ -1,0 +1,210 @@
+[
+  {
+    "id": "absence.agreement.CKM_ECDH1_COFACTOR_DERIVE",
+    "file": "d78b666ba71ea545e47a277a432c17f10bf7f8f9f5f7600bc3dac9f6349fd6cc.txt",
+    "sha256": "d78b666ba71ea545e47a277a432c17f10bf7f8f9f5f7600bc3dac9f6349fd6cc",
+    "absent_agreement_selector": "CKM_ECDH1_COFACTOR_DERIVE",
+    "producer": "C_DeriveKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_ECMQV_DERIVE",
+    "file": "a7ac9c9ac06814f65496910b7b54b9fb4dc12419c930674cccdffc7c42988708.txt",
+    "sha256": "a7ac9c9ac06814f65496910b7b54b9fb4dc12419c930674cccdffc7c42988708",
+    "absent_agreement_selector": "CKM_ECMQV_DERIVE",
+    "producer": "C_DeriveKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_PUB_KEY_FROM_PRIV_KEY",
+    "file": "d23e99306ac6bdb6fb3d6a9db1dace5c60aba44357c7616821abcc20e00601a3.txt",
+    "sha256": "d23e99306ac6bdb6fb3d6a9db1dace5c60aba44357c7616821abcc20e00601a3",
+    "absent_agreement_selector": "CKM_PUB_KEY_FROM_PRIV_KEY",
+    "producer": "C_DeriveKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_ECDH_AES_KEY_WRAP",
+    "file": "3ad5ff79d0c4657c838107995ce430fb71adb56a8eb12061d23cd2c5fe568cc4.txt",
+    "sha256": "3ad5ff79d0c4657c838107995ce430fb71adb56a8eb12061d23cd2c5fe568cc4",
+    "absent_agreement_selector": "CKM_ECDH_AES_KEY_WRAP",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_ECDH_COF_AES_KEY_WRAP",
+    "file": "6e4cb02bbcdf23f7162ecdcac461f64ec05096f41d6f282240f26f83d8baec5b.txt",
+    "sha256": "6e4cb02bbcdf23f7162ecdcac461f64ec05096f41d6f282240f26f83d8baec5b",
+    "absent_agreement_selector": "CKM_ECDH_COF_AES_KEY_WRAP",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_GOSTR3410_KEY_WRAP",
+    "file": "feb39584ae55f322ca02ff5b72e90cdba69543b061196c3e77c50b17fd2fb4fd.txt",
+    "sha256": "feb39584ae55f322ca02ff5b72e90cdba69543b061196c3e77c50b17fd2fb4fd",
+    "absent_agreement_selector": "CKM_GOSTR3410_KEY_WRAP",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session keys and valid mechanism parameters reach the named operation. It returns CKR_MECHANISM_INVALID. No output handle is published."
+  },
+  {
+    "id": "absence.agreement.CKM_SHA512_T_KEY_DERIVATION",
+    "file": "d8af8bc6e01c82a8c78b315cc6560614fb568308f2deea2db96de9bc0eb7abdd.txt",
+    "sha256": "d8af8bc6e01c82a8c78b315cc6560614fb568308f2deea2db96de9bc0eb7abdd",
+    "absent_agreement_selector": "CKM_SHA512_T_KEY_DERIVATION",
+    "producer": "C_DeriveKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Native selector CKR_MECHANISM_INVALID with a 32-byte generic base, 16-byte result request and the typed SHA-512/t derivation layout. No positive computation or value of t is established."
+  }
+]

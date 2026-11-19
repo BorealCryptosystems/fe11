@@ -1,0 +1,485 @@
+[
+  {
+    "id": "guard.AeadMessagesRejection::EmptyStreamAeadSequence@AdvancedSession::encrypt_stream_aead_messages",
+    "file": "4f5362f4ef200dd544579fb7d30d1d1043e0ecfb9cbbe9985271268a358a2ea3.txt",
+    "sha256": "4f5362f4ef200dd544579fb7d30d1d1043e0ecfb9cbbe9985271268a358a2ea3",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(EmptyStreamAeadSequence))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real admitted AES128 ManagedObjectRef, Standard32 synchronous AdvancedSession. Empty messages is inspected before algorithm/key/native Init.",
+    "input_parameters": {
+      "messages": [],
+      "route": "Single",
+      "limits": {
+        "maximum_parts": 0,
+        "maximum_total_bytes": 0
+      }
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "guard.AeadMessagesRejection::EmptyStreamAeadSequence@AdvancedSession::decrypt_stream_aead_messages",
+    "file": "1a9644e35f02b247f0fd8c96e8ef87a88af76d620901f5d9316916521481050c.txt",
+    "sha256": "1a9644e35f02b247f0fd8c96e8ef87a88af76d620901f5d9316916521481050c",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(AeadMessages(EmptyStreamAeadSequence))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real admitted AES128 ManagedObjectRef, Standard32 synchronous AdvancedSession. Empty messages is inspected before algorithm/key/native Init.",
+    "input_parameters": {
+      "messages": [],
+      "route": "Single",
+      "limits": {
+        "maximum_parts": 0,
+        "maximum_total_bytes": 0
+      }
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.SymmetricParametersRejection::AeadKeyUsedForMac@Session::compute_mac",
+    "file": "e8ef229c3f20c7210215cc34d8c64d1386f033b437aef38e45240f583bbc3f9e.txt",
+    "sha256": "e8ef229c3f20c7210215cc34d8c64d1386f033b437aef38e45240f583bbc3f9e",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SymmetricParameters(AeadKeyUsedForMac))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real AES128 SymmetricKey and valid partsabc.",
+    "input_parameters": {
+      "key_algorithm": "Aes128"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.SymmetricParametersRejection::CcmRequiresAnAesKey@Session::encrypt_ccm",
+    "file": "63caaf1304c8761bd487ff07f85b255345d08515964138d1e53061af1d51b7f4.txt",
+    "sha256": "63caaf1304c8761bd487ff07f85b255345d08515964138d1e53061af1d51b7f4",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SymmetricParameters(CcmRequiresAnAesKey))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real HMACSHA256 SymmetricKey, valid CCM nonce/MAC/data.",
+    "input_parameters": {
+      "nonce_hex": "000000000000000000000000",
+      "tag_bytes": 16,
+      "parts_hex": [
+        "616263"
+      ]
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.CombinedOperationsRejection::DualAesKeyRequired@AdvancedSession::decrypt_digest_with_hash",
+    "file": "e09eafffe4d84f57c6e8d599c6387e697568752c1a4bd40d403dbf0dcc9d11fa.txt",
+    "sha256": "e09eafffe4d84f57c6e8d599c6387e697568752c1a4bd40d403dbf0dcc9d11fa",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CombinedOperations(DualAesKeyRequired))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real HMACSHA256 SymmetricKey, SHA256 digest, valid GCMtag-only input.",
+    "input_parameters": {
+      "cipher": "Gcm IV00x12,AADempty,tag128",
+      "cipher_key": "HmacSha256",
+      "hash": "Sha256"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.CombinedOperationsRejection::DualFullMacLength@AdvancedSession::decrypt_verify_with_mac",
+    "file": "ff63dd02de2cfa40eb589226ab20451abc78b4e9042ac9fda73bb120062734a0.txt",
+    "sha256": "ff63dd02de2cfa40eb589226ab20451abc78b4e9042ac9fda73bb120062734a0",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CombinedOperations(DualFullMacLength))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real AES128 cipher key, real HMACSHA256 authentication key; GCMtag-only input.",
+    "input_parameters": {
+      "expected_mac_hex": "00000000000000000000000000000000000000000000000000000000000000"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.CombinedOperationsRejection::DualHmacKeyRequired@AdvancedSession::decrypt_verify_with_mac",
+    "file": "7f62a672181289d4c4a5d01357d3e9c4fd95af66c78de7e5f2f0f29096156ef3.txt",
+    "sha256": "7f62a672181289d4c4a5d01357d3e9c4fd95af66c78de7e5f2f0f29096156ef3",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CombinedOperations(DualHmacKeyRequired))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real AES128 cipher key also passed as MAC key.",
+    "input_parameters": {
+      "expected_mac_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.CombinedOperationsRejection::DualMacKeyAlgorithm@AdvancedSession::decrypt_verify",
+    "file": "c8e5c4b87c3682e8721e9f8c1475eba8e944fcffbfbec667d061d67cb64b4d46.txt",
+    "sha256": "c8e5c4b87c3682e8721e9f8c1475eba8e944fcffbfbec667d061d67cb64b4d46",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CombinedOperations(DualMacKeyAlgorithm))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Legacy dual API fixes SHA256 authentication; real AES128 cipher key and HMACSHA384 MAC key.",
+    "input_parameters": {
+      "expected_mac": "Mac32 of00 repeated32",
+      "parts_hex": [
+        "00000000000000000000000000000000"
+      ],
+      "cipher": "Gcm IV00x12,AADempty,tag128"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.SignatureMessagesRejection::MessageHmacKeyRequired@AdvancedSession::begin_mac_sign_message_stream",
+    "file": "fb0f2c6201a427e5f6cbfb9e6262ac16081a025cd44005acee554583019a694c.txt",
+    "sha256": "fb0f2c6201a427e5f6cbfb9e6262ac16081a025cd44005acee554583019a694c",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureMessages(MessageHmacKeyRequired))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real admitted AES128 key instead of HMAC; valid Single message route.",
+    "input_parameters": {
+      "route": "Single"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "boundary.SignatureMessagesRejection::MessageHmacKeyRequired@AdvancedSession::begin_mac_verify_message_stream",
+    "file": "b44db1149d196bbbdf0a9b3b4bcf29ff02a92361a78cf946663a1fc1d25417c2.txt",
+    "sha256": "b44db1149d196bbbdf0a9b3b4bcf29ff02a92361a78cf946663a1fc1d25417c2",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SignatureMessages(MessageHmacKeyRequired))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real admitted AES128 key instead of HMAC; valid Single message route.",
+    "input_parameters": {
+      "route": "Single"
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  },
+  {
+    "id": "parameter-boundary.CipherContinuationRejection::AesOperationRequiresAnAesKey",
+    "file": "74ebb432f6c8ddb34a0afbb85e51c336eab5b37e78001d12ca3d1791704b10ab.txt",
+    "sha256": "74ebb432f6c8ddb34a0afbb85e51c336eab5b37e78001d12ca3d1791704b10ab",
+    "worker_mode": "symmetric-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(CipherContinuation(AesOperationRequiresAnAesKey))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "producer": "Real HmacSha256 SymmetricKey; valid ECB selector and one full block.",
+    "input_parameters": {
+      "cipher": "ECB",
+      "parts_hex": [
+        "00000000000000000000000000000000"
+      ],
+      "route": "Single",
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 16
+      }
+    },
+    "key_production": "Native key generation; public session objects with exact caller-selected typed algorithm."
+  }
+]

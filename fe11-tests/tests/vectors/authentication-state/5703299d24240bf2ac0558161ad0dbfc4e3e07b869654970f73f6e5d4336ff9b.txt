@@ -1,0 +1,4 @@
+RW_PUBLIC
+open_rw
+RW_PUBLIC
+CKR_OK

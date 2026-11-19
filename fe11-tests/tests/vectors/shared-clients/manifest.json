@@ -1,0 +1,38 @@
+[
+  {
+    "id": "coexistence.shared-clients.surviving-session",
+    "file": "e7f54cd79a0e43a7eb958bdf7cfe929a6ecbe83bebae704b1af5757376cdb146.txt",
+    "sha256": "e7f54cd79a0e43a7eb958bdf7cfe929a6ecbe83bebae704b1af5757376cdb146",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Both ordinary clients refuse close exactly RuntimeOwnerRequired without native call. Both detach, child sessions still compute exactSHA256abc. Closing first child preserves second; owner finalizes once.",
+    "source": {
+      "contract": "RuntimeOwner::client, Module::detach, Session ownership"
+    }
+  }
+]

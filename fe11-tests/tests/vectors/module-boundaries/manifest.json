@@ -1,0 +1,156 @@
+[
+  {
+    "id": "boundary.ExternalExecutionRejection::ForeignCloseSessionOwnerRequired@ForeignWork::begin",
+    "file": "19c3c6d9b547fe77d74ab58b60ed15a3854c3cb3ac00db109116ae5cdf79882f.txt",
+    "sha256": "19c3c6d9b547fe77d74ab58b60ed15a3854c3cb3ac00db109116ae5cdf79882f",
+    "worker_mode": "foreign-info",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignCloseSessionOwnerRequired))",
+    "design_producer": "Prepare compliant module-scope GetInfo Call work with stable owned native buffer; no native call dispatched.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.ExternalExecutionRejection::ForeignOperationSessionMismatch@ForeignParticipant::prepare_operation",
+    "file": "b8780f1a3303e1002904caaf7a5e8b6c3c6895f3124ad833cd53a9dd8b39aa09.txt",
+    "sha256": "b8780f1a3303e1002904caaf7a5e8b6c3c6895f3124ad833cd53a9dd8b39aa09",
+    "worker_mode": "foreign-info",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignOperationSessionMismatch))",
+    "design_producer": "Prepare a real module GetInfo Call work; pass it as session argument to same participant. New operation kindCall, owned stable GetInfo buffer and no token mutation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "boundary.ModuleLifecycleRejection::AbsoluteModulePathRequired@ModuleBuilder::open",
+    "file": "9ac9d2fa6f7f0c19ed203ab36446c58aed9ef02dc3a55f02972227aecf979c40.txt",
+    "sha256": "9ac9d2fa6f7f0c19ed203ab36446c58aed9ef02dc3a55f02972227aecf979c40",
+    "worker_mode": "module-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(AbsoluteModulePathRequired))",
+    "design_producer": "Builder with relative path softhsm.so, no environment expansion.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ],
+    "setup": "Valid owner initializes the full pinned dependencies; invalid builder adds no native lifecycle invocation; owner closes explicitly."
+  },
+  {
+    "id": "boundary.ModuleLifecycleRejection::ModuleIsNotRegularFile@ModuleBuilder::open",
+    "file": "1fdc679cc63d3a1252c8dd984bc55de31ba450e5d7d818ac4683885acd2369dc.txt",
+    "sha256": "1fdc679cc63d3a1252c8dd984bc55de31ba450e5d7d818ac4683885acd2369dc",
+    "worker_mode": "module-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ModuleLifecycle(ModuleIsNotRegularFile))",
+    "design_producer": "Absolute owned temporary directory, not a module file.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ],
+    "setup": "Valid owner initializes the full pinned dependencies; invalid builder adds no native lifecycle invocation; owner closes explicitly."
+  },
+  {
+    "id": "boundary.MechanismsUnsupported::MechanismListNotObserved@MechanismCatalog::properties",
+    "file": "bf4173c07258f24932edfdddb83255aa3d33ddd09b06d7b70b1d712cf03faa7e.txt",
+    "sha256": "bf4173c07258f24932edfdddb83255aa3d33ddd09b06d7b70b1d712cf03faa7e",
+    "worker_mode": "module-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Unsupported(Mechanisms(MechanismListNotObserved))",
+    "design_producer": "Actual module configured with mechanisms NotRequested; take its public catalogue.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "derivation.gost.destination.private",
+    "file": "df733230ee774d4d1b18668b1f1b304c8bc58fbbc16ed560e777a17636e6fbd0.txt",
+    "sha256": "df733230ee774d4d1b18668b1f1b304c8bc58fbbc16ed560e777a17636e6fbd0",
+    "worker_mode": "builder-runtime-choices",
+    "gost_destination_class": "private",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "producer": "C_DeriveKey",
+    "code": 112,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "An isolated token contains exactly one private object and no secret keys. The destination scan uses the requested class, then the module reports CKR_MECHANISM_INVALID."
+  },
+  {
+    "id": "derivation.gost.destination.secret",
+    "file": "c138e652a457f5f86ac6b4b9c16255513b3866913ad3ae7b4452d7cfb437cb64.txt",
+    "sha256": "c138e652a457f5f86ac6b4b9c16255513b3866913ad3ae7b4452d7cfb437cb64",
+    "worker_mode": "builder-runtime-choices",
+    "gost_destination_class": "secret",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "producer": "C_DeriveKey",
+    "code": 112,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "An isolated token contains exactly one private object and no secret keys. The destination scan uses the requested class, then the module reports CKR_MECHANISM_INVALID."
+  }
+]

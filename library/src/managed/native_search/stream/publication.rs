@@ -4,9 +4,20 @@ use super::*;
 
 pub(super) fn fetch(session: &Session, cursor: &Cursor<'_>) -> Result<Option<NativeObjectMatches>> {
     let reference =
-        session.reference_admission(crate::session::ReferenceMode::Synchronous, |_| Ok(()))?;
+        session.reference_admission(crate::session::ReferenceMode::NativeSearch, |_| Ok(()))?;
     let policy = crate::admission_wait::current();
+    // Resume from the last native/publication boundary. A peer can change
+    // between acquisitions, including after Find has already consumed a batch.
     let count = loop {
+        match cursor.position.get() {
+            BatchPosition::Fetch => {}
+            BatchPosition::Prepare(count) => break count,
+            BatchPosition::Publish(count) => {
+                let result = publish(session, cursor, reference.progress(), &policy, count)?;
+                cursor.position.set(BatchPosition::Fetch);
+                return Ok(Some(result));
+            }
+        }
         cursor.waiter.check()?;
         let mut credit = crate::advanced::reserve_preparation_while_in(
             session,
@@ -24,16 +35,17 @@ pub(super) fn fetch(session: &Session, cursor: &Cursor<'_>) -> Result<Option<Nat
         // Retained publication keeps this allocation alive on refusal. These
         // locals precede possession, so every exit releases possession first.
         let mut inventory = mutations::PreparedInventory::from_prepaid(session, &mut credit)?;
-        let access = match session.try_operation_access_progress(false, reference.progress()) {
+        let access = match session.try_advanced_access_progress(reference.progress()) {
             Ok(access) => access,
             Err(Error::Busy(_)) => {
                 drop((inventory, credit));
-                drop(session.access_progress(reference.progress())?);
+                drop(search_access(session, reference.progress())?);
                 continue;
             }
             Err(error) => return Err(error),
         };
         reference.check(&access)?;
+        access.operations.check_search_peer(&session.entry)?;
         cursor.waiter.check()?;
         let slot = session
             .entry
@@ -59,7 +71,9 @@ pub(super) fn fetch(session: &Session, cursor: &Cursor<'_>) -> Result<Option<Nat
                 drop(slot);
                 drop(access);
                 drop((inventory, credit));
-                mutations::PreparedInventory::wait_available(session, cursor.epoch)?;
+                mutations::PreparedInventory::wait_available_observing(session, || {
+                    cursor.waiter.check()
+                })?;
                 continue;
             }
             Err(error) => return Err(error),
@@ -75,27 +89,29 @@ pub(super) fn fetch(session: &Session, cursor: &Cursor<'_>) -> Result<Option<Nat
             // Waiting retires the complete owner after these guards leave.
             return Ok(None);
         }
+        cursor.position.set(BatchPosition::Prepare(count));
         break count;
     };
 
     // The native batch is already resident. Admission retries below prepare
     // only its identities and cannot invoke Find again or retain a prefix quota.
     loop {
-        let matches = AllMatches::prepare(session, cursor.epoch, count, &cursor.waiter, |bytes| {
+        let matches = AllMatches::prepare(session, None, count, &cursor.waiter, |bytes| {
             reference.objects_with_storage_observing(count, bytes, cursor.waiter.budget(), || {
                 cursor.waiter.check()
             })
         })?;
-        let access = match session.try_operation_access_progress(false, reference.progress()) {
+        let access = match session.try_advanced_access_progress(reference.progress()) {
             Ok(access) => access,
             Err(Error::Busy(_)) => {
                 drop(matches);
-                drop(session.access_progress(reference.progress())?);
+                drop(search_access(session, reference.progress())?);
                 continue;
             }
             Err(error) => return Err(error),
         };
         reference.check(&access)?;
+        access.operations.check_search_peer(&session.entry)?;
         cursor.waiter.check()?;
         let slot = session
             .entry
@@ -118,9 +134,12 @@ pub(super) fn fetch(session: &Session, cursor: &Cursor<'_>) -> Result<Option<Nat
             unreachable!("checked resident reading state")
         };
         owner.batch = Batch::Publishing { inventory, matches };
+        cursor.position.set(BatchPosition::Publish(count));
         break;
     }
-    publish(session, cursor, reference.progress(), &policy, count).map(Some)
+    let result = publish(session, cursor, reference.progress(), &policy, count)?;
+    cursor.position.set(BatchPosition::Fetch);
+    Ok(Some(result))
 }
 
 impl NativeSearchStreamOwner {
@@ -169,8 +188,7 @@ fn publish(
 ) -> Result<NativeObjectMatches> {
     loop {
         let activity = {
-            let access = session.access_progress(progress)?;
-            session.entry(&access)?;
+            let _access = search_access(session, progress)?;
             cursor.waiter.check()?;
             let slot = session
                 .entry
@@ -190,8 +208,7 @@ fn publish(
             activity.prepare_reader_checked(session.uid, policy, || cursor.waiter.check())?;
         loop {
             let mut permits = [None];
-            let access = session.access_progress(progress)?;
-            session.entry(&access)?;
+            let access = search_access(session, progress)?;
             cursor.waiter.check()?;
             let slot = session
                 .entry
@@ -205,7 +222,7 @@ fn publish(
                     drop(payload);
                     drop(slot);
                     drop(access);
-                    reader.wait_available_in_context(policy, || cursor.waiter.check())?;
+                    reader.wait_for_search_publication(policy, || cursor.waiter.check())?;
                     continue;
                 }
                 Err(error) => return Err(error),

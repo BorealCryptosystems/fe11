@@ -1,0 +1,176 @@
+[
+  {
+    "id": "absence.legacy-key.CKM_GOST28147",
+    "file": "fe51c4fc7bbc819276dfcf3e76cf9f1cc6ee1c171c13f50b1b74dd7e964f5303.txt",
+    "sha256": "fe51c4fc7bbc819276dfcf3e76cf9f1cc6ee1c171c13f50b1b74dd7e964f5303",
+    "absent_legacy_key_selector": "CKM_GOST28147",
+    "producer": "C_EncryptInit",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  },
+  {
+    "id": "absence.legacy-key.CKM_GOST28147_ECB",
+    "file": "78d0cdd32d1af7735790f28fee0dbb785b0687d870e4a4f2f516a33053ac80e1.txt",
+    "sha256": "78d0cdd32d1af7735790f28fee0dbb785b0687d870e4a4f2f516a33053ac80e1",
+    "absent_legacy_key_selector": "CKM_GOST28147_ECB",
+    "producer": "C_EncryptInit",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  },
+  {
+    "id": "absence.legacy-key.CKM_GOST28147_MAC",
+    "file": "d69368ef700638c1099d3d9c4ec53a5d6b56af2d2c2f3a2b5ce8b672d5e6a59c.txt",
+    "sha256": "d69368ef700638c1099d3d9c4ec53a5d6b56af2d2c2f3a2b5ce8b672d5e6a59c",
+    "absent_legacy_key_selector": "CKM_GOST28147_MAC",
+    "producer": "C_SignInit",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  },
+  {
+    "id": "absence.legacy-key.CKM_GOST28147_KEY_WRAP",
+    "file": "3eb3a782990582f8770d14dce8610b57904e1a9e46b239d6e8fb56557318ff4c.txt",
+    "sha256": "3eb3a782990582f8770d14dce8610b57904e1a9e46b239d6e8fb56557318ff4c",
+    "absent_legacy_key_selector": "CKM_GOST28147_KEY_WRAP",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  },
+  {
+    "id": "absence.legacy-key.CKM_KEY_WRAP_LYNKS",
+    "file": "02c73e06d7289d3a5741f0eab230097b073753b15a14a393ad64c99c6f0534be.txt",
+    "sha256": "02c73e06d7289d3a5741f0eab230097b073753b15a14a393ad64c99c6f0534be",
+    "absent_legacy_key_selector": "CKM_KEY_WRAP_LYNKS",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  },
+  {
+    "id": "absence.legacy-key.CKM_KEY_WRAP_SET_OAEP",
+    "file": "5753008680f56e8324591057489f66293630c984a08229492bf6bd8dcf9771fc.txt",
+    "sha256": "5753008680f56e8324591057489f66293630c984a08229492bf6bd8dcf9771fc",
+    "absent_legacy_key_selector": "CKM_KEY_WRAP_SET_OAEP",
+    "producer": "C_WrapKey",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Compatible session objects are created with explicit usage and key type. The selected native function returns CKR_MECHANISM_INVALID. Session objects are destroyed individually."
+  }
+]

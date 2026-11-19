@@ -1,0 +1,666 @@
+[
+  {
+    "id": "negative.CKM_RSA_PKCS_KEY_PAIR_GEN.generate_pair.template",
+    "file": "7550bbfd2b08f04efae8254016d5a2b6753a03036b4d25abc57fde1a96d4642a.txt",
+    "sha256": "7550bbfd2b08f04efae8254016d5a2b6753a03036b4d25abc57fde1a96d4642a",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_RSA_PKCS_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_RSA_PKCS_KEY_PAIR_GEN.512",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_GENERIC_SECRET_KEY_GEN.generate.template",
+    "file": "6bc40ba643cc9e61c66a60713df049a3e72c62aa310e29a101d3b0ac78ca8789.txt",
+    "sha256": "6bc40ba643cc9e61c66a60713df049a3e72c62aa310e29a101d3b0ac78ca8789",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_GENERIC_SECRET_KEY_GEN",
+    "valid_control": "generation.CKM_GENERIC_SECRET_KEY_GEN.1",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DES_KEY_GEN.generate.template",
+    "file": "b1db6f5eb6d94cf1064f164a41a82a4541c1ddd7f22d86c0925b0d686bae7903.txt",
+    "sha256": "b1db6f5eb6d94cf1064f164a41a82a4541c1ddd7f22d86c0925b0d686bae7903",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DES_KEY_GEN",
+    "valid_control": "generation.CKM_DES_KEY_GEN.fixed",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DES2_KEY_GEN.generate.template",
+    "file": "a7104aef5c7c33472aba52ad6ed126cca29353bb72f801893a88d33dcbe897eb.txt",
+    "sha256": "a7104aef5c7c33472aba52ad6ed126cca29353bb72f801893a88d33dcbe897eb",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DES2_KEY_GEN",
+    "valid_control": "generation.CKM_DES2_KEY_GEN.fixed",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DES3_KEY_GEN.generate.template",
+    "file": "55934b84f78689780651a83d5cf1f838be7f862904c14092e2e52ab528f108a9.txt",
+    "sha256": "55934b84f78689780651a83d5cf1f838be7f862904c14092e2e52ab528f108a9",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DES3_KEY_GEN",
+    "valid_control": "generation.CKM_DES3_KEY_GEN.fixed",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_AES_KEY_GEN.generate.template",
+    "file": "c2a1cfda49e509b19c617929549daa4abdae5350722d439d16bbb10d05578963.txt",
+    "sha256": "c2a1cfda49e509b19c617929549daa4abdae5350722d439d16bbb10d05578963",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_AES_KEY_GEN",
+    "valid_control": "generation.CKM_AES_KEY_GEN.16",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DSA_PARAMETER_GEN.generate.template",
+    "file": "62a7ae5a8968adec13cfc9567dbd0e661093c9d03ed86177650033e26914add5.txt",
+    "sha256": "62a7ae5a8968adec13cfc9567dbd0e661093c9d03ed86177650033e26914add5",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DSA_PARAMETER_GEN",
+    "valid_control": "generation.CKM_DSA_PARAMETER_GEN.512",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DSA_KEY_PAIR_GEN.generate_pair.template",
+    "file": "a6a792dd9e339e4b92a0a4d1ad9bafc1d107e6ab1bb42672b819a909daf2612b.txt",
+    "sha256": "a6a792dd9e339e4b92a0a4d1ad9bafc1d107e6ab1bb42672b819a909daf2612b",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DSA_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_DSA_KEY_PAIR_GEN.2048_224",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DH_PKCS_KEY_PAIR_GEN.generate_pair.template",
+    "file": "84e0425bb628c961e0d557d7cd7694444374ddea4a02abe4ad43eaaec12ea0de.txt",
+    "sha256": "84e0425bb628c961e0d557d7cd7694444374ddea4a02abe4ad43eaaec12ea0de",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DH_PKCS_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_DH_PKCS_KEY_PAIR_GEN.2048_2047",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_DH_PKCS_PARAMETER_GEN.generate.template",
+    "file": "6e5b99481b1168606e5a8240bb5d3d6015c1eadeb6b11ead78ac204b4d8a8a6a.txt",
+    "sha256": "6e5b99481b1168606e5a8240bb5d3d6015c1eadeb6b11ead78ac204b4d8a8a6a",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKey"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKey",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_DH_PKCS_PARAMETER_GEN",
+    "valid_control": "generation.CKM_DH_PKCS_PARAMETER_GEN.512",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_EC_KEY_PAIR_GEN.generate_pair.template",
+    "file": "da8f9384d2e887d35e624f072213bde80aded592180bcc0646f7d63ccab545b9.txt",
+    "sha256": "da8f9384d2e887d35e624f072213bde80aded592180bcc0646f7d63ccab545b9",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_EC_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_EC_KEY_PAIR_GEN.secp224r1",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_GOSTR3410_KEY_PAIR_GEN.generate_pair.template",
+    "file": "9501fe492d1bc3cb9a096702efc2747efeee3ea10cea08e598cabdfd90238a66.txt",
+    "sha256": "9501fe492d1bc3cb9a096702efc2747efeee3ea10cea08e598cabdfd90238a66",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_GOSTR3410_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_GOSTR3410_KEY_PAIR_GEN.CryptoProA",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_EC_EDWARDS_KEY_PAIR_GEN.generate_pair.template",
+    "file": "40c8d8d05e19d173d1ff6ae34f5e1910bbd5e2fe17fad8cfe2a342540940d05c.txt",
+    "sha256": "40c8d8d05e19d173d1ff6ae34f5e1910bbd5e2fe17fad8cfe2a342540940d05c",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_EC_EDWARDS_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_EC_EDWARDS_KEY_PAIR_GEN.Ed25519",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_ML_DSA_KEY_PAIR_GEN.generate_pair.template",
+    "file": "d596c0b7985d52660a8842be704f593a3f0e285e871ecf54c6eefdbd11af1b52.txt",
+    "sha256": "d596c0b7985d52660a8842be704f593a3f0e285e871ecf54c6eefdbd11af1b52",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_ML_DSA_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_ML_DSA_KEY_PAIR_GEN.ML-DSA-44",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_SLH_DSA_KEY_PAIR_GEN.generate_pair.template",
+    "file": "893cc48dc2e034efe3414c7351a805ba008313895a392d63d99b56bd45c04ac2.txt",
+    "sha256": "893cc48dc2e034efe3414c7351a805ba008313895a392d63d99b56bd45c04ac2",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_SLH_DSA_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_SLH_DSA_KEY_PAIR_GEN.SLH-DSA-SHA2-128s",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  },
+  {
+    "id": "negative.CKM_ML_KEM_KEY_PAIR_GEN.generate_pair.template",
+    "file": "1a4d4a2d5f81495059b28b7a2b10dc797aa4bfc5ea7d2fcd84e64674eecc5ec6.txt",
+    "sha256": "1a4d4a2d5f81495059b28b7a2b10dc797aa4bfc5ea7d2fcd84e64674eecc5ec6",
+    "worker_mode": "generation-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_TEMPLATE_INCONSISTENT"
+      ],
+      "producer": "C_GenerateKeyPair"
+    },
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "mechanism": "CKM_ML_KEM_KEY_PAIR_GEN",
+    "valid_control": "generation.CKM_ML_KEM_KEY_PAIR_GEN.ML-KEM-512",
+    "mutation": "Only public/output CKA_CLASS replaced with CKO_DATA; all other native fields identical"
+  }
+]

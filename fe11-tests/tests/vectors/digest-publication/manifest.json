@@ -1,0 +1,76 @@
+[
+  {
+    "id": "progression.digest-publication.eager",
+    "file": "1994dc1201333a33be288c926149d151fa0c83e6ed9a7369d569e8ddd8e3ecdc.txt",
+    "sha256": "1994dc1201333a33be288c926149d151fa0c83e6ed9a7369d569e8ddd8e3ecdc",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "pacing": "eager",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Complete SHA256(a,b,c) via public poll; retain exact digest, poll same ticket again and require Authentication(ForeignOrConsumedOperationTicket) with no native call. Output unchanged after module close.",
+    "parameter_reconciliation": "Exact accepted three1-byte fragments and both pacing choices; RW_PUBLIC because hashing has no authentication prerequisite."
+  },
+  {
+    "id": "progression.digest-publication.cooperative",
+    "file": "8a5cfd6c65fe43bd141e7174746a6df5faf6c1d211039b1baa6ad30fa6dbb076.txt",
+    "sha256": "8a5cfd6c65fe43bd141e7174746a6df5faf6c1d211039b1baa6ad30fa6dbb076",
+    "worker_mode": "ticket-owner-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "pacing": "cooperative",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Complete SHA256(a,b,c) via public poll; retain exact digest, poll same ticket again and require Authentication(ForeignOrConsumedOperationTicket) with no native call. Output unchanged after module close.",
+    "parameter_reconciliation": "Exact accepted three1-byte fragments and both pacing choices; RW_PUBLIC because hashing has no authentication prerequisite."
+  }
+]

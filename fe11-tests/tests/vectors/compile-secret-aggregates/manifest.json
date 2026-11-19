@@ -1,0 +1,158 @@
+[
+  {
+    "id": "UnauthenticatedCipherPlaintext-debug",
+    "positive": {
+      "file": "UnauthenticatedCipherPlaintext-debug-positive.rs",
+      "sha256": "bc84dd9916e3d5f4226ee16a9b3fdce64b8ae192d7271ac8a463ecbe89760494"
+    },
+    "negative": {
+      "file": "UnauthenticatedCipherPlaintext-debug-negative.rs",
+      "sha256": "de93480de9163503bbc4ad3b67b0eccd9df5ec3c5c92f93d64860bed4fd055a4",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "UnauthenticatedCipherPlaintext-clone",
+    "positive": {
+      "file": "UnauthenticatedCipherPlaintext-clone-positive.rs",
+      "sha256": "bc84dd9916e3d5f4226ee16a9b3fdce64b8ae192d7271ac8a463ecbe89760494"
+    },
+    "negative": {
+      "file": "UnauthenticatedCipherPlaintext-clone-negative.rs",
+      "sha256": "d0ef3a5e8c1dc5ccd24efeebbc1496068426287fd02f1cc9365c9ff4060acac5",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "DualAuthenticatedPlaintext-debug",
+    "positive": {
+      "file": "DualAuthenticatedPlaintext-debug-positive.rs",
+      "sha256": "df96109c707415d0de172af558c5c5c36957eaba0798ea4148503fa112d02875"
+    },
+    "negative": {
+      "file": "DualAuthenticatedPlaintext-debug-negative.rs",
+      "sha256": "e2a08ffb38468869de1dc14dd41a7b9602bf032302a59c0ac91cd57cdadf3074",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "DualAuthenticatedPlaintext-clone",
+    "positive": {
+      "file": "DualAuthenticatedPlaintext-clone-positive.rs",
+      "sha256": "df96109c707415d0de172af558c5c5c36957eaba0798ea4148503fa112d02875"
+    },
+    "negative": {
+      "file": "DualAuthenticatedPlaintext-clone-negative.rs",
+      "sha256": "0bb1d322d8cac809f2822b744d322aa705e094bc8129e16410a37d6df3d1d142",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "UnauthenticatedPlaintext-debug",
+    "positive": {
+      "file": "UnauthenticatedPlaintext-debug-positive.rs",
+      "sha256": "9d37c3b7ec8c9e33b3446efc68bb6364f07c06893f72ff2be05c3064aeeb3603"
+    },
+    "negative": {
+      "file": "UnauthenticatedPlaintext-debug-negative.rs",
+      "sha256": "f9d0c66458d5d60da92e4d849a6c60e24f5bb03685cc31ae78f68ee6f7458bd8",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "UnauthenticatedPlaintext-clone",
+    "positive": {
+      "file": "UnauthenticatedPlaintext-clone-positive.rs",
+      "sha256": "9d37c3b7ec8c9e33b3446efc68bb6364f07c06893f72ff2be05c3064aeeb3603"
+    },
+    "negative": {
+      "file": "UnauthenticatedPlaintext-clone-negative.rs",
+      "sha256": "268953cb8db3bf65b9a9c0db3b2d49ee46d0c381f6b21ca583fb528e0f3479a7",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "DigestPlaintext-debug",
+    "positive": {
+      "file": "DigestPlaintext-debug-positive.rs",
+      "sha256": "bdd6a61702f29a9122b8421eefee49f384a28c14f5a9da6d7d5620625836ae6c"
+    },
+    "negative": {
+      "file": "DigestPlaintext-debug-negative.rs",
+      "sha256": "f79fcb862f79362060fdf98525c9e2accc0850783a4eef2bd13b952865f2313a",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "DigestPlaintext-clone",
+    "positive": {
+      "file": "DigestPlaintext-clone-positive.rs",
+      "sha256": "bdd6a61702f29a9122b8421eefee49f384a28c14f5a9da6d7d5620625836ae6c"
+    },
+    "negative": {
+      "file": "DigestPlaintext-clone-negative.rs",
+      "sha256": "4183e04019fd87ce544524cfee3c33ff386d3263e7230d930e69ebaf25bb7c41",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "ExtensionResult-debug",
+    "positive": {
+      "file": "ExtensionResult-debug-positive.rs",
+      "sha256": "7dfe8a02f89d062aa36d2ea5360fc8f0f9f1172937c935974e7e4ce780173562"
+    },
+    "negative": {
+      "file": "ExtensionResult-debug-negative.rs",
+      "sha256": "ed63fa1c81f0bc774fade291a66706549c1dc1bc37ccf36b245fe83b3bede560",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "ExtensionResult-clone",
+    "positive": {
+      "file": "ExtensionResult-clone-positive.rs",
+      "sha256": "7dfe8a02f89d062aa36d2ea5360fc8f0f9f1172937c935974e7e4ce780173562"
+    },
+    "negative": {
+      "file": "ExtensionResult-clone-negative.rs",
+      "sha256": "a51911b9cc8bb993c7af65a3553b675289aed80b58acd8f33891a9c730e6a68f",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "ExtensionParameterOutputs-debug",
+    "positive": {
+      "file": "ExtensionParameterOutputs-debug-positive.rs",
+      "sha256": "2da2fd9d68c844c6c1e5f0ad0bb2cce9e75b07960b83df3279d2f9008323d57b"
+    },
+    "negative": {
+      "file": "ExtensionParameterOutputs-debug-negative.rs",
+      "sha256": "3daeec5694e184dc9324fbebc44b9603f5435ec3445ae9d462baa2c2c5e28a81",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "ExtensionParameterOutputs-clone",
+    "positive": {
+      "file": "ExtensionParameterOutputs-clone-positive.rs",
+      "sha256": "2da2fd9d68c844c6c1e5f0ad0bb2cce9e75b07960b83df3279d2f9008323d57b"
+    },
+    "negative": {
+      "file": "ExtensionParameterOutputs-clone-negative.rs",
+      "sha256": "d8e1c39b82c1bc2cec50286352e93c1a1a0aecec99ee33a01e16a4c3b98b9652",
+      "code": "E0599",
+      "line": 3
+    }
+  }
+]

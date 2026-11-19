@@ -1,0 +1,361 @@
+[
+  {
+    "id": "generation.CKM_GENERIC_SECRET_KEY_GEN.16.native-use",
+    "file": "ae61ea63d18452a78660ccc806758d72b848bfd3e734a140292e47d0b9b9d46f.txt",
+    "sha256": "ae61ea63d18452a78660ccc806758d72b848bfd3e734a140292e47d0b9b9d46f",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_GENERIC_SECRET_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generated class/type/requested attributes and history exact, then native HMAC sign/verify or fixed-block cipher roundtrip with this object. This is a generation-use witness, not an independent known-answer result. No random key bytes are exported.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_GENERIC_SECRET",
+        "CKA_VALUE_LEN": 16,
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_SIGN": true,
+        "CKA_VERIFY": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "exact result object count",
+      "requested class/key type/parameters",
+      "CKA_LOCAL=true for generated keys",
+      "history attributes per edition",
+      "fresh usable owner",
+      "namespace cleanup"
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "secret_witness": "CKM_GENERIC_SECRET_KEY_GEN"
+  },
+  {
+    "id": "generation.CKM_AES_KEY_GEN.16.native-use",
+    "file": "5b558b24c2c5c0c229f68f6cdc717665963ab6d33609044ea834aeb8332e387a.txt",
+    "sha256": "5b558b24c2c5c0c229f68f6cdc717665963ab6d33609044ea834aeb8332e387a",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_AES_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generated class/type/requested attributes and history exact, then native HMAC sign/verify or fixed-block cipher roundtrip with this object. This is a generation-use witness, not an independent known-answer result. No random key bytes are exported.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_AES",
+        "CKA_VALUE_LEN": 16,
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_ENCRYPT": true,
+        "CKA_DECRYPT": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "exact result object count",
+      "requested class/key type/parameters",
+      "CKA_LOCAL=true for generated keys",
+      "history attributes per edition",
+      "fresh usable owner",
+      "namespace cleanup"
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "secret_witness": "CKM_AES_KEY_GEN"
+  },
+  {
+    "id": "generation.CKM_DES_KEY_GEN.fixed.native-use",
+    "file": "0a896b938dfb4b8ace795672653325de0f76c1c743744f42b8019bb5979de344.txt",
+    "sha256": "0a896b938dfb4b8ace795672653325de0f76c1c743744f42b8019bb5979de344",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_DES_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generated class/type/requested attributes and history exact, then native HMAC sign/verify or fixed-block cipher roundtrip with this object. This is a generation-use witness, not an independent known-answer result. No random key bytes are exported.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_DES",
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_ENCRYPT": true,
+        "CKA_DECRYPT": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "exact result object count",
+      "requested class/key type/parameters",
+      "CKA_LOCAL=true for generated keys",
+      "history attributes per edition",
+      "fresh usable owner",
+      "namespace cleanup"
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "secret_witness": "CKM_DES_KEY_GEN"
+  },
+  {
+    "id": "generation.CKM_DES2_KEY_GEN.fixed.native-use",
+    "file": "127f60e923dd4fbac742cc4b6269009e52020bf87e9ef481f7bd31453cc64b8e.txt",
+    "sha256": "127f60e923dd4fbac742cc4b6269009e52020bf87e9ef481f7bd31453cc64b8e",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_DES2_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generated class/type/requested attributes and history exact, then native HMAC sign/verify or fixed-block cipher roundtrip with this object. This is a generation-use witness, not an independent known-answer result. No random key bytes are exported.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_DES2",
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_ENCRYPT": true,
+        "CKA_DECRYPT": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "exact result object count",
+      "requested class/key type/parameters",
+      "CKA_LOCAL=true for generated keys",
+      "history attributes per edition",
+      "fresh usable owner",
+      "namespace cleanup"
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "secret_witness": "CKM_DES2_KEY_GEN"
+  },
+  {
+    "id": "generation.CKM_DES3_KEY_GEN.fixed.native-use",
+    "file": "7cdef478145bb0769a31b62274874949c5838836e93f9480bce0e0b696494ee8.txt",
+    "sha256": "7cdef478145bb0769a31b62274874949c5838836e93f9480bce0e0b696494ee8",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_DES3_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Generated class/type/requested attributes and history exact, then native HMAC sign/verify or fixed-block cipher roundtrip with this object. This is a generation-use witness, not an independent known-answer result. No random key bytes are exported.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_DES3",
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_ENCRYPT": true,
+        "CKA_DECRYPT": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "exact result object count",
+      "requested class/key type/parameters",
+      "CKA_LOCAL=true for generated keys",
+      "history attributes per edition",
+      "fresh usable owner",
+      "namespace cleanup"
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "secret_witness": "CKM_DES3_KEY_GEN"
+  }
+]

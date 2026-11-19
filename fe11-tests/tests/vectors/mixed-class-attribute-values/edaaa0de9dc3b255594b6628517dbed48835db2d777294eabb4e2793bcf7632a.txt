@@ -1,0 +1,10 @@
+generic
+CKA_AC_ISSUER
+CKA_SIGN|bool|true
+CKA_VERIFY|bool|true
+CKA_COPYABLE|bool|true
+CKA_DERIVE|bool|false
+CKA_DESTROYABLE|bool|true
+CKA_ID|bytes|
+CKA_MODIFIABLE|bool|true
+CKA_WRAP_WITH_TRUSTED|bool|false

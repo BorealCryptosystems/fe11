@@ -1,0 +1,3 @@
+advanced
+begin_signature_message
+foreign

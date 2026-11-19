@@ -1,0 +1,9 @@
+{
+  "source_url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/ecdh_secp384r1_test.json",
+  "source_sha256": "25a9c41573dbea97c5b4be2dd00369fa68dc37ac8f41807d8e16226d188ec6a7",
+  "group": 0,
+  "tcId": 1,
+  "field": "public",
+  "fixture_sha256": "6a1d1150d4289b06f5cdcdeab662458a43da881d16fc57349203884fa809087f",
+  "notice": "Wycheproof Apache-2.0; public numerical data only, no private scalar or implementation copied."
+}

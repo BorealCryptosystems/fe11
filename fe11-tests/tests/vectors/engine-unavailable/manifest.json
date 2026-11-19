@@ -1,0 +1,43 @@
+[
+  {
+    "id": "engine.unavailable.ed25519ctx-empty",
+    "file": "b69560f7fd526ad1f19abadebac32799b3b8bf43ebd570e2fb76c7cf036bdaf8.txt",
+    "sha256": "b69560f7fd526ad1f19abadebac32799b3b8bf43ebd570e2fb76c7cf036bdaf8",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/EDDSA-SigGen-1.0/internalProjection.json",
+      "source_sha256": "794d58fb39f08de4f852d63cb98b95c39bcc38ea42c7d42d09e92c15dadd5d81",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vector": {
+      "path": "vectors/engine-component/69647478ad1200eb25c02f491bddb7626bfcf72e4775c316d90d7f7265e4c47c.txt",
+      "sha256": "69647478ad1200eb25c02f491bddb7626bfcf72e4775c316d90d7f7265e4c47c"
+    },
+    "oracle": "Pure Ed25519 same-key known-answer positive control; empty Ed25519ctx probe and verify both return ABI UNAVAILABLE. Failure output is never interpreted as a verdict.",
+    "contract": "Published verification-component ABI status, distinct from Fe11 Rust Error; no native fallback."
+  }
+]

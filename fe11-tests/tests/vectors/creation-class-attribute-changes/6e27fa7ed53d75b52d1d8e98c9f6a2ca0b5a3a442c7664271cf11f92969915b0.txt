@@ -1,0 +1,10 @@
+template
+0|number|2
+1|bool|false
+2|bool|false
+256|number|64
+384|bytes|06032b6570
+385|bytes|0420B3EBFE9AD81341A6C0EEEA0B3F49115684D97F165535B2027CB5AFCE53FF944A
+266|bool|true
+attributes
+omit|CKA_EC_POINT

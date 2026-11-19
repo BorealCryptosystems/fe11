@@ -1,0 +1,80 @@
+[
+  {
+    "id": "negative.CKM_ML_KEM.encapsulate.usage",
+    "file": "4c6e3f9bd42183e0f0c5fab009aff686c729a93560cbbe811ad199786792d544.txt",
+    "sha256": "4c6e3f9bd42183e0f0c5fab009aff686c729a93560cbbe811ad199786792d544",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_EncapsulateKey"
+    },
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CopyObject",
+      "C_EncapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "negative.CKM_ML_KEM.decapsulate.usage",
+    "file": "f6c9a2714657cc9b103ad975ac79fcae123348f1e179e9237444544b51b20ed1.txt",
+    "sha256": "f6c9a2714657cc9b103ad975ac79fcae123348f1e179e9237444544b51b20ed1",
+    "worker_mode": "kem-lifecycle",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_DecapsulateKey"
+    },
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_EncapsulateKey",
+      "C_DecapsulateKey",
+      "C_CopyObject",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

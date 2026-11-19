@@ -1,0 +1,77 @@
+[
+  {
+    "id": "parameter-boundary.SessionLifecycleRejection::Digest32RequiresSha256",
+    "file": "6b656fe56a4b5e4b1f758b8336e00ddc671b1b30c43c4232323dce9cae385b89.txt",
+    "sha256": "6b656fe56a4b5e4b1f758b8336e00ddc671b1b30c43c4232323dce9cae385b89",
+    "worker_mode": "session-conversion",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(SessionLifecycle(Digest32RequiresSha256))",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Real RSA2048 verification ObjectRef, Digest32 from32 zero bytes; signature256zero."
+  },
+  {
+    "id": "accessor.Session::into_advanced",
+    "file": "3fea1da477f54ea3b4952dfaee5713c8b962e63804ae36c07342beb7ca81f6dc.txt",
+    "sha256": "3fea1da477f54ea3b4952dfaee5713c8b962e63804ae36c07342beb7ca81f6dc",
+    "worker_mode": "session-conversion",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Consume a synchronous session, preserve token/runtime/UID and admitted key usability; perform an ordinary digest under new owner; exactly one final close, no reopen or asynchronous conversion.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_SignInit",
+      "C_Sign",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "producer": "Disposable actual module/session or unopened builder according to receiver; no private field read."
+  }
+]

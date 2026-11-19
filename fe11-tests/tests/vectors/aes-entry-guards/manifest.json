@@ -1,0 +1,64 @@
+[
+  {
+    "id": "transitive.Session::find_aes_key.AesKeyRequired",
+    "file": "2816fd917d4a24d079699a27598279524c54c4c4861d6d586e9d6bd5143b836c.txt",
+    "sha256": "2816fd917d4a24d079699a27598279524c54c4c4861d6d586e9d6bd5143b836c",
+    "worker_mode": "aes-entry-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyAdmission(AesKeyRequired))",
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "observation_scope": "Independent tracer includes generation, search and destruction. Metadata reads are checked by exact native codes and values through the public reader, not counted in this trace. Full Fe11 counters must be identical across the rejected call."
+  },
+  {
+    "id": "transitive.Session::generate_aes_key.AesKeyRequired",
+    "file": "d4a5a03d265a8c955f202f1f695bb97dae333e43cb57af4f39e2dd484aeb7933.txt",
+    "sha256": "d4a5a03d265a8c955f202f1f695bb97dae333e43cb57af4f39e2dd484aeb7933",
+    "worker_mode": "aes-entry-guard",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(KeyAdmission(AesKeyRequired))",
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "observation_scope": "Independent tracer includes generation, search and destruction. Metadata reads are checked by exact native codes and values through the public reader, not counted in this trace. Full Fe11 counters must be identical across the rejected call."
+  }
+]

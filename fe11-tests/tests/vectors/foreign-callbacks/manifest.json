@@ -1,0 +1,126 @@
+[
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignCallbackGraphRetired@ForeignCallbackHandle::enter",
+    "file": "cb064c1339ffa3d7777bcb0459de3dceddb9146156dde58065a4ac826b029aa7.txt",
+    "sha256": "cb064c1339ffa3d7777bcb0459de3dceddb9146156dde58065a4ac826b029aa7",
+    "worker_mode": "foreign-callback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignCallbackGraphRetired))",
+    "producer": "Create ForeignWork for real module C_GetInfo with stable owned buffer; obtain its callback handle while work remains Prepared; call enter before dispatch.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignGraphRetired@ForeignCallbackHandle::enter",
+    "file": "fea70c3707defec1b1f0d8a60caa98920eb857d99dfa320c1b1e3c1430962a6a.txt",
+    "sha256": "fea70c3707defec1b1f0d8a60caa98920eb857d99dfa320c1b1e3c1430962a6a",
+    "worker_mode": "foreign-callback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignGraphRetired))",
+    "producer": "Keep runtime and participant alive; create Prepared GetInfo work, take callback handle, drop never-dispatched work, then call RuntimeOwner::collect_foreign to release the unheld Prepared registry entry. Only the Weak work reference remains.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignInitializationFinalized@ForeignCallbackHandle::enter",
+    "file": "2e4c58a8c50f54e2146837ff4243aee490d8c64b822cb76327ef46c63b328867.txt",
+    "sha256": "2e4c58a8c50f54e2146837ff4243aee490d8c64b822cb76327ef46c63b328867",
+    "worker_mode": "foreign-callback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignInitializationFinalized))",
+    "producer": "Keep participant/runtime alive with an initialization callback handle; perform authorized real finalization through owner and retain handle.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "guard.ExternalExecutionRejection::ForeignRuntimeRetired@ForeignCallbackHandle::enter",
+    "file": "ad7c969509768cda16df373b8333ff6c0a167f9b2d2e0e3e243a141101af38fa.txt",
+    "sha256": "ad7c969509768cda16df373b8333ff6c0a167f9b2d2e0e3e243a141101af38fa",
+    "worker_mode": "foreign-callback",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ExternalExecution(ForeignRuntimeRetired))",
+    "producer": "Obtain callback handle with Weak references only; release all work/participant/module/runtime owners after completing any native calls.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ]
+  }
+]

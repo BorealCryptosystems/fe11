@@ -1,0 +1,172 @@
+[
+  {
+    "id": "guard.DigestContinuationRejection::ConsumedDigestTicket@OperationTicket::extension_digest_output_requirement",
+    "file": "2f1af37ec003d5b0d1760d141b6a802a7a5c774ae3a0ab3d6305fdf5d4484b59.txt",
+    "sha256": "2f1af37ec003d5b0d1760d141b6a802a7a5c774ae3a0ab3d6305fdf5d4484b59",
+    "worker_mode": "retained-digest",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(ConsumedDigestTicket))",
+    "producer": "Use RETAINED-TICKET-CASES#retained.Session::take_digest_ticket: exact parameterless CKM_SHA256 DigestMultipart extension, abc input, capacity31 and true module/edition contract. After actual C_DigestFinal BUFFER_TOO_SMALL, take_digest_ticket once, provide_digest_output_capacity32, then finish_extension_digest_stream once; verify ExtensionResult SHA256abc length32 and keep the now-consumed id-zero ticket. Do not issue another poll.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "retained.Session::take_digest_ticket",
+    "file": "cd7a4af188a3f2007712cbdcae7e16383431a0dd3eeebfaba2d30d96652fa769.txt",
+    "sha256": "cd7a4af188a3f2007712cbdcae7e16383431a0dd3eeebfaba2d30d96652fa769",
+    "worker_mode": "retained-digest",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "producer": "execute_extension with correctly declared CKM_SHA256 DigestMultipart, parts[616263], output_capacity31, authenticationNone",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "retained.AdvancedSession::take_digest_ticket",
+    "file": "6d714ed2bcd6ab5399c560274d21690720f52691785e6953dc06c5d8d4c893b9.txt",
+    "sha256": "6d714ed2bcd6ab5399c560274d21690720f52691785e6953dc06c5d8d4c893b9",
+    "worker_mode": "retained-digest",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Ticket ownership transfers once; exact original native refusal retained, second take refused locally, final output checked independently, no hidden retry or Init replay",
+    "producer": "execute_extension with correctly declared CKM_SHA256 DigestMultipart, parts[616263], output_capacity31, authenticationNone",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "ticket-complete.Session::digest_update.output_required",
+    "file": "1c935257468b133dbed236718590309c9e853ef0d66f7b9737634c085b460d45.txt",
+    "sha256": "1c935257468b133dbed236718590309c9e853ef0d66f7b9737634c085b460d45",
+    "worker_mode": "retained-digest",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestInputPhase))",
+    "producer": "Use the exact CKM_SHA256 extension fixture from RETAINED-TICKET-CASES, abc input and capacity31. Retrieve the retained ticket once after C_DigestFinal BUFFER_TOO_SMALL required32, without resizing.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ]
+  },
+  {
+    "id": "ticket-complete.AdvancedSession::digest_update.output_required",
+    "file": "153479f09a0b83afd8a242069bb7ed0a7f5d63ee0cd9feb9a3f17b2f96c745c5.txt",
+    "sha256": "153479f09a0b83afd8a242069bb7ed0a7f5d63ee0cd9feb9a3f17b2f96c745c5",
+    "worker_mode": "retained-digest",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(DigestContinuation(DigestInputPhase))",
+    "producer": "Use the exact CKM_SHA256 extension fixture from RETAINED-TICKET-CASES, abc input and capacity31. Retrieve the retained ticket once after C_DigestFinal BUFFER_TOO_SMALL required32, without resizing.",
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ]
+  }
+]

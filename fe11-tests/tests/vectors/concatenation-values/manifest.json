@@ -1,0 +1,406 @@
+[
+  {
+    "id": "derive.concatenation.session.before.ff00fe.length-7",
+    "file": "79b44584431c2f46fcd7f2d854598af962db095d7fe864175fb33a2d4ffb1d2a.txt",
+    "sha256": "79b44584431c2f46fcd7f2d854598af962db095d7fe864175fb33a2d4ffb1d2a",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 7,
+    "placement": "before"
+  },
+  {
+    "id": "derive.concatenation.session.after.ff00fe.length-7",
+    "file": "421216044b0930c84d4a064cf07b15d6363f566c14f92ab40b0a517a11611323.txt",
+    "sha256": "421216044b0930c84d4a064cf07b15d6363f566c14f92ab40b0a517a11611323",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 7,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.session.after.ff00fe.length-0",
+    "file": "27e9567ad757b34393d9d2038b73cd041477758078be3149188e313416eac0e1.txt",
+    "sha256": "27e9567ad757b34393d9d2038b73cd041477758078be3149188e313416eac0e1",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 0,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.session.after.ff00fe.length-1",
+    "file": "3d5e7511a026123e3c2443dfd728ad603c36079ca11a4f0b85c364a5bd6c0074.txt",
+    "sha256": "3d5e7511a026123e3c2443dfd728ad603c36079ca11a4f0b85c364a5bd6c0074",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 1,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.session.after.ff00fe.length-6",
+    "file": "2387689bb2e09ac90e5a55f52ea7a4ca5180fbb737fa9d8bb56e6f9c58832a25.txt",
+    "sha256": "2387689bb2e09ac90e5a55f52ea7a4ca5180fbb737fa9d8bb56e6f9c58832a25",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 6,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.session.after.ff00fe.length-8",
+    "file": "f7dc565c2c9dbf4137d6d848ec18473608edc2e09a9f2f90aa269ab5acd15a53.txt",
+    "sha256": "f7dc565c2c9dbf4137d6d848ec18473608edc2e09a9f2f90aa269ab5acd15a53",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 8,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.advanced.before.ff00fe.length-7",
+    "file": "6bf20a5b9e6f3ece731dca218d2b791af055eab9005b08c4010ec951519c60ce.txt",
+    "sha256": "6bf20a5b9e6f3ece731dca218d2b791af055eab9005b08c4010ec951519c60ce",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 7,
+    "placement": "before"
+  },
+  {
+    "id": "derive.concatenation.advanced.after.ff00fe.length-7",
+    "file": "3ffd9021c9512b5061188c38a69b0affa33e893d9b3de0c69739be042b9f5b19.txt",
+    "sha256": "3ffd9021c9512b5061188c38a69b0affa33e893d9b3de0c69739be042b9f5b19",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 7,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.advanced.after.ff00fe.length-0",
+    "file": "b6d8ec902834e9ed0892f0ba07a7f62dbd7bd0390125db64399d6537fb6fc5c7.txt",
+    "sha256": "b6d8ec902834e9ed0892f0ba07a7f62dbd7bd0390125db64399d6537fb6fc5c7",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 0,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.advanced.after.ff00fe.length-1",
+    "file": "b45af024bc85bb22eb20f68d6cc55ac98334c2de4e511f60584e5ca4e8e8634a.txt",
+    "sha256": "b45af024bc85bb22eb20f68d6cc55ac98334c2de4e511f60584e5ca4e8e8634a",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 1,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.advanced.after.ff00fe.length-6",
+    "file": "72165a7c3fa1e1a530d5ae42a999008d0d929d51534b16ca4b9adfeba557fd35.txt",
+    "sha256": "72165a7c3fa1e1a530d5ae42a999008d0d929d51534b16ca4b9adfeba557fd35",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 6,
+    "placement": "after"
+  },
+  {
+    "id": "derive.concatenation.advanced.after.ff00fe.length-8",
+    "file": "7bf3931371559814c284643f067b292a063e1dcc99d21482f2e9976118c2f225.txt",
+    "sha256": "7bf3931371559814c284643f067b292a063e1dcc99d21482f2e9976118c2f225",
+    "worker_mode": "concatenation-values",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Explicit CKA_VALUE_LEN; successful value equals the requested left prefix, including zero. Length greater than concatenated material requires a native error; no particular code or non-creation flag invented. Created capabilities retained before observations; independent cleanup.",
+    "source": {
+      "type": "normative_construction",
+      "clause": "PKCS11 2.40 2.31.4/2.31.5; 3.2 6.43.4/6.43.5",
+      "url": "https://docs.oasis-open.org/pkcs11/pkcs11-spec/v3.2/os/pkcs11-spec-v3.2-os.html"
+    },
+    "base_hex": "00010203",
+    "data_hex": "ff00fe",
+    "requested_length": 8,
+    "placement": "after"
+  }
+]

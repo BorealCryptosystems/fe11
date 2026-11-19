@@ -1,0 +1,8 @@
+CKM_DES_CBC
+session
+decrypt
+8
+0123456789abcdef
+e5c7cdde872bf27c
+4e6f772069732074
+1234567890abcdef

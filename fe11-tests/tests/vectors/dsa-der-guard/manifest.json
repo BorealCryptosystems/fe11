@@ -1,0 +1,45 @@
+[
+  {
+    "id": "guard.ClassicalSignaturesRejection::DsaSignatureDer@VerificationKey::dsa_signature_from_der",
+    "file": "ccb3408ea2d7cc4dba86668342b152607c6d2608f85fc67969d9e405a34e09a2.txt",
+    "sha256": "ccb3408ea2d7cc4dba86668342b152607c6d2608f85fc67969d9e405a34e09a2",
+    "worker_mode": "verification-guards",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(ClassicalSignatures(DsaSignatureDer))",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_Digest",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-Validation-Program/documents/dss/186-3dsatestvectors.zip",
+      "archive_sha256": "10783936d5f2b00434f7ca393ab52df5700ff2166e97bde0d2fcb288e3aa67c3",
+      "member": "SigVer.rsp",
+      "member_sha256": "c7d33d9b5a908e1beb583104c16bfbef63fbbe3eff4ebe59504a4a390a665a8c",
+      "group": "[mod = L=1024, N=160, SHA-1]",
+      "ordinal": 1
+    },
+    "transformation": "Exact p,q,g,y from first Result=P; canonical SPKI; malformed DER3000 unchanged; public q160 control before and after refusal"
+  }
+]

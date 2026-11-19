@@ -1,0 +1,580 @@
+[
+  {
+    "id": "configuration.variant.removable-true",
+    "file": "6820f8a007fca61cb4402925a12dbb11569e09c3c1874c76e5dfcb797906c3ca.txt",
+    "sha256": "6820f8a007fca61cb4402925a12dbb11569e09c3c1874c76e5dfcb797906c3ca",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "removable-true",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.removable-false",
+    "file": "3ffa29aa496bc60576b776d74ccc66255e9ebe6406066a5dace61c1c73e6b5c1.txt",
+    "sha256": "3ffa29aa496bc60576b776d74ccc66255e9ebe6406066a5dace61c1c73e6b5c1",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "removable-false",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.mechanisms-include",
+    "file": "edd2c2e9a832be27016138421c488b3800db4c6395cf1fb2cded874ea21cd0fa.txt",
+    "sha256": "edd2c2e9a832be27016138421c488b3800db4c6395cf1fb2cded874ea21cd0fa",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-include",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.mechanisms-exclude",
+    "file": "739495b87549406c4f7c2351f629d40ffbc17d9b747cc7a785df82606df2cd0f.txt",
+    "sha256": "739495b87549406c4f7c2351f629d40ffbc17d9b747cc7a785df82606df2cd0f",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-exclude",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.mechanisms-empty",
+    "file": "3a40cbaa5d267a10af03c5aa7a98c8708ee8e0d74a48030e461673f3c0094868.txt",
+    "sha256": "3a40cbaa5d267a10af03c5aa7a98c8708ee8e0d74a48030e461673f3c0094868",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-empty",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.mechanisms-default",
+    "file": "38f778bf6fa8c437abeecc0efbcf52165a9e6b063b2873a6e07d6f589bb397bd.txt",
+    "sha256": "38f778bf6fa8c437abeecc0efbcf52165a9e6b063b2873a6e07d6f589bb397bd",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "mechanisms-default",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.reset-true",
+    "file": "777272934c2683c0de7e9649a6851661ddf2825374b82872b7308fc6284336c6.txt",
+    "sha256": "777272934c2683c0de7e9649a6851661ddf2825374b82872b7308fc6284336c6",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "reset-true",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.reset-false",
+    "file": "d6de623c225be5a4081104b173ddc83fa4e5405e0d690facb6eb49f90a720020.txt",
+    "sha256": "d6de623c225be5a4081104b173ddc83fa4e5405e0d690facb6eb49f90a720020",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "reset-false",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.log-error",
+    "file": "36ab83c6f243398353b6c5323f3c07b8f0dc9d04f503f4beb3cf5ac8cf1f7967.txt",
+    "sha256": "36ab83c6f243398353b6c5323f3c07b8f0dc9d04f503f4beb3cf5ac8cf1f7967",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-error",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.log-warning",
+    "file": "063f63b5895afc2af790469cae0658aead89605047d8849b108337bdcdaedbe1.txt",
+    "sha256": "063f63b5895afc2af790469cae0658aead89605047d8849b108337bdcdaedbe1",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-warning",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.log-info",
+    "file": "5a642267e00dcd0371f633d02b44761df592ee2959e24c27d55195bfea41ace1.txt",
+    "sha256": "5a642267e00dcd0371f633d02b44761df592ee2959e24c27d55195bfea41ace1",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-info",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.log-debug",
+    "file": "b7bed073e4d38ce3a75495b29baf60fa6d7dfa9dc05f0dfa8e9302fd0a6046e0.txt",
+    "sha256": "b7bed073e4d38ce3a75495b29baf60fa6d7dfa9dc05f0dfa8e9302fd0a6046e0",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-debug",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.log-invalid",
+    "file": "19acd610c9e36aca82b60a445e8de8cd62a3b9ec60b186945fbfc7c1c34d6f5b.txt",
+    "sha256": "19acd610c9e36aca82b60a445e8de8cd62a3b9ec60b186945fbfc7c1c34d6f5b",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "log-invalid",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize"
+    ],
+    "oracle": "Native C_Initialize GENERAL_ERROR; no initialized owner or Finalize.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.malformed-line",
+    "file": "c40cb3c483b297235112c90b640956b9401ae929796c32b4a1c7d6b7761da06d.txt",
+    "sha256": "c40cb3c483b297235112c90b640956b9401ae929796c32b4a1c7d6b7761da06d",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "malformed-line",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.unknown-key",
+    "file": "b193b86dbd12bd5ee67009dd8891fc00fc773adf0d8899a3d4a79c10be630d31.txt",
+    "sha256": "b193b86dbd12bd5ee67009dd8891fc00fc773adf0d8899a3d4a79c10be630d31",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "unknown-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GetSessionInfo",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Exact configured removable flag or full catalogue set where applicable; SHA256 abc KAT, closed session/module. Mechanism list filtering does not imply access control over native digest calls.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  },
+  {
+    "id": "configuration.variant.absent-file",
+    "file": "c80b467d3bf045f9b54652077a6427171477546b2fcdcbd9307e96bcf788b480.txt",
+    "sha256": "c80b467d3bf045f9b54652077a6427171477546b2fcdcbd9307e96bcf788b480",
+    "worker_mode": "builder-runtime-choices",
+    "configuration_variant": "absent-file",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize"
+    ],
+    "oracle": "Native C_Initialize GENERAL_ERROR; no initialized owner or Finalize.",
+    "source": {
+      "module_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+      "baseline_catalogue_sha256": "f1e360281b0c41a8a11f550332f85470c763ef22ad08948610536f2b5ef70a33",
+      "references": [
+        "src/lib/SoftHSM.cpp C_Initialize/initSupportedMechanisms/C_DigestInit",
+        "src/lib/common/SimpleConfigLoader.cpp loadConfiguration",
+        "src/lib/common/softhsm2.conf.5.in SLOTS.MECHANISMS"
+      ]
+    }
+  }
+]

@@ -1,0 +1,306 @@
+[
+  {
+    "id": "boundary.AeadMessagesRejection::ForeignOrConsumedAeadTicket@Session::poll_aead",
+    "file": "d9e9380683e54c403353b37d1e8f109fda92f1e9690aebe0e131dbbec8bcf1f5.txt",
+    "sha256": "d9e9380683e54c403353b37d1e8f109fda92f1e9690aebe0e131dbbec8bcf1f5",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "Session::poll_aead",
+    "oracle": "Rejected(AeadMessages(ForeignOrConsumedAeadTicket))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::AeadMessageTicketRequired@Session::take_aead_message_ticket",
+    "file": "31bfe79eb0eedeebf5abfb0ac5c10575851418256d9976efd1e9325013019af8.txt",
+    "sha256": "31bfe79eb0eedeebf5abfb0ac5c10575851418256d9976efd1e9325013019af8",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "Session::take_aead_message_ticket",
+    "oracle": "Rejected(OperationOwnership(AeadMessageTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::AeadMessageTicketRequired@OperationTicket::aead_message_progress",
+    "file": "766a1d577422cd4a7cf79022cbcfee14aafaed9fc85dde64c170389c83fa9241.txt",
+    "sha256": "766a1d577422cd4a7cf79022cbcfee14aafaed9fc85dde64c170389c83fa9241",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "OperationTicket::aead_message_progress",
+    "oracle": "Rejected(OperationOwnership(AeadMessageTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::CipherTicketRequired@Session::take_cipher_ticket",
+    "file": "a5da0d960ddfaf094561fe7d4ddf01389f30b4de48f52d6528cb5397cda13e11.txt",
+    "sha256": "a5da0d960ddfaf094561fe7d4ddf01389f30b4de48f52d6528cb5397cda13e11",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "Session::take_cipher_ticket",
+    "oracle": "Rejected(OperationOwnership(CipherTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::CipherTicketRequired@OperationTicket::cipher_progress",
+    "file": "56bb0f67dd3f7d964719652e32705fecabdb7968ff72d2e37d6e5ed3ea5da515.txt",
+    "sha256": "56bb0f67dd3f7d964719652e32705fecabdb7968ff72d2e37d6e5ed3ea5da515",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "OperationTicket::cipher_progress",
+    "oracle": "Rejected(OperationOwnership(CipherTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::SignatureTicketRequired@Session::take_signature_ticket",
+    "file": "b8478667f380b656d65e6a16213ebc8e2264ed4d9c6cc4467e59f0e716cd9757.txt",
+    "sha256": "b8478667f380b656d65e6a16213ebc8e2264ed4d9c6cc4467e59f0e716cd9757",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "Session::take_signature_ticket",
+    "oracle": "Rejected(OperationOwnership(SignatureTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::SignatureTicketRequired@OperationTicket::signature_progress",
+    "file": "0eb99fcf613e8cf2b102d811c06720779878dad084b995ccfd34f96ce4b4432e.txt",
+    "sha256": "0eb99fcf613e8cf2b102d811c06720779878dad084b995ccfd34f96ce4b4432e",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "OperationTicket::signature_progress",
+    "oracle": "Rejected(OperationOwnership(SignatureTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  },
+  {
+    "id": "boundary.OperationOwnershipRejection::RecoveryTicketRequired@Session::poll_recovery",
+    "file": "a382df97bcfae92db035b33ef2a7c39a8570bba5939acc0ba41b846740870845.txt",
+    "sha256": "a382df97bcfae92db035b33ef2a7c39a8570bba5939acc0ba41b846740870845",
+    "worker_mode": "ticket-boundary",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "method": "Session::poll_recovery",
+    "oracle": "Rejected(OperationOwnership(RecoveryTicketRequired))",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession"
+    ],
+    "assertions": [
+      "exact typed family or consumed-ticket refusal",
+      "live digest continuation preserved where applicable",
+      "SHA256abc exact known answer",
+      "no unrelated crypto dispatch"
+    ]
+  }
+]

@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect163k1",
+    "file": "a22c29c43e3033bfda396869c656d4188d0cda90ecd3306d2195590b3b8a64b4.txt",
+    "sha256": "a22c29c43e3033bfda396869c656d4188d0cda90ecd3306d2195590b3b8a64b4",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_163K",
+      "oid": "1.3.132.0.1"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 163
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect163r2",
+    "file": "88cd84dfdc310c039a44278cc9883c15c70d98c59c772bf5db1759fffb1fb145.txt",
+    "sha256": "88cd84dfdc310c039a44278cc9883c15c70d98c59c772bf5db1759fffb1fb145",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_163B",
+      "oid": "1.3.132.0.15"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 163
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect233k1",
+    "file": "5053cf3147b245bc601b377bca061010f7f49b8da26ac12fa8c4695c6de9467e.txt",
+    "sha256": "5053cf3147b245bc601b377bca061010f7f49b8da26ac12fa8c4695c6de9467e",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_233K",
+      "oid": "1.3.132.0.26"
+    },
+    "parameters": {
+      "field_bits": 233,
+      "field_bytes": 30,
+      "order_bits": 232
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect233r1",
+    "file": "43d00879a38f37fbc4de3db063d7fd76b3fd4a686b11f6bf6d22f82def240909.txt",
+    "sha256": "43d00879a38f37fbc4de3db063d7fd76b3fd4a686b11f6bf6d22f82def240909",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_233B",
+      "oid": "1.3.132.0.27"
+    },
+    "parameters": {
+      "field_bits": 233,
+      "field_bytes": 30,
+      "order_bits": 233
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect283k1",
+    "file": "8dd6fc12306d49d39e76427786ebe494eacb465ea0239f4bbb572d8e79546227.txt",
+    "sha256": "8dd6fc12306d49d39e76427786ebe494eacb465ea0239f4bbb572d8e79546227",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_283K",
+      "oid": "1.3.132.0.16"
+    },
+    "parameters": {
+      "field_bits": 283,
+      "field_bytes": 36,
+      "order_bits": 281
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect283r1",
+    "file": "af8a53dc6d4556de83b1842db93baa31c7c5c78d57849dc325b5ad1984976b5a.txt",
+    "sha256": "af8a53dc6d4556de83b1842db93baa31c7c5c78d57849dc325b5ad1984976b5a",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_283B",
+      "oid": "1.3.132.0.17"
+    },
+    "parameters": {
+      "field_bits": 283,
+      "field_bytes": 36,
+      "order_bits": 282
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect409k1",
+    "file": "ade1ac8b26ac0cfaf2f7e944ac0ad83a22733ab1125b74c80e8bb2c5996afc8d.txt",
+    "sha256": "ade1ac8b26ac0cfaf2f7e944ac0ad83a22733ab1125b74c80e8bb2c5996afc8d",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_409K",
+      "oid": "1.3.132.0.36"
+    },
+    "parameters": {
+      "field_bits": 409,
+      "field_bytes": 52,
+      "order_bits": 407
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect409r1",
+    "file": "1e7ca71797f309e1a7c9c2fca1914b7348b2f92775d744e7794f8cc4d23b2e68.txt",
+    "sha256": "1e7ca71797f309e1a7c9c2fca1914b7348b2f92775d744e7794f8cc4d23b2e68",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_409B",
+      "oid": "1.3.132.0.37"
+    },
+    "parameters": {
+      "field_bits": 409,
+      "field_bytes": 52,
+      "order_bits": 409
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect571k1",
+    "file": "26763eaec4adb0a47e1d30ee6786b864cfdc14ad3a5b47de00d6577343a6a283.txt",
+    "sha256": "26763eaec4adb0a47e1d30ee6786b864cfdc14ad3a5b47de00d6577343a6a283",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_571K",
+      "oid": "1.3.132.0.38"
+    },
+    "parameters": {
+      "field_bits": 571,
+      "field_bytes": 72,
+      "order_bits": 570
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect571r1",
+    "file": "bd6d6ee8f7423642d1aa762e4fd4c7d80dc943c1e64cb4ecf1d472849b4067d6.txt",
+    "sha256": "bd6d6ee8f7423642d1aa762e4fd4c7d80dc943c1e64cb4ecf1d472849b4067d6",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_571B",
+      "oid": "1.3.132.0.39"
+    },
+    "parameters": {
+      "field_bits": 571,
+      "field_bytes": 72,
+      "order_bits": 570
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect113r1",
+    "file": "dcb8f4719b90488de74787e7aa9f24b891d2168e2f28c6c1ab1dbf7071a5e5b2.txt",
+    "sha256": "dcb8f4719b90488de74787e7aa9f24b891d2168e2f28c6c1ab1dbf7071a5e5b2",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_113R1",
+      "oid": "1.3.132.0.4"
+    },
+    "parameters": {
+      "field_bits": 113,
+      "field_bytes": 15,
+      "order_bits": 113
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect113r2",
+    "file": "c2c28379ffe312f208f81d7aebe6d46bfe28830c6132c89a49498ea0a8dab458.txt",
+    "sha256": "c2c28379ffe312f208f81d7aebe6d46bfe28830c6132c89a49498ea0a8dab458",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_113R2",
+      "oid": "1.3.132.0.5"
+    },
+    "parameters": {
+      "field_bits": 113,
+      "field_bytes": 15,
+      "order_bits": 113
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect131r1",
+    "file": "1fce9b2ff5c6125037c78f268682fd34fa1c2c8945be216ee1e0d014b2509d54.txt",
+    "sha256": "1fce9b2ff5c6125037c78f268682fd34fa1c2c8945be216ee1e0d014b2509d54",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_131R1",
+      "oid": "1.3.132.0.22"
+    },
+    "parameters": {
+      "field_bits": 131,
+      "field_bytes": 17,
+      "order_bits": 131
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect131r2",
+    "file": "b4fb439dc3e3f4e6dcf208c4965449ce31cae27a9451942327e5b16b071f2257.txt",
+    "sha256": "b4fb439dc3e3f4e6dcf208c4965449ce31cae27a9451942327e5b16b071f2257",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_131R2",
+      "oid": "1.3.132.0.23"
+    },
+    "parameters": {
+      "field_bits": 131,
+      "field_bytes": 17,
+      "order_bits": 131
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect163r1",
+    "file": "ad32bfac273e4e9299046b0abc536ae7811769869db76358f48ff04638a34166.txt",
+    "sha256": "ad32bfac273e4e9299046b0abc536ae7811769869db76358f48ff04638a34166",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_163R1",
+      "oid": "1.3.132.0.2"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 162
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect193r1",
+    "file": "240f6dc6e677c087f339a0d72df4a61dfc9753b9de87fee6a71667a915e11eb5.txt",
+    "sha256": "240f6dc6e677c087f339a0d72df4a61dfc9753b9de87fee6a71667a915e11eb5",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_193R1",
+      "oid": "1.3.132.0.24"
+    },
+    "parameters": {
+      "field_bits": 193,
+      "field_bytes": 25,
+      "order_bits": 193
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect193r2",
+    "file": "831388a34d35e3293e0fd2ae1186f27cfed682120045f1e5372d1b72c22fb651.txt",
+    "sha256": "831388a34d35e3293e0fd2ae1186f27cfed682120045f1e5372d1b72c22fb651",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_193R2",
+      "oid": "1.3.132.0.25"
+    },
+    "parameters": {
+      "field_bits": 193,
+      "field_bytes": 25,
+      "order_bits": 193
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.sect239k1",
+    "file": "51b85587aeeef54239e8dbf41b26aa675b51e41a1896ed3e218be3897dbd32dd.txt",
+    "sha256": "51b85587aeeef54239e8dbf41b26aa675b51e41a1896ed3e218be3897dbd32dd",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_239K1",
+      "oid": "1.3.132.0.3"
+    },
+    "parameters": {
+      "field_bits": 239,
+      "field_bytes": 30,
+      "order_bits": 238
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb163v1",
+    "file": "54062c3cfd3baca833bffe6ae57f78da3634e6f009c71b0a85b768738186e6c8.txt",
+    "sha256": "54062c3cfd3baca833bffe6ae57f78da3634e6f009c71b0a85b768738186e6c8",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_163V1",
+      "oid": "1.2.840.10045.3.0.1"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 163
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb163v2",
+    "file": "daec1df1d2482baf0d3f65588f6c3f235318601c6602c4c9f802125e84464fed.txt",
+    "sha256": "daec1df1d2482baf0d3f65588f6c3f235318601c6602c4c9f802125e84464fed",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_163V2",
+      "oid": "1.2.840.10045.3.0.2"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 162
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb163v3",
+    "file": "73712650a4fd591e16856c0ebac02a885baec1e19fd38716de3f5ef5a7c7ee8c.txt",
+    "sha256": "73712650a4fd591e16856c0ebac02a885baec1e19fd38716de3f5ef5a7c7ee8c",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_163V3",
+      "oid": "1.2.840.10045.3.0.3"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 162
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb176v1",
+    "file": "3b703d55d1a10322c89713d13c8a3d19140ad3168a433ac45ba28d1f777a9431.txt",
+    "sha256": "3b703d55d1a10322c89713d13c8a3d19140ad3168a433ac45ba28d1f777a9431",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_176V1",
+      "oid": "1.2.840.10045.3.0.4"
+    },
+    "parameters": {
+      "field_bits": 176,
+      "field_bytes": 22,
+      "order_bits": 161
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb191v1",
+    "file": "dfca99bb89a0e58d2a7d24af3700ea6561b250d96cab0f102e58fd5d07bde5eb.txt",
+    "sha256": "dfca99bb89a0e58d2a7d24af3700ea6561b250d96cab0f102e58fd5d07bde5eb",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_191V1",
+      "oid": "1.2.840.10045.3.0.5"
+    },
+    "parameters": {
+      "field_bits": 191,
+      "field_bytes": 24,
+      "order_bits": 191
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb191v2",
+    "file": "7cd02aea28b3a965e81feba51cf89ff8af6466bd93bbb69d07cbbd918557ac53.txt",
+    "sha256": "7cd02aea28b3a965e81feba51cf89ff8af6466bd93bbb69d07cbbd918557ac53",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_191V2",
+      "oid": "1.2.840.10045.3.0.6"
+    },
+    "parameters": {
+      "field_bits": 191,
+      "field_bytes": 24,
+      "order_bits": 190
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb191v3",
+    "file": "442b184c7608164914759b2756eef7a793e62a143490dfe4f3edba447a858ea9.txt",
+    "sha256": "442b184c7608164914759b2756eef7a793e62a143490dfe4f3edba447a858ea9",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_191V3",
+      "oid": "1.2.840.10045.3.0.7"
+    },
+    "parameters": {
+      "field_bits": 191,
+      "field_bytes": 24,
+      "order_bits": 189
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb208w1",
+    "file": "ad63a28e109a64b47d7686ad7e042111229d3387837ebd7966775268a055e78e.txt",
+    "sha256": "ad63a28e109a64b47d7686ad7e042111229d3387837ebd7966775268a055e78e",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_208W1",
+      "oid": "1.2.840.10045.3.0.10"
+    },
+    "parameters": {
+      "field_bits": 208,
+      "field_bytes": 26,
+      "order_bits": 193
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb239v1",
+    "file": "88ca48d563c89b4cb96a4210f79142f20758b567a2f2c0007e8df8e0913c47ae.txt",
+    "sha256": "88ca48d563c89b4cb96a4210f79142f20758b567a2f2c0007e8df8e0913c47ae",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_239V1",
+      "oid": "1.2.840.10045.3.0.11"
+    },
+    "parameters": {
+      "field_bits": 239,
+      "field_bytes": 30,
+      "order_bits": 238
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb239v2",
+    "file": "30d18374f051d0f6bc0d0c75ed3b570509774d901e46e04bb0a79fb2ee037c00.txt",
+    "sha256": "30d18374f051d0f6bc0d0c75ed3b570509774d901e46e04bb0a79fb2ee037c00",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_239V2",
+      "oid": "1.2.840.10045.3.0.12"
+    },
+    "parameters": {
+      "field_bits": 239,
+      "field_bytes": 30,
+      "order_bits": 237
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb239v3",
+    "file": "08d62897ca7bcc87491eea6e8be38e5a2d61086439c0282de82cc6501fcdfe4c.txt",
+    "sha256": "08d62897ca7bcc87491eea6e8be38e5a2d61086439c0282de82cc6501fcdfe4c",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_239V3",
+      "oid": "1.2.840.10045.3.0.13"
+    },
+    "parameters": {
+      "field_bits": 239,
+      "field_bytes": 30,
+      "order_bits": 236
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb272w1",
+    "file": "fd4500319fcb70adb2f0fc70d85e34eac0f51e3c8a32aaad1481ad8e43744dac.txt",
+    "sha256": "fd4500319fcb70adb2f0fc70d85e34eac0f51e3c8a32aaad1481ad8e43744dac",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_272W1",
+      "oid": "1.2.840.10045.3.0.16"
+    },
+    "parameters": {
+      "field_bits": 272,
+      "field_bytes": 34,
+      "order_bits": 257
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb304w1",
+    "file": "19ab68add40a57742215da5fca57a51ccd7636c1ded3c10e0da0df23f2518dad.txt",
+    "sha256": "19ab68add40a57742215da5fca57a51ccd7636c1ded3c10e0da0df23f2518dad",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_304W1",
+      "oid": "1.2.840.10045.3.0.17"
+    },
+    "parameters": {
+      "field_bits": 304,
+      "field_bytes": 38,
+      "order_bits": 289
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb359v1",
+    "file": "81e6c46eba3c217b0e32ddb959e22fe9d684f42db86995e095b4ba7a55412898.txt",
+    "sha256": "81e6c46eba3c217b0e32ddb959e22fe9d684f42db86995e095b4ba7a55412898",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_359V1",
+      "oid": "1.2.840.10045.3.0.18"
+    },
+    "parameters": {
+      "field_bits": 359,
+      "field_bytes": 45,
+      "order_bits": 353
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2pnb368w1",
+    "file": "ffc9739705593e6fde12b8c9d44acb54b5d521ee56a2ab477a53bb6ac04a4082.txt",
+    "sha256": "ffc9739705593e6fde12b8c9d44acb54b5d521ee56a2ab477a53bb6ac04a4082",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_368W1",
+      "oid": "1.2.840.10045.3.0.19"
+    },
+    "parameters": {
+      "field_bits": 368,
+      "field_bytes": 46,
+      "order_bits": 353
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.X9_62_c2tnb431r1",
+    "file": "9fa8eac357be58dfb809cbfd66b184c658abf64161fe034232817db22322a6f5.txt",
+    "sha256": "9fa8eac357be58dfb809cbfd66b184c658abf64161fe034232817db22322a6f5",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_431R1",
+      "oid": "1.2.840.10045.3.0.20"
+    },
+    "parameters": {
+      "field_bits": 431,
+      "field_bytes": 54,
+      "order_bits": 418
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls1",
+    "file": "0cb3730dbb0c5aac855627095c7e47bc930f21f0bdd1264030177ba2dd2c75b0.txt",
+    "sha256": "0cb3730dbb0c5aac855627095c7e47bc930f21f0bdd1264030177ba2dd2c75b0",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_WTLS_1",
+      "oid": "2.23.43.1.4.1"
+    },
+    "parameters": {
+      "field_bits": 113,
+      "field_bytes": 15,
+      "order_bits": 112
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls3",
+    "file": "88e5ac4f9c3fe434b39b8d0d62d7aab0d15a49d26bfd32d0fbb9744a3d54170b.txt",
+    "sha256": "88e5ac4f9c3fe434b39b8d0d62d7aab0d15a49d26bfd32d0fbb9744a3d54170b",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_163K",
+      "oid": "2.23.43.1.4.3"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 163
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls4",
+    "file": "fb5454ff6a75c52547fcf5052113125fdf91feb32aa33f8d17658fe888666d8f.txt",
+    "sha256": "fb5454ff6a75c52547fcf5052113125fdf91feb32aa33f8d17658fe888666d8f",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_SECG_CHAR2_113R1",
+      "oid": "2.23.43.1.4.4"
+    },
+    "parameters": {
+      "field_bits": 113,
+      "field_bytes": 15,
+      "order_bits": 113
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls5",
+    "file": "25f92a154d2482168c3d40397b571550be16fc461bf023bad26df10816708330.txt",
+    "sha256": "25f92a154d2482168c3d40397b571550be16fc461bf023bad26df10816708330",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_X9_62_CHAR2_163V1",
+      "oid": "2.23.43.1.4.5"
+    },
+    "parameters": {
+      "field_bits": 163,
+      "field_bytes": 21,
+      "order_bits": 163
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls10",
+    "file": "f68b085a83261598e6c8b4321cd76008f53d2bcb1dad7285554b838ee82d7e89.txt",
+    "sha256": "f68b085a83261598e6c8b4321cd76008f53d2bcb1dad7285554b838ee82d7e89",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_233K",
+      "oid": "2.23.43.1.4.10"
+    },
+    "parameters": {
+      "field_bits": 233,
+      "field_bytes": 30,
+      "order_bits": 232
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  },
+  {
+    "id": "generation.CKM_EC_KEY_PAIR_GEN.wap_wsg_idm_ecid_wtls11",
+    "file": "3d9b141356f0a986c468d25eb05695dd6a99477da83d7857bc6845fcaa4c5c95.txt",
+    "sha256": "3d9b141356f0a986c468d25eb05695dd6a99477da83d7857bc6845fcaa4c5c95",
+    "worker_mode": "binary-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "GENERATION-TUPLES result_assertions; no fixed random generated value",
+    "expected_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "source": {
+      "url": "https://github.com/openssl/openssl/blob/master/crypto/ec/ec_curve.c",
+      "sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+      "table": "_EC_NIST_CHAR2_233B",
+      "oid": "2.23.43.1.4.11"
+    },
+    "parameters": {
+      "field_bits": 233,
+      "field_bytes": 30,
+      "order_bits": 233
+    },
+    "characterization": {
+      "disposition": "UNADVERTISED_CURVE_CHARACTERIZATION",
+      "oracle": "Probe real named OID; no normative support promise from backend table. If successful, require valid public point and equal/exact derived Z; otherwise retain bounded producer/code, never a conformance success or recipe gate.",
+      "allowed_codes": [
+        "CKR_OK",
+        "CKR_CURVE_NOT_SUPPORTED",
+        "CKR_DOMAIN_PARAMS_INVALID",
+        "CKR_KEY_SIZE_RANGE",
+        "CKR_ATTRIBUTE_VALUE_INVALID",
+        "CKR_FUNCTION_FAILED",
+        "CKR_GENERAL_ERROR"
+      ]
+    },
+    "assertions": [
+      "Exact template and generation history",
+      "Public point equation independently checked in GF(2^m)",
+      "ECDH with G produces exact generated public x coordinate",
+      "Bounded native generation refusal is characterization, not claimed support",
+      "Trace branch is selected by explicit successful worker observation"
+    ]
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_IKE_PRF_DERIVE",
+    "file": "4d0f7ee03b9556ca41a677c40103bfb35a020f2898b4f7bf61050f1e8902fb5a.txt",
+    "sha256": "4d0f7ee03b9556ca41a677c40103bfb35a020f2898b4f7bf61050f1e8902fb5a",
+    "absent_schedule_selector": "CKM_IKE_PRF_DERIVE",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "ike-prf",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_IKE1_PRF_DERIVE",
+    "file": "780d43692c186073500654f4380296f20efb8f0f3c9d34b34f2c66d5419c347e.txt",
+    "sha256": "780d43692c186073500654f4380296f20efb8f0f3c9d34b34f2c66d5419c347e",
+    "absent_schedule_selector": "CKM_IKE1_PRF_DERIVE",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "ike1-prf",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_IKE1_EXTENDED_DERIVE",
+    "file": "cafd1979f192fff96328752092ac6e01c79a2f3bfef28e07b3cd81bda9ae7a99.txt",
+    "sha256": "cafd1979f192fff96328752092ac6e01c79a2f3bfef28e07b3cd81bda9ae7a99",
+    "absent_schedule_selector": "CKM_IKE1_EXTENDED_DERIVE",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "ike1-extended",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_IKE2_PRF_PLUS_DERIVE",
+    "file": "56cd59d5016034e6314cf3b2365b9fbdea65092f37f9713a3da49998ba506749.txt",
+    "sha256": "56cd59d5016034e6314cf3b2365b9fbdea65092f37f9713a3da49998ba506749",
+    "absent_schedule_selector": "CKM_IKE2_PRF_PLUS_DERIVE",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "ike2-plus",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_WTLS_MASTER_KEY_DERIVE",
+    "file": "94f3ed8ed9a8b903d5b0099949a238cc41121f2d11d66dfa78502026aae2a9d0.txt",
+    "sha256": "94f3ed8ed9a8b903d5b0099949a238cc41121f2d11d66dfa78502026aae2a9d0",
+    "absent_schedule_selector": "CKM_WTLS_MASTER_KEY_DERIVE",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "wtls-master",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_WTLS_MASTER_KEY_DERIVE_DH_ECC",
+    "file": "25ab193cdcc2e52b9f71c5ee9f1742d3b63effd203819ea8d4007a20a435be56.txt",
+    "sha256": "25ab193cdcc2e52b9f71c5ee9f1742d3b63effd203819ea8d4007a20a435be56",
+    "absent_schedule_selector": "CKM_WTLS_MASTER_KEY_DERIVE_DH_ECC",
+    "producer": "C_DeriveKey",
+    "protocol_absence": "wtls-master-dh",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_DeriveKey",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_TLS_MAC",
+    "file": "b500be934960873abf6cebd1718225ce682e1bd671a1aed6c0c7d83f85a0b565.txt",
+    "sha256": "b500be934960873abf6cebd1718225ce682e1bd671a1aed6c0c7d83f85a0b565",
+    "absent_schedule_selector": "CKM_TLS_MAC",
+    "producer": "C_SignInit",
+    "protocol_absence": "tls-finished",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  },
+  {
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "worker_mode": "builder-runtime-choices",
+    "id": "absence.schedule.CKM_TLS12_MAC",
+    "file": "29f3d9e54acd4f2324a07777717852d00fd75bdcfca3b34c9a19976060c57ab5.txt",
+    "sha256": "29f3d9e54acd4f2324a07777717852d00fd75bdcfca3b34c9a19976060c57ab5",
+    "absent_schedule_selector": "CKM_TLS12_MAC",
+    "producer": "C_SignInit",
+    "protocol_absence": "tls12-finished",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After importing the real protocol inputs, the selected native initializer or derivation returns CKR_MECHANISM_INVALID. No output operation follows."
+  }
+]

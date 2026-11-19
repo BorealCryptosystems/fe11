@@ -1,0 +1,56 @@
+[
+  {
+    "file": "dsa1024-p.hex",
+    "sha256": "ccb0888eefdaa134a56f1060f0752a43b7d15b7003af6d610ad88e17e34f1657",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigVer-1.0/internalProjection.json",
+    "source_sha256": "082fb36f72be22b263c1f29b8c89468484ac2f5025631c544c2715e53acbe2ce",
+    "group": 1,
+    "field": "p",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  },
+  {
+    "file": "dsa1024-q.hex",
+    "sha256": "42c96c850e85bcc9d4cf2bafc3c0f978b69d7b35fc9661cf2f3a6b6fb5974ec7",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigVer-1.0/internalProjection.json",
+    "source_sha256": "082fb36f72be22b263c1f29b8c89468484ac2f5025631c544c2715e53acbe2ce",
+    "group": 1,
+    "field": "q",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  },
+  {
+    "file": "dsa1024-g.hex",
+    "sha256": "817398dfa8496139c3c089f7030fce070dfc94856ee66411a897c8169dbf4a73",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/DSA-SigVer-1.0/internalProjection.json",
+    "source_sha256": "082fb36f72be22b263c1f29b8c89468484ac2f5025631c544c2715e53acbe2ce",
+    "group": 1,
+    "field": "g",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  },
+  {
+    "file": "ffdhe2048-p.hex",
+    "sha256": "6a07de2c36cf6dcebcd0f079082d1e09f5049e79b83b5063523eb6c7d2d4678f",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+    "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+    "group": 1,
+    "field": "p",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  },
+  {
+    "file": "ffdhe2048-q.hex",
+    "sha256": "c070bd88aedb4fccf6e49be11c3e8d5cbd1964f4771617a92c71d16e76b7d6a8",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+    "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+    "group": 1,
+    "field": "q",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  },
+  {
+    "file": "ffdhe2048-g.hex",
+    "sha256": "0c4429061d69f97d38193120b99a4f69dda746c5d9916d61fb7792973272bdaa",
+    "source_url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/KAS-FFC-SSC-Sp800-56Ar3/internalProjection.json",
+    "source_sha256": "08d69d526dcabec046bc6df38304c0648ee1dca575ea5986b69636d94756c06d",
+    "group": 1,
+    "field": "g",
+    "purpose": "Public domain parameters for recipe availability witnesses; not signature or shared-secret KAT credit"
+  }
+]

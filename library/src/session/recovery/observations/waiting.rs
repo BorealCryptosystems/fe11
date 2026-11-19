@@ -7,8 +7,15 @@ use std::sync::{atomic::Ordering, Arc};
 pub(crate) struct Waiting<'a> {
     session: &'a Session,
     pub(crate) coordination: Arc<Coordination>,
-    authentication: Option<u64>,
-    epoch: u64,
+    binding: Binding,
+}
+
+enum Binding {
+    Observation {
+        authentication: Option<u64>,
+        epoch: u64,
+    },
+    NativeSearch,
 }
 impl<'a> Waiting<'a> {
     pub(crate) fn new(
@@ -20,13 +27,30 @@ impl<'a> Waiting<'a> {
         Self {
             session,
             coordination,
-            authentication,
-            epoch,
+            binding: Binding::Observation {
+                authentication,
+                epoch,
+            },
+        }
+    }
+    /// A native iterator publishes handles without observing their attributes.
+    /// Authentication changes do not locally revoke its storage or ownership.
+    pub(crate) fn native_search(session: &'a Session, coordination: Arc<Coordination>) -> Self {
+        Self {
+            session,
+            coordination,
+            binding: Binding::NativeSearch,
         }
     }
     pub(crate) fn check(&self) -> Result<()> {
         self.coordination.check()?;
-        context(self.session, self.authentication, self.epoch)
+        match self.binding {
+            Binding::Observation {
+                authentication,
+                epoch,
+            } => context(self.session, authentication, epoch),
+            Binding::NativeSearch => crate::session::activity::context(self.session),
+        }
     }
     /// Preparation uses this continuation's account, including its retained
     /// child buffers, while sharing the module's existing aggregate ceiling.

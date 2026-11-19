@@ -1,0 +1,46 @@
+[
+  {
+    "id": "resource.concurrent-discovery.concurrent-interfaces",
+    "file": "54085cb0adb3b3917ded9bbcfb1c3769847f32e5d77aec17476a8e67306425bd.txt",
+    "sha256": "54085cb0adb3b3917ded9bbcfb1c3769847f32e5d77aec17476a8e67306425bd",
+    "worker_mode": "builder-observation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": "Two independent builder observations start at a barrier and each matches all104 selected function presences, or the exact3.2 interface name/version/flags. Both threads joined. Only preparation Initialize/Finalize; no callback reentry or measured speed claim.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ],
+    "observer_image_loads": 3
+  },
+  {
+    "id": "resource.concurrent-discovery.concurrent-functions",
+    "file": "72a9feef426227b7562e193961e0b5aae05e7e365e35e8aa4fecb736c962161c.txt",
+    "sha256": "72a9feef426227b7562e193961e0b5aae05e7e365e35e8aa4fecb736c962161c",
+    "worker_mode": "builder-observation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": "Two independent builder observations start at a barrier and each matches all104 selected function presences, or the exact3.2 interface name/version/flags. Both threads joined. Only preparation Initialize/Finalize; no callback reentry or measured speed claim.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_Finalize"
+    ],
+    "observer_image_loads": 3
+  }
+]

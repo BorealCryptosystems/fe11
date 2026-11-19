@@ -110,6 +110,7 @@ fn start(
         Operation::new(OperationBody::Recover(body), token, cancel).with_validation(validation),
     )?;
     let ticket = OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,
@@ -214,7 +215,13 @@ impl Session {
             )));
         }
         {
-            let held = access.operations.get(self.uid)?;
+            let held = access.operations.get_ticket_with(
+                self.uid,
+                ticket.id,
+                crate::RejectionReason::OperationOwnership(
+                    crate::OperationOwnershipRejection::RecoveryTicketRequired,
+                ),
+            )?;
             let operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id || !matches!(&operation.body, OperationBody::Recover(_)) {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

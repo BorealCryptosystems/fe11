@@ -2,9 +2,9 @@
 //! A second Init preserves its predecessor on refusal, or replaces a clean
 //! same-family owner after an intact native success. Mixed owners stay retained.
 use super::SignatureOperation;
-use crate::{native::frame::NativeFrame, session::SessionAccess, Error, Result, Session};
 use crate::advanced::{ledger::OperationCell, OperationTicket};
-use std::sync::{atomic::Ordering, Arc};
+use crate::{native::frame::NativeFrame, session::SessionAccess, Error, Result, Session};
+use std::sync::Arc;
 
 struct Call {
     operation: SignatureOperation,
@@ -66,7 +66,14 @@ pub(super) fn attempt(
     // an unwind drops the operation mutex before native recovery takes access.
     let retired;
     let _retired_anchor;
-    let owner = access.operations.get(session.uid)?;
+    let owner = access
+        .operations
+        .init_target(&session.entry, body.kind.category())?
+        .ok_or(Error::Rejected(
+            crate::RejectionReason::SignatureContinuation(
+                crate::SignatureContinuationRejection::CompetingInitOwnerAbsent,
+            ),
+        ))?;
     let mut frame = NativeFrame::session(
         access,
         Call {
@@ -79,10 +86,12 @@ pub(super) fn attempt(
     let mut held = Some(owner.lock().map_err(|_| Error::Poisoned)?);
     let operation = held.as_mut().expect("resident owner locked");
     let id = operation.id;
-    let ready = id == session.entry.advanced_operation.load(Ordering::Acquire)
+    let ready = session.entry.advanced_progress.contains(id)
         && operation._token.identity().matches(&session.entry)
         && session.entry.advanced_progress.replacement_ready(id)?
-        && operation.signature_replacement_target(call.data.operation.kind).is_some();
+        && operation
+            .signature_replacement_target(call.data.operation.kind)
+            .is_some();
     let new_id = if ready {
         Some(state.operations.reserve_ticket()?)
     } else {
@@ -101,10 +110,12 @@ pub(super) fn attempt(
         call.data.operation.route,
     )?;
     let classic = match (&native_call, call.data.operation.kind) {
-        (super::resolved_call::Call::Init(_), super::Kind::Sign) =>
-            Some(crate::native::frame::ClassicInit::Sign),
-        (super::resolved_call::Call::Init(_), super::Kind::Verify) =>
-            Some(crate::native::frame::ClassicInit::Verify),
+        (super::resolved_call::Call::Init(_), super::Kind::Sign) => {
+            Some(crate::native::frame::ClassicInit::Sign)
+        }
+        (super::resolved_call::Call::Init(_), super::Kind::Verify) => {
+            Some(crate::native::frame::ClassicInit::Verify)
+        }
         _ => None,
     };
     state.native.record(function)?;
@@ -158,9 +169,7 @@ pub(super) fn attempt(
             )));
     }
     if rv == fe11_sys::CKR_OK {
-        if let (Some(id), Some(kind), Some(operation)) =
-            (new_id, classic, held.as_mut())
-        {
+        if let (Some(id), Some(kind), Some(operation)) = (new_id, classic, held.as_mut()) {
             // Reborrow the prevalidated resident slots before publication. No
             // other operation can change them while possession/body are held.
             let transfer = returned.accepted_init(kind, function, &state.native);
@@ -168,13 +177,17 @@ pub(super) fn attempt(
             if let (Ok(transfer), Some(target)) = (transfer, target) {
                 call.data.operation.accept_initialization();
                 let ticket = OperationTicket {
+                    restored_companions: Vec::new(),
                     owner: session.inner.clone(),
                     uid: session.uid,
                     id,
                     validation_report: None,
                     state_provenance: None,
                 };
-                if let Err(cause) = state.operations.publish_replacement(&session.entry, id) {
+                if let Err(cause) = state
+                    .operations
+                    .publish_replacement(&session.entry, &owner, id)
+                {
                     if state.native.is_uncertain() {
                         returned.quarantine(&state.native);
                     } else {

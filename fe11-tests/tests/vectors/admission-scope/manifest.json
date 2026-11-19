@@ -1,0 +1,74 @@
+[
+  {
+    "id": "admission.Session::admission",
+    "file": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e.txt",
+    "sha256": "e9d6e33fc2fea3757c6a1e121276a412ca43028a7a1efc9b6a68b1182bd55c8e",
+    "worker_mode": "admission-scope",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read exact effective variant and fields; setters replace/clear only local override. No native calls, waiting or clock renewal by these getters/setters.",
+    "expected_native_calls": [
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Outside scope, admission() is Immediate",
+      "Inside explicit WaitUntil scope, admission() preserves exact D; cancellation.is_cancelled() is false",
+      "set_admission(Immediate); admission() is Immediate",
+      "inherit_admission(); admission() again has D. Cancel the original signal; the returned cancellation.is_cancelled() is true, proving shared cancellation behavior without private Arc access",
+      "Leave scope; admission() is Immediate"
+    ]
+  },
+  {
+    "id": "admission.AdvancedSession::admission",
+    "file": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36.txt",
+    "sha256": "bb8e95ac4a3e6eca2fce8db4b147b9d60fbf26815e3c9bf3b69d8db5f0f86c36",
+    "worker_mode": "admission-scope",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read exact effective variant and fields; setters replace/clear only local override. No native calls, waiting or clock renewal by these getters/setters.",
+    "expected_native_calls": [
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "assertions": [
+      "Outside scope, admission() is Immediate",
+      "Inside explicit WaitUntil scope, admission() preserves exact D; cancellation.is_cancelled() is false",
+      "set_admission(Immediate); admission() is Immediate",
+      "inherit_admission(); admission() again has D. Cancel the original signal; the returned cancellation.is_cancelled() is true, proving shared cancellation behavior without private Arc access",
+      "Leave scope; admission() is Immediate"
+    ]
+  }
+]

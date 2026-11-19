@@ -1,0 +1,344 @@
+[
+  {
+    "id": "generation.explicit.session.aes-extension",
+    "file": "92eef5be1a07b2d79224ca7bf7e19ea1158559e4d714799c78773c30960f952d.txt",
+    "sha256": "92eef5be1a07b2d79224ca7bf7e19ea1158559e4d714799c78773c30960f952d",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute. The returned capability encrypts/decrypts one16-byte CBC message; this usability witness is not claimed as an independent KAT.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "session"
+  },
+  {
+    "id": "generation.explicit.session.chacha-typed",
+    "file": "28d777eb4e035f02fa9c971be54ad05321994a52cb57a664a340a86f1b08dbb1.txt",
+    "sha256": "28d777eb4e035f02fa9c971be54ad05321994a52cb57a664a340a86f1b08dbb1",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "session"
+  },
+  {
+    "id": "generation.explicit.session.salsa-typed",
+    "file": "54fe6d76af6c8a9afcb3c354fce11ce8c954936068f2ec19757ba803948e4a65.txt",
+    "sha256": "54fe6d76af6c8a9afcb3c354fce11ce8c954936068f2ec19757ba803948e4a65",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "session"
+  },
+  {
+    "id": "generation.explicit.session.salsa-extension",
+    "file": "5de29ca75361ea6534aca77789f7c947c96e2f6b4f06b9e79d16dfde64636166.txt",
+    "sha256": "5de29ca75361ea6534aca77789f7c947c96e2f6b4f06b9e79d16dfde64636166",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "session"
+  },
+  {
+    "id": "generation.explicit.advanced.aes-extension",
+    "file": "48080afa5b080c6e26472e5557b0f67322ad8c97265af999aa2efbea61281af9.txt",
+    "sha256": "48080afa5b080c6e26472e5557b0f67322ad8c97265af999aa2efbea61281af9",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute. The returned capability encrypts/decrypts one16-byte CBC message; this usability witness is not claimed as an independent KAT.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "advanced"
+  },
+  {
+    "id": "generation.explicit.advanced.chacha-typed",
+    "file": "ebb9d89f3c9398ecb99178b8504c0fe67d76b4506added160969fbf87f86d159.txt",
+    "sha256": "ebb9d89f3c9398ecb99178b8504c0fe67d76b4506added160969fbf87f86d159",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "advanced"
+  },
+  {
+    "id": "generation.explicit.advanced.salsa-typed",
+    "file": "e7a6ce55954ea749573171180ef3f47abfd77bb6f8fed432981c39a29f665869.txt",
+    "sha256": "e7a6ce55954ea749573171180ef3f47abfd77bb6f8fed432981c39a29f665869",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "advanced"
+  },
+  {
+    "id": "generation.explicit.advanced.salsa-extension",
+    "file": "f2df42b2754af2aa330fd006139dbf75dea7a8b6d93da59886380bb0b1d1b81f.txt",
+    "sha256": "f2df42b2754af2aa330fd006139dbf75dea7a8b6d93da59886380bb0b1d1b81f",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "AES: exactly one owned secret AES key of length16, attributes read natively and object destroyed. Absent ChaCha/Salsa: catalogue absence then exact native MECHANISM_INVALID, no returned handle and no software substitute.",
+    "source": {
+      "type": "PKCS11 standard parameterless generation",
+      "clause": "3.2 6.10.2 (AES), ChaCha20/Salsa20 key generation"
+    },
+    "api_owner": "advanced"
+  },
+  {
+    "id": "generation.explicit.session.aes-observation-failure",
+    "file": "9d8177032328dc97a7e3352eb0d87fef739e7a017ba114635e3fd5e8e7ecbfbf.txt",
+    "sha256": "9d8177032328dc97a7e3352eb0d87fef739e7a017ba114635e3fd5e8e7ecbfbf",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Successful C_GenerateKey; independent content observation with capacity1 fails as OperationCompleted(C_GenerateKey,InputBounds::LengthBound). One native object and caller-asserted extension remainder survive. Read CLASS/KEY_TYPE/VALUE_LEN then encrypt/decrypt using the retained object and destroy it. No creation retry.",
+    "source": {
+      "type": "public Fe11 creation/observation contract",
+      "paths": [
+        "library/src/managed/creation_result.rs",
+        "library/src/managed/mutations/outputs/runner.rs",
+        "library/src/content_controls/owned/resident.rs",
+        "library/src/error/completion.rs"
+      ]
+    },
+    "observation_trace_basis": "Required CLASS/KEY_TYPE sizing+values2; PRIVATE/TOKEN sizing+values2; short CKA_VALUE sizing1; explicit subsequent attribute reads3."
+  },
+  {
+    "id": "generation.explicit.advanced.aes-observation-failure",
+    "file": "c6e38ce3e72919d71609431a539ff5546dd2d2165f87bfb4b12b8e5eed9d6a06.txt",
+    "sha256": "c6e38ce3e72919d71609431a539ff5546dd2d2165f87bfb4b12b8e5eed9d6a06",
+    "worker_mode": "extension-generation",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_EncryptInit",
+      "C_Encrypt",
+      "C_DecryptInit",
+      "C_Decrypt",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Successful C_GenerateKey; independent content observation with capacity1 fails as OperationCompleted(C_GenerateKey,InputBounds::LengthBound). One native object and caller-asserted extension remainder survive. Read CLASS/KEY_TYPE/VALUE_LEN then encrypt/decrypt using the retained object and destroy it. No creation retry.",
+    "source": {
+      "type": "public Fe11 creation/observation contract",
+      "paths": [
+        "library/src/managed/creation_result.rs",
+        "library/src/managed/mutations/outputs/runner.rs",
+        "library/src/content_controls/owned/resident.rs",
+        "library/src/error/completion.rs"
+      ]
+    },
+    "observation_trace_basis": "Required CLASS/KEY_TYPE sizing+values2; PRIVATE/TOKEN sizing+values2; short CKA_VALUE sizing1; explicit subsequent attribute reads3."
+  }
+]

@@ -71,7 +71,9 @@ def main():
     shutil.copyfile(repo / "library/examples/how_to.rs", version / "library/examples/how_to.rs")
     docs = sorted(set(repo.glob("*.md")) | set((repo / "library/docs").rglob("*.md")) |
                   set((repo / "ci").rglob("*.md")) | set((repo / "docs").rglob("*.md")) |
-                  {repo / "verify-engine/README.md", repo / "verify-engine-api/README.md"})
+                  {repo / "verify-engine/README.md", repo / "verify-engine-api/README.md",
+                   repo / "fe11-tests/README.md", repo / "fe11-tests/tests/README.md",
+                   repo / "fe11-tests/tests/vectors/CASES.md"})
     if any(p.is_symlink() or not p.resolve().is_relative_to(repo) for p in docs):
         parser.error("Documentation inputs must be regular files inside the repository")
     mapping = {p.resolve(): version / p.relative_to(repo).with_suffix(".html") for p in docs}

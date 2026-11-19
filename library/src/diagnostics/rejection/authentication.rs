@@ -14,6 +14,9 @@ pub enum AuthenticationRejection {
     AuthenticationEpochExhausted,
     /// Context authentication requires initialized operation. [Detection, owner and recovery](#cause-ContextAuthenticationRequiresInitializedOperation).
     ContextAuthenticationRequiresInitializedOperation,
+    /// The session has more than one possible target for CKU_CONTEXT_SPECIFIC.
+    /// Use session-scoped authentication when the application owns this ordering.
+    AmbiguousContextKey,
     /// Foreign authentication session. [Detection, owner and recovery](#cause-ForeignAuthenticationSession).
     ForeignAuthenticationSession,
     /// Foreign or consumed operation ticket. [Detection, owner and recovery](#cause-ForeignOrConsumedOperationTicket).
@@ -22,19 +25,18 @@ pub enum AuthenticationRejection {
     LogoutRequiresLiveSession,
     /// Missing contextual authentication. [Detection, owner and recovery](#cause-MissingContextualAuthentication).
     MissingContextualAuthentication,
-
 }
 
 impl std::fmt::Display for AuthenticationRejection {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-
             Self::PinFrameAccounting => f.write_str("PIN frame accounting"),
             Self::AuthenticationEpochChanged => f.write_str("authentication epoch changed"),
             Self::AuthenticationEpochExhausted => f.write_str("authentication epoch exhausted"),
             Self::ContextAuthenticationRequiresInitializedOperation => {
                 f.write_str("context authentication requires initialized operation")
             }
+            Self::AmbiguousContextKey => f.write_str("context authentication key is ambiguous"),
             Self::ForeignAuthenticationSession => f.write_str("foreign authentication session"),
             Self::ForeignOrConsumedOperationTicket => {
                 f.write_str("foreign or consumed operation ticket")

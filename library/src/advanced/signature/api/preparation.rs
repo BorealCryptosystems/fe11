@@ -202,7 +202,13 @@ pub(in crate::advanced::signature) fn change_with_budget(
     let mut candidate: Option<PreparedInput> = None;
     loop {
         let access = session.advanced_access()?;
-        let installed = access.operations.get(ticket.uid)?;
+        let installed = access.operations.get_ticket_with(
+            ticket.uid,
+            ticket.id,
+            crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::StaleSignatureTicket,
+            ),
+        )?;
         let mut operation = installed.lock().map_err(|_| Error::Poisoned)?;
         check_owner(&operation, session, ticket)?;
         let OperationBody::Signature(body) = &operation.body else {

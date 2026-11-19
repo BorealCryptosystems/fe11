@@ -1,0 +1,178 @@
+[
+  {
+    "id": "kem.wrong-key.session.encapsulate",
+    "file": "dd305cb01645009a14d8a1f8aaa58514f1b9edf6d5c0b7b930551e1b8dba0974.txt",
+    "sha256": "dd305cb01645009a14d8a1f8aaa58514f1b9edf6d5c0b7b930551e1b8dba0974",
+    "worker_mode": "kem-wrong-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncapsulateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact KEY_TYPE_INCONSISTENT for EncapsulateKey / UNWRAPPING_KEY_TYPE_INCONSISTENT for DecapsulateKey. Incompatible ENCAPSULATE/DECAPSULATE usage import is a separately reported prerequisite; no KEM invocation credit if it fails.",
+    "rsa_provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "rsa_fixture_sha256": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f",
+    "ciphertext_fixture": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "ciphertext_fixture_sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430"
+  },
+  {
+    "id": "kem.wrong-key.session.decapsulate",
+    "file": "31170904004ba227ce5dcfbff5421fb696c723b2fc2b7e081e98ece435450c84.txt",
+    "sha256": "31170904004ba227ce5dcfbff5421fb696c723b2fc2b7e081e98ece435450c84",
+    "worker_mode": "kem-wrong-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact KEY_TYPE_INCONSISTENT for EncapsulateKey / UNWRAPPING_KEY_TYPE_INCONSISTENT for DecapsulateKey. Incompatible ENCAPSULATE/DECAPSULATE usage import is a separately reported prerequisite; no KEM invocation credit if it fails.",
+    "rsa_provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "rsa_fixture_sha256": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f",
+    "ciphertext_fixture": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "ciphertext_fixture_sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430"
+  },
+  {
+    "id": "kem.wrong-key.advanced.encapsulate",
+    "file": "757339d0641e7d9793b5d1ad9cab2232ec63d9763bf51ede2d13a457e9f3db6e.txt",
+    "sha256": "757339d0641e7d9793b5d1ad9cab2232ec63d9763bf51ede2d13a457e9f3db6e",
+    "worker_mode": "kem-wrong-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_EncapsulateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact KEY_TYPE_INCONSISTENT for EncapsulateKey / UNWRAPPING_KEY_TYPE_INCONSISTENT for DecapsulateKey. Incompatible ENCAPSULATE/DECAPSULATE usage import is a separately reported prerequisite; no KEM invocation credit if it fails.",
+    "rsa_provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "rsa_fixture_sha256": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f",
+    "ciphertext_fixture": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "ciphertext_fixture_sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430"
+  },
+  {
+    "id": "kem.wrong-key.advanced.decapsulate",
+    "file": "7f7fc5168e01eaabe6c85d51c3e4162c0a23dd73d7e464bf826e2959493c0a26.txt",
+    "sha256": "7f7fc5168e01eaabe6c85d51c3e4162c0a23dd73d7e464bf826e2959493c0a26",
+    "worker_mode": "kem-wrong-key",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DecapsulateKey",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Exact KEY_TYPE_INCONSISTENT for EncapsulateKey / UNWRAPPING_KEY_TYPE_INCONSISTENT for DecapsulateKey. Incompatible ENCAPSULATE/DECAPSULATE usage import is a separately reported prerequisite; no KEM invocation credit if it fails.",
+    "rsa_provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Independently encoded public test data using RFC8017; RSA-AES includes unchanged RFC5649 section6 first envelope",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "rsa_fixture_sha256": "586267908466c2253bc763b6c5516f693a8aa4274bf910b66051d207ce08153f",
+    "ciphertext_fixture": "operation.CKM_ML_KEM.decapsulate@Session::decapsulate_native@ML-KEM-encapDecap-FIPS203.1.1",
+    "ciphertext_fixture_sha256": "652c775057721fcdb11f0ce5e1fd593324248f90fb59e86692c5004033959430"
+  }
+]

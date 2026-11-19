@@ -6,14 +6,35 @@ use std::{cell::Cell, num::NonZeroUsize};
 mod preparation;
 mod publication;
 
+/// Search owns its native buffers in the observation registry. A parked crypto
+/// ticket keeps its own storage while session possession serializes each call.
+fn search_access<'a>(
+    session: &'a Session,
+    progress: &crate::session::AdmissionProgress,
+) -> Result<SessionAccess<'a>> {
+    session.check_synchronous_dispatch()?;
+    let access =
+        session.advanced_access_progress(crate::session::CleanupAdmission::Ordinary, progress)?;
+    access.operations.check_search_peer(&session.entry)?;
+    Ok(access)
+}
+
 /// Native-order object iteration with a caller-sized cache.
 ///
 /// Creation copies the template and calls FindObjectsInit once. Each cache
 /// refill calls FindObjects once; a short nonempty batch does not imply that
 /// the search has ended. No attribute read or full-result collection is needed.
 /// Returned references have independent lifetimes and remain subject to the
-/// ordinary session, authentication and object invalidation rules.
+/// ordinary session and object invalidation rules. Authentication changes do
+/// not discard the cache or prevent Next/Final: the module decides whether the
+/// search remains active. Cached handles carry no proof of current visibility;
+/// operations on a private handle can fail after Logout. A closed session still
+/// invalidates the iterator, including its cached results.
 ///
+/// A refill can yield `OperationOwnershipBusy::AdvancedOperation` or
+/// `NativeOperationCallPending` while preserving its position. Advance or
+/// finish the conflicting operation, then retry. Filtering out these errors
+/// can loop indefinitely. Other refill errors terminate iteration.
 /// Call [`Self::finish`] to observe cleanup errors. Drop makes one nonwaiting
 /// admission attempt; an admitted native Final remains a synchronous call.
 /// If completion is unproven, session recovery retains native
@@ -56,10 +77,19 @@ struct Cache {
     _credit: Credit,
 }
 
+/// The batch data lives in the observation registry. This local position lets
+/// the caller resume after a contended owner without issuing Find a second time.
+#[derive(Clone, Copy)]
+enum BatchPosition {
+    Fetch,
+    Prepare(usize),
+    Publish(usize),
+}
+
 struct Cursor<'session> {
+    position: Cell<BatchPosition>,
     session: &'session Session,
     waiter: Waiting<'session>,
-    epoch: u64,
     pending: Cell<bool>,
 }
 
@@ -132,6 +162,8 @@ impl Session {
     /// of objects. The caller's current resource/session admission applies to
     /// each method invocation, including publication of the complete next batch.
     /// Retaining earlier references can consume the caller's reference quota.
+    /// A busy refill can hold catalogue access for unpublished handles across
+    /// calls, delaying mutations on this token in the same Fe11 runtime.
     /// No catalogue exclusion is held while caller code consumes a ready batch.
     pub fn iter_native_objects<'session, 'input>(
         &'session self,
@@ -222,6 +254,12 @@ impl Iterator for NativeObjectIterator<'_> {
                 self.diagnostics = None;
                 None
             }
+            Err(
+                error @ Error::Busy(crate::BusyReason::OperationOwnership(
+                    crate::OperationOwnershipBusy::AdvancedOperation
+                    | crate::OperationOwnershipBusy::NativeOperationCallPending,
+                )),
+            ) => Some(Err(error)),
             Err(error) => {
                 let mut diagnostics = self
                     .diagnostics
@@ -254,6 +292,9 @@ fn finish_cursor(cursor: &Cursor<'_>, nonwaiting: bool) -> (Result<()>, Result<(
         } else {
             session.advanced_access()?
         };
+        if cursor.pending.get() {
+            access.operations.check_search_final(&session.entry)?;
+        }
         let slot = session
             .entry
             .recovery

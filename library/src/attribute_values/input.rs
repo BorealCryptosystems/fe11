@@ -28,8 +28,9 @@ pub enum AttributeInputValue<'a> {
     /// Checked conversion to this platform's native CK_ULONG.
     Unsigned(u64),
     /// Exact bytes, including native byte strings, text or unsigned big integers.
+    /// An empty slice encodes an unspecified date for a date attribute.
     Bytes(&'a [u8]),
-    /// Exact CK_DATE bytes; no calendar policy is imposed.
+    /// Eight CK_DATE bytes, preserved verbatim even when every byte is zero.
     Date([u8; 8]),
     /// CK_VERSION major and minor bytes.
     Version(u8, u8),
@@ -130,6 +131,9 @@ fn value_size(input: &AttributeInput<'_>) -> Result<Option<usize>> {
         AttributeInputValue::Unsigned(value) => {
             native_unsigned(*value)?;
             (AttributeLayout::Unsigned, size_of::<CK_ULONG>())
+        }
+        AttributeInputValue::Bytes([]) if input.attribute.layout() == AttributeLayout::Date => {
+            (AttributeLayout::Date, 0)
         }
         AttributeInputValue::Bytes(bytes) => (AttributeLayout::Bytes, bytes.len()),
         AttributeInputValue::Date(_) => (AttributeLayout::Date, 8),

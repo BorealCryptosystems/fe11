@@ -1,0 +1,26 @@
+{
+  "ML-DSA-sigGen-FIPS204": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigGen-FIPS204/internalProjection.json",
+    "source_sha256": "72dcaf5f69853ca267ccd16af9cb40949786aca0fcfbf05d1ebeba132b93af22",
+    "git_blob_sha1": "c090942249958e2071d56bf458b19e31256ded3e",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "ML-DSA-sigVer-FIPS204": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-DSA-sigVer-FIPS204/internalProjection.json",
+    "source_sha256": "47cdd6314c7f746d02421ffcba89d4dbc7bb875ac49e07a029fdfc26fba55437",
+    "git_blob_sha1": "4c8caf12220e44dfa711fefe20e0285aaad844be",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "SLH-DSA-sigGen-FIPS205": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigGen-FIPS205/internalProjection.json",
+    "source_sha256": "62b42e7c27fda5de8a94aba2943ae413b59b6ea08141f3bc035b1eceae235dba",
+    "git_blob_sha1": "5ff182bc29ae00b02a219cf68fff370d9963a12c",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  },
+  "SLH-DSA-sigVer-FIPS205": {
+    "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SLH-DSA-sigVer-FIPS205/internalProjection.json",
+    "source_sha256": "a013fc2104f4ed4799d96d51141f65b965969b2cf10646626a021b6d456ce792",
+    "git_blob_sha1": "0805107118f6d2c171f15b005e0b2bb0ec1ddcc1",
+    "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+  }
+}

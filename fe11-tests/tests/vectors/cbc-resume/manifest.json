@@ -1,0 +1,318 @@
+[
+  {
+    "id": "symmetric.cbc.resume.encrypt.0",
+    "file": "7e2d93f72d15a7c7a2f6fdb562b706b5034d0cde5f0968df7600279449702fa7.txt",
+    "sha256": "7e2d93f72d15a7c7a2f6fdb562b706b5034d0cde5f0968df7600279449702fa7",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 0,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  },
+  {
+    "id": "symmetric.cbc.resume.encrypt.31",
+    "file": "4fa0a4074ed7e23bf79454c1da0788a62a73349fb92b0d05eba4e8e13bb52eab.txt",
+    "sha256": "4fa0a4074ed7e23bf79454c1da0788a62a73349fb92b0d05eba4e8e13bb52eab",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptUpdate",
+      "C_EncryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 31,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  },
+  {
+    "id": "symmetric.cbc.resume.encrypt.32",
+    "file": "42a0bc2ae7e78e519942fcf73e33cf44ffaf09a11ec83052e8073fad747f8031.txt",
+    "sha256": "42a0bc2ae7e78e519942fcf73e33cf44ffaf09a11ec83052e8073fad747f8031",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_EncryptInit",
+      "C_EncryptUpdate",
+      "C_EncryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 32,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  },
+  {
+    "id": "symmetric.cbc.resume.decrypt.0",
+    "file": "a7d91dd1f3ae36980e138fc877060b0102d3b7a2196db78f7d46de747b095de0.txt",
+    "sha256": "a7d91dd1f3ae36980e138fc877060b0102d3b7a2196db78f7d46de747b095de0",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 0,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  },
+  {
+    "id": "symmetric.cbc.resume.decrypt.31",
+    "file": "f2ab552779ee704cdee0d232c828e32cfa7f2afce64bdeaf2e7f775b8c582b85.txt",
+    "sha256": "f2ab552779ee704cdee0d232c828e32cfa7f2afce64bdeaf2e7f775b8c582b85",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptUpdate",
+      "C_DecryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 31,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  },
+  {
+    "id": "symmetric.cbc.resume.decrypt.32",
+    "file": "568b1a168b90942c59b8ff68e9fe2d0849d383ebed1ef1434f1eb16255da7b0a.txt",
+    "sha256": "568b1a168b90942c59b8ff68e9fe2d0849d383ebed1ef1434f1eb16255da7b0a",
+    "worker_mode": "cipher-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_DecryptInit",
+      "C_DecryptUpdate",
+      "C_DecryptFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "capacity": 32,
+    "input_bytes": 32,
+    "oracle": "Initial capacity0/31 retains exact32-byte requirement, resize then poll resumes one accepted submission without reinitialization. Capacity32 completes directly. Exact independent CBC answer and progress counters, all retained bytes unchanged through cleanup.",
+    "independent_reference": {
+      "producer": "Python cryptography AES-CBC, no padding",
+      "version": "50.0.2",
+      "known_answer_control": "operation.CKM_AES_CBC.encrypt@Session::encrypt_cipher@ACVP-AES-CBC-1.0.1.1",
+      "known_answer_source": {
+        "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-CBC-1.0/internalProjection.json",
+        "sha256": "b6d11e684b279a384f27f4f711319dc2542bbe55f568bd8f11d5567a1df4a1df",
+        "group": 1,
+        "case": 1,
+        "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+      },
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "iv_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "ciphertext_hex": "0a940bb5416ef045f1c39458c653ea5aaee71ea541d7ae4beb60becc593fb663"
+    }
+  }
+]

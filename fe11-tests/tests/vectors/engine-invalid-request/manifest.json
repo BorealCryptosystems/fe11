@@ -1,0 +1,47 @@
+[
+  {
+    "id": "engine.component.unknown-scheme",
+    "file": "da6878233cb5f957332283b17bd6816e152483ad3c18972337c13a3c412f269f.txt",
+    "sha256": "da6878233cb5f957332283b17bd6816e152483ad3c18972337c13a3c412f269f",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/RSA-SigGen-FIPS186-5/internalProjection.json",
+      "source_sha256": "cce5b78db9c68a543c482a4c9a8f7336fcd1c625629322c81b7c8888ba67564b",
+      "group": 1,
+      "case": 1,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "reused_vector": {
+      "path": "vectors/rsa/04f91812b767380151113bc39477b44477e4955e0ba467a49e20e734e122d510.txt",
+      "sha256": "04f91812b767380151113bc39477b44477e4955e0ba467a49e20e734e122d510",
+      "case": "operation.CKM_SHA256_RSA_PKCS.verify@Session::verify_native@RSA-SigGen-FIPS186-5.1.1"
+    },
+    "oracle": "Published RSA control succeeds before and after replacing only scheme with u32::MAX. Probe and verify both report INVALID_REQUEST; no output verdict is interpreted on refusal.",
+    "transformation": "Original message bytes; RSA SPKI and ECDSA DER signature are lossless public-data encodings. No engine-computed expected result.",
+    "family": "rsa"
+  }
+]

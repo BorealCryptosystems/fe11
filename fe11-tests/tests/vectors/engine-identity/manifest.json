@@ -1,0 +1,35 @@
+[
+  {
+    "id": "verify-engine.identity-mismatch",
+    "file": "2c367581056a1f0db07079d1fb57f9a9a8a761817cbc56ef00c0aa6d59a4a0d9.txt",
+    "sha256": "2c367581056a1f0db07079d1fb57f9a9a8a761817cbc56ef00c0aa6d59a4a0d9",
+    "worker_mode": "engine-choices",
+    "engine_action": "mismatch",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "positive_control": "accessor.ModuleBuilder::verify_engine",
+    "positive_control_sha256": "55beec1d4d191e45027c223c79692dc04ea0db1417798db12b93e8bc58a778cb",
+    "oracle": "Correct existing engine path, one-bit difference in expected SHA256: exact ModuleConfiguration(ModuleDigestMismatch), unchanged native call counts, explicit module close."
+  }
+]

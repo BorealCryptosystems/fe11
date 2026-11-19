@@ -1,0 +1,170 @@
+[
+  {
+    "id": "eddsa.context.ED-25519.session.ph-True.len-0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 0,
+    "oracle": "Ed25519ph/Ed448ph empty context with present-empty and NULL forms, each exact independent RFC8032 signature. Original message passed unchanged to native prehash mechanism.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "e0061d18e0e7e5abeaca5b0acb149bd6d61e7852ac1988f94036f8a994cc2681.txt",
+    "sha256": "e0061d18e0e7e5abeaca5b0acb149bd6d61e7852ac1988f94036f8a994cc2681"
+  },
+  {
+    "id": "eddsa.context.ED-25519.advanced.ph-True.len-0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-25519",
+    "prehash": true,
+    "context_bytes": 0,
+    "oracle": "Ed25519ph/Ed448ph empty context with present-empty and NULL forms, each exact independent RFC8032 signature. Original message passed unchanged to native prehash mechanism.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.1 TEST1",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "861b7ff8923e6565f278f44151cc323c745ffcaf0d0bc471ecf57c715fa49636.txt",
+    "sha256": "861b7ff8923e6565f278f44151cc323c745ffcaf0d0bc471ecf57c715fa49636"
+  },
+  {
+    "id": "eddsa.context.ED-448.session.ph-True.len-0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 0,
+    "oracle": "Ed25519ph/Ed448ph empty context with present-empty and NULL forms, each exact independent RFC8032 signature. Original message passed unchanged to native prehash mechanism.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "49c05b5ea92da78e775ee57167d442b0e840ef0a952e26cf64184e72f46e5504.txt",
+    "sha256": "49c05b5ea92da78e775ee57167d442b0e840ef0a952e26cf64184e72f46e5504"
+  },
+  {
+    "id": "eddsa.context.ED-448.advanced.ph-True.len-0",
+    "worker_mode": "edwards-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_Sign",
+      "C_SignInit",
+      "C_Sign"
+    ],
+    "curve": "ED-448",
+    "prehash": true,
+    "context_bytes": 0,
+    "oracle": "Ed25519ph/Ed448ph empty context with present-empty and NULL forms, each exact independent RFC8032 signature. Original message passed unchanged to native prehash mechanism.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc8032",
+      "section": "7.4 Blank",
+      "source_sha256": "ed63657ff389301282b169b0abde9b5dd2c7e4d524fdfa5da6ff3094fc93c4c3",
+      "notice": "Copyright (c) 2017 IETF Trust and the persons identified as the document authors. Test-vector data only; no implementation code copied."
+    },
+    "reference": "PyCryptodome3.23.0; published RFC8032 seed and empty message, generated context1/255 signatures; independent of the module OpenSSL implementation.",
+    "data_notice": "Public RFC test seed; never an operational secret.",
+    "file": "b87fca868c95b1da7a14889ce5430f3c776b59afb436e4ab4ed13bc3350506c0.txt",
+    "sha256": "b87fca868c95b1da7a14889ce5430f3c776b59afb436e4ab4ed13bc3350506c0"
+  }
+]

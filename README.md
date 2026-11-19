@@ -51,11 +51,15 @@ cover the 0.1.1 release.
 ## Compiler and integration checks
 
 Fe11 supports Rust 1.81 and is also checked with Rust 1.100 on Linux x86_64 GNU
-and Windows x86_64 MSVC. The public CI runs ten API scenarios against an
-unmodified upstream SoftHSM build on both compiler versions. See the
-[validation scope](VALIDATION.md) and [local test instructions](ci/softhsm/README.md).
+and Windows x86_64 MSVC. The [public suite](fe11-tests/README.md) provides local API contracts and native
+SoftHSM scenarios. The [validation guide](VALIDATION.md) describes the compiler
+matrix, module selection and interpretation of results.
 
 The verification packages and `fe11-sys` remain at version 0.1.0. Fe11 0.1.1
 preserves the 0.1.0 API and adds compiler/dependency compatibility checks and
 public CI tooling. [Documentation for 0.1.0](https://borealcryptosystems.github.io/fe11/0.1.0/index.html)
 remains available.
+
+## Public test suite
+
+The [fe11-tests package](fe11-tests/README.md) exercises the public API and SoftHSM interoperability. Applications depend on `fe11`. The versioned documentation site and its downloadable HTML archive provide the API reference and How To guides.

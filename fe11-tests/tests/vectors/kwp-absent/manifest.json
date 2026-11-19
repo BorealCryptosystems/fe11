@@ -1,0 +1,54 @@
+[
+  {
+    "id": "wrap.kwp-absent.session",
+    "file": "c01c9fe9d6425eecde414825e4129f56e5fa610ebbd66c0703fa607a00d1014a.txt",
+    "sha256": "c01c9fe9d6425eecde414825e4129f56e5fa610ebbd66c0703fa607a00d1014a",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey"
+    ],
+    "oracle": "Exact native CKR_MECHANISM_INVALID at C_WrapKey (may_have_effect false) and C_UnwrapKey (conservative mutation diagnostic true); no output object published. Internal non-creation cleanup proof is distinct from the public mutation effect diagnostic.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc5649#section-6",
+      "section": "6, first example",
+      "attribution": "R. Housley and M. Dworkin; Copyright2009 IETF Trust and identified authors; published numerical example"
+    }
+  },
+  {
+    "id": "wrap.kwp-absent.advanced",
+    "file": "28d6e89f74e66e28c45f461b9510fc5818c770172cd4fb51dbf49e17486057d5.txt",
+    "sha256": "28d6e89f74e66e28c45f461b9510fc5818c770172cd4fb51dbf49e17486057d5",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_UnwrapKey"
+    ],
+    "oracle": "Exact native CKR_MECHANISM_INVALID at C_WrapKey (may_have_effect false) and C_UnwrapKey (conservative mutation diagnostic true); no output object published. Internal non-creation cleanup proof is distinct from the public mutation effect diagnostic.",
+    "source": {
+      "url": "https://www.rfc-editor.org/rfc/rfc5649#section-6",
+      "section": "6, first example",
+      "attribution": "R. Housley and M. Dworkin; Copyright2009 IETF Trust and identified authors; published numerical example"
+    }
+  }
+]

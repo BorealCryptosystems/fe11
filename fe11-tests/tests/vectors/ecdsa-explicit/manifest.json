@@ -1,0 +1,70 @@
+[
+  {
+    "id": "ecdsa.explicit-domain.session",
+    "file": "026a04f4843129b42e885f0b3c5a74383b6fa414557fb9855a12d62cc8d19a5a.txt",
+    "sha256": "026a04f4843129b42e885f0b3c5a74383b6fa414557fb9855a12d62cc8d19a5a",
+    "worker_mode": "ecdsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "oracle": "Published valid P256 signature verifies with exact explicit ECParameters. The existing altered-signature negative remains required; no OID substitution.",
+    "source_vector": "operation.CKM_ECDSA.verify@Session::verify_native@ECDSA-SigGen-FIPS186-5.13.121",
+    "source_fixture_sha256": "8016996edf540ab8cb5a243063883ab677376ccfe65db67b23e9b85f88a31707",
+    "reference": "Public P256 domain constants encoded as X9.62 ECParameters using pinned PyCryptodome3.23.0 ASN.1 encoders."
+  },
+  {
+    "id": "ecdsa.explicit-domain.advanced",
+    "file": "e23c7c6dafdf023450c61e6a87e8c4b61bbe98e3259726dfc57f06f20e71a544.txt",
+    "sha256": "e23c7c6dafdf023450c61e6a87e8c4b61bbe98e3259726dfc57f06f20e71a544",
+    "worker_mode": "ecdsa-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_Verify",
+      "C_VerifyInit",
+      "C_Verify"
+    ],
+    "oracle": "Published valid P256 signature verifies with exact explicit ECParameters. The existing altered-signature negative remains required; no OID substitution.",
+    "source_vector": "operation.CKM_ECDSA.verify@AdvancedSession::verify_native@ECDSA-SigGen-FIPS186-5.13.121",
+    "source_fixture_sha256": "685b594c163e748644540f0f4a5403abd1e243777a0602c9081e87afa7369b3f",
+    "reference": "Public P256 domain constants encoded as X9.62 ECParameters using pinned PyCryptodome3.23.0 ASN.1 encoders."
+  }
+]

@@ -141,7 +141,7 @@ Local detection/handling phase and implementation owner:
 
 Local detection/handling phase and implementation owner:
 
-- `Module::initialize_observed` — `src/administration.rs`. Enclosing true branch: `access.session_ledger.has_slot(slot)? || access.session_ledger.has_retention(&cap.identity)?`.
+- `Module::initialize_observed` — `src/administration.rs`. Enclosing true branch: `!access.session_ledger.initialization_sessions_ready(slot)? || access.session_ledger.has_retention(&cap.identity)?`. Unresolved local session transitions or retained calls prevent initialization; an idle, usable local session alone does not.
 
 
 <a id="cause-TokenContextReplaced"></a>

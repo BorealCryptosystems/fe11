@@ -1,0 +1,249 @@
+[
+  {
+    "id": "digest.contract.single_abc",
+    "file": "f021e38214805d1694f19e9195027f79ed59a54ddf920420bdafb6d5aa556492.txt",
+    "sha256": "f021e38214805d1694f19e9195027f79ed59a54ddf920420bdafb6d5aa556492",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact SHA256 bytes and size for the declared input and partition.",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_Digest"
+    ]
+  },
+  {
+    "id": "digest.contract.multipart_abc",
+    "file": "7a085863928ecaca038076be8a06f29dacc1840721973378e1e98a4b7d172ece.txt",
+    "sha256": "7a085863928ecaca038076be8a06f29dacc1840721973378e1e98a4b7d172ece",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact SHA256 bytes and size for the declared input and partition.",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ]
+  },
+  {
+    "id": "digest.contract.empty_parts",
+    "file": "9e45ad17a66e74d15772d545e8a81a03647323b5621b3cf0c0e0c02ce47965a8.txt",
+    "sha256": "9e45ad17a66e74d15772d545e8a81a03647323b5621b3cf0c0e0c02ce47965a8",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact SHA256 bytes and size for the declared input and partition.",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ]
+  },
+  {
+    "id": "digest.contract.single_empty",
+    "file": "6e74d8c5bbc30e2b50b316f8c9855eab262da443b2ab0ef1a714712f970a0207.txt",
+    "sha256": "6e74d8c5bbc30e2b50b316f8c9855eab262da443b2ab0ef1a714712f970a0207",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact SHA256 bytes and size for the declared input and partition.",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_Digest"
+    ]
+  },
+  {
+    "id": "digest.contract.binary",
+    "file": "78380c07db5a493e47e9b8650bb945833ef3a64db2a1dfc524c745cde72b02d7.txt",
+    "sha256": "78380c07db5a493e47e9b8650bb945833ef3a64db2a1dfc524c745cde72b02d7",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Exact SHA256 bytes and size for the declared input and partition.",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_Digest"
+    ]
+  },
+  {
+    "id": "digest.key.Session.value",
+    "file": "1e35171bb7c8db684f567ae544b5d924b41378d981ee6ce9b7e615412256fa15.txt",
+    "sha256": "1e35171bb7c8db684f567ae544b5d924b41378d981ee6ce9b7e615412256fa15",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Digest extractable public generic-secret abc via DigestKey; exact SHA256 KAT and no C_DigestUpdate.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "worker_mode": "digest-key-identity"
+  },
+  {
+    "id": "digest.key.AdvancedSession.value",
+    "file": "4db70295d7e758c7fa0cdad9ff1be6231302fad2f41787936e2019169872818a.txt",
+    "sha256": "4db70295d7e758c7fa0cdad9ff1be6231302fad2f41787936e2019169872818a",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Digest extractable public generic-secret abc via DigestKey; exact SHA256 KAT and no C_DigestUpdate.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_DigestInit",
+      "C_DigestKey",
+      "C_DigestFinal",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "worker_mode": "digest-key-identity"
+  },
+  {
+    "id": "digest.contract.required_length",
+    "file": "79600de27be7213410e432badfa1d30c416ea92d83cf5b867055db1b4cbf4a1f.txt",
+    "sha256": "79600de27be7213410e432badfa1d30c416ea92d83cf5b867055db1b4cbf4a1f",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Required size32 observed locally with unchanged native counts/progress, capacity31 refused, capacity32 supplied, poll yields exact abc KAT without repeated Init/Update.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "worker_mode": "digest-capacity"
+  }
+]

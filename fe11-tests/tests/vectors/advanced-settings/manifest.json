@@ -1,0 +1,116 @@
+[
+  {
+    "id": "accessor.AdvancedSession::set_pacing",
+    "file": "2145a298df27d0302713e7368eda9edbe90f7f026e76be65aaf9c7c3d63fc624.txt",
+    "sha256": "2145a298df27d0302713e7368eda9edbe90f7f026e76be65aaf9c7c3d63fc624",
+    "worker_mode": "advanced-setting",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Idle: set Eager then Cooperative. No public pacing getter exists: observe Cooperative through a real digest start/poll and call_counts delta at most1 per advance; mode() remains Synchronous. With live digest ticket, set_pacing(Eager) returns Busy(OperationOwnership(AdvancedOperation)); digest continues under prior pacing.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "expected_native_calls_by_interface": {
+      "Legacy240": [
+        "C_Initialize",
+        "C_OpenSession",
+        "C_DigestInit",
+        "C_DigestUpdate",
+        "C_DigestFinal",
+        "C_CloseSession",
+        "C_Finalize"
+      ],
+      "Standard32": [
+        "C_Initialize",
+        "C_OpenSession",
+        "C_DigestInit",
+        "C_DigestUpdate",
+        "C_DigestFinal",
+        "C_CloseSession",
+        "C_Finalize"
+      ]
+    },
+    "source": "NIST SHA256 abc / NIST GCM empty input, zero AES128 key and96-bit IV; published expected bytes retained.",
+    "known_answer_fixture_sha256": "7c7ea3221f73536f2c825b019c6be3867839b1484e5c8c625035c46e0525032a"
+  },
+  {
+    "id": "accessor.AdvancedSession::set_validation_capture",
+    "file": "0ba693b9d2b024609f802e747a65ec6ea53e0c5a4856aa842a70d9dd2941265a.txt",
+    "sha256": "0ba693b9d2b024609f802e747a65ec6ea53e0c5a4856aa842a70d9dd2941265a",
+    "worker_mode": "advanced-setting",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Idle: set Disabled then Capture; setter makes no native calls and has no public getter. Observe selection through an actual completed digest ticket validation_report, retaining the selected-table flags result or exact query refusal; do not demand flags support. With live digest, attempted change returns Busy(OperationOwnership(AdvancedOperation)); original digest owner remains usable.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_GetSessionValidationFlags",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "expected_native_calls_by_interface": {
+      "Legacy240": [
+        "C_Initialize",
+        "C_OpenSession",
+        "C_DigestInit",
+        "C_DigestUpdate",
+        "C_DigestFinal",
+        "C_CloseSession",
+        "C_Finalize"
+      ],
+      "Standard32": [
+        "C_Initialize",
+        "C_OpenSession",
+        "C_DigestInit",
+        "C_DigestUpdate",
+        "C_DigestFinal",
+        "C_GetSessionValidationFlags",
+        "C_CloseSession",
+        "C_Finalize"
+      ]
+    },
+    "source": "NIST SHA256 abc / NIST GCM empty input, zero AES128 key and96-bit IV; published expected bytes retained.",
+    "known_answer_fixture_sha256": "7c7ea3221f73536f2c825b019c6be3867839b1484e5c8c625035c46e0525032a"
+  }
+]

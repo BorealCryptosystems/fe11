@@ -1,0 +1,4 @@
+RW_PUBLIC
+set_pin
+RW_PUBLIC
+CKR_OK

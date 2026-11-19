@@ -1,0 +1,302 @@
+[
+  {
+    "id": "objects.creation.same-class",
+    "file": "f97260bc5c40789b65ae093782a5c53adc006e1624bc9b3393b48d9803bb3f79.txt",
+    "sha256": "f97260bc5c40789b65ae093782a5c53adc006e1624bc9b3393b48d9803bb3f79",
+    "worker_mode": "object-contract",
+    "creation_contract": "same-class",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Identical duplicate: exact successful identity/value or TEMPLATE_INCONSISTENT.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.same-value",
+    "file": "b041cb6920ec47e8d7e9b5b9d2b18350acf0a116ba9210172a42c9a693269921.txt",
+    "sha256": "b041cb6920ec47e8d7e9b5b9d2b18350acf0a116ba9210172a42c9a693269921",
+    "worker_mode": "object-contract",
+    "creation_contract": "same-value",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Identical duplicate: exact successful identity/value or TEMPLATE_INCONSISTENT.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.conflicting-class",
+    "file": "e74416e68c526d0cdf11ba1348b0be03ff9953cde327e0b81215aedacd154e4b.txt",
+    "sha256": "e74416e68c526d0cdf11ba1348b0be03ff9953cde327e0b81215aedacd154e4b",
+    "worker_mode": "object-contract",
+    "creation_contract": "conflicting-class",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Conflicting standard values: TEMPLATE_INCONSISTENT, no returned object.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.conflicting-value",
+    "file": "057e0931a5e0aa4c26a6bacd1084cd5a488e6ba9e55c16e4b650ee3ed4ee9e67.txt",
+    "sha256": "057e0931a5e0aa4c26a6bacd1084cd5a488e6ba9e55c16e4b650ee3ed4ee9e67",
+    "worker_mode": "object-contract",
+    "creation_contract": "conflicting-value",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Conflicting standard values: TEMPLATE_INCONSISTENT, no returned object.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.public-secret-type",
+    "file": "401257475f7c494a592060ba3fe76f860bd6971cf70ccfbf3361534af8d372b5.txt",
+    "sha256": "401257475f7c494a592060ba3fe76f860bd6971cf70ccfbf3361534af8d372b5",
+    "worker_mode": "object-contract",
+    "creation_contract": "public-secret-type",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Conflicting standard values: TEMPLATE_INCONSISTENT, no returned object.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.secret-rsa-type",
+    "file": "b3faa37e1db0cec0cabc96c7f7933f9942484e0040b848a9746f7b240a24a990.txt",
+    "sha256": "b3faa37e1db0cec0cabc96c7f7933f9942484e0040b848a9746f7b240a24a990",
+    "worker_mode": "object-contract",
+    "creation_contract": "secret-rsa-type",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Conflicting standard values: TEMPLATE_INCONSISTENT, no returned object.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  },
+  {
+    "id": "objects.creation.mechanism-class",
+    "file": "4c1e2c12189103a0caa2ae1d37681ba586e81f1128f2f9f83ff4c79547838bd7.txt",
+    "sha256": "4c1e2c12189103a0caa2ae1d37681ba586e81f1128f2f9f83ff4c79547838bd7",
+    "worker_mode": "object-contract",
+    "creation_contract": "mechanism-class",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "expected_refused_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "oracle": "Absent mechanism-object class: ATTRIBUTE_VALUE_INVALID or TEMPLATE_INCONSISTENT, no returned object.",
+    "normative_basis": "PKCS11 2.40/3.0/3.2 section4.1.1(5,6); mechanism-object common attributes section4.12.2(2.40),4.13.2(3.2).",
+    "sources": [],
+    "data_notice": "Fixed public synthetic attribute values; no operational key material."
+  }
+]

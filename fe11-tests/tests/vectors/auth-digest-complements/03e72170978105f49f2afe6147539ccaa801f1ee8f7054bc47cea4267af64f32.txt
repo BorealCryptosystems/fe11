@@ -1,0 +1,4 @@
+RW_PUBLIC
+login_so_with_ro_peer
+RW_PUBLIC
+CKR_SESSION_READ_ONLY_EXISTS

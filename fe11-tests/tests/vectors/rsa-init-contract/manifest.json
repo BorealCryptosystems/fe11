@@ -1,0 +1,109 @@
+[
+  {
+    "id": "rsa.init.separate-verify-single",
+    "file": "bd0a7e7c5f4e0511625342f3db21411cb0745d938e010b516c80fee72be51eef.txt",
+    "sha256": "bd0a7e7c5f4e0511625342f3db21411cb0745d938e010b516c80fee72be51eef",
+    "worker_mode": "single-signature-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Separate C_VerifyInit followed by exactly one C_Verify over abc and its independent SHA256 PKCS1 signature; no second Init.",
+    "state": "INITIALIZED",
+    "action": "final",
+    "expected_native_calls": [
+      "C_Login",
+      "C_VerifyInit",
+      "C_Verify",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "explicit single Init then C_Sign, no SignUpdate or SignFinal",
+      "exact RSA known answer retained through close",
+      "capacity0/255 remain short,256/257 publish exactly256",
+      "no duplicated input submission on retained-call poll"
+    ]
+  },
+  {
+    "id": "rsa.init.second-sign-other-key",
+    "file": "531b6abcda81d49155b386ad21e742280569752ea8e0ded1da1598fc14219617.txt",
+    "sha256": "531b6abcda81d49155b386ad21e742280569752ea8e0ded1da1598fc14219617",
+    "worker_mode": "rsa-transition",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "state": "INITIALIZED",
+    "action": "init_other_key",
+    "oracle": "Second C_SignInit with different RSA2048 private key returns CKR_OPERATION_ACTIVE; completion must retain the original key and produce its exact independently encoded signature.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_SignInit",
+      "C_SignInit",
+      "C_SignUpdate",
+      "C_SignFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "reference": {
+      "standard": "RFC8017 section9.2 EMSA-PKCS1-v1_5 SHA256",
+      "key_source": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+      "key_fixture_sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc",
+      "derivation": "Python integer exponentiation of independently encoded EMSA blocks for empty, abc and abcabc; public exponent checks each block. No native target used to create expected signatures."
+    },
+    "assertions": [
+      "exact empty/once/twice message signature",
+      "retained input, output storage and sequence",
+      "exact native calls",
+      "independent owned result after close"
+    ],
+    "other_key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  }
+]

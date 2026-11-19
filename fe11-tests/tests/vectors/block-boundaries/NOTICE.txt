@@ -1,0 +1,1 @@
+Public AES/DES/DES3 test keys from pinned cipher vectors; provenance in manifest. Boundary outputs independently calculated with PyCryptodome3.23.0. Test keys must not be used operationally.

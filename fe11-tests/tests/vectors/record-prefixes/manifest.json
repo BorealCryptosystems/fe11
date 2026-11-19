@@ -1,0 +1,31 @@
+[
+  {
+    "id": "record.prefixes.all",
+    "file": "8ce7ee734653bb5f16252287135e9aacc90ed00e00141f4e696ff84757e34871.txt",
+    "sha256": "8ce7ee734653bb5f16252287135e9aacc90ed00e00141f4e696ff84757e34871",
+    "worker_mode": "record-parser",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Finalize"
+    ],
+    "oracle": "Every strict prefix of the complete382-byte public synthetic record: exact TruncatedRecord below17 bytes, RecordPayloadLength otherwise; no native state get/set; complete positive bytes unchanged.",
+    "prefixes": 382
+  }
+]

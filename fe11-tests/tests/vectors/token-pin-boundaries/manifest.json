@@ -1,0 +1,140 @@
+[
+  {
+    "id": "administration.token.pin_min_minus",
+    "file": "9884759353d4782fe968072f100423602aa625a4a991c82e5c3cc0753056d3ae.txt",
+    "sha256": "9884759353d4782fe968072f100423602aa625a4a991c82e5c3cc0753056d3ae",
+    "worker_mode": "token-label-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "InitToken endpoints from observed token min/max succeed; outside bounds native PIN_INCORRECT and still blank token. Separate fresh-target valid-PIN control then SO login; USER_PIN_INITIALIZED remains false. No InitPIN/SetPIN error-code conflation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_InitToken",
+      "C_InitToken",
+      "C_OpenSession",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "administration.token.pin_min",
+    "file": "b74999e99021aaded4ff9186da7e2f82259ef8cf2d28ecd8cac0715aa1377014.txt",
+    "sha256": "b74999e99021aaded4ff9186da7e2f82259ef8cf2d28ecd8cac0715aa1377014",
+    "worker_mode": "token-label-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "InitToken endpoints from observed token min/max succeed; outside bounds native PIN_INCORRECT and still blank token. Separate fresh-target valid-PIN control then SO login; USER_PIN_INITIALIZED remains false. No InitPIN/SetPIN error-code conflation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_InitToken",
+      "C_OpenSession",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "administration.token.pin_max",
+    "file": "cf9d9d61827b59391f7d16f8682dc2160f6aec43369520236464b79229921c12.txt",
+    "sha256": "cf9d9d61827b59391f7d16f8682dc2160f6aec43369520236464b79229921c12",
+    "worker_mode": "token-label-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "InitToken endpoints from observed token min/max succeed; outside bounds native PIN_INCORRECT and still blank token. Separate fresh-target valid-PIN control then SO login; USER_PIN_INITIALIZED remains false. No InitPIN/SetPIN error-code conflation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_InitToken",
+      "C_OpenSession",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  },
+  {
+    "id": "administration.token.pin_max_plus",
+    "file": "88001081469f64f99bd7ccfa0e24e46da660c92e2263d598595f4dd26d7f4967.txt",
+    "sha256": "88001081469f64f99bd7ccfa0e24e46da660c92e2263d598595f4dd26d7f4967",
+    "worker_mode": "token-label-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "InitToken endpoints from observed token min/max succeed; outside bounds native PIN_INCORRECT and still blank token. Separate fresh-target valid-PIN control then SO login; USER_PIN_INITIALIZED remains false. No InitPIN/SetPIN error-code conflation.",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_InitToken",
+      "C_InitToken",
+      "C_OpenSession",
+      "C_Login",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ]
+  }
+]

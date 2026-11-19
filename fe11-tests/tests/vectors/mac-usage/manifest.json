@@ -1,0 +1,1126 @@
+[
+  {
+    "id": "negative.CKM_MD5_HMAC.sign.usage",
+    "file": "f590d022a00d5d3cd26eaa92aead4ca800ab145d97b7e9b5cefd4a89de9c8e70.txt",
+    "sha256": "f590d022a00d5d3cd26eaa92aead4ca800ab145d97b7e9b5cefd4a89de9c8e70",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_MD5_HMAC",
+    "source": {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc2202.txt",
+      "source_sha256": "c19effeca47e801be304460da3b2fb05f595e2309abceb050e40e024868fe483",
+      "notice": "Published numerical test data; RFC attribution retained, no reference implementation copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_MD5_HMAC.verify.usage",
+    "file": "d0524265319af59f74132b9b823a417b5736ad8c8f01101454cec83a31bc8023.txt",
+    "sha256": "d0524265319af59f74132b9b823a417b5736ad8c8f01101454cec83a31bc8023",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_MD5_HMAC",
+    "source": {
+      "source_url": "https://www.rfc-editor.org/rfc/rfc2202.txt",
+      "source_sha256": "c19effeca47e801be304460da3b2fb05f595e2309abceb050e40e024868fe483",
+      "notice": "Published numerical test data; RFC attribution retained, no reference implementation copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA_1_HMAC.sign.usage",
+    "file": "8015c3ae5f29f510ca8470795785e9c4edcb36a22ef398a59c2bb2f65f3526dc.txt",
+    "sha256": "8015c3ae5f29f510ca8470795785e9c4edcb36a22ef398a59c2bb2f65f3526dc",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA_1_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha1_test.json",
+      "source_sha256": "b521c6180a862247986392d3cb49b511fc7fe790e75bee236f84e36ca290c7c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA_1_HMAC.verify.usage",
+    "file": "49ed3742286f31d6cade445a0767953750284bfe8937a776ff10bdb856e89ee7.txt",
+    "sha256": "49ed3742286f31d6cade445a0767953750284bfe8937a776ff10bdb856e89ee7",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA_1_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha1_test.json",
+      "source_sha256": "b521c6180a862247986392d3cb49b511fc7fe790e75bee236f84e36ca290c7c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA224_HMAC.sign.usage",
+    "file": "6c976600ccd3b4b83969a8b8b7ea9baafe820c3e9b8ee4dd1733540cd38a56a7.txt",
+    "sha256": "6c976600ccd3b4b83969a8b8b7ea9baafe820c3e9b8ee4dd1733540cd38a56a7",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA224_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha224_test.json",
+      "source_sha256": "9b3a2470fe5bc8aa2d3e55f19772dc1f88fda897863ed4eaa4d8536c244c320b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA224_HMAC.verify.usage",
+    "file": "d14a4c0346d804188ac6d510f39062b27bc2a92ed7510843014a837438a6622d.txt",
+    "sha256": "d14a4c0346d804188ac6d510f39062b27bc2a92ed7510843014a837438a6622d",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA224_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha224_test.json",
+      "source_sha256": "9b3a2470fe5bc8aa2d3e55f19772dc1f88fda897863ed4eaa4d8536c244c320b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA256_HMAC.sign.usage",
+    "file": "e9023ce2355fe041cc0f5f790a9879c29b23f5d48a6df0971d6151889e0b220b.txt",
+    "sha256": "e9023ce2355fe041cc0f5f790a9879c29b23f5d48a6df0971d6151889e0b220b",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA256_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha256_test.json",
+      "source_sha256": "2d201cfa61d1bf95e6f5d07d96634b4a348b31e8eaa277ad7c8d09677b7a743f",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA256_HMAC.verify.usage",
+    "file": "27875452aadf8db9b52210316add1e42711b058f176e0b8798f3135e15bb86a7.txt",
+    "sha256": "27875452aadf8db9b52210316add1e42711b058f176e0b8798f3135e15bb86a7",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA256_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha256_test.json",
+      "source_sha256": "2d201cfa61d1bf95e6f5d07d96634b4a348b31e8eaa277ad7c8d09677b7a743f",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA384_HMAC.sign.usage",
+    "file": "d56cb524f680e979cb92a42bbee50f38ff3984b69c08fc081be29b6a819e6bce.txt",
+    "sha256": "d56cb524f680e979cb92a42bbee50f38ff3984b69c08fc081be29b6a819e6bce",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA384_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha384_test.json",
+      "source_sha256": "28b9776e979dd755d852ca471043ea6cedce8b15f7a28abdf6ea9efd982b43c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA384_HMAC.verify.usage",
+    "file": "bf10eaa277a5ba8f6404cbb9396c916add8df1e8e6ae6e8cd937f07f00d5ef1f.txt",
+    "sha256": "bf10eaa277a5ba8f6404cbb9396c916add8df1e8e6ae6e8cd937f07f00d5ef1f",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA384_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha384_test.json",
+      "source_sha256": "28b9776e979dd755d852ca471043ea6cedce8b15f7a28abdf6ea9efd982b43c0",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA512_HMAC.sign.usage",
+    "file": "c2cf8f0dfb315050fd63a73a3e61a3e3462b9cc24cf0d3569877dfb75d74eb76.txt",
+    "sha256": "c2cf8f0dfb315050fd63a73a3e61a3e3462b9cc24cf0d3569877dfb75d74eb76",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA512_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha512_test.json",
+      "source_sha256": "b6c90477bdb4a6fc8ee3d1f7b2c0b69a8dfffab34718abaa6cabd71cc2ba1207",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA512_HMAC.verify.usage",
+    "file": "b531e969dfdaa58a659a667dbcb920186d2256e77901c01f759ecce5e1001916.txt",
+    "sha256": "b531e969dfdaa58a659a667dbcb920186d2256e77901c01f759ecce5e1001916",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA512_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha512_test.json",
+      "source_sha256": "b6c90477bdb4a6fc8ee3d1f7b2c0b69a8dfffab34718abaa6cabd71cc2ba1207",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_224_HMAC.sign.usage",
+    "file": "2b5710742729ed70e3b389c3653c0efd45688d837c24c91e27721c6067b80db2.txt",
+    "sha256": "2b5710742729ed70e3b389c3653c0efd45688d837c24c91e27721c6067b80db2",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA3_224_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_224_test.json",
+      "source_sha256": "b795ca6ed71afb662b3b2f8258aa6bbab6056103235301391bba8c25bf4b64ca",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_224_HMAC.verify.usage",
+    "file": "89d7428d896aaf923d01522a5a2eca8733d6c14c4a23559cdefb0709727d6a8c.txt",
+    "sha256": "89d7428d896aaf923d01522a5a2eca8733d6c14c4a23559cdefb0709727d6a8c",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA3_224_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_224_test.json",
+      "source_sha256": "b795ca6ed71afb662b3b2f8258aa6bbab6056103235301391bba8c25bf4b64ca",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_256_HMAC.sign.usage",
+    "file": "61bdd86cbeaa63109a7c07415ee8bbb06b2b1b9ca80a635f58edae8461245391.txt",
+    "sha256": "61bdd86cbeaa63109a7c07415ee8bbb06b2b1b9ca80a635f58edae8461245391",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA3_256_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_256_test.json",
+      "source_sha256": "8f1bad7c725c0f6325ea975ddd661f51663862823cd07084b230efe0f6a0ed6b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_256_HMAC.verify.usage",
+    "file": "9432ca27579aeae59e0f747fbf817d835ece32d818dd1aecc6ffe4dbcaa19fb6.txt",
+    "sha256": "9432ca27579aeae59e0f747fbf817d835ece32d818dd1aecc6ffe4dbcaa19fb6",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA3_256_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_256_test.json",
+      "source_sha256": "8f1bad7c725c0f6325ea975ddd661f51663862823cd07084b230efe0f6a0ed6b",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_384_HMAC.sign.usage",
+    "file": "94c78d862532949888493f8727febf85b08c1c57cffc9f45f181a77a8715d535.txt",
+    "sha256": "94c78d862532949888493f8727febf85b08c1c57cffc9f45f181a77a8715d535",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA3_384_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_384_test.json",
+      "source_sha256": "66423781ae4aa991b8b457b7736659604fffd46688001ca749f444da18f06728",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_384_HMAC.verify.usage",
+    "file": "727d53cd6c6ffe327d665d0e288c448096ee7522186e6a30b513821020f67b11.txt",
+    "sha256": "727d53cd6c6ffe327d665d0e288c448096ee7522186e6a30b513821020f67b11",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA3_384_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_384_test.json",
+      "source_sha256": "66423781ae4aa991b8b457b7736659604fffd46688001ca749f444da18f06728",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_512_HMAC.sign.usage",
+    "file": "5c34496b35fb3661dd7b1f4558a1f7c42b0637247ab652fb7b33cbb0d3673758.txt",
+    "sha256": "5c34496b35fb3661dd7b1f4558a1f7c42b0637247ab652fb7b33cbb0d3673758",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_SHA3_512_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_512_test.json",
+      "source_sha256": "60cd4c3be286a9c6ce49d93ce6901762e3cd0ebbfc4f08ccfd5f2b595c641860",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_SHA3_512_HMAC.verify.usage",
+    "file": "b35537278a65fe64216d000f24f884225f65412abc86fe09915218a8fe972e0a.txt",
+    "sha256": "b35537278a65fe64216d000f24f884225f65412abc86fe09915218a8fe972e0a",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_SHA3_512_HMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/hmac_sha3_512_test.json",
+      "source_sha256": "60cd4c3be286a9c6ce49d93ce6901762e3cd0ebbfc4f08ccfd5f2b595c641860",
+      "group": 0,
+      "case": 1,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_CMAC.sign.usage",
+    "file": "5093ff22e04340c9e06b9e277910174d117b40b226b61f39164c6057839dd7da.txt",
+    "sha256": "5093ff22e04340c9e06b9e277910174d117b40b226b61f39164c6057839dd7da",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_DES3_CMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/CMAC-TDES-1.0/internalProjection.json",
+      "source_sha256": "623dc6c474b404f3628e2c7df829c519fa51f543dc6cc16c7009352a1ebd2320",
+      "group": 3,
+      "case": 17,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_DES3_CMAC.verify.usage",
+    "file": "fb729577c7cea06974b73029d09b193332a0236ce2e23ea6b463537563a11ef4.txt",
+    "sha256": "fb729577c7cea06974b73029d09b193332a0236ce2e23ea6b463537563a11ef4",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_DES3_CMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/CMAC-TDES-1.0/internalProjection.json",
+      "source_sha256": "623dc6c474b404f3628e2c7df829c519fa51f543dc6cc16c7009352a1ebd2320",
+      "group": 3,
+      "case": 17,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_AES_CMAC.sign.usage",
+    "file": "59a30dccd1626f3a651b530c3ef99619ff7b975001d1b79d0bd4751a96a9daf9.txt",
+    "sha256": "59a30dccd1626f3a651b530c3ef99619ff7b975001d1b79d0bd4751a96a9daf9",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_SignInit"
+    },
+    "expected_native_calls": [
+      "C_SignInit",
+      "C_SignInit"
+    ],
+    "mechanism": "CKM_AES_CMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/CMAC-AES-1.0/internalProjection.json",
+      "source_sha256": "85d9ed8665bd9d676815a8fe41326738e099e966260422187e0453643448411f",
+      "group": 3,
+      "case": 17,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "parameter_change": "Only CKA_SIGN set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  },
+  {
+    "id": "negative.CKM_AES_CMAC.verify.usage",
+    "file": "05793a09db92ee87c51b787d8a73efe2a13dc66e0c28b91f83b415cb8cfc6125.txt",
+    "sha256": "05793a09db92ee87c51b787d8a73efe2a13dc66e0c28b91f83b415cb8cfc6125",
+    "worker_mode": "mac-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": {
+      "codes": [
+        "CKR_KEY_FUNCTION_NOT_PERMITTED"
+      ],
+      "producer": "C_VerifyInit"
+    },
+    "expected_native_calls": [
+      "C_VerifyInit",
+      "C_VerifyInit"
+    ],
+    "mechanism": "CKM_AES_CMAC",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/CMAC-AES-1.0/internalProjection.json",
+      "source_sha256": "85d9ed8665bd9d676815a8fe41326738e099e966260422187e0453643448411f",
+      "group": 3,
+      "case": 17,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "parameter_change": "Only CKA_VERIFY set false",
+    "message_modes": [
+      "Single",
+      "Multipart"
+    ]
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "wrap.contract.session.nonextractable",
+    "file": "8669e091581948cc03e09f7ac493c92d4c87f699a98385faf905d820621e1f9f.txt",
+    "sha256": "8669e091581948cc03e09f7ac493c92d4c87f699a98385faf905d820621e1f9f",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey"
+    ],
+    "oracle": "Native C_WrapKey rejects nonextractable target with CKR_KEY_UNEXTRACTABLE or wrap-with-trusted target/untrusted KEK with CKR_KEY_NOT_WRAPPABLE; may_have_effect false and no envelope.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  },
+  {
+    "id": "wrap.contract.session.untrusted",
+    "file": "73dbbabde96fedd8aeafbf164656f4c0969769ff60ce43c5d707c858da7be1de.txt",
+    "sha256": "73dbbabde96fedd8aeafbf164656f4c0969769ff60ce43c5d707c858da7be1de",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey"
+    ],
+    "oracle": "Native C_WrapKey rejects nonextractable target with CKR_KEY_UNEXTRACTABLE or wrap-with-trusted target/untrusted KEK with CKR_KEY_NOT_WRAPPABLE; may_have_effect false and no envelope.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  },
+  {
+    "id": "wrap.contract.session.capacity",
+    "file": "115a02f5913dfc828417da6e15d78dfb747ada7f10529f9411c68a8b61d19026.txt",
+    "sha256": "115a02f5913dfc828417da6e15d78dfb747ada7f10529f9411c68a8b61d19026",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey"
+    ],
+    "oracle": "Four explicit independent native wraps with0,L-1,L,L+1 capacity. Short errors retain exact required/supplied sizes and CKR_BUFFER_TOO_SMALL; exact/oversized outputs match ACVP bytes. No sizing query or automatic retry claimed.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  },
+  {
+    "id": "wrap.contract.advanced.nonextractable",
+    "file": "128a6179caf736ada479ae8f52bb720e8ebceb570c3453a742270183e43374b2.txt",
+    "sha256": "128a6179caf736ada479ae8f52bb720e8ebceb570c3453a742270183e43374b2",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey"
+    ],
+    "oracle": "Native C_WrapKey rejects nonextractable target with CKR_KEY_UNEXTRACTABLE or wrap-with-trusted target/untrusted KEK with CKR_KEY_NOT_WRAPPABLE; may_have_effect false and no envelope.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  },
+  {
+    "id": "wrap.contract.advanced.untrusted",
+    "file": "2c0fbc7bb77dde724c5f9c4efa51e0dbcf0b846853e28ac15a32334b32e0c0bc.txt",
+    "sha256": "2c0fbc7bb77dde724c5f9c4efa51e0dbcf0b846853e28ac15a32334b32e0c0bc",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey"
+    ],
+    "oracle": "Native C_WrapKey rejects nonextractable target with CKR_KEY_UNEXTRACTABLE or wrap-with-trusted target/untrusted KEK with CKR_KEY_NOT_WRAPPABLE; may_have_effect false and no envelope.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  },
+  {
+    "id": "wrap.contract.advanced.capacity",
+    "file": "4d4f6e74bbb10abd84cf8b36a84b5d13af73d808d7e2d2fc44fd5e53250b5976.txt",
+    "sha256": "4d4f6e74bbb10abd84cf8b36a84b5d13af73d808d7e2d2fc44fd5e53250b5976",
+    "worker_mode": "key-wrap-vector",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_WrapKey"
+    ],
+    "oracle": "Four explicit independent native wraps with0,L-1,L,L+1 capacity. Short errors retain exact required/supplied sizes and CKR_BUFFER_TOO_SMALL; exact/oversized outputs match ACVP bytes. No sizing query or automatic retry claimed.",
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ACVP-AES-KW-1.0/internalProjection.json",
+      "source_sha256": "f3307d3245bd30ab284fb04df2f24802a3a89de437416bd429426669dc56ff89",
+      "subset_sha256": "1c110f73f9d8867e9670bc92e140c3726cd655e4a29de5a94cd51ee7e3e87b64",
+      "license": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "control_fixture_sha256": "12fc27b5ce5f8835b8608e38dbfc0f8384a51164ec7cf0dbe00d4dae36ca3ec0"
+  }
+]

@@ -1,0 +1,4 @@
+RW_PUBLIC
+close_last
+RW_PUBLIC
+CKR_OK

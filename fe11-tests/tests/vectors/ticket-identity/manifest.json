@@ -1,0 +1,1161 @@
+[
+  {
+    "id": "identity-entry.Session::provide_digest_output_capacity.foreign",
+    "file": "e5200ed039f856508418468ff8a1e55b1fd033463c54620171745d7a7e655801.txt",
+    "sha256": "e5200ed039f856508418468ff8a1e55b1fd033463c54620171745d7a7e655801",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::provide_digest_output_capacity.consumed",
+    "file": "2e6d60a13fcd789c2808aecf127af8503116cc8d87f3c1d8ed3bef7d31e0cb3c.txt",
+    "sha256": "2e6d60a13fcd789c2808aecf127af8503116cc8d87f3c1d8ed3bef7d31e0cb3c",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::provide_extension_digest_output_capacity.foreign",
+    "file": "a49c8727129f761223f6604afb31f902597391a605b5dd672171da1ed567272c.txt",
+    "sha256": "a49c8727129f761223f6604afb31f902597391a605b5dd672171da1ed567272c",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::provide_extension_digest_output_capacity.consumed",
+    "file": "f64deb4a6c2a40a553174d232d1b3eb3c2c859a3fe743934224111de65e8e47c.txt",
+    "sha256": "f64deb4a6c2a40a553174d232d1b3eb3c2c859a3fe743934224111de65e8e47c",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::resize_aes_output.foreign",
+    "file": "514d4aa86c9e25f26f39277299c5322b3bcc067b3c1a3b95b7e8b7234c425a3a.txt",
+    "sha256": "514d4aa86c9e25f26f39277299c5322b3bcc067b3c1a3b95b7e8b7234c425a3a",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::resize_aes_output.consumed",
+    "file": "58cff09ef07af572bba680848d2cd1788e5be186a462af4dad5528711e3b5152.txt",
+    "sha256": "58cff09ef07af572bba680848d2cd1788e5be186a462af4dad5528711e3b5152",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::resize_cipher_output.foreign",
+    "file": "50083ae4895b321f9107e63b1c79c4f57acf5ae0fef6df90b93d87bb9877a2d6.txt",
+    "sha256": "50083ae4895b321f9107e63b1c79c4f57acf5ae0fef6df90b93d87bb9877a2d6",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::resize_cipher_output.consumed",
+    "file": "b1bdb0720db99becfa1b676a8e06ffa84dce263fb3437a974fa52cb9875f5a39.txt",
+    "sha256": "b1bdb0720db99becfa1b676a8e06ffa84dce263fb3437a974fa52cb9875f5a39",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::prepare_aead_message_output.foreign",
+    "file": "5add8542c3d6457554322090a9979bd5910973ed32392ecf9008403835c97cf0.txt",
+    "sha256": "5add8542c3d6457554322090a9979bd5910973ed32392ecf9008403835c97cf0",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedAeadMessageTicket))",
+    "parameters": {
+      "capacity": 16
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::provide_signature_output_capacity.foreign",
+    "file": "4b8ebfee74a67cd4992d0a6f6a5c6f61e5b8c56553251682f50a3889d4cee892.txt",
+    "sha256": "4b8ebfee74a67cd4992d0a6f6a5c6f61e5b8c56553251682f50a3889d4cee892",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedSignatureTicket))",
+    "parameters": {
+      "capacity": 256
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::provide_signature_output_capacity.consumed",
+    "file": "d94de849874011bde25e0d74ff69add157e66bc7142cebf718cef630beeb10a2.txt",
+    "sha256": "d94de849874011bde25e0d74ff69add157e66bc7142cebf718cef630beeb10a2",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedSignatureTicket))",
+    "parameters": {
+      "capacity": 256
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::digest_update.foreign",
+    "file": "e38ef7188ab3bee4d28f98553b8407e67bf35bfd0e115088edf182298c20241f.txt",
+    "sha256": "e38ef7188ab3bee4d28f98553b8407e67bf35bfd0e115088edf182298c20241f",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "bytes_hex": "64",
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 1
+      }
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.Session::digest_update.consumed",
+    "file": "ec9b0eef5fce4fc977e1b92cdaa817f66fe6d7c1bace1a239357e4c1ad24dd91.txt",
+    "sha256": "ec9b0eef5fce4fc977e1b92cdaa817f66fe6d7c1bace1a239357e4c1ad24dd91",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "bytes_hex": "64",
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 1
+      }
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_digest_output_capacity.foreign",
+    "file": "852ee4f412f308d808b763d00673a333a47b59585368930eda4dde68055480af.txt",
+    "sha256": "852ee4f412f308d808b763d00673a333a47b59585368930eda4dde68055480af",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_digest_output_capacity.consumed",
+    "file": "081a5f0222571b9cc9cfe433b5641467943a32557e24031b1906a83b3d24d522.txt",
+    "sha256": "081a5f0222571b9cc9cfe433b5641467943a32557e24031b1906a83b3d24d522",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_extension_digest_output_capacity.foreign",
+    "file": "a9eecec3c14e7d422647404d909a01b0ae4e4eaaa590449ab84f83712fa2be6e.txt",
+    "sha256": "a9eecec3c14e7d422647404d909a01b0ae4e4eaaa590449ab84f83712fa2be6e",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_extension_digest_output_capacity.consumed",
+    "file": "9409116795806128ab7ef65678272bda50b57de8d063d13a95c1877d921b4bab.txt",
+    "sha256": "9409116795806128ab7ef65678272bda50b57de8d063d13a95c1877d921b4bab",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::resize_aes_output.foreign",
+    "file": "9ed20760c2bff92f8a6064a2abb577d40c8c9cd02cb95ecea6afb4573c7d0cba.txt",
+    "sha256": "9ed20760c2bff92f8a6064a2abb577d40c8c9cd02cb95ecea6afb4573c7d0cba",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::resize_aes_output.consumed",
+    "file": "c3cc00a2128e6a0cd6e10e74f17a13b6a890ab1d0a67755c997f988d51e3b8b1.txt",
+    "sha256": "c3cc00a2128e6a0cd6e10e74f17a13b6a890ab1d0a67755c997f988d51e3b8b1",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::resize_cipher_output.foreign",
+    "file": "e81904ab5a3e13fa5758aae97b0ef01cb39fc82a75cd958549d8e80c14654c66.txt",
+    "sha256": "e81904ab5a3e13fa5758aae97b0ef01cb39fc82a75cd958549d8e80c14654c66",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::resize_cipher_output.consumed",
+    "file": "c7c5fcc1ad6064d13ee36b68842eaf7c2ec02a7d5793e0487d3a72632caa5614.txt",
+    "sha256": "c7c5fcc1ad6064d13ee36b68842eaf7c2ec02a7d5793e0487d3a72632caa5614",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedCipherTicket))",
+    "parameters": {
+      "capacity": 32
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::prepare_aead_message_output.foreign",
+    "file": "e09e45a927cf238ec07ff93c030c8db6be64d2475ab9f4d21a9d6a684d2ce032.txt",
+    "sha256": "e09e45a927cf238ec07ff93c030c8db6be64d2475ab9f4d21a9d6a684d2ce032",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedAeadMessageTicket))",
+    "parameters": {
+      "capacity": 16
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::prepare_aead_message_output.consumed",
+    "file": "c00a601795fb0160b66c07346802aa2fff97e42a9d03620d5734744beaff7a50.txt",
+    "sha256": "c00a601795fb0160b66c07346802aa2fff97e42a9d03620d5734744beaff7a50",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedAeadMessageTicket))",
+    "parameters": {
+      "capacity": 16
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_signature_output_capacity.foreign",
+    "file": "926d7f53adcd80d3ff05320402d000a29caa5da4fd889e8200ceed38d012a938.txt",
+    "sha256": "926d7f53adcd80d3ff05320402d000a29caa5da4fd889e8200ceed38d012a938",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedSignatureTicket))",
+    "parameters": {
+      "capacity": 256
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::provide_signature_output_capacity.consumed",
+    "file": "8d324189c29faf77f3f61e6270b0b45c8f423905ce4603ab9715112ee71cbf51.txt",
+    "sha256": "8d324189c29faf77f3f61e6270b0b45c8f423905ce4603ab9715112ee71cbf51",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedSignatureTicket))",
+    "parameters": {
+      "capacity": 256
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::digest_update.foreign",
+    "file": "84f6a1f083cf938d94c30bc269420291d19a831d7a84bfb141ed77f255aaf099.txt",
+    "sha256": "84f6a1f083cf938d94c30bc269420291d19a831d7a84bfb141ed77f255aaf099",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "bytes_hex": "64",
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 1
+      }
+    },
+    "partition": "foreign",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-entry.AdvancedSession::digest_update.consumed",
+    "file": "52cf94f36852269d34355fcd43e9249760517700988ed9720c8f12c12e9380fc.txt",
+    "sha256": "52cf94f36852269d34355fcd43e9249760517700988ed9720c8f12c12e9380fc",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {
+      "bytes_hex": "64",
+      "limits": {
+        "maximum_parts": 1,
+        "maximum_total_bytes": 1
+      }
+    },
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.Session::finish_digest",
+    "file": "c589a67238ded31fa2f9c10626c93f3876d2812555c71599df3f0e143074bb2f.txt",
+    "sha256": "c589a67238ded31fa2f9c10626c93f3876d2812555c71599df3f0e143074bb2f",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.Session::finish_native_digest",
+    "file": "0fdeeabe68b0e7f5d830541d8602ad0eb04ddeadae0a766ebd85bd51301d51cf.txt",
+    "sha256": "0fdeeabe68b0e7f5d830541d8602ad0eb04ddeadae0a766ebd85bd51301d51cf",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.Session::finish_extension_digest_stream",
+    "file": "3e7f61d0037f224ca882ec51c918e1c196ce7e54b8340a0551484de4796f9bf7.txt",
+    "sha256": "3e7f61d0037f224ca882ec51c918e1c196ce7e54b8340a0551484de4796f9bf7",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.AdvancedSession::finish_digest",
+    "file": "a9663549321e3a1b228de572e418eae3ba26439fae3c4c038d5a00f1e31f66ee.txt",
+    "sha256": "a9663549321e3a1b228de572e418eae3ba26439fae3c4c038d5a00f1e31f66ee",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.AdvancedSession::finish_native_digest",
+    "file": "2e3c8fe57f66ba1ee82846bf126bccb42ba726944cb655f82156ea8a47c2b698.txt",
+    "sha256": "2e3c8fe57f66ba1ee82846bf126bccb42ba726944cb655f82156ea8a47c2b698",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  },
+  {
+    "id": "identity-consumed.AdvancedSession::finish_extension_digest_stream",
+    "file": "83a3d60ce3f27d9e5eac0f10cfbf32b8e5e37df1bb8fa676c6a0b091f126536a.txt",
+    "sha256": "83a3d60ce3f27d9e5eac0f10cfbf32b8e5e37df1bb8fa676c6a0b091f126536a",
+    "worker_mode": "ticket-identity",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Rejected(OperationOwnership(ForeignOrConsumedDigestTicket))",
+    "parameters": {},
+    "partition": "consumed",
+    "expected_native_calls": [
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal"
+    ],
+    "continuation": "For foreign tickets, resume through the original owner and compare SHA-256(abc); for consumed tickets, compare the published digest before the attempted action"
+  }
+]

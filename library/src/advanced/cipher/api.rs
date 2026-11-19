@@ -27,17 +27,35 @@ impl Session {
     /// Dropping this ticket does not cancel work. Explicit session close remains
     /// available if continuation is unwanted or native cancellation is unavailable.
     pub fn take_cipher_ticket(&self) -> Result<OperationTicket> {
+        self.take_cipher_direction(None)
+    }
+
+    pub(in crate::advanced) fn take_cipher_direction(
+        &self,
+        direction: Option<fe11_sys::CK_FLAGS>,
+    ) -> Result<OperationTicket> {
         let access = self.advanced_access()?;
-        let held = access.operations.get(self.uid)?;
+        let held = access.operations.parked_cell(self.uid, |operation| {
+            matches!(
+                &operation.body, OperationBody::Cipher(body) if body.parked_for_session()
+                    && direction.map_or(true, |value| value == body.category())
+            )
+        })?;
         let mut operation = held.lock().map_err(|_| Error::Poisoned)?;
         let OperationBody::Cipher(body) = &mut operation.body else {
             return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
                 crate::OperationOwnershipRejection::CipherTicketRequired,
             )));
         };
+        if direction.is_some_and(|value| value != body.category()) {
+            return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(
+                crate::OperationOwnershipRejection::CipherTicketRequired,
+            )));
+        }
         // A revoked key must not prevent recovering the owner for cleanup.
         body.take_observer()?;
         Ok(OperationTicket {
+            restored_companions: Vec::new(),
             owner: self.inner.clone(),
             uid: self.uid,
             id: operation.id,
@@ -161,7 +179,13 @@ impl Session {
         let mut released = crate::advanced::poll::ReleasedInputs::default();
         let access = self.advanced_access()?;
         {
-            let held = access.operations.get(self.uid)?;
+            let held = access.operations.get_ticket_with(
+                self.uid,
+                ticket.id,
+                crate::RejectionReason::OperationOwnership(
+                    crate::OperationOwnershipRejection::CipherTicketRequired,
+                ),
+            )?;
             let operation = held.lock().map_err(|_| Error::Poisoned)?;
             if operation.id != ticket.id || !matches!(&operation.body, OperationBody::Cipher(_)) {
                 return Err(Error::Rejected(crate::RejectionReason::OperationOwnership(

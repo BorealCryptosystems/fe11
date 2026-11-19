@@ -1,0 +1,158 @@
+[
+  {
+    "id": "NativeKemResult-debug",
+    "positive": {
+      "file": "NativeKemResult-debug-positive.rs",
+      "sha256": "4c071af96cdf6374764cbcee9a0d91a576ac18f7118f2a7e776f68cdcdf9c90a"
+    },
+    "negative": {
+      "file": "NativeKemResult-debug-negative.rs",
+      "sha256": "46a2d105a760020ac51bd7fd84113a95fdc38f81276c1a2461dcc2147993fa75",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeKemResult-clone",
+    "positive": {
+      "file": "NativeKemResult-clone-positive.rs",
+      "sha256": "4c071af96cdf6374764cbcee9a0d91a576ac18f7118f2a7e776f68cdcdf9c90a"
+    },
+    "negative": {
+      "file": "NativeKemResult-clone-negative.rs",
+      "sha256": "b3e6ba3b37f81ef6e2169587058587769d3c8cea988edc034ab8b88660acd276",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeOtpResult-debug",
+    "positive": {
+      "file": "NativeOtpResult-debug-positive.rs",
+      "sha256": "b3887a10f53483752768604532effac1610f3211b8fed2b102d0c24be45aa9fd"
+    },
+    "negative": {
+      "file": "NativeOtpResult-debug-negative.rs",
+      "sha256": "bbd19a8e97651362069a4ae9ae8bd39cadb1ddbeefa12195cde15f94bf50e3c6",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeOtpResult-clone",
+    "positive": {
+      "file": "NativeOtpResult-clone-positive.rs",
+      "sha256": "b3887a10f53483752768604532effac1610f3211b8fed2b102d0c24be45aa9fd"
+    },
+    "negative": {
+      "file": "NativeOtpResult-clone-negative.rs",
+      "sha256": "e88eb74fca764cb5314b3498c54a7bc0880416ba9fe29eb22ae3df87f597ecf7",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeMessageResult-debug",
+    "positive": {
+      "file": "NativeMessageResult-debug-positive.rs",
+      "sha256": "1bbe8ce7f46a74ed3fae549bc2057e21692f720a2743b634b81bcf0ca08147a1"
+    },
+    "negative": {
+      "file": "NativeMessageResult-debug-negative.rs",
+      "sha256": "3c5a3e4bd3c56f40c1b0f9f5d04697708f12ec9703def23678a5f9366b10d15f",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeMessageResult-clone",
+    "positive": {
+      "file": "NativeMessageResult-clone-positive.rs",
+      "sha256": "1bbe8ce7f46a74ed3fae549bc2057e21692f720a2743b634b81bcf0ca08147a1"
+    },
+    "negative": {
+      "file": "NativeMessageResult-clone-negative.rs",
+      "sha256": "b6ca0b786080c2096a26bfdfc33a3e5df4ccc588e7080b431eb80205ef9734e2",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeMessageResults-debug",
+    "positive": {
+      "file": "NativeMessageResults-debug-positive.rs",
+      "sha256": "e573a75ef6d485927955a3a405d117633640ac0c9bc263abb340b791c3302aa5"
+    },
+    "negative": {
+      "file": "NativeMessageResults-debug-negative.rs",
+      "sha256": "882ebbf2daca9e431a9a3859c0040a0247af75bf6499f2098950258c0a62f863",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "NativeMessageResults-clone",
+    "positive": {
+      "file": "NativeMessageResults-clone-positive.rs",
+      "sha256": "e573a75ef6d485927955a3a405d117633640ac0c9bc263abb340b791c3302aa5"
+    },
+    "negative": {
+      "file": "NativeMessageResults-clone-negative.rs",
+      "sha256": "1cc23b7bee9d7e3c5b0ca707a258965158b73b4c34a6b87b381707e7a51a4412",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "DeclaredGcmMessage-debug",
+    "positive": {
+      "file": "DeclaredGcmMessage-debug-positive.rs",
+      "sha256": "89d270bb6d6eff398cf81816a4843924c998c3ea813ccee797e2e52c52bd8e57"
+    },
+    "negative": {
+      "file": "DeclaredGcmMessage-debug-negative.rs",
+      "sha256": "d640e2f7be784b85f8bb9104def8dd2d94b5961d94c3c701d8cf9f4493d887c8",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "DeclaredGcmMessage-clone",
+    "positive": {
+      "file": "DeclaredGcmMessage-clone-positive.rs",
+      "sha256": "89d270bb6d6eff398cf81816a4843924c998c3ea813ccee797e2e52c52bd8e57"
+    },
+    "negative": {
+      "file": "DeclaredGcmMessage-clone-negative.rs",
+      "sha256": "0b73a54c14663b06c982175643fad76e37a5a86894a50da7a3a4b4f2787508f6",
+      "code": "E0599",
+      "line": 3
+    }
+  },
+  {
+    "id": "DeclaredGcmMessages-debug",
+    "positive": {
+      "file": "DeclaredGcmMessages-debug-positive.rs",
+      "sha256": "8019911306b3469542bb6ecf9c0bc5dd6c5d82185d909f7b3e634707fffc478e"
+    },
+    "negative": {
+      "file": "DeclaredGcmMessages-debug-negative.rs",
+      "sha256": "2445faec1abc06ada44a9a0e32a945d2a415244057adcfdc35439ba7b100db67",
+      "code": "E0277",
+      "line": 3
+    }
+  },
+  {
+    "id": "DeclaredGcmMessages-clone",
+    "positive": {
+      "file": "DeclaredGcmMessages-clone-positive.rs",
+      "sha256": "8019911306b3469542bb6ecf9c0bc5dd6c5d82185d909f7b3e634707fffc478e"
+    },
+    "negative": {
+      "file": "DeclaredGcmMessages-clone-negative.rs",
+      "sha256": "b6686616e00c55b86f809cd80700b6741c3c4ba568920b8e25f39e27843431c6",
+      "code": "E0599",
+      "line": 3
+    }
+  }
+]

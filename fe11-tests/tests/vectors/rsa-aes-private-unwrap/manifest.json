@@ -1,0 +1,395 @@
+[
+  {
+    "id": "rsa-aes.unwrap.rsa-private.128",
+    "file": "f0e73af180ba3548390a023c158f53664b948ccf315703878d7f115444bc417c.txt",
+    "sha256": "f0e73af180ba3548390a023c158f53664b948ccf315703878d7f115444bc417c",
+    "worker_mode": "rsa-aes-private-unwrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_UnwrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Unwrap the independently encoded RSA private key, sign abc and compare with its exact RFC 8017 signature. Disable CKA_UNWRAP on the transport key and require CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 128,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    }
+  },
+  {
+    "id": "rsa-aes.unwrap.rsa-private.192",
+    "file": "a70736eaa7069000b90775e55d12aa4118174192d97d21d200e5140e4139d097.txt",
+    "sha256": "a70736eaa7069000b90775e55d12aa4118174192d97d21d200e5140e4139d097",
+    "worker_mode": "rsa-aes-private-unwrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_UnwrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Unwrap the independently encoded RSA private key, sign abc and compare with its exact RFC 8017 signature. Disable CKA_UNWRAP on the transport key and require CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 192,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    }
+  },
+  {
+    "id": "rsa-aes.unwrap.rsa-private.256",
+    "file": "06989b4805e49766d113814490370b05f7d1c6521c4d701a113868f522644d2c.txt",
+    "sha256": "06989b4805e49766d113814490370b05f7d1c6521c4d701a113868f522644d2c",
+    "worker_mode": "rsa-aes-private-unwrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_UnwrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Unwrap the independently encoded RSA private key, sign abc and compare with its exact RFC 8017 signature. Disable CKA_UNWRAP on the transport key and require CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 256,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    }
+  },
+  {
+    "id": "rsa-aes.wrap.rsa-private.128",
+    "file": "f0e73af180ba3548390a023c158f53664b948ccf315703878d7f115444bc417c.txt",
+    "sha256": "f0e73af180ba3548390a023c158f53664b948ccf315703878d7f115444bc417c",
+    "worker_mode": "rsa-aes-private-wrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_WrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Verify the recovered RSA private key by signing abc. Independently decode the native RSA-AES envelope and compare the full PKCS#8 digest. A public key with wrapping disabled must receive CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 128,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    },
+    "reference_sources": {
+      "rsa_private_wrap_reference.py": "61ada67e90ed62b36731b61c96fc174fcbc3d990426de6dcc0471212822cfe54",
+      "rsa_reference.py": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc"
+    }
+  },
+  {
+    "id": "rsa-aes.wrap.rsa-private.192",
+    "file": "a70736eaa7069000b90775e55d12aa4118174192d97d21d200e5140e4139d097.txt",
+    "sha256": "a70736eaa7069000b90775e55d12aa4118174192d97d21d200e5140e4139d097",
+    "worker_mode": "rsa-aes-private-wrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_WrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Verify the recovered RSA private key by signing abc. Independently decode the native RSA-AES envelope and compare the full PKCS#8 digest. A public key with wrapping disabled must receive CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 192,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    },
+    "reference_sources": {
+      "rsa_private_wrap_reference.py": "61ada67e90ed62b36731b61c96fc174fcbc3d990426de6dcc0471212822cfe54",
+      "rsa_reference.py": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc"
+    }
+  },
+  {
+    "id": "rsa-aes.wrap.rsa-private.256",
+    "file": "06989b4805e49766d113814490370b05f7d1c6521c4d701a113868f522644d2c.txt",
+    "sha256": "06989b4805e49766d113814490370b05f7d1c6521c4d701a113868f522644d2c",
+    "worker_mode": "rsa-aes-private-wrap",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "producer": "C_WrapKey",
+    "code": 104,
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_UnwrapKey",
+      "C_SignInit",
+      "C_Sign",
+      "C_WrapKey",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "oracle": "Verify the recovered RSA private key by signing abc. Independently decode the native RSA-AES envelope and compare the full PKCS#8 digest. A public key with wrapping disabled must receive CKR_KEY_FUNCTION_NOT_PERMITTED.",
+    "parameters": {
+      "oaep": "SHA-256 / MGF1-SHA-256, empty label",
+      "aes_bits": 256,
+      "target": "CKO_PRIVATE_KEY / CKK_RSA",
+      "pkcs8_sha256": "5e592ad307972405081e43b24d2513a16fa969d9d9fda75d7b6871ccdb5c67ec"
+    },
+    "provenance": {
+      "target": "Published OpenSSL evppkey_rsa_common.txt, RSA-2048",
+      "target_source_sha256": "15e112d36908523eddc9a4e3a2c1ba10e0af77098eb52505b5ff71ebb1161217",
+      "transport": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "wrap": "RFC 8017 OAEP over a public fixed AES key; RFC 5649 wrapping of PKCS#8 DER. Generated outside the native worker using public fixture data only."
+    },
+    "reference_sources": {
+      "rsa_private_wrap_reference.py": "61ada67e90ed62b36731b61c96fc174fcbc3d990426de6dcc0471212822cfe54",
+      "rsa_reference.py": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc"
+    }
+  }
+]

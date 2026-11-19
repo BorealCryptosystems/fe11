@@ -1,0 +1,122 @@
+[
+  {
+    "id": "wrap.oaep.label.session",
+    "file": "8fa4ad521dfd82dfaaa258222111cab8a3b2376b3a8eefdd61dccf92d00d357f.txt",
+    "sha256": "8fa4ad521dfd82dfaaa258222111cab8a3b2376b3a8eefdd61dccf92d00d357f",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "SHA256/MGF1-SHA256, exact binary label wrap00label: k-byte wrapping envelope independently decoded by Python RSA; same-label native Unwrap recovers exact public value. Change last label byte only: C_UnwrapKey GENERAL_ERROR with may_have_effect=true, as predicted by unchanged module source.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Unchanged published OAEP vector",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "New label composition and independent wrapping decoding; no replay of the prior permission-negative case.",
+    "independent_wrap": true,
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc"
+  },
+  {
+    "id": "wrap.oaep.label.advanced",
+    "file": "cc8a766162627351399692164dd0d0ca94e9de4be4c4d8434a188539242664be.txt",
+    "sha256": "cc8a766162627351399692164dd0d0ca94e9de4be4c4d8434a188539242664be",
+    "worker_mode": "rsa-wrap-negative",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "SHA256/MGF1-SHA256, exact binary label wrap00label: k-byte wrapping envelope independently decoded by Python RSA; same-label native Unwrap recovers exact public value. Change last label byte only: C_UnwrapKey GENERAL_ERROR with may_have_effect=true, as predicted by unchanged module source.",
+    "expected_native_calls": [
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_GetAttributeValue",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_CloseSession"
+    ],
+    "provenance": {
+      "public_key_source": {
+        "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+        "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+        "group": 0,
+        "case": 2,
+        "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+        "flags": [
+          "Normal"
+        ],
+        "comment": ""
+      },
+      "original_case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha256_mgf1sha256_test.json.0.2",
+      "original_fixture_sha256": "13260bac79576fd851afaf7009a5662f169d7f45c1818db38f0f2154a789b949",
+      "envelope": "Unchanged published OAEP vector",
+      "reference": "https://www.rfc-editor.org/rfc/rfc8017.html#section-7",
+      "kwp_reference": null
+    },
+    "control": "New label composition and independent wrapping decoding; no replay of the prior permission-negative case.",
+    "independent_wrap": true,
+    "reference_sha256": "7ec01e85500709eef7e9417a7c581741ed3ea04cddd8e193ba389864e0cce8dc"
+  }
+]

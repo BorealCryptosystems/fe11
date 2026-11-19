@@ -1,0 +1,220 @@
+[
+  {
+    "id": "generation.permissions.generated-aes-wrap",
+    "file": "a24fdaf0a438638107af44d8a1d2758502f74e3f21e916c93085422ddc0acd60.txt",
+    "sha256": "a24fdaf0a438638107af44d8a1d2758502f74e3f21e916c93085422ddc0acd60",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_AES_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read back the generated key attributes and require CKR_KEY_FUNCTION_NOT_PERMITTED at C_WrapKey.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_AES",
+        "CKA_VALUE_LEN": 16,
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_WRAP": false
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "Original generated key has every requested usage flag and creation attribute.",
+      "The named native function refuses the disabled permission on that same key."
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "disabled_usage": "WRAP",
+    "generated_permissions": {
+      "public": {
+        "WRAP": false
+      }
+    }
+  },
+  {
+    "id": "generation.permissions.generated-aes-unwrap",
+    "file": "1309ee9cbd4f02f6b0fc4d283cb029edf6eed6af93d774f6d994deec223b8598.txt",
+    "sha256": "1309ee9cbd4f02f6b0fc4d283cb029edf6eed6af93d774f6d994deec223b8598",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_AES_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read back the generated key attributes and require CKR_KEY_FUNCTION_NOT_PERMITTED at C_UnwrapKey.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_AES",
+        "CKA_VALUE_LEN": 16,
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_UNWRAP": false,
+        "CKA_WRAP": true
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_CreateObject",
+      "C_WrapKey",
+      "C_UnwrapKey",
+      "C_DestroyObject",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "Original generated key has every requested usage flag and creation attribute.",
+      "The named native function refuses the disabled permission on that same key."
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "disabled_usage": "UNWRAP",
+    "generated_permissions": {
+      "public": {
+        "UNWRAP": false,
+        "WRAP": true
+      }
+    }
+  },
+  {
+    "id": "generation.permissions.generated-aes-derive",
+    "file": "88750c483d6ab2068a906937d0361cdeef3433404e698e9b423f40ef8b67789a.txt",
+    "sha256": "88750c483d6ab2068a906937d0361cdeef3433404e698e9b423f40ef8b67789a",
+    "worker_mode": "generation-vector",
+    "mechanism": "CKM_AES_KEY_GEN",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Read back the generated key attributes and require CKR_KEY_FUNCTION_NOT_PERMITTED at C_DeriveKey.",
+    "templates": {
+      "public": {
+        "CKA_CLASS": "CKO_SECRET_KEY",
+        "CKA_KEY_TYPE": "CKK_AES",
+        "CKA_VALUE_LEN": 16,
+        "CKA_TOKEN": false,
+        "CKA_PRIVATE": false,
+        "CKA_LABEL": "unique owned case namespace",
+        "CKA_DERIVE": false,
+        "CKA_ENCRYPT": false
+      }
+    },
+    "expected_native_calls": [
+      "C_GenerateKey",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DeriveKey",
+      "C_DestroyObject"
+    ],
+    "assertions": [
+      "Original generated key has every requested usage flag and creation attribute.",
+      "The named native function refuses the disabled permission on that same key."
+    ],
+    "source": {
+      "normative": "PKCS#11 mechanism and key-generation attribute contracts"
+    },
+    "disabled_usage": "DERIVE",
+    "generated_permissions": {
+      "public": {
+        "DERIVE": false,
+        "ENCRYPT": false
+      }
+    }
+  }
+]

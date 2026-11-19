@@ -1,0 +1,8 @@
+protection|CKM_DES2_KEY_GEN
+public|CKA_CLASS|symbol|CKO_SECRET_KEY
+public|CKA_KEY_TYPE|symbol|CKK_DES2
+public|CKA_TOKEN|bool|false
+public|CKA_LABEL|namespace|label
+public|CKA_PRIVATE|bool|true
+public|CKA_SENSITIVE|bool|false
+public|CKA_EXTRACTABLE|bool|false

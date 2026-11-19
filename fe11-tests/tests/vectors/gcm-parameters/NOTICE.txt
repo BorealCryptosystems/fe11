@@ -1,0 +1,1 @@
+Public cryptographic test parameters. AES-GCM reference values computed with PyCryptodome3.23.0, calibrated against the public zero-key empty-message tag. No operational secrets.

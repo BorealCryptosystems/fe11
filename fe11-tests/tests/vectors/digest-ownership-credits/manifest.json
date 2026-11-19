@@ -1,0 +1,166 @@
+[
+  {
+    "id": "digest.ownership.preparation-credits",
+    "file": "41f1f84dd1f3a70d37af297ab39100bb60110d47141e0d7e26e47c865dd5f3ba.txt",
+    "sha256": "41f1f84dd1f3a70d37af297ab39100bb60110d47141e0d7e26e47c865dd5f3ba",
+    "worker_mode": "digest-transition",
+    "state": "ABSENT",
+    "action": "preparation-credits",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Input ceiling rejects SHA256 abc before native dispatch; exact public ModuleResourceStatus unchanged; fresh digest on same owner completes exact SHA256 abc.",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "proof_limit": "ModuleResourceStatus exposes session quotas, not byte credits. No proof of zero internal byte leakage is inferred from equality or subsequent success."
+  },
+  {
+    "id": "digest.ownership.capture-credits",
+    "file": "1760ad1952e21ccfce6b9ceb9c8963d1ab41d7044d57a25acb3f195bdb88d629.txt",
+    "sha256": "1760ad1952e21ccfce6b9ceb9c8963d1ab41d7044d57a25acb3f195bdb88d629",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "capture-credits",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Real active digest capture returns native FUNCTION_NOT_SUPPORTED; exact public ModuleResourceStatus unchanged; same original ticket finishes exact SHA256 abc.",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_GetOperationState",
+      "C_DigestFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "proof_limit": "ModuleResourceStatus exposes session quotas, not byte credits. No proof of zero internal byte leakage is inferred from equality or subsequent success."
+  },
+  {
+    "id": "digest.ownership.drop-observer",
+    "file": "82a97003843ade9e32d0c23f1c81e260b694264910f1f6f29859ce830abff504.txt",
+    "sha256": "82a97003843ade9e32d0c23f1c81e260b694264910f1f6f29859ce830abff504",
+    "worker_mode": "digest-transition",
+    "state": "ACTIVE",
+    "action": "drop-observer",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "oracle": "Drop the observer ticket while active owner remains; second Init is locally Busy AdvancedOperation with no native dispatch, exact public session quota unchanged; explicit owner close settles one of two sessions.",
+    "producer": "INITIALIZED, then digest_update(61), digest_update(6263), InputLimits(3,3); same-token ordinary RW USER peer retained for login/logout, subject is an AdvancedSession",
+    "producer_parts_hex": [
+      "61",
+      "6263"
+    ],
+    "producer_input_limits": {
+      "maximum_parts": 3,
+      "maximum_total_bytes": 3
+    },
+    "mutation_input_limits": {
+      "maximum_parts": 4,
+      "maximum_total_bytes": 4
+    },
+    "producer_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "expected_digest_input_hex": "616263",
+    "reference": "FIPS 180-4 SHA-256, independently evaluated by Python hashlib on the stated bytes",
+    "expected_native_calls": [
+      "C_Login",
+      "C_DigestInit",
+      "C_DigestUpdate",
+      "C_DigestUpdate",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession"
+    ],
+    "proof_limit": "ModuleResourceStatus exposes session quotas, not byte credits. No proof of zero internal byte leakage is inferred from equality or subsequent success."
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "digest": {
+    "source_commit": "32f2b020cb672ac4e501bf7ad8a463dc0ab5e538",
+    "source_path": "core/src/test/java/org/bouncycastle/crypto/test/GOST3411DigestTest.java",
+    "git_blob_sha1": "d7928c51723d25390783cc3e776853c570d52626",
+    "parameter_set": "1.2.643.2.2.30.1",
+    "vectors": [
+      {
+        "id": "GOST94-CryptoPro-empty",
+        "mechanism": "CKM_GOSTR3411",
+        "message_ascii": "",
+        "output_hex": "981e5f3ca30c841487830f84fb433e13ac1101569b9c13584ac483234cd656c0"
+      },
+      {
+        "id": "GOST94-CryptoPro-32",
+        "mechanism": "CKM_GOSTR3411",
+        "message_ascii": "This is message, length=32 bytes",
+        "output_hex": "2cefc2f7b7bdc514e18ea57fa74ff357e7fa17d652c75f69cb1be7893ede48eb"
+      },
+      {
+        "id": "GOST94-CryptoPro-50",
+        "mechanism": "CKM_GOSTR3411",
+        "message_ascii": "Suppose the original message has length = 50 bytes",
+        "output_hex": "c3730c5cbccacf915ac292676f21e8bd4ef75331d9405e5f1a61dc3130a65011"
+      },
+      {
+        "id": "GOST94-CryptoPro-alphanumeric",
+        "mechanism": "CKM_GOSTR3411",
+        "message_ascii": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+        "output_hex": "73b70a39497de53a6e08c67b6d4db853540f03e9389299d9b0156ef7e85d0f61"
+      },
+      {
+        "id": "HMAC-GOST94-CryptoPro-fred",
+        "mechanism": "CKM_GOSTR3411_HMAC",
+        "key_hex": "31",
+        "message_ascii": "fred",
+        "output_hex": "e9f98610cfc80084462b175a15d2b4ec10b2ab892eae5a6179d572d9b1db6b72"
+      }
+    ]
+  },
+  "signature_vectors": [
+    {
+      "id": "GOST2001-CryptoProA-raw-one",
+      "mechanism": "CKM_GOSTR3410",
+      "key_type": "CKK_GOSTR3410",
+      "parameter_oid": "1.2.643.2.2.35.1",
+      "parameter_der": "06072a850302022301",
+      "digest_oid": "1.2.643.2.2.30.1",
+      "public_value_hex": "0100000000000000000000000000000000000000000000000000000000000000141e9f9e9cc9ac22b1e323df2d4f2935762b3f455a50df27da9c98e071e4918d",
+      "private_value_hex": "0100000000000000000000000000000000000000000000000000000000000000",
+      "digest_hex": "0100000000000000000000000000000000000000000000000000000000000000",
+      "message_hex": null,
+      "signature_hex": "00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001",
+      "expected": "C_Verify CKR_OK; changed r=0 rejects CKR_SIGNATURE_INVALID",
+      "proof": "Public test d=1, k=1 gives Q=G and C=G. CryptoPro-A Gx=1 hence r=1. RFC5832 formula s=(r*d+k*e) mod q gives s=(1+e) mod q. Verification computes (s/e-r/e)*G=G, hence x mod q=1. No scalar multiplication or Fe11 output is used to construct expected bytes.",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4357.html#section-11.4",
+        "https://www.rfc-editor.org/rfc/rfc5832.html#section-6.1",
+        "PKCS11 curr300 section 2.57.7/2.57.8; normative index anchors",
+        "GOST-VECTORS.json for independently published empty digest"
+      ],
+      "scope": "Algebraically derived public test data, not a claim that RFC5832 publishes these exact bytes. Published RFC5832 TestParamSet example is not substituted for CryptoPro-A.",
+      "sign_oracle": "Native signing uses fresh randomness; verify with external OpenSSL CLI over exported public key and exact input; do not expect the fixed k=1 signature from native signing",
+      "production_safety": "Deliberately public weak test key and nonce; never production material",
+      "execution": "NOT_EXECUTED"
+    },
+    {
+      "id": "GOST2001-CryptoProA-combined-empty",
+      "mechanism": "CKM_GOSTR3410_WITH_GOSTR3411",
+      "key_type": "CKK_GOSTR3410",
+      "parameter_oid": "1.2.643.2.2.35.1",
+      "parameter_der": "06072a850302022301",
+      "digest_oid": "1.2.643.2.2.30.1",
+      "public_value_hex": "0100000000000000000000000000000000000000000000000000000000000000141e9f9e9cc9ac22b1e323df2d4f2935762b3f455a50df27da9c98e071e4918d",
+      "private_value_hex": "0100000000000000000000000000000000000000000000000000000000000000",
+      "digest_hex": "981e5f3ca30c841487830f84fb433e13ac1101569b9c13584ac483234cd656c0",
+      "message_hex": "",
+      "signature_hex": "c056d64c2383c44a58139c9b560111ac133e43fb840f838714840ca33c5f1e990000000000000000000000000000000000000000000000000000000000000001",
+      "expected": "C_Verify CKR_OK; changed r=0 rejects CKR_SIGNATURE_INVALID",
+      "proof": "Public test d=1, k=1 gives Q=G and C=G. CryptoPro-A Gx=1 hence r=1. RFC5832 formula s=(r*d+k*e) mod q gives s=(1+e) mod q. Verification computes (s/e-r/e)*G=G, hence x mod q=1. No scalar multiplication or Fe11 output is used to construct expected bytes.",
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4357.html#section-11.4",
+        "https://www.rfc-editor.org/rfc/rfc5832.html#section-6.1",
+        "PKCS11 curr300 section 2.57.7/2.57.8; normative index anchors",
+        "GOST-VECTORS.json for independently published empty digest"
+      ],
+      "scope": "Algebraically derived public test data, not a claim that RFC5832 publishes these exact bytes. Published RFC5832 TestParamSet example is not substituted for CryptoPro-A.",
+      "sign_oracle": "Native signing uses fresh randomness; verify with external OpenSSL CLI over exported public key and exact input; do not expect the fixed k=1 signature from native signing",
+      "production_safety": "Deliberately public weak test key and nonce; never production material",
+      "execution": "NOT_EXECUTED"
+    }
+  ],
+  "rsa_fixture": {
+    "case": "operation.CKM_RSA_PKCS.decrypt@Session::decrypt_native_rsa@OPENSSL.RSA.pkcs1",
+    "sha256": "3793c99fc9e058a85ca0598d4e4a4de4e8be74283caa9b73f66b2283d657c0fc"
+  },
+  "reuse": "Public numerical test values only. Bouncy Castle MIT notice is included. GOST signature values are the explicitly derived public RFC-based fixture, not a published RFC test vector.",
+  "scope": "Native mechanism-absence tests, not positive cryptographic known-answer tests."
+}

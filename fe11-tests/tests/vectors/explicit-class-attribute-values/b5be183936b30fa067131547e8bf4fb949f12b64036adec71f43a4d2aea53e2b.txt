@@ -1,0 +1,4 @@
+CKK_DES
+0123456789abcdef
+CKA_DECRYPT|bool|true
+CKA_ENCRYPT|bool|true

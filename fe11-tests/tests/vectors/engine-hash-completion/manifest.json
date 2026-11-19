@@ -1,0 +1,230 @@
+[
+  {
+    "id": "engine.hash.sha512-224.f6ac582847c298ad",
+    "file": "f6ac582847c298addc2ae63907c68a92275603a56f42adce358e8e9729ea21cf.txt",
+    "sha256": "f6ac582847c298addc2ae63907c68a92275603a56f42adce358e8e9729ea21cf",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-224-1.0/internalProjection.json",
+      "source_sha256": "b596a90659713c52091ea9946e80145aae016ef730c956e5ee4850cf112709a9",
+      "group": 1,
+      "case": 130,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  },
+  {
+    "id": "engine.hash.sha512-224.23a807c3ee4f0462",
+    "file": "23a807c3ee4f0462726a340e4617043a7e6c72eb6fc0b45ce97b61720107beb9.txt",
+    "sha256": "23a807c3ee4f0462726a340e4617043a7e6c72eb6fc0b45ce97b61720107beb9",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-224-1.0/internalProjection.json",
+      "source_sha256": "b596a90659713c52091ea9946e80145aae016ef730c956e5ee4850cf112709a9",
+      "group": 1,
+      "case": 755,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  },
+  {
+    "id": "engine.hash.sha512-256.8ab295ef6006cd95",
+    "file": "8ab295ef6006cd95cfc1ee1d7041e13389cbf4d1a732afacbfbc2d1b4c780109.txt",
+    "sha256": "8ab295ef6006cd95cfc1ee1d7041e13389cbf4d1a732afacbfbc2d1b4c780109",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-256-1.0/internalProjection.json",
+      "source_sha256": "fb813c4f42c748931978c4b5e6192d52ea156ff4e0797cbbebdf95458c816e5b",
+      "group": 1,
+      "case": 493,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  },
+  {
+    "id": "engine.hash.sha512-256.b30c296a3e8a0dd3",
+    "file": "b30c296a3e8a0dd3e0410b7621983fc5e62d0a29c960a779784d44548b0bd22e.txt",
+    "sha256": "b30c296a3e8a0dd3e0410b7621983fc5e62d0a29c960a779784d44548b0bd22e",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/SHA2-512-256-1.0/internalProjection.json",
+      "source_sha256": "fb813c4f42c748931978c4b5e6192d52ea156ff4e0797cbbebdf95458c816e5b",
+      "group": 1,
+      "case": 977,
+      "notice": "NIST public service notice in pinned README; data only, no NIST source code reused"
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  },
+  {
+    "id": "engine.hash.shake128.79044752aec826e5",
+    "file": "79044752aec826e513c69a2b830c4f2ec5cca3514b44d40676cd6ef6f3165c64.txt",
+    "sha256": "79044752aec826e513c69a2b830c4f2ec5cca3514b44d40676cd6ef6f3165c64",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHAKE128_Msg0.pdf",
+      "extraction_sha256": "ad5073e715197475594c909554e3414dba692ad3adab3734170c7490f511da1d",
+      "page": 148,
+      "extraction": "Leading32/64 bytes of Output val is; manually checked against NIST primary PDF text. No expected digest computed by the engine or local crypto.",
+      "notice": "NIST published numerical example data; no implementation code copied."
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  },
+  {
+    "id": "engine.hash.shake256.1845c961bbd36f50",
+    "file": "1845c961bbd36f50f356da41a72fbc45ee2b4552fe795a6645040c41a4f7f4ec.txt",
+    "sha256": "1845c961bbd36f50f356da41a72fbc45ee2b4552fe795a6645040c41a4f7f4ec",
+    "worker_mode": "engine-choices",
+    "engine_action": "api",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.81.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Standard32",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Standard32",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_GetInfo",
+      "C_Finalize"
+    ],
+    "source": {
+      "url": "https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHAKE256_Msg0.pdf",
+      "extraction_sha256": "9e0bf44a786d70d6069bfff5cc8cf46167498e50b79fc48be1a0873589eed41a",
+      "page": 148,
+      "extraction": "Leading32/64 bytes of Output val is; manually checked against NIST primary PDF text. No expected digest computed by the engine or local crypto.",
+      "notice": "NIST published numerical example data; no implementation code copied."
+    },
+    "oracle": "Exact independently published digest bytes; engine output released and native counters unchanged."
+  }
+]

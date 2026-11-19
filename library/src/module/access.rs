@@ -15,8 +15,66 @@ impl<'a> TokenAccess<'a> {
         bytes: usize,
         retained_bytes: usize,
     ) -> Result<crate::symmetric::memory::Credit> {
+        Self::reserve_preparation_scoped(
+            inner,
+            snapshot,
+            permit,
+            bytes,
+            retained_bytes,
+            local_maintenance::LocalMaintenance::Marked,
+        )
+    }
+
+    pub(super) fn reserve_authentication_preparation(
+        inner: &'a Arc<Inner>,
+        snapshot: &'a Arc<TokenSnapshot>,
+        permit: bool,
+        bytes: usize,
+        retained_bytes: usize,
+    ) -> Result<crate::symmetric::memory::Credit> {
+        Self::reserve_preparation_scoped(
+            inner,
+            snapshot,
+            permit,
+            bytes,
+            retained_bytes,
+            local_maintenance::LocalMaintenance::Authentication,
+        )
+    }
+
+    fn reserve_preparation_scoped(
+        inner: &'a Arc<Inner>,
+        snapshot: &'a Arc<TokenSnapshot>,
+        permit: bool,
+        bytes: usize,
+        retained_bytes: usize,
+        scope: local_maintenance::LocalMaintenance,
+    ) -> Result<crate::symmetric::memory::Credit> {
         use crate::symmetric::memory::ControlledReservation;
+        use local_maintenance::LocalMaintenance;
+        let authentication = matches!(scope, LocalMaintenance::Authentication);
         let admission = crate::admission_wait::current();
+        let immediate = matches!(admission, crate::ResourceAdmission::Immediate)
+            || crate::notify::in_callback();
+        let mut attempted = false;
+        let check = || {
+            // Token maintenance requires normal module admission. This
+            // permit authorizes only the token drain checked below.
+            inner.state.check_admission(false)?;
+            inner.availability.check_available()?;
+            snapshot.check()?;
+            snapshot.check_drain(permit)?;
+            if snapshot
+                .domain
+                .advanced_count_invalid
+                .load(Ordering::Acquire)
+            {
+                return Err(Error::Rejected(crate::RejectionReason::ModuleLifecycle(
+                    crate::ModuleLifecycleRejection::RecoveryOwnerMismatch,
+                )));
+            }
+            Ok(())
+        };
         loop {
             match inner.symmetric_budget.reserve_controlled_retaining(
                 bytes,
@@ -26,23 +84,12 @@ impl<'a> TokenAccess<'a> {
                     // The retained native owner may hold all available bytes.
                     // Reject withdrawal before waiting for credits it cannot
                     // safely release, including after each Wake notification.
-                    inner.state.check_admission(permit)?;
-                    inner.availability.check_available()?;
-                    snapshot.check()?;
-                    snapshot.check_drain(permit)?;
-                    if snapshot
-                        .domain
-                        .advanced_count_invalid
-                        .load(Ordering::Acquire)
-                    {
-                        return Err(Error::Rejected(crate::RejectionReason::ModuleLifecycle(
-                            crate::ModuleLifecycleRejection::RecoveryOwnerMismatch,
-                        )));
-                    }
+                    check()?;
                     Ok(None::<()>)
                 },
                 || {
-                    Ok((snapshot.domain.needs_local_cleanup.load(Ordering::Acquire)
+                    Ok(((!authentication || !immediate || !attempted)
+                        && snapshot.domain.needs_local_cleanup.load(Ordering::Acquire)
                         && snapshot.domain.advanced_stranded.load(Ordering::Acquire) != 0
                         && snapshot.domain.closing_active.load(Ordering::Acquire) == 0)
                         .then_some(()))
@@ -51,7 +98,48 @@ impl<'a> TokenAccess<'a> {
                 ControlledReservation::Acquired(credit) => return Ok(credit),
                 ControlledReservation::Redirect(()) => {
                     // Wake has left scope, and no candidate/credit is held.
-                    drop(Self::new(inner, snapshot, permit)?);
+                    if !authentication {
+                        drop(Self::new(inner, snapshot, permit)?);
+                        continue;
+                    }
+                    attempted = true;
+                    // Reclaim abandoned owners only. A live suspended ticket
+                    // is unrelated to memory pressure and remains untouched.
+                    let sweep = {
+                        let state = inner.read()?;
+                        snapshot.sweep_local(
+                            &state,
+                            permit,
+                            true,
+                            LocalMaintenance::Marked,
+                            &crate::ResourceAdmission::Immediate,
+                        )
+                    };
+                    let close_pending = match sweep {
+                        Ok(()) => false,
+                        Err(Error::Busy(crate::BusyReason::ModuleLifecycle(
+                            crate::ModuleLifecycleBusy::SessionClosePending,
+                        ))) if !immediate => true,
+                        Err(error) => return Err(error),
+                    };
+                    if !immediate
+                        && (close_pending
+                            || snapshot.domain.needs_local_cleanup.load(Ordering::Acquire))
+                    {
+                        // Drop every sweep guard before waiting. A rearmed hint
+                        // alone cannot justify an immediate retry of the sweep.
+                        snapshot.wait_writer_ready(inner, permit, true, scope, &admission)?;
+                        let candidates = inner.session_ledger.local_candidates(&snapshot.domain)?;
+                        for candidate in &candidates {
+                            inner.session_ledger.wait_local_candidate(
+                                candidate,
+                                &snapshot.domain,
+                                &admission,
+                                true,
+                                &check,
+                            )?;
+                        }
+                    }
                 }
             }
         }
@@ -64,6 +152,37 @@ impl<'a> TokenAccess<'a> {
         inner: &'a Arc<Inner>,
         snapshot: &'a Arc<TokenSnapshot>,
         permit: bool,
+        prepare: impl FnMut() -> Result<T>,
+    ) -> Result<(T, Self)> {
+        Self::prepare_scoped(
+            inner,
+            snapshot,
+            permit,
+            local_maintenance::LocalMaintenance::Marked,
+            prepare,
+        )
+    }
+
+    pub(super) fn prepare_authentication<T>(
+        inner: &'a Arc<Inner>,
+        snapshot: &'a Arc<TokenSnapshot>,
+        permit: bool,
+        prepare: impl FnMut() -> Result<T>,
+    ) -> Result<(T, Self)> {
+        Self::prepare_scoped(
+            inner,
+            snapshot,
+            permit,
+            local_maintenance::LocalMaintenance::Authentication,
+            prepare,
+        )
+    }
+
+    fn prepare_scoped<T>(
+        inner: &'a Arc<Inner>,
+        snapshot: &'a Arc<TokenSnapshot>,
+        permit: bool,
+        scope: local_maintenance::LocalMaintenance,
         mut prepare: impl FnMut() -> Result<T>,
     ) -> Result<(T, Self)> {
         let admission = crate::admission_wait::current();
@@ -72,7 +191,7 @@ impl<'a> TokenAccess<'a> {
             let candidate = prepare()?;
             let attempt = admission.try_once(|| {
                 crate::with_resource_admission(crate::ResourceAdmission::Immediate, || {
-                    Self::new(inner, snapshot, permit)
+                    Self::acquire(inner, snapshot, permit, true, scope)
                 })
             });
             match attempt {
@@ -87,13 +206,7 @@ impl<'a> TokenAccess<'a> {
                 }
                 Err(error) => return Err(error),
             }
-            snapshot.wait_writer_ready(
-                inner,
-                permit,
-                true,
-                local_maintenance::LocalMaintenance::Marked,
-                &admission,
-            )?;
+            snapshot.wait_writer_ready(inner, permit, true, scope, &admission)?;
         }
     }
 

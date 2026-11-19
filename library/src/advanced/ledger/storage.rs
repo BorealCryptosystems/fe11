@@ -4,13 +4,21 @@ use super::Operation;
 use crate::{symmetric::memory::Credit, Error, Result};
 use std::{
     ops::Deref,
-    sync::{Arc, Mutex, OnceLock},
+    sync::{
+        atomic::{AtomicU64, Ordering},
+        Arc, Mutex, OnceLock,
+    },
 };
 
 /// Only initialized cells leave this module. Callers continue to lock the same
 /// standard mutex; poisoning, guard lifetimes and operation access are unchanged.
 pub(in crate::advanced) struct OperationCell {
     operation: OnceLock<Mutex<Operation>>,
+    // A reader selects a cell without nesting its mutex under the ledger.
+    ticket: AtomicU64,
+    /// Armed at the native login boundary. Its lifetime follows the operation,
+    /// including cases in which Fe11 diagnoses an error after native success.
+    pub(in crate::advanced) context_key: crate::session::ContextKeyBinding,
     // Drop the operation and its resources before releasing storage credit.
     _credit: Option<Credit>,
 }
@@ -24,6 +32,17 @@ impl Deref for OperationCell {
     }
 }
 impl OperationCell {
+    pub(super) fn ticket(&self) -> u64 {
+        self.ticket.load(Ordering::Acquire)
+    }
+
+    pub(super) fn publish_ticket(&self, id: u64) {
+        // The initial prepared cell is empty, or native replacement has
+        // already terminated the old operation in this cell.
+        self.context_key.retire();
+        self.ticket.store(id, Ordering::Release);
+    }
+
     // Called while this exact installed cell is locked and retained by its
     // ledger. Count only storage here; the locked operation visits its payload.
     pub(in crate::advanced) fn retain_storage(
@@ -37,6 +56,8 @@ impl OperationCell {
     /// Grouped common-start uses PreparedOperation instead, without this call.
     pub(super) fn ready(operation: Operation) -> Arc<Self> {
         Arc::new(Self {
+            ticket: AtomicU64::new(operation.id),
+            context_key: Default::default(),
             operation: OnceLock::from(Mutex::new(operation)),
             _credit: None,
         })
@@ -65,6 +86,8 @@ impl PreparedOperation {
         let credit = prepaid.split(Self::allocation_bytes()?)?;
         Ok(Self(Arc::new(OperationCell {
             operation: OnceLock::new(),
+            ticket: AtomicU64::new(0),
+            context_key: Default::default(),
             _credit: Some(credit),
         })))
     }
@@ -87,6 +110,7 @@ impl PreparedOperation {
     /// The sole private Arc excludes a concurrent initializer, so set cannot
     /// block or refuse. OnceLock stores the mutex inline without allocation.
     pub(super) fn finish(self, operation: Operation) -> Arc<OperationCell> {
+        self.0.publish_ticket(operation.id);
         if self.0.operation.set(Mutex::new(operation)).is_err() {
             unreachable!("checked private operation storage is empty");
         }

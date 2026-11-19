@@ -1,0 +1,81 @@
+[
+  {
+    "id": "coexistence.peer.object-destroy",
+    "file": "8396cd7d6a57ccaacd60e33e82b0c7967f9e2de17eb261f19ce08568b2512de4.txt",
+    "sha256": "8396cd7d6a57ccaacd60e33e82b0c7967f9e2de17eb261f19ce08568b2512de4",
+    "worker_mode": "foreign-session",
+    "foreign_object": "object-destroy",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "observer_image_loads": 2,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_GetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_CloseSession",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Peer creates its own public data object. Fe11 discovers and reads exact bytes; peer destroys token object or closes its creator session. First Fe11 read must dispatch C_GetAttributeValue and return OBJECT_HANDLE_INVALID; following search is empty. Peer calls do not increment Fe11 counters; cleanup owns only created resources."
+  },
+  {
+    "id": "coexistence.peer.object-close",
+    "file": "17d714fd00d2476dc14e04a47c737ade6cb0294b85eacdc4cfa52e0625cd0164.txt",
+    "sha256": "17d714fd00d2476dc14e04a47c737ade6cb0294b85eacdc4cfa52e0625cd0164",
+    "worker_mode": "foreign-session",
+    "foreign_object": "object-close",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "observer_image_loads": 2,
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_Login",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_GetAttributeValue",
+      "C_CloseSession",
+      "C_GetAttributeValue",
+      "C_FindObjectsInit",
+      "C_FindObjects",
+      "C_FindObjectsFinal",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Peer creates its own public data object. Fe11 discovers and reads exact bytes; peer destroys token object or closes its creator session. First Fe11 read must dispatch C_GetAttributeValue and return OBJECT_HANDLE_INVALID; following search is empty. Peer calls do not increment Fe11 counters; cleanup owns only created resources."
+  }
+]

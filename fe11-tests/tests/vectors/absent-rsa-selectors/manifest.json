@@ -1,0 +1,322 @@
+[
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_MD2_RSA_PKCS",
+    "file": "09c0674deebbbbb609dfe44df79fce577475dd657be2b451aba4443a21178280.txt",
+    "sha256": "09c0674deebbbbb609dfe44df79fce577475dd657be2b451aba4443a21178280",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_MD2_RSA_PKCS",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RIPEMD128_RSA_PKCS",
+    "file": "6637c9bc5ba4f210d836e243059903164c5ff519adc229b69850a953f50a02b8.txt",
+    "sha256": "6637c9bc5ba4f210d836e243059903164c5ff519adc229b69850a953f50a02b8",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RIPEMD128_RSA_PKCS",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RIPEMD160_RSA_PKCS",
+    "file": "3d9b088cd9562f844d6f34da42155bd57b8808da9a8ef6ab196e133dc1784511.txt",
+    "sha256": "3d9b088cd9562f844d6f34da42155bd57b8808da9a8ef6ab196e133dc1784511",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RIPEMD160_RSA_PKCS",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RSA_9796",
+    "file": "1fb7f7e23f560df09cdaff571457892aeeacc3ffa015c5f3435e842007bd5392.txt",
+    "sha256": "1fb7f7e23f560df09cdaff571457892aeeacc3ffa015c5f3435e842007bd5392",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RSA_9796",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RSA_X9_31",
+    "file": "cee1ddf67850e5a7d3e4171ba34bd9ca6608fc09fc189599b1c1375891c28f69.txt",
+    "sha256": "cee1ddf67850e5a7d3e4171ba34bd9ca6608fc09fc189599b1c1375891c28f69",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RSA_X9_31",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_SHA1_RSA_X9_31",
+    "file": "81babd1e652ab0416091a5341e3fdb8370d4cf5acf07acc6721593d87ce51dd3.txt",
+    "sha256": "81babd1e652ab0416091a5341e3fdb8370d4cf5acf07acc6721593d87ce51dd3",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_SHA1_RSA_X9_31",
+    "producer": "C_SignInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RSA_PKCS_TPM_1_1",
+    "file": "8dc64627ea67ecf300387f9073ae154eab8ad8fb8a0c42c3cdff4f4f0000c68b.txt",
+    "sha256": "8dc64627ea67ecf300387f9073ae154eab8ad8fb8a0c42c3cdff4f4f0000c68b",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RSA_PKCS_TPM_1_1",
+    "producer": "C_EncryptInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  },
+  {
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "id": "absence.rsa.CKM_RSA_PKCS_OAEP_TPM_1_1",
+    "file": "1d98afacdd49cd4424fc9145c4c007641e9d83da8ca546851e80c3a4968a4c4b.txt",
+    "sha256": "1d98afacdd49cd4424fc9145c4c007641e9d83da8ca546851e80c3a4968a4c4b",
+    "required_key": "CKK_RSA",
+    "absent_rsa_selector": "CKM_RSA_PKCS_OAEP_TPM_1_1",
+    "producer": "C_EncryptInit",
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "One native initializer with the matching permitted RSA key returns CKR_MECHANISM_INVALID before any data call.",
+    "key_provenance": {
+      "url": "https://raw.githubusercontent.com/C2SP/wycheproof/65ca494727a52944c204441c860b039e6786b99b/testvectors_v1/rsa_oaep_2048_sha256_mgf1sha256_test.json",
+      "source_sha256": "83dce701e3d8640ac56e6d7bf37a5a8f9bd6a336e1e932a1e9bfe4ba9c5ea3a9",
+      "group": 0,
+      "case": 2,
+      "notice": "Apache-2.0; complete upstream LICENSE and retained JSON headers/notes; data subset, no code copied",
+      "flags": [
+        "Normal"
+      ],
+      "comment": ""
+    }
+  }
+]

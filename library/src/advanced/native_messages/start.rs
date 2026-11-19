@@ -290,6 +290,7 @@ pub(super) fn start_retained(
     )?;
     retirement.retired_owner = Some(held.clone());
     let ticket = OperationTicket {
+        restored_companions: Vec::new(),
         owner: session.inner.clone(),
         uid: session.uid,
         id,

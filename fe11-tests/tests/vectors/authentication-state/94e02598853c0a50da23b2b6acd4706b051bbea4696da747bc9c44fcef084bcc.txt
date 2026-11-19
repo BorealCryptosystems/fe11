@@ -1,0 +1,4 @@
+RW_PUBLIC
+login_so
+RW_SO
+CKR_OK

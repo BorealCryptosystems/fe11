@@ -1,0 +1,310 @@
+[
+  {
+    "id": "absence.cipher.CKM_AES_CFB1",
+    "file": "0a1f94fee1a28e89777f5dc3bdcd457c40802da09a9d422e9613f9dbd37bbfe1.txt",
+    "sha256": "0a1f94fee1a28e89777f5dc3bdcd457c40802da09a9d422e9613f9dbd37bbfe1",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_CFB1",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_CFB128",
+    "file": "ca0db86a9509cd0f106eafe8fce0ae4a159aabd94eeff332e69c4f7771c4f489.txt",
+    "sha256": "ca0db86a9509cd0f106eafe8fce0ae4a159aabd94eeff332e69c4f7771c4f489",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_CFB128",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_CFB64",
+    "file": "f9a0fd2e5564219ed1d9ba3aef5c3d8f013c9487af123635d8458350d447bb3b.txt",
+    "sha256": "f9a0fd2e5564219ed1d9ba3aef5c3d8f013c9487af123635d8458350d447bb3b",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_CFB64",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_CFB8",
+    "file": "8b834bc127c37ae23008f262dcafa88000a28db0b487569fbcedda2fdc7ac9cd.txt",
+    "sha256": "8b834bc127c37ae23008f262dcafa88000a28db0b487569fbcedda2fdc7ac9cd",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_CFB8",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_CTS",
+    "file": "4ddb7398998955060c3aa78db4df0473db3c73cf590a4fdb1fbdbe19aaba15bf.txt",
+    "sha256": "4ddb7398998955060c3aa78db4df0473db3c73cf590a4fdb1fbdbe19aaba15bf",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_CTS",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_KEY_WRAP_PKCS7",
+    "file": "5ef3a5dea69076b52e2b1834d816045a31359f8a160754dfd5bd09729339d09c.txt",
+    "sha256": "5ef3a5dea69076b52e2b1834d816045a31359f8a160754dfd5bd09729339d09c",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_KEY_WRAP_PKCS7",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_AES_OFB",
+    "file": "7b7476d1cb43a6dc1dfbc250e91f8488ef7ca085139827ad140863b7145e400a.txt",
+    "sha256": "7b7476d1cb43a6dc1dfbc250e91f8488ef7ca085139827ad140863b7145e400a",
+    "required_key": "CKK_AES",
+    "absent_cipher_selector": "CKM_AES_OFB",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_DES_CFB64",
+    "file": "3cb48f876c8fee60d8be39099744311db3ce576cdffc66cae2c77ec8ec77024f.txt",
+    "sha256": "3cb48f876c8fee60d8be39099744311db3ce576cdffc66cae2c77ec8ec77024f",
+    "required_key": "CKK_DES",
+    "absent_cipher_selector": "CKM_DES_CFB64",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_DES_CFB8",
+    "file": "459bed6041c161f0c0069ee34d66985c2d9dadb67b4a1f618f19e4ddcf94f2a2.txt",
+    "sha256": "459bed6041c161f0c0069ee34d66985c2d9dadb67b4a1f618f19e4ddcf94f2a2",
+    "required_key": "CKK_DES",
+    "absent_cipher_selector": "CKM_DES_CFB8",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_DES_OFB64",
+    "file": "435f4a0285127c6027f8bd1cbcb96f23e0a1a7cca2719aa8eaa8786f00bf3f5a.txt",
+    "sha256": "435f4a0285127c6027f8bd1cbcb96f23e0a1a7cca2719aa8eaa8786f00bf3f5a",
+    "required_key": "CKK_DES",
+    "absent_cipher_selector": "CKM_DES_OFB64",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  },
+  {
+    "id": "absence.cipher.CKM_DES_OFB8",
+    "file": "568eb837238c0ecff2a7e13cff3ee9fb2748ab7b533a66097a07807f88153543.txt",
+    "sha256": "568eb837238c0ecff2a7e13cff3ee9fb2748ab7b533a66097a07807f88153543",
+    "required_key": "CKK_DES",
+    "absent_cipher_selector": "CKM_DES_OFB8",
+    "worker_mode": "builder-runtime-choices",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "expected_native_calls": [
+      "C_Initialize",
+      "C_OpenSession",
+      "C_CreateObject",
+      "C_EncryptInit",
+      "C_DestroyObject",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "After successful real session-key import, the typed selector reaches C_EncryptInit and returns CKR_MECHANISM_INVALID. Record the native error and verify no cipher body call."
+  }
+]

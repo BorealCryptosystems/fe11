@@ -1,0 +1,3 @@
+decapsulate
+REFUSED_TERMINAL
+logout

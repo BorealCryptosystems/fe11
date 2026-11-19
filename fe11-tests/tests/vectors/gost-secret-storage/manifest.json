@@ -1,0 +1,33 @@
+[
+  {
+    "id": "object.key_type.CKK_GOST28147.disabled-use",
+    "file": "c34189b5fc8b9026ffdff01f16a325e9f6e8360c7ac72675a7222a3fbf04703e.txt",
+    "sha256": "c34189b5fc8b9026ffdff01f16a325e9f6e8360c7ac72675a7222a3fbf04703e",
+    "worker_mode": "object-contract",
+    "contexts": [
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-full.file.Standard32",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.db.Standard32",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-full.file.Standard32",
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.db.Standard32"
+    ],
+    "oracle": "Exact secret class, GOST28147 type, sign and verify usage, 32 public bytes and CryptoPro-A parameter OID. The disabled-recipe MAC must reach C_SignInit and return CKR_MECHANISM_INVALID.",
+    "expected_native_calls": [
+      "C_Login",
+      "C_CreateObject",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_SignInit",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession"
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+typed_generate_montgomery_key
+OBSERVER_DROPPED
+close

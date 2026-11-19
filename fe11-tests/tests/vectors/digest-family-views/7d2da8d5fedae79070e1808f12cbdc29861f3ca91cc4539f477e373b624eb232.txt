@@ -1,0 +1,2 @@
+session
+digest_output_requirement

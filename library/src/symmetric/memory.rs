@@ -304,6 +304,45 @@ pub(crate) struct RetainedBytes {
 pub(crate) trait RetainedStorage {
     fn retain_credits(&self, retained: &mut RetainedBytes) -> Result<()>;
 }
+/// Footprint of a freshly reserved global allocation before it is split
+/// among several owners. The admission retaining it must keep every split
+/// part alive and count their common ancestor exactly once.
+pub(crate) struct ExclusiveFootprint {
+    budget: Arc<Budget>,
+    bytes: usize,
+}
+
+impl Credit {
+    pub(crate) fn before_split(&self) -> Result<ExclusiveFootprint> {
+        if self.budget.parent.is_some() {
+            return Err(Error::Rejected(crate::RejectionReason::MemoryAccounting(
+                crate::MemoryAccountingRejection::PrivateAccountRequiresCompleteSourceMeasurement,
+            )));
+        }
+        Ok(ExclusiveFootprint {
+            budget: self.budget.clone(),
+            bytes: self.bytes,
+        })
+    }
+}
+
+impl RetainedStorage for ExclusiveFootprint {
+    fn retain_credits(&self, retained: &mut RetainedBytes) -> Result<()> {
+        if !self.budget.same_account(&retained.budget) {
+            return Err(Error::Rejected(crate::RejectionReason::MemoryAccounting(
+                crate::MemoryAccountingRejection::RetainedSourceDestinationChanged,
+            )));
+        }
+        retained.bytes = retained
+            .bytes
+            .checked_add(self.bytes)
+            .ok_or(Error::Rejected(crate::RejectionReason::MemoryAccounting(
+                crate::MemoryAccountingRejection::RetainedSourceCreditOverflow,
+            )))?;
+        Ok(())
+    }
+}
+
 impl RetainedStorage for Credit {
     fn retain_credits(&self, retained: &mut RetainedBytes) -> Result<()> {
         retained.add_credit(self)

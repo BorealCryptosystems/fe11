@@ -68,7 +68,24 @@ Persistent identity requires an observation of the actual file backing the selec
 
 Other processes can use the token under its PKCS#11 rules. Within a process, `ModuleBuilder::open_shared` creates a `RuntimeOwner` and a client view; `RuntimeOwner::client` creates additional views sharing admission and budgets while opening distinct sessions. Collective actions belong to the owner. Dropping a client leaves the runtime active; dropping its owner retires local access without a native call.
 
+Token initialization uses an observed administrative target. Idle local sessions can reach the module and receive SESSION_EXISTS; pending calls, unresolved local session transitions and retained memory remain protected. For blank and initialized tokens alike, certain SESSION_EXISTS, PIN_INCORRECT, PIN_LOCKED and TOKEN_WRITE_PROTECTED refusals preserve the target and sessions when inputs are unchanged, following the return-value meanings in PKCS#11 section 5.1.6. Reuse revalidates token identity and initialization state. PIN retry counters may change: context preservation is not an absence-of-effect claim.
+
+Other native initialization returns retire the slot's contexts, including sessions belonging to other clients. Native resources may remain open and counted, while old handles cannot be closed individually. Recovery then requires closing the module's usable sessions across all clients and slots before explicit finalization, subject to retained native loans, pending calls and lifecycle authority. A new token generation's TokenDrain does not recover these old owners. The application still coordinates sessions the native module cannot detect.
+
 External native libraries participate through the unsafe attachment and foreign-participant interfaces. Their adapter registers active calls, sessions, callbacks and memory loans. The application coordinates Finalize, CloseAllSessions and token-wide InitToken preconditions. [COEXISTENCE.txt](COEXISTENCE.txt) gives the complete coordination and recovery contracts.
+
+For a private-key operation that requires contextual authentication, keep its
+operation ticket and call `authenticate_context` after the successful Init.
+Fe11 checks that it can attribute the login to the operation. If another active
+operation could own the key, the call returns `AmbiguousContextKey` before the
+PIN reaches the module. An application that manages the ordering of native
+operations can instead call `authenticate_session_context` on its session with
+`ContextAuthentication::login(pin)` or `ContextAuthentication::login_user(pin,
+name)`. The module selects the active key. Both routes preserve native PIN
+errors, including the token-wide effect of a locked PIN. A length query, an
+Update, dropping the ticket, or logging out does not establish that the
+operation has ended. Obtain native completion, cancel the operation, or close
+the session before using a sibling operation that could consume its grant.
 
 Role and attribute observations describe values obtained at a point in time. Fe11 preserves native results and retires contexts whose invalidity has been established. The application then chooses a new session, token refresh or runtime successor. Outstanding memory owners retain their credits until native completion is established, including across generation changes.
 
@@ -81,6 +98,18 @@ Templates preserve the request. Omitting `CKA_ALLOWED_MECHANISMS`, supplying an 
 `ObjectObservationPlan`, `MechanismObservationPlan` and content, history, mutation and reference observations select what to read. Reports distinguish observed values, unavailable values and errors. Labels, IDs, selectors and result indices remain explicit application choices. DER/SPKI and typed parameters enforce their representation contracts; the native module handles cryptographic key compatibility.
 
 Resource limits are explicit and configurable. A submission limit applies to that submission; cumulative stream counters are tracked separately. `ResourceAdmission` and `WaitUntil` govern local capacity waits with a preserved deadline and cancellation signal. Native C calls follow their native completion contract.
+
+### Iterating while a cryptographic operation is initialized
+
+On a synchronous session, `iter_native_objects` submits a search to the module while a digest, cipher, signing or verification ticket is between calls. If the module returns `CKR_OPERATION_ACTIVE`, the caller can continue using the original ticket. If it accepts the search, the iterator owns the cursor independently.
+
+Handle errors from `next()` explicitly. A refill that returns `OperationOwnershipBusy::AdvancedOperation` or `NativeOperationCallPending` can resume. Advance or finish the cryptographic operation, then call `next()` again. Discarding these errors with `.flatten()` or `.filter_map(Result::ok)` can loop indefinitely. Other refill errors end iteration.
+
+While a batch returned by `C_FindObjects` awaits publication, the iterator can hold catalogue access across a busy return. This can block object changes coordinated by the same Fe11 runtime for the same token, including changes from its other sessions. Retry after resolving the contention, or call `finish()` before requesting those changes. A batch ready for the caller holds no catalogue exclusion. Other participants can change the token independently.
+
+Use `finish()` to observe cleanup errors. Drop makes one nonwaiting admission attempt. An admitted native Final runs synchronously. If the end of the search cannot be established, Fe11 retains its storage and withdraws the session from ordinary use until close.
+
+Finish and drop the iterator before moving its `Session` into `into_advanced()` for state restoration. A successful native `C_SetOperationState` cancels ongoing cryptographic and object search operations in the destination session. The saved cryptographic state contains no search cursor.
 
 ## Operations and parameter representation
 
@@ -122,6 +151,8 @@ A successful second `C_SignInit` or `C_VerifyInit` with intact parameters replac
 
 A mixed owner, another operation family, retained control/wait or independent uncertainty can prevent local publication of the new continuation. Fe11 reports successful Init through `Error::OperationCompleted` with the local cause and retires ordinary session use. With returned execution, intact parameters and no independent uncertainty, Logout and Session::close remain available; both parameter graphs stay retained until native closure. Boundary anomalies keep their own diagnostics and quarantine.
 
+A poisoned token registry prevents new native session-close or completion calls under `ModuleDrain`, including `reap_sessions`; it does not turn a generic native error into a new cleanup restriction. Explicit module finalization retains its own recovery conditions.
+
 After sessions close, `Module::close` finalizes the module; `ModuleDrain` supplies explicit recovery under its contract. Module closure checks recovery conditions for retired sessions whose calls have returned, preserving another drain's permit and pending executions. A failed session close retains its native receipt for local recovery without repeating C_CloseSession.
 
 After a native error, Logout remains available when initialization and its owner are valid and relevant executions have returned. Its result leaves operation graphs governed by their closure obligations. Explicitly retired initialization is identified by `NativeExecutionRejection::NativeInitializationRetired`, distinct from a native PKCS#11 return. A direct `CKR_CRYPTOKI_NOT_INITIALIZED` with no cleanup work preserves its cause without adding a cleanup failure.
@@ -138,6 +169,29 @@ After a native error, Logout remains available when initialization and its owner
 | `validation_flags` and `digest_with_validation` | Explicit requests independent of automatic capture selection |
 
 `set_validation_capture` configures the relevant owners. Missing functions, read refusals and returned flags remain distinct outcomes, separate from the cryptographic verdict.
+
+## Concurrent classic operations on one session
+
+Digest, encrypt, decrypt, sign and verify each have a distinct ticket after a
+successful Init. Keep both tickets when a module accepts two operations. Pass
+each ticket to its own update, final or poll method. A returned
+`CKR_OPERATION_ACTIVE` from a second Init leaves the original ticket available.
+A synchronous call which parked a continuation can be recovered by direction
+with `take_classic_ticket`.
+
+A session state image covers all active operations. Start capture with one
+ticket. The captured state lists the selected operation first in
+`grouped_operations()`. Use `start_group_state_restore` to specify each
+destination key binding and the two native key arguments. Supply every live
+destination ticket once, or an empty slice for an idle destination.
+After `poll_state_restore` returns `Restored(primary)`, use
+`primary.take_restored_companions()` to take the other tickets by direction.
+The module decides whether it can save the session and accept the supplied keys.
+
+A ticket-scoped context login identifies the active key of its operation.
+The existing standalone dual-operation ticket retains its contextual login
+for its private-key role. Use `authenticate_session_context` for an explicit
+session-wide request when the caller leaves key selection to the module.
 
 ## Output diagnostics
 

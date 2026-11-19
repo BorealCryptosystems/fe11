@@ -1,0 +1,1 @@
+Published ECDSA vector provenance is inherited from ../ecdsa. P256 domain constants are public; explicit DER is encoded with PyCryptodome3.23.0 using X9.62 ECParameters. No private material is added.

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "kem.legacy-generated-identity.ML-KEM-512",
+    "file": "2930636455e075f0e555879c9dcc7bba98b0b9b3e19879e055d47a55dbe722e2.txt",
+    "sha256": "2930636455e075f0e555879c9dcc7bba98b0b9b3e19879e055d47a55dbe722e2",
+    "worker_mode": "kem-lifecycle",
+    "parameter_identity": true,
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240"
+    ],
+    "parameter_set": "ML-KEM-512",
+    "public_bytes": 800,
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Generate through the legacy table; read both exact PARAMETER_SET attributes and public encoding width. Retain and destroy both created objects. No encapsulation, decapsulation or private-key export claimed."
+  },
+  {
+    "id": "kem.legacy-generated-identity.ML-KEM-768",
+    "file": "fabdec8aae6fec918c3636a5b8188f4f3be9c9a86f31fddb1bfb27f89830295a.txt",
+    "sha256": "fabdec8aae6fec918c3636a5b8188f4f3be9c9a86f31fddb1bfb27f89830295a",
+    "worker_mode": "kem-lifecycle",
+    "parameter_identity": true,
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240"
+    ],
+    "parameter_set": "ML-KEM-768",
+    "public_bytes": 1184,
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Generate through the legacy table; read both exact PARAMETER_SET attributes and public encoding width. Retain and destroy both created objects. No encapsulation, decapsulation or private-key export claimed."
+  },
+  {
+    "id": "kem.legacy-generated-identity.ML-KEM-1024",
+    "file": "262c835d3f7b769937ba80b2f399ca8780c577f86a5d9456fc861232a71b6713.txt",
+    "sha256": "262c835d3f7b769937ba80b2f399ca8780c577f86a5d9456fc861232a71b6713",
+    "worker_mode": "kem-lifecycle",
+    "parameter_identity": true,
+    "contexts": [
+      "linux.1.100.0.openssl-full.db.Legacy240",
+      "linux.1.100.0.openssl-full.file.Legacy240",
+      "linux.1.100.0.openssl-gost.db.Legacy240",
+      "linux.1.100.0.openssl-gost.file.Legacy240",
+      "linux.1.81.0.openssl-full.db.Legacy240",
+      "linux.1.81.0.openssl-full.file.Legacy240",
+      "linux.1.81.0.openssl-gost.db.Legacy240",
+      "linux.1.81.0.openssl-gost.file.Legacy240"
+    ],
+    "parameter_set": "ML-KEM-1024",
+    "public_bytes": 1568,
+    "expected_native_calls": [
+      "C_OpenSession",
+      "C_Login",
+      "C_GenerateKeyPair",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_GetAttributeValue",
+      "C_DestroyObject",
+      "C_DestroyObject",
+      "C_Logout",
+      "C_CloseSession",
+      "C_Finalize"
+    ],
+    "oracle": "Generate through the legacy table; read both exact PARAMETER_SET attributes and public encoding width. Retain and destroy both created objects. No encapsulation, decapsulation or private-key export claimed."
+  }
+]
