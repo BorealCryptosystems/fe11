@@ -22,6 +22,9 @@
 
 ### Tokens, attributes and key derivation
 
+- Keep an otherwise valid session usable after a synchronous key or key-pair
+  generation error with uncertain effects. Preserve the native error and the
+  uncertain creation record while allowing cleanup of existing objects.
 - Submit `C_InitToken` when the token has idle sessions. A native
   `CKR_SESSION_EXISTS` preserves those sessions. During a token drain,
   `initialize_user_pin` and `change_pin` can reach `C_InitPIN` and `C_SetPIN`.

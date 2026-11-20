@@ -19,16 +19,18 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--row', type=json.loads, required=True)
     p.add_argument('--root', type=Path, required=True)
+    p.add_argument('--selection', type=Path,
+                   default=Path(__file__).with_name('diagnostic-selection.json'))
     args = p.parse_args()
     root = args.root.resolve(strict=True)
-    selection = json.loads(Path(__file__).with_name('diagnostic-selection.json').read_text())
+    selection = json.loads(args.selection.read_text())
     selected = [s for s in selection if s['context'] == context(args.row)]
     if not selected or len({s['case'] for s in selected}) != len(selected):
         raise ValueError('empty or repeated diagnostic selection')
     opts, runtime = install(args.row, root)
     kit, gate, output = root / 'native-kit', root / 'native-gate', root / 'diagnostics'
     output.mkdir()
-    save(output / 'identity.json', dict(selection_sha256=digest(Path(__file__).with_name('diagnostic-selection.json')),
+    save(output / 'identity.json', dict(selection_sha256=digest(args.selection),
          kit=json.loads((kit / 'identity.json').read_text()), runtime=runtime['receipt'], selected=selected))
     prepare(SimpleNamespace(**opts, output=gate))
     sys.path.insert(0, str(opts['package'] / 'tests/driver'))

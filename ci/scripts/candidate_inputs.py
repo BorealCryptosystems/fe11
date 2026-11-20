@@ -7,8 +7,8 @@ import tarfile
 
 ROOT = Path(__file__).resolve().parents[2]
 ARCHIVES = ROOT / "ci/candidate"
-SUITE = "38e55c2695afd00bf431180b0aeef37aadbacb847102931810e25fd4a9d1270e"
-LIBRARY = "79d3f2cd5b21c8b445afd7f9edc9c01026a720216e1d3683c89436c992a4a0c5"
+SUITE = "897f377476eb4214e44a12f142ff153b6bd3ec8bd53496fdef444e975decc959"
+LIBRARY = "3e1456f59220d0d59c37a57cbb487b8a714fea0d6d7eb7600c9c3d71b3278042"
 EXPECTED = {"fe11": LIBRARY, "fe11-tests": SUITE}
 
 

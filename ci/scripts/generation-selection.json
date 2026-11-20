@@ -1,0 +1,42 @@
+[
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.file.Legacy240",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.file.Standard32",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.81.0.openssl-full.db.Legacy240",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.81.0.openssl-full.db.Standard32",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.81.0.openssl-full.file.Standard32",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  }
+]

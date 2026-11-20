@@ -146,7 +146,9 @@ impl PairGeneration {
                 && data.public.unchanged()
                 && data.private.unchanged()
         });
-        let completed = rv == CKR_OK || call.non_creation(rv);
+        // Returning the call's memory does not prove that no object was created.
+        // The creation record below independently retains an uncertain effect.
+        let completed = inspection.memory_returned();
         let unchanged = !inspection.violated();
         let output_bounds = if rv == CKR_OK && unchanged {
             data.parameters.validate_output_bounds()
@@ -158,8 +160,8 @@ impl PairGeneration {
         } else if completed {
             returned.terminated();
         } else {
-            // A returned but unproved generation keeps its representation until
-            // successful session closure. PENDING cannot be downgraded by this.
+            // Keep a representation whose memory loan has not ended.
+            // PENDING quarantine cannot be downgraded by this branch.
             returned.recoverable();
             session.poison(s);
         }
@@ -299,7 +301,9 @@ impl KeyGeneration {
                 && data.parameters.unchanged(&data.mechanism)
                 && data.template.unchanged()
         });
-        let completed = rv == CKR_OK || call.non_creation(rv);
+        // Returning the call's memory does not prove that no object was created.
+        // The creation record below independently retains an uncertain effect.
+        let completed = inspection.memory_returned();
         let unchanged = !inspection.violated();
         let output_bounds = if rv == CKR_OK && unchanged {
             data.parameters.validate_output_bounds()
