@@ -1,0 +1,957 @@
+[
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "bcd5535f3e3512bfbd311785eb2b2d484a0bbd35b94ecb60ce87d3b503944078"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "59e9a2ae4e3f3f7632a252e278504c8f5341dc827c4212ea7f1467d4c0fe5d5e"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.IDLE.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "7e1c47113deaaa4bb1ac06f8150a4cbcb651911761ecd8c1381e4173216a8da5"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.cancel.legacy240",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "4d71f3e7f928e27eebea968727055d0d9608be3843122167096a41bf4f69c999"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.close",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "3a41b2407942c86240b35d95c244ce3a3c372381b6fc86488e46bb11f1e6f770"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "ee0b5aa02f547a0fbe239b3178b4c00a516866f63692e8dcfa0765d54e572bc7"
+  },
+  {
+    "case": "wrap.class.aes_key_wrap_pad.private",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8851a27003869360c726ec16cebff007671a8c1296efc07881ab0c76e979d46c"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "52409a0e4166ebc2a14a3d8d9cfcd5f2802d94b246f543bad55e7293cb550d0b"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.close",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "7489d911bc914cf348e4ac0311a3c1fed868cead845e3eeff8119dff04f1d2e9"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.provide_capacity",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "bca39c3266b8fb3576a0f351c6646ba989ce73ca9b18433d2347083eb3896f7e"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "3ab7e17e8bc5b17fa9fd0edc06ad8fc32063f0c777f7e955ffd6285667e232be"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.update",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "195183386d714d0eb2f7c857584f2d1c3998044f554316c038a49f8cf9c495ed"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8c9c828ce645b84c514b1bcea74fab135bd292759eadccebffe9f423c801406a"
+  },
+  {
+    "case": "domain.rsa_pss.SHA256.SHA256.223",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "dc9e5245dcc91d9c14c32e58a992f092ca349c8c2881bc6ee06d3eb542465851"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_384.SHA3_384.207",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "471a39ba105ce063f7ab81cafdcd16c8e2d8358cfde08760a5a4fbf3ebd364c1"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "61b63be462d1b54bfe35113f3b721034b9c76c4432f5c5d0de45ff9991ff91e2"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "dad4f3b5c6b2c65aa3d81c8282f6b305f7f555c0f76a662f1390d6715d8fd1dc"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.REFUSED_TERMINAL.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "536a8e56d505f39807b7fa9c21af6ffe81e4e2e9d03295385b7d82a5115e95f6"
+  },
+  {
+    "case": "state.authentication.RO_PUBLIC.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f05d9d7044ccea6fa267c422dcf402c5d53b15e17c32d220c20db6d54d3fa62f"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.IDLE.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "54d4c5d776bd3dbd214e6438ba6d88546624b0f648f5b34f3da33dbcced3029d"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "245d57c16f3f905022d8a5ca11f110280b0947377f2957db89d498f904f2e1d3"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "a949aad18db78d9084314165362f16a296cfdb793fa04d825613c96e8e863984"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.cancel.legacy240",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "1d3438945e8e92c834a627748c86efc953c4a3a39fdad58bdc05bfb1168937e5"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "c4f5eecb326a8cc559ebb860e813b9afb11c9f31f95f6dc7542104227e5787b3"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "e947733eab18bb00a942d87574bcc52d5adf35e90ba98f947fb5dd9d2ece4756"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "618a0241778cf8300bf5b82f2521d75e64685f5b4bbc2e8ce3161411ab81b94b"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "c7b5dd2c3eeea40639fbe99a9b76b3b1e504323f317bd62788fb498e3963fbd4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "ccb97cb0a1f9092d01cba61225c4069113528c44dd04433acc0d5545cc003b6d"
+  },
+  {
+    "case": "wrap.class.aes_key_wrap_pad.secret",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "981f1102ed0dea1d0bdb7bda851ec147fb734d4ed05ce6bf0748d291ca7eedc4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.close",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "05f2b5da474c154b31a84b89ceb99a8df3d162c6ed2cb9dca4f6199ba4ad3373"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "d514057ed2c6c8a0596a6e5b6efe6c1ea3ab32cde96ce5ceaf0850b87dec6370"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.cancel.legacy240",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "c0ee58e83022700efd003a178a41002a60f0c9faf87e5f06de45abbb77293c85"
+  },
+  {
+    "case": "domain.rsa_pss.SHA384.SHA384.207",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "82e64c9cb0e987ca7debde5f6e56ced2978d72378331500133b7faffd7d300a9"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_512.SHA3_512.191",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "dfbecb571f1255944b0133ac776fce7cb7d1028e14305adb31173e9d71711a06"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "e1f72f1a88ffcd339e490ba1b47816430b42896ffa47572968efb36bcc0da587"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f7c1b2d4c1373bb349441fa455b5d272490a44fc27c571dfdc2ad5364c3ec58f"
+  },
+  {
+    "case": "rsa.negative.pss-digest-length.advanced.sign",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8af148cc72cca38ccc2aaf92c649d58c589f3edd5a7d673750e92cba4ddccb03"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "4a46d8159654fddb1dd75200a1b7d1858aa40e24b7532047199ddc44bbfa9a68"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "4c3d6bc9dd6b03f5e51600701f1df50094a8354584b29b1b0bb92371241a1447"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f5038c5ef9ca76ab3532b2dc78487b50e6904d57bc8a96ada4ea319298df9b93"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.close",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "c582f0cff348feb0bb6e714456a0b74cab4302f1bb3030af1d4e141aa85ecccd"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "e9bc21cd66699efcce3f3de615d247f4299dbdcb02c188f8bf1039bba2e1d3b4"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "e1219c9c4c21670fea7eeb2bfe847eb7e50f58592d8eb1dc907152dcfc91da36"
+  },
+  {
+    "case": "rsa.negative.pss-digest-length.session.sign",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "63e8ca55da1813b2c7e4515f0921b6f8b8f10d1799f2af1c6bf1781c501cc38e"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "2101b4752cf3fd9748a8adfee3f2eb942818cff1dc9ae2bd7943abbf67fa7638"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "a2b2ab97342d5587d57ad0ed52f602dabead1760b7862ed98583d5c10e843c10"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.final",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "92446b9f5a835146be5db1b7edbe8eaea93900b10d5f073555639ec7a0263863"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.close",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "39fab246307ec6976f77e5032ce4b9a91859692e90702f5207b8ad0e473c72bb"
+  },
+  {
+    "case": "rsa.negative.pss-hash-mismatch.advanced.sign",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8cbc16ef65d8670baa6ef7ea52a0d901ea1e227717829ee000af71e1d571f1e2"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f69bb5ca77e60af374d437f3bbf9988f2e4ec293c4e2025b7c64a6df354a9ed4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "df63149db4d6f23238b82f751ec23a54e01638414c9e16ba81e971a37f2178d8"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "85a9d2ff81dcd42ae68d8e95c60e276cbf292ee71045ddd0375ade8b0edf0c9b"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "ce026d238622de45334daf1ff3a8d7780a8faff9f75ceee1b34364866941690c"
+  },
+  {
+    "case": "rsa.negative.pss-hash-mismatch.session.sign",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "2f239a8b62616ac7509066706eb63ba2feff80785abbded04c30f48fd97ce060"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "39f73780b053d25e8f81d40f25355a1cfc20956ae36100d8c569a095d2c32184"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.provide_capacity",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "a196556c35d782de1d03207867ad03b46e7d9d5f76b5b1e3ab899420754485e7"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_224.SHA3_224.227",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "0bc59b93f6d9faf97b3a5bc608ee99639554a26c4c9685787a639694835f752c"
+  },
+  {
+    "case": "domain.rsa_pss.SHA512.SHA512.191",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "1df8c588853010d8be38f8521efbf2b3c1fc4150013998fa59924fb94f1bacb7"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.REFUSED_TERMINAL.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "877452cb615afef4572eb0fca2c7d96c2b1a83898f7d740f6ab9122fac9939a1"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.update",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "b92ddc77c051f3a14e5f882bb0e4d88003a0de6f2225ec88b570c0e9c20061e9"
+  },
+  {
+    "case": "domain.rsa_pss.SHA1.SHA1.235",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "84fc125442fe84e3ec9671b9b397491f26507de81b5ce1289be53c5fdabba7a4"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "135c5a5cff672f361a14bff8e7dd76fe02573beefdc1cd73b4d96953de9fe2e3"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.cancel.legacy240",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "237df3d9b760501b4c8ec53efcd5349e80c5a03754affa87d6c30821c2a68e7d"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "ba65d660686e79a626d31d7be366afc4eef831dd251d50bb841be23ea3731837"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "868e2cdbf61e90647550ff3e27ade4e62cfcac9e824ad2ee2c9d801bf5438d88"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8e36886e777d406e10eff9d91f1f5a7b7f60d1f7d84f50b243d75c42e2945a8f"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f4e0844d1a929019ac72a3e6182c6c12041f3cc260d04d8bce38e71e13511ce3"
+  },
+  {
+    "case": "domain.rsa_pss.SHA224.SHA224.227",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "77e2b4729fd664e350113a450501421ea03068b83f491b0769de907ff392f504"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_256.SHA3_256.223",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "d609651b838dc1cd501476b58b673a4b4dbe8c1955aa7cd0dfa18eb01f083e41"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "7f794d78e2f1515b723916467cbd134e3ed95f2892836dc6144d691fd744b1f2"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "0bab7f17796c6beb9f53f2bbc9e6d932eae374c5e8ae350491c07d24fb94fcc3"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "420b211083c075d0cf5712c910e32d1472e3bf0f084a5fbf0fdf4ca37f70ebed"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "111c32c59490e734477ef4752fbe03d1c66c04d3ecef060b6c429adbfa26b5de"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.final",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "197ab9e1f71ebf18fe3aff86b9f56eeac598667d80f71b3a0b08dcf2c8db8f5c"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "313a2d2a9e1498e7b2d1d54a84b94373478a2a3fd862ca07be27edcd649f1162"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "2debf971a0d85afcda4f175baf2541b0dd4beb1a85b32ead59b7331c0c9c101d"
+  },
+  {
+    "case": "state.authentication.RW_PUBLIC.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "0aab8ec957096502a1517063f231ee196daf5052fee3031cb6f33cec39a14dfb"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.init",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "5ace07521df4e8aea865227d6d9ccd1c076e3076c58492e41a703edc30d0764e"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.cancel.legacy240",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "20d05007a852a88b3aa2afa3511f5d532686d51f803a86c8f221fd4907f93879"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "8490ca25bf5412785d36aaff46711ab780c45b4437f9f4ac98f049d05c481494"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "b615946b158f1c4e0297379fe205061080a457a85c350063f6d1f121adbf8d42"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "e31798380f1a59ce2a3a7068b4c14440662faceacbd07f5c3f917d66f8b2f4e0"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Legacy240",
+    "definition_sha256": "f6a09959ac13cd6a9eee511ee1b9a4ad7bb1bde23e4a988b716f3d6a93afacdc"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "313a2d2a9e1498e7b2d1d54a84b94373478a2a3fd862ca07be27edcd649f1162"
+  },
+  {
+    "case": "kem.length.ML-KEM-768.session.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "082cae289d1388a8f162eb85c52631801c82d9f4e89b613087367665b33ad282"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "71ffb8f459fcec928827196379ad8273844ed54c1f256d5e48115f1ca235ae64"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "b615946b158f1c4e0297379fe205061080a457a85c350063f6d1f121adbf8d42"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "d514057ed2c6c8a0596a6e5b6efe6c1ea3ab32cde96ce5ceaf0850b87dec6370"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "52409a0e4166ebc2a14a3d8d9cfcd5f2802d94b246f543bad55e7293cb550d0b"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e6abdecedcf9f972999f57941e7a6c8f267200fc629e39cf74a9ea7957d470db"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f7c1b2d4c1373bb349441fa455b5d272490a44fc27c571dfdc2ad5364c3ec58f"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.provide_capacity",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "bca39c3266b8fb3576a0f351c6646ba989ce73ca9b18433d2347083eb3896f7e"
+  },
+  {
+    "case": "generation.CKM_DSA_PARAMETER_GEN.512.domain-use",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "92c31c9713d9518c387186b562b6bc26e834a2d18dbbc9cedbeb3f4a2a9ce95d"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e947733eab18bb00a942d87574bcc52d5adf35e90ba98f947fb5dd9d2ece4756"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f5038c5ef9ca76ab3532b2dc78487b50e6904d57bc8a96ada4ea319298df9b93"
+  },
+  {
+    "case": "wrap.class.aes_key_wrap_pad.private",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8851a27003869360c726ec16cebff007671a8c1296efc07881ab0c76e979d46c"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.update",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "195183386d714d0eb2f7c857584f2d1c3998044f554316c038a49f8cf9c495ed"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.close",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "05f2b5da474c154b31a84b89ceb99a8df3d162c6ed2cb9dca4f6199ba4ad3373"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e1219c9c4c21670fea7eeb2bfe847eb7e50f58592d8eb1dc907152dcfc91da36"
+  },
+  {
+    "case": "wrap.class.aes_key_wrap_pad.secret",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "981f1102ed0dea1d0bdb7bda851ec147fb734d4ed05ce6bf0748d291ca7eedc4"
+  },
+  {
+    "case": "domain.rsa_pss.SHA384.SHA384.207",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "82e64c9cb0e987ca7debde5f6e56ced2978d72378331500133b7faffd7d300a9"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_512.SHA3_512.191",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "dfbecb571f1255944b0133ac776fce7cb7d1028e14305adb31173e9d71711a06"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e1f72f1a88ffcd339e490ba1b47816430b42896ffa47572968efb36bcc0da587"
+  },
+  {
+    "case": "state.authentication.RO_PUBLIC.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f05d9d7044ccea6fa267c422dcf402c5d53b15e17c32d220c20db6d54d3fa62f"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "4c3d6bc9dd6b03f5e51600701f1df50094a8354584b29b1b0bb92371241a1447"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.REFUSED_TERMINAL.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "536a8e56d505f39807b7fa9c21af6ffe81e4e2e9d03295385b7d82a5115e95f6"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e9bc21cd66699efcce3f3de615d247f4299dbdcb02c188f8bf1039bba2e1d3b4"
+  },
+  {
+    "case": "kem.length.ML-KEM-1024.advanced.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "5241dd701e39fb3444cb96be27e4d1db2a2b020d17c699435e08b650e2a63ff4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.INITIALIZED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "a2b2ab97342d5587d57ad0ed52f602dabead1760b7862ed98583d5c10e843c10"
+  },
+  {
+    "case": "kem.length.ML-KEM-1024.advanced.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8a105d749d377a43f4085d831ca3fdbbce193a0064a9fbca2b0d1d475ffbbcfe"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.close",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "39fab246307ec6976f77e5032ce4b9a91859692e90702f5207b8ad0e473c72bb"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "df63149db4d6f23238b82f751ec23a54e01638414c9e16ba81e971a37f2178d8"
+  },
+  {
+    "case": "kem.length.ML-KEM-1024.session.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "7e7f1edce60541747422de0a2cc0fe4b3c970a02e547eee981e3f73a327aae44"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.IDLE.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "7e1c47113deaaa4bb1ac06f8150a4cbcb651911761ecd8c1381e4173216a8da5"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "e31798380f1a59ce2a3a7068b4c14440662faceacbd07f5c3f917d66f8b2f4e0"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.OBSERVER_DROPPED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "ce026d238622de45334daf1ff3a8d7780a8faff9f75ceee1b34364866941690c"
+  },
+  {
+    "case": "kem.length.ML-KEM-1024.session.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "c1cb555a70b04ebe0ca0c9225399e8cbebdec5b8332defb33e7ff76962b4beca"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "135c5a5cff672f361a14bff8e7dd76fe02573beefdc1cd73b4d96953de9fe2e3"
+  },
+  {
+    "case": "rsa.negative.pss-digest-length.advanced.sign",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8af148cc72cca38ccc2aaf92c649d58c589f3edd5a7d673750e92cba4ddccb03"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "ba65d660686e79a626d31d7be366afc4eef831dd251d50bb841be23ea3731837"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "00a4546f3eb949bd3261e9e098dc5d8aa26931a1aeae12b20013a0668941a449"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_224.SHA3_224.227",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "0bc59b93f6d9faf97b3a5bc608ee99639554a26c4c9685787a639694835f752c"
+  },
+  {
+    "case": "domain.rsa_pss.SHA512.SHA512.191",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "1df8c588853010d8be38f8521efbf2b3c1fc4150013998fa59924fb94f1bacb7"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.REFUSED_TERMINAL.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "877452cb615afef4572eb0fca2c7d96c2b1a83898f7d740f6ab9122fac9939a1"
+  },
+  {
+    "case": "kem.length.ML-KEM-512.advanced.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "7978e3e9f3b08a5a2701613d5558e77c287da24a83cc4ce49ef7dad2de2b9e6d"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "59e9a2ae4e3f3f7632a252e278504c8f5341dc827c4212ea7f1467d4c0fe5d5e"
+  },
+  {
+    "case": "rsa.negative.pss-digest-length.session.sign",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "63e8ca55da1813b2c7e4515f0921b6f8b8f10d1799f2af1c6bf1781c501cc38e"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "4a46d8159654fddb1dd75200a1b7d1858aa40e24b7532047199ddc44bbfa9a68"
+  },
+  {
+    "case": "domain.rsa_pss.SHA1.SHA1.235",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "84fc125442fe84e3ec9671b9b397491f26507de81b5ce1289be53c5fdabba7a4"
+  },
+  {
+    "case": "kem.length.ML-KEM-512.advanced.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "a4008616fb55420ae9a1a2acc4ef1767926bdb2df65e5db66747d4e143f402a1"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@AdvancedSession::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "ee0b5aa02f547a0fbe239b3178b4c00a516866f63692e8dcfa0765d54e572bc7"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.close",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "c582f0cff348feb0bb6e714456a0b74cab4302f1bb3030af1d4e141aa85ecccd"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "1269c34341ad83a9b68995dd60f32a281b390f435975051f153399ef26beddb4"
+  },
+  {
+    "case": "rsa.negative.pss-hash-mismatch.advanced.sign",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8cbc16ef65d8670baa6ef7ea52a0d901ea1e227717829ee000af71e1d571f1e2"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "2101b4752cf3fd9748a8adfee3f2eb942818cff1dc9ae2bd7943abbf67fa7638"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "bcd5535f3e3512bfbd311785eb2b2d484a0bbd35b94ecb60ce87d3b503944078"
+  },
+  {
+    "case": "kem.length.ML-KEM-512.session.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8830365ca69e3acdd785032e0a9e30eecc1ed4bb02f763ecbb30fe52460c531e"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.final",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "92446b9f5a835146be5db1b7edbe8eaea93900b10d5f073555639ec7a0263863"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "d8d51a059ced3435c14ed4950f5c8fceb12863b26d9403ae7f6bf035f0e03a95"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.close",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "3a41b2407942c86240b35d95c244ce3a3c372381b6fc86488e46bb11f1e6f770"
+  },
+  {
+    "case": "kem.length.ML-KEM-512.session.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "3aafffaa4b1dab777c618443d4b80e9711607e69ae625bf02e59fb795ceee438"
+  },
+  {
+    "case": "rsa.negative.pss-hash-mismatch.session.sign",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "2f239a8b62616ac7509066706eb63ba2feff80785abbded04c30f48fd97ce060"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f69bb5ca77e60af374d437f3bbf9988f2e4ec293c4e2025b7c64a6df354a9ed4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "c7b5dd2c3eeea40639fbe99a9b76b3b1e504323f317bd62788fb498e3963fbd4"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "ccb97cb0a1f9092d01cba61225c4069113528c44dd04433acc0d5545cc003b6d"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "85a9d2ff81dcd42ae68d8e95c60e276cbf292ee71045ddd0375ade8b0edf0c9b"
+  },
+  {
+    "case": "kem.length.ML-KEM-768.advanced.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8ac64ba5e96b57198e04fdcf2f470f2e3a6a339ff6169a86afbf43b01c3bca5b"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "111c32c59490e734477ef4752fbe03d1c66c04d3ecef060b6c429adbfa26b5de"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "39f73780b053d25e8f81d40f25355a1cfc20956ae36100d8c569a095d2c32184"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8e36886e777d406e10eff9d91f1f5a7b7f60d1f7d84f50b243d75c42e2945a8f"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f4e0844d1a929019ac72a3e6182c6c12041f3cc260d04d8bce38e71e13511ce3"
+  },
+  {
+    "case": "kem.length.ML-KEM-768.advanced.short",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "4e5100dbc6d28943a338de396b362333318482d012f1286f47abcda6cc9c702f"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "2debf971a0d85afcda4f175baf2541b0dd4beb1a85b32ead59b7331c0c9c101d"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.close",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "7489d911bc914cf348e4ac0311a3c1fed868cead845e3eeff8119dff04f1d2e9"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.provide_capacity",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "a196556c35d782de1d03207867ad03b46e7d9d5f76b5b1e3ab899420754485e7"
+  },
+  {
+    "case": "domain.rsa_pss.SHA224.SHA224.227",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "77e2b4729fd664e350113a450501421ea03068b83f491b0769de907ff392f504"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_256.SHA3_256.223",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "d609651b838dc1cd501476b58b673a4b4dbe8c1955aa7cd0dfa18eb01f083e41"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "7f794d78e2f1515b723916467cbd134e3ed95f2892836dc6144d691fd744b1f2"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.RETIRED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "0bab7f17796c6beb9f53f2bbc9e6d932eae374c5e8ae350491c07d24fb94fcc3"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8490ca25bf5412785d36aaff46711ab780c45b4437f9f4ac98f049d05c481494"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.CONSUMED.update",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "b92ddc77c051f3a14e5f882bb0e4d88003a0de6f2225ec88b570c0e9c20061e9"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CONSUMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "420b211083c075d0cf5712c910e32d1472e3bf0f084a5fbf0fdf4ca37f70ebed"
+  },
+  {
+    "case": "kem.length.ML-KEM-768.session.long",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "bda0bd1d4c8f3e179bdd10d9801080eef18db79fc9961f8a5e5698555688a22a"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_3072_sha512_256_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "f6a09959ac13cd6a9eee511ee1b9a4ad7bb1bde23e4a988b716f3d6a93afacdc"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.cancel",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "61981fd77592b2c5072cee2b319f97159ff6f407665794bcd3b6a098baeb935e"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.drop_ticket",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "3ab7e17e8bc5b17fa9fd0edc06ad8fc32063f0c777f7e955ffd6285667e232be"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.capture",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "868e2cdbf61e90647550ff3e27ade4e62cfcac9e824ad2ee2c9d801bf5438d88"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "8c9c828ce645b84c514b1bcea74fab135bd292759eadccebffe9f423c801406a"
+  },
+  {
+    "case": "domain.rsa_pss.SHA256.SHA256.223",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "dc9e5245dcc91d9c14c32e58a992f092ca349c8c2881bc6ee06d3eb542465851"
+  },
+  {
+    "case": "domain.rsa_pss.SHA3_384.SHA3_384.207",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "471a39ba105ce063f7ab81cafdcd16c8e2d8358cfde08760a5a4fbf3ebd364c1"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "61b63be462d1b54bfe35113f3b721034b9c76c4432f5c5d0de45ff9991ff91e2"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.1",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "245d57c16f3f905022d8a5ca11f110280b0947377f2957db89d498f904f2e1d3"
+  },
+  {
+    "case": "state.authentication.RW_PUBLIC.logout",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "0aab8ec957096502a1517063f231ee196daf5052fee3031cb6f33cec39a14dfb"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.poll",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "dad4f3b5c6b2c65aa3d81c8282f6b305f7f555c0f76a662f1390d6715d8fd1dc"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.2",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "a949aad18db78d9084314165362f16a296cfdb793fa04d825613c96e8e863984"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.final",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "197ab9e1f71ebf18fe3aff86b9f56eeac598667d80f71b3a0b08dcf2c8db8f5c"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.21",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "c4f5eecb326a8cc559ebb860e813b9afb11c9f31f95f6dc7542104227e5787b3"
+  },
+  {
+    "case": "classic.cross.eddsa_verify.INITIALIZED.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "5ace07521df4e8aea865227d6d9ccd1c076e3076c58492e41a703edc30d0764e"
+  },
+  {
+    "case": "generation.cross.typed_generate_montgomery_key.IDLE.init",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "54d4c5d776bd3dbd214e6438ba6d88546624b0f648f5b34f3da33dbcced3029d"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.encrypt@Session::encrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.8",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "618a0241778cf8300bf5b82f2521d75e64685f5b4bbc2e8ce3161411ab81b94b"
+  },
+  {
+    "case": "curve.operations.X9_62_c2tnb239v2",
+    "context": "linux.1.100.0.openssl-full.file.Legacy240",
+    "definition_sha256": "f4f08e8703e7d343e5005efd374a8d211be82929616df5e6167d357f65df0787"
+  },
+  {
+    "case": "curve.operations.X9_62_c2tnb239v2",
+    "context": "linux.1.81.0.openssl-full.db.Standard32",
+    "definition_sha256": "f4f08e8703e7d343e5005efd374a8d211be82929616df5e6167d357f65df0787"
+  },
+  {
+    "case": "operation.CKM_ECDH1_DERIVE.derive@Session::derive_native_key@ecdh_sect409k1_test.json.0.1",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "d175212e5d9986d1a32ac250174d608b65d86a44345cbf1d798e40fb31e6f0ad"
+  },
+  {
+    "case": "object.cross.True.False.LOGGED_OUT.use",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "85be807d2a312d5a9ed79fa66b2bb6eb32310373176a351a3aa2478501d658f6"
+  },
+  {
+    "case": "parity.OPENSSL.evpciph_des.txt.11",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "9e86e890aa2d16499c6f47a110147741437a51a4f4e05f486cadffc4156928f3"
+  },
+  {
+    "case": "operation.CKM_RSA_PKCS_OAEP.decrypt@Session::decrypt_native_rsa@rsa_oaep_2048_sha512_224_mgf1sha1_test.json.0.1",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "9e64f1e73b672748a5fc78e2ada1372244ac119eb598d818198f79fb6dc72063"
+  },
+  {
+    "case": "negative.CKM_RSA_PKCS_KEY_PAIR_GEN.generate_pair.template",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "5489254aab773dfd2d796cc22950ed0988952a7617b09627cdc9c5990f8389dd"
+  },
+  {
+    "case": "operation.CKM_AES_KEY_WRAP.unwrap@Session::unwrap_native_key@ACVP-AES-KW-1.0.1.1",
+    "context": "linux.1.81.0.openssl-full.file.Legacy240",
+    "definition_sha256": "bc8f3a483ffff8fa3524fce77263fbf566440db9b39c963dde209fb38463ab13"
+  },
+  {
+    "case": "curve.operations.secp160k1",
+    "context": "linux.1.81.0.openssl-full.file.Standard32",
+    "definition_sha256": "50bccaab98e16e50ef67a6670055e37f857a4e71ef89d12cff1cbeb8889038cc"
+  },
+  {
+    "case": "curve.operations.X9_62_prime192v2",
+    "context": "linux.1.81.0.openssl-full.file.Standard32",
+    "definition_sha256": "879673ec6e8c74412d7dfeb4c553d40d46e61f307c56aa74cee841339c2f1c54"
+  }
+]

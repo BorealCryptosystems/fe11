@@ -1,0 +1,65 @@
+name: SoftHSM observation diagnostics
+on:
+  push:
+    branches: [codex/fe11-0.1.1-observation-diagnostics]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {rust: '1.100.0', backend: db, interface: Legacy240}
+          - {rust: '1.100.0', backend: db, interface: Standard32}
+          - {rust: '1.100.0', backend: file, interface: Legacy240}
+          - {rust: '1.81.0', backend: db, interface: Standard32}
+          - {rust: '1.81.0', backend: file, interface: Legacy240}
+          - {rust: '1.81.0', backend: file, interface: Standard32}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Verify unchanged candidate and source run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 -B ci/scripts/candidate_inputs.py
+          python3 -B fe11-tests/tests/driver/fixture_archive.py check
+          test -z "$(git status --porcelain)"
+          gh api repos/BorealCryptosystems/fe11/actions/runs/44668526812 --jq '.head_sha == "a30d89b3ee90ab53fea4087a1b22d7bce25bfd80" and .status == "completed" and .run_attempt == 1' | grep -Fx true
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          github-token: ${{ github.token }}
+          run-id: 44668526812
+          name: native-kit-${{ matrix.rust }}
+          path: ${{ runner.temp }}/native-kit
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          github-token: ${{ github.token }}
+          run-id: 44668526812
+          name: native-runtime
+          path: ${{ runner.temp }}/native-runtime
+      - name: Collect selected observations once
+        env:
+          FE11_ROW: ${{ toJSON(matrix) }}
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gdb
+          (cd "$RUNNER_TEMP/native-runtime" && sha256sum --check SHA256SUMS)
+          python3 -B ci/scripts/diagnose_native.py --row "$FE11_ROW" --root "$RUNNER_TEMP"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: diagnostic-${{ matrix.rust }}-${{ matrix.backend }}-${{ matrix.interface }}
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/diagnostics/
+            ${{ runner.temp }}/native-linkage.json
