@@ -4,11 +4,12 @@ import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import tarfile
+import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
 ARCHIVES = ROOT / "ci/candidate"
-SUITE = "2c76920c5d205ce0b695075d45e294855c21dfb9b98fd65da841675d3a001ffb"
-LIBRARY = "3e1456f59220d0d59c37a57cbb487b8a714fea0d6d7eb7600c9c3d71b3278042"
+SUITE = "853a87ba9f7f61ca04fe1030bb692ba46da78921dcfc2b02c17e15c42c1f5e97"
+LIBRARY = "7f3b032d2729e6f34d77b144cff1fb20ff858e73607a61f8cd19b22d5636224f"
 EXPECTED = {"fe11": LIBRARY, "fe11-tests": SUITE}
 
 
@@ -21,6 +22,13 @@ def check():
         source = ROOT / ("library" if name == "fe11" else name)
         files = set()
         with tarfile.open(path) as archive:
+            if name == "fe11-tests":
+                lock = tomllib.loads(archive.extractfile(f"{path.stem}/Cargo.lock").read().decode("utf-8"))
+                selected = [p for p in lock["package"] if p["name"] == "fe11"]
+                if (len(selected) != 1 or selected[0].get("version") != "0.1.1"
+                        or selected[0].get("checksum") != LIBRARY
+                        or selected[0].get("source") != "registry+https://github.com/rust-lang/crates.io-index"):
+                    raise ValueError("Packaged test lockfile selects a different Fe11 archive")
             for entry in archive:
                 relative = PurePosixPath(entry.name).relative_to(path.stem)
                 if (not entry.isfile() or ".." in relative.parts or relative in files):

@@ -306,6 +306,7 @@ impl Reservation {
             ticket: CreationTicket {
                 publication: storage.publication,
                 inner: Arc::downgrade(&session.inner),
+                attempt: 0,
                 keys: storage.keys,
                 creator: Arc::downgrade(&session.entry),
                 authentication: session.snapshot.authentication_stamp(),

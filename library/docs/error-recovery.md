@@ -57,6 +57,12 @@ together with the public return value that still owns the request:
   prove rollback, or authorize a second cleanup call.
 * `Error::Native` retains the function, return code and `may_have_effect`.
   Neither `Busy` nor `Rejected` nested inside another error overrides that data.
+  After a completed creation call with uncertain effects, a new independent
+  creation request can use the same destination attributes. Fe11 retains each
+  uncertain attempt separately until the creating session closes; a later
+  success does not resolve an earlier attempt. This is not permission to replay
+  the failed request as though it had no effect, nor does it release an
+  unfinished native call.
 * `Error::OutputSizeRejected` retains a size observation rejected by a local
   bound. For state capture, `CKR_OK` describes the successful size query only;
   it does not claim that state bytes were captured. The caller's maximum and

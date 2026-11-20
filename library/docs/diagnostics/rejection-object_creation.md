@@ -934,6 +934,10 @@ Local detection/handling phase and implementation owner:
 - `PendingSlots::new` — `src/managed/mutations/origins.rs`.
 - `PendingSlots::new` — `src/managed/mutations/origins.rs`.
 - `PreparedCreation::begin` — `src/managed/mutations/origins.rs`. Enclosing true branch: `slots.remaining != ticket.keys.len() || catalog.pending_reserved < slots.remaining || catalog .pending_creations .capacity() .saturating_sub(catalog.pending_creations.len()) < slots.remaining`.
+- `PreparedCreation::begin` — `src/managed/mutations/origins.rs`. A checked
+  increment of the catalogue's creation-attempt counter can also return this
+  cause. This is counter exhaustion, not an allocation failure. It occurs
+  before native dispatch and prevents reusing an earlier attempt's identity.
 
 
 <a id="cause-ObjectCreatorAlreadyRecorded"></a>
@@ -944,7 +948,11 @@ Local detection/handling phase and implementation owner:
 Local detection/handling phase and implementation owner:
 
 - `PreparedCreation::begin` — `src/managed/mutations/origins.rs`.
-- `PreparedCreation::begin` — `src/managed/mutations/origins.rs`. Enclosing true branch: `ticket.keys.iter().any(|key| { catalog.pending_creations.contains_key(key) || !catalog.occupied.contains(key) })`.
+- `PreparedCreation::begin` — `src/managed/mutations/origins.rs`. Enclosing true branch: `ticket.keys.iter().any(|key| !catalog.occupied.contains(key))`.
+
+This checks the prepared ticket's one-time consumption and destination
+reservation. A different attempt with the same attributes may remain uncertain;
+its presence alone does not cause this refusal.
 
 
 <a id="cause-PairAuxiliaryOutputOwner"></a>

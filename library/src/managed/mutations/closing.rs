@@ -69,7 +69,7 @@ impl CloseReservation {
             buffers.destination(&origin.destination, &origin.destination_activity)?;
             buffers.resource(&origin.resource_activity)?;
         }
-        for (destination, pending) in catalog
+        for ((_, destination), pending) in catalog
             .pending_creations
             .iter()
             .filter(|(_, pending)| Arc::ptr_eq(&pending.creator, entry))

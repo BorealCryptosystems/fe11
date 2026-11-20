@@ -23,6 +23,7 @@ impl Catalog {
             resource_activities: std::collections::HashMap::new(),
             origins: std::collections::HashMap::new(),
             pending_creations: std::collections::HashMap::new(),
+            last_creation_attempt: 0,
             pending_reserved: 0,
             publication_reserved: 0,
             unknown_closing: std::collections::HashMap::new(),

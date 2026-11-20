@@ -5,6 +5,12 @@
 use super::*;
 
 impl CreationTicket {
+    // Destination bytes are shared, so forming a lookup key does not allocate.
+    // A later call with identical attributes must never consume this attempt.
+    pub(super) fn pending_key(&self, destination: &Destination) -> (u64, Destination) {
+        (self.attempt, destination.clone())
+    }
+
     // The ledger/catalogue retain native lifetime. A resident creation ticket
     // only identifies it and cannot keep its own recovery registry alive.
     pub(super) fn creator(&self) -> Result<Arc<SessionEntry>> {
@@ -69,11 +75,12 @@ impl CreationTicket {
                 return Err(Error::Poisoned);
             }
             for key in &self.keys {
-                let origin = catalog.pending_creations.get(key).ok_or(Error::Rejected(
-                    crate::RejectionReason::ObjectCreation(
+                let origin = catalog
+                    .pending_creations
+                    .get(&self.pending_key(key))
+                    .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(
                         crate::ObjectCreationRejection::CreationRecordMissing,
-                    ),
-                ))?;
+                    )))?;
                 if !std::sync::Weak::ptr_eq(&Arc::downgrade(&origin.creator), &self.creator)
                     || origin.authentication != self.authentication
                     || !catalog.occupied.contains(key)
@@ -84,7 +91,7 @@ impl CreationTicket {
                 }
             }
             for key in &self.keys {
-                catalog.pending_creations.remove(key);
+                catalog.pending_creations.remove(&self.pending_key(key));
             }
             Ok(())
         })();
@@ -129,7 +136,7 @@ impl CreationTicket {
             let catalog = inner.reservations.lock().map_err(|_| Error::Poisoned)?;
             let pending = catalog
                 .pending_creations
-                .get(&self.keys[0])
+                .get(&self.pending_key(&self.keys[0]))
                 .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(
                     crate::ObjectCreationRejection::CreatedObjectRecordMissing,
                 )))?;
@@ -219,11 +226,12 @@ impl CreationTicket {
                 return Err(Error::Poisoned);
             }
             for key in &self.keys {
-                let pending = catalog.pending_creations.get(key).ok_or(Error::Rejected(
-                    crate::RejectionReason::ObjectCreation(
+                let pending = catalog
+                    .pending_creations
+                    .get(&self.pending_key(key))
+                    .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(
                         crate::ObjectCreationRejection::CreatedObjectRecordMissing,
-                    ),
-                ))?;
+                    )))?;
                 if !std::sync::Weak::ptr_eq(&Arc::downgrade(&pending.creator), &self.creator)
                     || pending.authentication != self.authentication
                 {
@@ -237,7 +245,7 @@ impl CreationTicket {
                 let key = &self.keys[if grouped { 0 } else { index }];
                 let pending = catalog
                     .pending_creations
-                    .get_mut(key)
+                    .get_mut(&self.pending_key(key))
                     .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(
                         crate::ObjectCreationRejection::CreatedObjectRecordMissing,
                     )))?;
@@ -278,7 +286,7 @@ impl CreationTicket {
             // Remove the pending scope only after every returned object has an
             // origin. A zero-output group proves no object for this completed call.
             for key in &self.keys {
-                catalog.pending_creations.remove(key);
+                catalog.pending_creations.remove(&self.pending_key(key));
             }
             Ok(())
         })();

@@ -1,4 +1,4 @@
-name: SoftHSM corrected suite observations
+name: SoftHSM targeted ECDH validation
 on:
   push:
     branches: [codex/fe11-0.1.1-softhsm-finalization]
@@ -53,9 +53,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rust: ['1.81.0', '1.100.0']
-        backend: [file, db]
-        interface: [Legacy240, Standard32]
+        include:
+          - {rust: '1.81.0', backend: db, interface: Legacy240}
+          - {rust: '1.81.0', backend: db, interface: Standard32}
     env:
       PYTHONDONTWRITEBYTECODE: '1'
     steps:
@@ -83,6 +83,18 @@ jobs:
           sudo apt-get install -y --no-install-recommends gdb
           (cd "$RUNNER_TEMP/native-runtime" && sha256sum --check SHA256SUMS)
           python3 -B ci/scripts/diagnose_native.py --row "$FE11_ROW" --root "$RUNNER_TEMP" --selection ci/scripts/soft-hsm-correction-selection.json
+      - name: Require the selected case to pass
+        run: |
+          python3 -B - <<'PY'
+          import json, os
+          from pathlib import Path
+          output = Path(os.environ['RUNNER_TEMP']) / 'diagnostics'
+          summary = json.loads((output / 'summary.json').read_text())
+          assert summary['selected'] == 1 and summary['results'] == {'PASS': 1}, summary
+          observations = [json.loads(line) for line in (output / 'observations.jsonl').read_text().splitlines()]
+          assert len(observations) == 1 and not observations[0].get('driver_failure'), observations
+          assert not observations[0].get('classification_error'), observations
+          PY
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:

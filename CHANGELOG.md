@@ -22,6 +22,10 @@
 
 ### Tokens, attributes and key derivation
 
+- Allow an independent object creation after a completed native refusal whose
+  effects remain uncertain. Track each attempt separately, including requests
+  with identical or omitted object identifiers, while retaining uncertainty
+  and cleanup bookkeeping for the earlier attempt.
 - Keep an otherwise valid session usable after a synchronous key or key-pair
   generation error with uncertain effects. Preserve the native error and the
   uncertain creation record while allowing cleanup of existing objects.

@@ -38,6 +38,9 @@ fn resource(creator: &SessionEntry, handle: CK_OBJECT_HANDLE) -> ResourceIdentit
 pub(crate) struct CreationTicket {
     publication: PublicationSlots,
     inner: std::sync::Weak<Inner>,
+    // Zero while prepared; begin assigns a unique catalogue attempt before
+    // dispatch. Every pending lookup/removal must include this identity.
+    attempt: u64,
     keys: Vec<Destination>,
     creator: std::sync::Weak<SessionEntry>,
     authentication: u64,
@@ -171,9 +174,11 @@ impl PreparedCreation {
         if catalog.broken {
             return Err(Error::Poisoned);
         }
-        if ticket.keys.iter().any(|key| {
-            catalog.pending_creations.contains_key(key) || !catalog.occupied.contains(key)
-        }) {
+        if ticket
+            .keys
+            .iter()
+            .any(|key| !catalog.occupied.contains(key))
+        {
             return Err(Error::Rejected(crate::RejectionReason::ObjectCreation(
                 crate::ObjectCreationRejection::ObjectCreatorAlreadyRecorded,
             )));
@@ -190,6 +195,17 @@ impl PreparedCreation {
                 crate::ObjectCreationRejection::ObjectCreatorAllocation,
             )));
         }
+        // An earlier attempt may have created an object without returning a
+        // usable handle. Retain its record, but do not confuse it with this new
+        // call merely because both requested the same application attributes.
+        let attempt = catalog
+            .last_creation_attempt
+            .checked_add(1)
+            .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(
+                crate::ObjectCreationRejection::ObjectCreatorAllocation,
+            )))?;
+        catalog.last_creation_attempt = attempt;
+        ticket.attempt = attempt;
         for ((key, activity), resource_activity) in ticket
             .keys
             .iter()
@@ -197,7 +213,7 @@ impl PreparedCreation {
             .zip(&ticket._resources)
         {
             catalog.pending_creations.insert(
-                key.clone(),
+                ticket.pending_key(key),
                 PendingCreation {
                     close: close.split(if ticket.keys.len() == 1 {
                         close.remaining()
@@ -400,7 +416,7 @@ impl PreparedAttributeMutation {
 fn creation_metadata_bytes() -> Result<usize> {
     let metadata = std::mem::size_of::<Origin>()
         .checked_add(std::mem::size_of::<PendingCreation>())
-        .and_then(|n| n.checked_add(std::mem::size_of::<Destination>()))
+        .and_then(|n| n.checked_add(std::mem::size_of::<(u64, Destination)>()))
         .and_then(|n| n.checked_add(std::mem::size_of::<NativeObjectIdentity>()))
         .and_then(|n| n.checked_add(std::mem::size_of::<ResourceActivity>()))
         .ok_or(Error::Rejected(crate::RejectionReason::ObjectCreation(

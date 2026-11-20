@@ -215,7 +215,10 @@ pub(crate) struct Catalog {
         std::collections::HashMap<Destination, std::sync::Weak<crate::registry::Activity>>,
     resource_activities: std::collections::HashMap<NativeObjectIdentity, ResourceActivity>,
     origins: std::collections::HashMap<NativeObjectIdentity, origins::Origin>,
-    pending_creations: std::collections::HashMap<Destination, origins::PendingCreation>,
+    pending_creations: std::collections::HashMap<(u64, Destination), origins::PendingCreation>,
+    // Never recycle a creation attempt while this catalogue exists. Destinations
+    // coordinate access but cannot identify successive uncertain native effects.
+    last_creation_attempt: u64,
     pending_reserved: usize,
     publication_reserved: usize,
     unknown_closing: std::collections::HashMap<(CK_SLOT_ID, u64), usize>,
