@@ -7497,7 +7497,19 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
-    }
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": true,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ]
+    },
+    "required_capability": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN"
   },
   {
     "id": "generation.cross.typed_generate_montgomery_key.CONSUMED.capture",
@@ -7702,6 +7714,17 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ]
     }
   },
   {

@@ -105,6 +105,19 @@ def observation_digest(result, config, trace, runtime=None, prerequisite=False):
 def classify(catalogue, identity, context, definition_digest, result, work, runtime=None):
     if context in catalogue["requires_review"].get(identity, ()):
         return "REVIEW_REQUIRED"
+    prerequisite = catalogue.get("prerequisites", {}).get(identity)
+    if prerequisite and context in prerequisite["contexts"] and result.get("prerequisite_unavailable"):
+        if (definition_digest != prerequisite["definition"]
+                or result.get("prerequisite_unavailable") != prerequisite["mechanism"]
+                or result.get("case") != identity or result.get("context") != context
+                or result.get("module_sha256") != (catalogue["module_sha256"] if runtime is None else runtime["module"])
+                or (runtime is not None and runtime["reference_module"] != catalogue["module_sha256"])
+                or result.get("native_sequence_matches") is not True):
+            return "INSUFFICIENT_EVIDENCE"
+        # The package validates the exact refusal, all worker assertions and
+        # the empty inventory. Require the independent trace and cleanup too.
+        observation(result, work, runtime, prerequisite=True)
+        return "DOCUMENTED_PREREQUISITE"
     expected = catalogue["cases"].get(identity)
     profile = expected["contexts"].get(context) if expected else None
     if profile is None:

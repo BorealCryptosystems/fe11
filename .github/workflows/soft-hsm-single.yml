@@ -1,8 +1,12 @@
 name: SoftHSM single shard
 
 on:
-  push:
-    branches: [codex/fe11-0.1.1-hosted-acceptance]
+  workflow_dispatch:
+    inputs:
+      build_run_id:
+        description: Run that produced the native kit and runtime from this exact commit
+        type: string
+        required: true
 
 permissions:
   contents: read
@@ -26,26 +30,33 @@ jobs:
           python3 -B fe11-tests/tests/driver/fixture_archive.py check
           python3 -B ci/scripts/candidate_matrix.py
           test -z "$(git status --porcelain)"
-      - name: Restore the original worker and runtime by immutable artifact ID
+      - name: Verify the source run belongs to this exact candidate
         env:
           GH_TOKEN: ${{ github.token }}
-        working-directory: ${{ runner.temp }}
+          SOURCE_RUN: ${{ inputs.build_run_id }}
         run: |
           set -euo pipefail
-          base="repos/$GITHUB_REPOSITORY/actions"
-          sha="$(gh api "$base/runs/44632626393" --jq .head_sha)"
-          test "$sha" = 9040f0a9158a033ca848ad5ad17a49fdb7c5d5b7
-          restore() {
-            local id="$1" name="$2" hash="$3" dir="$4"
-            gh api "$base/artifacts/$id" --jq '[.name,.workflow_run.id,.expired] | @tsv' |
-              grep -Fx "$(printf '%s\t44632626393\tfalse' "$name")"
-            gh api "$base/artifacts/$id/zip" > "$dir.zip"
-            printf '%s  %s.zip\n' "$hash" "$dir" | sha256sum --check
-            unzip -q "$dir.zip" -d "$dir"
-          }
-          restore 14582254541 native-kit-1.81.0 4651b326b05026b26c5a77301a85b8326188891d4fd723f9a0014e9aa5633980 native-kit
-          restore 14582119570 native-runtime 76e87af6e624d1794abf270391018d1db870dd8e261fe1ebcb8da415f85afce6 native-runtime
+          [[ "$SOURCE_RUN" =~ ^[0-9]+$ ]]
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN" --jq .head_sha)"
+          test "$sha" = "$GITHUB_SHA"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN" --jq '.path == ".github/workflows/ci.yml" and .status == "completed"' | grep -Fx true
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN/jobs?per_page=100" --jq '[.jobs[] | select(.name == "build-linux-msrv" or .name == "Prepare the pinned SoftHSM runtime")] | (length == 2 and all(.[]; .conclusion == "success"))' | grep -Fx true
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.build_run_id }}
+          name: native-kit-1.81.0
+          path: ${{ runner.temp }}/native-kit
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.build_run_id }}
+          name: native-runtime
+          path: ${{ runner.temp }}/native-runtime
+      - name: Verify transported images
+        run: |
           (cd native-runtime && sha256sum --check SHA256SUMS)
+        working-directory: ${{ runner.temp }}
       - name: Verify runtime linkage and execute one shard
         env:
           FE11_ROW: '{"rust":"1.81.0","backend":"file","interface":"Legacy240","shard":3}'

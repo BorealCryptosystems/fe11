@@ -708,6 +708,12 @@ def _run_case(args, owners):
             result["independent_reference"] = verify(vector, observation, gate["public_reference"], env, case["reference_signature_count"])
         observer_sha = digest(HERE / "native_observer.py")
         sequences = case["expected_native_sequences"] if mode == "rsa-domain" else [expected]
+        generation_prerequisite = False
+        if "generation_refusal" in case:
+            from generation_expectations import refused_pair
+            if refused_pair(case, result):
+                sequences = [case["generation_refusal"]["native_calls"]]
+                generation_prerequisite = case["generation_refusal"]["prerequisite"]
         if mode == "optional-rsa-crt-import" and worker_records[-1]["status"] == "PASS":
             refusals = [item for item in worker_records if item.get("assertion") == "creation_return"]
             if refusals:
@@ -772,6 +778,8 @@ def _run_case(args, owners):
                 or any(name not in observed_functions for name in seq) for seq in sequences)):
             raise ValueError("invalid native sequence alternatives")
         observation_exit = 0
+        if generation_prerequisite:
+            observation_exit = 1
         if mode == "unsupported-lifecycle" and "curve_operations" in case:
             observation_exit = 1 if worker_records[-1]["status"] == "FAIL" else 0
         observed = any(trace_matches(records, seq, recipe["sha256"], observer_sha, observed_functions,
@@ -792,6 +800,8 @@ def _run_case(args, owners):
             observed = observed and roles == case["expected_native_runtimes"]
         result.update(observer_script_sha256=observer_sha, native_sequence_matches=observed,
                       native_sequence=[row["function"] for row in records if row.get("kind") == "entry"])
+        if generation_prerequisite and observed:
+            result["prerequisite_unavailable"] = case["required_capability"]
         passed = (process["state"] == "EXITED" and process["exit_code"] == 0 and observed
                   and worker_records[-1]["status"] == "PASS"
                   and (mode not in ("oaep-encrypt", "rsa-domain", "rsa-known", "rsa-negative", "context-pss-login", "pqc-random", "classical-sign", "dsa-import-identity", "ecdsa-transition") or result.get("independent_reference", {}).get("status") == "PASS")

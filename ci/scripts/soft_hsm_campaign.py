@@ -144,6 +144,9 @@ def run(args):
                 row["provision_dependencies_verified"] = result.get("provision_dependencies") == {
                     path: values[0] for path, values in runtime["dependencies"].items()}
             row["native_errors"] = native_errors(result)
+            row["native_sequence_matches"] = result.get("native_sequence_matches")
+            if "prerequisite_unavailable" in result:
+                row["prerequisite_unavailable"] = result["prerequisite_unavailable"]
             try:
                 if identity == "curve.operations.sect239k1":
                     row["ecdh_peer_points"] = ecdh_peer_shapes(result)

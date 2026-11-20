@@ -145,6 +145,25 @@ finds, then repeats the search to verify cleanup. If generation is refused,
 an existing ticket can still be dropped. A capture that requires a created
 pair is reported as unexecuted when that prerequisite fails.
 
+The consumed-session close scenario requires a successful Montgomery
+generation. Its documented missing prerequisite requires the exact native
+refusal, failed setup, an unexecuted body, zero objects in both inventory
+reads, the complete cleanup trace and removal of the isolated token storage.
+The retired-session init scenario can exercise its closed-session refusal
+after a failed generation. Its trace omits object destruction only when
+the independent generation return and both inventories establish that outcome.
+The successful-generation trace continues to require both destructions.
+This adjustment covers `RETIRED.init` and `CONSUMED.close`. Other Montgomery
+scenarios, including `RETIRED.drop_ticket`, `CONSUMED.capture` and
+`CREATED_UNCLAIMED.capture`, retain open trace or prerequisite expectations.
+Their existing failures remain part of the global acceptance report.
+
+The Legacy240 Edwards cancellation scenario first checks the local cancellation
+refusal, then completes verification using its retained ticket. An imported
+raw public key encounters the documented SoftHSM encoding divergence during
+that verification. The CI compares the complete retained observation for each
+context and preserves the raw failure.
+
 Two scenarios follow a generated AES session key across calls. In
 `aes.generated.gcm-authentication`, the session encrypts and decrypts with
 the same key, flips one bit in the tag, checks the native rejection and then

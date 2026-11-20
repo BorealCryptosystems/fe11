@@ -49,6 +49,10 @@
   `sect239k1` ECDH scenario so that a native refusal can be investigated.
 - Provide versioned API documentation and usage guides. The companion crates
   `fe11-sys`, `fe11-verify-engine-api` and `fe11-verify-engine` remain at 0.1.0.
+- Match the Montgomery `RETIRED.init` trace to the observed generation refusal
+  and empty object inventory. Report the missing generator prerequisite for the
+  consumed-session close case with zero exercised bodies. Preserve the raw
+  Edwards verification failure while recognizing its documented observation.
 
 ## 0.1.0
 
