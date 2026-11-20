@@ -10,7 +10,13 @@ import sys
 import tempfile
 import traceback
 from types import SimpleNamespace
-from native_verdict import accepted_observation, classify, fingerprint
+from native_verdict import accepted_observation, classify, fingerprint, observation_details
+from native_selection import selection
+
+POINT_BYTES = {"curve.operations.sect239k1": 61,
+               "curve.operations.secp160k1": 41,
+               "curve.operations.X9_62_prime192v2": 49,
+               "curve.operations.X9_62_c2tnb239v2": 61}
 
 
 def native_errors(result):
@@ -39,13 +45,13 @@ def ecdh_peer_shapes(result):
         if ((length["assertion"], header["assertion"]) != names
                 or any(r["phase"] != "body" or r["producer"] != "test_oracle" for r in (length, header))
                 or header["sequence"] != length["sequence"] + 1
-                or type(length["value"]) is not int or length["value"] != 61
+                or type(length["value"]) is not int or length["value"] != POINT_BYTES[result["case"]]
                 or type(header["value"]) is not bool):
-            raise ValueError("invalid sect239k1 point observation")
+            raise ValueError("invalid public point observation")
         shapes.append({"sec1_uncompressed_bytes": length["value"], "also_matches_der_header": header["value"]})
     if (len(shapes) > 2 or len(shapes) < result.get("native_sequence", []).count("C_DeriveKey")
             or (result.get("status") == "PASS" and len(shapes) != 2)):
-        raise ValueError("inconsistent sect239k1 point observations")
+        raise ValueError("inconsistent public point observations")
     return shapes
 
 
@@ -72,6 +78,16 @@ def montgomery_observation(result):
     return dict(native_returns=codes, transition=rows[-1]["body"], inventory=inventory)
 
 
+def refused_generation_transition(row):
+    """Count exercised refused-ticket transitions separately from creation."""
+    evidence = row.get("keypair_generation", {})
+    return (row["status"] == "PASS" and row["ci_verdict"] == "PASS"
+            and row.get("body_started") is True and evidence.get("native_returns") == [0x70]
+            and evidence.get("transition") == "PASS"
+            and evidence.get("inventory") == {"keypair_namespace_objects": 0,
+                                               "keypair_namespace_remaining": 0})
+
+
 def run(args):
     driver = args.package.resolve(strict=True) / "tests/driver"
     sys.path.insert(0, str(driver))
@@ -81,7 +97,7 @@ def run(args):
     rust, recipe, store, interface = args.rust, args.recipe_name, args.backend, args.interface
     context = f"linux.{rust}.{recipe}.{store}.{interface}"
     cases = catalogue()
-    applicable = sorted(identity for identity, (_, contexts) in cases.items() if context in contexts)
+    applicable, unavailable = selection(cases, context)
     if not applicable or args.shards < 1 or not 0 <= args.shard < args.shards <= len(applicable):
         raise ValueError("empty or invalid native partition")
     selected = applicable[args.shard::args.shards]
@@ -105,6 +121,7 @@ def run(args):
     plan = {"context":context, "shard":args.shard, "shards":args.shards,
             "applicable":len(applicable), "expected":selected, "source_sha256":args.source_sha256,
             "worker_sha256":frozen["worker_sha256"], "gate_sha256":frozen["gate_sha256"]}
+    plan["unavailable_prerequisites"] = unavailable
     runtime = getattr(args, "runtime", None)
     if runtime is not None:
         if gate["module_sha256"] != runtime["module"] or {d["path"]: d["sha256"] for d in gate["dependencies"]} != {
@@ -148,7 +165,7 @@ def run(args):
             if "prerequisite_unavailable" in result:
                 row["prerequisite_unavailable"] = result["prerequisite_unavailable"]
             try:
-                if identity == "curve.operations.sect239k1":
+                if identity in POINT_BYTES:
                     row["ecdh_peer_points"] = ecdh_peer_shapes(result)
                 if "generation_returns" in result:
                     row["keypair_generation"] = montgomery_observation(result)
@@ -159,6 +176,25 @@ def run(args):
                       if record.get("kind") == "terminal"]
             if len(phases) == 1:
                 row["phases"] = [phases[0][name] for name in ("setup", "body", "cleanup")]
+            if status != "PASS" or row["ci_verdict"] != "PASS":
+                # Structured, validated worker records contain public scalars,
+                # typed diagnostics and hashes. Never upload child streams,
+                # observer configuration, generated key data or token storage.
+                receipt = {"case": identity, "context": context,
+                           "definition_sha256": definitions[identity], "result": result,
+                           "driver_failure": failure, "ci_verdict": row["ci_verdict"]}
+                if (work / "token-cleanup.json").is_file():
+                    receipt["token_cleanup"] = json.loads((work / "token-cleanup.json").read_text())
+                if status == "FAIL":
+                    try:
+                        receipt["comparison"] = observation_details(
+                            result, work, runtime, prerequisite=not result.get("body_started"))
+                    except (KeyError, OSError, TypeError, ValueError, IndexError) as error:
+                        receipt["comparison_unavailable"] = type(error).__name__
+                destination = root / "observations"
+                destination.mkdir(exist_ok=True)
+                (destination / (fingerprint(identity) + ".json")).write_text(
+                    json.dumps(receipt, indent=2), encoding="utf-8")
             journal.write(json.dumps(row) + "\n")
             journal.flush()
             if (identity == selected[0] and runtime is not None
@@ -171,6 +207,8 @@ def run(args):
         raise ValueError("incomplete or reordered shard report")
     accepted = all(accepted_observation(row) for row in observed)
     summary = {"context": context, "shard": args.shard, "total": len(observed),
+               "refused_generation_transitions": sum(refused_generation_transition(row) for row in observed),
+               "receipt_bytes": sum(p.stat().st_size for p in (root / "observations").glob("*.json")),
                "raw": dict(Counter(row["status"] for row in observed)),
                "ci": dict(Counter(row["ci_verdict"] for row in observed)),
                "accepted": accepted}

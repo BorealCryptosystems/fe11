@@ -11,9 +11,10 @@ import sys
 sys.dont_write_bytecode = True
 from common import digest, extract, save
 from candidate_inputs import LIBRARY, SUITE
-from soft_hsm_campaign import run
+from soft_hsm_campaign import refused_generation_transition, run
 from soft_hsm_gate import prepare
 from native_verdict import accepted_observation
+from native_selection import selection
 from types import SimpleNamespace
 
 RUST = ("1.81.0", "1.100.0")
@@ -136,6 +137,9 @@ def reconcile(root, package):
     workers = {}
     runtime = None
     exercised = 0
+    refused_generation = 0
+    receipt_bytes = 0
+    excluded_contexts = {}
     unavailable = Counter(c for _, axes in cases.values() for c in axes if ".openssl-gost." in c)
     groups = partitions()
     inputs = {p.name for p in root.iterdir() if p.is_dir()}
@@ -144,13 +148,16 @@ def reconcile(root, package):
     for row in groups:
         name = group(row)
         folder = root / ("native-result-" + name)
-        expected = sorted(key for key, (_, axes) in cases.items() if context(row) in axes)[row["shard"]::SHARDS]
+        selected, excluded = selection(cases, context(row))
+        expected = selected[row["shard"]::SHARDS]
+        excluded_contexts[context(row)] = excluded
         try:
             plan = json.loads((folder / "plan.json").read_text())
             records = [json.loads(line) for line in (folder / "results.jsonl").read_text().splitlines()]
             summary = json.loads((folder / "summary.json").read_text())
             if (plan["expected"] != expected or plan["context"] != context(row) or plan["shards"] != SHARDS
-                    or plan["shard"] != row["shard"] or [r["case"] for r in records] != expected):
+                    or plan["shard"] != row["shard"] or [r["case"] for r in records] != expected
+                    or plan["unavailable_prerequisites"] != excluded):
                 raise ValueError("case inventory mismatch")
             identity = (plan["worker_sha256"], plan["source_sha256"])
             if plan["source_sha256"] != SUITE:
@@ -171,15 +178,23 @@ def reconcile(root, package):
             raw = Counter(r["status"] for r in records)
             outcomes = Counter(r["ci_verdict"] for r in records)
             if (summary["total"] != len(expected) or summary["raw"] != raw or summary["ci"] != outcomes
-                    or summary["context"] != context(row) or summary["shard"] != row["shard"]):
+                    or summary["context"] != context(row) or summary["shard"] != row["shard"]
+                    or summary["refused_generation_transitions"] != sum(
+                        refused_generation_transition(r) for r in records)
+                    or summary["receipt_bytes"] != sum(p.stat().st_size for p in (folder / "observations").glob("*.json"))):
                 raise ValueError("shard totals disagree")
             counts.update((r["status"], r["ci_verdict"]) for r in records)
             exercised += sum(r.get("body_started") is True for r in records)
+            refused_generation += summary["refused_generation_transitions"]
+            receipt_bytes += summary["receipt_bytes"]
             if not (summary["accepted"] is True and all(accepted_observation(r) for r in records)):
                 diagnostics.append(name + ": unaccepted observations")
         except (KeyError, ValueError, OSError, TypeError) as error:
             diagnostics.append(name + ": " + type(error).__name__)
     result = dict(status="FAIL" if diagnostics else "PASS", observations=sum(counts.values()),
+                  unavailable_prerequisites=excluded_contexts,
+                  not_executed=sum(len(cases) for cases in excluded_contexts.values()),
+                  refused_generation_transitions=refused_generation, receipt_bytes=receipt_bytes,
                   bodies_exercised=exercised, runtime=runtime,
                   results=[dict(raw=k[0], ci=k[1], count=v) for k, v in sorted(counts.items())],
                   unavailable=dict(upstream=COMMIT, configuration="openssl-gost",

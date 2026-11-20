@@ -14,7 +14,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -50,7 +50,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -86,7 +86,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -122,7 +122,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -158,7 +158,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -194,7 +194,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -230,7 +230,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -266,7 +266,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -302,7 +302,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -338,7 +338,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -374,7 +374,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -410,7 +410,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -446,7 +446,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -482,7 +482,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -518,7 +518,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -554,7 +554,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -590,7 +590,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",
@@ -626,7 +626,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "CKR_WRAPPED_KEY_LEN_RANGE from C_DecapsulateKey. Any other native code remains FAIL, with possible creation effect retained. This negative does not claim a published shared secret.",
+    "oracle": "Reject malformed ciphertext length at C_DecapsulateKey with CKR_WRAPPED_KEY_LEN_RANGE or CKR_GENERAL_ERROR; return no shared secret. Preserve the native code, ObjectsMayRemain and possible creation effect. Cleanup remains mandatory; a generic refusal does not prove non-creation.",
     "expected_native_calls": [
       "C_CreateObject",
       "C_DecapsulateKey",

@@ -1,0 +1,245 @@
+{
+  "upstream_commit": "7380895665c3094a6f57640085bee97dcfeb1496",
+  "recipe": "openssl-full",
+  "cases": {
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.init": {
+      "definition": "8c9c828ce645b84c514b1bcea74fab135bd292759eadccebffe9f423c801406a",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.poll": {
+      "definition": "dad4f3b5c6b2c65aa3d81c8282f6b305f7f555c0f76a662f1390d6715d8fd1dc",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.logout": {
+      "definition": "61b63be462d1b54bfe35113f3b721034b9c76c4432f5c5d0de45ff9991ff91e2",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.close": {
+      "definition": "7489d911bc914cf348e4ac0311a3c1fed868cead845e3eeff8119dff04f1d2e9",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.capture": {
+      "definition": "e31798380f1a59ce2a3a7068b4c14440662faceacbd07f5c3f917d66f8b2f4e0",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.cancel": {
+      "definition": "71ffb8f459fcec928827196379ad8273844ed54c1f256d5e48115f1ca235ae64",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.cancel.legacy240": {
+      "definition": "20d05007a852a88b3aa2afa3511f5d532686d51f803a86c8f221fd4907f93879",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.db.Legacy240"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CREATED_UNCLAIMED.drop_ticket": {
+      "definition": "3ab7e17e8bc5b17fa9fd0edc06ad8fc32063f0c777f7e955ffd6285667e232be",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.init": {
+      "definition": "7f794d78e2f1515b723916467cbd134e3ed95f2892836dc6144d691fd744b1f2",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.poll": {
+      "definition": "313a2d2a9e1498e7b2d1d54a84b94373478a2a3fd862ca07be27edcd649f1162",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.logout": {
+      "definition": "420b211083c075d0cf5712c910e32d1472e3bf0f084a5fbf0fdf4ca37f70ebed",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.close": {
+      "definition": "d350cfb9586bc976374b8b8b5664ad324cd552220f033c9f294df71fe69c3216",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.capture": {
+      "definition": "c7b5dd2c3eeea40639fbe99a9b76b3b1e504323f317bd62788fb498e3963fbd4",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.cancel": {
+      "definition": "d8d51a059ced3435c14ed4950f5c8fceb12863b26d9403ae7f6bf035f0e03a95",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.cancel.legacy240": {
+      "definition": "4d71f3e7f928e27eebea968727055d0d9608be3843122167096a41bf4f69c999",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.db.Legacy240"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "generation.cross.typed_generate_montgomery_key.CONSUMED.drop_ticket": {
+      "definition": "8e36886e777d406e10eff9d91f1f5a7b7f60d1f7d84f50b243d75c42e2945a8f",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "CKM_EC_MONTGOMERY_KEY_PAIR_GEN",
+      "reason": "The pinned recipe does not implement Montgomery pair generation. A refused ticket cannot establish a created or consumed pair; refused-ticket scenarios remain selected."
+    },
+    "configuration.permissions.umask-deny": {
+      "definition": "c438dfae8417594e1dc10c4b5937aafd018beae0bba11938f1df05c12f7bb950",
+      "contexts": [
+        "linux.1.81.0.openssl-full.file.Legacy240",
+        "linux.1.81.0.openssl-full.file.Standard32",
+        "linux.1.81.0.openssl-full.db.Legacy240",
+        "linux.1.81.0.openssl-full.db.Standard32",
+        "linux.1.100.0.openssl-full.file.Legacy240",
+        "linux.1.100.0.openssl-full.file.Standard32",
+        "linux.1.100.0.openssl-full.db.Legacy240",
+        "linux.1.100.0.openssl-full.db.Standard32"
+      ],
+      "prerequisite": "root-to-unprivileged-user transition",
+      "reason": "The hosted runner is unprivileged. This isolation test needs an initially privileged supervisor and is not executed in the regular CI profile."
+    }
+  }
+}

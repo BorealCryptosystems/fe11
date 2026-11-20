@@ -87,7 +87,7 @@ code to distinguish a known result from a new failure.
 | Cases | Observed result |
 | --- | --- |
 | [RSA-PSS parameter combinations](vectors/rsa-domain/manifest.json), distinct message and MGF hashes | SoftHSM rejects `C_SignInit` with `CKR_ARGUMENTS_BAD`. The suite contains 288 such fixtures. For example, SHA-256 with MGF1-SHA384 and a 32-byte salt reaches initialization on the raw PSS route. |
-| [RSA-PSS salt length](vectors/rsa-domain/manifest.json), salt too long for a 2048-bit key and the chosen hash | The current test checks the raw PSS operation first. A `CKR_GENERAL_ERROR` at `C_Sign` fails immediately. An earlier run recorded that error with SHA-1 and a 235-byte salt, then continued to the combined-hash operation and recorded `CKR_MECHANISM_INVALID` at `C_SignInit`. That second call is reachable only if the raw result meets the current oracle. |
+| [RSA-PSS salt length](vectors/rsa-domain/manifest.json), salt too long for a 2048-bit key and the chosen hash | The test checks raw PSS first and accepts its permitted generic refusal `CKR_GENERAL_ERROR`. It then checks the combined-hash route. A SHA-1/235-byte measurement returned `CKR_MECHANISM_INVALID` at the second `C_SignInit`; that code remains outside this oracle. The nine oversized-salt cases remain `REVIEW_REQUIRED` in CI until the complete two-route observations are attributed. |
 | [RSA private keys and DH/DSA domain objects](vectors/creation-class-attribute-changes/README.md) | The creation notes identify the omitted field, the expected code and the result. A successful RSA import and a subsequent usable signature are separate observations. |
 
 ## RSA-AES key wrapping
@@ -99,3 +99,26 @@ nested OAEP parameter layout on both session interfaces. Their results are
 reported separately from the asymmetric-key requirement.
 
 The [RSA-AES case index](vectors/rsa-aes-coverage.json) lists the fixtures for each group.
+
+
+## Interpreting unavailable prerequisites and generic refusals
+
+A generation ticket can contain either a created pair or a retained native
+refusal. Montgomery ownership scenarios compare CKR_MECHANISM_INVALID with an
+independent native return observation and require an empty object namespace
+before and after cleanup. Such a pass covers the refused-ticket transition;
+it does not cover successful Montgomery generation. Scenarios requiring a
+created or consumed pair need a module that actually provides that generation.
+
+The oversized RSA-PSS salt and malformed ML-KEM ciphertext scenarios distinguish
+rejection from the precision of the native diagnostic. CKR_GENERAL_ERROR is an
+allowed generic refusal in these calls. The tests retain its exact producer and
+effect flag, require no signature or shared secret to be published, and require
+cleanup. A generic refusal does not prove that no object was created or that the
+module diagnosed the precise invalid parameter.
+
+The repository CI profile lists prerequisites unavailable in its pinned recipe
+separately from executed results. Those coordinates are NOT_EXECUTED, with zero
+bodies exercised. The generic package retains their fixtures for environments
+that meet the prerequisites. Known module divergences keep their raw FAIL and
+are accepted by CI only when the complete documented observation matches.

@@ -19,6 +19,34 @@ fn rejected<T>(
         Ok(_) => Err(Failure::Oracle("generation_expected_refusal")),
     }
 }
+
+/// A retained generation ticket can contain a native refusal instead of a pair.
+/// Compare that refusal with the independently observed return; cleanup still
+/// checks the namespace and no successful creation is credited by this path.
+fn finish_retained<W: Write>(
+    f: &mut Fixture,
+    module: &Module,
+    c: &Case,
+    report: &mut Report<W>,
+) -> std::result::Result<(), Failure> {
+    match f.finish(module, c) {
+        Err(Failure::Product(error @ Error::Native {
+            function: "C_GenerateKeyPair",
+            code,
+            ..
+        })) if code == fe11_sys::CKR_MECHANISM_INVALID as u64
+            && f.observes_pair_return()
+            && f.generation_returns.last() == Some(&code) =>
+        {
+            outcome::record(report, Phase::Body, &Failure::Product(error))
+                .map_err(|_| Failure::Input("report_write"))?;
+            // The ticket has been consumed by polling its terminal refusal.
+            f.completed = true;
+            Ok(())
+        }
+        result => result,
+    }
+}
 pub fn execute<W: Write>(
     f: &mut Fixture,
     module: &Module,
@@ -80,7 +108,7 @@ pub fn execute<W: Write>(
             } else if consumed {
                 rejected(f.poll_once(module), used)?;
             } else {
-                f.finish(module, c)?;
+                finish_retained(f, module, c, report)?;
             }
         }
         "capture" => {
@@ -97,6 +125,15 @@ pub fn execute<W: Write>(
                 closed
             } else if consumed {
                 used
+            } else if f.observes_pair_return()
+                && f.generation_returns.last()
+                    == Some(&(fe11_sys::CKR_MECHANISM_INVALID as u64))
+            {
+                // A completed native refusal reaches the ownership guard
+                // before the operation-family capture check.
+                RejectionReason::OperationOwnership(
+                    OperationOwnershipRejection::OperationNotCapturable,
+                )
             } else {
                 RejectionReason::CheckpointCapture(
                     CheckpointCaptureRejection::OperationFamilyNotCapturable,
@@ -158,7 +195,7 @@ pub fn execute<W: Write>(
     // existing creation. Authentication changes and closed sessions have their
     // separate independent-peer cleanup assertions instead.
     if f.ticket.is_some() && !f.closed && !f.completed && c.action != "logout" {
-        f.finish(module, c)?;
+        finish_retained(f, module, c, report)?;
     }
     Ok(())
 }

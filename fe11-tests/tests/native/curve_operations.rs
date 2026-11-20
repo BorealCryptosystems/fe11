@@ -24,7 +24,13 @@ pub(super) fn selected(path: &Path) -> bool {
         && &prefix == b"curve-ops-v1\n"
 }
 
-const SECT239K1_OID: &[u8] = &[6, 5, 43, 129, 4, 0, 3];
+// Public point-shape observations for curves with intermittent native refusals.
+const OBSERVED_CURVES: &[&[u8]] = &[
+    &[6, 5, 43, 129, 4, 0, 3],             // sect239k1
+    &[6, 5, 43, 129, 4, 0, 9],             // secp160k1
+    &[6, 8, 42, 134, 72, 206, 61, 3, 1, 2], // prime192v2
+    &[6, 8, 42, 134, 72, 206, 61, 3, 0, 12], // c2tnb239v2
+];
 
 struct Case {
     oid: Vec<u8>,
@@ -347,11 +353,11 @@ fn body<W: Write>(
     for index in 0..2 {
         let attributes = derived_value::template_attributes(case.width);
         let peer = raw_point(&points[1 - index], case.width)?;
-        // On sect239k1 the first coordinate of a valid uncompressed point
+        // The first coordinate of a valid uncompressed point
         // can also look like the short-form length of a DER OCTET STRING.
         // Record the shape of the actual input before dispatch, including
         // when derivation fails. Neither coordinates nor secret bytes are logged.
-        if case.oid == SECT239K1_OID {
+        if OBSERVED_CURVES.contains(&case.oid.as_slice()) {
             report
                 .observation(
                     Phase::Body,

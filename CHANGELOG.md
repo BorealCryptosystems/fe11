@@ -49,13 +49,19 @@
   interfaces. Its coverage report retains raw results and identifies exact
   reproductions of documented module behavior.
 - Record the length and encoding shape of each public point used in the
-  `sect239k1` ECDH scenario so that a native refusal can be investigated.
+  `sect239k1`, `secp160k1`, `prime192v2` and `c2tnb239v2` ECDH scenarios
+  so that a native refusal can be investigated.
 - Provide versioned API documentation and usage guides. The companion crates
   `fe11-sys`, `fe11-verify-engine-api` and `fe11-verify-engine` remain at 0.1.0.
-- Match the Montgomery `RETIRED.init` trace to the observed generation refusal
-  and empty object inventory. Report the missing generator prerequisite for the
-  consumed-session close case with zero exercised bodies. Preserve the raw
-  Edwards verification failure while recognizing its documented observation.
+- Distinguish retained Montgomery refusals from created objects, with exact
+  native return observations and independent namespace checks. Report states
+  requiring a created pair as unavailable in the pinned SoftHSM CI profile.
+- Accept permitted generic native refusals for invalid PSS salt and ML-KEM
+  ciphertext lengths while preserving exact codes and possible effects. Keep
+  the second oversized-salt PSS route explicitly open for attribution.
+- Compare randomized PSS controls through independent verification and exact
+  lengths; retain raw hashes and structured failure receipts. Report unavailable
+  native or host prerequisites and refused-generation transitions separately.
 
 ## 0.1.0
 

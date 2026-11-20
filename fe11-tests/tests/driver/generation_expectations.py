@@ -22,6 +22,18 @@ def refused_pair(case, result):
     else:
         expected.append(("body", "generation_transition_and_native_ownership", "test_oracle", True))
         phases = ("PASS", "PASS", "PASS", "PASS")
+    if "assertions" in contract:
+        # A manifest may describe a different action on the same refused ticket.
+        # Keep its complete ordered assertions, including native cancellation or
+        # polling outcomes. It must still independently prove an empty namespace.
+        expected = contract["assertions"]
+        if (contract["prerequisite"] or
+                [r for r in expected if r[1] == "keypair_native_return"] not in (
+                    [["setup", "keypair_native_return", "native", 0x70]],
+                    [["body", "keypair_native_return", "native", 0x70]]) or
+                any(["cleanup", name, "test_oracle", 0] not in expected
+                    for name in ("keypair_namespace_objects", "keypair_namespace_remaining"))):
+            raise ValueError("incomplete refused-ticket observation contract")
     observed = [(r.get("phase"), r.get("assertion"), r.get("producer"), r.get("value")) for r in rows[:-1]]
     # Exact records reject unexpected errors. The observer return is also
     # copied by the worker; namespace reads independently establish cleanup.

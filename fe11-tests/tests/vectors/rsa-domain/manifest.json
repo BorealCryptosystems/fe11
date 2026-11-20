@@ -214,20 +214,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -3044,20 +3031,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -5874,20 +5848,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -8704,20 +8665,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -11534,20 +11482,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -14364,20 +14299,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -17194,20 +17116,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -20024,20 +19933,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,
@@ -22854,20 +22750,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": {
-      "allowed_native_codes": [
-        "CKR_MECHANISM_PARAM_INVALID",
-        "CKR_DATA_LEN_RANGE",
-        "CKR_FUNCTION_FAILED"
-      ],
-      "phase": [
-        "C_SignInit",
-        "C_Sign",
-        "C_SignFinal"
-      ],
-      "result": "No signature; record actual producer; sLen cannot fit emLen, source may defer refusal until signing",
-      "normative_basis": "PKCS#11 3.2 sections6.1.10 and6.1.15 bound sLen; section5.1 distinguishes invalid parameters and nonfatal FUNCTION_FAILED from unrecoverable GENERAL_ERROR. No signature; no mandated refusal phase."
-    },
+    "oracle": "Reject an oversized PSS salt without publishing a signature. Accept CKR_MECHANISM_PARAM_INVALID, CKR_DATA_LEN_RANGE, CKR_FUNCTION_FAILED or CKR_GENERAL_ERROR from C_SignInit, C_Sign or C_SignFinal. Preserve the exact code and effect flag. Exercise both raw and combined-hash routes and retain cleanup.",
     "parameters": {
       "key": "vectors/RSA-REFERENCE-VECTORS.json#key",
       "modulus_bits": 2048,

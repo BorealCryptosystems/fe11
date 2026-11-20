@@ -69,9 +69,12 @@ conformance totals.
 A different native error, an additional assertion failure, a missing receipt,
 or a previously failing case that now passes requires investigation. Each
 causes the job to fail until the evidence and attribution have been reviewed.
-For oversized RSA-PSS salts, the oracle stops at the first unexpected native
-signing error. The comparison includes the exact operation at which the
-scenario stopped.
+For oversized RSA-PSS salts, a permitted generic refusal on the raw route now
+allows the combined-hash route to run. That route can return
+`CKR_MECHANISM_INVALID` at `C_SignInit`, which remains outside the oracle.
+The nine cases (72 compiler/storage/interface coordinates) remain explicitly
+`REVIEW_REQUIRED` until complete two-route observations are attributed.
+The comparison retains the exact operation at which each scenario stopped.
 
 For raw SHA-256 RSA-PSS, the pinned module returns `CKR_GENERAL_ERROR` on
 signing and `CKR_SIGNATURE_INVALID` on verification for digests of 31 or 33
@@ -120,7 +123,9 @@ secret-key type and a secret key with an RSA type, `C_CreateObject` returned
 
 For an empty ML-KEM ciphertext, the pinned module returned
 `CKR_ATTRIBUTE_VALUE_INVALID` from `C_DecapsulateKey`. The case expects
-`CKR_WRAPPED_KEY_LEN_RANGE`. For the 246-byte RSA PKCS#1 v1.5 encryption
+`CKR_WRAPPED_KEY_LEN_RANGE` or the permitted generic `CKR_GENERAL_ERROR`,
+while retaining any possible creation effect. `CKR_ATTRIBUTE_VALUE_INVALID`
+remains a raw failure. For the 246-byte RSA PKCS#1 v1.5 encryption
 input and 2,048-bit key, the module returned `CKR_GENERAL_ERROR` from
 `C_Encrypt` where the case expects `CKR_DATA_LEN_RANGE`. Both comparisons
 preserve the original failure and the reported uncertainty about side effects.
@@ -132,7 +137,8 @@ OCTET STRING header for that length, both clients received `CKR_GENERAL_ERROR`
 from the pinned module. Both routes used the same private scalar, peer point
 and derivation attributes for each comparison. A return code alone cannot
 establish the encoding of a point from an earlier run.
-For this curve, the shard report retains the uncompressed point length and a
+For this curve and the `secp160k1`, `prime192v2` and `c2tnb239v2` scenarios,
+the shard report retains the uncompressed point length and a
 boolean indicating whether the header also matches a DER OCTET STRING, in
 the order of the derivation attempts. The same agreement and secret-length
 checks apply to both point shapes.
@@ -142,21 +148,28 @@ from each `C_GenerateKeyPair` call. The case reports the ticket action
 separately. A successful generation requires both key objects. A second session
 searches by the case's ID and label, validates and destroys the objects it
 finds, then repeats the search to verify cleanup. If generation is refused,
-an existing ticket can still be dropped. A capture that requires a created
-pair is reported as unexecuted when that prerequisite fails.
+an existing ticket can still be dropped. A capture in CREATED_UNCLAIMED or CONSUMED requires a created pair and
+is unexecuted when that prerequisite fails. Capture on a retained refused
+ticket is a separate ownership check.
 
-The consumed-session close scenario requires a successful Montgomery
-generation. Its documented missing prerequisite requires the exact native
-refusal, failed setup, an unexecuted body, zero objects in both inventory
-reads, the complete cleanup trace and removal of the isolated token storage.
-The retired-session init scenario can exercise its closed-session refusal
-after a failed generation. Its trace omits object destruction only when
-the independent generation return and both inventories establish that outcome.
-The successful-generation trace continues to require both destructions.
-This adjustment covers `RETIRED.init` and `CONSUMED.close`. Other Montgomery
-scenarios, including `RETIRED.drop_ticket`, `CONSUMED.capture` and
-`CREATED_UNCLAIMED.capture`, retain open trace or prerequisite expectations.
-Their existing failures remain part of the global acceptance report.
+The CI profile explicitly excludes Montgomery CREATED_UNCLAIMED and CONSUMED
+states because the pinned recipe does not implement Montgomery pair generation. These
+16 case definitions account for 112 coordinates. They remain in the generic
+package but contribute no bodies to this CI profile. The privileged umask
+isolation scenario contributes another eight unavailable coordinates.
+The definition-bound list and reasons are in
+[native-prerequisites.json](ci/scripts/native-prerequisites.json).
+
+Twenty additional Montgomery action definitions now match a retained native
+refusal with its exact independent return and two empty inventory reads.
+They include capture, polling, cancellation, dropping an observer, logout and
+closure. Capture checks the ownership guard reached by the completed refusal;
+polling preserves the same native code. No object destruction is required when
+both the return observation and inventory establish an empty namespace. The
+nominal successful-generation trace still requires destruction of both objects.
+The acceptance report counts successful refused-ticket transitions separately;
+they are not successful generation. These source corrections require targeted
+execution before they can be credited as new validated results.
 
 The Legacy240 Edwards cancellation scenario first checks the local cancellation
 refusal, then completes verification using its retained ticket. An imported
@@ -183,3 +196,17 @@ record hosted executions separately from local acceptance. Each job records its
 checkout, compiler, native tools and result status. A result applies to those
 inputs and scenarios; other mechanisms and deployment configurations need their
 own interoperability evidence. PKCS#11 remains the source of expected semantics.
+
+### Portable observations and retained receipts
+
+The four PSS invalid-input cases with same-owner positive controls compare
+independent RFC 8017 verification and exact lengths instead of byte equality
+of randomized signatures. Each raw output hash is retained in its structured
+receipt. All native codes, assertions and phases remain part of comparison.
+
+Native result artifacts retain structured non-PASS observations for 90 days.
+They contain public scalar results, identities and hashes, not raw process
+streams, PINs, token files or generated keys. `receipt_bytes` measures their
+actual uncompressed volume. Recipe and image checks still precede comparison;
+changed or missing observations remain unaccepted. See the
+[CI profile](ci/README.md) for selection, retention and open attribution.

@@ -47,6 +47,7 @@ jobs:
         with:
           name: native-single-shard
           if-no-files-found: error
+          retention-days: 90
           path: |
             ${{ runner.temp }}/fe11-single-build/reports/
             ${{ runner.temp }}/native-kit/identity.json
@@ -55,6 +56,7 @@ jobs:
             ${{ runner.temp }}/out/plan.json
             ${{ runner.temp }}/out/results.jsonl
             ${{ runner.temp }}/out/summary.json
+            ${{ runner.temp }}/out/observations/
       - name: Remove reproducible compilation files
         if: always()
         run: python3 -B ci/scripts/cleanup.py --root "$RUNNER_TEMP/fe11-single-build" --parent "$RUNNER_TEMP"

@@ -6543,7 +6543,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Exact valid typed specification returns an OperationTicket; no claim that its private phase is native Init. Native creation is asserted through independent object set and subsequent poll.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6562,6 +6562,59 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "body",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6669,7 +6722,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Busy(OperationOwnership(AdvancedOperation)); no second generation; first owner and already created objects retained.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6688,6 +6741,59 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6713,7 +6819,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Each poll spends at most selected native-call budget; until CreatedObjects, retain ticket. On success exact object count/key kind/attributes from GENERATION-TUPLES. Distinguish created objects from observation Result; an observation error never discards created objects.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6732,6 +6838,59 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6757,7 +6916,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6776,6 +6935,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_Logout",
+        "C_CloseSession",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6801,7 +7003,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6820,6 +7022,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6845,7 +7090,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Rejected(CheckpointCapture(OperationFamilyNotCapturable)); no C_GetOperationState. The exact Cooperative1 fixture must stop before admission complete; verify native-step observation before attributing this cell.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6864,6 +7109,59 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6881,7 +7179,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Standard32/ProviderDefault: Error::Native{function:\"C_SessionCancel\",code:CKR_FUNCTION_NOT_SUPPORTED,may_have_effect:false}. Legacy240: Rejected(Cancellation(CSessionCancelUnavailable)) before native dispatch. Neither path consumes the ticket nor withdraws the existing operation; no cleanup or cryptographic call is implicit.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6901,6 +7199,70 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_SessionCancel",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_SessionCancel",
+            "code": 84,
+            "may_have_effect": false
+          }
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6918,7 +7280,7 @@
       "linux.1.100.0.openssl-gost.file.Legacy240",
       "linux.1.100.0.openssl-gost.db.Legacy240"
     ],
-    "oracle": "Rejected(Cancellation(CSessionCancelUnavailable)); no native C_SessionCancel dispatch; prior owner preserved",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6937,6 +7299,59 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -6962,7 +7377,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Drop observer only; no implicit C_DestroyObject or cancellation. Explicit session close, then namespace cleanup of caller-owned token objects.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -6981,6 +7396,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7750,7 +8208,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Rejected(SessionLifecycle(SessionClosed)); no native progression.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7769,6 +8227,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7794,7 +8295,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7813,6 +8314,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7838,7 +8382,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7857,6 +8401,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7882,7 +8469,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7901,6 +8488,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7918,7 +8548,7 @@
       "linux.1.100.0.openssl-gost.file.Standard32",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7937,6 +8567,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7954,7 +8627,7 @@
       "linux.1.100.0.openssl-gost.file.Legacy240",
       "linux.1.100.0.openssl-gost.db.Legacy240"
     ],
-    "oracle": "Rejected(SessionLifecycle(SessionClosed))",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -7973,6 +8646,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -7998,7 +8714,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Drop observer only; no implicit C_DestroyObject or cancellation. Explicit session close, then namespace cleanup of caller-owned token objects.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -8017,6 +8733,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -8042,7 +8801,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Busy(OperationOwnership(AdvancedOperation)); no second generation; first owner and already created objects retained.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -8061,6 +8820,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -8086,7 +8888,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Real retained same-token peer C_Logout CKR_OK; SessionInfo PUBLIC. Do not infer successful admission observations after authentication changes; the object namespace and created-result provenance remain separately asserted.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -8105,6 +8907,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_Logout",
+        "C_CloseSession",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {
@@ -8130,7 +8975,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "C_CloseSession CKR_OK, Complete. Published result identity and diagnostics remain owned; native key lifetime follows TOKEN and object-state contracts.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -8149,6 +8994,49 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "setup",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   },
   {

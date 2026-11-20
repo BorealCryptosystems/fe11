@@ -228,7 +228,13 @@ fn length_refusal(error: &Error) -> bool {
             function: "C_DecapsulateKey",
             code,
             ..
-        } => *code == fe11_sys::CKR_WRAPPED_KEY_LEN_RANGE as u64,
+        } => {
+            // PKCS#11 permits GENERAL_ERROR without proving non-creation.
+            // Keep ObjectsMayRemain and may_have_effect in the recorded error;
+            // this oracle only asserts that no shared secret was published.
+            *code == fe11_sys::CKR_WRAPPED_KEY_LEN_RANGE as u64
+                || *code == fe11_sys::CKR_GENERAL_ERROR as u64
+        }
         _ => false,
     }
 }

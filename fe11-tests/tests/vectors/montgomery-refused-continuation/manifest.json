@@ -22,7 +22,7 @@
       "linux.1.100.0.openssl-gost.db.Legacy240",
       "linux.1.100.0.openssl-gost.db.Standard32"
     ],
-    "oracle": "Cancelled admission refuses locally with zero native calls; after restoring admission the exact valid Montgomery generation must succeed. Unavailable native generation remains an incomplete continuation, never PASS.",
+    "oracle": "Exercise the declared action on a retained ticket. If C_GenerateKeyPair returns CKR_MECHANISM_INVALID, compare that exact refusal with the independent return observation and require an empty namespace before and after cleanup. This path covers refused-ticket ownership, not successful creation. Otherwise require the original creation and object checks.",
     "expected_native_calls": [
       "C_Login",
       "C_GenerateKeyPair",
@@ -41,6 +41,65 @@
       "private": false,
       "generated_objects": 2,
       "negative": null
+    },
+    "generation_refusal": {
+      "code": 112,
+      "prerequisite": false,
+      "native_calls": [
+        "C_Login",
+        "C_GenerateKeyPair",
+        "C_CloseSession",
+        "C_Logout",
+        "C_CloseSession"
+      ],
+      "assertions": [
+        [
+          "setup",
+          "module_opened",
+          "fe11_local",
+          true
+        ],
+        [
+          "body",
+          "cancelled_generation_local_refusal",
+          "test_oracle",
+          true
+        ],
+        [
+          "body",
+          "native_error",
+          "native",
+          {
+            "function": "C_GenerateKeyPair",
+            "code": 112,
+            "may_have_effect": true
+          }
+        ],
+        [
+          "body",
+          "keypair_native_return",
+          "native",
+          112
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_objects",
+          "test_oracle",
+          0
+        ],
+        [
+          "cleanup",
+          "keypair_namespace_remaining",
+          "test_oracle",
+          0
+        ],
+        [
+          "body",
+          "generation_transition_and_native_ownership",
+          "test_oracle",
+          true
+        ]
+      ]
     }
   }
 ]

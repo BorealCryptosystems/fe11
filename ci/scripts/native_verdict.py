@@ -2,6 +2,7 @@
 """Compare a completed native observation with a documented SoftHSM result."""
 import hashlib
 import json
+import re
 from pathlib import Path
 
 
@@ -18,6 +19,10 @@ def accepted_observation(row):
 
 
 def observation(result, work, runtime=None, prerequisite=False):
+    return fingerprint(observation_details(result, work, runtime, prerequisite))
+
+
+def observation_details(result, work, runtime=None, prerequisite=False):
     from report_validation import read_records
 
     if (result["status"] != "FAIL" or result["body_started"] is not (not prerequisite)
@@ -26,10 +31,14 @@ def observation(result, work, runtime=None, prerequisite=False):
         raise ValueError("incomplete execution or token cleanup")
     config = json.loads((work / "observer.json").read_text())
     trace = read_records(work / "observation/trace.jsonl")
-    return observation_digest(result, config, trace, runtime, prerequisite)
+    return observation_components(result, config, trace, runtime, prerequisite)
 
 
 def observation_digest(result, config, trace, runtime=None, prerequisite=False):
+    return fingerprint(observation_components(result, config, trace, runtime, prerequisite))
+
+
+def observation_components(result, config, trace, runtime=None, prerequisite=False):
     from report_validation import trace_matches
     records = result["worker_records"]
     terminal = records[-1]
@@ -99,7 +108,27 @@ def observation_digest(result, config, trace, runtime=None, prerequisite=False):
                 libraries.append((reference_name, reference_sha))
         meaning[key] = sorted(libraries)
     meaning.update(records=outcomes, observed_functions=sorted(config["functions"]))
-    return fingerprint(meaning)
+    return portable_controls(meaning, result["case"])
+
+
+def portable_controls(meaning, identity):
+    """Compare verified PSS controls semantically, retaining their raw hash upstream."""
+    cases = {f"rsa.negative.{fault}.{owner}.sign": size
+             for fault, size in (("pss-digest-length", 768), ("pss-hash-mismatch", 512))
+             for owner in ("session", "advanced")}
+    if identity not in cases:
+        return meaning
+    control = meaning.get("independent_reference", {})
+    if (set(control) != {"status", "output_bytes", "output_sha256", "scope"}
+            or control["status"] != "PASS"
+            or type(control["output_bytes"]) is not int or control["output_bytes"] != cases[identity]
+            or not isinstance(control["output_sha256"], str)
+            or not re.fullmatch(r"[a-f0-9]{64}", control["output_sha256"])
+            or control["scope"] != "independent RFC8017 verification of every same-owner positive control"):
+        raise ValueError("invalid independent PSS positive controls")
+    meaning = dict(meaning)
+    meaning["independent_reference"] = {k: v for k, v in control.items() if k != "output_sha256"}
+    return meaning
 
 
 def classify(catalogue, identity, context, definition_digest, result, work, runtime=None):

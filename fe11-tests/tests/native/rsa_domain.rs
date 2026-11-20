@@ -87,6 +87,10 @@ fn check_result<W: Write>(
                         fe11_sys::CKR_MECHANISM_PARAM_INVALID,
                         fe11_sys::CKR_DATA_LEN_RANGE,
                         fe11_sys::CKR_FUNCTION_FAILED,
+                        // A generic native refusal is permitted too. Preserve
+                        // its code and effect flag; it proves no signature was
+                        // returned, not why the module rejected the request.
+                        fe11_sys::CKR_GENERAL_ERROR,
                     ]
                     .iter()
                     .any(|v| *v as u64 == code)
