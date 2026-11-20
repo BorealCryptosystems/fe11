@@ -67,7 +67,7 @@ def check_host_isolation(job):
         raise ValueError("engine host-context isolation failed")
 
 
-def check_packages(job, archives, expected_tests):
+def check_packages(job, archives, expected_tests, native_only=False):
     suffix = ".exe" if os.name == "nt" else ""
     extracted = {}
     records = {}
@@ -101,8 +101,9 @@ def check_packages(job, archives, expected_tests):
     selected = [Path(p["manifest_path"]).resolve() for p in metadata["packages"] if p["name"] == "fe11"]
     if selected != [(library / "Cargo.toml").resolve()]:
         raise ValueError("tests resolved a different library")
-    job.run("packaged-local-contracts", [cargo, *override, "test", "--release", "--locked", "--test", "local"],
-            cwd=package)
+    if not native_only:
+        job.run("packaged-local-contracts", [cargo, *override, "test", "--release", "--locked", "--test", "local"],
+                cwd=package)
     worker_log = job.run("packaged-native-worker", [cargo, *override, "test", "--release", "--locked",
                          "--test", "native", "--no-run", "--message-format=json"], cwd=package)
     if sys.platform == "linux" and job.github:
@@ -120,6 +121,8 @@ def check_packages(job, archives, expected_tests):
         shutil.copyfile(suite, kit / "suite.crate")
         save(kit / "identity.json", {"rust": job.rust, "library_sha256": records["fe11"]["sha256"], "worker": digest(worker),
              "engine.so": digest(target_engine), "suite.crate": digest(suite)})
+    if native_only:
+        return
     artifacts = job.run("packaged-library", [cargo, "build", "--locked", "--release", "--lib",
                                              "--message-format=json"], cwd=library)
     compiler_outputs = [json.loads(line) for line in artifacts.read_text(encoding="utf-8").splitlines()

@@ -70,7 +70,7 @@ def build(job):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("build",))
+    parser.add_argument("mode", choices=("build", "native-kit"))
     parser.add_argument("--rust", choices=("1.81.0", "1.100.0"), required=True)
     parser.add_argument("--root", type=Path, required=True)
     args = parser.parse_args()
@@ -83,7 +83,16 @@ def main():
         identity(job)
         native.msvc(job)
         rust_toolchain.install(job)
-        build(job)
+        if args.mode == "native-kit":
+            native.build(job)
+            job.cargo("verification-engine", "build", "--locked", "--release", "-p", "fe11-verify-engine")
+            native.inspect(job)
+            job.run("unpack-checkout-inputs", [sys.executable, "-B",
+                    job.repository / "fe11-tests/tests/driver/fixture_archive.py", "unpack"])
+            public_contracts.check_packages(job, public_contracts.ARCHIVES,
+                public_contracts.test_sources(job.repository / "fe11-tests/tests"), native_only=True)
+        else:
+            build(job)
         status = "PASS"
         return 0
     except (Exception, KeyboardInterrupt) as error:

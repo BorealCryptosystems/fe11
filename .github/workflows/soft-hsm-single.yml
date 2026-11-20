@@ -1,17 +1,9 @@
 name: SoftHSM single shard
-
 on:
-  workflow_dispatch:
-    inputs:
-      build_run_id:
-        description: Run that produced the native kit and runtime from this exact commit
-        type: string
-        required: true
-
+  push:
+    branches: [codex/fe11-0.1.1-corrected-single]
 permissions:
   contents: read
-  actions: read
-
 jobs:
   native:
     name: Rust 1.81.0 / file / Legacy240 / shard 3
@@ -19,60 +11,50 @@ jobs:
     timeout-minutes: 60
     env:
       PYTHONDONTWRITEBYTECODE: '1'
+      FE11_EXPECTED_COMMIT: ${{ github.sha }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
           persist-credentials: false
       - name: Verify the checkout and candidate packages
         run: |
+          set -euo pipefail
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           python3 -B ci/scripts/candidate_inputs.py
           python3 -B fe11-tests/tests/driver/fixture_archive.py check
           python3 -B ci/scripts/candidate_matrix.py
           test -z "$(git status --porcelain)"
-      - name: Verify the source run belongs to this exact candidate
-        env:
-          GH_TOKEN: ${{ github.token }}
-          SOURCE_RUN: ${{ inputs.build_run_id }}
+      - name: Install build prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential autoconf automake libtool pkg-config libssl-dev perl python3 git ca-certificates tcl gdb
+      - name: Compile the native worker from the corrected packages
+        run: python3 -B ci/scripts/job.py native-kit --rust 1.81.0 --root "$RUNNER_TEMP/fe11-single-build"
+      - name: Build the pinned SoftHSM runtime
+        run: python3 -B ci/scripts/build_soft_hsm.py
+      - name: Stage and verify this run's runtime and worker
         run: |
           set -euo pipefail
-          [[ "$SOURCE_RUN" =~ ^[0-9]+$ ]]
-          sha="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN" --jq .head_sha)"
-          test "$sha" = "$GITHUB_SHA"
-          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN" --jq '.path == ".github/workflows/ci.yml" and .status == "completed"' | grep -Fx true
-          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN/jobs?per_page=100" --jq '[.jobs[] | select(.name == "build-linux-msrv" or .name == "Prepare the pinned SoftHSM runtime")] | (length == 2 and all(.[]; .conclusion == "success"))' | grep -Fx true
-      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
-        with:
-          github-token: ${{ github.token }}
-          run-id: ${{ inputs.build_run_id }}
-          name: native-kit-1.81.0
-          path: ${{ runner.temp }}/native-kit
-      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
-        with:
-          github-token: ${{ github.token }}
-          run-id: ${{ inputs.build_run_id }}
-          name: native-runtime
-          path: ${{ runner.temp }}/native-runtime
-      - name: Verify transported images
-        run: |
-          (cd native-runtime && sha256sum --check SHA256SUMS)
-        working-directory: ${{ runner.temp }}
+          mv "$RUNNER_TEMP/fe11-single-build/native-kit" "$RUNNER_TEMP/native-kit"
+          mv "$RUNNER_TEMP/fe11-native-build/runtime" "$RUNNER_TEMP/native-runtime"
+          (cd "$RUNNER_TEMP/native-runtime" && sha256sum --check SHA256SUMS)
       - name: Verify runtime linkage and execute one shard
         env:
           FE11_ROW: '{"rust":"1.81.0","backend":"file","interface":"Legacy240","shard":3}'
-        run: |
-          if ! command -v gdb >/dev/null; then
-            sudo apt-get update
-            sudo apt-get install -y --no-install-recommends gdb
-          fi
-          python3 -B ci/scripts/native_matrix.py shard --row "$FE11_ROW" --root "$RUNNER_TEMP"
+        run: python3 -B ci/scripts/native_matrix.py shard --row "$FE11_ROW" --root "$RUNNER_TEMP"
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
           name: native-single-shard
           if-no-files-found: error
           path: |
+            ${{ runner.temp }}/fe11-single-build/reports/
+            ${{ runner.temp }}/native-kit/identity.json
+            ${{ runner.temp }}/native-runtime/provenance.json
             ${{ runner.temp }}/native-linkage.json
             ${{ runner.temp }}/out/plan.json
             ${{ runner.temp }}/out/results.jsonl
             ${{ runner.temp }}/out/summary.json
+      - name: Remove reproducible compilation files
+        if: always()
+        run: python3 -B ci/scripts/cleanup.py --root "$RUNNER_TEMP/fe11-single-build" --parent "$RUNNER_TEMP"
