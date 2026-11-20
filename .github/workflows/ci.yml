@@ -3,7 +3,7 @@ name: Public validation
 on:
   pull_request:
   push:
-    branches: [main, codex/fe11-0.1.1-hosted-acceptance]
+    branches: [main]
   workflow_dispatch:
 
 permissions:

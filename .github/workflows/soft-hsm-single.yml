@@ -1,0 +1,67 @@
+name: SoftHSM single shard
+
+on:
+  push:
+    branches: [codex/fe11-0.1.1-hosted-acceptance]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  native:
+    name: Rust 1.81.0 / file / Legacy240 / shard 3
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Verify the checkout and candidate packages
+        run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 -B ci/scripts/candidate_inputs.py
+          python3 -B fe11-tests/tests/driver/fixture_archive.py check
+          python3 -B ci/scripts/candidate_matrix.py
+          test -z "$(git status --porcelain)"
+      - name: Restore the original worker and runtime by immutable artifact ID
+        env:
+          GH_TOKEN: ${{ github.token }}
+        working-directory: ${{ runner.temp }}
+        run: |
+          set -euo pipefail
+          base="repos/$GITHUB_REPOSITORY/actions"
+          sha="$(gh api "$base/runs/44632626393" --jq .head_sha)"
+          test "$sha" = 9040f0a9158a033ca848ad5ad17a49fdb7c5d5b7
+          restore() {
+            local id="$1" name="$2" hash="$3" dir="$4"
+            gh api "$base/artifacts/$id" --jq '[.name,.workflow_run.id,.expired] | @tsv' |
+              grep -Fx "$(printf '%s\t44632626393\tfalse' "$name")"
+            gh api "$base/artifacts/$id/zip" > "$dir.zip"
+            printf '%s  %s.zip\n' "$hash" "$dir" | sha256sum --check
+            unzip -q "$dir.zip" -d "$dir"
+          }
+          restore 14582254541 native-kit-1.81.0 4651b326b05026b26c5a77301a85b8326188891d4fd723f9a0014e9aa5633980 native-kit
+          restore 14582119570 native-runtime 76e87af6e624d1794abf270391018d1db870dd8e261fe1ebcb8da415f85afce6 native-runtime
+          (cd native-runtime && sha256sum --check SHA256SUMS)
+      - name: Verify runtime linkage and execute one shard
+        env:
+          FE11_ROW: '{"rust":"1.81.0","backend":"file","interface":"Legacy240","shard":3}'
+        run: |
+          if ! command -v gdb >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends gdb
+          fi
+          python3 -B ci/scripts/native_matrix.py shard --row "$FE11_ROW" --root "$RUNNER_TEMP"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: native-single-shard
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/native-linkage.json
+            ${{ runner.temp }}/out/plan.json
+            ${{ runner.temp }}/out/results.jsonl
+            ${{ runner.temp }}/out/summary.json

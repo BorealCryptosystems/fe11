@@ -5,6 +5,7 @@ from collections import Counter
 import json
 import os
 from pathlib import Path
+import subprocess
 import sys
 
 sys.dont_write_bytecode = True
@@ -90,11 +91,25 @@ def install(row, root):
     for executable in (kit / "worker", prefix / "openssl/bin/openssl"):
         executable.chmod(0o700)
     module = prefix / "softhsm-full/lib/softhsm/libsofthsm2.so"
+    # The SQLite build has no SONAME. SoftHSM records its link-time basename
+    # while the archive transports the same image under its versioned name.
+    sqlite = prefix / "sqlite/lib/libsqlite3.so.0"
+    sqlite.with_name("libsqlite3.so").symlink_to(sqlite.name)
+    search_path = f"{prefix}/openssl/lib:{prefix}/sqlite/lib"
+    linked = subprocess.check_output(["ldd", str(module)], text=True,
+                                     env={"PATH": os.defpath, "LD_LIBRARY_PATH": search_path, "LC_ALL": "C"})
+    resolved = {}
+    for name, image in (("libsqlite3.so", sqlite), ("libcrypto.so.3", prefix / "openssl/lib/libcrypto.so.3")):
+        targets = [line.split()[2] for line in linked.splitlines() if line.split()[:2] == [name, "=>"]]
+        if len(targets) != 1 or Path(targets[0]).resolve(strict=True) != image:
+            raise ValueError(f"SoftHSM did not resolve the packaged {name}")
+        resolved[name] = {"image": image.relative_to(prefix).as_posix(), "sha256": digest(image)}
+    save(root / "native-linkage.json", resolved)
     recipe = root / "recipe.json"
     save(recipe, dict(module=str(module), sha256=digest(module), environment={
         "OPENSSL_CONF": str(prefix / "openssl-full.cnf"), "OPENSSL_MODULES": str(prefix / "openssl/lib/ossl-modules"),
         "OPENSSL_ENGINES": str(prefix / "openssl/lib/engines-3"),
-        "LD_LIBRARY_PATH": f"{prefix}/openssl/lib:{prefix}/sqlite/lib",
+        "LD_LIBRARY_PATH": search_path,
         "PKG_CONFIG_PATH": f"{prefix}/openssl/lib/pkgconfig:{prefix}/sqlite/lib/pkgconfig"}))
     opts = dict(rust=row["rust"], backend=row["backend"], package=package, prefix=prefix, recipe=recipe,
                 worker=kit / "worker", source_sha256=identity["suite.crate"], recipe_name="openssl-full")

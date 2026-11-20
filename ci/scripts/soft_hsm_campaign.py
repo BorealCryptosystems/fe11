@@ -8,6 +8,7 @@ import re
 import shutil
 import sys
 import tempfile
+import traceback
 from types import SimpleNamespace
 from native_verdict import accepted_observation, classify, fingerprint
 
@@ -119,15 +120,29 @@ def run(args):
             work = tmp / "case"
             options = SimpleNamespace(**frozen, case=identity, manifest=manifest,
                                       manifest_sha256=hashes[manifest], root=work)
+            failure = None
             try:
                 result = run_case(options)
             except Exception as error:
-                (tmp / "failure-kind.txt").write_text(type(error).__name__, encoding="utf-8")
+                origin = traceback.extract_tb(error.__traceback__)[-1]
+                failure = {"type": type(error).__name__, "file": Path(origin.filename).name,
+                           "function": origin.name, "line": origin.lineno}
                 result = {"status":"INCOMPLETE"}
+                partial = work / "result.json"
+                if partial.is_file():
+                    saved = json.loads(partial.read_text(encoding="utf-8"))
+                    if saved.get("case") == identity and saved.get("worker_sha256") == frozen["worker_sha256"]:
+                        result.update({key: saved[key] for key in ("body_started", "provision_dependencies")
+                                       if key in saved})
             status = result.get("status")
             if status not in ("PASS", "FAIL", "INCOMPLETE"):
                 raise ValueError("unexpected case verdict")
             row = {"case":identity, "status":status, "body_started":result.get("body_started") is True}
+            if failure:
+                row["driver_failure"] = failure
+            if runtime is not None:
+                row["provision_dependencies_verified"] = result.get("provision_dependencies") == {
+                    path: values[0] for path, values in runtime["dependencies"].items()}
             row["native_errors"] = native_errors(result)
             try:
                 if identity == "curve.operations.sect239k1":
@@ -143,6 +158,9 @@ def run(args):
                 row["phases"] = [phases[0][name] for name in ("setup", "body", "cleanup")]
             journal.write(json.dumps(row) + "\n")
             journal.flush()
+            if (identity == selected[0] and runtime is not None
+                    and not row["provision_dependencies_verified"]):
+                raise ValueError("first case did not verify the worker's loaded dependencies")
             if status == "PASS" and row["ci_verdict"] == "PASS":
                 shutil.rmtree(tmp)
     observed = [json.loads(line) for line in (root / "results.jsonl").read_text().splitlines()]
