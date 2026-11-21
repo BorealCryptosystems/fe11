@@ -12,6 +12,7 @@ import traceback
 from types import SimpleNamespace
 from native_verdict import accepted_observation, classify, fingerprint, observation_details
 from native_selection import selection
+import native_qualification
 
 POINT_BYTES = {"curve.operations.sect239k1": 61,
                "curve.operations.secp160k1": 41,
@@ -165,11 +166,18 @@ def run(args):
             if "prerequisite_unavailable" in result:
                 row["prerequisite_unavailable"] = result["prerequisite_unavailable"]
             try:
+                rule = native_qualification.rule_for(identity, context, definitions[identity])
+                if rule is not None:
+                    row["qualification"] = "NOT_QUALIFIED"
                 if identity in POINT_BYTES:
                     row["ecdh_peer_points"] = ecdh_peer_shapes(result)
                 if "generation_returns" in result:
                     row["keypair_generation"] = montgomery_observation(result)
-                row["ci_verdict"] = classify(policy, identity, context, definitions[identity], result, work, runtime)
+                if rule is not None:
+                    row["ci_verdict"] = native_qualification.classify(
+                        rule, policy, identity, context, result, work, runtime)
+                else:
+                    row["ci_verdict"] = classify(policy, identity, context, definitions[identity], result, work, runtime)
             except (KeyError, OSError, TypeError, ValueError, IndexError):
                 row["ci_verdict"] = "INSUFFICIENT_EVIDENCE"
             phases = [record for record in result.get("worker_records", [])
@@ -183,6 +191,8 @@ def run(args):
                 receipt = {"case": identity, "context": context,
                            "definition_sha256": definitions[identity], "result": result,
                            "driver_failure": failure, "ci_verdict": row["ci_verdict"]}
+                if "qualification" in row:
+                    receipt["qualification"] = row["qualification"]
                 if (work / "token-cleanup.json").is_file():
                     receipt["token_cleanup"] = json.loads((work / "token-cleanup.json").read_text())
                 if status == "FAIL":
@@ -211,6 +221,7 @@ def run(args):
                "receipt_bytes": sum(p.stat().st_size for p in (root / "observations").glob("*.json")),
                "raw": dict(Counter(row["status"] for row in observed)),
                "ci": dict(Counter(row["ci_verdict"] for row in observed)),
+               "not_qualified": [row["case"] for row in observed if row.get("qualification") == "NOT_QUALIFIED"],
                "accepted": accepted}
     (root / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     return 0 if accepted else 1

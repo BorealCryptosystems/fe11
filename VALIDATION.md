@@ -211,5 +211,12 @@ Native result artifacts retain structured non-PASS observations for 90 days.
 They contain public scalar results, identities and hashes, not raw process
 streams, PINs, token files or generated keys. `receipt_bytes` measures their
 actual uncompressed volume. Recipe and image checks still precede comparison;
-changed or missing observations remain unaccepted. See the
-[CI profile](ci/README.md) for selection, retention and open attribution.
+changed or missing observations remain unaccepted. Eight generated-key ECDH
+scenarios remain explicitly `NOT_QUALIFIED` on SoftHSM, even when an individual
+execution succeeds. They still execute and retain their raw verdicts; the
+acceptance report lists them separately and reports partial qualification.
+The [CI profile](ci/README.md#ecdh-scenarios-outside-qualification) defines the
+bounded failure path and the errors that still fail CI, together with evidence
+retention and the distinction between module diagnosis and each observation.
+
+See the [CI profile](ci/README.md) for selection, retention and open attribution.

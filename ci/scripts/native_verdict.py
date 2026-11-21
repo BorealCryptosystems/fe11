@@ -13,6 +13,12 @@ def fingerprint(value):
 
 def accepted_observation(row):
     """A documented missing prerequisite contributes zero exercised test bodies."""
+    if row["ci_verdict"] == "NOT_QUALIFIED":
+        return (row.get("qualification") == "NOT_QUALIFIED"
+                and row["status"] in ("PASS", "FAIL") and row.get("body_started") is True
+                and row.get("provision_dependencies_verified") is True
+                and not row.get("driver_failure") and row.get("native_sequence_matches") is True
+                and row.get("phases") == ["PASS", row["status"], "PASS"])
     return (row["status"], row["ci_verdict"], row.get("body_started")) in {
         ("PASS", "PASS", True), ("FAIL", "DOCUMENTED_DIVERGENCE", True),
         ("FAIL", "DOCUMENTED_PREREQUISITE", False)}

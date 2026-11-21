@@ -8,6 +8,8 @@ import tomllib
 from candidate_inputs import ROOT
 from native_matrix import COMMIT, SHARDS, catalogue_for, context, group, partitions
 from common import digest
+from native_qualification import policy as qualification_policy
+from native_verdict import fingerprint
 
 
 def main():
@@ -27,6 +29,17 @@ def main():
     for package in (ROOT / "library", suite):
         if tomllib.loads((package / "Cargo.toml").read_text())["package"]["version"] != "0.1.1":
             raise ValueError("Wrong package version")
+    qualification = qualification_policy()
+    if len(qualification) != 8:
+        raise ValueError("Expected eight explicitly unqualified ECDH scenarios")
+    for identity, rule in qualification.items():
+        manifest, declared = cases[identity]
+        definition, = [d for d in json.loads(manifest.read_text()) if d["id"] == identity]
+        if (fingerprint(definition) != rule["definition"]
+                or rule["vector_sha256"] != definition["sha256"]
+                or rule["nominal_sequence"] != definition["expected_native_calls"]
+                or set(rule["contexts"]) != axes or not axes.issubset(declared)):
+            raise ValueError("Unqualified ECDH policy differs from the candidate definitions")
     reference = json.loads(Path(__file__).with_name("native-runtime-reference.json").read_text())
     if (reference["upstream_commit"] != COMMIT or reference["recipe"] != "openssl-full"
             or reference["recipe_driver"] != digest(suite / "tests/driver/recipes.py")

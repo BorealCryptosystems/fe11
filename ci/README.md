@@ -34,7 +34,8 @@ comparison requires independent RFC 8017 verification and the exact output
 length instead of equality of randomized bytes. The original output hash is
 retained in the raw structured receipt. Other comparison fields are unchanged.
 
-Failed or otherwise unaccepted observations are uploaded under `observations/`.
+Failed, unaccepted and `NOT_QUALIFIED` observations are uploaded under
+`observations/`, including raw successes outside qualification.
 They contain typed worker assertions, public scalar diagnostics, identities,
 process results, cleanup status and the portable comparison object when it can
 be established. They exclude raw child streams, token files and generated keys.
@@ -53,9 +54,36 @@ The exact profiles retain raw failures for imported Edwards points, truncated
 SHA-512 OAEP parameters, deprecated AES wrap padding, explicit AES wrap IVs,
 DES parity, logout and invalid handles, fixed-width ECDH, and DSA 512-bit pair
 generation. They do not change Fe11 or the PKCS#11 oracle to emulate SoftHSM.
-Intermittent ECDH errors on generated keys remain unclassified. Their cases
-continue to fail CI if reproduced; public point-shape observations assist
-attribution without exposing coordinates or derived secrets.
+
+### ECDH scenarios outside qualification
+
+Eight generated-key scenarios are `NOT_QUALIFIED` on the pinned SoftHSM
+recipe: `brainpoolP224r1`, `X9_62_prime239v1`, `sect239k1`, `secp160r2`,
+`X9_62_c2tnb191v3`, `secp160k1`, `X9_62_prime192v2` and `X9_62_c2tnb239v2`
+(all under `curve.operations.`). SoftHSM's confusion between raw SEC1 points
+and DER is a confirmed input-dependent defect. Direct C and Fe11 diagnostics
+reproduced it on the first five curves. The last three have intermittent
+historical failures whose original points were not retained; the exact cause
+of each lost observation cannot be reconstructed.
+
+These scenarios still run in all eight hosted contexts. Both raw PASS and raw
+FAIL remain visible; an isolated success earns no qualification credit.
+`native-unqualified.json` binds the eight definitions and their contexts.
+The CI accepts a raw failure within this exclusion only when the complete
+observation follows the documented `C_DeriveKey/CKR_GENERAL_ERROR` path:
+validated recipe and trace, exact ordered assertions and native call sequence,
+uncertain effects retained, and successful setup and cleanup. A different
+refusal, local error, changed definition, incomplete observation or failed
+cleanup still fails CI. Matching that path is not proof of the cause of an
+individual new refusal; the scenario is explicitly outside qualification.
+
+The aggregate report lists every unqualified coordinate and raw verdict,
+reports their raw totals in `not_qualified_raw` and `qualification: PARTIAL`,
+and excludes these bodies from
+`qualifying_bodies_exercised`. A successful CI execution therefore does not
+claim qualification of those scenarios. Public point-shape observations,
+where already available, remain in the receipts without point coordinates or
+derived secrets. The generic tests and their PKCS#11 oracles are unchanged.
 
 ## Open attribution and retention
 

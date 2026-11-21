@@ -15,6 +15,7 @@ from soft_hsm_campaign import refused_generation_transition, run
 from soft_hsm_gate import prepare
 from native_verdict import accepted_observation
 from native_selection import selection
+from native_qualification import policy as qualification_policy
 from types import SimpleNamespace
 
 RUST = ("1.81.0", "1.100.0")
@@ -140,6 +141,8 @@ def reconcile(root, package):
     refused_generation = 0
     receipt_bytes = 0
     excluded_contexts = {}
+    not_qualified = []
+    qualification = qualification_policy()
     unavailable = Counter(c for _, axes in cases.values() for c in axes if ".openssl-gost." in c)
     groups = partitions()
     inputs = {p.name for p in root.iterdir() if p.is_dir()}
@@ -184,6 +187,17 @@ def reconcile(root, package):
                     or summary["receipt_bytes"] != sum(p.stat().st_size for p in (folder / "observations").glob("*.json"))):
                 raise ValueError("shard totals disagree")
             counts.update((r["status"], r["ci_verdict"]) for r in records)
+            unqualified = [r["case"] for r in records if r.get("qualification") == "NOT_QUALIFIED"]
+            expected_unqualified = [key for key in expected if key in qualification
+                                    and context(row) in qualification[key]["contexts"]]
+            if unqualified != expected_unqualified or summary["not_qualified"] != expected_unqualified:
+                raise ValueError("qualification exclusions disagree with the declared policy")
+            if any(r["ci_verdict"] == "NOT_QUALIFIED" and r["case"] not in unqualified for r in records):
+                raise ValueError("undeclared qualification exclusion")
+            not_qualified.extend(dict(case=r["case"], context=context(row), raw=r["status"],
+                                      ci=r["ci_verdict"], body_started=r.get("body_started") is True,
+                                      qualification="NOT_QUALIFIED")
+                                 for r in records if r["case"] in unqualified)
             exercised += sum(r.get("body_started") is True for r in records)
             refused_generation += summary["refused_generation_transitions"]
             receipt_bytes += summary["receipt_bytes"]
@@ -196,6 +210,11 @@ def reconcile(root, package):
                   not_executed=sum(len(cases) for cases in excluded_contexts.values()),
                   refused_generation_transitions=refused_generation, receipt_bytes=receipt_bytes,
                   bodies_exercised=exercised, runtime=runtime,
+                  qualification="PARTIAL" if qualification else "COMPLETE",
+                  not_qualified=not_qualified, not_qualified_count=len(not_qualified),
+                  not_qualified_raw=dict(Counter(r["raw"] for r in not_qualified)),
+                  qualifying_bodies_exercised=exercised - sum(
+                      r["body_started"] for r in not_qualified),
                   results=[dict(raw=k[0], ci=k[1], count=v) for k, v in sorted(counts.items())],
                   unavailable=dict(upstream=COMMIT, configuration="openssl-gost",
                                    reason="OSSLGOST::signInit declaration and definition differ",

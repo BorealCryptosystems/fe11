@@ -1,7 +1,6 @@
 name: SoftHSM targeted output-credit validation
 on:
-  push:
-    branches: [codex/fe11-0.1.1-softhsm-finalization]
+  workflow_dispatch:
 permissions:
   contents: read
   actions: read
