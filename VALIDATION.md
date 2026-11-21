@@ -163,16 +163,15 @@ isolation scenario contributes another eight unavailable coordinates.
 The definition-bound list and reasons are in
 [native-prerequisites.json](ci/scripts/native-prerequisites.json).
 
-Twenty additional Montgomery action definitions now match a retained native
+Twenty Montgomery action definitions match a retained native
 refusal with its exact independent return and two empty inventory reads.
 They include capture, polling, cancellation, dropping an observer, logout and
 closure. Capture checks the ownership guard reached by the completed refusal;
 polling preserves the same native code. No object destruction is required when
 both the return observation and inventory establish an empty namespace. The
 nominal successful-generation trace still requires destruction of both objects.
-The acceptance report counts successful refused-ticket transitions separately;
-they are not successful generation. These source corrections require targeted
-execution before they can be credited as new validated results.
+Hosted reports count these refused-ticket transitions separately as
+`refused_generation_transitions`; they are not successful generation.
 
 The Legacy240 Edwards cancellation scenario first checks the local cancellation
 refusal, then completes verification using its retained ticket. An imported
@@ -215,7 +214,12 @@ changed or missing observations remain unaccepted. Forty-five generated-key ECDH
 scenarios remain explicitly `NOT_QUALIFIED` on SoftHSM, even when an individual
 execution succeeds. They still execute and retain their raw verdicts; the
 acceptance report lists them separately and reports partial qualification.
-The [domain inventory](ci/ECDH-SCOPE.md) documents the affected point encodings.
+The [domain inventory](ci/ECDH-SCOPE.md) documents the affected point encodings
+and the calculation that selects the exposed domains. Requalification requires
+a verified SoftHSM recipe whose decoder distinguishes valid raw points from DER,
+followed by complete observations of the affected cases in every selected
+compiler, storage and interface context. Preserve the original results and
+review any remaining divergence before changing the qualification status.
 The [CI profile](ci/README.md#ecdh-scenarios-outside-qualification) defines the
 bounded failure path and the errors that still fail CI, together with evidence
 retention and the distinction between module diagnosis and each observation.

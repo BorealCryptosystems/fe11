@@ -12,10 +12,20 @@
   When the module accepts both, each ticket tracks its own progress. Use
   `ClassicOperation` and `take_classic_ticket` to select a ticket. Grouped
   state capture and restoration retain the participating operations on modules
-  that support native operation state.
+  that support native operation state. `SavedOperationState::grouped_operations`
+  exposes the participating kinds; `import_group_state`,
+  `start_group_state_restore` and `OperationTicket::take_restored_companions`
+  support restoring and retrieving the group. Exported grouped session states
+  use a distinct record kind that 0.1.0 readers cannot import; single-operation
+  records retain their existing kind.
 - Call `C_Login` or `C_LoginUser` between native calls of an active operation.
+  A successful login can end suspended operations in the module; their tickets
+  remain owned and report the native outcome.
   `authenticate_session_context` also lets the module select the key for a
-  context-specific login. Ticket-scoped authentication remains available.
+  context-specific login. Ticket-scoped authentication remains available and
+  reports `AuthenticationRejection::AmbiguousContextKey` when it cannot uniquely
+  attribute the session login to the selected key. This adds a variant to the
+  existing non-exhaustive diagnostic enum.
 - Preserve a live operation when a direct `C_SessionCancel` returns
   `CKR_FUNCTION_NOT_SUPPORTED`. Fe11 reports the native code and marks that
   cancellation attempt as having no effect.
@@ -29,8 +39,15 @@
 - Keep an otherwise valid session usable after a synchronous key or key-pair
   generation error with uncertain effects. Preserve the native error and the
   uncertain creation record while allowing cleanup of existing objects.
-- Submit `C_InitToken` when the token has idle sessions. A native
-  `CKR_SESSION_EXISTS` preserves those sessions. During a token drain,
+- Submit `C_InitToken` when the token has idle sessions. The definite
+  refusals `CKR_SESSION_EXISTS`, `CKR_PIN_INCORRECT`, `CKR_PIN_LOCKED` and
+  `CKR_TOKEN_WRITE_PROTECTED` preserve the administration target and existing
+  sessions when Fe11 confirms its inputs and native observations. PIN retry
+  counters may still change. Any other return, including success, retires the
+  slot's sessions and contexts, including those of other Fe11 clients of the shared
+  runtime. Their native resources may remain open, and retired handles cannot
+  be closed individually. Applications must coordinate token maintenance across
+  processes. During a token drain,
   `initialize_user_pin` and `change_pin` can reach `C_InitPIN` and `C_SetPIN`.
 - Accept a zero-length byte value for a date attribute. An explicitly supplied
   eight-byte `CK_DATE` keeps all eight bytes, including an all-zero date.
@@ -40,7 +57,9 @@
 
 ### Build and public tests
 
-- Distribute the public suite in the separate `fe11-tests` package, pinned to Fe11 0.1.1. The versioned HTML documentation is available as an offline archive.
+- Distribute the public suite in the separate `fe11-tests` package, pinned to
+  Fe11 0.1.1. Keep the library and tests as separate Cargo packages and the
+  versioned HTML documentation as a separate documentation artifact.
 
 - Support Rust 1.100 on Linux x86_64 GNU and Windows x86_64 MSVC while retaining
   Rust 1.81 as the minimum supported compiler. Fe11 pins `base64ct = 1.6.0` and

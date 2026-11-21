@@ -25,6 +25,7 @@ The four crate indexes below are relative to `0.1.1/api/`:
 | Attributes and observations | `StandardAttribute`, `ObjectObservationPlan`, `MechanismObservationPlan` |
 | Resource admission | `ResourceAdmission`, `SessionAdmission`, `AdmissionCancellation` |
 | Results and diagnostics | `Error`, `RejectionReason`, `BusyReason`, `UnsupportedReason` |
+| Operation tickets and saved state | `ClassicOperation`, `OperationTicket`, `SavedOperationState`, `StateRestoreKeys` |
 | Recovery and persistence | `ModuleDrain`, `RecordLimits`, `StreamProgress` |
 | Software verification | `VerifyEngine`, `VerifyEngineBuilder`, `VerifyEngineInfo` |
 

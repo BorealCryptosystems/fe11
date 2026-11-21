@@ -11,12 +11,18 @@
         {
           "expression": "Apache-2.0"
         }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "78422779355be082cf8e74c2775be49ded1eeeba28e10da9f5042ee656983d26"
+        }
       ]
     },
     "properties": [
       {
         "name": "scope",
-        "value": "Source dependency reference inventory, including optional engine and target/build dependencies."
+        "value": "Release source-package and dependency inventory, including the separate fe11-tests package, optional verification engine and target/build dependencies. Component inclusion does not imply dependency direction; fe11-tests depends on fe11."
       },
       {
         "name": "dependency-identity",
@@ -684,7 +690,14 @@
         {
           "expression": "Apache-2.0"
         }
-      ]
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "957bfd2d5312f1669aaeccef199b5c52943dd516e5420ca262218d3e2afdd664"
+        }
+      ],
+      "bom-ref": "pkg:cargo/fe11-sys@0.1.0"
     },
     {
       "type": "library",
@@ -694,7 +707,14 @@
         {
           "expression": "Apache-2.0"
         }
-      ]
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "02c6f604b045e3e54bad74ae7eed71a33d6071fe536e52e1ce1587abf825adf7"
+        }
+      ],
+      "bom-ref": "pkg:cargo/fe11-verify-engine-api@0.1.0"
     },
     {
       "type": "library",
@@ -703,6 +723,30 @@
       "licenses": [
         {
           "expression": "Apache-2.0"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8c4fb12ca6599ccebda61cbdd2004f780ee4aec0d7ec1f177978972b41d063f2"
+        }
+      ],
+      "bom-ref": "pkg:cargo/fe11-verify-engine@0.1.0"
+    },
+    {
+      "type": "application",
+      "name": "fe11-tests",
+      "version": "0.1.1",
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ],
+      "bom-ref": "pkg:cargo/fe11-tests@0.1.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "21fd608888f623a07a6ab4386059f61a8b053edc07dee97c11354830f5dbad08"
         }
       ]
     }

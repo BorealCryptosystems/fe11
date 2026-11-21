@@ -87,7 +87,7 @@ code to distinguish a known result from a new failure.
 | Cases | Observed result |
 | --- | --- |
 | [RSA-PSS parameter combinations](vectors/rsa-domain/manifest.json), distinct message and MGF hashes | SoftHSM rejects `C_SignInit` with `CKR_ARGUMENTS_BAD`. The suite contains 288 such fixtures. For example, SHA-256 with MGF1-SHA384 and a 32-byte salt reaches initialization on the raw PSS route. |
-| [RSA-PSS salt length](vectors/rsa-domain/manifest.json), salt too long for a 2048-bit key and the chosen hash | The test checks raw PSS first and accepts its permitted generic refusal `CKR_GENERAL_ERROR`. It then checks the combined-hash route. A SHA-1/235-byte measurement returned `CKR_MECHANISM_INVALID` at the second `C_SignInit`; that code remains outside this oracle. The nine oversized-salt cases remain `REVIEW_REQUIRED` in CI until the complete two-route observations are attributed. |
+| [RSA-PSS salt length](vectors/rsa-domain/manifest.json), salt too long for a 2048-bit key and the chosen hash | The test checks raw PSS first and accepts its permitted generic refusal `CKR_GENERAL_ERROR`. It then checks the combined-hash route. A SHA-1/235-byte measurement returned `CKR_MECHANISM_INVALID` at the second `C_SignInit`; that code remains outside this oracle. The nine oversized-salt cases retain their raw failure. CI recognizes only the complete documented two-route observation as `DOCUMENTED_DIVERGENCE`; any change requires investigation. |
 | [RSA private keys and DH/DSA domain objects](vectors/creation-class-attribute-changes/README.md) | The creation notes identify the omitted field, the expected code and the result. A successful RSA import and a subsequent usable signature are separate observations. |
 
 ## RSA-AES key wrapping
@@ -133,3 +133,12 @@ expiry and cancellation remain failures; all paths release and join the worker.
 If a regression retains session possession throughout the credit wait, the
 concurrent query can wait until the 60-minute supervision deadline. Such a
 timeout is a failure, not an accepted contention result or a performance target.
+
+## ECDH qualification in the pinned CI configuration
+
+The pinned SoftHSM decoder can mistake a valid raw EC point for a DER OCTET
+STRING. The affected domains are classified as `NOT_QUALIFIED` in the repository
+CI, whether an individual invocation succeeds or fails. Raw results are retained.
+This classification applies to the recorded recipe and domains; it does not
+establish ECDH conformance. The [validation policy](https://github.com/BorealCryptosystems/fe11/blob/v0.1.1/VALIDATION.md)
+documents the domain calculation and the evidence needed to qualify them again.
