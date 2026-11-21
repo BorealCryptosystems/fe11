@@ -72,9 +72,12 @@ causes the job to fail until the evidence and attribution have been reviewed.
 For oversized RSA-PSS salts, a permitted generic refusal on the raw route now
 allows the combined-hash route to run. That route can return
 `CKR_MECHANISM_INVALID` at `C_SignInit`, which remains outside the oracle.
-The nine cases (72 compiler/storage/interface coordinates) remain explicitly
-`REVIEW_REQUIRED` until complete two-route observations are attributed.
-The comparison retains the exact operation at which each scenario stopped.
+The nine cases (72 compiler/storage/interface coordinates) have complete
+two-route observations: `C_Sign/CKR_GENERAL_ERROR` followed by
+`C_SignInit/CKR_MECHANISM_INVALID`. CI recognizes only their documented full
+observation as a divergence of the pinned module's parameter-error diagnostic.
+The strict oracle and raw FAIL remain unchanged. A different code, effect flag,
+phase, assertion or call sequence still requires investigation.
 
 For raw SHA-256 RSA-PSS, the pinned module returns `CKR_GENERAL_ERROR` on
 signing and `CKR_SIGNATURE_INVALID` on verification for digests of 31 or 33

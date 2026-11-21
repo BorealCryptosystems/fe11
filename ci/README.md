@@ -59,11 +59,13 @@ attribution without exposing coordinates or derived secrets.
 
 ## Open attribution and retention
 
-The nine oversized-salt RSA-PSS cases remain REVIEW_REQUIRED in all eight
-contexts. After the permitted refusal on raw PSS, their combined-hash route
-may return CKR_MECHANISM_INVALID at C_SignInit. The oracle does not accept
-that code; complete two-route observations are still required for attribution.
-The CI cannot report acceptance while these observations remain unresolved.
+The nine oversized-salt RSA-PSS cases have complete observations in all eight
+contexts. Raw PSS returns C_Sign/CKR_GENERAL_ERROR, followed by
+C_SignInit/CKR_MECHANISM_INVALID on the combined-hash route. The latter is a
+parameter-error diagnostic divergence: the strict oracle continues to fail.
+The catalogue recognizes only the exact full observations, including effect
+flags, assertions, call order and completed cleanup, under the verified recipe.
+Their raw FAIL results remain visible; changed or missing evidence fails CI.
 
 The acceptance summary counts `refused_generation_transitions` separately
 from total exercised bodies. Those successful negative transitions are not

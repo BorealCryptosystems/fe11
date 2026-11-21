@@ -1,12 +1,12 @@
 [
   {
-    "case": "curve.operations.brainpoolP224r1",
-    "context": "linux.1.81.0.openssl-full.db.Legacy240",
-    "definition_sha256": "ea64861d014859120a3b5581e9878d0beccbc4b9c80a2492b6f54b49e3ab4f8f"
+    "case": "resource.output-credit.wait",
+    "context": "linux.1.100.0.openssl-full.file.Standard32",
+    "definition_sha256": "c518aed8edaa4d651544dd8f1518fb61c292f0f91b98e184b93fd70ed953bca9"
   },
   {
-    "case": "curve.operations.X9_62_prime239v1",
+    "case": "resource.output-credit.wait",
     "context": "linux.1.81.0.openssl-full.db.Standard32",
-    "definition_sha256": "c96b0b4a76441773c5a0d99f46cd5bf9a2a24249d3a37211adef0b0320053a8c"
+    "definition_sha256": "c518aed8edaa4d651544dd8f1518fb61c292f0f91b98e184b93fd70ed953bca9"
   }
 ]

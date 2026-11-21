@@ -8,7 +8,7 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
 ARCHIVES = ROOT / "ci/candidate"
-SUITE = "853a87ba9f7f61ca04fe1030bb692ba46da78921dcfc2b02c17e15c42c1f5e97"
+SUITE = "6fc0a08234945033983b06110ff86f608d3001edf2d99e69c70a35114ca59d7c"
 LIBRARY = "7f3b032d2729e6f34d77b144cff1fb20ff858e73607a61f8cd19b22d5636224f"
 EXPECTED = {"fe11": LIBRARY, "fe11-tests": SUITE}
 

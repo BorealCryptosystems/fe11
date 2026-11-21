@@ -1,4 +1,4 @@
-name: SoftHSM targeted ECDH validation
+name: SoftHSM targeted output-credit validation
 on:
   push:
     branches: [codex/fe11-0.1.1-softhsm-finalization]
@@ -54,7 +54,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {rust: '1.81.0', backend: db, interface: Legacy240}
+          - {rust: '1.100.0', backend: file, interface: Standard32}
           - {rust: '1.81.0', backend: db, interface: Standard32}
     env:
       PYTHONDONTWRITEBYTECODE: '1'
@@ -69,7 +69,7 @@ jobs:
       - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
         with:
           github-token: ${{ github.token }}
-          run-id: 44668526812
+          run-id: 44766689217
           name: native-runtime
           path: ${{ runner.temp }}/native-runtime
       - name: Collect each previously failed coordinate once

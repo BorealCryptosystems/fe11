@@ -61,8 +61,12 @@
   native return observations and independent namespace checks. Report states
   requiring a created pair as unavailable in the pinned SoftHSM CI profile.
 - Accept permitted generic native refusals for invalid PSS salt and ML-KEM
-  ciphertext lengths while preserving exact codes and possible effects. Keep
-  the second oversized-salt PSS route explicitly open for attribution.
+  ciphertext lengths while preserving exact codes and possible effects.
+  Recognize the documented oversized-salt PSS diagnostic divergence only from
+  exact full observations; preserve the strict oracle and raw failure.
+- Observe the output-credit worker inside its admission wait before the
+  concurrent session query. Allow transient session contention under the
+  caller-selected deadline, retaining progress, output-length and cleanup checks.
 - Compare randomized PSS controls through independent verification and exact
   lengths; retain raw hashes and structured failure receipts. Report unavailable
   native or host prerequisites and refused-generation transitions separately.

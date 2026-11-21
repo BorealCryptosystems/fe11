@@ -9,7 +9,10 @@ use super::super::{
 use fe11::*;
 use std::{
     io::{self, Write},
-    sync::{mpsc, Barrier},
+    sync::{
+        atomic::{AtomicU8, Ordering},
+        mpsc,
+    },
     time::{Duration, Instant},
 };
 
@@ -23,6 +26,8 @@ mod cancellation;
 mod capture;
 #[path = "drain_owner_order.rs"]
 mod drain_order;
+#[path = "output_credit_observation.rs"]
+mod observation;
 
 // Learn the public diagnostic's charge from an intrinsically oversized request,
 // then check that same request on new owners at charge-1 and charge. This avoids
@@ -115,7 +120,7 @@ fn width(value: SecretBytes) -> std::result::Result<(), Failure> {
 }
 
 fn waiting(peer: &Session, held: SecretBytes) -> std::result::Result<(), Failure> {
-    let barrier = Barrier::new(2);
+    let phase = AtomicU8::new(0);
     let cancellation = AdmissionCancellation::new();
     let timeout = Duration::from_secs(3600);
     let deadline = Instant::now()
@@ -126,23 +131,46 @@ fn waiting(peer: &Session, held: SecretBytes) -> std::result::Result<(), Failure
         cancellation: cancellation.clone(),
     };
     let (sender, receiver) = mpsc::channel();
+    let (ready_tx, ready_rx) = mpsc::channel();
+    let worker_policy = policy.clone();
     std::thread::scope(|scope| {
-        let task = scope.spawn(|| {
-            barrier.wait();
-            let result = with_resource_admission(policy, || peer.generate_random(OUTPUT_BYTES));
+        let worker_phase = &phase;
+        let task = scope.spawn(move || -> std::result::Result<(), Failure> {
+            let task = std::fs::read_link("/proc/thread-self")
+                .map_err(|_| Failure::Input("output_credit_linux_thread_identity"))?;
+            ready_tx
+                .send(std::path::Path::new("/proc").join(task))
+                .map_err(|_| Failure::Oracle("output_credit_thread_receiver"))?;
+            // This interval excludes channel publication: an observed futex
+            // wait belongs to Fe11, while the retained output prevents progress.
+            worker_phase.store(1, Ordering::SeqCst);
+            let result =
+                with_resource_admission(worker_policy, || peer.generate_random(OUTPUT_BYTES));
+            worker_phase.store(2, Ordering::SeqCst);
             sender
                 .send(result)
                 .map_err(|_| Failure::Oracle("output_credit_receiver_lost"))
         });
-        barrier.wait();
+        let observed = ready_rx
+            .recv_timeout(timeout)
+            .map_err(|_| Failure::Oracle("output_credit_thread_setup"))
+            .and_then(|path| observation::observe_wait(&path, &phase, deadline));
+        // The worker must release session possession while waiting for output
+        // credit, so a concurrent query can reach the module before release.
+        // A barrier alone cannot distinguish transient session preparation from
+        // the output-credit wait. Observe the wait first and allow the control
+        // read to wait for transient possession, with the same bounded policy.
+        let concurrent = observed
+            .and_then(|()| with_resource_admission(policy, || peer.info()).map_err(Failure::from));
         let early = receiver.try_recv();
-        // The waiter must not reserve this session's native-call guard while
-        // waiting for output storage. No sleep or speed assertion orders it.
-        let concurrent = peer.info();
+        let was_early =
+            !matches!(&early, Err(mpsc::TryRecvError::Empty)) || phase.load(Ordering::SeqCst) == 2;
+        if concurrent.is_err() {
+            cancellation.cancel();
+        }
         // Release even on error before joining: otherwise this test itself
         // would retain the resource needed by the worker it is waiting for.
         drop(held);
-        let was_early = !matches!(&early, Err(mpsc::TryRecvError::Empty));
         let completed = match early {
             Ok(result) => Ok(result),
             Err(mpsc::TryRecvError::Disconnected) => Err(()),
@@ -152,12 +180,20 @@ fn waiting(peer: &Session, held: SecretBytes) -> std::result::Result<(), Failure
             cancellation.cancel();
         }
         let joined = task.join();
-        let result = completed.map_err(|_| Failure::Oracle("output_credit_wait_incomplete"))?;
+        // Keep a worker setup failure instead of replacing it with a channel
+        // symptom. Both threads have finished before any error is propagated.
         joined.map_err(|_| Failure::Oracle("output_credit_waiter_panicked"))??;
         if was_early {
+            // A failed call is evidence in its own right. Do not replace its
+            // typed native/local cause with the failed ordering assertion.
+            if let Ok(Err(error)) = completed {
+                return Err(error.into());
+            }
             return Err(Failure::Oracle("output_credit_completed_before_release"));
         }
-        if concurrent?.state != fe11_sys::CKS_RW_PUBLIC_SESSION as u64 {
+        let concurrent = concurrent?;
+        let result = completed.map_err(|_| Failure::Oracle("output_credit_wait_incomplete"))?;
+        if concurrent.state != fe11_sys::CKS_RW_PUBLIC_SESSION as u64 {
             return Err(Failure::Oracle("output_credit_concurrent_session"));
         }
         width(result?)

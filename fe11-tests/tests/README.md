@@ -122,3 +122,14 @@ separately from executed results. Those coordinates are NOT_EXECUTED, with zero
 bodies exercised. The generic package retains their fixtures for environments
 that meet the prerequisites. Known module divergences keep their raw FAIL and
 are accepted by CI only when the complete documented observation matches.
+
+The output-credit waiting scenario observes the Linux worker's admission wait
+through `/proc` before querying the same session concurrently. The query uses
+the same caller-selected deadline to tolerate transient session preparation.
+The test retains the output until the query completes, then checks progress
+and the exact output length after releasing it. Observation failure, deadline
+expiry and cancellation remain failures; all paths release and join the worker.
+
+If a regression retains session possession throughout the credit wait, the
+concurrent query can wait until the 60-minute supervision deadline. Such a
+timeout is a failure, not an accepted contention result or a performance target.
