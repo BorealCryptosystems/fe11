@@ -4,7 +4,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-from native_verdict import fingerprint, observation_details
+from native_verdict import classify as classify_documented, fingerprint, observation_details
 
 
 @lru_cache(maxsize=1)
@@ -13,7 +13,17 @@ def policy():
     if (rules["upstream_commit"] != "7380895665c3094a6f57640085bee97dcfeb1496"
             or rules["recipe"] != "openssl-full" or rules["qualification"] != "NOT_QUALIFIED"):
         raise ValueError("unqualified scenarios belong to a different native recipe")
-    return rules["cases"]
+    return {identity: dict(rule, contexts=rules["contexts"], nominal_sequence=rules["nominal_sequence"])
+            for identity, rule in rules["cases"].items()}
+
+
+def exposed_domain(domain):
+    """Bound the raw/DER ambiguity by point length and the field's top byte."""
+    length = 1 + 2 * ((domain["field_bits"] + 7) // 8)
+    if length in (32, 56, 65, 97, 133):
+        return False
+    first = domain["first_x_byte_max"]
+    return (length - 2 < 128 and length - 2 <= first) or (length > 3 and first >= 0x81)
 
 
 def rule_for(identity, context, definition):
@@ -83,6 +93,10 @@ def classify(rule, catalogue, identity, context, result, work, runtime):
     if any(result.get(name) != dependencies for name in ("provision_dependencies", "case_dependencies")):
         return "INSUFFICIENT_EVIDENCE"
     if result["status"] == "PASS":
+        if context in catalogue["cases"].get(identity, {}).get("contexts", {}):
+            # A previously documented failure becoming successful is a change
+            # requiring review, even though this scenario earns no qualification.
+            return classify_documented(catalogue, identity, context, rule["definition"], result, work, runtime)
         terminal = result["worker_records"][-1]
         if (result.get("native_sequence_matches") is True
                 and all(terminal.get(name) == "PASS" for name in ("setup", "body", "cleanup", "status"))):
@@ -92,4 +106,8 @@ def classify(rule, catalogue, identity, context, result, work, runtime):
         observation_details(result, work, runtime)
         if known_refusal(rule, result):
             return "NOT_QUALIFIED"
+        # Some exposed curves already have an independently documented width
+        # divergence. Preserve its exact comparison instead of accepting other
+        # errors broadly, or turning an established observation into a regression.
+        return classify_documented(catalogue, identity, context, rule["definition"], result, work, runtime)
     return "UNEXPECTED_RESULT"

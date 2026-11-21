@@ -1,104 +1,62 @@
-name: SoftHSM targeted output-credit validation
+name: SoftHSM targeted ECDH classification validation
 on:
   workflow_dispatch:
 permissions:
   contents: read
   actions: read
 jobs:
-  build:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 60
-    strategy:
-      fail-fast: false
-      matrix:
-        rust: ['1.81.0', '1.100.0']
-    env:
-      PYTHONDONTWRITEBYTECODE: '1'
-      FE11_EXPECTED_COMMIT: ${{ github.sha }}
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
-        with:
-          persist-credentials: false
-      - name: Check exact candidate before compiling
-        run: |
-          set -euo pipefail
-          test "$(git rev-parse HEAD)" = "$FE11_EXPECTED_COMMIT"
-          python3 -B ci/scripts/candidate_inputs.py
-          python3 -B fe11-tests/tests/driver/fixture_archive.py check
-          test -z "$(git status --porcelain)"
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends build-essential autoconf automake libtool pkg-config libssl-dev perl python3 git ca-certificates
-      - name: Compile the package-built native kit without running tests
-        run: python3 -B ci/scripts/job.py native-kit --rust '${{ matrix.rust }}' --root "$RUNNER_TEMP/build"
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
-        with:
-          name: native-kit-${{ matrix.rust }}
-          path: ${{ runner.temp }}/build/native-kit/
-          if-no-files-found: error
-          retention-days: 3
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
-        if: always()
-        with:
-          name: build-${{ matrix.rust }}-reports
-          path: ${{ runner.temp }}/build/reports/
-          if-no-files-found: error
-      - name: Remove reproducible build files
-        if: always()
-        run: python3 -B ci/scripts/cleanup.py --root "$RUNNER_TEMP/build" --parent "$RUNNER_TEMP"
   diagnostic:
-    needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
         include:
-          - {rust: '1.100.0', backend: file, interface: Standard32}
-          - {rust: '1.81.0', backend: db, interface: Standard32}
+          - {rust: '1.100.0', backend: file, interface: Legacy240}
+          - {rust: '1.100.0', backend: db, interface: Standard32}
     env:
       PYTHONDONTWRITEBYTECODE: '1'
+      FE11_EXPECTED_COMMIT: ${{ github.sha }}
+      FE11_ROW: ${{ toJSON(matrix) }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
+          ref: ${{ github.sha }}
           persist-credentials: false
       - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
         with:
+          github-token: ${{ github.token }}
+          run-id: 44855638682
           name: native-kit-${{ matrix.rust }}
           path: ${{ runner.temp }}/native-kit
       - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53
         with:
           github-token: ${{ github.token }}
-          run-id: 44766689217
+          run-id: 44855638682
           name: native-runtime
           path: ${{ runner.temp }}/native-runtime
-      - name: Collect each previously failed coordinate once
-        env:
-          FE11_ROW: ${{ toJSON(matrix) }}
+      - name: Verify the candidate and reused executable identities
         run: |
           set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$FE11_EXPECTED_COMMIT"
           python3 -B ci/scripts/candidate_inputs.py
+          python3 -B fe11-tests/tests/driver/fixture_archive.py check
+          python3 -B ci/scripts/candidate_matrix.py
           test -z "$(git status --porcelain)"
+          (cd "$RUNNER_TEMP/native-kit" && echo 'dea5e742df0c38eea2ebe9c97c01a2fa8b9990d19f0b319e5c5471aa74ccdfa2  identity.json' | sha256sum --check)
+          (cd "$RUNNER_TEMP/native-runtime" && echo 'f2fccf735e36e9a6b6f8e68b39b09fe9f5a89aab06679e8ed721bc9d629a99e7  provenance.json' | sha256sum --check && sha256sum --check SHA256SUMS)
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends gdb
-          (cd "$RUNNER_TEMP/native-runtime" && sha256sum --check SHA256SUMS)
-          python3 -B ci/scripts/diagnose_native.py --row "$FE11_ROW" --root "$RUNNER_TEMP" --selection ci/scripts/soft-hsm-correction-selection.json
-      - name: Require the selected case to pass
-        run: |
-          python3 -B - <<'PY'
-          import json, os
-          from pathlib import Path
-          output = Path(os.environ['RUNNER_TEMP']) / 'diagnostics'
-          summary = json.loads((output / 'summary.json').read_text())
-          assert summary['selected'] == 1 and summary['results'] == {'PASS': 1}, summary
-          observations = [json.loads(line) for line in (output / 'observations.jsonl').read_text().splitlines()]
-          assert len(observations) == 1 and not observations[0].get('driver_failure'), observations
-          assert not observations[0].get('classification_error'), observations
-          PY
+      - name: Collect each selected coordinate once
+        run: python3 -B ci/scripts/diagnose_native.py --row "$FE11_ROW" --root "$RUNNER_TEMP" --selection ci/scripts/soft-hsm-correction-selection.json
+      - name: Verify the bounded classification while retaining the raw outcome
+        run: python3 -B ci/scripts/targeted_qualification_gate.py --row "$FE11_ROW" --root "$RUNNER_TEMP"
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
           name: diagnostic-${{ matrix.rust }}-${{ matrix.backend }}-${{ matrix.interface }}
           if-no-files-found: error
+          retention-days: 90
           path: |
             ${{ runner.temp }}/diagnostics/
             ${{ runner.temp }}/native-linkage.json

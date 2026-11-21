@@ -57,25 +57,30 @@ generation. They do not change Fe11 or the PKCS#11 oracle to emulate SoftHSM.
 
 ### ECDH scenarios outside qualification
 
-Eight generated-key scenarios are `NOT_QUALIFIED` on the pinned SoftHSM
-recipe: `brainpoolP224r1`, `X9_62_prime239v1`, `sect239k1`, `secp160r2`,
-`X9_62_c2tnb191v3`, `secp160k1`, `X9_62_prime192v2` and `X9_62_c2tnb239v2`
-(all under `curve.operations.`). SoftHSM's confusion between raw SEC1 points
-and DER is a confirmed input-dependent defect. Direct C and Fe11 diagnostics
-reproduced it on the first five curves. The last three have intermittent
-historical failures whose original points were not retained; the exact cause
-of each lost observation cannot be reconstructed.
+Forty-five generated-key scenarios are `NOT_QUALIFIED` on the pinned SoftHSM
+recipe. The [domain inventory](ECDH-SCOPE.md) derives this scope from the raw
+point length and the curve field bounds, rather than from a list of observed
+failures. SoftHSM's confusion between raw SEC1 points and DER is a confirmed
+input-dependent defect, reported in [SoftHSM #931](https://github.com/softhsm/SoftHSMv2/issues/931).
+Direct C and Fe11 diagnostics reproduced it on five curves. This does not
+prove the same failure on every exposed curve or reconstruct lost inputs
+from historical observations.
 
-These scenarios still run in all eight hosted contexts. Both raw PASS and raw
-FAIL remain visible; an isolated success earns no qualification credit.
-`native-unqualified.json` binds the eight definitions and their contexts.
+These scenarios still run in all eight hosted contexts (360 coordinates).
+Both raw PASS and raw FAIL remain visible; an isolated success earns no
+qualification credit. `native-unqualified.json` binds the definitions and
+contexts; `native-ecdh-domains.json` binds the audited field bounds.
 The CI accepts a raw failure within this exclusion only when the complete
 observation follows the documented `C_DeriveKey/CKR_GENERAL_ERROR` path:
 validated recipe and trace, exact ordered assertions and native call sequence,
-uncertain effects retained, and successful setup and cleanup. A different
-refusal, local error, changed definition, incomplete observation or failed
-cleanup still fails CI. Matching that path is not proof of the cause of an
-individual new refusal; the scenario is explicitly outside qualification.
+uncertain effects retained, and successful setup and cleanup. Six exposed
+curves also have an existing fixed-width divergence profile: its exact
+observation comparison remains applicable, with a separate
+`qualification: NOT_QUALIFIED` flag. A disappearance of that documented
+divergence is still reported as `DIVERGENCE_DISAPPEARED` and requires review.
+Other refusals, local errors, changed definitions, incomplete observations
+and failed cleanup still fail CI. Matching the bounded refusal path does not
+prove the cause of an individual new refusal.
 
 The aggregate report lists every unqualified coordinate and raw verdict,
 reports their raw totals in `not_qualified_raw` and `qualification: PARTIAL`,

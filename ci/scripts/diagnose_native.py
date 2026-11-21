@@ -13,6 +13,7 @@ from common import digest, save
 from native_matrix import install, context, catalogue_for
 from native_verdict import classify, fingerprint, observation
 from soft_hsm_gate import prepare
+import native_qualification
 
 
 def main():
@@ -70,7 +71,13 @@ def main():
             if (work / 'token-cleanup.json').is_file():
                 row['token_cleanup'] = json.loads((work / 'token-cleanup.json').read_text())
             try:
-                row['ci_verdict'] = classify(policy, identity, item['context'], item['definition_sha256'], result, work, runtime)
+                rule = native_qualification.rule_for(identity, item['context'], item['definition_sha256'])
+                if rule is not None:
+                    row['qualification'] = 'NOT_QUALIFIED'
+                    row['ci_verdict'] = native_qualification.classify(
+                        rule, policy, identity, item['context'], result, work, runtime)
+                else:
+                    row['ci_verdict'] = classify(policy, identity, item['context'], item['definition_sha256'], result, work, runtime)
                 if result.get('status') == 'FAIL':
                     row['observation_sha256'] = observation(result, work, runtime, prerequisite=not result.get('body_started'))
             except Exception as error:

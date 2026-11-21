@@ -8,7 +8,7 @@ import tomllib
 from candidate_inputs import ROOT
 from native_matrix import COMMIT, SHARDS, catalogue_for, context, group, partitions
 from common import digest
-from native_qualification import policy as qualification_policy
+from native_qualification import exposed_domain, policy as qualification_policy
 from native_verdict import fingerprint
 
 
@@ -30,8 +30,21 @@ def main():
         if tomllib.loads((package / "Cargo.toml").read_text())["package"]["version"] != "0.1.1":
             raise ValueError("Wrong package version")
     qualification = qualification_policy()
-    if len(qualification) != 8:
-        raise ValueError("Expected eight explicitly unqualified ECDH scenarios")
+    domains = json.loads(Path(__file__).with_name("native-ecdh-domains.json").read_text())["domains"]
+    curves = json.loads((suite / "tests/vectors/curve-operations/manifest.json").read_text())
+    named = {d["id"]: d for d in curves if d["curve"]["field"] != "unknown"}
+    if set(domains) != set(named):
+        raise ValueError("Curve domain inventory changed; reassess ECDH qualification")
+    for identity, domain in domains.items():
+        definition = named[identity]
+        bits = domain["field_bits"]
+        if (type(bits) is not int or not 112 <= bits <= 571
+                or (bits + 7) // 8 != definition["field_width"]
+                or type(domain["first_x_byte_max"]) is not int
+                or not 0 <= domain["first_x_byte_max"] < (1 << ((bits - 1) % 8 + 1))):
+            raise ValueError("Invalid audited curve domain")
+    if set(qualification) != {key for key, domain in domains.items() if exposed_domain(domain)}:
+        raise ValueError("Unqualified scenarios do not cover the audited decoder domain")
     for identity, rule in qualification.items():
         manifest, declared = cases[identity]
         definition, = [d for d in json.loads(manifest.read_text()) if d["id"] == identity]

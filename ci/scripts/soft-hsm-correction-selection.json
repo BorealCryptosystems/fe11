@@ -1,12 +1,12 @@
 [
   {
-    "case": "resource.output-credit.wait",
-    "context": "linux.1.100.0.openssl-full.file.Standard32",
-    "definition_sha256": "c518aed8edaa4d651544dd8f1518fb61c292f0f91b98e184b93fd70ed953bca9"
+    "case": "curve.operations.secp112r2",
+    "context": "linux.1.100.0.openssl-full.file.Legacy240",
+    "definition_sha256": "85ba90bd7901b645c3965f07e520ff27060f2b96948dc443ed0b4db4f79c98c9"
   },
   {
-    "case": "resource.output-credit.wait",
-    "context": "linux.1.81.0.openssl-full.db.Standard32",
-    "definition_sha256": "c518aed8edaa4d651544dd8f1518fb61c292f0f91b98e184b93fd70ed953bca9"
+    "case": "curve.operations.X9_62_c2tnb191v2",
+    "context": "linux.1.100.0.openssl-full.db.Standard32",
+    "definition_sha256": "fe26834ff2e004e44e0c342b4ee908585b6b0c6aee15ec9b4ee4d9a148ea1fce"
   }
 ]

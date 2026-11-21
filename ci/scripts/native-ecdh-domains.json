@@ -1,0 +1,326 @@
+{
+  "source": "OpenSSL crypto/ec/ec_curve.c domain parameters",
+  "source_sha256": "d1564b90893609ed761db376ab7023e8ee60482438748acab031ed3e3839641a",
+  "domains": {
+    "curve.operations.secp224r1": {
+      "field_bits": 224,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp384r1": {
+      "field_bits": 384,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp521r1": {
+      "field_bits": 521,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.X9_62_prime192v1": {
+      "field_bits": 192,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_prime256v1": {
+      "field_bits": 256,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.sect163k1": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect163r2": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect233k1": {
+      "field_bits": 233,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect233r1": {
+      "field_bits": 233,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect283k1": {
+      "field_bits": 283,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect283r1": {
+      "field_bits": 283,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect409k1": {
+      "field_bits": 409,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect409r1": {
+      "field_bits": 409,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect571k1": {
+      "field_bits": 571,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect571r1": {
+      "field_bits": 571,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.secp112r1": {
+      "field_bits": 112,
+      "first_x_byte_max": 219
+    },
+    "curve.operations.secp112r2": {
+      "field_bits": 112,
+      "first_x_byte_max": 219
+    },
+    "curve.operations.secp128r1": {
+      "field_bits": 128,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp128r2": {
+      "field_bits": 128,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp160k1": {
+      "field_bits": 160,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp160r1": {
+      "field_bits": 160,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp160r2": {
+      "field_bits": 160,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp192k1": {
+      "field_bits": 192,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp224k1": {
+      "field_bits": 224,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.secp256k1": {
+      "field_bits": 256,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_prime192v2": {
+      "field_bits": 192,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_prime192v3": {
+      "field_bits": 192,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_prime239v1": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_prime239v2": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_prime239v3": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.sect113r1": {
+      "field_bits": 113,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect113r2": {
+      "field_bits": 113,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect131r1": {
+      "field_bits": 131,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect131r2": {
+      "field_bits": 131,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect163r1": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.sect193r1": {
+      "field_bits": 193,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect193r2": {
+      "field_bits": 193,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.sect239k1": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2pnb163v1": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.X9_62_c2pnb163v2": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.X9_62_c2pnb163v3": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.X9_62_c2pnb176v1": {
+      "field_bits": 176,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_c2tnb191v1": {
+      "field_bits": 191,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2tnb191v2": {
+      "field_bits": 191,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2tnb191v3": {
+      "field_bits": 191,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2pnb208w1": {
+      "field_bits": 208,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_c2tnb239v1": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2tnb239v2": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2tnb239v3": {
+      "field_bits": 239,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2pnb272w1": {
+      "field_bits": 272,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_c2pnb304w1": {
+      "field_bits": 304,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_c2tnb359v1": {
+      "field_bits": 359,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.X9_62_c2pnb368w1": {
+      "field_bits": 368,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.X9_62_c2tnb431r1": {
+      "field_bits": 431,
+      "first_x_byte_max": 127
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls1": {
+      "field_bits": 113,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls3": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls4": {
+      "field_bits": 113,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls5": {
+      "field_bits": 163,
+      "first_x_byte_max": 7
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls6": {
+      "field_bits": 112,
+      "first_x_byte_max": 219
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls7": {
+      "field_bits": 160,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls8": {
+      "field_bits": 112,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls9": {
+      "field_bits": 160,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls10": {
+      "field_bits": 233,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls11": {
+      "field_bits": 233,
+      "first_x_byte_max": 1
+    },
+    "curve.operations.wap_wsg_idm_ecid_wtls12": {
+      "field_bits": 224,
+      "first_x_byte_max": 255
+    },
+    "curve.operations.brainpoolP160r1": {
+      "field_bits": 160,
+      "first_x_byte_max": 233
+    },
+    "curve.operations.brainpoolP160t1": {
+      "field_bits": 160,
+      "first_x_byte_max": 233
+    },
+    "curve.operations.brainpoolP192r1": {
+      "field_bits": 192,
+      "first_x_byte_max": 195
+    },
+    "curve.operations.brainpoolP192t1": {
+      "field_bits": 192,
+      "first_x_byte_max": 195
+    },
+    "curve.operations.brainpoolP224r1": {
+      "field_bits": 224,
+      "first_x_byte_max": 215
+    },
+    "curve.operations.brainpoolP224t1": {
+      "field_bits": 224,
+      "first_x_byte_max": 215
+    },
+    "curve.operations.brainpoolP256r1": {
+      "field_bits": 256,
+      "first_x_byte_max": 169
+    },
+    "curve.operations.brainpoolP256t1": {
+      "field_bits": 256,
+      "first_x_byte_max": 169
+    },
+    "curve.operations.brainpoolP320r1": {
+      "field_bits": 320,
+      "first_x_byte_max": 211
+    },
+    "curve.operations.brainpoolP320t1": {
+      "field_bits": 320,
+      "first_x_byte_max": 211
+    },
+    "curve.operations.brainpoolP384r1": {
+      "field_bits": 384,
+      "first_x_byte_max": 140
+    },
+    "curve.operations.brainpoolP384t1": {
+      "field_bits": 384,
+      "first_x_byte_max": 140
+    },
+    "curve.operations.brainpoolP512r1": {
+      "field_bits": 512,
+      "first_x_byte_max": 170
+    },
+    "curve.operations.brainpoolP512t1": {
+      "field_bits": 512,
+      "first_x_byte_max": 170
+    },
+    "curve.operations.sm2": {
+      "field_bits": 256,
+      "first_x_byte_max": 255
+    }
+  }
+}
